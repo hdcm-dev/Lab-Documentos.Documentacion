@@ -1,7 +1,7 @@
 # Tool-Prompt — Actualizar indexado de Lab-Documentos
 
 > **Invocación**:
-> - `Leer y ejecutar /LAB/Lab-Documentos.Documentacion/PROMPTs/Indexado/Actualizar-Indexado.md`
+> - Leer y ejecutar `/LAB/Lab-Documentos.Documentacion/PROMPTs/Indexado/Actualizar-Indexado.md`
 >
 > Overview: Actualizar indexado de Lab-Documentos
 
