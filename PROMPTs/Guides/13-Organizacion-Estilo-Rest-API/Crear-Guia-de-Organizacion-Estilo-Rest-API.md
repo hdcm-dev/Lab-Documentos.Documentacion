@@ -1,24 +1,19 @@
-# Crear guía de estudio — Documentación técnica
+# Crear guía de estudio —  Sobre el estandar Rest API en .NET
 
 > **Invocación**:
-> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Guias-Estudio/Generacion-Documentacion-Tecnica/Crear-Guia-de-Estudio-Documentacion-Tecnica.md`
-> Overview: generación de guía de estudio sobre documentación técnica de software
+> - Lee y ejecuta `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/13-Organizacion-Estilo-Rest-API/Crear-Guia-de-Organizacion-Estilo-Rest-API.md`
 
 ---
 
 # Contexto
 
-La temática es la **documentación técnica de software**: tanto su comprensión como su elaboración, de modo que una pieza de software pueda ser operada, evolucionada o reconstruida por otros actores de la cadena de desarrollo.
-
-El catálogo de tipos de documentación técnica a cubrir está en `/IA/IA.SDD.Documentacion/PROMPTs/Generacion-Documentacion-Tecnica/Inputs/Tipos-De-Documentacion-Tecnica.md`.
-
-No existe todavía un cuerpo documental que ordene estos tipos, los relacione con las situaciones reales de un proyecto y permita a un lector formar criterio sobre cuál producir en cada caso.
+La temática es la necesidad de contar con una guía de consulta que permita adoptar una nomenclatura definida en la organización y códificación de proyectos y generación de código.
 
 ---
 
 # Objetivo
 
-Existe en `/IA/IA.SDD.Documentacion/Guias-de-Estudios/Documentacion-Tecnica` una guía de estudio completa que permite a un lector:
+Recopilar y lograr una guía de consulta con todas las variantes de nomenclaturas y organización de Rest API que permita al lector:
 
 - entender qué es cada tipo de documentación técnica, qué problema resuelve y qué no resuelve;
 - ubicarse en una situación concreta de proyecto y saber qué documentación generar o consultar;
@@ -48,7 +43,7 @@ Existe en `/IA/IA.SDD.Documentacion/Guias-de-Estudios/Documentacion-Tecnica` una
 ## Mapa y cierre
 
 11. Un **mapa conceptual** con tablas de entrada: por escenario (qué documentación aplica), por contexto (qué documentación interviene) y por artefacto (definición breve más un par de preguntas que ayuden a saber cuándo aplica y qué describe).
-12. Generar `/IA/IA.SDD.Documentacion/Guias-de-Estudios/Documentacion-Tecnica/README.md` con la tabla de contenido de todo lo generado y la ruta de lectura sugerida.
+12. Generar `/IA/IA.SDD.Documentacion/Guias-de-Estudios/Organizacion-Estilo-Rest-API/README.md` con la tabla de contenido de todo lo generado y la ruta de lectura sugerida.
 13. Revisar la guía completa contra el mapa, detectar inconsistencias, huecos y solapamientos, preparar un plan de mejoras y aplicarlo.
 
 ## Contenido transversal
@@ -61,7 +56,7 @@ Existe en `/IA/IA.SDD.Documentacion/Guias-de-Estudios/Documentacion-Tecnica` una
 
 # Restricciones
 
-- Escribir únicamente dentro de `/IA/IA.SDD.Documentacion/Guias-de-Estudios/Documentacion-Tecnica`. No modificar el catálogo de tipos ni ningún componente del Prompt Framework.
+- Escribir únicamente dentro de `/IA/IA.SDD.Documentacion/Guias-de-Estudios/Organizacion-Estilo-Rest-API`. No modificar el catálogo de tipos ni ningún componente del Prompt Framework.
 - Del catálogo de tipos, tomar la tabla y la agrupación en siete familias. Ignorar su sección final sobre HomeHub: es un caso particular ajeno al marco conceptual y sus ejemplos no deben aparecer en la guía.
 - Todo documento temático debe cruzarse con los escenarios y contextos definidos en el marco de referencia: no incorporar temas que queden fuera de él.
 - No duplicar contenido entre documentos: si un concepto ya está desarrollado en otro, referenciarlo.
