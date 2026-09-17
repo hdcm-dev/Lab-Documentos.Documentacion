@@ -29,7 +29,7 @@
 
   - Configura el wofklow con este runner de github :  `runs-on: [self-hosted, i7infra-dev]`
 
-  - Toda la documentación generarla en `LAB/Lab-GitFlow.Documentacion/Analisis/Procedimiento-GitFlow`
+  - Toda la documentación generarla en `/LAB/Lab-GitFlow.Documentacion/Analisis/Procedimiento-GitFlow`
 
 ---
 
