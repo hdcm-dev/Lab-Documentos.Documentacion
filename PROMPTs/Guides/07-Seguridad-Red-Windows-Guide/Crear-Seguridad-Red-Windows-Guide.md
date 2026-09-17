@@ -1,6 +1,6 @@
 # Tool-Prompt — Crear Guide
 
-> **Invocación**: Leer y ejecutar `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/06-Seguridad-Red-Windows-Guide/Crear-Seguridad-Red-Windows-Guide.md`
+> **Invocación**: Leer y ejecutar `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/07-Seguridad-Red-Windows-Guide/Crear-Seguridad-Red-Windows-Guide.md`
 >
 > **Overview**: Crear guía de estudio para auditar seguridad en red windows.
 
@@ -27,7 +27,7 @@
 
   El documento solicitado pretende ser una guía base para alguien que quiere diagnosticar un sistema con las herramientas propias del sistema viendo sintomas o anomalias, Al final de este documento agrega secciones explicativas como hacer pentesting, toma algunas herramientas de la industria para ilustrar el tema y poder reproducir un pentesting
 
-  Re editar el prompt basado en este prompt base: `/IA/PROMPTs/IA.Prompts/Base/Mesa-Evaluadora.md`, y en base al contexto, reglas, objetivos y solicitudes y debe plantear a la mesa el caso, la mesa debe estar formada por expertos en didactica, en edición de material bibliografico y seguridad informática en redes windows a modo que revisen la documentación generada, analiza si necesitas un experto mas. La mesa debe volver a analizar el documento una vez finalizado y hacer las correcciones pertinentes en edición y compresión ajustando su coherencia. La mesa puede llevar sus apuntes, borradores, debates y precompilaciones que luego serán parte de la edición del documento final en `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/06-Seguridad-Red-Windows-Guide/OUTPUTs`
+  Re editar el prompt basado en este prompt base: `/IA/PROMPTs/IA.Prompts/Base/Mesa-Evaluadora.md`, y en base al contexto, reglas, objetivos y solicitudes y debe plantear a la mesa el caso, la mesa debe estar formada por expertos en didactica, en edición de material bibliografico y seguridad informática en redes windows a modo que revisen la documentación generada, analiza si necesitas un experto mas. La mesa debe volver a analizar el documento una vez finalizado y hacer las correcciones pertinentes en edición y compresión ajustando su coherencia. La mesa puede llevar sus apuntes, borradores, debates y precompilaciones que luego serán parte de la edición del documento final en `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/07-Seguridad-Red-Windows-Guide/OUTPUTs`
 
 ---
 
@@ -47,7 +47,7 @@
 
   El objetivo de esta estrategia es transformar un prompt de gran volumen y alta  complejidad en un conjunto de unidades conceptuales manejables, manteniendo entre ellas una estructura de cohesión, dependencia y trazabilidad que permita presentar cada eje a la mesa evaluadora y planificadora y, finalmente, integrarlos en un todo coherente.
    
-  Para poder cumplir con esta regla aproyate en ir generando registros que puedas retomar y evaluar markdowns en `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/06-Seguridad-Red-Windows-Guide/OUTPUTs/Bitacora`
+  Para poder cumplir con esta regla aproyate en ir generando registros que puedas retomar y evaluar markdowns en `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/07-Seguridad-Red-Windows-Guide/OUTPUTs/Bitacora`
 
   - No inventar información. 
   - Toda afirmación debe estar respaldada por evidencia verificable.

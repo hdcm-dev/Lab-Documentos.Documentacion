@@ -1,7 +1,7 @@
 # Bitácora 01 — Contrato de entrada y encuadre
 
 **Fecha:** 2026-09-17
-**Prompt de origen:** `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/06-Seguridad-Red-Windows-Guide/Crear-Seguridad-Red-Windows-Guide.md`
+**Prompt de origen:** `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/07-Seguridad-Red-Windows-Guide/Crear-Seguridad-Red-Windows-Guide.md`
 **Marco de ciclo:** `/IA/PROMPTs/IA.Prompts/Base/Mesa-Evaluadora.md`
 **Norma de estilo documental:** `/LAB/Lab-Documentos/Guides/UX-UI-Guide/UX-UI-Guide.md`
 
