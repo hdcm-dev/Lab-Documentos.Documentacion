@@ -1,30 +1,31 @@
 # Crear guía de estudio —  Sobre Estilos-Patrones-Codigo
 
 > **Invocación**:
-> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Guia-De-Estudio/Crear-Guia-Organizacion-Estilo-Patrones-Codigo/Crear-Guia-Organizacion-Estilo-Patrones-Codigo.md`
+> - Lee y ejecuta `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/08-Crear-Guia-Organizacion-Estilo-Patrones-Codigo/Crear-Guia-Organizacion-Estilo-Patrones-Codigo.md`
+>
 > Overview: crea una referencias sobre estructuras de proyectos, nomenclaturas.
 
 ---
 
-# Contexto
+## Contexto
 
-Lee `/IA/IA.SDD.Documentacion/Guias-de-Estudios/Organizacion-Estilo-Patrones-Codigo/README.md` es un compendio de `Apuntes`
-
----
-
-# Objetivo
-
-Poder describir claramente la estructura de un proyecto, que patrón se va a seguir y que nomenclatura estandar se va a seguir.
+  Leer `/IA/IA.SDD.Documentacion/Guias-de-Estudios/Organizacion-Estilo-Patrones-Codigo/README.md` es un compendio de `Apuntes`
 
 ---
 
-# Solicitudes
+## Objetivos
 
-En base a las siguientes preguntas, respuestas que logres y siguiento los objetivos propuestos construye un documento en `IA/IA.SDD.Documentacion/Guias-de-Estudios/Organizacion-Estilo-Patrones-Codigo/61-Analisis-Integral/Analisis-Integral.md`. El contenido del texto debe permitir desarrollar las preguntas solicidas. Genera analisis, puntos de vistas, criterios de referencias, ejemplos con codigo, estructura y jerarquías.
+  Poder describir claramente la estructura de un proyecto, que patrón se va a seguir y que nomenclatura estandar se va a seguir.
 
-1. ¿Qué ocurrio con:?
+---
 
-Los patrones DAO, MVC, Repository y las entidades DTO como objetos de transporte en api, Entity para persistencia, muy usado en la epoca de JDBC o ADO.NET. 
+## Solicitudes
+
+  En base a las siguientes preguntas, respuestas que logres y siguiento los objetivos propuestos construye un documento en `IA/IA.SDD.Documentacion/Guias-de-Estudios/Organizacion-Estilo-Patrones-Codigo/61-Analisis-Integral/Analisis-Integral.md`. El contenido del texto debe permitir desarrollar las preguntas solicidas. Genera analisis, puntos de vistas, criterios de referencias, ejemplos con codigo, estructura y jerarquías.
+
+  1. ¿Qué ocurrio con:?
+
+  Los patrones DAO, MVC, Repository y las entidades DTO como objetos de transporte en api, Entity para persistencia, muy usado en la epoca de JDBC o ADO.NET. 
 Muchos proyectos se estructuraban así:
 
 ```
@@ -68,14 +69,14 @@ El concepto de Contracts, se implementa con register en .net , suena  los objeto
 
 ---
 
-# Restricciones
+## Reglas
 
-- Base integramente en primer lugar en la cadena de documentos propuesta por `IA/IA.SDD.Documentacion/Guias-de-Estudios/Organizacion-Estilo-Patrones-Codigo/README.md` y luego puedes tomar otras referencias.
+  - Base integramente en primer lugar en la cadena de documentos propuesta por `IA/IA.SDD.Documentacion/Guias-de-Estudios/Organizacion-Estilo-Patrones-Codigo/README.md` y luego puedes tomar otras referencias.
 
-- No modifiques ningun documento salvo el solicitado.
+  - No modifiques ningun documento salvo el solicitado.
 
-- No inventar estándares ni atribuir prácticas a fuentes que no se hayan verificado.
+  - No inventar estándares ni atribuir prácticas a fuentes que no se hayan verificado.
 
-- No realizar commit, push ni pull request.
+  - No realizar commit, push ni pull request.
 
-- Investigar las fuentes que hagan falta para sostener la calidad, sin límite de tiempo ni de tokens, dejando el avance en estado retomable ante cortes por consumo.
+  - Investigar las fuentes que hagan falta para sostener la calidad, sin límite de tiempo ni de tokens, dejando el avance en estado retomable ante cortes por consumo.
