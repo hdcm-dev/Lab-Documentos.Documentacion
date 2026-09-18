@@ -1,0 +1,8 @@
+# docker run --rm -v <dir>:/w mcr.microsoft.com/dotnet/sdk:10.0 bash /w/run-j1.sh   (2026-09-18)
+curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 ...
+curl exit: 0
+X.Domain/Uso.cs(1,9): error CS0234: The type or namespace name 'Infra' does not exist in the namespace 'X' (are you missing an assembly reference?) [/w/t/X.Domain/X.Domain.csproj]
+X.Domain/Uso.cs(2,47): error CS0246: The type or namespace name 'Repo' could not be found (are you missing a using directive or an assembly reference?) [/w/t/X.Domain/X.Domain.csproj]
+# Reproducción de evidencia-03/run1.sh (mismo día, SDK 10.0.400):
+# Ciclo.slnx ; "Reference `..\A.Infra\A.Infra.csproj` added to the project." exit add: 0
+# error MSB4006: There is a circular dependency in the target dependency graph involving target "_GenerateRestoreProjectPathWalk". 1 Error(s)

@@ -8,6 +8,19 @@ documental que se lee entero, no un artefacto que alguien instala en una versió
 versionado semántico que la guía enseña aplica al software que ese procedimiento libera, no a la
 guía misma.
 
+## [No publicado] - 2026-09-18
+
+### Añadido
+
+- **`PROMPTs/Guides/06-Arquitectura/`** — tool-prompt `03-Reedicion-Arquitectura.md` (reedición
+  íntegra de `Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md` como guía de
+  estudio) y su ejecución completa en `OUTPUTs/`: `Bitacora/` (contrato de entrada, fuente
+  literal de la conversación, registro de requisitos R-01..R-17, integración de núcleos, corridas
+  de laboratorio y cierre), `Nucleos/` (NC-00 cohesión + NC-01..NC-10), `Mesa/` (registro de
+  convocatoria, dos ciclos con 16 informes a ciegas, veredictos y 93 parches con texto exacto) y
+  `Laboratorio/` (`lab.sh`, capturas de las corridas, aserciones y la solución `MyProject/`).
+  El entregable y el laboratorio publicado viven en `Lab-Documentos` (commit `b8155c2`).
+
 ## [No publicado] - 2026-09-03
 
 ### Añadido
