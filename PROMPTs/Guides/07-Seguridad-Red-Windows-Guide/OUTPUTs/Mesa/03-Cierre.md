@@ -1,48 +1,52 @@
-# Mesa evaluadora — Bloque de cierre
+---
+doc_id: MESA-03-CIERRE
+doc_type: mesa
+title: Registro de cierre del ciclo
+status: vigente
+origin: ia-assisted
+audience: [humano, agente]
+traces: [MESA-01-CONVOCATORIA, MESA-02-VEREDICTOS, GUIA-PRINCIPAL, CUADERNO]
+---
+
+# Mesa evaluadora — Registro de cierre
 
 ```yaml
 cierre:
-  artefacto: /LAB/Lab-Documentos/Guides/Seguridad-Red-Windows-Guide/Beginning-Security-Windows-Network-Guide.md
-  version_final: 1.1
-  ciclos_ejecutados: 1
-  motivo_de_parada: >
-    No quedan hallazgos abiertos por encima del umbral (S1/S2). Los S1/S2 detectados
-    (H-02, H-04) fueron aplicados y verificados. Rendimientos decrecientes esperados
-    para un ciclo 2 sobre S3/S4.
+  version_final:
+    guia: Beginning-Security-Windows-Network-Guide.md (post-ciclo-1)
+    cuaderno: Cuaderno-Ejercicios-Seguridad-Windows.md (post-ciclo-1)
+  ciclos_ejecutados: 2   # ciclo 1: panel + parches; ciclo 2: verificación adversarial de los parches
   panel:
     convocados:
-      - E-SeguridadWin: 1 procedente (H-05)
-      - E-Didactica: 2 procedentes (H-02, H-06)
-      - E-Edicion: 1 procedente (H-03)
-      - Lector-novato: 2 procedentes (H-04, H-08)
-      - Abogado-del-diablo: 1 procedente (H-09)
-    ad_hoc:
-      - AH-001 (etica/doble uso): confirmó conforme el encuadre; sin hallazgo procedente
+      - Didáctica: 6 hallazgos procedentes
+      - Edición bibliográfica: 6 procedentes
+      - Seguridad en redes Windows: 3 procedentes
+      - Lector sin conocimientos: 4 procedentes (1 elevado a prioridad máxima)
+      - Verificación / ética de doble uso: 5 procedentes
     descartados:
-      - Cumplimiento/normativa: cubierto por AH-001 de forma más acotada
+      - Formal/matemático: sin señal (no hay umbrales ni cálculos)
+      - Datos/ciclo de vida: sin modelo de datos
+      - Arquitectura: no hay sistema a diseñar
+    ad_hoc: []
     aporte_nulo: []
-  hallazgos: { detectados: 10, procedentes: 7, aplicados: 7, revertidos: 0, no_procede: 2, confirmado_conforme: 1 }
-  parches_aplicados:
-    - P-01: crear carpeta de evidencia antes de exportar (H-04)  # verif: New-Item en §4.4 (línea 299) precede a wevtutil epl (línea 494) OK
-    - P-02: anclar Prefetch/SRUM/MFT a bibliografía (H-02)       # verif: 3x "Zimmerman, 2023" en cuerpo OK
-    - P-03: nota RSAT + nota auditoría 4662/4769 (H-05, H-08)    # verif: presentes en §9.2 y §9.4 OK
-    - P-04: §1.6 rutas de lectura (H-06)                          # verif: sección existe OK
-    - P-05: supuesto de acceso legítimo en §4.1 (H-09)           # verif: texto presente OK
-    - P-06: estado del documento a Aprobado (H-03)               # verif: metadato OK
+  hallazgos: { detectados: 33, deduplicados_a: 22, procedentes: 21, no_aplicar: 1, aplicados: 21, revertidos: 0 }
   coherencia:
-    indice_vs_secciones: OK (12 caps + 3 apéndices)
-    terminos_definidos_antes_de_uso: OK
-    comandos_con_esperado_e_interpretacion: OK
-    citas_con_entrada_en_bibliografia: OK (7/7)
-    bloques_de_codigo_balanceados: OK (72 fences)
+    salidas_ilustrativas_rotuladas: true
+    datos_del_escenario_consistentes: true   # IP, LogonIDs, PID, horas verificados entre ambos documentos
+    indice_vs_encabezados: alineado
+    mermaid_valido: true   # timeline reparado
   deuda_declarada:
-    - H-07 (S4): algunas URLs de bibliografía apuntan a secciones que pueden cambiar. Aceptado; APA admite recurso web.
-    - H-01 (S2 rebajado a NO_PROCEDE): dependencia de idioma en el filtro de Logon Type; ya mitigada con patrón bilingüe. Si aparece una tercera localización del SO, revisar.
-  capas_a_revalidar: []   # el artefacto no tiene derivados
+    - D-04: las «Notas de rigor» de sourcing se conservan en el flujo (dos especialistas y Rule-Evidences las respaldan); segregarlas a nota al margen queda para una edición con maquetación, no en Markdown plano.
+  no_verificado_declarado_en_el_producto:
+    - 0xC0000133 (NTSTATUS de Kerberos, no listado en el 4625)
+    - patrón exacto de pass-the-hash (consenso de industria, a confirmar)
+    - duración de la ISO de evaluación de Windows Server (verificar en Evaluation Center)
   escaladas_pendientes: []
+  capas_a_revalidar: []
 ```
 
-## Nota sobre las tensiones del contrato (Bitácora 01)
-- **T-01** (lector novato vs. sistema comprometido): resuelta con §4 (no daño) como capítulo previo a todo comando, y canalizando la práctica al laboratorio (§10). El "Supuesto de acceso" (P-05) refuerza el límite.
-- **T-02** (no inventar vs. resultados esperados): resuelta con el rótulo explícito de salidas *ilustrativas* en el encabezado del documento y P-02 (anclaje de afirmaciones fuertes).
-- **T-03** (pentesting para principiantes): resuelta con el encuadre de autorización de AH-001, el par ataque/rastro con fin defensivo y el laboratorio aislado obligatorio.
+## Síntesis para el Product Owner
+
+El material salió técnicamente muy sólido: el especialista de seguridad no halló ningún error S1 y confirmó contra la fuente viva de Microsoft el rigor de los subestados del 4625, la tabla de Logon Types y el mapeo ofensivo/forense. Los dos únicos S2 de fondo eran un exceso de confianza sobre el evento 1102 (se matizó, alineándolo con el «puede» de MITRE) y un error puntual sobre el Logon Type 8 (se corrigió: la contraseña **no** viaja en claro por la red). El resto fueron mejoras de exactitud, coherencia editorial y —el bloque más voluminoso— **andamiaje para el principiante**: cómo leer y correr un comando, cómo construir la línea de base de un servidor real, y un apéndice de laboratorio ejecutable paso a paso. Se reemplazó una IP real por rango de documentación (RFC 5737) por disciplina de datos en material público.
+
+Sin escaladas al PO: ningún hallazgo tocó decisiones cerradas, restricciones duras en conflicto ni dominios de consecuencia externa. La mesa resolvió todo dentro de su autonomía, conforme al marco.
