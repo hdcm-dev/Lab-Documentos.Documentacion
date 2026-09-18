@@ -1,0 +1,746 @@
+[
+ {
+  "id": "P-01",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-13 (ED2-04)",
+  "reemplazar": "prerequisites: [C# básico (clases, métodos, propiedades), uso de una terminal]",
+  "por": "prerequisites: [\"C# básico (clases, métodos, propiedades)\", \"uso de una terminal\"]",
+  "verificacion": "PyYAML: `prerequisites` tiene exactamente 2 ítems."
+ },
+ {
+  "id": "P-02",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-13 (ED2-04)",
+  "reemplazar": "traces: [NC-01, NC-02, NC-03, NC-04, NC-05, NC-06, NC-07, NC-08, NC-09, NC-10, R-01..R-17]",
+  "por": "traces: [NC-01, NC-02, NC-03, NC-04, NC-05, NC-06, NC-07, NC-08, NC-09, NC-10, R-01, R-02, R-03, R-04, R-05, R-06, R-07, R-08, R-09, R-10, R-11, R-12, R-13, R-14, R-15, R-16, R-17]",
+  "verificacion": "PyYAML: `traces` tiene 27 ítems y ninguno contiene `..`."
+ },
+ {
+  "id": "P-03",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-13 (ED2-02, DR-13)",
+  "reemplazar": "- **[Anexo A. Hoja de ruta del laboratorio](#anexo-a-hoja-de-ruta-del-laboratorio)** · **[Anexo B. Lista de verificación](#anexo-b-lista-de-verificación-para-diseñar-una-solución-nueva)** · **[Anexo C. Versiones, soporte y licencias](#anexo-c-versiones-soporte-y-licencias-verificadas)** · **[Anexo D. Glosario](#anexo-d-glosario)** · **[Anexo E. Referencias](#anexo-e-referencias)**",
+  "por": "- **[Anexo A. Hoja de ruta del laboratorio](#anexo-a-hoja-de-ruta-del-laboratorio)**: los 25 pasos con su sección, su comando, lo que confirman y su captura.\n- **[Anexo B. Lista de verificación](#anexo-b-lista-de-verificación-para-diseñar-una-solución-nueva)**: las preguntas de §9 como plantilla para una solución nueva.\n- **[Anexo C. Versiones, soporte y licencias](#anexo-c-versiones-soporte-y-licencias-verificadas)**: datos volátiles con fuente y fecha de consulta.\n- **[Anexo D. Glosario](#anexo-d-glosario)**: cada término con su equivalente y la sección donde se define.\n- **[Anexo E. Referencias](#anexo-e-referencias)**: fuentes citadas, en formato autor-fecha.",
+  "verificacion": "El índice tiene una viñeta con glosa por cada anexo; el script de anclas sigue dando 0 enlaces rotos."
+ },
+ {
+  "id": "P-04",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-17 (DID2-07)",
+  "reemplazar": "su porqué y ejemplos que cumplen (✅) y que no cumplen (❌)—, práctica",
+  "por": "su porqué y, cuando la pregunta admite más de una manera de resolverla, ejemplos que cumplen (✅) y que no cumplen (❌); cuando se responde con un experimento, el contraste lo da la salida registrada—, práctica",
+  "verificacion": "§0.3 ya no promete ✅/❌ en toda decisión; la frase nueva aparece una vez."
+ },
+ {
+  "id": "P-05",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-06 (Diablo H-03)",
+  "reemplazar": "| **E-B** | Una API HTTP con uno o más clientes .NET remotos (web, móvil, consola) | ¿Dónde vive lo que comparten la API y sus clientes? |",
+  "por": "| **E-B** | Una API HTTP con uno o más clientes .NET remotos (web, móvil, consola); si los clientes no son .NET, la estructura es la misma sin `Contracts` (§8.5, §9.1) | ¿Dónde vive lo que comparten la API y sus clientes? |",
+  "verificacion": "grep de «E-B» en §0.4 muestra la remisión a §8.5 y §9.1; DR-17: siguen existiendo solo cuatro rótulos E-x."
+ },
+ {
+  "id": "P-06",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-05 (Diablo H-01) + C-08 (DID2-02, HC-25)",
+  "reemplazar": "El problema se resuelve en [§9.5](#95-el-problema-conductor-resuelto).",
+  "por": "Los escenarios describen situaciones, no estructuras: la estructura de partida de cada uno está en el [§9.1](#91-mapa-de-entrada-dónde-está-el-problema) y puede crecer sin que cambie el rótulo; en particular, E-A empieza con un solo proyecto y suma `Domain` y `Application` cuando aparecen reglas que proteger (§6.4 y §8.3 tratan ese caso). La guía construye la versión más completa de la solución —cuatro proyectos de backend, un contrato compartido y un cliente remoto— porque el enunciado incluye «otras aplicaciones que consumen el catálogo», que es la señal del escenario E-B. No es la estructura que conviene siempre: cada capítulo cierra con la pregunta de cuándo lo construido no hace falta, y el [§9.2](#92-la-escalera-de-opciones) ordena esas respuestas en una escalera de cuatro escalones, desde un solo proyecto hasta la API con clientes remotos. El problema se resuelve en [§9.5](#95-el-problema-conductor-resuelto).",
+  "verificacion": "§0.4 nombra la escalera y la razón de construir el escalón 4 antes de §1; las tres anclas (#91-…, #92-…, #95-…) resuelven."
+ },
+ {
+  "id": "P-07",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-14 (ED2-03) + C-15 (H-NOV-01, H-NOV-04) + C-20 (QA-07, solicitudes de Did/QA/Arq)",
+  "reemplazar": "| Marca | Significado |\n| --- | --- |\n| *Salida registrada: `capturas/Lnn-….txt`* | La salida mostrada es un extracto literal de una ejecución real, guardada en [`Dot-NET-Arquitectura-Lab/`](Dot-NET-Arquitectura-Lab/) junto a esta guía |\n| **[Compilado: `src/…`]** | El bloque de código es un extracto del laboratorio y compiló con cero advertencias |\n| **[Fragmento ilustrativo: motivo]** | El bloque no se compiló en el laboratorio; el motivo se declara |\n| **Criterio de esta guía** | Recomendación propia, no una norma ni un dato externo |\n| [Autor, año](#anexo-e-referencias) | Afirmación respaldada por la fuente citada en el Anexo E |",
+  "por": "| Marca | Significado |\n| --- | --- |\n| *Salida registrada: `capturas/Lnn-….txt`, SDK 10.0.400* | La salida mostrada es un extracto literal de una ejecución real, guardada en [`Dot-NET-Arquitectura-Lab/`](Dot-NET-Arquitectura-Lab/) junto a esta guía |\n| **[Compilado: `MyProject/src/…`]** | El bloque de código es un extracto textual del archivo indicado, que compiló en el laboratorio con cero advertencias. La ruta `MyProject/…` es la del código publicado en `Dot-NET-Arquitectura-Lab/` y coincide con la carpeta que se crea en L01 |\n| **[Fragmento ilustrativo: motivo]** | El bloque no forma parte del código final del laboratorio: o no se compiló, o se compiló solo para provocar un error y se eliminó; el motivo se declara |\n| **Criterio de esta guía** | Recomendación propia, no una norma ni un dato externo |\n| [Autor, año](#anexo-e-referencias) | Afirmación respaldada por la fuente citada en el Anexo E |\n| Tipo nombrado sin código | Cuando la guía nombra un tipo (`IProductoRepository`, `ProductoDto`, `FakeProductoRepository`, `Program.cs`…) sin mostrar su código, el archivo completo está en [`Dot-NET-Arquitectura-Lab/MyProject/`](Dot-NET-Arquitectura-Lab/MyProject/), en la carpeta que indica su espacio de nombres (`MyProject.Domain.Productos` → `src/Backend/MyProject.Domain/Productos/`); se copia desde ahí antes de compilar el paso |\n\nQué recorta un extracto: los bloques de salida omiten líneas que no hacen al punto (encabezados HTTP, avisos de restauración) y acortan las rutas absolutas con `...`; una línea larga puede partirse en dos con sangría; una línea `...` sola marca líneas quitadas dentro de un bloque. Nunca se altera el texto de una línea mostrada. Los bloques **[Compilado]** omiten la declaración de la clase, los `using` y los miembros que no hacen al punto, y no reescriben ninguna expresión.",
+  "verificacion": "La tabla tiene 6 filas; la política de recorte aparece una vez; todo rótulo [Fragmento ilustrativo] del documento cumple la definición nueva (L03 y L10 incluidos)."
+ },
+ {
+  "id": "P-08",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-23 (Arq H-06)",
+  "reemplazar": "Cualquier SDK `10.0.*` reproduce el laboratorio.",
+  "por": "Cualquier SDK `10.0.*` reproduce el laboratorio ejecutando `lab.sh` o los comandos de cada paso, porque L01 genera `global.json` con la versión instalada. El `MyProject/` publicado junto a esta guía fija `10.0.400` con `rollForward: latestFeature`, que acepta esa banda de características o una superior ([Microsoft, 2026k](#ref-microsoft-2026k)); con un SDK `10.0.1xx`–`10.0.3xx` hay que editar `version` en `global.json` antes de compilarlo.",
+  "verificacion": "La frase coincide con `MyProject/global.json` (version 10.0.400, rollForward latestFeature); el ancla ref-microsoft-2026k resuelve."
+ },
+ {
+  "id": "P-09",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-15 (H-NOV-04)",
+  "reemplazar": "```bash\ndotnet new sln -n MyProject\n",
+  "por": "```bash\nmkdir MyProject && cd MyProject      # todo el laboratorio se ejecuta desde esta carpeta\ndotnet new sln -n MyProject\n",
+  "verificacion": "El primer bloque bash de §1.2 empieza con `mkdir MyProject && cd MyProject`; coincide con `lab.sh` (mkdir -p \"$SLN\"; cd \"$SLN\")."
+ },
+ {
+  "id": "P-10",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-14 (ED2-03, DR-09) + C-15 (H-NOV-05)",
+  "reemplazar": "El paso escribe en `Domain` una clase que usa un tipo de `Infrastructure`, sin referencia en esa dirección:\n\n```csharp\nusing MyProject.Infrastructure.Persistence;\n\nnamespace MyProject.Domain;\n\npublic class Producto\n{\n    public string Nombre { get; set; } = \"\";\n\n    public void Guardar(ConexionSql conexion) =>\n        conexion.Ejecutar($\"INSERT INTO Productos VALUES ('{Nombre}')\");\n}\n```\n\n**[Fragmento ilustrativo: código escrito para fallar a propósito; se elimina en L05.]**",
+  "por": "El paso crea primero, en `src/Backend/MyProject.Infrastructure/Persistence/ConexionSql.cs`, una clase vacía que simula el acceso a datos (`public class ConexionSql { public void Ejecutar(string sql) { } }`, en el espacio de nombres `MyProject.Infrastructure.Persistence`), y después escribe en `src/Backend/MyProject.Domain/Producto.cs` una clase que la usa, sin referencia en esa dirección:\n\n**[Fragmento ilustrativo: compilado en L03 para provocar el error; los dos archivos se eliminan en L05.]**\n\n```csharp\nusing MyProject.Infrastructure.Persistence;\n\nnamespace MyProject.Domain;\n\npublic class Producto\n{\n    public string Nombre { get; set; } = \"\";\n\n    public void Guardar(ConexionSql conexion) =>\n        conexion.Ejecutar($\"INSERT INTO Productos VALUES ('{Nombre}')\");\n}\n```",
+  "verificacion": "El rótulo precede al bloque (script DR-09: la línea anterior a cada ```csharp es un rótulo); el contenido de ConexionSql coincide con lab.sh l.92–99."
+ },
+ {
+  "id": "P-11",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-20 lote S4 (Arq observación MSB4006)",
+  "reemplazar": "El error no lo emite el compilador de C# (sus códigos empiezan con `CS`) sino MSBuild (`MSB`), el motor que ordena la compilación: no puede decidir qué proyecto compilar primero si cada uno necesita al otro.",
+  "por": "El error no lo emite el compilador de C# (sus códigos empiezan con `CS`) sino MSBuild (`MSB`), el motor que ordena la compilación, y aparece en la fase de restauración que corre antes de compilar (la captura lo ubica en `NuGet.targets`): al recorrer el grafo de proyectos encuentra que cada uno necesita al otro y no puede decidir cuál va primero.",
+  "verificacion": "`grep NuGet.targets capturas/L04-ciclo-compilar.txt` devuelve la línea del MSB4006."
+ },
+ {
+  "id": "P-12",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-15 (H-NOV-02)",
+  "reemplazar": "Deshacer el ciclo (L05) deja una segunda lección sobre leer salidas. Con la ruta de la carpeta, el comando **no encuentra** la referencia y aun así termina con código 0:",
+  "por": "Deshacer el ciclo (L05) deja una segunda lección sobre leer salidas. El comando inverso de `add … reference` es `dotnet remove <proyecto> reference <referencia>`. Con la ruta de la carpeta, **no encuentra** la referencia y aun así termina con código 0:\n\n```bash\ndotnet remove src/Backend/MyProject.Domain reference src/Backend/MyProject.Infrastructure\n```",
+  "verificacion": "El comando coincide con la cabecera `# comando:` de capturas/L05-quitar-con-carpeta.txt."
+ },
+ {
+  "id": "P-13",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-15 (H-NOV-02) + C-18 (ED2-05, voz)",
+  "reemplazar": "Con la ruta al archivo `.csproj`, la quita (`Project reference … removed.`) y la solución vuelve a compilar. *Salida registrada: `capturas/L05-quitar-con-carpeta.txt` y `capturas/L05-quitar-con-csproj.txt`, SDK 10.0.400.* Regla práctica: **leé el mensaje, no solo el código de salida**, y para quitar referencias pasá la ruta al `.csproj`.",
+  "por": "Con la ruta al archivo `.csproj` la quita (`Project reference … removed.`); después se borran los dos archivos de L03 y la solución vuelve a compilar:\n\n```bash\ndotnet remove src/Backend/MyProject.Domain reference src/Backend/MyProject.Infrastructure/MyProject.Infrastructure.csproj\nrm src/Backend/MyProject.Domain/Producto.cs src/Backend/MyProject.Infrastructure/Persistence/ConexionSql.cs\ndotnet build\n```\n\n*Salida registrada: `capturas/L05-quitar-con-carpeta.txt` y `capturas/L05-quitar-con-csproj.txt`, SDK 10.0.400.* Regla práctica: **leer el mensaje, no solo el código de salida**, y pasar la ruta al `.csproj` para quitar una referencia.",
+  "verificacion": "Los tres comandos coinciden con la cabecera de capturas/L05-quitar-con-csproj.txt; `grep -c 'leé\\|pasá' guía` = 0."
+ },
+ {
+  "id": "P-14",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-19 lote S4 (ED2-07)",
+  "reemplazar": "| Círculo (Martin, 2012) | Proyecto | Contiene |",
+  "por": "| Círculo ([Martin, 2012](#ref-martin-2012)) | Proyecto | Contiene |",
+  "verificacion": "grep de «(Martin, 2012)» sin enlace = 0."
+ },
+ {
+  "id": "P-15",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-11 (DID2-05, DR-16)",
+  "reemplazar": "| Frameworks & Drivers | Bibliotecas externas: ASP.NET Core, EF Core, SQLite | Lo que se usa, no se escribe |",
+  "por": "| Frameworks & Drivers | Bibliotecas externas: ASP.NET Core, EF Core, SQLite | Lo que se usa, no se escribe |\n\nLos términos de la columna «Contiene» se definen en el capítulo de su proyecto: entidad y value object en §3.1; caso de uso, mensaje, modelo de lectura y repositorio en §4.1; controller y EF Core en §5.1. Por ahora alcanza con saber que **EF Core** es la biblioteca de Microsoft que guarda objetos de C# en una base de datos, y que **ASP.NET Core** es el marco de Microsoft para construir aplicaciones web y API HTTP en .NET.",
+  "verificacion": "El párrafo sigue a la tabla de §2.1 y antecede al diagrama 1; ASP.NET Core y EF Core quedan definidos antes de §2.2."
+ },
+ {
+  "id": "P-16",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-17 (DID2-07, DR-15)",
+  "reemplazar": "`Domain` declara `IProductoRepository` («necesito guardar y recuperar productos») sin saber cómo se hace. `Infrastructure` referencia a `Domain` e implementa esa interfaz con EF Core. En ejecución la llamada va de adentro hacia afuera; en el código fuente la flecha va de afuera hacia adentro. Esa es la inversión de dependencias, y es la razón por la cual en el §5.3 se reemplaza el almacenamiento sin recompilar `Domain`.",
+  "por": "`Domain` declara `IProductoRepository` («necesito guardar y recuperar productos») sin saber cómo se hace. `Infrastructure` referencia a `Domain` e implementa esa interfaz con EF Core. En ejecución la llamada va de adentro hacia afuera; en el código fuente la flecha va de afuera hacia adentro. Esa es la inversión de dependencias, y es la razón por la cual en el §5.3 se reemplaza el almacenamiento sin recompilar `Domain`.\n\n| | |\n| --- | --- |\n| ✅ | `IProductoRepository` en `Domain`, `ProductoRepository` en `Infrastructure` |\n| ❌ | `IProductoRepository` en `Infrastructure`: `Domain` tendría que referenciarlo para usarla y se forma el ciclo de L04 |\n| ❌ | `Producto.Guardar(ConexionSql)`, como en L03: la entidad conoce la base |",
+  "verificacion": "§2.3 tiene una tabla ✅/❌ con 1 ✅ y 2 ❌; §2 sigue en ≤ 150 líneas (DR-08)."
+ },
+ {
+  "id": "P-17",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-03 (Arq H-02, Diablo H-02, solicitud QA)",
+  "reemplazar": "`Infrastructure` referencia también a `Application` porque ahí se declaran las interfaces de servicios técnicos (correo, usuario actual) que Infrastructure implementa.",
+  "por": "`Infrastructure` referencia también a `Application` para poder implementar las interfaces de servicios técnicos (correo, usuario actual; §4.1) que una solución real declara en esa capa. En el laboratorio esa referencia queda declarada pero sin uso: ningún archivo de `Infrastructure` nombra un tipo de `Application` (se comprueba con `grep -rn Application src/Backend/MyProject.Infrastructure --include=*.cs`, que no devuelve nada), porque el ejemplo no llega a necesitar un servicio técnico. Con el criterio del §9.6, en una solución real esa flecha se agrega cuando aparece la primera interfaz que la necesita.",
+  "verificacion": "`grep -rn Application Dot-NET-Arquitectura-Lab/MyProject/src/Backend/MyProject.Infrastructure --include=*.cs` = 0 líneas; la frase «ahí se declaran» ya no aparece."
+ },
+ {
+  "id": "P-18",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-08 (DID2-02)",
+  "reemplazar": "La regla empieza a pagar cuando aparecen reglas que proteger (E-D) o una segunda forma de acceder a los mismos datos (E-B).",
+  "por": "La regla empieza a pagar cuando aparecen reglas que proteger (E-D) o una segunda forma de acceder a los mismos datos (E-B). En la escalera del §9.2, adoptar la regla completa es subir del escalón 1 al 3.",
+  "verificacion": "§2.7 nombra la escalera del §9.2."
+ },
+ {
+  "id": "P-19",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-11 (H-NOV-05, DR-16)",
+  "reemplazar": "- **Setter privado.** `{ get; private set; }`: la propiedad se lee desde cualquier lugar y se modifica solo desde dentro de la clase.",
+  "por": "- **Setter privado.** `{ get; private set; }`: la propiedad se lee desde cualquier lugar y se modifica solo desde dentro de la clase.\n- **`Guid`.** Identificador único global: un número de 128 bits que .NET genera con `Guid.NewGuid()` y que sirve como `Id` sin necesidad de que una base de datos lo asigne.\n- **`CancellationToken`.** Parámetro que reciben las operaciones que esperan (base de datos, red) para poder interrumpirse si quien las pidió ya no espera el resultado, por ejemplo porque el cliente cerró la conexión. En esta guía se llama `ct` y `= default` permite omitirlo.",
+  "verificacion": "`Guid` y `CancellationToken` quedan definidos en §3.1, antes de su primer uso en §3.2."
+ },
+ {
+  "id": "P-20",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-15 (H-NOV-01) + C-14 (ED2-03, marca SDK)",
+  "reemplazar": "`Domain` contiene además `DomainException` y la interfaz `IProductoRepository` (§4.1), y compila sin ninguna referencia (*salida registrada: `capturas/L09-domain.txt`*).",
+  "por": "`Domain` contiene además `DomainException` (una clase que hereda de `Exception` y recibe el mensaje de la regla incumplida) y la interfaz que declara lo que el dominio necesita del almacenamiento (§4.1); sus métodos devuelven `Task` porque esperan a la base o a la red (§4.1):\n\n**[Compilado: `MyProject/src/Backend/MyProject.Domain/Productos/IProductoRepository.cs`]**\n\n```csharp\npublic interface IProductoRepository\n{\n    Task<Producto?> GetByIdAsync(Guid id, CancellationToken ct = default);\n    Task<IReadOnlyList<Producto>> GetAllAsync(CancellationToken ct = default);\n    Task AddAsync(Producto producto, CancellationToken ct = default);\n}\n```\n\n`Domain` compila sin ninguna referencia (*salida registrada: `capturas/L09-domain.txt`, SDK 10.0.400*).",
+  "verificacion": "El bloque coincide línea a línea con MyProject/src/Backend/MyProject.Domain/Productos/IProductoRepository.cs (sin el namespace ni el comentario XML); §3 ≤ 120 líneas."
+ },
+ {
+  "id": "P-21",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-14 (ED2-03, DR-09) + C-15 (H-NOV-05)",
+  "reemplazar": "El paso intenta, desde `Application`, bajar el precio de un producto ya creado:\n\n```csharp\nvar producto = Producto.Create(\"Mate\", 3500m);\nproducto.Precio = -1m;\n```\n\n**[Fragmento ilustrativo: código escrito para fallar a propósito; se elimina después de L10.]**",
+  "por": "El paso crea `src/Backend/MyProject.Application/Productos/Intento.cs` con un método estático cualquiera (`public static class Intento { public static void BajarPrecio() { … } }`) que intenta bajar el precio de un producto ya creado:\n\n**[Fragmento ilustrativo: compilado en L10 para provocar el error; el archivo se elimina a continuación.]**\n\n```csharp\nvar producto = Producto.Create(\"Mate\", 3500m);\nproducto.Precio = -1m;\n```",
+  "verificacion": "El rótulo precede al bloque; archivo y clase coinciden con lab.sh l.245–257 y con `Intento.cs(10,9)` de la captura L10."
+ },
+ {
+  "id": "P-22",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-17 (DID2-07, R-09)",
+  "reemplazar": "un `Nombre` que solo es texto no necesita un tipo propio.",
+  "por": "un `Nombre` que solo es texto no necesita un tipo propio. En el escenario E-A, con pocas reglas, un value object rara vez tiene comportamiento que proteger; en E-D es el lugar donde una regla sobre un valor se escribe una sola vez. **Criterio de esta guía.**",
+  "verificacion": "§3.5 responde en términos de E-A y E-D."
+ },
+ {
+  "id": "P-23",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-24 (Arq H-07)",
+  "reemplazar": "La Query equivalente, `ObtenerProductosHandler`, llama a `GetAllAsync` y convierte cada entidad en `ProductoDto` con `ProductoDto.From(producto)`.",
+  "por": "Las dos Queries siguen el mismo patrón: `ObtenerProductosHandler` llama a `GetAllAsync` y convierte cada entidad en `ProductoDto` con `ProductoDto.From(producto)`; `ObtenerProductoPorIdHandler` recibe `ObtenerProductoPorIdQuery(Id)`, llama a `GetByIdAsync` y devuelve `ProductoDto?` (nulo si no existe). La segunda es la que usa la API para responder la consulta de un producto por su `Id` (§5.2).",
+  "verificacion": "grep de `ObtenerProductoPorIdHandler` en la guía ≥ 2 (§4.2 y §5.2); coincide con MyProject.Application/Productos/Queries/ObtenerProductoPorId/."
+ },
+ {
+  "id": "P-24",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-15 (H-NOV-02) + C-02 (Arq H-04, comentario de l.504)",
+  "reemplazar": "Aquí nacen los proyectos de pruebas, uno por proyecto probado, en `tests/Backend/`. Una **prueba unitaria** es un método marcado con `[Fact]` (en la biblioteca xUnit) que ejecuta una porción de código y verifica el resultado con `Assert`.",
+  "por": "Aquí nacen los proyectos de pruebas, uno por proyecto probado, en `tests/Backend/`. Se crean con la plantilla `xunit`, referencian al proyecto que prueban y se ejecutan con `dotnet test`, que compila y corre todas las pruebas de la solución:\n\n```bash\ndotnet new xunit -n MyProject.Domain.Tests -o tests/Backend/MyProject.Domain.Tests\ndotnet new xunit -n MyProject.Application.Tests -o tests/Backend/MyProject.Application.Tests\ndotnet sln add tests/Backend/MyProject.Domain.Tests tests/Backend/MyProject.Application.Tests\ndotnet add tests/Backend/MyProject.Domain.Tests reference src/Backend/MyProject.Domain\ndotnet add tests/Backend/MyProject.Application.Tests reference src/Backend/MyProject.Application\ndotnet test\n```\n\nUna **prueba unitaria** es un método marcado con `[Fact]` (en la biblioteca xUnit, que la plantilla ya incluye) que ejecuta una porción de código y verifica el resultado con `Assert`. El repositorio falso, `FakeProductoRepository`, está escrito en el proyecto de pruebas de `Application` y guarda los productos en una lista, `Guardados`, que la prueba inspecciona.",
+  "verificacion": "Los comandos coinciden con lab.sh l.349–350 y con la cabecera de capturas/L11-tests.txt; §4 ≤ 140 líneas."
+ },
+ {
+  "id": "P-25",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-02 (Arq H-04)",
+  "reemplazar": "    var repository = new FakeProductoRepository();   // guarda en una List<Producto>",
+  "por": "    var repository = new FakeProductoRepository();",
+  "verificacion": "El bloque [Compilado] de §4.3 coincide línea a línea con CrearProductoHandlerTests.cs l.19–27."
+ },
+ {
+  "id": "P-26",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-01 (Req H-01, QA-01, H-NOV-07)",
+  "reemplazar": "Passed!  - Failed:     0, Passed:     3, Skipped:     0, Total:     3, Duration: 71 ms - MyProject.Domain.Tests.dll (net10.0)\nPassed!  - Failed:     0, Passed:     2, Skipped:     0, Total:     2, Duration: 44 ms - MyProject.Application.Tests.dll (net10.0)",
+  "por": "Passed!  - Failed:     0, Passed:     3, Skipped:     0, Total:     3, Duration: 111 ms - MyProject.Domain.Tests.dll (net10.0)\nPassed!  - Failed:     0, Passed:     2, Skipped:     0, Total:     2, Duration: 94 ms - MyProject.Application.Tests.dll (net10.0)",
+  "verificacion": "Cada línea del bloque aparece literalmente en capturas/L11-tests.txt (`grep -F`). Si el laboratorio se relanza, las duraciones se copian de la captura nueva y se vuelve a correr el chequeo."
+ },
+ {
+  "id": "P-27",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-01 (Req H-01, QA-01, H-NOV-07)",
+  "reemplazar": "  Failed MyProject.Domain.Tests.ProductoTests.Create_con_precio_negativo_lanza_DomainException [11 ms]\n  Error Message:\n   Assert.Throws() Failure: No exception was thrown\nFailed!  - Failed:     1, Passed:     2, Skipped:     0, Total:     3 - MyProject.Domain.Tests.dll (net10.0)\n  Failed MyProject.Application.Tests.CrearProductoHandlerTests.Handle_con_precio_negativo_no_guarda_nada [19 ms]\nFailed!  - Failed:     1, Passed:     1, Skipped:     0, Total:     2 - MyProject.Application.Tests.dll (net10.0)",
+  "por": "  Failed MyProject.Domain.Tests.ProductoTests.Create_con_precio_negativo_lanza_DomainException [9 ms]\n  Error Message:\n   Assert.Throws() Failure: No exception was thrown\n...\nFailed!  - Failed:     1, Passed:     2, Skipped:     0, Total:     3, Duration: 301 ms - MyProject.Domain.Tests.dll (net10.0)\n  Failed MyProject.Application.Tests.CrearProductoHandlerTests.Handle_con_precio_negativo_no_guarda_nada [46 ms]\n...\nFailed!  - Failed:     1, Passed:     1, Skipped:     0, Total:     2, Duration: 206 ms - MyProject.Application.Tests.dll (net10.0)",
+  "verificacion": "Cada línea del bloque distinta de `...` aparece literalmente en capturas/L12-regresion.txt. Si el laboratorio se relanza, se copian los valores nuevos."
+ },
+ {
+  "id": "P-28",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-20 lote S4 (solicitud de Edición: decorador)",
+  "reemplazar": "Ese mismo efecto se obtiene con un **decorador**: una clase que implementa la misma interfaz que el handler, hace su trabajo adicional y delega en el handler original.",
+  "por": "Ese mismo efecto se obtiene con un **decorador**: una clase que implementa la misma interfaz que el handler (para eso el handler tiene que declarar una, cosa que este ejemplo no necesita), hace su trabajo adicional y delega en el handler original.",
+  "verificacion": "La frase ya no supone una interfaz que §4.2 no muestra."
+ },
+ {
+  "id": "P-29",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-QA-05 (404 sin captura) — exige el parche P-L2 de lab.sh",
+  "reemplazar": "`4xx` el cliente pidió algo inválido (`400 Bad Request`, `404 Not Found`), `5xx` falló el servidor (`500 Internal Server Error`).",
+  "por": "`4xx` el cliente pidió algo inválido (`400 Bad Request`; `404 Not Found` cuando el recurso no existe, L15), `5xx` falló el servidor (`500 Internal Server Error`).",
+  "verificacion": "Tras relanzar el laboratorio, capturas/L15-get.txt contiene `HTTP/1.1 404 Not Found` y aserciones.log tiene `PASS L15 404 para un id inexistente`."
+ },
+ {
+  "id": "P-30",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-10 (DID2-04, H-NOV-06)",
+  "reemplazar": "- **JSON.** Formato de texto para datos estructurados: `{\"nombre\":\"Yerba 1 kg\",\"precio\":4500}`.",
+  "por": "- **JSON.** Formato de texto para datos estructurados: `{\"nombre\":\"Yerba 1 kg\",\"precio\":4500}`.\n- **`curl`.** Programa de línea de comandos que envía una petición HTTP y muestra la respuesta; viene instalado en la imagen del SDK (L00). Opciones usadas en la guía: `-X` fija el verbo (`POST`; sin `-X`, `curl` envía `GET`), `-H` agrega un encabezado (`Content-Type: application/json` avisa que el cuerpo es JSON), `-d` envía el cuerpo, `-i` muestra también la línea de estado (`HTTP/1.1 201 Created`) y los encabezados de la respuesta, `-s` silencia la barra de progreso ([curl, 2026](#ref-curl-2026)).",
+  "verificacion": "`curl` queda definido en §5.1 antes de su primer uso en §5.2; el ancla ref-curl-2026 resuelve; capturas/L00-entorno.txt contiene `curl 8.5.0`."
+ },
+ {
+  "id": "P-31",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-18 (ED2-06, DR-12)",
+  "reemplazar": "no incluye una interfaz visual interactiva",
+  "por": "no incluye una página web interactiva para explorarla",
+  "verificacion": "grep de «interfaz visual» = 0."
+ },
+ {
+  "id": "P-32",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-24 (Arq H-07) + C-11 (H-NOV-05) + C-14 (ED2-03, rótulo no declarado) + C-QA-05",
+  "reemplazar": "Las acciones `GetAll` y `GetById` siguen el mismo patrón con sus handlers; `CreatedAtAction(nameof(GetById), …)` arma la URL del recurso creado a partir de esa acción. En esta etapa `CrearProductoRequest` y `ProductoResponse` viven dentro de la WebAPI, en la carpeta `Contracts/`; en §6.3 se mudan a su propio proyecto. `Program.cs` es el composition root: registra `InMemoryProductoRepository` (un diccionario en memoria, en Infrastructure) como implementación de `IProductoRepository`, y los tres handlers. **[Compilado en L13; `Program.cs` se reemplaza en L16 y la versión de esta etapa queda en `lab.sh`.]**",
+  "por": "Las acciones `GetAll` y `GetById` siguen el mismo patrón con sus handlers (`ObtenerProductosHandler` y `ObtenerProductoPorIdHandler`; `GetById` responde `404 Not Found` cuando el handler devuelve nulo); `CreatedAtAction(nameof(GetById), …)` arma la URL del recurso creado a partir de esa acción. `[FromServices]` le indica al controller que ese parámetro no viene de la petición sino del contenedor de dependencias (§2.1), e `IActionResult` es el tipo que representa cualquier respuesta HTTP. En esta etapa `CrearProductoRequest` y `ProductoResponse` viven dentro de la WebAPI, en la carpeta `Contracts/`; en §6.3 se mudan a su propio proyecto. `Program.cs` es el composition root: registra `InMemoryProductoRepository` (un diccionario en memoria, en Infrastructure) como implementación de `IProductoRepository`, y los tres handlers (`CrearProductoHandler`, `ObtenerProductosHandler`, `ObtenerProductoPorIdHandler`) con `AddScoped`. La versión de `Program.cs` de esta etapa compiló en L13, se reemplaza en L16 y se conserva en `lab.sh`.",
+  "verificacion": "Los tres handlers nombrados coinciden con los `AddScoped` de Program.cs; grep de «[Compilado en L13» = 0."
+ },
+ {
+  "id": "P-33",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-15 (H-NOV-03, DR-20)",
+  "reemplazar": "La API se arranca con una receta fija, para que el puerto no dependa de la configuración del equipo:\n\n```bash\nASPNETCORE_ENVIRONMENT=Development dotnet run --no-launch-profile --urls http://127.0.0.1:5180\n```",
+  "por": "La API se arranca con una receta fija, para que el puerto no dependa de la configuración del equipo. Se ejecuta desde la carpeta del proyecto WebAPI, y el `&` final la deja corriendo en segundo plano para seguir usando la misma terminal (para detenerla: `kill %1`):\n\n```bash\ncd src/Backend/MyProject.WebAPI\nASPNETCORE_ENVIRONMENT=Development dotnet run --no-launch-profile --urls http://127.0.0.1:5180 &\ncd ../../..\n```",
+  "verificacion": "El bloque coincide con la receta DR-20 (`&`) y con start_api de lab.sh (cd a la carpeta de WebAPI)."
+ },
+ {
+  "id": "P-34",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-15 (H-NOV-03)",
+  "reemplazar": "Con la API escuchando, desde otra terminal:",
+  "por": "Con la API escuchando (la línea `Now listening on`), en la misma terminal:",
+  "verificacion": "grep de «otra terminal» = 0."
+ },
+ {
+  "id": "P-35",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-QA-05 + C-18 (ED2-05, variante del rótulo)",
+  "reemplazar": "`GET /openapi/v1.json` devuelve el documento OpenAPI (`\"openapi\": \"3.1.1\"`). **Qué puede cambiar:** el `Guid` y las fechas.",
+  "por": "`GET /openapi/v1.json` devuelve el documento OpenAPI (`\"openapi\": \"3.1.1\"`), y un `GET` a `/api/productos/` con un `Guid` que no existe responde `404 Not Found` (misma captura). **Qué puede cambiar en tu equipo:** el `Guid` y las fechas.",
+  "verificacion": "Tras relanzar, capturas/L15-get.txt contiene `HTTP/1.1 404 Not Found`; grep de «**Qué puede cambiar:**» = 0."
+ },
+ {
+  "id": "P-36",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-20 lote S4 (solicitud de Requisitos: leyenda del diagrama 4)",
+  "reemplazar": "*Diagrama 4. Secuencia de una petición en tiempo de ejecución.*",
+  "por": "*Diagrama 4. Secuencia de una petición en tiempo de ejecución. Todas las flechas son llamadas en ejecución (equivalen a la línea punteada de los otros diagramas); ninguna es una referencia entre proyectos.*",
+  "verificacion": "Los seis diagramas declaran su convención de línea."
+ },
+ {
+  "id": "P-37",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-12 (DID2-06, Arq H-03, Req H-07, H-NOV-02)",
+  "reemplazar": "L16 agrega el paquete `Microsoft.EntityFrameworkCore.Sqlite` (se resolvió la versión `10.0.12`), crea `AppDbContext`, `ProductoConfiguration` y `ProductoRepository`, y agrupa el registro en el método de extensión `AddInfrastructure` (`MyProject/src/Backend/MyProject.Infrastructure/DependencyInjection.cs`), que llama a `AddDbContext<AppDbContext>(o => o.UseSqlite(...))` y registra `ProductoRepository` como `IProductoRepository`. `Program.cs` cambia una línea: `builder.Services.AddInfrastructure(...)` en lugar del registro en memoria. Al compilar con detalle (`dotnet build -v n`):",
+  "por": "L16 agrega el paquete `Microsoft.EntityFrameworkCore.Sqlite` con `dotnet add src/Backend/MyProject.Infrastructure package Microsoft.EntityFrameworkCore.Sqlite` (se resolvió la versión `10.0.12`; *salida registrada: `capturas/L16-paquete-agregar-efcore.txt`, SDK 10.0.400*), crea `AppDbContext`, `ProductoConfiguration` y `ProductoRepository`, y agrupa el registro en el método de extensión `AddInfrastructure` (`MyProject/src/Backend/MyProject.Infrastructure/DependencyInjection.cs`), que llama a `AddDbContext<AppDbContext>(o => o.UseSqlite(...))` y registra `ProductoRepository` como `IProductoRepository`. En `Program.cs` el registro en memoria se reemplaza por `builder.Services.AddInfrastructure(...)`, se ajustan los `using` y se agrega, después de `builder.Build()`, `app.Services.EnsureDatabaseCreated();`: otro método de extensión de `Infrastructure` que llama a `Database.EnsureCreated()` para crear el archivo y la tabla si no existen (en un proyecto real se usan migraciones). Sin esa línea la tabla no existe y el primer `POST` falla; la versión completa está en `MyProject/src/Backend/MyProject.WebAPI/Program.cs`. Antes de agregar el paquete, el paso guarda la huella SHA-256 de `MyProject.Domain.dll` con `sha256sum src/Backend/MyProject.Domain/bin/Debug/net10.0/MyProject.Domain.dll`; después compila con detalle (`dotnet build -v n`) y vuelve a calcularla. La compilación con detalle imprime cientos de líneas; el extracto conserva las que corresponden a `Domain` y las dos huellas (el comando completo figura en la cabecera de la captura):",
+  "verificacion": "Coincide con lab.sh l.576–578 (sha256sum, dotnet add package) y l.668–696 (Program.cs con EnsureDatabaseCreated); capturas/L16-paquete-agregar-efcore.txt contiene `10.0.12`."
+ },
+ {
+  "id": "P-38",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-12 (DID2-06, solicitud de Requisitos)",
+  "reemplazar": "       Skipping target \"CoreCompile\" because all output files are up-to-date with respect to the input files.\nBuild succeeded.\nsha256 Domain.dll antes : 7ce966b2e3debc58e5a961670e453d181bab076856f5610bf8a6c0317150987a",
+  "por": "       Skipping target \"CoreCompile\" because all output files are up-to-date with respect to the input files.\n     6>Done Building Project \".../src/Backend/MyProject.Domain/MyProject.Domain.csproj\" (default targets).\nBuild succeeded.\nsha256 Domain.dll antes : 7ce966b2e3debc58e5a961670e453d181bab076856f5610bf8a6c0317150987a",
+  "verificacion": "La línea `Done Building Project …MyProject.Domain.csproj\" (default targets).` sigue a la de `Skipping target` en capturas/L16-compilar-con-efcore.txt (l.14–15); si se relanza, la huella se copia de la captura nueva."
+ },
+ {
+  "id": "P-39",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-12 (QA-06, DID2-06) + C-04 (Arq H-01, QA revisado 2, Diablo H-05)",
+  "reemplazar": "*Salida registrada: `capturas/L16-compilar-con-efcore.txt`, SDK 10.0.400.* `Domain.dll` es el mismo archivo, byte por byte, antes y después de cambiar la base de datos. L17 repite el `POST` y el `GET` contra SQLite y obtiene `[{\"id\":\"592827de-…\",\"nombre\":\"Yerba 1 kg\",\"precio\":4500.0}]` (*salida registrada: `capturas/L17-mismo-contrato.txt`, SDK 10.0.400*). Los campos del contrato son los mismos. El precio llega como `4500.0` en lugar de `4500`: el valor numérico es igual, pero el tipo `decimal` conserva la escala con la que el proveedor de SQLite lo devuelve. Un cliente que compare textos en lugar de números notaría la diferencia, y por eso la prueba de un contrato compara valores. La búsqueda de `Infrastructure` en el código de la WebAPI (`grep -rn Infrastructure --include=*.cs`) encuentra solo dos líneas, ambas en `Program.cs`: el composition root es el único que la conoce (§2.4).",
+  "por": "*Salida registrada: `capturas/L16-compilar-con-efcore.txt`, SDK 10.0.400.* Cómo leerla: `Skipping target \"CoreCompile\"` dice que MSBuild no volvió a compilar un proyecto porque ninguno de sus archivos cambió, y la línea `Done Building Project` que sigue identifica ese proyecto: `Domain`. La huella SHA-256 es un número calculado a partir del contenido del archivo; si coincide, el archivo es el mismo. `Domain.dll` es el mismo archivo, byte por byte, antes y después de cambiar la base de datos. **Qué puede cambiar en tu equipo:** el valor de la huella, que depende del directorio de compilación y del parche exacto del compilador; lo que no cambia es que las dos líneas sean iguales entre sí. L17 repite el `POST` y el `GET` contra SQLite y obtiene `[{\"id\":\"592827de-…\",\"nombre\":\"Yerba 1 kg\",\"precio\":4500.0}]` (*salida registrada: `capturas/L17-mismo-contrato.txt`, SDK 10.0.400*). Los campos del contrato son los mismos. El precio llega como `4500.0` en lugar de `4500`: el valor numérico es igual. SQLite no tiene un tipo decimal, así que el proveedor guarda el `decimal` como texto con el formato `0.0###…`, siempre con al menos un dígito decimal ([Microsoft, 2026j](#ref-microsoft-2026j)); al releerlo, el `decimal` conserva esa escala y el JSON la reproduce. Un cliente que compare textos en lugar de números notaría la diferencia, y por eso la prueba de un contrato compara valores. La búsqueda de `Infrastructure` en el código de la WebAPI (`grep -rn Infrastructure --include=*.cs`) encuentra solo dos líneas, ambas en `Program.cs`: el composition root es el único que la conoce (§2.4).",
+  "verificacion": "§5.3 tiene «Qué puede cambiar en tu equipo»; el ancla ref-microsoft-2026j resuelve; la fila Decimal → TEXT `0.0###` está en la fuente citada."
+ },
+ {
+  "id": "P-40",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-04 (Arq H-01)",
+  "reemplazar": "Un modelo de persistencia separado solo hace falta cuando el esquema no se puede adaptar (escenario E-C, §7.2 g).",
+  "por": "Un modelo de persistencia separado solo hace falta cuando el esquema no se puede adaptar (escenario E-C, §7.2 g). `HasPrecision(18, 2)` documenta la intención y rige en proveedores con tipo decimal nativo (SQL Server, PostgreSQL); en SQLite la columna se crea como `TEXT` y la base no aplica precisión ni escala ([Microsoft, 2026j](#ref-microsoft-2026j)), por eso en L17 el precio vuelve con un solo decimal y no con dos.",
+  "verificacion": "§5.4 explica por qué L17 muestra `4500.0` y no `4500.00`; la fuente dice que SQLite no hace cumplir precisión ni escala."
+ },
+ {
+  "id": "P-41",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-20 lote S4 (QA-07.2) + C-14 (ED2-03, marca SDK)",
+  "reemplazar": "L18 quita del repositorio la llamada a `SaveChangesAsync` y deja solo `_db.Productos.Add(producto)`:",
+  "por": "L18 reemplaza en el repositorio la llamada a `SaveChangesAsync` por un `await Task.CompletedTask` que no confirma nada, y deja `_db.Productos.Add(producto)` como única operación sobre la base:",
+  "verificacion": "Coincide con capturas/L18-sin-savechanges.txt l.20–21."
+ },
+ {
+  "id": "P-42",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-14 (ED2-03, DR-05)",
+  "reemplazar": "Con la línea restituida el producto aparece (*`capturas/L18-corregido-con-savechanges.txt`*).",
+  "por": "Con la línea restituida el producto aparece (*salida registrada: `capturas/L18-corregido-con-savechanges.txt`, SDK 10.0.400*).",
+  "verificacion": "Toda marca de captura del documento lleva «SDK 10.0.400»."
+ },
+ {
+  "id": "P-43",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-21 (H-SEG-01)",
+  "reemplazar": "El 500 de L20 muestra la traza completa porque la API corre en el entorno `Development`; en producción esa página no debe habilitarse ([Microsoft, 2026e](#ref-microsoft-2026e)).",
+  "por": "El 500 de L20 trae la traza completa porque la produce la *página de excepciones del desarrollador* (`DeveloperExceptionPageMiddleware`), que `WebApplication.CreateBuilder` activa por sí sola cuando la variable de entorno `ASPNETCORE_ENVIRONMENT` vale `Development`; el `Program.cs` del laboratorio no la nombra, y la receta de §5.2 arranca la API con ese valor (L13: `Hosting environment: Development`). Esa traza expone rutas del sistema de archivos, nombres de clases internas y, según el caso, encabezados y cookies de la petición, por lo que no debe estar activa fuera de `Development`: alcanza con no fijar ese valor en producción, y Microsoft indica no compartir públicamente el detalle de las excepciones ([Microsoft, 2026e](#ref-microsoft-2026e)). Con el manejador de L21 la excepción del dominio ya no llega a esa página.",
+  "verificacion": "capturas/L13-arranque.txt contiene `Hosting environment: Development`; Program.cs no contiene `UseDeveloperExceptionPage`; la fuente [Microsoft, 2026e] dice que la página se habilita por defecto en Development con WebApplication.CreateBuilder."
+ },
+ {
+  "id": "P-44",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-02 (Arq H-04, QA-04)",
+  "reemplazar": "        ProblemDetails = { Status = 400, Title = \"Regla de negocio incumplida\", Detail = exception.Message },",
+  "por": "        ProblemDetails =\n        {\n            Status = StatusCodes.Status400BadRequest,\n            Title = \"Regla de negocio incumplida\",\n            Detail = exception.Message,\n        },",
+  "verificacion": "`diff <(sed -n 13,30p MyProject/src/Backend/MyProject.WebAPI/ExceptionHandlers/DomainExceptionHandler.cs) <(bloque de la guía)` vacío."
+ },
+ {
+  "id": "P-45",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-25 (Diablo H-07, DR-28)",
+  "reemplazar": "responder `422 Unprocessable Content` a las reglas de negocio es otra convención posible.",
+  "por": "responder `422 Unprocessable Content` (definido en RFC 9110, §15.5.21, [IETF, 2022](#ref-ietf-2022)) a las reglas de negocio es otra convención posible.",
+  "verificacion": "El ancla ref-ietf-2022 resuelve; la URL apunta a la sección 15.5.21 de RFC 9110."
+ },
+ {
+  "id": "P-46",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-05 (Diablo H-01) + C-08 (DID2-02)",
+  "reemplazar": "**¿Cuándo no hace falta una API?** Cuando no hay un segundo proceso que consuma los datos: en el escenario E-A la aplicación Blazor en el servidor llama a los casos de uso dentro del mismo proceso, sin HTTP ni contrato (§8.3).",
+  "por": "**¿Cuándo no hace falta una API?** Cuando no hay un segundo proceso que consuma los datos: en el escenario E-A la aplicación Blazor en el servidor llama a su servicio o, si ya tiene `Application`, a los casos de uso dentro del mismo proceso, sin HTTP ni contrato (§8.3). En la escalera del §9.2 es la diferencia entre los escalones 1 a 3 y el escalón 4.",
+  "verificacion": "§5.7 distingue servicio (escalón 1) de casos de uso (escalón 3) y nombra la escalera."
+ },
+ {
+  "id": "P-47",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-18 (ED2-06, DR-12)",
+  "reemplazar": "Tecnología de Microsoft para construir interfaces web con componentes C#",
+  "por": "Tecnología de Microsoft para construir páginas web con componentes C#",
+  "verificacion": "grep de «interfaces web» = 0."
+ },
+ {
+  "id": "P-48",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-11 (DID2-05)",
+  "reemplazar": "recibe una implementación real o un doble de prueba.",
+  "por": "recibe una implementación real o un **doble de prueba**: una implementación falsa, escrita para las pruebas, como el repositorio falso de §4.3.",
+  "verificacion": "«doble de prueba» queda definido en su primer uso."
+ },
+ {
+  "id": "P-49",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-17 (DID2-07, DR-15)",
+  "reemplazar": "*Diagrama 5. Línea continua = dependencia de código; punteada = llamada en ejecución.*",
+  "por": "*Diagrama 5. Línea continua = dependencia de código; punteada = llamada en ejecución.*\n\n| | |\n| --- | --- |\n| ✅ | La página pide `IProductoApiService`; en las pruebas recibe un doble que devuelve una lista fija |\n| ❌ | La página crea un `HttpClient` y arma la URL `api/productos` en su propio código |\n| ❌ | Cada página repite la lectura del JSON y el manejo del código de estado |",
+  "verificacion": "§6.2 tiene una tabla ✅/❌ con 1 ✅ y 2 ❌; §6 ≤ 150 líneas."
+ },
+ {
+  "id": "P-50",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-14 (ED2-03, DR-05)",
+  "reemplazar": "La WebAPI compiló sin cambiar una línea de código (*`capturas/L22-build-compilar-solucion.txt`*, 0 advertencias)",
+  "por": "La WebAPI compiló sin cambiar una línea de código (*salida registrada: `capturas/L22-build-compilar-solucion.txt`, SDK 10.0.400*, 0 advertencias)",
+  "verificacion": "Toda marca de captura lleva «Salida registrada» y «SDK 10.0.400»."
+ },
+ {
+  "id": "P-51",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-15 (H-NOV-02)",
+  "reemplazar": "```text\nPOST api/productos -> 201",
+  "por": "Con la API de L21 escuchando, `dotnet run --project src/Clients/MyProject.ConsoleClient -- http://127.0.0.1:5180` compila el cliente y lo ejecuta:\n\n```text\nPOST api/productos -> 201",
+  "verificacion": "El comando coincide con la cabecera de capturas/L22-cliente-consola.txt."
+ },
+ {
+  "id": "P-52",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-18 (ED2-05) + C-04 (Diablo H-05, dos causas para 12000.0)",
+  "reemplazar": "**Qué puede cambiar:** el `Guid`, y el formato del número según la cultura regional del equipo.",
+  "por": "**Qué puede cambiar en tu equipo:** el `Guid`, y el separador decimal del número (`12000.0` o `12000,0`) según la cultura regional del equipo; el dígito decimal viene de SQLite (§5.3).",
+  "verificacion": "grep de «**Qué puede cambiar:**» = 0; §6.3 remite a §5.3 para la escala."
+ },
+ {
+  "id": "P-53",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-05 (Diablo H-01)",
+  "reemplazar": "**Respuesta: en ese caso se puede, y es el escenario E-A; la condición deja de cumplirse cuando aparece un cliente remoto.**",
+  "por": "**Respuesta: en ese caso se puede; es el escenario E-A cuando ya tiene `Application` (escalón 3 del §9.2), y la condición deja de cumplirse cuando aparece un cliente remoto.**",
+  "verificacion": "§6.4 y §9.1 dejan de asignar estructuras incompatibles al mismo rótulo E-A."
+ },
+ {
+  "id": "P-54",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-18 (ED2-06, DR-12)",
+  "reemplazar": "La interfaz se carga sin red porque los componentes viajan dentro de la aplicación",
+  "por": "Las pantallas se cargan sin red porque los componentes viajan dentro de la aplicación",
+  "verificacion": "grep de «La interfaz se carga» = 0."
+ },
+ {
+  "id": "P-55",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-16 (DR-29: aviso de versión de Refit)",
+  "reemplazar": "la implementación de una interfaz decorada con atributos HTTP (`[Get(\"/api/productos\")]`), en lugar de escribir el servicio con `HttpClient` a mano.",
+  "por": "la implementación de una interfaz decorada con atributos HTTP (`[Get(\"/api/productos\")]`), en lugar de escribir el servicio con `HttpClient` a mano. Las versiones anteriores a 7.2.22 tienen una vulnerabilidad crítica (Anexo C).",
+  "verificacion": "§6.5 remite al Anexo C, que tiene la fila de Refit."
+ },
+ {
+  "id": "P-56",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-21 (H-SEG-02)",
+  "reemplazar": "- **Autenticación.** Un `DelegatingHandler` es un eslabón de la cadena de `HttpClient` que agrega el encabezado `Authorization` a cada petición. Qué emite el token y cómo se valida es tema de seguridad y queda fuera de esta guía.",
+  "por": "- **Autenticación.** Un `DelegatingHandler` es un eslabón de la cadena por la que pasa cada petición de `HttpClient` antes de salir; el de este ejemplo agrega el encabezado `Authorization` con un token portador (*bearer*). Un token portador sirve a quien lo tenga, así que el handler debe agregarlo solo a las peticiones dirigidas a la API propia y nunca a otros orígenes; en Blazor WebAssembly el framework ya provee `AuthorizationMessageHandler` y `BaseAddressAuthorizationMessageHandler`, que lo agregan únicamente cuando la URL de la petición está bajo una lista de URLs autorizadas ([Microsoft, 2026i](#ref-microsoft-2026i)). Qué emite el token y cómo se valida es tema de seguridad y queda fuera de esta guía.",
+  "verificacion": "El ancla ref-microsoft-2026i resuelve; la fuente dice «The access token is only attached if at least one of the authorized URLs is a base of the request URI»."
+ },
+ {
+  "id": "P-57",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-21 (H-SEG-02)",
+  "reemplazar": "public class AuthorizationMessageHandler : DelegatingHandler\n{\n    private readonly Func<Task<string?>> _obtenerToken;\n\n    public AuthorizationMessageHandler(Func<Task<string?>> obtenerToken) => _obtenerToken = obtenerToken;\n\n    protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)\n    {\n        var token = await _obtenerToken();\n        if (!string.IsNullOrEmpty(token))\n            request.Headers.Authorization = new AuthenticationHeaderValue(\"Bearer\", token);\n        return await base.SendAsync(request, ct);\n    }\n}",
+  "por": "public class ApiTokenHandler : DelegatingHandler\n{\n    private readonly Func<Task<string?>> _obtenerToken;\n    private readonly Uri _baseDeLaApi; // solo a esta URL se le envía el token\n\n    public ApiTokenHandler(Func<Task<string?>> obtenerToken, Uri baseDeLaApi)\n        => (_obtenerToken, _baseDeLaApi) = (obtenerToken, baseDeLaApi);\n\n    protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)\n    {\n        var token = await _obtenerToken();\n        if (!string.IsNullOrEmpty(token) && _baseDeLaApi.IsBaseOf(request.RequestUri!))\n            request.Headers.Authorization = new AuthenticationHeaderValue(\"Bearer\", token);\n        return await base.SendAsync(request, ct);\n    }\n}",
+  "verificacion": "El fragmento conserva el rótulo [Fragmento ilustrativo: no compilado]; el nombre ya no colisiona con la clase del framework; `Uri.IsBaseOf` es API pública de System."
+ },
+ {
+  "id": "P-58",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-05 (Diablo H-01)",
+  "reemplazar": "en el escenario E-A la página inyecta los casos de uso directamente (§6.4), y un servicio intermedio que solo reenvía sería una capa sin trabajo.",
+  "por": "en el escenario E-A la página inyecta el servicio o los casos de uso directamente (§6.4), y un servicio de API intermedio que solo reenvía sería una capa sin trabajo.",
+  "verificacion": "§6.6 coherente con §5.7 y §6.4."
+ },
+ {
+  "id": "P-59",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-09 (DID2-03, Req H-05)",
+  "reemplazar": "*Prerrequisitos para el recorrido: §3–§6. Para la consulta, cada respuesta remite al paso de laboratorio donde el objeto se vio funcionando.*",
+  "por": "*Prerrequisitos para el recorrido: §3–§6. Para la consulta, cada respuesta remite al paso de laboratorio donde el objeto se vio funcionando; el ViewModel y el form model no se construyeron en el laboratorio (§6.5) y sus respuestas remiten al paso que muestra la necesidad que resuelven.*",
+  "verificacion": "La afirmación de §7 es verdadera para las siete respuestas."
+ },
+ {
+  "id": "P-60",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-09 (DID2-03, Req H-05)",
+  "reemplazar": "el controller lo construye a partir de `CrearProductoRequest` (§5.2).",
+  "por": "el controller lo construye a partir de `CrearProductoRequest` (§5.2, L14), y el handler lo recibe sin saber que existe HTTP (L11, donde la prueba lo construye a mano).",
+  "verificacion": "§7.2 c remite a L14 y L11 (conteo de `L[0-9][0-9]` en c ≥ 1)."
+ },
+ {
+  "id": "P-61",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-09 (DID2-03, Req H-05)",
+  "reemplazar": "El ViewModel cambia cuando cambia el diseño.",
+  "por": "El ViewModel cambia cuando cambia el diseño. Es el único objeto de la tabla que el laboratorio no construye: el cliente de consola de L22 imprime `ProductoResponse` directamente porque no tiene pantalla, y muestra la necesidad: el precio sale como `12000.0`, y presentarlo como «$ 12.000,00» es trabajo de la pantalla, no del contrato. El ViewModel aparece con el cliente Blazor de §6.5, que es ilustrativo.",
+  "verificacion": "§7.2 e remite a L22; capturas/L22-cliente-consola.txt contiene `12000.0`."
+ },
+ {
+  "id": "P-62",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-09 (DID2-03, DR-16)",
+  "reemplazar": "El enlace de datos de Blazor (`@bind-Value`) necesita",
+  "por": "El enlace de datos de Blazor —la sintaxis `@bind-Value`, que copia lo que el usuario escribe en un campo a una propiedad del objeto— necesita",
+  "verificacion": "`@bind-Value` queda definido en su primer uso."
+ },
+ {
+  "id": "P-63",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-18 (ED2-06, DR-12)",
+  "reemplazar": "| ✅ | `ProductoFormModel` con `{ get; set; }` y atributos de validación de interfaz |",
+  "por": "| ✅ | `ProductoFormModel` con `{ get; set; }` y atributos de validación del formulario |",
+  "verificacion": "grep de «validación de interfaz» = 0."
+ },
+ {
+  "id": "P-64",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-20 lote S4 (solicitud de Edición: L16 vs L17)",
+  "reemplazar": "En L16 `Producto` se guarda en SQLite sin cambiar una línea del dominio",
+  "por": "En L16–L17 `Producto` se guarda en SQLite sin cambiar una línea del dominio",
+  "verificacion": "§7.2 g remite al paso que ejercita el guardado (L17)."
+ },
+ {
+  "id": "P-65",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-22 (Arq H-05)",
+  "reemplazar": "En un cliente Blazor WebAssembly, además, el código corre en el navegador y no tiene el ensamblado del dominio.",
+  "por": "En un cliente Blazor WebAssembly, además, el código corre en el navegador: para que la página recibiera la entidad habría que descargar el ensamblado de `Domain` al cliente, y aun así no habría base ni repositorio que la respalden (§6.4).",
+  "verificacion": "§7.4 y el ❌ de §6.4 dan la misma razón para el mismo caso."
+ },
+ {
+  "id": "P-66",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-08 (DID2-02)",
+  "reemplazar": "sin montar las cuatro capas. **Criterio de esta guía.**",
+  "por": "sin montar las cuatro capas. Es el escalón 2 de la escalera del [§9.2](#92-la-escalera-de-opciones). **Criterio de esta guía.**",
+  "verificacion": "§7.5 nombra el escalón 2; el ancla resuelve."
+ },
+ {
+  "id": "P-67",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-14 (ED2-03, DR-05)",
+  "reemplazar": "contiene los ocho proyectos compilados (*salida registrada: `capturas/L23-estructura.txt`*).",
+  "por": "contiene los ocho proyectos compilados (*salida registrada: `capturas/L23-estructura.txt`, SDK 10.0.400*).",
+  "verificacion": "Toda marca de captura lleva «SDK 10.0.400»."
+ },
+ {
+  "id": "P-68",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-14 (ED2-03, rótulo aplicado a prosa)",
+  "reemplazar": "MSBuild permite desactivar la transitividad con la propiedad `DisableTransitiveProjectReferences`. **[Fragmento ilustrativo: no se ejercitó en el laboratorio.]**",
+  "por": "MSBuild permite desactivar la transitividad con la propiedad `DisableTransitiveProjectReferences`. Esta propiedad no se ejercitó en el laboratorio.",
+  "verificacion": "Los rótulos [Fragmento ilustrativo] solo preceden bloques ```csharp."
+ },
+ {
+  "id": "P-69",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-05 (Diablo H-01)",
+  "reemplazar": "| Cliente en el mismo proceso, único (E-A) | `Application`² | `Infrastructure`, `Domain` por fuera de `Application` |",
+  "por": "| Cliente en el mismo proceso, único (E-A con `Application`, §6.4) | `Application`² | `Infrastructure`, `Domain` por fuera de `Application` |",
+  "verificacion": "La fila de §8.3 remite a §6.4 y no contradice a §9.1."
+ },
+ {
+  "id": "P-70",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-17 (Req H-04, DID2-07, R-09)",
+  "reemplazar": "En el laboratorio, `Contracts` nace en L22 y la API no necesita cambiar una línea de código para usarlo (§6.3).",
+  "por": "En el laboratorio, `Contracts` nace en L22 y la API no necesita cambiar una línea de código para usarlo (§6.3).\n\n### 8.6 Pregunta de cierre\n\n**¿Cuándo no hace falta el árbol completo de §8.1?** Cuando la solución tiene un solo proyecto (escenario E-A en el escalón 1 de §9.2): no hay `src/Backend/`, `src/Clients/` ni `src/Contracts/` porque no hay nada que se despliegue por separado ni ningún contrato compartido. El árbol crece con la solución: `tests/` aparece en L11, y `src/Contracts/` y `src/Clients/` en L22, con el primer cliente remoto (E-B). La tabla de §8.3 sigue siendo la referencia para cualquier proyecto que se agregue.",
+  "verificacion": "grep «¿Cuándo no» en §8 ≥ 1; §8 ≤ 110 líneas."
+ },
+ {
+  "id": "P-71",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-11 (DID2-05, CRUD)",
+  "reemplazar": "| **E-A** una app Blazor en el servidor, CRUD con pocas reglas |",
+  "por": "| **E-A** una app Blazor en el servidor, alta, baja, modificación y consulta (CRUD) con pocas reglas |",
+  "verificacion": "La sigla CRUD queda desplegada en su primer uso (§9.1 se lee aislada)."
+ },
+ {
+  "id": "P-72",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-06 (Diablo H-03)",
+  "reemplazar": "| **E-B** una API con clientes .NET remotos | Cuatro proyectos de backend + `Contracts` + clientes | Entidad, mensaje, modelo de lectura, contrato; modelos de pantalla en cada cliente | §2, §5, §6, §8 | — |",
+  "por": "| **E-B** una API con clientes .NET remotos | Cuatro proyectos de backend + `Contracts` + clientes | Entidad, mensaje, modelo de lectura, contrato; modelos de pantalla en cada cliente | §2, §5, §6, §8 | — |\n| Una API cuyos clientes no son .NET (navegador con JavaScript, móvil nativo, otro equipo) | La de E-B sin `Contracts`: el contrato es el documento OpenAPI que publica la API | Entidad, mensaje, modelo de lectura, DTOs de la WebAPI | §5, §8.5 | Aparece el primer cliente .NET: nace `Contracts` (§6.3) |",
+  "verificacion": "§9.1 tiene cinco filas; la nueva no introduce un rótulo E-x (DR-17)."
+ },
+ {
+  "id": "P-73",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-07 (DID2-01, Diablo H-04)",
+  "reemplazar": "| La misma validación aparece en dos pantallas | Falta una entidad con comportamiento (escalón 2 o 3) |",
+  "por": "| La misma validación aparece en dos pantallas | Falta una entidad con comportamiento (escalón 2); si las reglas son muchas y se repiten en varios casos de uso (E-D), escalón 3 |",
+  "verificacion": "La fila da un criterio para elegir entre 2 y 3."
+ },
+ {
+  "id": "P-74",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-07 (DID2-01, Diablo H-04)",
+  "reemplazar": "| Se quiere probar una regla y hace falta levantar la base | Falta separar Domain (escalón 3) |",
+  "por": "| Se quiere probar una regla y hace falta levantar la base | Falta una entidad que contenga la regla y se pruebe sola (escalón 2: `Producto.Create` se prueba sin base, como en L11); si además hace falta que el compilador impida que la regla dependa de EF Core (§2.2), falta separar `Domain` (escalón 3) |",
+  "verificacion": "§9.2, §9.3 y §9.5 mandan la señal «probar la regla» al mismo escalón (2)."
+ },
+ {
+  "id": "P-75",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-25 (Diablo H-07)",
+  "reemplazar": "**Respuesta: soporte, licencia, vulnerabilidades conocidas, alternativa nativa y costo de salida, en ese orden.**",
+  "por": "**Respuesta: soporte, licencia, vulnerabilidades conocidas, alternativa nativa y costo de salida; las cinco antes de agregar la primera línea que dependa del paquete.**",
+  "verificacion": "grep de «en ese orden» = 0."
+ },
+ {
+  "id": "P-76",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-16 (ED2-01, Req H-03, Req H-06, R-03)",
+  "reemplazar": "**Paquetes.** Dos comprobaciones se pueden hacer desde la terminal. El paso L24 las aplica a AutoMapper, la biblioteca de mapeo que la versión anterior de esta guía recomendaba:",
+  "por": "**Paquetes.** Dos comprobaciones se pueden hacer desde la terminal, en un proyecto descartable: `dotnet list package --vulnerable` consulta la base de avisos de seguridad de nuget.org, y `curl -s https://api.nuget.org/v3-flatcontainer/automapper/14.0.0/automapper.nuspec` descarga el archivo de metadatos del paquete, donde el elemento `<license>` declara la licencia. El paso L24 las aplica a AutoMapper, una biblioteca que copia automáticamente los datos entre objetos de clases distintas:",
+  "verificacion": "`grep -i -c 'versión anterior\\|guía vigente' guía` = 0 (chequeo R-03); los dos comandos coinciden con la cabecera de capturas/L24-evaluar-dependencia.txt."
+ },
+ {
+  "id": "P-77",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-16 (Req H-03, Diablo H-06, H-SEG-03, solicitud de Arq)",
+  "reemplazar": "*Salida registrada: `capturas/L24-evaluar-dependencia.txt`, SDK 10.0.400.* La versión 14.0.0 es la última con licencia MIT; desde la 15.0.0 la licencia es dual, RPL-1.5 o comercial ([Bogard, 2025](#ref-bogard-2025)), y la vulnerabilidad está corregida en versiones de esa rama. La misma captura muestra el campo de licencia de cada versión leído de nuget.org.",
+  "por": "*Salida registrada: `capturas/L24-evaluar-dependencia.txt`, SDK 10.0.400.* La versión 14.0.0 es la última con licencia MIT; desde la 15.0.0 la licencia es dual, RPL-1.5 o comercial ([Bogard, 2025](#ref-bogard-2025)). La vulnerabilidad informada (GHSA-rvv3-g6hj-g44x, CVE-2026-32933, severidad alta) es una denegación de servicio: el mapeo recurre sin límite de profundidad y un objeto anidado unas 25 000 veces desborda la pila y termina el proceso. Afecta a toda versión menor que 15.1.1 y a las 16.0.0–16.1.0; está corregida en 15.1.1 y 16.1.1 ([GitHub, 2026](#ref-github-2026)), es decir, solo en versiones con licencia dual. La misma captura muestra el elemento `<license>` de cada versión leído de nuget.org: en 14.0.0 es la expresión `MIT`; en 15.0.0 pasa a ser un archivo, `LICENSE.md`, cuyo contenido es la licencia dual que describe Bogard. Lo mismo ocurre con MediatR entre 12.5.0 (`Apache-2.0`) y 13.0.0 (`LICENSE.md`).",
+  "verificacion": "Los rangos coinciden con api.github.com/advisories/GHSA-rvv3-g6hj-g44x (< 15.1.1 → 15.1.1; >= 16.0.0, < 16.1.1 → 16.1.1); las cuatro líneas <license> coinciden con capturas/L24-evaluar-dependencia.txt l.26–33."
+ },
+ {
+  "id": "P-78",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-16 (H-SEG-03)",
+  "reemplazar": "| ¿Vulnerabilidades conocidas? | Alta en 14.0.0 (L24) | Ninguna agregada |",
+  "por": "| ¿Vulnerabilidades conocidas? | Alta (DoS) en toda versión < 15.1.1 y en 16.0.0–16.1.0; corregida en 15.1.1 y 16.1.1 (L24; [GitHub, 2026](#ref-github-2026)) | Ninguna agregada |",
+  "verificacion": "La tabla ya no sugiere que la falla sea propia de 14.0.0."
+ },
+ {
+  "id": "P-79",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-15 (Req H-02, H-NOV-02) + C-12 (QA-06) + C-20 lote S4 (QA-07.1)",
+  "reemplazar": "El guion `Dot-NET-Arquitectura-Lab/lab.sh` ejecuta todos los pasos dentro del contenedor del SDK, guarda cada salida en `capturas/` y verifica lo que no cambia entre equipos en `aserciones.log`. El código final está en `Dot-NET-Arquitectura-Lab/MyProject/`.\n\n| Paso | § | Qué se hace | Qué confirma |\n| --- | --- | --- | --- |\n| L00 | 0.6 | `dotnet --info` | El SDK disponible |\n| L01 | 1.2 | `dotnet new sln`, `global.json` | La solución se crea como `.slnx` |\n| L02 | 1.2 | Dos bibliotecas, una referencia, `build` | La referencia es una flecha |\n| L03 ⚠ | 1.4 | `using` sin referencia | CS0234 y CS0246: el espacio de nombres no crea dependencias |\n| L04 ⚠ | 1.5 | Referencia inversa | Se agrega con código 0; MSB4006 al compilar |\n| L05 | 1.5 | Quitar la referencia | Con la carpeta falla en silencio; con el `.csproj` funciona |\n| L06 | 2.2 | Entidad y SQL en un proyecto | Nada impide mezclar |\n| L07 ⚠ | 2.2 | El mismo código separado | La separación hace cumplir la regla |\n| L08 | 2.6 | Esqueleto de cuatro proyectos | `Domain` sin referencias |\n| L09 | 3.2 | `Producto`, `Dinero`, `DomainException` | `Domain` compila solo |\n| L10 ⚠ | 3.3 | Asignar `Precio` desde afuera | CS0200: el setter privado protege la invariante |\n| L11 | 4.3 | Pruebas con repositorio falso | La regla se prueba sin base ni HTTP |\n| L12 ⚠ | 4.3 | Quitar la regla | Las pruebas la detectan |\n| L13 | 5.2 | Arrancar la API | Composition root en marcha |\n| L14 | 5.2 | `POST` | 201 con `Location` |\n| L15 | 5.2 | `GET` y OpenAPI | El contrato filtra `Activo` |\n| L16 | 5.3 | Cambiar a EF Core con SQLite | `Domain.dll` idéntico |\n| L17 | 5.3 | Repetir el `GET` | Mismo contrato; `Infrastructure` solo en `Program.cs` |\n| L18 ⚠ | 5.5 | Sin `SaveChangesAsync` | 201 y lista vacía |\n| L19 ⚠ | 5.6 | JSON mal formado | 400 automático |\n| L20 ⚠ | 5.6 | Precio negativo sin traductor | 500 |\n| L21 | 5.6 | Manejador de excepciones | 400 con ProblemDetails |\n| L22 | 6.3 | Nace `Contracts`; cliente de consola | Un cliente remoto vive con el contrato |\n| L23 | 8.1 | `dotnet sln list` | La estructura física |\n| L24 | 9.4 | `dotnet list package --vulnerable` | Evaluar una dependencia antes de adoptarla |\n\n**Qué puede cambiar en tu equipo en todos los pasos:** rutas absolutas, identificadores `Guid`, fechas, duraciones y el número de parche del SDK. Lo que no cambia —códigos de error, códigos de estado HTTP, códigos de salida— es lo que verifica `aserciones.log`. El registro incluye una aserción que falla a propósito, para demostrar que el mecanismo detecta.",
+  "por": "El guion `Dot-NET-Arquitectura-Lab/lab.sh` ejecuta todos los pasos dentro del contenedor del SDK, guarda cada salida en `capturas/` y verifica lo que no cambia entre equipos en `aserciones.log`. El código final está en `Dot-NET-Arquitectura-Lab/MyProject/`. La columna «Comando» resume el que produjo la captura; el comando completo, con sus rutas, está en la primera línea `# comando:` de cada archivo de `capturas/`. Todos los comandos se ejecutan desde la carpeta `MyProject/` creada en L01, salvo L00, L06 y L24. La columna «Captura» da el nombre del archivo sin la extensión `.txt`.\n\n| Paso | § | Comando | Qué confirma | Captura |\n| --- | --- | --- | --- | --- |\n| L00 | 0.6 | `dotnet --info`; `curl --version` | El SDK disponible | `L00-entorno` |\n| L01 | 1.2 | `dotnet new sln -n MyProject`; `dotnet new globaljson …` | La solución se crea como `.slnx` | `L01-nueva-solucion` |\n| L02 | 1.2 | `dotnet new classlib …` ×2; `dotnet sln add …`; `dotnet add … reference …`; `dotnet list … reference`; `dotnet build` | La referencia es una flecha | `L02-dos-proyectos` |\n| L03 ⚠ | 1.4 | `dotnet build src/Backend/MyProject.Domain` con un `using` sin referencia | CS0234 y CS0246: el espacio de nombres no crea dependencias | `L03-using-sin-referencia` |\n| L04 ⚠ | 1.5 | `dotnet add src/Backend/MyProject.Domain reference src/Backend/MyProject.Infrastructure`; `dotnet build` | Se agrega con código 0; MSB4006 al compilar | `L04-ciclo-agregar`, `L04-ciclo-compilar` |\n| L05 | 1.5 | `dotnet remove … reference <carpeta>`; después `… reference <ruta>.csproj`; `dotnet build` | Con la carpeta avisa que no la encuentra pero devuelve 0; con el `.csproj` la quita | `L05-quitar-con-carpeta`, `L05-quitar-con-csproj` |\n| L06 | 2.2 | `dotnet build` en el proyecto `TodoJunto` | Nada impide mezclar | `L06-todo-junto` |\n| L07 ⚠ | 2.2 | `dotnet build src/Backend/MyProject.Domain` con el mismo código separado | La separación hace cumplir la regla | `L07-separado` |\n| L08 | 2.6 | `dotnet new classlib …`; `dotnet new webapi --use-controllers --no-https …`; referencias; `dotnet list … reference`; `dotnet build` | `Domain` sin referencias | `L08-esqueleto` |\n| L09 | 3.2 | `dotnet build src/Backend/MyProject.Domain` | `Domain` compila solo | `L09-domain` |\n| L10 ⚠ | 3.3 | `dotnet build src/Backend/MyProject.Application` con `producto.Precio = -1m` | CS0200: el setter privado protege la invariante | `L10-setter-privado` |\n| L11 | 4.3 | `dotnet new xunit …` ×2; `dotnet sln add …`; `dotnet add … reference …`; `dotnet test` | La regla se prueba sin base ni HTTP | `L11-tests` |\n| L12 ⚠ | 4.3 | Quitar las dos líneas que validan el precio; `dotnet test` | Las pruebas la detectan | `L12-regresion` |\n| L13 | 5.2 | `dotnet build`; `ASPNETCORE_ENVIRONMENT=Development dotnet run --no-launch-profile --urls http://127.0.0.1:5180 &` | Composition root en marcha | `L13-build-compilar-api`, `L13-arranque` |\n| L14 | 5.2 | `curl -s -i -X POST …/api/productos -H 'Content-Type: application/json' -d '{\"nombre\":\"Yerba 1 kg\",\"precio\":4500}'` | 201 con `Location` | `L14-post` |\n| L15 | 5.2 | `curl -s -i …/api/productos`; `curl -s -i <Location>`; `curl -s …/openapi/v1.json`; `curl -s -i …/api/productos/<Guid inexistente>` | El contrato filtra `Activo`; 404 si el recurso no existe | `L15-get` |\n| L16 | 5.3 | `sha256sum …/MyProject.Domain.dll`; `dotnet add src/Backend/MyProject.Infrastructure package Microsoft.EntityFrameworkCore.Sqlite`; `dotnet build -v n`; `sha256sum` otra vez | `Domain.dll` idéntico | `L16-paquete-agregar-efcore`, `L16-compilar-con-efcore` |\n| L17 | 5.3 | Repetir L14 y L15; `grep -rn Infrastructure src/Backend/MyProject.WebAPI --include=*.cs` | Mismo contrato; `Infrastructure` solo en `Program.cs` | `L17-mismo-contrato` |\n| L18 ⚠ | 5.5 | Reemplazar `SaveChangesAsync` por `Task.CompletedTask`; repetir L14 y L15; restituir; repetir | 201 y lista vacía; después, el producto presente | `L18-sin-savechanges`, `L18-corregido-con-savechanges` |\n| L19 ⚠ | 5.6 | `curl … -d '{\"nombre\":\"Mate\",\"precio\":}'` | 400 automático | `L19-json-mal-formado` |\n| L20 ⚠ | 5.6 | `curl … -d '{\"nombre\":\"Mate\",\"precio\":-5}'` | 500 | `L20-regla-sin-traducir` |\n| L21 | 5.6 | Registrar `DomainExceptionHandler`; `dotnet build src/Backend/MyProject.WebAPI`; repetir L20 | 400 con ProblemDetails | `L21-build-compilar-manejador`, `L21-regla-traducida` |\n| L22 | 6.3 | `dotnet new classlib -n MyProject.Contracts …`; mover los DTO; `dotnet new console -n MyProject.ConsoleClient …`; `dotnet list … reference`; `dotnet build`; `dotnet run --project src/Clients/MyProject.ConsoleClient -- http://127.0.0.1:5180` | Un cliente remoto vive con el contrato | `L22-contracts-nace-contracts`, `L22-build-compilar-solucion`, `L22-cliente-consola` |\n| L23 | 8.1 | `dotnet sln list` | La estructura física | `L23-estructura` |\n| L24 | 9.4 | En un proyecto descartable: `dotnet add package AutoMapper --version 14.0.0`; `dotnet list package --vulnerable`; `curl -s https://api.nuget.org/v3-flatcontainer/<paquete>/<versión>/<paquete>.nuspec` | Evaluar una dependencia antes de adoptarla | `L24-evaluar-dependencia` |\n\n**Qué puede cambiar en tu equipo en todos los pasos:** rutas absolutas, identificadores `Guid`, fechas, duraciones, el valor de la huella SHA-256 de L16 y el número de parche del SDK. Lo que no cambia —códigos de error, códigos de estado HTTP, códigos de salida— es lo que verifica `aserciones.log`. El registro incluye una aserción que falla a propósito, para demostrar que el mecanismo detecta.",
+  "verificacion": "Las 25 filas tienen Comando y Captura; cada nombre de la columna Captura existe como `capturas/<nombre>.txt` (33 archivos); cada comando resumido es prefijo o resumen fiel de la línea `# comando:` de su captura; la fila L15 se verifica tras relanzar el laboratorio."
+ },
+ {
+  "id": "P-80",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-07 (DID2-01)",
+  "reemplazar": "| 2 | ¿Hay reglas de negocio que se repiten o que conviene probar sin base de datos? | `Domain` y `Application` separados (E-D) | §3, §4 |",
+  "por": "| 2 | ¿Hay reglas de negocio ricas que se repiten en varios casos de uso? (Si es una regla que solo se quiere probar sin base, alcanza el término medio del §7.5.) | `Domain` y `Application` separados (E-D) | §3, §4, §7.5 |",
+  "verificacion": "El Anexo B #2 coincide con §9.2 y §9.3 corregidos."
+ },
+ {
+  "id": "P-81",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-16 (Req H-03, Diablo H-06, H-SEG-03, DR-29)",
+  "reemplazar": "| MediatR | 12.5.0 Apache-2.0; desde 13.0.0 RPL-1.5 o comercial | [Bogard, 2025](#ref-bogard-2025); L24 |\n| AutoMapper | 14.0.0 MIT con vulnerabilidad alta GHSA-rvv3-g6hj-g44x; desde 15.0.0 RPL-1.5 o comercial | [Bogard, 2025](#ref-bogard-2025); [GitHub, 2026](#ref-github-2026); L24 |\n| Licencia comunitaria de Lucky Penny Software | Gratuita para organizaciones con ingresos brutos anuales menores a USD 5 millones, con otras condiciones | [Lucky Penny Software, 2025](#ref-luckypenny-2025) |",
+  "por": "| MediatR | 12.5.0 Apache-2.0; desde 13.0.0 RPL-1.5 o comercial | [Bogard, 2025](#ref-bogard-2025); L24 (la licencia pasa de expresión `Apache-2.0` a archivo `LICENSE.md`) |\n| AutoMapper | 14.0.0 es la última MIT; GHSA-rvv3-g6hj-g44x (CVE-2026-32933, alta, denegación de servicio) afecta a < 15.1.1 y a 16.0.0–16.1.0, corregida en 15.1.1 y 16.1.1; desde 15.0.0 RPL-1.5 o comercial | [Bogard, 2025](#ref-bogard-2025); [GitHub, 2026](#ref-github-2026); L24 (la licencia pasa de expresión `MIT` a archivo `LICENSE.md`) |\n| Licencia comunitaria de Lucky Penny Software (documento v2.0) | Gratuita para personas y para organizaciones con ingresos brutos anuales menores a USD 5 millones (§4.2.g.3.1) que nunca recibieron más de USD 10 millones de capital externo (§4.2.g.3.2). No disponible para agencias de gobierno ni cuasi gubernamentales (§4.2.g.1) ni para universidades en software institucional u operativo; estudiantes y docentes pueden usarla con fines educativos (§4.2.g.3.3) | [Lucky Penny Software, 2025](#ref-luckypenny-2025) |\n| Refit | MIT; genera la implementación con generadores de código; versiones < 7.2.22 con vulnerabilidad crítica GHSA-3hxg-fxwm-8gf7 (CVE-2024-51501, inyección CRLF en encabezados), corregida en 7.2.22 | [ReactiveUI, 2026](#ref-reactiveui-2026); [GitHub, 2024](#ref-github-2024) |",
+  "verificacion": "Las cláusulas §4.2.g.1, §4.2.g.3.1–3.3 están en el PDF de https://luckypennysoftware.com/license (v2.0); los rangos de los dos avisos coinciden con api.github.com/advisories; el ancla ref-github-2024 resuelve."
+ },
+ {
+  "id": "P-82",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-13 (ED2-02) + C-10 + C-11",
+  "reemplazar": "| Término | Definición | § |\n| --- | --- | --- |\n| `async` / `await` | Forma de escribir operaciones que esperan sin bloquear el hilo | 4.1 |\n| Caso de uso | Intención del usuario implementada como una unidad de código que orquesta el dominio | 4.1 |\n| Cliente | Aplicación que consume la API por HTTP | 6.1 |\n| Código de estado HTTP | Número de tres cifras que resume el resultado de una petición (201, 400, 500) | 5.1 |\n| Command | Mensaje que pide cambiar algo | 4.1 |\n| Composition root | Único lugar que registra qué implementación corresponde a cada interfaz | 2.1 |\n| Contrato | Tipos de petición y respuesta de la API HTTP, en el proyecto `Contracts` | 5.1, 8.5 |\n| CQRS | Separar el modelo de escritura del de lectura; no es lo que hace este ejemplo | 4.4 |\n| DbContext | Clase de EF Core que representa una sesión con la base y confirma los cambios con `SaveChanges` | 5.1 |\n| Dependencia | Relación en la que un código no compila o no funciona sin otro | 2.1 |\n| DTO | Objeto sin comportamiento que transporta datos entre procesos o capas | 5.1 |\n| Ensamblado | Archivo `.dll` que produce la compilación de un proyecto | 1.1 |\n| Entidad | Objeto del negocio con identidad y comportamiento | 3.1 |\n| Espacio de nombres | Nombre lógico de un grupo de tipos; no crea dependencias | 1.1 |\n| Form model | Objeto mutable que enlaza un formulario | 7.2 f |\n| Handler | Clase que ejecuta el caso de uso de un mensaje | 4.1 |\n| Interfaz | Tipo que declara métodos sin implementarlos | 2.1 |\n| Invariante | Condición que un objeto debe cumplir siempre | 3.1 |\n| Inversión de dependencias | Declarar la interfaz adentro e implementarla afuera | 2.1 |\n| Inyección de dependencias | Mecanismo que entrega implementaciones a quien pide interfaces | 2.1 |\n| JSON | Formato de texto para datos estructurados que usan las API HTTP | 5.1 |\n| Middleware | Componente que procesa cada petición HTTP en cadena | 5.1 |\n| Modelo de lectura | Objeto plano que devuelve una Query (`ProductoDto`) | 4.1 |\n| OpenAPI | Documento que describe los recursos y operaciones de una API HTTP | 5.1 |\n| Paquete NuGet | Código de terceros distribuido desde nuget.org | 1.1 |\n| Persistence model | Clase con la forma de una tabla, separada de la entidad | 7.2 g |\n| ProblemDetails | Formato estándar de cuerpo de error en APIs HTTP (RFC 9457) | 5.6 |\n| Proyecto | Unidad de compilación: un `.csproj` y sus archivos | 1.1 |\n| Query | Mensaje que pide datos sin cambiar nada | 4.1 |\n| `record` | Tipo de C# cuya igualdad compara los datos | 3.1 |\n| Referencia de proyecto | Declaración de que un proyecto puede usar los tipos públicos de otro | 1.1 |\n| Regla de dependencia | Las dependencias del código apuntan solo hacia adentro | 2.1 |\n| Repositorio | Objeto que media entre el dominio y el almacenamiento como si fuera una colección | 4.1 |\n| SDK | Herramientas para crear, compilar, probar y ejecutar código .NET | 1.1 |\n| Solución | Archivo (`.slnx` o `.sln`) que agrupa proyectos | 1.1 |\n| Transaction Script | Organización de la lógica en procedimientos, uno por petición | 3.4 |\n| Unidad de trabajo | Grupo de cambios que se confirman juntos; en EF Core, `SaveChanges` | 5.5 |\n| Value object | Objeto sin identidad que se compara por su contenido | 3.1 |\n| ViewModel | Datos preparados para una pantalla | 7.2 e |",
+  "por": "| Término | Equivalente en inglés o alias | Definición | § |\n| --- | --- | --- | --- |\n| ASP.NET Core | — | Marco de Microsoft para construir aplicaciones web y API HTTP en .NET | 2.1 |\n| `async` / `await` | `Task` | Forma de escribir operaciones que esperan sin bloquear el hilo | 4.1 |\n| Blazor | — | Tecnología de Microsoft para construir páginas web con componentes C# (`.razor`) | 6.1 |\n| `CancellationToken` | — | Parámetro con el que una operación que espera puede interrumpirse si quien la pidió ya no espera el resultado | 3.1 |\n| Caso de uso | *use case* | Intención del usuario implementada como una unidad de código que orquesta el dominio | 4.1 |\n| CLI `dotnet` | *command-line interface* | Interfaz de línea de comandos del SDK: el comando `dotnet` | 1.1 |\n| Cliente | *client* | Aplicación que consume la API por HTTP | 6.1 |\n| Código de estado HTTP | *status code* | Número de tres cifras que resume el resultado de una petición (201, 400, 404, 500) | 5.1 |\n| Command | comando (un tipo de mensaje) | Mensaje que pide cambiar algo | 4.1 |\n| Composition root | raíz de composición | Único lugar que registra qué implementación corresponde a cada interfaz | 2.1 |\n| Configuración Fluent API | *Fluent API configuration* | Clase que indica a EF Core cómo mapear una entidad sin modificarla | 5.1 |\n| Contrato | *contract* | Tipos de petición y respuesta de la API HTTP, en el proyecto `Contracts` | 5.1, 8.5 |\n| Controller | controlador | Clase que recibe peticiones HTTP de una ruta y devuelve respuestas | 5.1 |\n| CQRS | *Command Query Responsibility Segregation* | Separar el modelo de escritura del de lectura; no es lo que hace este ejemplo | 4.4 |\n| CRUD | alta, baja, modificación y consulta | Las cuatro operaciones básicas sobre datos (*create, read, update, delete*) | 0.4, 9.1 |\n| `curl` | — | Programa de línea de comandos que envía peticiones HTTP y muestra la respuesta | 5.1 |\n| DbContext | — | Clase de EF Core que representa una sesión con la base y confirma los cambios con `SaveChanges` | 5.1 |\n| Decorador | *decorator* | Clase que implementa la misma interfaz que otra, agrega un trabajo y delega en la original | 4.5 |\n| Dependencia | *dependency* | Relación en la que un código no compila o no funciona sin otro | 2.1 |\n| Doble de prueba | *test double*, *fake* | Implementación falsa escrita para las pruebas, como `FakeProductoRepository` | 4.3, 6.2 |\n| DTO | *Data Transfer Object* | Objeto sin comportamiento que transporta datos entre procesos o capas | 5.1 |\n| EF Core | Entity Framework Core | Biblioteca de Microsoft que traduce objetos a filas de una base relacional | 2.1, 5.1 |\n| Ensamblado | *assembly* | Archivo `.dll` que produce la compilación de un proyecto | 1.1 |\n| Entidad | *Entity* | Objeto del negocio con identidad y comportamiento | 3.1 |\n| Espacio de nombres | *namespace* | Nombre lógico de un grupo de tipos; no crea dependencias | 1.1 |\n| Excepción de dominio | *domain exception* | Excepción propia (`DomainException`) que señala una regla de negocio incumplida | 3.1 |\n| Form model | modelo de formulario | Objeto mutable que enlaza un formulario | 6.1, 7.2 f |\n| `Guid` | *globally unique identifier* | Identificador único de 128 bits que .NET genera con `Guid.NewGuid()` | 3.1 |\n| Handler | manejador | Clase que ejecuta el caso de uso de un mensaje | 4.1 |\n| Interfaz | *interface* | Tipo de C# que declara métodos sin implementarlos | 2.1 |\n| Interfaz de servicio técnico | — | Declaración, en `Application`, de una capacidad técnica (correo, usuario actual) que `Infrastructure` implementa | 4.1 |\n| Invariante | *invariant* | Condición que un objeto debe cumplir siempre | 3.1 |\n| Inversión de dependencias | *dependency inversion* | Declarar la interfaz adentro e implementarla afuera | 2.1 |\n| Inyección de dependencias | DI, *dependency injection* | Mecanismo que entrega implementaciones a quien pide interfaces | 2.1 |\n| JSON | *JavaScript Object Notation* | Formato de texto para datos estructurados que usan las API HTTP | 5.1 |\n| MAUI Blazor Hybrid | — | Aplicación nativa .NET MAUI cuyos componentes Razor corren en el dispositivo y se dibujan en un *Web View* incrustado | 6.1 |\n| Mensaje | *message* | Objeto que transporta los datos de una intención: un Command o una Query | 4.1 |\n| Método de fábrica | *factory method* | Método `static` que es el único camino para crear instancias y verifica las invariantes | 3.1 |\n| Middleware | — | Componente que procesa cada petición HTTP en cadena | 5.1 |\n| Modelo de lectura | *read model* | Objeto plano que devuelve una Query (`ProductoDto`) | 4.1 |\n| OpenAPI | — | Documento que describe los recursos y operaciones de una API HTTP | 5.1 |\n| Paquete NuGet | *NuGet package* | Código de terceros distribuido desde nuget.org | 1.1 |\n| Persistence model | modelo de persistencia | Clase con la forma de una tabla, separada de la entidad | 7.2 g |\n| Petición HTTP | *HTTP request* | Mensaje de un cliente a un servidor con verbo, ruta, encabezados y, a veces, cuerpo | 5.1 |\n| Plantilla | *template* | Punto de partida de `dotnet new` (`classlib`, `webapi`, `console`, `xunit`) | 1.1 |\n| ProblemDetails | — | Formato estándar de cuerpo de error en APIs HTTP (RFC 9457) | 5.1, 5.6 |\n| Proyecto | *project* | Unidad de compilación: un `.csproj` y sus archivos | 1.1 |\n| Prueba unitaria | *unit test* | Método `[Fact]` que ejecuta una porción de código y verifica el resultado con `Assert` | 4.3 |\n| Query | consulta (un tipo de mensaje) | Mensaje que pide datos sin cambiar nada | 4.1 |\n| Razor Class Library | RCL | Proyecto que empaqueta componentes `.razor`, estilos y recursos para reutilizarlos en varias aplicaciones | 6.1 |\n| `record` | — | Tipo de C# cuya igualdad compara los datos | 3.1 |\n| Referencia de proyecto | `ProjectReference` | Declaración de que un proyecto puede usar los tipos públicos de otro | 1.1 |\n| Regla de dependencia | *Dependency Rule* | Las dependencias del código apuntan solo hacia adentro | 2.1 |\n| Repositorio | *Repository* | Objeto que media entre el dominio y el almacenamiento como si fuera una colección | 4.1 |\n| SDK | *software development kit* | Herramientas para crear, compilar, probar y ejecutar código .NET | 1.1 |\n| Servicio de API del cliente | — | Clase del cliente que encapsula las llamadas HTTP a la API detrás de una interfaz | 6.1 |\n| Setter privado | `private set` | Propiedad que se lee desde cualquier lugar y se modifica solo dentro de la clase | 3.1 |\n| Solución | *solution* | Archivo (`.slnx` o `.sln`) que agrupa proyectos | 1.1 |\n| Transaction Script | — | Organización de la lógica en procedimientos, uno por petición | 3.4 |\n| Unidad de trabajo | *Unit of Work* | Grupo de cambios que se confirman juntos; en EF Core, `SaveChanges` | 5.1, 5.5 |\n| Value object | objeto de valor | Objeto sin identidad que se compara por su contenido | 3.1 |\n| ViewModel | modelo de vista | Datos preparados para una pantalla | 6.1, 7.2 e |",
+  "verificacion": "Cada término definido en negrita en §1.1–§6.1 (`grep -o -E '^- \\*\\*[^*]+\\*\\*'`) tiene fila; la tabla tiene 4 columnas; las § de ProblemDetails y Unidad de trabajo incluyen 5.1."
+ },
+ {
+  "id": "P-83",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-16 (Refit) + C-25 (422)",
+  "reemplazar": "<a id=\"ref-github-2026\"></a>GitHub Advisory Database. (2026). *GHSA-rvv3-g6hj-g44x: AutoMapper*. https://github.com/advisories/GHSA-rvv3-g6hj-g44x (consultado el 2026-09-18).",
+  "por": "<a id=\"ref-github-2024\"></a>GitHub Advisory Database. (2024). *GHSA-3hxg-fxwm-8gf7: CRLF injection in Refit's [Header], [HeaderCollection] and [Authorize] attributes*. https://github.com/advisories/GHSA-3hxg-fxwm-8gf7 (consultado el 2026-09-18).\n\n<a id=\"ref-github-2026\"></a>GitHub Advisory Database. (2026). *GHSA-rvv3-g6hj-g44x: AutoMapper*. https://github.com/advisories/GHSA-rvv3-g6hj-g44x (consultado el 2026-09-18).\n\n<a id=\"ref-ietf-2022\"></a>IETF. (2022). *RFC 9110: HTTP Semantics*, §15.5.21 «422 Unprocessable Content». https://www.rfc-editor.org/rfc/rfc9110.html#section-15.5.21 (consultado el 2026-09-18).",
+  "verificacion": "Las anclas ref-github-2024 y ref-ietf-2022 resuelven y cada una tiene al menos una cita en el cuerpo."
+ },
+ {
+  "id": "P-84",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-10 (curl) + C-21 (H-SEG-02) + C-04 (SQLite) + C-23 (global.json)",
+  "reemplazar": "<a id=\"ref-reactiveui-2026\"></a>ReactiveUI. (2026). *Refit* (README del repositorio). https://github.com/reactiveui/refit (consultado el 2026-09-18).",
+  "por": "<a id=\"ref-microsoft-2026i\"></a>Microsoft. (2026i). *ASP.NET Core Blazor WebAssembly additional security scenarios*. https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/additional-scenarios?view=aspnetcore-10.0 (consultado el 2026-09-18).\n\n<a id=\"ref-microsoft-2026j\"></a>Microsoft. (2026j). *Data types — Microsoft.Data.Sqlite*. https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/types (consultado el 2026-09-18).\n\n<a id=\"ref-microsoft-2026k\"></a>Microsoft. (2026k). *global.json overview* (sección «rollForward»). https://learn.microsoft.com/en-us/dotnet/core/tools/global-json#rollforward (consultado el 2026-09-18).\n\n<a id=\"ref-curl-2026\"></a>curl project. (2026). *curl.1 the man page*. https://curl.se/docs/manpage.html (consultado el 2026-09-18).\n\n<a id=\"ref-reactiveui-2026\"></a>ReactiveUI. (2026). *Refit* (README del repositorio). https://github.com/reactiveui/refit (consultado el 2026-09-18).",
+  "verificacion": "Las cuatro anclas nuevas resuelven; cada una tiene al menos una cita en el cuerpo; el script de anclas da 0 rotos y 0 entradas huérfanas."
+ },
+ {
+  "id": "P-L1",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Lab/lab.sh",
+  "hallazgos": "C-QA-03 (aserción de L12 débil)",
+  "reemplazar": "ok L12 \"las pruebas detectan la regla faltante\" '(Failed!|failed)'",
+  "por": "ok L12 \"falla la prueba de Domain que depende de la regla\" 'Failed MyProject\\.Domain\\.Tests\\.ProductoTests\\.Create_con_precio_negativo_lanza_DomainException'\nok L12 \"falla la prueba de Application que depende de la regla\" 'Failed MyProject\\.Application\\.Tests\\.CrearProductoHandlerTests\\.Handle_con_precio_negativo_no_guarda_nada'\nok L12 \"en Domain falla exactamente una de tres\" 'Failed! +- Failed: +1, Passed: +2, Skipped: +0, Total: +3'\nok L12 \"en Application falla exactamente una de dos\" 'Failed! +- Failed: +1, Passed: +1, Skipped: +0, Total: +2'",
+  "verificacion": "Tras relanzar: aserciones.log tiene cuatro líneas `PASS L12 …`; prueba negativa: cambiar `+1, Passed: +2` por `+2, Passed: +1` y ver FAIL."
+ },
+ {
+  "id": "P-L2",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Lab/lab.sh",
+  "hallazgos": "C-QA-05 (404 sin captura, opción completa)",
+  "reemplazar": "cap L15 get \"curl -s -i $API/api/productos; echo; echo; curl -s -i $LOC; echo; echo; curl -s $API/openapi/v1.json | head -c 400\"",
+  "por": "cap L15 get \"curl -s -i $API/api/productos; echo; echo; curl -s -i $LOC; echo; echo; curl -s $API/openapi/v1.json | head -c 400; echo; echo; curl -s -i $API/api/productos/00000000-0000-0000-0000-000000000000 | head -1\"",
+  "verificacion": "Tras relanzar: capturas/L15-get.txt termina con `HTTP/1.1 404 Not Found`."
+ },
+ {
+  "id": "P-L3",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Lab/lab.sh",
+  "hallazgos": "C-QA-05",
+  "reemplazar": "ok L15 \"documento OpenAPI\" '\\\"openapi\\\"'",
+  "por": "ok L15 \"documento OpenAPI\" '\\\"openapi\\\"'\nok L15 \"404 para un id inexistente\" 'HTTP/1.1 404'",
+  "verificacion": "Tras relanzar: aserciones.log contiene `PASS L15 404 para un id inexistente`."
+ },
+ {
+  "id": "P-L4",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Lab/lab.sh",
+  "hallazgos": "C-QA-02 (aserción de L24 vacía)",
+  "reemplazar": "ok L24 \"licencia de AutoMapper 15 no es MIT\" 'automapper/15\\.0\\.0'",
+  "por": "lic() { body \"$LAST\" | grep -A1 -F \"== $1\" | tail -1; }   # línea <license …> que sigue al encabezado\nif lic automapper/14.0.0 | grep -q 'expression\">MIT<';        then echo \"PASS L24 AutoMapper 14.0.0 es MIT\" >> \"$LAB/aserciones.log\"; else echo \"FAIL L24 AutoMapper 14.0.0 no muestra MIT\" >> \"$LAB/aserciones.log\"; fi\nif lic automapper/15.0.0 | grep -q 'type=\"file\"';              then echo \"PASS L24 AutoMapper 15.0.0 declara licencia por archivo (no MIT)\" >> \"$LAB/aserciones.log\"; else echo \"FAIL L24 AutoMapper 15.0.0 no muestra licencia por archivo\" >> \"$LAB/aserciones.log\"; fi\nif lic mediatr/12.5.0    | grep -q 'expression\">Apache-2.0<'; then echo \"PASS L24 MediatR 12.5.0 es Apache-2.0\" >> \"$LAB/aserciones.log\"; else echo \"FAIL L24 MediatR 12.5.0 no muestra Apache-2.0\" >> \"$LAB/aserciones.log\"; fi",
+  "verificacion": "Tras relanzar: tres líneas `PASS L24 …` nuevas y ninguna `licencia de AutoMapper 15 no es MIT`; prueba negativa: cambiar `MIT<` por `MIX<` y ver FAIL. Conteo final esperado: `PASS: 74  FAIL: 1`."
+ },
+ {
+  "id": "P-B1",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/06-Arquitectura/OUTPUTs/Bitacora/02-Requisitos.md",
+  "hallazgos": "C-17 (Req H-04, solicitud de Edición: alcance de R-09)",
+  "reemplazar": "| R-09 | Preguntas guía formadoras de criterio con «cuándo sí/no» | Cada capítulo cierra con una pregunta de aplicabilidad en términos E-A..E-D | grep de «¿Cuándo no» por capítulo ≥ 1 | DR-15 |",
+  "por": "| R-09 | Preguntas guía formadoras de criterio con «cuándo sí/no» | Cada capítulo cierra con una pregunta de aplicabilidad en términos E-A..E-D | grep de «¿Cuándo no» por capítulo ≥ 1 en §1–§6 y §8; en §7 y §9 la pregunta de aplicabilidad es §7.5 y §9.3 (decisión del ciclo 2, C-17) | DR-15 |",
+  "verificacion": "La fila R-09 registra la decisión; el chequeo pasa con la guía parcheada (§8.6)."
+ },
+ {
+  "id": "P-B2",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/06-Arquitectura/OUTPUTs/Bitacora/00-Fuente-Conversacion.md",
+  "hallazgos": "C-22 (Arq H-05)",
+  "reemplazar": "| F-09 | El contrato filtra campos; WASM no tiene el ensamblado de dominio | §5.2 (L15), §7.4 | — |",
+  "por": "| F-09 | El contrato filtra campos; WASM no tiene el ensamblado de dominio | §5.2 (L15), §7.4 | Ajuste del ciclo 2 (C-22): §7.4 dice que el ensamblado de `Domain` podría descargarse al navegador pero que no habría base ni repositorio que respalden a la entidad; el punto de la fuente (la página no trabaja con la entidad) se conserva |",
+  "verificacion": "La fila F-09 declara el ajuste; R-01 sigue trazado."
+ },
+ {
+  "id": "P-85",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-14 (ED2-03, DR-05)",
+  "reemplazar": "*salida registrada: `capturas/L06-todo-junto.txt`*",
+  "por": "*salida registrada: `capturas/L06-todo-junto.txt`, SDK 10.0.400*",
+  "verificacion": "Toda marca de captura lleva «SDK 10.0.400»."
+ },
+ {
+  "id": "P-86",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-14 (ED2-03, DR-05)",
+  "reemplazar": "*salida registrada: `capturas/L07-separado.txt`*",
+  "por": "*salida registrada: `capturas/L07-separado.txt`, SDK 10.0.400*",
+  "verificacion": "Toda marca de captura lleva «SDK 10.0.400»."
+ },
+ {
+  "id": "P-SYNC",
+  "archivo": "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md",
+  "hallazgos": "C-01 (relanzamiento) — se aplica después de correr lab.sh",
+  "reemplazar": "(valores variables de los extractos: Guid de L14/L15/L17/L22, huella SHA-256 de L16, duraciones de L11/L12, fechas; tal como queden en la guía tras los parches P-26, P-27, P-38, P-39)",
+  "por": "(los mismos valores copiados de las capturas de la corrida vigente, sin alterar ninguna otra palabra de los bloques)",
+  "verificacion": "Chequeo V-LIT: para cada bloque ```text con marca «Salida registrada: capturas/X», cada línea (sin la sangría inicial, uniendo la continuación sangrada a su línea anterior, saltando `...` y tratando `...` dentro de una línea como comodín) es subcadena de alguna línea de capturas/X. Debe dar 0 líneas sin respaldo."
+ }
+]
