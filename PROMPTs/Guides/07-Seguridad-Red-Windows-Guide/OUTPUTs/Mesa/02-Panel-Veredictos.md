@@ -1,85 +1,52 @@
-# Mesa evaluadora — Panel a ciegas, veredictos y parches
-
-**Fecha:** 2026-09-17
-**Artefacto:** `Beginning-Security-Windows-Network-Guide.md` v1.0 (1245 líneas)
-**Ciclo:** 1 de máx. 2
-
+---
+doc_id: MESA-02-VEREDICTOS
+doc_type: mesa
+title: Panel de hallazgos y veredictos
+status: vigente
+origin: ia-assisted
+audience: [humano, agente]
+traces: [MESA-01-CONVOCATORIA, MESA-03-CIERRE]
 ---
 
-## 1. Chequeos mecánicos previos (§5.1.a del marco)
+# Mesa evaluadora — Panel de hallazgos y veredictos (ciclo 1)
 
-| Chequeo de coherencia | Resultado |
-|---|---|
-| Índice ↔ secciones (12 caps + 3 apéndices) | OK: los 12 anclajes existen |
-| Términos usados antes de definirse | OK tras revisión: cada término tiene su §def |
-| Toda afirmación técnica con evidencia (regla del prompt) | Parcial → ver H-02 |
-| Comandos con "qué se espera ver" + "cómo interpretarlo" | OK en todos los bloques operativos |
-| Preguntas guía con respuesta por capítulo | OK (2 por capítulo) |
-| Gráficos mermaid donde aportan | OK (7 diagramas) |
-| Glosario sin solapamiento | OK |
+El relator consolidó los cinco informes ciegos, dedupló y agrupó por raíz. El jurado (5 funciones: evidencia, impacto, costo-beneficio, coherencia, riesgo) votó hallazgo por hallazgo. Resumen.
 
----
+## 1. Hallazgos consolidados (deduplicados)
 
-## 2. Informes del panel (a ciegas, en paralelo)
-
-Cada especialista declara además "lo que revisé y está bien" (máx. 3).
-
-### E-SeguridadWin (seguridad en redes Windows)
-- **Bien:** eventos 1102/104/4719 correctos; Logon Type 10 = RDP correcto; árbol de procesos como método anti-LOLBin, correcto.
-- **H-01 (S2, E3):** el filtro regex de IP privada en §7.2 usa `172.(1[6-9]|2[0-9]|3[01])` — `2[0-9]` incluye 172.20–172.29 correctamente, pero también deja pasar como "no privada" nada indebido; sin embargo el bloque `Where-Object` de §5.4.1 depende del idioma del SO ("Tipo de inicio de sesión" / "Logon Type") y puede fallar silenciosamente. Ya está mitigado con el `|` bilingüe, pero conviene advertirlo.
-- **H-05 (S3, E2):** §9.4 menciona 4662 y 4769 pero no aclara que requieren auditoría específica activada; un lector puede concluir "no aparece nada, no hay ataque".
-
-### E-Didáctica
-- **Bien:** progresión de dependencia conceptual; preguntas guía formadoras de criterio; laboratorio con ejercicios ataque/rastro.
-- **H-02 (S2, E2):** la regla del prompt "no inventar información / evidencia verificable" está cumplida en prosa, pero varias afirmaciones fuertes (Prefetch conserva ejecuciones tras borrado del .exe; SRUM guarda volumen histórico) no llevan cita puntual. Recomienda anclar en la bibliografía ya presente o marcar como "comportamiento documentado del SO".
-- **H-06 (S3, E3):** falta una "ruta de lectura" como la de UX-UI-Guide §1.3; el lector novato agradece un camino sugerido vs. lectura completa.
-
-### E-Edición (material bibliográfico)
-- **Bien:** metadatos APA; estructura jerárquica; glosario alfabético con referencias cruzadas.
-- **H-03 (S3, E2):** inconsistencia de versión en el bloque de metadatos ("Estado: En revisión de mesa") — correcto durante el ciclo, pero debe pasar a "Aprobado" al cierre si la mesa aprueba.
-- **H-07 (S4, E2):** algunas URLs de bibliografía son de secciones que cambian; aceptable para APA con recurso web.
-
-### Lector novato (implementador ingenuo)
-- **H-04 (S2, E3):** en §5.7 y §10.5 se usa `E:\evidencia` sin decir *antes* que hay que crear esa carpeta o conectar un pendrive; un novato ejecuta y `wevtutil epl` falla con ruta inexistente. Falta un paso previo explícito.
-- **H-08 (S3, E3):** §9.2 usa `Get-ADGroupMember` que no existe en un servidor sin el módulo RSAT/AD; ya se da el fallback `net group`, pero recién al final de la sección; el novato choca primero.
-
-### Abogado del diablo
-- **H-09 (S3, E3):** la guía asume implícitamente que el investigador tiene credenciales de administrador legítimas sobre el servidor comprometido. No se explicita que, si el atacante cambió credenciales o el equipo está aislado, el acceso mismo puede ser un problema. Menor para el alcance introductorio, pero conviene una línea.
-
-### AH-001 (ética / doble uso)
-- **Bien:** encuadre de autorización al inicio del §11; laboratorio aislado obligatorio; par ataque/rastro con fin defensivo; P. de §11.7 sobre "usar con cuidado en la red real" respondida con "no sin autorización".
-- **H-10 (S2, E4):** el aviso de uso responsable está al inicio del documento y al inicio del §11, correcto. Pero el §11.4 muestra `nmap` contra una IP concreta sin repetir, *en el propio bloque*, que es una IP de laboratorio; ya dice "contra su propia VM (aquí 10.10.10.5)". Cumple. Sin hallazgo nuevo; se confirma conforme.
-
----
-
-## 3. Consolidación (relator) y veredictos del jurado
-
-Voto por hallazgo (5 jueces: Evidencia/Impacto/CostoBeneficio/Coherencia/Riesgo).
-
-| Hallazgo | Sev | Resumen | Veredicto | Conteo |
+| ID mesa | Origen (especialistas) | Sev. | Descripción | Veredicto |
 |---|---|---|---|---|
-| H-02 | S2 | Afirmaciones sin ancla puntual | PROCEDE | 5-0 |
-| H-04 | S2 | `E:\evidencia` sin paso de creación previa | PROCEDE | 5-0 |
-| H-05 | S3 | 4662/4769 sin aclarar que requieren auditoría | PROCEDE | 4-1 |
-| H-08 | S3 | `Get-ADGroupMember` sin RSAT choca antes del fallback | PROCEDE | 4-1 |
-| H-06 | S3 | Falta ruta de lectura sugerida | PROCEDE | 3-2 |
-| H-01 | S2 | Dependencia de idioma en filtro de Logon Type | NO_PROCEDE | 1-4 (ya mitigado con `|` bilingüe; se añade nota menor vía H-05 pattern) |
-| H-03 | S3 | Estado del doc a "Aprobado" al cierre | PROCEDE | 5-0 (trivial) |
-| H-09 | S3 | Supuesto de acceso admin no explicitado | PROCEDE | 3-2 |
-| H-07 | S4 | URLs de sección | NO_PROCEDE | lote S4 |
-| H-10 | — | Confirmado conforme | — | sin acción |
+| H-01 | T-01 + V-01 | S2 | El evento 1102 se presenta como imposible de evadir | **PROCEDE** |
+| H-02 | T-02 | S3 | Logon Type 8 descrito como «contraseña en claro por la red» (falso) | **PROCEDE** |
+| H-03 | V-02 + T-03 | S3 | IP real `45.77.13.9` como C2; «enrutable» impreciso | **PROCEDE** |
+| H-04 | V-03 | S3 | Tabla de Logon Types rotulada «oficial» siendo subconjunto; falta tipo 12 | **PROCEDE** |
+| H-05 | E-01 | S2 | Diagrama `timeline` roto por `:` en las horas | **PROCEDE** |
+| H-06 | E-02 | S3 | Referencia cruzada §1.4 → debe ser §1.7 | **PROCEDE** |
+| H-07 | E-04 | S3 | Falta el 4624 de `sqlbackup` (LogonID 0x7A441); cadena colgada | **PROCEDE** |
+| H-08 | E-03 | S3 | Multiplicidad terminológica para el canal Security | **PROCEDE** |
+| H-09 | E-05 | S4 | «en dos horas» vs. ráfaga de ~1 h | **PROCEDE** |
+| H-10 | E-06 | S4 | T1003 listada como citada sin anclar en el cuerpo | **PROCEDE** |
+| H-11 | V-04 | S4 | Paráfrasis de la RFC 791 entre comillas de cita literal | **PROCEDE** |
+| H-12 | V-05 | S4 | Kerberoasting (0x17/4769) sin la marca de rigor que sí lleva su hermano | **PROCEDE** |
+| D-01 | Didáctica | S2 | §11 suelta términos ofensivos sin definir (LLMNR, LSASS, DCSync…) | **PROCEDE** |
+| D-02 | Didáctica + L-02 + L-07 | S2 | PowerShell/pipeline/cmd-vs-PS/multilínea sin explicar | **PROCEDE** |
+| D-03 | Didáctica + L-03 | S3 | Laboratorio y proyecto integrador sin receta ejecutable | **PROCEDE** |
+| D-04 | Didáctica | S3 | «Notas de rigor» de sourcing en el flujo del principiante | **NO_APLICAR (deuda)** |
+| D-05 | Didáctica | S3 | NTLM y otros usados antes de definirse | **PROCEDE** (glosario) |
+| D-06 | Didáctica | S4 | Hex sin decir al lector que sólo debe *emparejar* | **PROCEDE** |
+| L-01 | Lector ingenuo | S1* | No enseña a construir la línea de base de un servidor real | **PROCEDE** |
+| L-04 | Lector ingenuo | S3 | Cuenta `soporte` de auditoría dada por existente | **PROCEDE** |
+| L-05 | Lector ingenuo | S3 | «Descargá Sysinternals/Sysmon» sin decir cómo | **PROCEDE** |
+| L-06 | Lector ingenuo | S4 | `C:\evidencia\` sin decir que hay que crearla | **PROCEDE** |
 
----
+\* L-01 es S1 *desde la perspectiva del lector* (sin baseline no puede ejecutar el método); el jurado lo tomó como bloqueante de la utilidad práctica y lo priorizó.
 
-## 4. Parches diseñados y aplicados (cuerpo auditor)
+## 2. Fundamento de los votos no unánimes
 
-| Parche | Cubre | Capa | Cambio | Verificación |
-|---|---|---|---|---|
-| P-01 | H-04 | doc | Agregar en §4.4 y §5.7 la creación previa de la carpeta de evidencia | grep de `New-Item .*evidencia` antes del primer uso de `E:\evidencia` |
-| P-02 | H-02 | doc | Anclar Prefetch/SRUM/MFT a bibliografía (Zimmerman 2023; Microsoft) marcándolas como comportamiento documentado | las 3 afirmaciones citan fuente |
-| P-03 | H-05, H-08 | doc | Añadir nota en §9.2/§9.4 sobre auditoría requerida y sobre módulo RSAT antes del comando | texto presente en ambas secciones |
-| P-04 | H-06 | doc | Añadir §1.6 rutas de lectura | sección existe |
-| P-05 | H-09 | doc | Línea en §4.1 sobre supuesto de acceso legítimo | texto presente |
-| P-06 | H-03 | doc | Estado → Aprobado al cierre del ciclo | metadato actualizado |
+**D-04 — NO_APLICAR (deuda declarada).** El juez de coherencia observó que las «Notas de rigor» que la didáctica quiere segregar son valoradas por los especialistas E2 (edición) y E5 (verificación) como **el mayor mérito de la obra** y que Rule-Evidences las exige. El juez de costo-beneficio sumó que Markdown no ofrece un «margen» real para segregarlas sin romper el flujo. Resolución: se conservan, ya están visualmente acotadas como blockquote «Nota de rigor». Se registra como deuda: en una eventual edición con maquetación (no Markdown plano) podrían ir a nota al margen.
 
-Los parches se aplican sobre el entregable. Ver §5 de este registro para verificación.
+**L-01 — elevado a prioridad máxima pese a ser «lo que el prompt no pidió literalmente».** El prompt pide que el lector pueda «auditar un servidor real». Sin saber construir su línea de base, no puede. El juez de impacto lo consideró la diferencia entre una guía que se entiende y una que se usa. Se aplicó (nueva guía en §1.7).
+
+## 3. Reparación en la capa de origen
+
+Todos los parches se aplicaron sobre los entregables (capa de origen del defecto) y sobre el corpus del escenario cuando el dato vivía ahí (IP, 4624 de sqlbackup). No se parcheó «aguas abajo». Ningún hallazgo tocó decisiones cerradas del contrato.
