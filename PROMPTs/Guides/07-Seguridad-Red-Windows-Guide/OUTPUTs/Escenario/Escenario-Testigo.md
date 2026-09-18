@@ -1,102 +1,151 @@
-# Escenario testigo — "Servidor de archivos CONTOSO comprometido"
+---
+doc_id: ESC-TESTIGO
+doc_type: escenario
+title: Escenario testigo — Windows Server 2019 con sospecha de intrusión
+status: vigente
+origin: ia-assisted
+confidence: alta
+audience: [humano, agente]
+traces: [BIT-01-CONTRATO, ESC-CORPUS, GUIA-PRINCIPAL, CUADERNO]
+---
 
-**Tipo:** fixture sintético coherente (single source of truth de las salidas de la guía)
-**Fecha de redacción:** 2026-09-17
-**Función:** reemplazar el mecanismo "salidas ilustrativas sueltas" por uno de "escenario único y coherente del que se derivan todas las salidas". Toda salida de comando de la guía debe ser consistente con este documento. Si una salida contradice el escenario, es un hallazgo de la mesa.
+# Escenario testigo — «MADERERA DEL SUR»
 
-> **Naturaleza del escenario.** Es un caso **hipotético pero típico**, no una captura de un sistema real. Su valor no está en ser "real" sino en ser **internamente coherente**: la línea de tiempo, las cuentas, los procesos, las conexiones, los PID y los eventos encajan entre sí, de modo que las salidas que la guía muestra son las que ese sistema *produciría*. Los identificadores de red usan rangos reservados para documentación (RFC 1918 para lo interno, RFC 5737 para lo externo), como corresponde a material didáctico.
+## Resumen ejecutivo
+
+Este documento define el **escenario testigo**: un servidor Windows Server 2019 ficticio pero internamente coherente, con su organización, su red, su inventario, su línea de base de operación normal y una cronología de intrusión. No describe un sistema real. Su función es servir de **fuente única de verdad** para todas las salidas ilustrativas de la guía `Beginning-Security-Windows-Network-Guide.md` y del cuadernillo de ejercicios: cuando la guía muestra la forma de la salida de un comando, esa salida es consistente con los datos que se fijan acá.
+
+El escenario resuelve la tensión T-02 del contrato de entrada (`BIT-01-CONTRATO`): como no hay un Windows real donde capturar salidas, se construye un modelo verificable contra el cual las salidas ilustrativas son coherentes entre sí. Todo dato de este escenario es **sintético**; los nombres de personas, equipos, direcciones IP y horarios son inventados para el material didáctico.
+
+> **Aviso.** Nada de lo que sigue corresponde a una organización, persona o infraestructura reales. Las direcciones IP pertenecen a rangos privados (RFC 1918) y los identificadores son ilustrativos.
 
 ---
 
-## 1. La organización y su red
+## 1. La organización
 
-Empresa mediana. Dominio Active Directory `CONTOSO.LOCAL` (dominio de ejemplo canónico de Microsoft; no corresponde a ninguna organización real).
+«Maderera del Sur» es una PyME de 40 empleados que vende insumos de madera. Tiene un único servidor físico que concentra el dominio de Active Directory, el archivo compartido de la empresa y la aplicación de facturación. La administración del servidor la hizo, durante años, un técnico externo que ya no trabaja con la empresa; quedaron **vicios de administración** típicos: cuentas de servicio con privilegios de más, contraseñas que no expiran, RDP publicado, y una política de auditoría en su configuración de fábrica.
+
+El disparador del caso: el encargado administrativo nota que **el sistema de facturación estuvo lento**, que una carpeta compartida apareció con archivos renombrados, y sospecha —sin poder probarlo— que «alguien entró». Además cree que **se borraron registros**. No hay personal de seguridad; la persona que audita es alguien de soporte con acceso al servidor y **sin formación previa en redes ni en seguridad**. Ese es el lector de la guía.
+
+---
+
+## 2. Topología de red
 
 ```mermaid
-graph TD
-    INET[Internet] -->|RDP expuesto 3389<br/>vicio de administración| FW[Firewall / router]
-    FW --> SRVFILE[SRV-FILE01<br/>Servidor de archivos<br/>10.0.10.20<br/>EQUIPO COMPROMETIDO]
-    FW --> SRVDC[SRV-DC01<br/>Controlador de dominio<br/>10.0.10.5]
-    SRVLOG[SRV-LOG01<br/>Colector WEF<br/>10.0.30.9<br/>segmento aparte] -.recibe eventos de.-> SRVFILE
-    SRVLOG -.-> SRVDC
-    SRVFILE --- CLI[Clientes<br/>10.0.20.0/24]
+graph TB
+    subgraph Internet
+        ATA["Atacante externo<br/>(origen variable)"]
+    end
+    subgraph "Router / Firewall perimetral"
+        FW["Router ISP<br/>203.0.113.10<br/>RDP 3389 reenviado ⚠"]
+    end
+    subgraph "LAN 10.10.0.0/24"
+        SRV["SRV-MADERA01<br/>10.10.0.10<br/>DC + Archivos + Facturación"]
+        PC1["PC-VENTAS-04<br/>10.10.0.34"]
+        PC2["PC-ADMIN-01<br/>10.10.0.21"]
+        NAS["NAS backup<br/>10.10.0.50"]
+    end
+    ATA -->|"RDP / fuerza bruta"| FW
+    FW -->|"3389 → 10.10.0.10"| SRV
+    PC1 --- SRV
+    PC2 --- SRV
+    SRV --- NAS
 ```
 
-| Equipo | Rol | IP | Notas |
-|---|---|---|---|
-| SRV-DC01 | Controlador de dominio | 10.0.10.5 | AD; no comprometido |
-| **SRV-FILE01** | Servidor de archivos | 10.0.10.20 | **Equipo bajo investigación** |
-| SRV-LOG01 | Colector de eventos (WEF) | 10.0.30.9 | Segmento separado; conserva la copia previa al borrado |
-| Clientes | Estaciones de trabajo | 10.0.20.0/24 | — |
+El vicio central está en el perímetro: el router del proveedor de internet **reenvía el puerto 3389 (RDP) directamente al servidor**, de modo que el escritorio remoto del servidor queda expuesto a todo internet. Es la puerta por la que entra el atacante del caso.
 
-**Redes internas (privadas, RFC 1918):** `10.0.0.0/8`. **Externas de ejemplo (RFC 5737):** `203.0.113.0/24`.
+---
 
-## 2. Vicios de administración preexistentes (el terreno que habilita el ataque)
+## 3. Inventario del servidor
 
-El prompt pide "una red con vicios en su administración". Se declaran tres, y de ellos se deduce todo el ataque:
+| Atributo | Valor |
+|---|---|
+| Nombre de equipo (hostname) | `SRV-MADERA01` |
+| Sistema operativo | Windows Server 2019 Standard (build 17763) |
+| Dominio Active Directory | `maderasur.local` |
+| Rol | Controlador de dominio (AD DS), DNS, servidor de archivos (SMB), host de la app de facturación |
+| Dirección IP | `10.10.0.10/24` |
+| PowerShell | 5.1 (nativo del sistema) |
+| RDP | Habilitado y publicado a internet (vicio) |
+| Antimalware | Microsoft Defender (estado por verificar en la auditoría) |
+| Política de auditoría | Configuración de fábrica (vicio: eventos clave sin registrar) |
 
-1. **RDP (escritorio remoto, puerto 3389) de SRV-FILE01 expuesto a Internet** a través del firewall.
-2. **Cuenta de mesa de ayuda `soporte` con privilegios de administrador local** sobre SRV-FILE01 (sobreprivilegio) y **contraseña débil**.
-3. **Sin MFA** en el acceso remoto.
+### 3.1 Cuentas y grupos (línea de base)
 
-## 3. Cuentas relevantes
-
-| Cuenta | Tipo | Legítima | Papel en el caso |
-|---|---|---|---|
-| `CONTOSO\Administrador` | Dominio | Sí | Administrador; no interviene en el ataque |
-| `CONTOSO\flopez` | Dominio | Sí | Administradora de sistemas; trabaja en horario laboral |
-| `CONTOSO\soporte` | Dominio | Sí (comprometida) | Mesa de ayuda; **credencial adivinada por el atacante** |
-| `SRV-FILE01\svc_update` | Local | **No — creada por el atacante** | Puerta trasera con nombre que imita un servicio |
-
-## 4. Línea de tiempo del incidente (2026-09-15)
-
-Todas las horas en la zona local del servidor. El atacante entra de madrugada.
-
-| Hora | Acción del atacante | Evidencia que genera |
+| Cuenta | Tipo | Observación de línea de base |
 |---|---|---|
-| 03:02–03:13 | Prueba contraseñas contra `soporte` por RDP desde `203.0.113.14` | Ráfaga de eventos **4625** (fallidos) |
-| 03:14:22 | Inicia sesión RDP como `CONTOSO\soporte` desde `203.0.113.14` | **4624** tipo 10; **4672** (soporte tiene admin local) |
-| 03:16:05 | Crea la cuenta local `svc_update` | **4720** |
-| 03:16:40 | Agrega `svc_update` al grupo Administradores local | **4732** |
-| 03:20:30 | Copia `powershell`/su binario a `C:\Users\Public\update.exe` y lo ejecuta | Prefetch `UPDATE.EXE-*.pf`; proceso PID 9310 |
-| 03:22:11 | Instala el servicio `WinDefendUpd` → `C:\Users\Public\update.exe` | **7045** (registro System) |
-| 03:23:00 | Crea la tarea programada `\SystemUpdate` que lanza PowerShell al iniciar sesión | **4698** |
-| 03:35–… | `update.exe` (PID 9310) llama a casa a `203.0.113.14:443` cada ~60 s (beaconing) | Conexión saliente; SRUM acumula tráfico |
-| 03:40:11 | **Borra el registro de seguridad** con la cuenta `svc_update` | **1102** (queda como primer evento del log nuevo) |
-| (continuo) | Exfiltra ~2,3 GB por el canal 443 | SRUM registra el volumen por `update.exe` |
+| `Administrador` | Administrador local/dominio | Contraseña sin expiración (vicio) |
+| `svc_facturacion` | Cuenta de servicio | En `Domain Admins` sin necesitarlo (vicio) |
+| `jperez` | Usuario (administración) | Uso diurno, PC-ADMIN-01 |
+| `mgomez` | Usuario (ventas) | Uso diurno, PC-VENTAS-04 |
+| `soporte` | Usuario (el lector) | Alta reciente, acceso al servidor para auditar |
+| 36 cuentas más | Usuarios | Personal de la empresa |
 
-## 5. Estado del sistema cuando el investigador llega (2026-09-17)
+**Grupos privilegiados esperados** (`Domain Admins`, `Administrators`): `Administrador`, `svc_facturacion` (vicio). Cualquier miembro fuera de esa lista es sospechoso.
 
-Consecuencia directa de la línea de tiempo. **Esto es lo que producen los comandos de la guía.**
+---
 
-### 5.1 Efecto del borrado de las 03:40
-Al haber un **borrado total** del registro de seguridad a las 03:40 del 15/09:
-- Los eventos **previos** a las 03:40 (el 4624 inicial, 4720, 4732, la ráfaga de 4625) **ya no están en el log local** de SRV-FILE01.
-- El registro local **empieza** con el evento **1102** (03:40:11, sujeto `svc_update`) y sigue con lo posterior.
-- Esos eventos previos **sí sobreviven en el colector WEF** `SRV-LOG01`, que los recibió en el momento.
-- El `RecordId` del log local es **bajo** (se reinició con el borrado): otra señal del borrado total.
+## 4. Cronología de la intrusión (verdad del escenario)
 
-### 5.2 Salidas canónicas por comando
+El lector **no conoce** esta cronología al empezar: es lo que debe reconstruir con la guía. Se documenta acá para que las salidas ilustrativas sean coherentes y para que el cuadernillo tenga una clave de corrección.
 
-| Comando de la guía | Ejecutado en | Salida canónica (resumen) |
+```mermaid
+sequenceDiagram
+    participant A as Atacante
+    participant FW as Router (3389)
+    participant S as SRV-MADERA01
+    Note over A,S: Día 1 — 02:14 a 03:40 (madrugada)
+    A->>FW: Barrido de RDP en internet
+    A->>S: Fuerza bruta RDP sobre "Administrador"
+    Note right of S: Ráfaga de 4625 (Logon Type 10), subestado 0xC000006A
+    A->>S: 03:12 login exitoso (4624 Type 10) desde IP externa
+    A->>S: Crea cuenta "sqlbackup" (4720) y la agrega a Administradores (4732)
+    A->>S: Instala servicio de persistencia (7045) y tarea programada (4698)
+    Note over A,S: Día 2 — 02:50
+    A->>S: Vuelve, ejecuta herramientas (4688 con línea de comandos)
+    A->>S: 03:05 borra el registro de seguridad (1102)
+    Note right of S: El borrado ES la huella: 1102 no se puede ocultar sin apagar el servicio
+```
+
+### 4.1 Indicadores por fase (mapa síntoma → artefacto)
+
+| Fase de la intrusión | Síntoma observable | Artefacto / evento nativo |
 |---|---|---|
-| §5.3 `Get-WinEvent Security -MaxEvents 20` | **SRV-LOG01 (colector)** | muestra 4624/4672/4720 del 15/09 03:14–03:16 (sobreviven en la copia) |
-| §5.5 detección de 1102/104 | SRV-FILE01 (local) | **un** evento 1102, 15/09 03:40:11, sujeto `svc_update` |
-| §5.5.1 RecordId | SRV-FILE01 (local) | `RecordId` bajos, empezando cerca de 1 tras el borrado total |
-| §6.1 `Get-Process` | SRV-FILE01 | `update` PID 9310, ruta `C:\Users\Public\update.exe` |
-| §6.4 servicios fuera de Windows | SRV-FILE01 | `WinDefendUpd`, Auto, `C:\Users\Public\update.exe` |
-| §6.5 tareas programadas | SRV-FILE01 | `\SystemUpdate` lanza `powershell.exe` |
-| §6.6 `query user` | SRV-FILE01 | sesión `soporte`, `rdp-tcp`, iniciada 15/09 03:14 |
-| §7.2 conexiones externas | SRV-FILE01 | `update.exe` PID 9310 → `203.0.113.14:443` |
-| §8.2 Prefetch | SRV-FILE01 | `UPDATE.EXE-*.pf`, LastWriteTime 15/09 03:20 |
-| §9.2 admins locales | SRV-FILE01 | `svc_update` en Administradores (no reconocido) |
+| Fuerza bruta RDP | Ráfaga de fallos de logon de madrugada | Muchos `4625` Logon Type 10, subestado `0xC000006A` (usuario no existe) / `0xC000006D` |
+| Acceso conseguido | Logon exitoso remoto fuera de horario, IP externa | `4624` Logon Type 10 desde IP pública |
+| Creación de puerta trasera | Cuenta nueva no inventariada | `4720` (alta) + `4732` (agregada a Administradores) |
+| Persistencia | Servicio y tarea desconocidos | `7045` (System) + `4698` (tarea programada) |
+| Ejecución de herramientas | Procesos anómalos con línea de comando sospechosa | `4688` con `CommandLine` (si la GPO lo habilita) |
+| Antiforense | «Desaparecieron» los registros | `1102` (borrado del log de Seguridad); hueco temporal en los logs |
+| Conexión de mando | Conexión saliente a IP/puerto raro | `Get-NetTCPConnection` / `netstat -ano`; Sysmon Event ID 3 si está instalado |
 
-### 5.3 Cómo se resuelve el caso (cruce de indicios)
-El investigador **no** ve el 4624 inicial en el log local (fue borrado), pero:
-1. ve el **1102** (alguien borró el log a las 03:40 con `svc_update`, una cuenta que no reconoce);
-2. ve `svc_update` en **Administradores locales** (§9.2) y su alta **4732** en la copia del colector;
-3. ve `update.exe` **corriendo** desde `C:\Users\Public` (§6.1), como **servicio** (§6.4) y **tarea** (§6.5);
-4. ve la **conexión saliente** a `203.0.113.14:443` (§7.2) y el **Prefetch** que prueba su ejecución (§8.2);
-5. recupera del **colector WEF** el 4624 tipo 10 desde `203.0.113.14` y la ráfaga de 4625 (§5.6).
+El hallazgo que ancla todo el caso es el **1102**: el atacante borró el registro de seguridad creyendo taparse, pero el propio acto de borrado genera un evento que Windows escribe **después** de vaciar el log, y que no puede suprimirse sin detener el servicio de registro de eventos (lo que a su vez deja el `1100`/`104`). Enseñar a leer ese evento es el corazón didáctico del caso.
 
-La historia cierra: acceso por RDP → creación de puerta trasera → persistencia → borrado del log → C2 y exfiltración. Ningún indicio solo alcanza; **el cruce** confirma.
+---
+
+## 5. Qué debe descubrir el lector
+
+Al terminar la investigación guiada, el lector tendría que poder afirmar, con evidencia:
+
+1. Hubo **fuerza bruta de RDP** desde una IP externa entre las 02:14 y las 03:12 del Día 1.
+2. Esa fuerza bruta **tuvo éxito** (un 4624 Type 10 tras cientos de 4625).
+3. El atacante **creó una cuenta de puerta trasera** (`sqlbackup`) y la volvió administradora.
+4. Instaló **persistencia** (servicio + tarea programada).
+5. **Borró el registro de seguridad** para tapar los pasos anteriores — y ese borrado es, en sí mismo, la prueba de que hubo manipulación.
+6. La causa raíz es un **vicio de administración**: RDP publicado a internet + política de auditoría de fábrica + cuentas privilegiadas de más.
+
+---
+
+## 6. Relación con el resto de la guía
+
+- El **corpus de evidencia** (`ESC-CORPUS`) contiene los fragmentos ilustrativos de logs y salidas que este escenario justifica.
+- La **guía principal** (`GUIA-PRINCIPAL`) usa este escenario como hilo conductor: cada herramienta nativa se presenta resolviendo un tramo del caso.
+- El **cuadernillo** (`CUADERNO`) plantea ejercicios cuya clave de corrección es la sección 4 de este documento.
+
+## 7. Preguntas guía
+
+**¿Por qué construir un escenario ficticio en vez de usar salidas genéricas?**
+Porque un conjunto de salidas inventadas al azar se contradice entre sí —una muestra un logon a las 03:12 y otra no lo refleja— y esa incoherencia le enseña mal al lector. Un escenario único hace que todo lo que la guía muestra sea derivable de un mismo modelo y, por lo tanto, internamente verificable.
+
+**¿Por qué el evento 1102 es el ancla del caso y no el 4624 del login del atacante?**
+Porque un atacante hábil borra o adultera muchas huellas, pero el borrado del registro de seguridad es un acto que Windows registra por diseño de forma difícil de suprimir. Enseñar a buscar primero la evidencia de manipulación (1102, huecos temporales) forma el criterio correcto: en un sistema comprometido, la ausencia de registros es en sí misma un dato.

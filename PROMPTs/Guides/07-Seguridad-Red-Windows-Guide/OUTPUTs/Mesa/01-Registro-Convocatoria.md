@@ -1,90 +1,48 @@
+---
+doc_id: MESA-01-CONVOCATORIA
+doc_type: mesa
+title: Registro de convocatoria del panel
+status: vigente
+origin: ia-assisted
+audience: [humano, agente]
+traces: [BIT-01-CONTRATO, GUIA-PRINCIPAL, MESA-02-VEREDICTOS]
+---
+
 # Mesa evaluadora — Registro de convocatoria
 
-**Fecha:** 2026-09-17
-**Artefacto bajo revisión:** `Beginning-Security-Windows-Network-Guide.md` (guía de estudio)
-**Marco:** `/IA/PROMPTs/IA.Prompts/Base/Mesa-Evaluadora.md` §5.1
+**Fecha:** 2026-09-18
+**Marco:** `/IA/PROMPTs/IA.Prompts/Base/Mesa-Evaluadora.md`
+**Objeto bajo revisión:** los dos entregables (`GUIA-PRINCIPAL`, `CUADERNO`) contra el objetivo del contrato de entrada (`BIT-01-CONTRATO`).
 
----
+## 1. Barrido de señales (§5.1.b del marco)
 
-## 1. Barrido de señales (§5.1.b)
-
-Inventario, no juicio. Cada señal citada con su ubicación en el prompt de origen.
-
-| Señal observable | Ubicación en el prompt | Especialidad que activa |
+| Señal observable en el artefacto | Ubicación | Especialidad que activa |
 |---|---|---|
-| "persona sin conocimientos de redes y sistemas operativos" | Solicitudes §1 | Didáctica |
-| "guía debe servir definiciones, ejemplos… lenguaje claro sin perder el tecnicismo" | Solicitudes §1 | Edición bibliográfica |
-| "sospecho intrusión y están borrando los logs… fugas de seguridad" | Contexto | Seguridad informática (redes Windows) |
-| "comandos que se puedan probar y… resultados esperados" | Solicitudes §1 | Verificación / QA (núcleo) |
-| "hacer pentesting… herramientas de la industria… reproducir un pentesting" | Solicitudes §1 | Doble uso / encuadre legal-ético |
-| "No inventar información… evidencia verificable" | Reglas | Verificación / QA (núcleo) |
-| "gráficos mermaid… organizados en secciones jerárquicas con índices" | Reglas | Implementador ingenuo (núcleo) |
-| "Aplicar UX-UI-Guide.md" | Reglas | Edición bibliográfica |
+| Material formativo para lector sin experiencia | Todo el objeto | Didáctica |
+| Obra bibliográfica con índice, citas, glosario | §12, §13, índices | Edición de material bibliográfico |
+| Dominio técnico: eventos, comandos, AD | §4–§9 | Seguridad en redes Windows |
+| Ejecutabilidad por un principiante | Comandos y ejercicios | Implementador ingenuo (lector sin conocimientos) |
+| Contenido de doble uso (pentesting, herramientas ofensivas) | §10–§11, cuaderno §9 | Verificación/evidencia + ética (Rule-Security-Testing) |
 
----
+## 2. Composición decidida (la mesa dirime, no se eleva al usuario)
 
-## 2. Voto de composición (§5.1.c)
+El prompt nombró tres especialidades (didáctica, edición bibliográfica, seguridad Windows) y pidió «analiza si necesitas un experto más». La mesa convoca esas tres y **suma dos** por señales observables:
 
-Los 5 jueces votan por especialidad. Mayoría simple; empate ⇒ se convoca.
+| Rol | Tipo | Justificación |
+|---|---|---|
+| **E1 Didáctica** | Nombrado por el prompt | Objetivo formativo para principiante absoluto |
+| **E2 Edición bibliográfica** | Nombrado por el prompt | Coherencia de obra, citación, terminología |
+| **E3 Seguridad en redes Windows** | Nombrado por el prompt | Exactitud técnica (Event IDs, comandos, ATT&CK) |
+| **E4 Lector sin conocimientos** | Núcleo permanente (implementador ingenuo, §4.1.1) | Es el destinatario declarado; su función no depende del dominio |
+| **E5 Verificación / ética de doble uso** | Catálogo variable (Seguridad y privacidad, §4.1.2) + Rule-Security-Testing | Señal de pentesting y herramientas ofensivas; verifica encuadre y evidencia |
 
-### 2.1 Núcleo permanente (se convoca siempre)
+**Descartados con motivo:** rol formal/matemático (no hay umbrales ni cálculos), rol de datos/ciclos de vida (no hay modelo de datos), arquitectura (no hay sistema a diseñar). Se registran por si un defecto en esas áreas apareciera después.
 
-| Rol | Estado |
-|---|---|
-| Requisitos | CONVOCAR (automático) |
-| Verificación / QA | CONVOCAR (automático) |
-| Implementador ingenuo | CONVOCAR (automático) — aquí opera como "lector novato": ¿puede seguir la guía sin preguntar nada? |
-| Abogado del diablo | CONVOCAR (automático) |
+## 3. Reglas de trabajo aplicadas
 
-### 2.2 Catálogo variable
+- Panel **a ciegas y en paralelo**: cada especialista produjo su informe sin ver los de los pares (evita anclaje).
+- Tope de 7 hallazgos por especialista; se pidió además declarar aciertos (para distinguir «no lo miró» de «lo miró y está bien»).
+- Nivel de evidencia exigido: cita literal del documento (E2) o fuente oficial.
+- Segundo ciclo: la mesa revalida el objeto tras aplicar las correcciones (§ del prompt: «la mesa debe volver a analizar el documento una vez finalizado»).
 
-| Rol propuesto | Voto | Resultado | Motivo |
-|---|---|---|---|
-| **E-Didáctica** (experto en didáctica) | 5-0 | CONVOCAR | Pedido explícito del prompt; el lector no tiene base |
-| **E-Edición** (edición de material bibliográfico) | 5-0 | CONVOCAR | Pedido explícito; hay norma de estilo heredada (APA 7, UX-UI-Guide) |
-| **E-SeguridadWin** (seguridad en redes Windows) | 5-0 | CONVOCAR | Es el dominio; sin él no hay corrección técnica posible |
-| **Seguridad y privacidad** (catálogo) | 5-0 | Cubierto por E-SeguridadWin | Se fusiona, no se duplica |
-| **Cumplimiento / normativa** | 3-2 | NO_CONVOCAR | El caso es formativo, no un dictamen legal; se cubre con el agente ad hoc de doble uso, más acotado |
-
-### 2.3 Agente ad hoc (§4.1.3)
-
-El prompt pregunta si hace falta un experto más. La mesa determina que **sí**: el tratamiento de pentesting
-introduce contenido de doble uso que ninguno de los tres expertos pedidos tiene en su mandato.
-
-```yaml
-agente_ad_hoc:
-  id: AH-001
-  nombre: Especialista en ética, doble uso y encuadre legal de seguridad ofensiva
-  señal_que_lo_justifica:
-    descripción: "La guía incluye pentesting con herramientas ofensivas reales para un lector principiante"
-    ubicación: "Solicitudes §1, párrafo 2"
-  pregunta_que_responde: >
-    ¿El material ofensivo está encuadrado de modo que forme criterio defensivo sin
-    convertirse en un recetario aplicable sin autorización?
-  competencia: >
-    Autorización, alcance, doble uso, minimización de daño, encuadre de laboratorio.
-    NO opina sobre la corrección técnica de los comandos (eso es de E-SeguridadWin)
-    ni sobre la claridad didáctica (E-Didáctica).
-  evidencia_admisible: [E2, E3, E4]
-  tope_hallazgos: 5
-  se_disuelve_cuando: cierre del ciclo o retiro de la sección de pentesting
-```
-
----
-
-## 3. Composición final del panel
-
-- **Núcleo:** Requisitos, Verificación/QA, Lector novato (implementador ingenuo), Abogado del diablo.
-- **Variables:** E-Didáctica, E-Edición, E-SeguridadWin.
-- **Ad hoc:** AH-001 (ética/doble uso).
-- **Descartados con motivo:** Cumplimiento/normativa (3-2, cubierto por AH-001 de forma más acotada).
-- **Postergados por cupo:** ninguno (4 núcleo + 4 variables/ad hoc = dentro del techo de 5 variables).
-
-**Jurado:** los 5 fijos por función (evidencia, impacto, costo-beneficio, coherencia histórica, riesgo).
-
----
-
-## 4. Cuándo actúa la mesa
-
-Conforme al marco, el panel trabaja **a ciegas sobre el entregable una vez redactado** (§5.2). Este registro
-queda cerrado; el resultado del panel se documenta en `02-Panel-Veredictos.md` tras la primera redacción.
+El panel de veredictos y el cierre se registran en `MESA-02-VEREDICTOS` y `MESA-03-CIERRE`.
