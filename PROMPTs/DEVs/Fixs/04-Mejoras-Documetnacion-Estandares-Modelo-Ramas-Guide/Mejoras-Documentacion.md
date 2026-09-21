@@ -3,7 +3,7 @@
 > **Invocación**:
 > - Leer y ejecutar `/LAB/Lab-Documentos.Documentacion/PROMPTs/Fixs/04-Mejoras-Documetnacion-Estandares-Modelo-Ramas-Guide/Mejoras-Documentacion.md`
 >
-> Overview: Mejora documentación
+> **Overview**: Mejora documentación
 
 ---
 
@@ -28,6 +28,7 @@
 # Reglas
 
   - No inventar información.
+  
   - Toda afirmación deberá estar respaldada por evidencias verificables.
   
 
