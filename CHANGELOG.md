@@ -13,14 +13,10 @@ guía misma.
 ### Añadido
 
 - **`PROMPTs/Guides/14-Sistema-De-Documentador-Tecnico/`** — tool-prompt de investigación
-  `Sistema-De-Documentador-Tecnico.md` (¿cómo se produce documentación técnica a partir de
-  Markdown y se publica renderizada, al estilo de los portales de la industria?) con su apunte
-  `OUTPUTs/Sistema-Documentador-Tecnico.md` (759 líneas) y la prueba de concepto
-  `OUTPUTs/Prueba-Ayuda-Por-Rol/`: motor en consola (catálogo, filtro por rol, `llms.txt`,
-  validador con defectos plantados) y panel Blazor .NET 10 con ingreso simulado por papel, ayuda
-  contextual, 404 por rol y dos idiomas, con devcontainer, `README.md` y siete capturas del
-  2026-09-19. `Lanzar-Example.md` la levanta en su devcontainer y la expone por túnel rápido de
-  Cloudflare (`--bajar`, `--estado`).
+  `Crear-Analizar-Sistema-De-Documentador-Tecnico-Guide.md`: ¿cómo se produce documentación técnica
+  a partir de Markdown y se publica renderizada, al estilo de los portales de la industria? El
+  apunte que pide se escribe en `Lab-Documentos/Guides/Sistema-Documentador-Tecnico/` (todavía no
+  creado) y el encargo aplica el perfil `Study-Guide-Documentation.md` del PromptFramework.
 - **`PROMPTs/Guides/06-Arquitectura/`** — segundo encargo `02-Edición-Arquitecture-Guide.md`
   (mesa de editor de libros, académico en pedagogía, Martin Fowler personificado y especialista
   .NET/C#) y su ejecución en `OUTPUTs/Bitacora-Editores/`: contrato de entrada, base mecánica,
@@ -48,6 +44,14 @@ guía misma.
 - **`PROMPTs/Indexado/`** — los títulos de `Crear-Indexado.md` y `Actualizar-Indexado.md` llevan
   el prefijo «Prompt Indexado» y el «Overview» de la invocación queda en negrita, como en el resto
   de los tool-prompts.
+
+### Quitado
+
+- **`PROMPTs/Guides/14-Sistema-De-Documentador-Tecnico/OUTPUTs/`** y **`Lanzar-Example.md`** — el
+  apunte de 759 líneas y la prueba de concepto «ayuda por rol» (consola, panel Blazor .NET 10,
+  devcontainer y siete capturas) que entraron en `f1aa610` el mismo día se retiran de este
+  repositorio junto con el primer borrador del prompt (`Sistema-De-Documentador-Tecnico.md`): la
+  salida del encargo pasa a producirse en `Lab-Documentos`, no acá. Quedan en el historial.
 
 ## [No publicado] - 2026-09-18
 
