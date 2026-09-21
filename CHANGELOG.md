@@ -8,6 +8,47 @@ documental que se lee entero, no un artefacto que alguien instala en una versió
 versionado semántico que la guía enseña aplica al software que ese procedimiento libera, no a la
 guía misma.
 
+## [No publicado] - 2026-09-20
+
+### Añadido
+
+- **`PROMPTs/Guides/14-Sistema-De-Documentador-Tecnico/`** — tool-prompt de investigación
+  `Sistema-De-Documentador-Tecnico.md` (¿cómo se produce documentación técnica a partir de
+  Markdown y se publica renderizada, al estilo de los portales de la industria?) con su apunte
+  `OUTPUTs/Sistema-Documentador-Tecnico.md` (759 líneas) y la prueba de concepto
+  `OUTPUTs/Prueba-Ayuda-Por-Rol/`: motor en consola (catálogo, filtro por rol, `llms.txt`,
+  validador con defectos plantados) y panel Blazor .NET 10 con ingreso simulado por papel, ayuda
+  contextual, 404 por rol y dos idiomas, con devcontainer, `README.md` y siete capturas del
+  2026-09-19. `Lanzar-Example.md` la levanta en su devcontainer y la expone por túnel rápido de
+  Cloudflare (`--bajar`, `--estado`).
+- **`PROMPTs/Guides/06-Arquitectura/`** — segundo encargo `02-Edición-Arquitecture-Guide.md`
+  (mesa de editor de libros, académico en pedagogía, Martin Fowler personificado y especialista
+  .NET/C#) y su ejecución en `OUTPUTs/Bitacora-Editores/`: contrato de entrada, base mecánica,
+  núcleos NE-00..NE-05, `Ciclo-1/` con cinco informes y el dictamen de Fowler posterior a la
+  aplicación, resolución del ciclo y cierre. La guía pasa de v2.0.2 a v2.1.0 en `Lab-Documentos`
+  (2126 → 2545 líneas, 39 bloques C#, 38 hallazgos aplicados), con dos apartamientos declarados
+  en `03-Cierre.md`.
+- **`PROMPTs/DEVs/`** — carpetas por tipo de cambio (`Breaking-Change/`, `Changed/`,
+  `Enchacement/`, `Features/`, `Fixs/`, `Refactor/`), cada una con un `README.md` de una línea que
+  fija qué clase de encargo va ahí.
+
+### Cambiado
+
+- **`PROMPTs/Fixs/` pasa a `PROMPTs/DEVs/Fixs/`** con sus cuatro encargos de mejoras de
+  documentación, sin cambios de contenido.
+- **`PROMPTs/Guides/06-Arquitectura/03-Reedicion-Arquitectura.md` se renumera a
+  `01-Reedicion-Arquitectura.md`**, sin cambios de contenido, para que el orden de los archivos
+  siga el orden de los encargos.
+- **`PROMPTs/Guides/07-Seguridad-Red-Windows-Guide/Crear-Seguridad-Red-Windows-Guide.md`** — el
+  encargo suma el cuaderno de ejercicios `Cuaderno-Ejercicios-Seguridad-Windows.md` y pide plantear
+  y documentar primero un escenario con Windows Server 2019 antes de consultar; la regla de aplicar
+  la guía UX-UI se reemplaza por la sección `Framework > Profile` con
+  `/IA/IA.Prompts/PromptFramework/Profiles/Study-Guide-Documentation.md`; sangría corregida en la
+  regla de descomposición conceptual.
+- **`PROMPTs/Indexado/`** — los títulos de `Crear-Indexado.md` y `Actualizar-Indexado.md` llevan
+  el prefijo «Prompt Indexado» y el «Overview» de la invocación queda en negrita, como en el resto
+  de los tool-prompts.
+
 ## [No publicado] - 2026-09-18
 
 ### Añadido

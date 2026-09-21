@@ -1,9 +1,9 @@
-# Tool-Prompt — Crear indexado de Lab-Documentos
+# Tool-Prompt — Prompt Indexado - Crear indexado de Lab-Documentos
 
 > **Invocación**:
 > - Leer y ejecutar `/LAB/Lab-Documentos.Documentacion/PROMPTs/Indexado/Crear-Indexado.md`
 >
-> Overview: Crear indexado de Lab-Documentos
+> **Overview**: Crear indexado de Lab-Documentos
 
 ---
 
