@@ -1,0 +1,8 @@
+me estoy dando cuenta que vamos haciendo progresos en otros areas, lee `/IA/SDD/IA.SDD/Conocimiento/README.md` revisa como se generaran nuevos conocimientos  y quiero que generes un conocimiento en un markdown que condense la forma que un agente debe analizar el texto, dejala en `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/06-Crear-Dot-NET-Arquitectura-Guide/OUTPUTs/Conocimientos` - te propongo algo como para catalogarlo como `Analista-Relevador`, pero me gustaria vos catalogaras en función en que etapa intervendría el subagente que necesite ese conocimiento adecuado para analizar el problema y deducir los RN correctamente - con las personalidades correctas , si en realidad necesita mas subagentes, - la idea que al cargar en un prompt ese conocimiento haga un analisis y deducción correcto de los RN  , que replique si es necesario y comente las inconsistencia y proponga resolverlas, que sea algo proactivo (el conocimiento debe hacer que los subagentes adquiera una habilidad de ser proactivos), así que ayudate de subagentes analistas y especialistas en IA para encontrar lo correcto del subagente. Así a medidas que vamos avanzando mejoramos la capacidad de ese conocimiento en resolver problemas , tus agentes deben estar atentos en trabajar en ese conocmiento
+
+no quiero que modifiques `/IA/SDD/IA.SDD`
+## Reglas
+
+  - No inventar información. 
+  - Toda afirmación debe estar respaldada por evidencia verificable.
+  - No modificar el `Framework SDD`

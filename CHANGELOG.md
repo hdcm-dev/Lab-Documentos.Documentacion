@@ -17,7 +17,7 @@ guía misma.
   a partir de Markdown y se publica renderizada, al estilo de los portales de la industria? El
   apunte que pide se escribe en `Lab-Documentos/Guides/Sistema-Documentador-Tecnico/` (todavía no
   creado) y el encargo aplica el perfil `Study-Guide-Documentation.md` del PromptFramework.
-- **`PROMPTs/Guides/06-Arquitectura/`** — segundo encargo `02-Edición-Arquitecture-Guide.md`
+- **`PROMPTs/Guides/06-Crear-Dot-NET-Arquitectura-Guide/`** — segundo encargo `02-Edición-Arquitecture-Guide.md`
   (mesa de editor de libros, académico en pedagogía, Martin Fowler personificado y especialista
   .NET/C#) y su ejecución en `OUTPUTs/Bitacora-Editores/`: contrato de entrada, base mecánica,
   núcleos NE-00..NE-05, `Ciclo-1/` con cinco informes y el dictamen de Fowler posterior a la
@@ -32,7 +32,7 @@ guía misma.
 
 - **`PROMPTs/Fixs/` pasa a `PROMPTs/DEVs/Fixs/`** con sus cuatro encargos de mejoras de
   documentación, sin cambios de contenido.
-- **`PROMPTs/Guides/06-Arquitectura/03-Reedicion-Arquitectura.md` se renumera a
+- **`PROMPTs/Guides/06-Crear-Dot-NET-Arquitectura-Guide/03-Reedicion-Arquitectura.md` se renumera a
   `01-Reedicion-Arquitectura.md`**, sin cambios de contenido, para que el orden de los archivos
   siga el orden de los encargos.
 - **`PROMPTs/Guides/07-Seguridad-Red-Windows-Guide/Crear-Seguridad-Red-Windows-Guide.md`** — el
@@ -57,8 +57,8 @@ guía misma.
 
 ### Añadido
 
-- **`PROMPTs/Guides/06-Arquitectura/`** — tool-prompt `03-Reedicion-Arquitectura.md` (reedición
-  íntegra de `Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md` como guía de
+- **`PROMPTs/Guides/06-Crear-Dot-NET-Arquitectura-Guide/`** — tool-prompt `03-Reedicion-Arquitectura.md` (reedición
+  íntegra de `Lab-Documentos/Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` como guía de
   estudio) y su ejecución completa en `OUTPUTs/`: `Bitacora/` (contrato de entrada, fuente
   literal de la conversación, registro de requisitos R-01..R-17, integración de núcleos, corridas
   de laboratorio y cierre), `Nucleos/` (NC-00 cohesión + NC-01..NC-10), `Mesa/` (registro de
