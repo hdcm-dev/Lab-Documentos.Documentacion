@@ -1,6 +1,6 @@
 # 08 — Guías de arquitectura importadas y material de `references/`
 
-> **Propósito**: las tres guías de `Guides/Arquitectura/` (solución .NET por capas, microservicios
+> **Propósito**: las tres guías de `Guides/Dot-NET-Arquitectura-Guide/` (solución .NET por capas, microservicios
 > y frontends, archivos/multimedia/video) y los insumos de `Guides/references/` (catálogo de
 > agentes por especialidad para SDD, prompt de refinamiento, duplicados, notas). 24 documentos,
 > ≈9 100 líneas.
@@ -11,11 +11,11 @@
 
 - Sin frontmatter ni `doc_id`; sin marcas de evidencia ni niveles de autoridad. Son guías
   prescriptivas «cómo lo hacemos», no guías de estudio con fuentes verificadas.
-- `references/arquitectura/*.md` son **copias byte a byte** de `Arquitectura/*.md` (H-03):
-  citar siempre `Arquitectura/`.
+- `references/arquitectura/*.md` son **copias byte a byte** de `Dot-NET-Arquitectura-Guide/*.md` (H-03):
+  citar siempre `Dot-NET-Arquitectura-Guide/`.
 - `Dot-NET-Arquitectura-Guide.md` está en **.NET 9 / EF Core 9** (H-06); el resto del corpus usa .NET 10.
 
-## `Arquitectura/Dot-NET-Arquitectura-Guide.md` (929 líneas, abril 2026)
+## `Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` (929 líneas, abril 2026)
 
 Guía completa de una **solución .NET multi-cliente**: stack .NET 9, Blazor, MAUI Hybrid,
 ASP.NET Core Web API, EF Core. Secciones: glosario · visión general · estructura de proyectos ·
@@ -45,7 +45,7 @@ Contraste: la guía de código propia (`TEM-CAPAS`, `TEM-CVP`) discute **si** co
 separación en proyectos y advierte que Clean Architecture no es estándar de Microsoft
 → [03](03_Organizacion-Codigo-NET.md).
 
-## `Arquitectura/Microservicios-Guide.md` (717 líneas)
+## `Dot-NET-Arquitectura-Guide/Microservicios-Guide.md` (717 líneas)
 
 «Guía de arquitectura de microservicios y estrategias de frontend», con enfoque .NET.
 
@@ -68,7 +68,7 @@ separación en proyectos y advierte que Clean Architecture no es estándar de Mi
 Contraste: `FAM-SRV` de la guía de código (`TEM-MICRO`, `TEM-PART`) trata cuándo partir con
 criterios verificables y el «monolito distribuido» → [03](03_Organizacion-Codigo-NET.md).
 
-## `Arquitectura/Manejo-Archivos-Guide.md` (913 líneas)
+## `Dot-NET-Arquitectura-Guide/Manejo-Archivos-Guide.md` (913 líneas)
 
 Complemento de la anterior: gestión de archivos, multimedia y video en microservicios, API-first.
 
@@ -91,7 +91,7 @@ terminal y subida diferida) es un caso de §3.5.
 |---|---|---|
 | `agentes-especialidades/` (15) | `README.md` índice + `tabla-caracterizacion-agentes.md` + una ficha por agente `AG-ROOT`, `AG-00..AG-11` | Proyecto Motor DSL, 2026-04-03/04 |
 | `refinamiento_docs/` (2) | `agentes-refinamiento-docs.md` (515 líneas: definición de los mismos AG-xx) · `prompt_refinanmiento.md` (189: prompt maestro de un agente orquestador con sub-agentes para refinar la documentación SDD del Motor DSL) | Insumo de prompts |
-| `arquitectura/` (3) | `guia-arquitectura-.net.md`, `guia-arquitectura-microservicios.md`, `guia-manejo-recursos.md` | **Duplicados exactos** de `Arquitectura/` (H-03) |
+| `arquitectura/` (3) | `guia-arquitectura-.net.md`, `guia-arquitectura-microservicios.md`, `guia-manejo-recursos.md` | **Duplicados exactos** de `Dot-NET-Arquitectura-Guide/` (H-03) |
 | `notas/tools.md` (1) | Atajos de VS Code para previsualizar Markdown (`Ctrl+K V`, `Ctrl+Shift+V`) | Nota personal |
 
 ### Catálogo de agentes por especialidad (`agentes-especialidades/`)
