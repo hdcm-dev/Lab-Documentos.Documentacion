@@ -31,7 +31,7 @@ mapa conceptual, para resolver algo concreto.
 | 11 | `Scrum-Guide/` | Material importado + PDF | 4 (+1 pdf) | 4 290 | sin `doc_id` · abril 2026 | [07](07_DevOps-Agiles-SDD-UX.md) |
 | 12 | `SDD-Guide/` | Material importado (UTN FRP) | 4 | 835 | sin `doc_id` · 2026-04-06 | [07](07_DevOps-Agiles-SDD-UX.md) |
 | 13 | `UX-UI-Guide/` | Material importado | 2 | 2 038 | sin `doc_id` · 2026-04-25 | [07](07_DevOps-Agiles-SDD-UX.md) |
-| 14 | `Arquitectura/` | 3 guías importadas (.NET 9) | 3 | 2 559 | sin `doc_id` · abril 2026 | [08](08_Arquitectura-y-References.md) |
+| 14 | `Dot-NET-Arquitectura-Guide/` | 3 guías importadas (.NET 9) | 3 | 2 559 | sin `doc_id` · abril 2026 | [08](08_Arquitectura-y-References.md) |
 | 15 | `references/` | Insumos: agentes SDD, duplicados de 14, notas | 21 | 6 577 | `AG-xx` · 2026-04-03/04 | [08](08_Arquitectura-y-References.md) |
 
 Totales: 232 `.md` (230 con contenido + `README.md` raíz y `Guides/README.md` vacíos) · 87 577
@@ -122,7 +122,7 @@ Hechos verificados sobre los archivos; la interpretación va aparte cuando corre
   no lo contemple.
 - **H-04** `Guides/SDD-Guide/Spec-Driven Development-SDD.md` tiene un espacio en el nombre.
 - **H-05** Los tres archivos de `references/arquitectura/` son **idénticos byte a byte** (`cmp`) a
-  los de `Arquitectura/`: `guia-arquitectura-.net.md` = `Dot-NET-Arquitectura-Guide.md`,
+  los de `Dot-NET-Arquitectura-Guide/`: `guia-arquitectura-.net.md` = `Dot-NET-Arquitectura-Guide.md`,
   `guia-arquitectura-microservicios.md` = `Microservicios-Guide.md`,
   `guia-manejo-recursos.md` = `Manejo-Archivos-Guide.md`.
 - **H-06** `Estandares-Modelo-Ramas-Guide/README.md` fue eliminado (CHANGELOG 2026-09-03) pero
@@ -164,7 +164,7 @@ Hechos verificados sobre los archivos; la interpretación va aparte cuando corre
   prescribe `main` + `homologacion` con flujo `issue → homologacion → main`; y
   `DevOps-Guide/marco-teorico.md` §6.7 registra esa misma prescripción como «deuda documental»
   incompatible con el GitHub Flow estricto (D3) del Motor DSL. Tres posiciones en el mismo corpus.
-- **H-15** `Arquitectura/Dot-NET-Arquitectura-Guide.md` declara stack **.NET 9**; las guías
+- **H-15** `Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` declara stack **.NET 9**; las guías
   propias usan .NET 10 (LTS) como referencia.
 - **H-16** Las dos guías prácticas declaran que sus escenarios **no fueron ejecutados** en esa
   redacción (`GitHubFlow-Practice-Guide/README.md` «Estado de verificación»; CHANGELOG). La

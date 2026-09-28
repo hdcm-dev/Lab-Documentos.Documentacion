@@ -30,7 +30,7 @@
 | Repositorio | `https://github.com/hdcm-dev/Lab-Documentos` · rama `main` en `e1a39bf` (2026-08-26) |
 | Tipo | **Corpus documental de estudio**: 15 carpetas de guías en Markdown, sin código ejecutable |
 | Volumen | 237 archivos · 232 `.md` (87 577 líneas; 2 vacíos) · 3 workflows `.yml` · 1 PDF · 7 MB · 217 diagramas Mermaid en 146 archivos |
-| Stack de referencia de los ejemplos | .NET 10 / C# · ASP.NET Core · Blazor *interactive server* · .NET MAUI (MVVM) · EF Core · PostgreSQL · Playwright · GitHub Actions (`Arquitectura/` usa .NET 9) |
+| Stack de referencia de los ejemplos | .NET 10 / C# · ASP.NET Core · Blazor *interactive server* · .NET MAUI (MVVM) · EF Core · PostgreSQL · Playwright · GitHub Actions (`Dot-NET-Arquitectura-Guide/` usa .NET 9) |
 | Documentación asociada | `Lab-Documentos.Documentacion` (este repositorio: prompts generadores en `PROMPTs/`, `CHANGELOG.md`, esta ia-db) |
 
 **Función principal.** Reunir en un solo repositorio las guías de estudio que el equipo produjo
@@ -103,7 +103,7 @@ Ver [00_MASTER-INDEX.md](indexes/00_MASTER-INDEX.md#estado-del-repositorio).
 - Estado del repositorio : `main` en `e1a39bf`; árbol de trabajo con la app borrada y `Guides/` sin trackear
 - Verificaciones ejecutadas : `wc -l` por guía; comprobación de 2 409 enlaces relativos con un
   script Python (36 archivos con enlaces rotos, detallados en el índice 00); `cmp` de los tres
-  duplicados de `references/arquitectura/` contra `Arquitectura/` (idénticos byte a byte)
+  duplicados de `references/arquitectura/` contra `Dot-NET-Arquitectura-Guide/` (idénticos byte a byte)
 - Generado     : 2026-09-12 · Versión: 3.0 (regeneración completa a pedido; reemplaza a la 2.0 del
   mismo día, que no tenía cambios de fuente pendientes; la 1.0 del 2026-09-01 indexaba la app
   Blazor + E2E que ya no está en el árbol)

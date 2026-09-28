@@ -67,6 +67,6 @@ una fila de `Referencias.md`; si no puede, falta la fuente o es criterio propio 
   (`Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/README.md`) → [04](04_Diseno-REST-API.md).
 - `TEM-CAPAS` y la serie `ARQ-` de Documentación técnica tratan los mismos modelos desde ángulos
   distintos (código vs. documentación exigida) → [01](01_Documentacion-Tecnica.md).
-- `Arquitectura/Dot-NET-Arquitectura-Guide.md` (material importado) propone una solución concreta
+- `Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` (material importado) propone una solución concreta
   Domain/Application/Infrastructure/WebAPI/WebFront/Shared.UI/Desktop; es una aplicación del
   modelo de capas que esta guía discute, no parte de ella → [08](08_Arquitectura-y-References.md).
