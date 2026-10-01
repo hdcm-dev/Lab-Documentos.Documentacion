@@ -1,6 +1,6 @@
 # 03 — Catálogo de etiquetas: cómo se reconoce cada una sobre un fragmento
 
-**Fecha:** 2026-09-26
+**Fecha:** 2026-09-28
 **Rol:** reconocimiento rápido de fragmentos para el paso 2 del procedimiento de análisis de un
 enunciado de negocio.
 **Para quién:** una persona con lápiz, en la mitad de la tarea, que tiene que decidir **en cinco
@@ -61,10 +61,22 @@ LAS CUATRO PREGUNTAS, en orden
      podés contar el rechazo?
 
 MODIFICADORES ("un casco central")
-  determinante → unicidad → ¿CONTRA CUÁL? → supresión → coma
-  el universal (todo, cada, los... que) pide RESTRINGE
-  el indefinido (un, una, unos) NO PRUEBA NADA
-  sin conjunto de contraste, describe:  A
+  1. ¿es argumento? → no entra
+  2. antepuesto → describe | universal (todo, cada, los... que) → RESTRINGE
+     el indefinido (un, una, unos) NO PRUEBA NADA
+  3. ¿CONTRA CUÁL?  mirá el casillero "eje" de la hoja del referente.
+     Si hay eje depositado → restringe, y sobre el GÉNERO de la hoja,
+     no sobre el núcleo.  Si la hoja está vacía, el indicio pasa el turno.
+  DOS PREGUNTAS, no una:
+     ¿restringe? (¿hay eje?)      ¿informa? (¿es depósito nuevo?)
+     Q1 sí/sí → R   Q2 sí/no → R°   Q3 no/sí → A   Q4 no/no → T°
+     Para poner Q4 tenés que SEÑALAR el depósito anterior.
+     "No restringe" NO es "no importa".
+
+HOJA DEL REFERENTE  (una por sustantivo del dominio, abierta en el paso 1)
+  casilleros: género · eje · miembros · momento · agente · alcance · definición
+  cada fragmento DEPOSITA lo que dice, con su número al lado
+  2do depósito en un casillero → contrastá.  ¿no cierra? → PENDIENTE, no se tira
 
 RITMO
   5 segundos. Si dudás, las dos etiquetas y seguís.
@@ -75,8 +87,8 @@ RITMO
 
 AL CERRAR
   contá los ? solos            →  anotá  ? n/total
-  corré la compuerta sobre ésos y sólo ésos
-  anotá la cuenta final        →  ? n/total → m/total
+  corré la compuerta sobre ésos y sólo ésos  (criterios, y después la hoja)
+  anotá la cuenta final        →  ? n/total → m/total → k/total
   copiá la lista de ! al pie
 ```
 
@@ -142,9 +154,9 @@ Cinco pasos. El 2 es el más corto y el más barato, y esa es su virtud, no su d
 
 | Paso | Qué hace | Qué entrega |
 | --- | --- | --- |
-| 1 | Corta el párrafo en fragmentos, con el criterio de `02-Criterio-De-Segmentacion.md` | Fragmentos numerados, ninguno superpuesto, sin residuo |
-| **2** | **Le pone una etiqueta a cada fragmento, rápido** | **Los mismos fragmentos, cada uno con al menos una letra** |
-| 3 | Vuelca las etiquetas en las tablas: términos, actos, reglas | Tres tablas con filas, y las filas ya se piensan |
+| 1 | Corta el párrafo en fragmentos, con el criterio de `02-Criterio-De-Segmentacion.md`, **y abre una hoja del referente por cada sustantivo del dominio** | Fragmentos numerados, ninguno superpuesto, sin residuo, **más las hojas abiertas** |
+| **2** | **Le pone una etiqueta a cada fragmento, rápido, y deposita lo que el fragmento dice en el casillero que le toca** | **Los mismos fragmentos, cada uno con al menos una letra** —etiquetados con la **lectura fijada**, o con la nota `(abierta)` si el depósito quedó pendiente— **y las hojas con sus depósitos** |
+| 3 | **Lee** las hojas y vuelca las etiquetas en las tablas: términos, actos, reglas | Tres tablas con filas, y las filas ya se piensan |
 | 4 | Deduce la regla de cada fila candidata | Fichas de regla |
 | 5 | Cierra: huecos, preguntas, cobertura | El entregable |
 
@@ -162,6 +174,21 @@ se queda sin letra. Si te parece que un fragmento está mal cortado, lo etiquet�
 **Lo que el paso 3 espera del paso 2:** una letra por fragmento, no un análisis. El paso 3 lee la
 letra para saber **a qué tabla llevar el fragmento**, y ahí recién lo piensa. Las letras son un
 ruteo, no un dictamen.
+
+> **Y una corrección de contrato, que es el cambio de fondo del acta 06.** La **tabla de términos
+> deja de llenarse en el paso 3**: se abre en el **paso 1** como hoja del referente —una por cada
+> sustantivo del dominio que el párrafo nombre— y **se llena mientras se etiqueta**. El paso 3 la
+> **lee**, no la arma.
+>
+> **Cómo se aplica.** Mientras ponés la letra, escribí también **dónde deposita** el fragmento: el
+> casillero de la hoja —género, eje, miembros, momento, agente, alcance, definición— con el número
+> del fragmento al lado. **No es un paso más: es la misma pasada, anotando en dos lugares en vez de
+> uno.** Si un depósito no cierra con lo que el casillero ya tenía, **queda pendiente en la hoja**;
+> no se tira y no se eleva todavía.
+>
+> **Por qué importa acá.** Es lo que vuelve baratas dos cosas que antes costaban un aparato: el
+> conjunto contra el que un modificador recorta se **mira** en un casillero en vez de buscarse, y el
+> `?` deja de ser terminal (§5.2).
 
 > **Consecuencia directa, y conviene tenerla presente todo el tiempo:** la etiqueta no tiene que ser
 > correcta, tiene que ser **suficientemente correcta como para que el fragmento llegue a una mesa
@@ -185,6 +212,8 @@ hoja de bolsillo repite esta misma lista y no otra.
 | `⟦?⟧` | Restitución **fallida**: hay un hueco donde debería ir un sujeto o un agente. Es un hallazgo, no una duda de etiquetado | §5.4 |
 | `!` | **Aviso sobre el corte.** El fragmento vino gordo o mal delimitado del paso 1. Se escribe al margen, junto a la letra. **No se vuelve al paso 1** | §2.4 |
 | `letra(nota)` | **Una nota tuya de hasta tres palabras**, pegada a la letra: `R(estructura)`, `C(describe)`, `?(dos lecturas)`. **Nunca rutea**: la letra manda | §7.3 |
+| `A(dominio)` | Nota sobre un `A` cuyo fragmento **declara los valores posibles** de una propiedad en vez de asignar uno: «el casco es permanente o temporal». **Ninguna letra nueva** | §3.2 |
+| `(abierta)` | Nota sobre la letra cuando la lectura que la fijó **no cerró**: el fragmento se etiqueta con la lectura elegida y el depósito queda pendiente en la hoja | §5.2 |
 
 `°`, `⟦ ⟧`, `!` y las notas **no reemplazan a la letra: la acompañan.** Un fragmento nunca queda
 marcado con `°` solo, ni con una nota sola.
@@ -202,6 +231,9 @@ recibido.
 | El inventario de marcas | **Una marca propia (`°`), una propia de aviso (`!`), dos heredadas (`⟦ ⟧`, `?`) y una especialización propia (`⟦?⟧`)**. `⟦ ⟧` viene del paso 1 (`02` §0.4 y P7) |
 | La regla de los cinco segundos y la doble etiqueta | **Criterio propio** |
 | La compuerta del `?` | **Recibido en su formulación**: el material observado ya dice que «un `?` que un criterio en mano resuelve no es una pregunta para el autor: es un criterio no aplicado». Lo propio es la **formalización**: el procedimiento de tres pasos, la tabla de criterios y la recuenta de cierre |
+| La **hoja del referente**, el depósito por casillero y el segundo tramo de la compuerta (§0.1, §5.2, §8) | **Recibido** del acta `../Mesa/06-Acta-Replanteo-Del-Modelo.md`, que a su vez la reconoce como la tabla de términos del paso 3 adelantada al paso 1. Lo propio de este documento es **cuándo se deposita** dentro del paso 2 |
+| Los **cuatro cuadrantes** `Q1`–`Q4` y la contraprueba de `Q4` | **Recibido** de `04-Afirmacion-Distribuida-Y-Modificadores.md` §3, folio sellado y no vigente. **La versión que manda es `02` §4.3**, y acá se resume |
+| La nota **`A(dominio)`** | **Recibida** de `04` §4. **Ninguna letra nueva**: la letra es `A` |
 | El **conjunto de contraste** como indicio (§8) | **Recibido**: está en el material observado con su nombre, su formulación y su aplicación al mismo caso —«un adjetivo restringe solo si existe un conjunto de contraste del cual recortar»—. Lo propio es la **formalización** y el lugar en el orden |
 | La **generalización a todo modificador** (§8) | **Recibido**: el material ya la había decidido y fundado. Lo propio es la redacción de la jerarquía y los puntos de entrada |
 | Los siete casos del banco de pruebas (§6) | **Observados en uso real**, entregados con el encargo. No son invento de este documento |
@@ -498,9 +530,10 @@ describir a alguien cargando al mismo capataz en dos frentes y el sistema rechaz
 | **Es `A`** | **No es `A`** |
 | --- | --- |
 | Un dato con valor: *nombre, superficie, fecha de ingreso, categoría* | Una cosa con la que otras cosas se relacionan → `T` |
-| Un adjetivo que **describe sin restringir**: «un casco **central**» (§8) | Un adjetivo que **restringe** el conjunto: «los lotes **mayores a 200 ha**» → `R` o calificador de alcance |
+| Un adjetivo que **no recorta y sin embargo predica** —cuadrante `Q3`—: «la cámara **frigorífica**» (§8) | Un adjetivo que **recorta** sobre el género de la hoja —`Q1` o `Q2`—: «un casco **central**», «los lotes **mayores a 200 ha**» → `R` o calificador de alcance |
 | Una unidad declarada: «superficie en hectáreas» | Un vínculo con otra cosa del negocio: «asignada a una parcela» → `R(estructura)` |
 | Un dato que el negocio guarda aunque nadie lo controle | Un dato que el negocio **exige** que cumpla algo → `A/R` |
+| Un fragmento que **declara los valores posibles** de una propiedad: «el casco es permanente o temporal» → `A(dominio)` | Un fragmento que **asigna** un valor a un referente: «el casco es central» → cuadrante, §8 |
 
 #### Preguntas de reconocimiento
 
@@ -518,12 +551,12 @@ que debe ser único» es `A` —hay identificador— **y** `R` —la unicidad se
 etiquetas, y seguís. Si me contesto que sí y el atributo ya estaba nombrado en otro fragmento, va
 `R` sola.
 
-**«¿Este adjetivo agrega o separa?»**
-Si el adjetivo me deja el mismo conjunto de cosas que había antes —«un casco central», y no hay cascos
-no centrales en ningún lado del texto—, sólo describe: `A`. Si me parte el conjunto en dos —«los
-socios morosos», y los socios no morosos existen y se tratan distinto—, entonces el adjetivo delimita
-un alcance y estoy mirando el borde de una regla: `R`. **La pregunta que lo decide es «¿contra
-cuál?»**: si no puedo nombrar el contrario, no separa. Ver §8.
+**«¿Este adjetivo agrega o separa?» — y son dos preguntas, no una.**
+*¿Separa?* Se mira el casillero **«eje»** de la hoja del referente: si hay eje depositado, el adjetivo
+recorta, y recorta sobre el **género** de la hoja, no sobre el núcleo. «La cámara **frigorífica**», con
+una sola cámara y ningún otro equipo en el enunciado, no recorta. «Los socios **morosos**», con el
+socio al día tratado distinto, sí. *¿Agrega?* Es depósito nuevo o no lo es, y para decir que no hay que
+**señalar el depósito anterior**. `Q3 → A`; `Q1 → R` o `R/A`; `Q2 → R°`; `Q4 → T°`. Ver §8.
 
 #### Ejemplos resueltos
 
@@ -532,7 +565,8 @@ cuál?»**: si no puedo nombrar el contrario, no separa. Ver §8.
 | Obra | «una superficie determinada, en metros cuadrados» | `A` | «¿Cuál es la superficie del local?» corre, la respuesta es un número con unidad, no hay nada que rechazar |
 | Hospital | «el número de afiliado» | `A` | Valor, no cosa con ficha. Salvo que el hospital administre afiliaciones, en cuyo caso alguien lo va a ver en el paso 3 |
 | Hospital | «el médico de cabecera» | `R(estructura)` | Parece atributo del paciente, pero del otro lado hay un sustantivo del negocio. Es una atadura, y la nota dice de qué clase |
-| Aerolínea | «un vuelo de cabotaje» | `A` | El adjetivo describe… **salvo** que el texto también hable de vuelos internacionales y los trate distinto: ahí el adjetivo separa y es `A/R`. La pregunta «¿contra cuál?» decide |
+| Aerolínea | «un vuelo de cabotaje» | `A` | Sin eje en la hoja, `Q3` → `A`. **Salvo** que el texto hable también de vuelos internacionales: ahí se deposita el eje *alcance del trayecto* y el adjetivo pasa a `Q1` → `A/R`. El casillero decide |
+| Obra | «el casco **es permanente o temporal**» | `A(dominio)` | No asigna un valor: **declara los valores posibles**. Deposita en «eje» un eje con exhaustividad declarada, y arrastra las tres afirmaciones de `02` §3.9 |
 | Escuela | «la condición de regular» | `A/R` | Es un dato del alumno → `A`, y es un estado que se gana o se pierde según condiciones → `R`. Dos etiquetas en cinco segundos |
 | Taller | «la patente del vehículo» | `A` | Valor. Que sea única es otra cosa, y si el texto lo dice, ese fragmento será `R` |
 
@@ -904,7 +938,7 @@ segundos es la que evita el modelado de algo que nadie va a usar.**
 > **`?` no es «no sé». Es «no se decide con el texto que tengo delante ni con ninguno de los criterios
 > que tengo en la mano».**
 
-**Cómo se aplica.** **Pasá la compuerta.** Antes de escribir el signo, corré las tres preguntas de
+**Cómo se aplica.** **Pasá la compuerta.** Antes de escribir el signo, corré las cuatro preguntas de
 §5.2. Si alguna te da una etiqueta, esa etiqueta se escribe y el
 `?` no se pone. Si las tres pasan sin resolver, escribí `?` **y al lado la razón en tres palabras**:
 `?(dos lecturas)`, `?(término no definido)`, `?(contradice frag. 7)`. Un `?` sin razón al lado no
@@ -914,8 +948,8 @@ sirve para nada: el paso 5 no va a poder convertirlo en pregunta.
 qué? El texto no lo dice en ningún lado y no hay criterio que lo resuelva: puede ser la cuenta del
 ordenante o la del beneficiario, y la diferencia cambia el modelo. → `V ?(cuál cuenta)`. Es una
 pregunta legítima para el autor. Contra: **«central»**, que se elevó como `?` y no debía, porque el
-criterio del §8 lo resuelve en cinco segundos → `A`. Y ojo con la unidad: el `?` cayó sobre el
-adjetivo solo, no sobre «un casco central», que es `T/C`.
+criterio del §8 lo resuelve en cinco segundos mirando el casillero «eje» → `R`, cuadrante `Q1`. Y ojo
+con la unidad: el `?` cayó sobre el adjetivo solo, no sobre «un casco central», que es `T/C`.
 
 #### Es / no es
 
@@ -925,6 +959,7 @@ adjetivo solo, no sobre «un casco central», que es `T/C`.
 | Un término usado con dos sentidos distintos en el mismo párrafo | Un término que no conocés del dominio pero que el texto usa consistentemente → etiquetá igual |
 | Una contradicción entre dos fragmentos | Un fragmento que te parece mal redactado → etiquetá igual y poné `!` |
 | Un dato que hace falta para decidir y que **ningún criterio del catálogo produce** | Un agente que el texto oculta → `⟦?⟧`, que es hallazgo, no duda (§5.4) |
+| Una duda que **sobrevive a los dos tramos** de la compuerta: ni un criterio ni otro depósito de la hoja la cierran | Una duda que todavía no se contrastó contra la hoja: eso es un **pendiente**, se etiqueta con la lectura elegida y la nota `(abierta)` |
 
 #### Preguntas de reconocimiento
 
@@ -951,7 +986,7 @@ cuesta al autor lo mismo que una que sí, y devalúa a todas las demás.
 | Banco | «la operación se registra en la cuenta correspondiente» | `V ?(cuál cuenta)` | Dos lecturas, cambian el modelo, ningún criterio las desempata |
 | Escuela | «el alumno regular puede rendir» y, cuatro líneas después, «se consideran regulares los que aprobaron la cursada» | `R ?(dos sentidos de regular)` | El mismo término con dos definiciones. Es contradicción, no duda de cajón |
 | Escuela | «el legajo se archiva» | `V` | No es `?`: no sé si «archivar» es guardar o dar de baja, pero es un acto igual. **La etiqueta no depende de resolver eso** |
-| Obra | «central», dentro de «un casco central» *(el caso observado)* | `A` | No es `?`: el criterio de §8 lo resuelve. El casco es único en el discurso y no hay cascos no centrales de los cuales recortar → describe. **El fragmento entero, «un casco central», es `T/C`**: el `?` había caído sobre el adjetivo solo |
+| Obra | «central», dentro de «un casco central» *(el caso observado)* | `R` (`Q1`) | No es `?`: el criterio de §8 lo resuelve en un casillero. La hoja *instalación* tiene eje depositado —«central» ⟂ «rurales»— y género depositado —«son instalaciones»—: **recorta sobre las instalaciones, no sobre los cascos**, e informa. **El fragmento entero, «un casco central», es `T/C`**: el `?` había caído sobre el adjetivo solo |
 | Hospital | «el turno se otorga según disponibilidad» | `R ?(según qué)` | «Disponibilidad» es un criterio no escrito. La respuesta cambia el modelo: es pregunta legítima |
 | Taller | «se procede conforme al procedimiento habitual» | `V ?(cuál procedimiento)` | Remite a algo que no está en el texto. Nada lo resuelve |
 
@@ -1059,17 +1094,17 @@ La glosa original decía «no sé», y ahí está el problema: «no sé» es un 
 cualquier estado de quien etiqueta se alcanza estando cansado. La etiqueta tiene que nombrar una
 propiedad **del texto**, no del lector.
 
-> **`?` es: el fragmento no se decide con el texto que tengo delante ni con ninguno de los criterios
-> que tengo en la mano.**
+> **`?` es: el fragmento no se decide con el texto que tengo delante, ni con ninguno de los criterios
+> que tengo en la mano, ni con ningún otro depósito de la misma hoja del referente.**
 
-La segunda mitad es la compuerta. Sin ella, `?` se convierte en el desagüe del paso 2: todo lo
+La tercera parte es el segundo tramo de la compuerta, y la segunda es el primero. Sin ella, `?` se convierte en el desagüe del paso 2: todo lo
 incómodo cae ahí, el cuestionario final sale con cuarenta preguntas, y las tres que de verdad
 importaban se pierden entre las treinta y siete que cualquiera podía resolver. **El daño no es
 preguntar de más: es que preguntar de más apaga las preguntas buenas.**
 
 ### 5.2 El procedimiento de la compuerta
 
-Tres preguntas. Se corren **en orden** y la primera que resuelve, manda.
+Cuatro preguntas. Se corren **en orden** y la primera que resuelve, manda. **Un `?` sólo llega al autor después de pasarlas todas.**
 
 **Paso 1 — ¿Mi duda es entre dos etiquetas?**
 Si sí → **no es `?`.** Escribí las dos con barra y seguí. Fin.
@@ -1087,15 +1122,31 @@ acá para que no haya que ir a buscarlas; si alguna discrepa, manda §4.3.
 | ¿Saca trabajo? | Si sí, `E` |
 | ¿Es un sustantivo de acción? | `T/V` |
 | ¿Es un demostrativo que apunta a algo ya nombrado? | Anillo `°` sobre la letra que corresponda (`M°`, `T°`) |
-| ¿Es un modificador? | La jerarquía de §8: determinante → unicidad → **¿contra cuál?** → supresión → coma |
+| ¿Es un modificador? | La jerarquía de §8: determinante → unicidad en «miembros» → **¿contra cuál?**, que se mira en «género» → supresión → coma. Sale con cuadrante |
 | ¿Falta el sujeto o el agente? | `⟦ ⟧`, y si no se puede reponer, `⟦?⟧`: **hallazgo, no duda** |
 
 Si alguno resuelve → escribí esa etiqueta. Fin. **Ese `?` era un criterio no aplicado.**
 
-**Paso 3 — Si el autor me contestara, ¿cambiaría el modelo?**
+**Paso 3 — ¿Hay otro depósito en el mismo casillero que lo resuelva?**
+Es el **segundo tramo de la compuerta**, y es gratis: el primero pregunta si hay un criterio en la
+mano; éste, si hay otra parte del texto. La diferencia con buscar por el párrafo es que **se mira en un
+solo lugar**.
+
+> **Cómo se aplica.** Preguntale al fragmento de qué cosa del negocio habla y abrí esa hoja. Andá al
+> casillero donde el fragmento depositaría. ¿Hay ya otro depósito? Contrastalo: si coinciden, uno
+> confirma al otro y la duda se cierra; si uno **discrimina** al otro —una formulación es más precisa,
+> y en especial si es la operacional, la que dice qué se hace con la cosa—, **fija la lectura**; si no
+> cierran, no es duda de etiqueta sino hallazgo, y baja por la escalera de `02` §6.2.
+>
+> Si no hay segundo depósito todavía, **el `?` no es terminal: queda pendiente en la hoja**, con la
+> letra puesta bajo la lectura elegida y la nota `(abierta)` al lado. Ahí es donde lo vas a encontrar
+> cuando llegue, tres renglones después, la oración que lo resuelve.
+
+**Paso 4 — Si el autor me contestara, ¿cambiaría el modelo?**
 Si no → elegí la lectura más simple, anotala y seguí. Fin.
-Si sí → **`?` con la razón en tres palabras al lado.** Ese es un `?` legítimo y va a llegar al
-cuestionario del paso 5 con fuerza, porque va a estar rodeado de pocos hermanos.
+Si sí → **`?` con la razón en tres palabras al lado.** Ese es un `?` legítimo: pasó **las tres**
+compuertas y va a llegar al cuestionario del paso 5 con fuerza, porque va a estar rodeado de pocos
+hermanos.
 
 > **La medida del `?`, y es una cuenta que hacés vos.**
 >
@@ -1109,9 +1160,10 @@ cuestionario del paso 5 con fuerza, porque va a estar rodeado de pocos hermanos.
 > palabras. **Esto no es releer etiquetas puestas**, que §1.4 prohíbe: un `?` no es una etiqueta
 > puesta, es una decisión que quedó pendiente.
 >
-> **Anotá la cuenta final junto a la inicial** —`? 1/13 → 0/13`—. La proporción entre las dos es lo
-> único que dice si la compuerta sirvió: **si sobrevive el que levantaste, la compuerta funcionó;
-> si se caen todos, la estabas salteando.**
+> **Anotá la cuenta después de cada tramo** —`? 1/13 → 1/13 → 0/13`—: los levantados, los que
+> sobreviven a los criterios en la mano, y los que sobreviven además al contraste en la hoja. La
+> proporción es lo único que dice si la compuerta sirvió: **si sobrevive el que levantaste, la
+> compuerta funcionó; si se caen todos, la estabas salteando.**
 >
 > **Sobre qué evidencia se apoya esto, sin maquillar.** Sobre **una sola corrida**: 13 fragmentos, un
 > `?`, y ese `?` resultó resuelto por un criterio que ya estaba disponible (§6, caso 6). La única
@@ -1185,7 +1237,7 @@ declara ahora si lo que dice de la primera pasada es **testimonio directo** —e
 | 3 | **Atadura entre dos cosas del negocio** | «a cargo de un Administrador» (`02.a.5`) | `R` | **Reconstrucción, y el rótulo «a falta de algo mejor» es falso.** La `R` se asignó con doctrina: «no corta… pero sí contiene una afirmación… **por eso va `R`**. Es el caso del calificador que aporta un hecho». La mezcla en la tabla de reglas es real; la resignación, no | `R(estructura)/C` + `T` (Administrador) | La **nota `(estructura)`** (§3.6): la letra ya era correcta y le faltaba una palabra. El aporte es **notación**, no capacidad |
 | 4 | **Sujeto tácito** | «está compuesta por al menos un campo» (`01.b.2`) | `R+C` | **Reconstrucción, y «ninguna clara» es falso.** El material etiqueta `R+C`, y lo hace **dos veces, en dos dominios distintos** | `R(estructura)/C` con `⟦la estancia⟧` | Los **corchetes** (§2.2) restituyen el sujeto sin tocar la cita; la nota `(estructura)` dice de qué clase es la afirmación. El aporte es **notación** |
 | 5 | **Nominalización** | «conformación» (`01.b.5`), «la administración de los campos» | `V` en el archivo | **Reconstrucción sobre un condicional.** El §6 de la versión 1.0 decía «`T`, y el acto se pierde»; el material dice «**si lo dejás** como sustantivo se te va a términos y perdés el acto». Es una advertencia del instructor, no un hecho observado | `T/V` | La **doble etiqueta** (§1.3): la duda legítima de cinco segundos produce la anotación correcta, sin que haya que reconocer la nominalización |
-| 6 | **Adjetivo no restrictivo** | **«central»** (`02.a.4`), dentro de «un casco central» | `?` elevado al autor | **Testimonio indirecto, con la unidad corregida.** El `?` cayó sobre **«central»** sola; «un casco central» era `T+C`. El material retracta el `?`: «levanté un `?` que podía contestar con un criterio que tenía en la mano» | `A` para «central»; `T/C` para el fragmento entero | La **jerarquía generalizada** (§8): el casco es único en el discurso y no hay conjunto de contraste → describe. Era un criterio no aplicado, no una pregunta |
+| 6 | **Modificador sobre un conjunto que el núcleo no nombra** | **«central»** (`02.a.4`), dentro de «un casco central» | `?` elevado al autor | **Testimonio indirecto, con la unidad corregida.** El `?` cayó sobre **«central»** sola; «un casco central» era `T+C`. El material retracta el `?`: «levanté un `?` que podía contestar con un criterio que tenía en la mano» | `R` (`Q1`) para «central»; `T/C` para el fragmento entero | La **hoja del referente** (§8): el casillero «eje» tiene depósito —«central» ⟂ «rurales»— y el «género» dice sobre qué —*instalaciones*—. **Había criterio, y además estaba mal aplicado:** la versión 1.1 buscaba el contraste entre cascos, que es el conjunto equivocado. Sigue siendo un criterio no aplicado, no una pregunta |
 | 7 | **Agente oculto** | «se establece», «se contempla» *(sin id en la evidencia disponible)* | la columna del actor queda vacía y parece descuido | **Reconstrucción, y correcta** | `V ⟦?⟧` / `E` (sin cobrar) | La distinción **`?` contra `⟦?⟧`** (§5.4): en `V` se cobra y produce un hallazgo contable; en `E` no se cobra. **Es el mejor aporte propio del catálogo** |
 
 **El recuento honesto, que es distinto del que traía la versión 1.0.** De los siete, **ninguno
@@ -1338,7 +1390,7 @@ paso 1 devolvía **cero**.
 
 **Ya está aplicado.** La generalización **no es una propuesta de este documento**: el material
 observado ya la había decidido y fundado, y desde la versión 1.1 está escrita en el documento hermano
-—`02` §4.3, retitulada «¿Este modificador restringe o describe?», con el capítulo contenedor
+—`02` §4.3, retitulada por su función —hoy «¿Este modificador restringe? ¿e informa?»—, con el capítulo
 retitulado, el paso **P5-bis** en el procedimiento y las dos filas nuevas en la tabla de estructuras—.
 **La versión que manda es la de `02` §4.3.** Lo que sigue es el resumen que se usa desde el paso 2, y
 si discrepa con el hermano, manda el hermano.
@@ -1351,12 +1403,23 @@ Se aplican en orden y el primero que resuelve, manda.
 deverbal** y el segmento llena su casilla —«el nombre **del encargado**», «la administración **de los
 campos**»—, **no entra en la jerarquía**: no restringe ni describe, satura un argumento.
 
+**Y antes de la jerarquía corre la regla que llena el casillero «eje».** No es un indicio más: es de
+dónde sale lo que el indicio 4 va a mirar.
+
+> **Regla de depósito del eje.** Dos núcleos coordinados con modificadores de la misma clase
+> **depositan un eje** en la hoja del referente que comparten. **Cómo se aplica.** Se exigen las
+> cuatro: **C1** coordinados bajo el mismo predicado (o con elipsis verbal), **C2** los dos
+> modificadores del mismo lado de su núcleo, **C3** misma clase —adjetivo contra adjetivo—, **C4**
+> eje nombrable. *Prueba del eje:* completá «se distinguen por su ____» con un sustantivo; si sólo
+> te sale «por sus características», **no hay eje** y no se deposita. **Un caso:** «un casco
+> **central** … y varios puestos **rurales**» → eje *ubicación*, depositado. Detalle en `02` §4.3.
+
 | Orden | Indicio | Cómo decide | Vale para |
 | --- | --- | --- | --- |
 | 1 | **Posición del adjetivo** | **Antepuesto** —*un amplio casco*, *el mencionado plazo*— → **describe**. Unidireccional: **pospuesto no prueba nada** | sólo adjetivos |
 | 2 | **Determinante del antecedente** | *todo, cada, los… que, aquellos… que, sólo los, ningún* → **restringe**, casi con seguridad. Unidireccional: ***un, una, unos* no prueba que describa** | todos |
-| 3 | **Unicidad referencial** | Nombre propio, referente único en el dominio o ya identificado, posesivo identificador → **describe**: lo único no se recorta | todos |
-| 4 | **Conjunto de contraste — «¿contra cuál?»** | Nombrá, en el texto o en el dominio, **al menos un ejemplar** del que el modificador distinga. No podés → **describe**. Podés → **restringe**. Es el único que concluye en las dos direcciones, y el único que exige nombrar algo | todos |
+| 3 | **Unicidad referencial** | Se cuenta en el casillero **«miembros»** de la hoja, **no sobre la extensión del núcleo**: un solo miembro → **describe**; dos o más → no concluye | todos |
+| 4 | **Conjunto de contraste — «¿contra cuál?»** | **No se busca: se mira.** El conjunto es el casillero **«género»** de la hoja. Con género depositado → recorta, y sobre ese género. Con la hoja vacía → **el indicio pasa el turno**, que no es lo mismo que «describe» | todos |
 | 5 | **Prueba de la supresión** | Suprimí el modificador: ¿el antecedente designa el mismo conjunto? Mismo → describe; más grande → restringe. **Con un adjetivo de una palabra no concluye** | relativas, complementos |
 | 6 | **Puntuación del autor** | Entre comas → describe; sin comas → restringe. **Sólo si 1 a 5 no resolvieron**, y sólo en estructuras que admiten inciso | relativas, aposiciones, complementos |
 | 7 | **Consistencia interna del documento** | Cómo puntúa el mismo autor un caso inequívoco en otro párrafo | todos |
@@ -1373,26 +1436,33 @@ nada**. Tres contraejemplos, y dos son de este mismo catálogo:
   la ficha que la alojaba.
 - «**Un** socio con multa impaga no puede retirar ejemplares» → `R`, con indefinido.
 
-**El indicio 4 es el que resuelve los adjetivos, y no es agregado propio.** Está en el material
-observado con su nombre y su formulación —«un adjetivo restringe solo si existe un conjunto de
-contraste del cual recortar»— aplicada al mismo caso: «un casco central» → no hay otros cascos en el
-discurso, no hay de dónde recortar. Lo propio de este documento es la **formalización** y el lugar en
-el orden: **el contraste va antes que la supresión**, porque la supresión se contesta por impresión y
-con un adjetivo de una palabra resbala, mientras que el contraste obliga a *nombrar* un referente.
+**El indicio 4 es el que resuelve los adjetivos, y el acta 06 le corrigió el ámbito.** La formulación
+recibida —«un adjetivo restringe solo si existe un conjunto de contraste del cual recortar»— es
+correcta; lo que estaba mal era **dónde se buscaba ese conjunto**. Aplicada a «un casco central», la
+versión 1.1 concluía «no hay otros cascos en el discurso, no hay de dónde recortar» → describe, **y es
+falso**: hay de dónde recortar, y el conjunto no era *cascos* sino *instalaciones*, que es lo que la
+oración siguiente deposita en el casillero «género». **El conjunto contra el que un modificador recorta
+no es la extensión de su sustantivo.** Buscar «otro casco» es buscar en el lugar equivocado.
 
-**Y el resultado no es simétrico.** *Restringe* → es el **alcance** de la afirmación, no se corta.
-*Describe* → **no es inerte**: predica algo aparte. Un modificador no restrictivo nunca se descarta
-por no restringir.
+Lo propio de este documento sigue siendo la **formalización** y el lugar en el orden: **el contraste va
+antes que la supresión**, porque la supresión se contesta por impresión y con un adjetivo de una
+palabra resbala. Lo que cambia es que el contraste **ya no se busca: se mira** en la hoja.
+
+**Y el resultado no es simétrico, ni es una sola pregunta.** Son dos —*¿restringe?* y *¿informa?*— y
+salen como cuadrante. *Restringe* → es el **alcance** de la afirmación, no se corta. *No restringe* →
+**no es inerte**: predica algo aparte. Un modificador no restrictivo nunca se descarta por no
+restringir, y **«no restringe» no es «no importa»**.
 
 **Qué le toca a cada paso.**
 
 | Paso | Qué decide el modificador | Resultado |
 | --- | --- | --- |
 | 1 (corte) | Si se corta o se registra como restricción del antecedente | Corte o calificador |
-| **2 (etiqueta)** | **Describe → `A`, o `R(estructura)` si además ata dos cosas del negocio. Restringe → `R`** | La letra |
+| **2 (etiqueta)** | **El cuadrante.** `Q1 → R`, o `R/A` si la propiedad es además un dato de la cosa · `Q2 → R°` · `Q3 → A`, o `R(estructura)` si ata dos cosas del negocio · `Q4 → T°` | La letra, con el cuadrante escrito al lado |
 
 La celda del paso 2 estaba mal en la versión 1.0 —decía «si es `A` —describe— o `R`»—, y el propio
-banco de casos la refuta: «a cargo de un Administrador» **no restringe** y tampoco es `A`.
+banco de casos la refuta: «a cargo de un Administrador» **no restringe** y tampoco es `A`. La versión
+1.1 la corrigió a describe/restringe, que seguía siendo **una** pregunta; el acta 06 la parte en dos.
 
 **Qué cambió aguas arriba, dicho sin maquillar.** La versión 1.0 afirmaba que generalizar §4.3 «no
 altera ninguna decisión ya tomada» por el paso 1. **Sí la altera.** «Un lote que supere las 200
@@ -1436,7 +1506,14 @@ necesitás: volvé arriba y llevatela impresa.
    además resultó ilegítimo. Lo único que la corrida sostiene es que la compuerta hacía falta, no
    cuántos `?` son demasiados. Y hay un límite de anclaje encima: la corrida **no está transcripta ni
    versionada** en el árbol de este documento, así que §6 no es verificable desde acá.
-9. **La suficiencia de las ocho letras se decide sobre trece fragmentos**, de los cuales sólo dos son
+9. **El banco de pruebas de §6 contiene un veredicto corregido.** El caso 6 pasó de `A` a `R` (`Q1`)
+   por el acta 06: ya no es un caso de **criterio no aplicado** sino de **criterio mal aplicado**
+   —había criterio en la mano, y además se lo estaba corriendo sobre el conjunto equivocado—. Lo que
+   el caso sigue probando, que el `?` era ilegítimo, se conserva y se refuerza.
+10. **La hoja del referente no se corrió a ciegas**, y la lista de casilleros **no está declarada
+   cerrada**. La verificación que la fundó es una re-derivación sobre resultados ya conocidos, y la
+   pregunta de si hacen falta hojas de acto sigue abierta (acta 06 §7, IR-1 e IR-2).
+11. **La suficiencia de las ocho letras se decide sobre trece fragmentos**, de los cuales sólo dos son
    testimonio directo de la primera pasada, y que cubren **dos de las cuatro oraciones** del párrafo.
    La primera corrida sobre las oraciones que faltan es la prueba de esta decisión: si aparecen
    ataduras que la nota `(estructura)` no alcanza a anotar, `L` vuelve a discutirse **con datos**.
@@ -1451,6 +1528,7 @@ necesitás: volvé arriba y llevatela impresa.
 | --- | --- |
 | **Hermanos** | `02-Criterio-De-Segmentacion.md` (paso 1, produce los fragmentos), `Knowledge-Deduccion-De-Reglas-De-Negocio.md` (pasos 4 y 5, consume las tablas), `Knowledge-Icono-Y-Ancla.md` (forma de entrega de cada definición) |
 | **Fuente de los casos** | Los siete casos de §6 fueron observados en un uso real del paso 2. **El ancla es insuficiente y se declara como tal:** `../Bitacora-Editores/09-Fuente-Actividad-La-Estancia.md` contiene el **enunciado**, no la **corrida**. La corrida vive fuera del árbol de este documento, y transcribirla y versionarla es deuda abierta (§10, límite 8). Cada fila de §6 dice si lo que afirma de la primera pasada es testimonio directo o reconstrucción |
+| **Acta que lo corrige** | `../Mesa/06-Acta-Replanteo-Del-Modelo.md` (2026-09-28). De sus 37 parches, este documento recibe **14**: seis tal cual, seis con texto nuevo y dos que desaparecen (`03-g` y `03-h`, que hablaban de un producto —la pasada de recomposición— que el acta retira) |
 | **Qué es recibido y qué es formalización** | El **conjunto de contraste**, la **generalización a todo modificador** y la **formulación de la compuerta** están en el material observado: lo propio de este documento es la formalización, el orden y los puntos de entrada (§0.3). La versión 1.0 las declaraba propias, y no lo son |
 | **Ejemplos** | Todos los de §3 son propios e inventados para este documento, de banco, biblioteca, obra, hospital, escuela, municipio, aerolínea y taller. Ninguna escena se repite en más de dos fichas |
 | **Qué se propone hacia afuera** | Las tres obligaciones del paso 3 (§7.5), que **no requieren tabla nueva ni cambio de estructura**: la Tabla 3 ya tiene la columna `Especie`. La generalización de §4.3 **ya no es propuesta**: está aplicada en `02` v1.1 |
@@ -1574,5 +1652,6 @@ de desempate **se citan, no se reescriben**: la versión que manda es la de §4.
 
 | Versión | Fecha | Cambios |
 | --- | --- | --- |
+| 1.2 | 2026-09-28 | **Aplicación de los tramos 1, 3, 4 y 5 del acta** `../Mesa/06-Acta-Replanteo-Del-Modelo.md` §8.3. **El cambio de fondo:** la unidad de acumulación del método deja de ser el fragmento y pasa a ser el **referente**. **§0.1 corrige el contrato:** la tabla de términos deja de llenarse en el paso 3; se abre en el **paso 1** como **hoja del referente** —una por sustantivo del dominio— y se llena mientras se etiqueta. El paso 3 la **lee**, no la arma. El paso 2 gana una obligación que no es un paso más: además de la letra, **deposita** lo que el fragmento dice en un casillero —género, eje, miembros, momento, agente, alcance, definición—, con el número del fragmento al lado. **Tres afirmaciones falsas se retiran** (`P0`): la línea «sin conjunto de contraste, describe: `A`» de la hoja de bolsillo, el veredicto del **caso 6** del banco —«central» era `A` y es **`R`**, cuadrante `Q1`— y el párrafo de §8 que decía «no hay otros cascos → no hay de dónde recortar», que es falso: el conjunto no era *cascos* sino *instalaciones*. **El conjunto contra el que un modificador recorta no es la extensión de su sustantivo.** Con eso, el indicio 4 **deja de buscar y pasa a mirar** el casillero «género», el 3 cuenta la unicidad en «miembros», y entra la **regla de depósito del eje** (paralelismo) que llena el casillero que el 4 consulta. **La salida del paso 2 sobre un modificador deja de ser binaria:** `Q1 → R` o `R/A` · `Q2 → R°` · `Q3 → A`, o `R(estructura)` si ata dos cosas · `Q4 → T°`, y para poner `Q4` hay que **señalar el depósito anterior**. **La compuerta del `?` gana su segundo tramo** —*¿hay otro depósito en el mismo casillero que lo resuelva?*—, la recuenta de cierre gana una columna (`? n/total → m/total → k/total`) y el `?` **deja de ser terminal**: lo que no cierra queda **pendiente en la hoja**, con la nota `(abierta)`. Notación nueva, **sin ninguna letra nueva**: `A(dominio)` y `(abierta)`. El ejemplo del adjetivo que no recorta y sin embargo predica pasa a ser «la cámara **frigorífica**». Dos límites nuevos en §10. **Lo que expresamente no entra, para que nadie lo reponga:** las `AD-nn` como producto del paso 1 y las dos líneas de la hoja de bolsillo sobre ellas (`03-g` y `03-h`, que dependían de una pasada de recomposición que el acta retira), la nota `(AD)`, el registro de lecturas abiertas con sus nueve orígenes, y los signos `⟪ ⟫` y `≡` —el contraste ocurre en el casillero y no necesita signo, y §2.3 ya fundó por qué un signo nuevo se cobra en todos los fragmentos—. |
 | 1.1 | 2026-09-26 | **Aplicación del acta de la mesa** `../Mesa/05-Acta-Catalogo-De-Etiquetas.md` (cinco cuestiones, C-1 a C-5). **C-1:** `L` no se adopta; las letras siguen siendo ocho y la distinción entra como nota `R(estructura)`, con destino en la Tabla 3 del paso 3, columna `Especie`. Se retira la ficha `L` y se renumeran §3.4 a §3.8. **C-2:** las marcas se adoptan con tres reparaciones —`°` sólo para anáfora con disparador de lista cerrada, `V°` retirado por ser letra encubierta, `⟦ ⟧` con estatuto de heredada del paso 1—, el signo `!` recibe ficha (§2.4) y destinatario, y el inventario de signos se cierra en una sola tabla (§0.2) con la forma única `letra(nota)`. La regla de ampliación de §7.3 se reformula con operación y tres salidas: marca, nota o columna. **C-3:** la hoja de bolsillo pasa al frente; se adopta la regla de copia única (§0.3) y se declara el corte de la partición futura, que se ejecuta al catalogar como `Knowledge-*`, no antes. **C-4:** la jerarquía de indicios se generaliza a todo modificador, con el indicio del determinante corregido a **unidireccional** —el indefinido no prueba nada, y la formulación anterior era un P0—, el filtro argumento/adjunto y el indicio de la posición del adjetivo; el parche se aplica en `02` §4.3 y §8 pasa a resumir, no a proponer. **C-5:** el umbral de `?` no se adopta; se reemplaza por la recuenta obligatoria al cierre y el par `? levantados / ? sobrevividos`, con la base declarada (n=1) y sin número hasta cinco corridas. Además: se rehace el banco de casos de §6 —de siete acusaciones de carencia sobreviven tres, y las filas declaran testimonio directo contra reconstrucción—, se corrigen los estatutos de procedencia de §0.3 y §11.1 —conjunto de contraste, generalización y compuerta son recibidos—, se reescribe la condición de terminación de §1.4, se retiran los números de ritmo sin medición y se corrige la aritmética y el alcance de §11.2. |
 | 1.0 | 2026-09-26 | Emisión inicial. Desarrollo de la tabla de ocho etiquetas en catálogo de reconocimiento. Se propone la etiqueta `L` (liga) y se rechazan otras cuatro candidatas con criterio explícito; se introducen las marcas `°` y `⟦ ⟧`/`⟦?⟧`; se define `?` con su compuerta; se declara y sostiene la ley del paso sucio con la regla de los cinco segundos; se generaliza la jerarquía de indicios a todo modificador y se agrega el indicio del conjunto de contraste. Los siete casos observados quedan resueltos, con un residuo declarado en el caso 3 que se traslada como obligación al paso 3. |

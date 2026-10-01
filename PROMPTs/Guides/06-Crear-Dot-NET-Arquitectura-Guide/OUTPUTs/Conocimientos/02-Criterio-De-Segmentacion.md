@@ -1,6 +1,6 @@
 # 02 — Criterio de segmentación: cómo se parte un párrafo de negocio en afirmaciones atómicas
 
-**Fecha:** 2026-09-26
+**Fecha:** 2026-09-28
 **Rol:** gramática del español aplicada al análisis de textos normativos y técnicos.
 **Qué es:** el **criterio de corte** —enunciado formal, tabla de estructuras, casos límite, reglas de
 puntuación, procedimiento y catálogo de errores— con el que una persona con lápiz o un agente de
@@ -34,8 +34,9 @@ pedazo tiene dueño.
   - [2.5 Inserciones, designaciones, modalidad y voz](#25-inserciones-designaciones-modalidad-y-voz)
   - [2.6 Resumen de cambios sobre la tabla de doce](#26-resumen-de-cambios-sobre-la-tabla-de-doce)
 - [3. Casos límite](#3-casos-límite)
+  - [3.9 La predicación de dominio cerrado](#39-la-predicación-de-dominio-cerrado)
 - [4. Modificadores y puntuación: qué restringe, qué describe y qué no prueba nada](#4-modificadores-y-puntuación-qué-restringe-qué-describe-y-qué-no-prueba-nada)
-  - [4.3 ¿Este modificador restringe o describe?](#43-este-modificador-restringe-o-describe)
+  - [4.3 ¿Este modificador restringe? ¿e informa?](#43-este-modificador-restringe-e-informa)
 - [5. Procedimiento de segmentación](#5-procedimiento-de-segmentación)
 - [6. Falsos cortes y falsas uniones](#6-falsos-cortes-y-falsas-uniones)
 - [7. Ejemplo integrado](#7-ejemplo-integrado)
@@ -109,6 +110,12 @@ invención de este documento.
 | La jerarquía de indicios para desempatar **modificadores** (§4.3) | **Criterio propio**, salvo dos filas: el **conjunto de contraste** (indicio 4) viene del material observado —«un adjetivo restringe solo si existe un conjunto de contraste del cual recortar»— y acá se formaliza y se ubica en el orden; la **posición del adjetivo** (indicio 1) es doctrina corriente enunciada con mis palabras, sin cotejo |
 | Que la distinción restrictivo / no restrictivo es una propiedad de la **relación de modificación** y no de la relativa | **Doctrina corriente**, enunciada con mis palabras. Sin comillas ni número de sección |
 | El **filtro argumento / adjunto** antes de la jerarquía, y el paso P5-bis que la manda correr | **Criterio propio** |
+| La **hoja del referente** y el depósito por casillero (P0, P10, §4.3) | **Recibido** del acta `../Mesa/06-Acta-Replanteo-Del-Modelo.md` §4, que a su vez la reconoce como la ficha de término de `Knowledge-Deduccion-De-Reglas-De-Negocio.md` §5.2 adelantada al paso 1. Lo propio de este documento es **dónde se deposita** dentro del procedimiento |
+| Las **dos preguntas y los cuatro cuadrantes** `(restringe?, informa?)`, con sus tres reglas antifraude | **Recibido** de `04-Afirmacion-Distribuida-Y-Modificadores.md` §3, folio sellado y no vigente. Se aplica acá, que es donde se ejecuta |
+| La **regla de depósito del eje** (paralelismo), con C1–C4, la prueba del eje y los seis NV | **Recibido** de `04` §2, reubicado por el acta 06: deja de ser un indicio de la jerarquía y pasa a ser la regla que llena el casillero «eje» |
+| La **predicación de dominio cerrado** (§3.9, fila 39) y sus tres afirmaciones D-1 / D-2 / D-3 | **Recibido** de `04` §4 |
+| La **escalera de diagnóstico** E1 / E2 / E3 y la premisa faltante (§6.2) | **Recibido** de `04` §13.6 y §13.7 |
+| La **lectura de corrido** de P0 | **Recibida** de `04` §6.2 —donde era el primer paso de una pasada final de recomposición— y **mudada al principio** por el acta 06 §2.4: leer antes de cortar, en vez de deshacer la partición después |
 | El procedimiento en pasos y el criterio de corte (§5) | **Criterio propio** |
 | El catálogo de falsos cortes y falsas uniones (§6) | **Criterio propio** |
 | Todos los ejemplos | **Propios**, inventados para este documento |
@@ -284,7 +291,7 @@ Todos los ejemplos son propios, de dominio agropecuario o administrativo.
 ### 2.3 Subordinadas de relativo (adjetivas)
 
 La relativa es **un modificador más**: quien decide si corta o no es la jerarquía de
-[§4.3, «¿Este modificador restringe o describe?»](#43-este-modificador-restringe-o-describe), que
+[§4.3, «¿Este modificador restringe? ¿e informa?»](#43-este-modificador-restringe-e-informa), que
 vale igual para adjetivos, complementos preposicionales y aposiciones. Las filas 16 a 18 son el caso
 particular de esa jerarquía aplicado a las relativas.
 
@@ -321,15 +328,16 @@ particular de esa jerarquía aplicado a las relativas.
 | 34 | `+` | **Pasiva perifrástica, pasiva refleja e impersonal con «se»** | es aprobado (por…), se aprueba, se exige, se considera | **NO** | Una sola predicación. Pero **obliga a un registro**: la pasiva sin complemento agente y el impersonal con «se» **ocultan al responsable**, y en texto normativo eso es el hueco más frecuente. «Se aprueba la subdivisión» → A + **hueco: ¿quién aprueba?**. Regla operativa: toda A cuyo agente se restituya con `?` entra al inventario de huecos |
 | 35 | `+` | **Nominalización deverbal** | el alta, la baja, la administración, la conformación, el registro, la habilitación | **NO** por sí sola | No corta, pero **hay que desnominalizar**: el sustantivo esconde una predicación con sus huecos. «La administración de los campos consiste en el alta de los mismos» → desnominalizado: *⟦alguien?⟧ da de alta ⟦un campo⟧*. Puede revelar una afirmación nueva y casi siempre revela un hueco de agente (§3.5) |
 | 36 | `+` | **Oración sin verbo** (nominal, rótulo, ficha, celda de tabla) | «Plazo: 30 días corridos.», títulos con dos puntos, filas de tabla | **SÍ** | Es afirmación aunque no tenga verbo. Se restituye el verbo y se segmenta: «Plazo de inscripción: treinta días corridos» → A: *⟦el plazo de inscripción es de⟧ treinta días corridos*. Contradice de frente el requisito de «verbo conjugado» (falla F1) |
-| 37 | `+` | **Adjetivo modificador** de un sustantivo del dominio | adjetivo antepuesto o pospuesto, sin coma ni verbo: «un casco **central**», «un socio **moroso**» | **NO** | Nunca corta, y **nunca se descarta**. Se resuelve con **§4.3**: restringe → `⟨C-restr⟩`; describe → se queda con el término y su cualidad va al glosario. Es la estructura que la versión 1.0 no trataba, y la que produjo el `?` observado |
+| 37 | `+` | **Adjetivo modificador** de un sustantivo del dominio | adjetivo antepuesto o pospuesto, sin coma ni verbo: «un casco **central**», «un socio **moroso**» | **NO** | Nunca corta, y **nunca se descarta**. Se resuelve con **§4.3** y **sale con cuadrante escrito, `Q1` a `Q4`**: las dos preguntas son ¿restringe? y ¿informa?, y las dos se contestan mirando la hoja del referente. Es la estructura que la versión 1.0 no trataba, y la que produjo el `?` observado |
 | 38 | `+` | **Complemento preposicional adjunto** de un sustantivo | *de, a cargo de, a nombre de, perteneciente a, bajo la dirección de, provisto por*, colgando de un sustantivo | **NO** | Primero el **filtro argumento / adjunto** de §4.3: si el núcleo es relacional o deverbal y el segmento llena su casilla —«el nombre **del encargado**»—, no entra en la jerarquía. Si entra: restringe → `⟨C-restr⟩`; describe → **predica igual**, y la atadura va al inventario de relaciones |
+| 39 | `+` | **Predicación de dominio cerrado** | «es X o Y», «puede ser X, Y o Z», «se clasifican en…», con sujeto genérico y valores incompatibles | **NO** | Una sola A, de especie **restricción de dominio**: a diferencia de una definición, **pasa P-3** —un ejemplar sin ninguno de los valores la viola—. Produce un **atributo con dominio enumerado** al glosario y deposita en el casillero «eje» un eje **con exhaustividad declarada**. Arrastra tres afirmaciones con estatutos distintos: **exhaustividad** `Letra`, **exclusividad** `?` hasta resolver §3.3, **clausura** `Intención` más pregunta obligatoria salvo marca explícita («únicamente», «sólo», «dos categorías»). Ver §3.9 |
 
 ### 2.6 Resumen de cambios sobre la tabla de doce
 
-**38 filas en total**, repartidas así: **6 se conservan sin cambio** (disyuntiva, especificativa,
+**39 filas en total**, repartidas así: **6 se conservan sin cambio** (disyuntiva, especificativa,
 temporal, condicional, causal/final, aposición explicativa), **9 son descendientes revisadas de las
-otras 6 filas vigentes** —dos de ellas se partieron en varias— y **23 son nuevas**, contando las dos
-del grupo nominal que esta versión agrega (37 y 38). Las doce vigentes quedan todas cubiertas:
+otras 6 filas vigentes** —dos de ellas se partieron en varias— y **24 son nuevas**, contando las dos
+del grupo nominal (37 y 38) y la del dominio cerrado (39). Las doce vigentes quedan todas cubiertas:
 6 intactas y 6 reescritas o desdobladas.
 
 Las revisiones no son de redacción: **cambian el resultado del corte**.
@@ -386,6 +394,12 @@ Con la puntuación: relativa explicativa → cortaría en dos afirmaciones, y un
 relativa **restringe** y la regla vale sólo para los grandes. La diferencia entre las dos lecturas es
 el alcance de una regla de negocio: no es un detalle de estilo.
 
+**Y toda decisión tomada por un indicio derrotable deja marca.** Cuando lo que decide es la
+puntuación, la consistencia del autor o la regla del error barato, se anota **en una línea** la lectura
+elegida **y la derrotada**, y la derrotada queda pendiente en la hoja del referente. Es una línea por
+decisión, y es la información que hoy se pierde entera: una lectura que nadie anotó no se puede
+recuperar cuando tres renglones después aparece lo que la habría fijado.
+
 **Qué gana.** En un texto normativo redactado con apuro, **gana el sentido; la puntuación es indicio
 derrotable.** La razón no es gramatical sino de riesgo: leer explicativa una relativa que era
 especificativa produce dos daños a la vez —una afirmación universal falsa y una regla con el alcance
@@ -393,8 +407,9 @@ inflado—, mientras que leer especificativa una que era explicativa produce un 
 regla con un calificador de más, que la lectura del autor corrige. Se elige el error barato.
 
 **Procedimiento, en este orden** (§4.3 lo desarrolla, y es el que manda). Para una relativa, los
-indicios que corren son: **determinante del antecedente → unicidad referencial → conjunto de
-contraste («¿contra cuál?») → supresión → puntuación → consistencia del autor**; si nada desempata,
+indicios que corren son: **determinante del antecedente → paralelismo, si los núcleos están
+coordinados → unicidad referencial, contada en el casillero «miembros» → conjunto de contraste, que se
+mira en el casillero «género» → supresión → puntuación → consistencia del autor**; si nada desempata,
 **especificativa y `?`**. El indicio de la posición del adjetivo no se aplica acá porque es sólo para
 adjetivos. **Y ojo con el determinante: es unidireccional.** «Los… que» pide restricción, pero «un,
 una, unos» **no prueba que la relativa sea explicativa**: «un lote que supere las 200 hectáreas se
@@ -519,6 +534,45 @@ versión encubierta —la modalidad deóntica con **paciente en posición de suj
 caro de todos los que produce esta clase de prosa, porque el software termina inventando un
 responsable.
 
+### 3.9 La predicación de dominio cerrado
+
+> «El casco **es permanente o temporal**» no es «el casco **es central**». La segunda le pone **un
+> valor** a un referente; la primera **declara los valores posibles** de una propiedad de la clase.
+> Una es un dato de una fila; la otra es una decisión sobre la forma de una columna.
+>
+> **Cómo se aplica.** Tres señales bastan: **sujeto genérico o de clase** —«el casco», «toda
+> parcela»—, **disyunción de adjetivos bajo cópula o verbo de clasificación** —«es X o Y», «se
+> clasifican en X e Y»— y **ausencia de consecuencia** —la oración no dice qué pasa con cada valor—.
+> Confirman la **incompatibilidad entre los valores** sobre un mismo individuo y la **ausencia de
+> acto**. **Señal negativa fuerte:** la copulativa. «El beneficio es nominal **e** intransferible» son
+> dos atribuciones acumuladas; el dominio cerrado pide **disyunción**.
+>
+> **La prueba que lo separa de la definición** es la de la violación (P-3, §1.4), y acá concluye al
+> revés: una definición no se puede incumplir; un dominio cerrado **sí** —un casco que no sea ni
+> permanente ni temporal viola la oración—. Por eso **es una afirmación**, de especie *restricción de
+> dominio*, y va al catálogo además de al glosario. Contra la cardinalidad (§3.7 y fila 22): el
+> dominio cuenta **valores de una propiedad**, no ejemplares de una cosa.
+
+**Las tres afirmaciones que arrastra, con estatutos distintos.** Es el punto delicado del apartado.
+
+| | Afirmación | Enunciado | Rótulo | Por qué |
+| --- | --- | --- | --- | --- |
+| **D-1** | **Exhaustividad** | Todo casco tiene alguno de los valores | **`Letra`** | Está dicho: «el casco **es** permanente o temporal» afirma que es uno de los dos |
+| **D-2** | **Exclusividad** | Ningún casco tiene dos a la vez | **`?`** hasta resolver | Depende de si el «o» es inclusivo o exclusivo: se resuelve con §3.3, y si no desempata se pregunta |
+| **D-3** | **Clausura** | No hay un tercer valor | **`Intención`**, salvo marca explícita | El texto enumera, y enumerar **no es** declarar que no hay más. Es la trampa del apartado |
+
+> **Regla de la clausura.** Se registra como `Letra` **sólo si el texto la marca** —«únicamente»,
+> «sólo puede ser», «se clasifican en **dos** categorías», «no se admiten otras»—. Sin marca sale como
+> `Intención` **y con pregunta obligatoria al autor**: *¿la lista de valores es cerrada?* Es la misma
+> disciplina que la fila 10 impone a las enumeraciones. **Si después aparece un tercer valor**, el
+> daño depende de esto: registrada como `Intención` con pregunta, daño cero; como `Letra`, daño real
+> y evitable.
+
+**Qué deposita y con qué sale.** En la hoja del referente, un eje **con exhaustividad declarada** en el
+casillero «eje», que es lo que lo distingue de un eje común. En la tabla de estructuras, la **fila 39**.
+En `03`, la nota **`A(dominio)`** —la letra es `A`; la nota no rutea y no se crea ninguna letra nueva—.
+Cruzarlo con §3.3 (inclusivo / exclusivo) y con la fila 10 (listas cerradas).
+
 ---
 
 ## 4. Modificadores y puntuación: qué restringe, qué describe y qué no prueba nada
@@ -530,8 +584,10 @@ Vale para todo lo que cuelgue de un sustantivo —adjetivos, complementos prepos
 aposiciones—, y estaba escondida bajo un título de puntuación, que es el lugar donde nadie la busca
 cuando el problema es un adjetivo.
 
-> **Si lo que tenés delante es un modificador y no sabés si restringe o describe, andá directo a
-> [§4.3](#43-este-modificador-restringe-o-describe).** La puntuación entra recién en sexto lugar.
+> **Si lo que tenés delante es un modificador, andá directo a
+> [§4.3](#43-este-modificador-restringe-e-informa).** Son **dos** preguntas, no una —¿restringe? ¿e
+> informa?—, se contestan mirando la **hoja del referente** (`Knowledge-Deduccion-De-Reglas-De-Negocio.md`
+> §5.2) y salen con un cuadrante escrito. La puntuación entra recién en sexto lugar.
 
 ### 4.1 Qué dice la norma y con qué estatuto lo digo
 
@@ -563,13 +619,14 @@ Hay una quinta, menos frecuente y más grave: **el punto que falta**. Dos oracio
 ni puntuación («El padrón se cierra el 30 de junio se publica el 15 de julio»). Se detecta porque
 aparecen dos verbos en forma personal sin nada que los relacione: es yuxtaposición y **corta**.
 
-### 4.3 ¿Este modificador restringe o describe?
+### 4.3 ¿Este modificador restringe? ¿e informa?
 
 **Criterio propio.** Vale para **todo lo que cuelgue de un sustantivo**: relativas, adjetivos,
 complementos preposicionales y aposiciones. La distinción restrictivo / no restrictivo no es una
 propiedad de la relativa: es una propiedad de la **relación de modificación** *(doctrina corriente,
 sin cotejo)*. Se aplican en orden y **el primero que resuelve, manda**. La puntuación entra recién
-en sexto lugar.
+en sexto lugar. **Antes que todos corre la regla de depósito del eje**, redactada debajo de la tabla:
+no es un indicio, es de dónde sale lo que el indicio 4 va a mirar.
 
 **Antes de empezar: ¿es modificador o es argumento?** Si el núcleo es un sustantivo **relacional o
 deverbal** y el segmento llena su casilla —«el nombre **del encargado**», «la administración **de los
@@ -581,24 +638,102 @@ que se le puede **sacar** al núcleo dejándolo en pie.
 | --- | --- | --- | --- | --- |
 | 1 | **Posición del adjetivo** | **Antepuesto** al sustantivo —*un amplio casco*, *el mencionado plazo*, *la citada parcela*— → **describe**. Unidireccional: **pospuesto no prueba nada** | sólo adjetivos | Nuevo. Doctrina corriente sobre la posición del adjetivo, sin cotejo |
 | 2 | **Determinante del antecedente** | *todo, cada, los… que, aquellos… que, sólo los, ningún* → **restringe**, casi con seguridad: el determinante universal pide restricción. Unidireccional: ***un, una, unos* no prueba que describa** —«un socio moroso no puede retirar ejemplares» restringe bajo indefinido— | todos | Del §4.3 original, con su alcance explicitado |
-| 3 | **Unicidad referencial** | Nombre propio, referente único en el dominio o ya identificado, posesivo identificador → **describe**: lo único no se recorta | todos | Del §4.3 original |
-| 4 | **Conjunto de contraste — «¿contra cuál?»** | Nombrá, en el texto o en el dominio, **al menos un ejemplar** del que el modificador distinga. No podés nombrarlo → **describe**. Podés → **restringe**. Es el único indicio que concluye en las dos direcciones, y el único que exige nombrar algo | todos | Del material observado, formalizado acá |
+| 3 | **Unicidad referencial** | Se cuenta en el casillero **«miembros»** de la hoja del referente, **no sobre la extensión del núcleo**: un solo miembro → **describe**; dos o más → no concluye. Nombre propio y posesivo identificador siguen valiendo como señal de hoja de un solo miembro | todos | Del §4.3 original, con la unicidad reubicada en la hoja |
+| 4 | **Conjunto de contraste — «¿contra cuál?»** | **No se busca: se mira.** El conjunto de referencia **es el casillero «género»** de la hoja del referente. Con género depositado → el modificador **restringe**, y restringe sobre ese género, no sobre el núcleo. Con la hoja vacía → no hay conjunto y **el indicio pasa el turno**, que no es lo mismo que «describe» | todos | Del material observado; reubicado en la hoja por el acta 06 §4 |
 | 5 | **Prueba de la supresión** | Suprimí el modificador: ¿el antecedente designa el mismo conjunto? Mismo → describe; más grande → restringe. **Con un adjetivo de una palabra no concluye**: úsese con relativas y complementos largos | relativas, complementos | Del §4.3 original, con su límite declarado |
 | 6 | **Puntuación del autor** | Entre comas → describe; sin comas → restringe. **Sólo si 1 a 5 no resolvieron, y sólo en estructuras que admiten inciso**. Un adjetivo pospuesto sin comas está en su posición no marcada: no informa | relativas, aposiciones, complementos | Del §4.3 original, con su límite declarado |
 | 7 | **Consistencia interna del documento** | Cómo puntúa el mismo autor un caso inequívoco en otro párrafo. Puntúa bien → el 6 sube de valor; puntúa mal → el 6 se descarta | todos | Del §4.3 original |
-| 8 | **Regla de cierre** | Si nada resolvió: **restringe, no se corta, se marca `?`**. Es el error barato (§3.2) | todos | Del §4.3 original |
+| 8 | **Regla de cierre** | Si nada resolvió: **restringe, no se corta, se marca `?`**. Es el error barato (§3.2). **Y el `?` no es terminal:** queda **pendiente en la hoja** del referente, con las dos lecturas escritas, y se cierra solo si un depósito posterior en el mismo casillero lo resuelve | todos | Del §4.3 original, con la segunda compuerta del acta 06 |
 
-**Y no es simétrico.**
-**Restringe** → `⟨C-restr⟩`: es el **alcance** de la afirmación, no se corta.
-**Describe** → **no es inerte**: predica algo aparte. Relativa explicativa → **corta** con restitución
-del antecedente (fila 16). Adjetivo o complemento → se queda con el término, pero **aporta un hecho
-propio** —una cualidad, o una atadura con otra cosa del negocio— y va al glosario o al inventario de
-relaciones. Un modificador no restrictivo nunca se descarta por no restringir.
+**El paralelismo: de dónde sale un eje.** No es un indicio más de la jerarquía; es la **regla que
+deposita** en el casillero «eje» de la hoja, y por eso corre antes que la jerarquía entera.
 
-> **Adjetivo, no restrictivo.** «se establece un casco **central**». Indicio 1: pospuesto, no concluye.
-> Indicio 2: indefinido, **no prueba nada**. Indicio 3: el discurso trata el casco como único →
-> **describe**. Confirma el 4: ¿central contra cuál? No hay cascos no centrales en ninguna parte.
-> *La supresión no se usa: con un adjetivo de una palabra resbala.*
+> **Regla de depósito del eje.** Dos núcleos coordinados con modificadores de la misma clase
+> **depositan un eje** en la hoja del referente que comparten. Se exigen las **cuatro** condiciones;
+> con tres, no se deposita.
+>
+> **Cómo se aplica.** **C1 coordinación real** —los dos núcleos están coordinados o yuxtapuestos bajo
+> el mismo predicado, o bajo predicados con elipsis verbal (fila 3)—. **C2 isomorfía de posición**
+> —los dos modificadores del mismo lado de su núcleo—. **C3 misma clase** —adjetivo contra adjetivo,
+> complemento contra complemento, relativa contra relativa—. **C4 eje nombrable** —se puede nombrar
+> en una palabra lo que los opone: centro/periferia, alta/baja, propio/tercerizado—. Cumplidas las
+> cuatro, escribí en el casillero «eje»: `← ⟨id⟩ «mod-1» ⟂ «mod-2»`, con el nombre del eje.
+>
+> **La prueba del eje, que es la que hace el trabajo.** Escribí *«se distinguen por su ____»* y
+> completá con un sustantivo. *Se distinguen por su **ubicación*** → hay eje. Si sólo podés completar
+> con «por sus características» o «por cómo son», **no hay eje** y no se deposita.
+>
+> **Un caso.** «se establece un casco **central** … y varios puestos **rurales**»: C1 sí —los dos bajo
+> «se establece»—, C2 sí —los dos pospuestos—, C3 sí —adjetivo contra adjetivo—, C4 sí —*ubicación*—.
+> Se deposita el eje, y con el eje depositado «central» restringe.
+
+**Seis casos en que no se deposita**, y en ninguno eso significa que el modificador describa: significa
+que el casillero «eje» sigue vacío y hay que seguir bajando por la jerarquía.
+
+| # | Caso | Ejemplo | Por qué |
+| --- | --- | --- | --- |
+| **NV-1** | **Coordinación de conveniencia** | «Se asignan un coordinador administrativo y dos vehículos livianos» | Los núcleos no son del mismo género: no hay hoja común de la que recortar. Falla C4 |
+| **NV-2** | **Modificadores del mismo polo** | «Se habilitan el acceso principal y la rampa principal» | El mismo adjetivo en los dos: no se oponen entre sí. Falla C4 |
+| **NV-3** | **Ejes distintos** | «Se transportan residuos sólidos y agua potable» | *Sólido* opone a líquido; *potable*, a no potable. Son dos ejes, no dos polos de uno. Falla C4. Los dos siguen restringiendo, cada uno por su cuenta |
+| **NV-4** | **Paralelismo sólo tipográfico** | Dos viñetas alineadas: «• turnos matutinos» / «• turnos con recargo» | El formato alinea, la sintaxis no coordina bajo un predicado. Falla C1, y además las clases difieren (C3) |
+| **NV-5** | **Uno de los dos es argumento** | «Se convoca al jefe de turno y al inspector externo» | *De turno* satura la casilla de *jefe*: el filtro argumento / adjunto lo saca antes. Falla C3 |
+| **NV-6** | **Serie rota** | «Se registran las bajas voluntarias, las bajas por sanción y las bajas» | El miembro sin modificador delata que la lista no es una partición. Se marca `!` y se eleva |
+
+**Y no es simétrico: son dos preguntas, no una.**
+
+> **Pregunta 1 — ¿restringe?** *¿Recorta el género de la hoja?* **Cómo se aplica.** Mirá el casillero
+> «eje». Con eje depositado, restringe, y restringe sobre el **género** de la hoja. La prueba de la
+> supresión se corre **sobre el género, no sobre la extensión del núcleo**: ésa es la corrección que
+> hace que ahora sí concluya con adjetivos de una palabra, que era el límite declarado del indicio 5.
+>
+> **Pregunta 2 — ¿informa?** *¿Aporta un hecho del negocio que no esté ya depositado?* **Cómo se
+> aplica.** Escribí la pregunta del negocio que el modificador contesta —*«¿cuál de las instalaciones
+> es la central?»*—. Si la respuesta no estaba disponible sin él, **informa**. **Contraprueba
+> obligatoria para decir que NO: señalá el depósito anterior** donde la propiedad ya estaba dicha —el
+> casillero de la hoja, o la definición en el glosario—. **Si no podés señalarlo, informa.**
+
+| # | ¿Restringe? | ¿Informa? | Qué es | Marca acá | Letra en `03` | Destino |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Q1** | **Sí** | **Sí** | **Restrictivo informativo.** Recorta, y además introduce la propiedad por la que recorta | `⟨C-restr⟩` **más** el hecho registrado aparte | `R`, o `R/A` si la propiedad es un dato de la cosa | Alcance de la afirmación **y** la propiedad al glosario como atributo nuevo |
+| **Q2** | **Sí** | **No** | **Restrictivo por término ya definido.** Recorta usando una propiedad que el glosario o un depósito anterior ya fijaron | `⟨C-restr⟩` | `R°` | Alcance. **No abre fila nueva**: es segunda mención |
+| **Q3** | **No** | **Sí** | **Predicativo no restrictivo.** No recorta y sin embargo afirma algo del negocio | **No** abre `C-restr`. Se registra como hecho propio colgado del término | `A`, o `R(estructura)` si lo que aporta es una atadura entre dos cosas | Glosario —si es cualidad— o inventario de relaciones —si es atadura—, **y depósito en la hoja** |
+| **Q4** | **No** | **No** | **Epíteto.** Ni recorta ni aporta | Nada. Se queda con el término | `T°` sobre el fragmento entero | Nada, salvo la constancia de que se lo evaluó |
+
+**Tres reglas de uso, y las tres son antifraude.**
+
+1. **Q4 se declara, no se supone.** Para poner Q4 hay que **señalar el depósito anterior**. Sin eso, el
+   cuadrante es Q3.
+2. **Q3 no es un cajón de descarte, es un cajón de producción.** Todo Q3 deja un hecho escrito en algún
+   inventario **y un depósito en la hoja**. Un Q3 que no produjo ninguna línea es un Q4 mal declarado.
+3. **El cuadrante se escribe en la ficha.** Se anota `Q1`…`Q4` junto al modificador: un modificador sin
+   cuadrante es lo mismo que un tramo sin destino, se pierde en silencio.
+
+**Y sigue sin ser simétrico.** **Restringe** → `⟨C-restr⟩`: es el **alcance** de la afirmación, no se
+corta. **Describe** → **no es inerte**: predica algo aparte. Relativa explicativa → **corta** con
+restitución del antecedente (fila 16). Adjetivo o complemento → se queda con el término, pero **aporta
+un hecho propio** y va al glosario o al inventario de relaciones. Un modificador no restrictivo nunca
+se descarta por no restringir.
+
+> **Adjetivo restrictivo sobre un conjunto que el núcleo no nombra.** «se establece un casco
+> **central** … y varios puestos **rurales**». Abrí la hoja del referente *instalación*. El casillero
+> **género** recibe un depósito de la oración siguiente: «tanto el casco como el puesto **son
+> instalaciones**». El casillero **eje** recibe uno de esta misma oración: dos núcleos coordinados
+> bajo «se establece», dos adjetivos pospuestos, eje nombrable *ubicación*. Con el eje depositado,
+> «central» **restringe**, y restringe sobre *instalaciones* —no sobre cascos—. ¿Informa? Para decir
+> que no, hay que señalar el depósito anterior donde ya estuviera dicho que el casco es el central, y
+> no hay ninguno: **informa**. → **Q1**, `⟨C-restr⟩`. **La versión 1.1 daba este caso por «describe»,
+> y era la unicidad del núcleo juzgada como si el núcleo fuera el conjunto.**
+>
+> **Adjetivo que no recorta y sin embargo predica —Q3.** «La cámara **frigorífica** se ubica en el
+> sector de despacho.» Hay una sola cámara en el enunciado y ningún otro equipo con el que
+> contrastar: el casillero «eje» está vacío, no recorta. Pero *frigorífica* dice qué clase de cosa es
+> —condiciona temperatura, mantenimiento y habilitación—: **informa**. → **Q3**, nada de `C-restr`,
+> la cualidad al glosario y el depósito en el casillero «género». Y queda pendiente: si más adelante
+> el texto habla de «los equipos», *frigorífica* se vuelve restrictiva.
+>
+> **Epíteto, Q4, y sólo porque se puede señalar dónde estaba.** «Se exige la firma **manuscrita** del
+> interesado», en un documento cuyo glosario ya dice «*firma*: trazo manuscrito del titular». Se
+> exhibe el depósito anterior → `T°`, sin línea nueva. **Si el glosario no dijera eso, sería Q1.**
 >
 > **Adjetivo bajo indefinido, restrictivo —el caso que el determinante no resuelve.** «Un socio
 > **moroso** no puede retirar ejemplares.» Indicios 1 y 2 no concluyen. Indicio 4: ¿moroso contra cuál?
@@ -639,10 +774,18 @@ Doce pasos, ordenados **de lo más visible a lo más sutil**. El orden no es dec
 el texto en condiciones para el siguiente, y saltear uno hace fallar a los de abajo. Sirve con lápiz
 —las marcas son las de §0.4— y sirve como algoritmo.
 
-### P0. Copia de trabajo
+### P0. Leer de corrido, copiar y numerar
 
-Copiar el párrafo. **Nunca se escribe sobre la fuente.** Numerar las oraciones ortográficas —las que
-van de punto a punto— como O1, O2… Todo lo que sigue se hace por oración ortográfica.
+**Leer el párrafo entero, una sola vez, antes de cortar nada.** El propósito de la lectura no es
+encontrar nada: es **formar los conceptos antes de partir el texto**, para cortar sobre conceptos ya
+formados y no al revés. Es lo que una persona hace sin que se lo digan, y el único paso de esta lista
+que no produce una marca.
+
+De esa lectura salen las **hojas del referente**: una por cada sustantivo del dominio que el párrafo
+nombre (`Knowledge-Deduccion-De-Reglas-De-Negocio.md` §5.2). Se abren vacías y se llenan en P10.
+
+Después: copiar el párrafo —**nunca se escribe sobre la fuente**— y numerar las oraciones ortográficas
+—las que van de punto a punto— como O1, O2… Todo lo que sigue se hace por oración ortográfica.
 
 ### P1. Cortar por la puntuación fuerte
 
@@ -688,9 +831,14 @@ Para **cada adjetivo, complemento preposicional o aposición que cuelgue de un s
 dominio**: primero el **filtro argumento / adjunto** —si el núcleo es relacional o deverbal y el
 segmento llena su casilla, no entra—, y después la jerarquía de §4.3.
 
-- **Restringe** → `⟨C-restr⟩`. No corta.
-- **Describe** → se queda con el término, **y se registra lo que aporta**: la cualidad al glosario, la
-  atadura con otra cosa del negocio al inventario de relaciones. No es inerte.
+Sale con **cuadrante escrito**, `Q1` a `Q4`:
+
+- **Q1** restringe e informa → `⟨C-restr⟩` **y** la propiedad al glosario como atributo nuevo.
+- **Q2** restringe sin informar → `⟨C-restr⟩`. No abre fila nueva: es segunda mención.
+- **Q3** no restringe e informa → no abre `C-restr`, **y se registra lo que aporta**: la cualidad al
+  glosario, la atadura con otra cosa del negocio al inventario de relaciones. No es inerte.
+- **Q4** epíteto → nada, y sólo se declara **señalando el depósito anterior** donde la propiedad ya
+  estaba dicha. Si no se puede señalar, es Q3.
 
 Va acá, pegado a P5, porque es la misma decisión sobre otra estructura: la relativa es un modificador
 más. Saltear este paso es el defecto que la versión 1.0 tenía medido —la jerarquía existía, resolvía
@@ -721,10 +869,20 @@ calificador, para confirmar la clase. Deshacer todo corte que P-3 rechace.
 
 ### P10. Cierre de cobertura
 
-Recorrer el párrafo **palabra por palabra** y verificar que cada tramo está asignado a exactamente uno
-de estos destinos: afirmación, calificador de una afirmación, glosario, inventario de actos, inventario
-de huecos. **Residuo cero.** Un tramo sin destino es siempre un error de análisis, nunca texto de
-relleno.
+Recorrer el párrafo **palabra por palabra** y verificar que cada tramo tenga **al menos un** destino
+entre éstos: afirmación, calificador de una afirmación, glosario, inventario de actos, inventario de
+huecos. **Residuo cero.** Un tramo sin destino es siempre un error de análisis, nunca texto de relleno.
+
+**Un tramo con dos destinos es lo normal, y el segundo es la hoja del referente.** Todo tramo que diga
+algo de una cosa del negocio **deposita** lo que dice en un casillero de la hoja de esa cosa —género,
+eje, miembros, momento, agente, alcance, definición—, con el identificador del tramo del que vino. Lo
+que se retira de la versión anterior es la disyunción: «exactamente un destino» afirmaba que los
+destinos son disjuntos, y sobre prosa es falso —«tanto el casco como el puesto son instalaciones»
+alimenta el glosario **y** el casillero «género» **y** el casillero «eje», y no elige—.
+
+**Al cerrar, cada hoja queda cerrada o con sus pendientes declarados con causa.** Un depósito que no
+cierra con lo que el casillero ya tenía **no se tira**: queda pendiente en la hoja, que es donde se lo
+va a encontrar cuando llegue la oración que lo resuelve.
 
 ### P11. Criterio de corte: cómo se sabe que terminaste
 
@@ -733,7 +891,7 @@ Se termina cuando se cumplen las **seis** a la vez. Si falla una, se vuelve al p
 | # | Condición de terminación | Si falla, volver a |
 | --- | --- | --- |
 | 1 | **Punto fijo**: una pasada más de P3 a P9 no cambia nada | — |
-| 2 | **Residuo cero**: todo tramo tiene exactamente un destino (P10) | P10 |
+| 2 | **Residuo cero**: todo tramo tiene **al menos un** destino (P10), y toda hoja del referente quedó cerrada o con sus pendientes declarados con causa | P10 |
 | 3 | **Autonomía**: ninguna afirmación empieza con pronombre relativo, anáfora sin resolver o conector subordinante, y ninguna necesita leer a otra para entenderse | P5, P7 |
 | 4 | **Violabilidad distinta**: cada afirmación tiene un contraejemplo propio, y no hay dos afirmaciones con el mismo contraejemplo | P9 |
 | 5 | **Cota de atomización**: la cantidad de afirmaciones **no supera** la cantidad de verbos en forma personal más los restituidos en P7, más las oraciones sin verbo de la fila 36 | P3, P5 |
@@ -797,6 +955,32 @@ Faltaban en el criterio vigente. Son menos frecuentes que los falsos cortes y su
 FU-10 es una **falsa unión funcional**: no hay dos oraciones, pero sí dos reglas, y la segunda no está
 escrita. Se registra como hallazgo, nunca como afirmación derivada: el analista no tiene autoridad para
 enunciar la regla que el autor calló.
+
+**Y cuando dos afirmaciones no cierran, antes de declarar contradicción se baja la escalera.**
+
+> **Escalera de diagnóstico.** Tres peldaños, **en orden, y está prohibido saltear**. **E1 —
+> ambigüedad de expresión:** el texto admite dos lecturas y **una de ellas** hace consistente al
+> conjunto. Se resuelve **leyendo bien**, no hace falta información nueva, y no lo paga nadie. **E2 —
+> incompletitud:** **muchos mundos** satisfacen las dos afirmaciones y el texto no elige. Se resuelve
+> **nombrando la premisa faltante**, y la paga el autor confirmando una pieza que ya tenía en la
+> cabeza. **E3 — contradicción:** **ningún mundo** las satisface. El autor corrige, y algo se cae.
+>
+> **Cómo se aplica.** *Prueba E1 — ¿alguna lectura disuelve el problema?* Probá las lecturas vivas
+> **de los dos o tres depósitos involucrados**, no del párrafo entero; si alguna combinación cierra,
+> es ambigüedad de expresión: fijala, anotá qué la fijó, y terminó. *Prueba E2 — ¿puedo construir un
+> caso donde las dos sean verdaderas a la vez?* Bajo las lecturas ya fijadas, describí **un** estado
+> de cosas concreto que las satisfaga. Si podés, **falta información** y hay que nombrar la premisa
+> que elige. Si no podés, **recién ahí** es contradicción.
+>
+> **Obligación de declaración.** Toda discordancia sale con su diagnóstico **y con el motivo por el
+> que se descartaron los anteriores**: `escalera: E1 descartada — ninguna combinación de las lecturas
+> vivas de ‹X› e ‹Y› cierra · E2 aplicada — caso que satisface a las dos: ‹en una oración›`.
+>
+> **Por qué el orden es lo que importa.** Un E2 reportado como E3 manda a descartar una de las dos
+> afirmaciones. Con el autor disponible eso se corrige en una conversación; con el autor ausente —que
+> es la situación normal— **una afirmación verdadera del negocio se tira, y no queda rastro**. La
+> premisa faltante sale bajo `Propuesta`, nombrando los fragmentos que la hacen necesaria, y nunca
+> bajo `Letra`.
 
 ---
 
@@ -882,14 +1066,20 @@ C-nn
       puntuación están marcados como tales.
 - [ ] Todo modificador no restrictivo dejó registrado **qué aporta**: cualidad al glosario, atadura al
       inventario de relaciones.
+- [ ] **Todo modificador salió con cuadrante escrito** (`Q1` a `Q4`), y todo `Q4` tiene señalado el
+      depósito anterior que lo justifica.
+- [ ] **Toda hoja del referente quedó cerrada, o con sus pendientes declarados con causa.**
+- [ ] Toda decisión tomada por indicio derrotable o por la regla del error barato dejó anotada **la
+      lectura derrotada**.
 - [ ] Cota de atomización verificada (P11.5).
 - [ ] Residuo cero verificado palabra por palabra (P10).
 - [ ] Ninguna marca de la fuente fue corregida.
 
 ### 8.4 Orden de aplicación, en una línea
 
-> Puntuación fuerte → conectores → coordinación → adjuntos → relativas → **modificadores** →
-> completivas y modalidad → restitución → nominalizaciones → las cuatro pruebas → cobertura → cota.
+> **Lectura de corrido** → puntuación fuerte → conectores → coordinación → adjuntos → relativas →
+> **modificadores** → completivas y modalidad → restitución → nominalizaciones → las cuatro pruebas →
+> cobertura y **depósito** → cota → **hojas cerradas**.
 
 ---
 
@@ -906,14 +1096,25 @@ C-nn
    particular, tiene su propia unidad de corte, el inciso, que acá no se trata—.
 5. **La cota de atomización (P11.5) es una heurística, no un teorema.** Detecta sobrecorte por exceso
    de conteo; no detecta un sobrecorte que vaya acompañado de una falsa unión que lo compense.
-6. **No se cotejó ninguna fuente académica.** Todo lo enunciado como doctrina en §0.3 y §4.1 va sin
+6. **Lo que la hoja del referente produce es inferencia, no letra.** Dos casilleros llenos que
+   ninguna oración dijo junta son una afirmación del autor que nadie transcribió, y sale con
+   `Grado de certeza: inferencia`, **nunca como `Letra`**. Su calidad depende de que los depósitos se
+   hayan hecho, y la lista de casilleros **no está declarada cerrada**: se calibró sobre dos párrafos,
+   y la pregunta de si hacen falta hojas de acto —con casilleros propios— está abierta (acta 06 §7,
+   IR-2).
+7. **La hoja del referente no se corrió a ciegas.** La verificación que la fundó es una
+   **re-derivación**: se conocían los cinco resultados antes de abrirla. Demuestra que el objeto es
+   suficiente para lo ya encontrado; **no demuestra que encuentre lo que no se encontró** (acta 06
+   §7, IR-1).
+8. **No se cotejó ninguna fuente académica.** Todo lo enunciado como doctrina en §0.3 y §4.1 va sin
    comillas y sin número de sección, y puede ser revisado contra los textos cuando estén a mano. Nada
    de lo operativo depende de que esa revisión confirme algo: las decisiones de corte son propias.
-7. **El documento está sobre el techo de su categoría.** `Rules-Base-Conocimiento.md` §6.2 fija 600
+9. **El documento está sobre el techo de su categoría.** `Rules-Base-Conocimiento.md` §6.2 fija 600
    líneas para un documento `propio`, y éste las supera. El parche de modificadores de la versión 1.1
    agrega líneas sobre un documento que ya estaba largo: se acepta porque corrige un defecto medido y
-   su ausencia cuesta más que las líneas, pero **la deuda queda declarada**. La partición de este
-   documento no se decidió acá.
+   su ausencia cuesta más que las líneas, pero **la deuda queda declarada**. La aplicación del acta
+   06 la agranda: el documento pasa de 925 líneas a poco más de mil. La partición no se decide acá:
+   el acta la difiere a su tramo 6.
 
 ---
 
@@ -921,5 +1122,6 @@ C-nn
 
 | Versión | Fecha | Cambios |
 | --- | --- | --- |
+| 1.2 | 2026-09-28 | **Aplicación de los tramos 1, 3, 4 y 5 del acta** `../Mesa/06-Acta-Replanteo-Del-Modelo.md` §8.3. **El modelo cambia en un punto: la unidad de acumulación deja de ser el fragmento y pasa a ser el referente.** Cada tramo, además de su destino, **deposita** lo que dice en un casillero de la **hoja del referente** (`Knowledge-Deduccion-De-Reglas-De-Negocio.md` §5.2), y el sentido se lee en la hoja. Consecuencias, una por una: **P0 gana la lectura de corrido** —leer el párrafo entero antes de cortar nada— y abre las hojas; **P10 pierde «exactamente»** —todo tramo tiene **al menos un** destino, y el segundo es la hoja—, y con él la condición 2 de terminación de P11; **§4.3 se retitula «¿Este modificador restringe? ¿e informa?»** y su salida deja de ser binaria: pasa a ser el par `(restringe?, informa?)` con **cuatro cuadrantes** `Q1`–`Q4`, sus tres reglas antifraude y la contraprueba obligatoria de `Q4`; **el indicio 4 deja de buscar y pasa a mirar** el casillero «género» de la hoja, y **el indicio 3 cuenta la unicidad en el casillero «miembros»**, no sobre la extensión del núcleo; entra la **regla de depósito del eje** —el paralelismo, con C1–C4, la prueba del eje y los seis casos NV—, que no es un indicio más sino la regla que llena el casillero «eje»; **el `?` deja de ser terminal**: queda pendiente en la hoja con sus dos lecturas; **toda decisión por indicio derrotable deja marca**, con la lectura derrotada anotada. **El ejemplo «un casco central» se reescribe: era `describe` y es `Q1`**, y con él entran el ejemplo de `Q3` y el de `Q4`. Nueva **§3.9, predicación de dominio cerrado**, con D-1 / D-2 / D-3 y la regla de la clausura, y nueva **fila 39** (la tabla pasa a 39 filas). Nueva **escalera de diagnóstico** E1 / E2 / E3 en §6.2, con sus dos pruebas y la obligación de declarar el descarte de los peldaños anteriores. Tres ítems nuevos en la lista de control de §8.3 y dos límites nuevos en §9. **Lo que expresamente no entra, para que nadie lo reponga:** las pasadas **P12** y **P13**; el procedimiento de búsqueda del conjunto de contraste en dos ejes con su regla del ámbito agotado; la enmienda al indicio 3 sobre el núcleo; el registro de lecturas abiertas con sus nueve orígenes; la remisión de FU-10 a la clase `AD-3`; y la recomposición al final del orden en una línea, que ahora termina en **hojas cerradas**. |
 | 1.1 | 2026-09-26 | **Aplicación de la cuestión C-4 del acta** `../Mesa/05-Acta-Catalogo-De-Etiquetas.md`. §4.3 se retitula por su **función** —«¿Este modificador restringe o describe?»— y se generaliza a todo modificador: relativas, adjetivos, complementos preposicionales y aposiciones. El **indicio del determinante pasa a unidireccional** —el universal pide restricción; **el indefinido no prueba nada**—: la formulación «*un, una, unos* → describe» era falsa, alteraba decisiones ya tomadas por este documento (fila 17 bajo indefinido) y está clasificada como P0 en el acta. Se agregan el **indicio de la posición del adjetivo**, el **conjunto de contraste** —recibido del material observado, formalizado acá y **ubicado antes que la supresión**— y el **filtro argumento / adjunto**; la supresión y la puntuación quedan con su límite declarado. Se agrega el bloque «y no es simétrico» y seis ejemplos, uno por estructura. Puntos de entrada, para que el criterio se encuentre: se retitula el **capítulo §4**, se agrega el paso **P5-bis** al procedimiento, una **sexta condición de terminación** en P11, **dos filas nuevas** en la tabla de estructuras (37, adjetivo modificador; 38, complemento preposicional adjunto), las filas 16 a 18 y 30 a 31 citan §4.3, se reescribe el orden en prosa de §3.2 y se corrigen los estatutos de §0.3. Se declara el techo de categoría como límite 7. |
 | 1.0 | 2026-09-26 | Emisión inicial. Auditoría del criterio formal vigente con seis fallas y enunciado reformulado; cuatro pruebas operativas; tabla de 36 estructuras con su decisión de corte; ocho casos límite; puntuación como indicio derrotable con jerarquía de indicios para relativas; procedimiento de once pasos con criterio de corte contable; catálogo de falsos cortes y falsas uniones; ejemplo integrado; fichas de salida y lista de control. |
