@@ -8,9 +8,9 @@
 **Hereda-de:** —
 **Sustituye:** —
 **Compatible-con:** Rules-Base-Conocimiento.md 2.2
-**Versión:** 1.3
+**Versión:** 1.4
 **Estado:** Vigente
-**Fecha:** 2026-09-25
+**Fecha:** 2026-09-28
 
 ---
 
@@ -169,35 +169,9 @@ del control a una fracción del costo, y es la forma en que este conocimiento se
 
 ### 2.3 El circuito
 
-```mermaid
-flowchart TB
-    F["Fuente en prosa<br/>+ casos de uso<br/>+ código del autor, si hay"]
-    R1["R1 Lexicógrafo<br/>glosario"]
-    R2["R2 Literalista<br/>letra + ancla"]
-    R3["R3 Intencionalista<br/>intención + razonamiento"]
-    R4["R4 Refutador<br/>la otra lectura"]
-    R5["R5 Cronista<br/>momento · quién verifica"]
-    R6["R6 Proponente<br/>propuesta · preguntas"]
-    R0(["R0 Escribano<br/>rótulos · recuento · elevación"])
-    S["Catálogo + inconsistencias<br/>+ cuestionario al autor"]
-
-    F --> R1 --> R2 --> R3 --> R4 --> R5 --> R6 --> S
-    R0 -.->|rechaza lo no rotulado| R2
-    R0 -.-> R3
-    R0 -.-> R5
-    R0 -.-> R6
-
-    classDef lex fill:#e5dbff,stroke:#7048e8,color:#000
-    classDef lit fill:#d0ebff,stroke:#1c7ed6,color:#000
-    classDef int fill:#d3f9d8,stroke:#37b24d,color:#000
-    classDef ref fill:#ffe3e3,stroke:#f03e3e,color:#000
-    classDef esc fill:#fff3bf,stroke:#f59f00,stroke-width:2px,color:#000
-    class R1 lex
-    class R2,R5 lit
-    class R3,R6 int
-    class R4 ref
-    class R0 esc
-```
+**El orden:** `R1 → R2 → R3 → R4 → R5 → R6 → catálogo`, sobre la fuente, los casos de uso y el código
+del autor si lo hay. Cada rol recibe lo que el anterior selló y **no vuelve atrás a editarlo**. **R0 no
+está en la cadena: la corta**, y devuelve todo entregable con una oración sin rótulo (sesgos, §2.1).
 
 ---
 
@@ -210,7 +184,7 @@ Once pasos. Cada uno termina con una condición verificable, no con una sensaci�
 | Paso | Qué se hace | Termina cuando |
 | --- | --- | --- |
 | **P-0 Encuadre** | Clasificar todo el material por peso de evidencia (§3.3) | No queda pieza sin clasificar, y está escrito **qué no se pudo leer** |
-| **P-1 Inventario de términos** | Glosario **antes** que reglas: qué designa cada palabra, con qué unidad | Todo sustantivo del dominio tiene ficha |
+| **P-1 Inventario de términos** | Glosario **antes** que reglas: se abre una **hoja del referente** (§5.2) por sustantivo del dominio, y se deposita en ella mientras se lee | Todo sustantivo del dominio tiene hoja, y ninguna quedó con un pendiente sin causa |
 | **P-2 Normalización** | Sinónimos y homónimos | Cada regla declara con qué sentido usa cada término |
 | **P-3 Actos y líneas de vida** | Qué actos existen y qué le pasa a cada objeto desde que nace | Cada objeto tiene nacimiento, cambios y —si lo hay— fin |
 | **P-4 Extracción anclada** | Una afirmación atómica por candidata, **con ancla obligatoria** | Ninguna candidata sin cita y lugar exacto |
@@ -327,8 +301,8 @@ Doce entradas. P-9 exige **veredicto explícito por entrada**: «buscada, sin ha
 | **I-04** | Comentario del autor que contradice su propio código | El comentario declara una intención que el método adyacente no sostiene |
 | **I-05** | Invariante declarado que el flujo no sostiene | Un «siempre» con un tramo legítimo en que no vale |
 | **I-06** | Palabra no verificable | «coherente», «adecuado», «razonable», «suficiente», «apropiado», «óptimo» |
-| **I-07** | Regla que es copia débil de otra | Si la prueba de A pasa siempre que pasa la de B, sospechar |
-| **I-08** | Intención sin momento de verificación | La regla no cae sobre ningún acto |
+| **I-07** | **Reafirmaciones que no cierran entre sí** | Dos o más formulaciones del mismo concepto —léxica, hiperonímica, estructural, de ancla u operacional— cuyo **desacuerdo** no se resuelve bajo ninguna lectura. **El hallazgo es el desacuerdo, no la duplicación.** La subsunción de pruebas —«la de A pasa siempre que pasa la de B»— es **uno** de sus síntomas, no su definición. Toda discordancia sale con el **diagnóstico declarado** de la escalera: ambigüedad de expresión, incompletitud o contradicción |
+| **I-08** | Intención sin momento de verificación | La regla no cae sobre ningún acto. Es el peldaño **E2** de I-07 —incompletitud— aplicado a actos, y sale bajo `Propuesta` con el mismo respaldo que una premisa faltante. **No se fusiona con I-07 ni con I-01/I-02**: el síntoma específico de cada entrada es lo que la vuelve buscable, y P-9 exige veredicto por entrada enumerable |
 | **I-09** | Regla implementada que nadie enunció | Una guarda sin párrafo, o una ausencia con efecto |
 | **I-10** | Regla implementada **más fuerte** que su intención | Síntoma barato: **un dato que el modelo guarda y ninguna regla usa** |
 | **I-11** | Silencio de alcance | Se declara fuera una operación y se calla sobre otra equivalente |
@@ -336,10 +310,19 @@ Doce entradas. P-9 exige **veredicto explícito por entrada**: «buscada, sin ha
 
 **I-06 tiene tratamiento propio, y es el que da origen a este documento**: ante una palabra no
 verificable **se recupera la intención, no se propone un reemplazo**. Si la intención no se puede
-recuperar, va al cuestionario al autor.
+recuperar, va al cuestionario al autor. **Y hay un cómo, que es lo que le faltaba a la entrada:** la
+intención se recupera **triangulando** con las otras formulaciones del mismo concepto —en especial con
+la operacional, la que dice qué se hace con la cosa— **antes** de declararla irrecuperable. En la hoja
+del referente (§5.2) esas formulaciones son los otros depósitos del mismo casillero.
 
-**I-07 se usa como argumento de intención, no como motivo de borrado**: si una regla existe, dice algo
-**más** que su vecina. Leer la vaga como equivalente a la precisa es, por construcción, leerla mal.
+**I-07 tiene dos salidas, y la primera no es un hallazgo.** Si las formulaciones **cierran**, la
+reafirmación es un **instrumento de desambiguación** y se usa: la lectura que sobrevive a todas las
+formulaciones es la lectura. Si **no cierran**, es hallazgo y sale con el peldaño declarado —**E1**
+expresión, **E2** incompletitud, **E3** contradicción—, en ese orden, **sin saltear**, y con el motivo
+del descarte de los anteriores. El procedimiento y sus dos pruebas, en `02` §9, límite 8.
+
+Se conserva sin cambios lo ya escrito: **nunca es motivo de borrado**; si una regla existe dice algo
+**más** que su vecina, y leer la vaga como equivalente a la precisa es, por construcción, leerla mal.
 
 ### 3.7 Las obligaciones de búsqueda
 
@@ -425,10 +408,27 @@ Trece campos. El orden **no es negociable**: la propuesta va físicamente últim
 |                       | tiene divergencia de fondo, hueco o inconsistencia** (B-6)        |
 ```
 
-### 5.2 La ficha de término (P-1)
+### 5.2 La ficha de término, que es la hoja del referente (P-1)
+
+> **Referente.** La cosa del negocio de la que la fuente habla. Ningún fragmento la contiene entera:
+> el autor la describe **por caras**, y cada oración aporta una dimensión distinta. El referente es
+> donde se intersecan, y **es la unidad donde el sentido se acumula** —no el fragmento—. La lista de
+> casilleros **no está cerrada**: *modalidad* no entra, porque es propiedad de un acto.
+>
+> **Cómo se aplica.** En **P-1** abrí una hoja por cada sustantivo del dominio que la fuente nombre.
+> Cada fragmento que diga algo de esa cosa **deposita** lo que dice en un casillero, con el id del
+> fragmento al lado. Al **segundo** depósito en el mismo casillero, contrastá: coinciden → uno
+> confirma al otro; uno discrimina → fija la lectura; no cierran → hallazgo de I-07. **Un depósito que
+> no cierra queda pendiente en la hoja, no se tira.** La hoja cierra cuando no queda fragmento con
+> algo que depositar ni pendiente sin causa. **Dos casilleros llenos que ninguna oración dijo junta
+> son una afirmación del autor que nadie transcribió.**
 
 ```text
 | Término | Sentido 1 | Sentido 2 (si lo hay) | Unidad | Nombre preferente | Equivalencias |
+casilleros de contenido — cada depósito lleva ⟨id del fragmento⟩ del que vino
+  género qué clase de cosa es · eje de qué se distingue, y si es exhaustivo · miembros cuántos
+  momento cuándo nace y cuándo vale · agente quién · alcance qué no se va a hacer
+  definición si el texto la da · pendientes lo que no cerró, cada uno con su causa
 ```
 
 ### 5.3 El bloque de cierre (P-10)
@@ -593,6 +593,7 @@ R3 y R5 mezclados.
 
 | Versión | Fecha | Cambios |
 | --- | --- | --- |
+| 1.4 | 2026-09-28 | **Aplicación de los tramos 2 y 3 del acta** `../Mesa/06-Acta-Replanteo-Del-Modelo.md` §8.3. **El objeto (C-4):** §5.2 deja de ser una ficha de seis columnas de nombre y pasa a ser la **hoja del referente**, con casilleros de contenido —género, eje, miembros, momento, agente, alcance, definición, pendientes— y el identificador del fragmento en cada depósito. **La unidad de acumulación del método deja de ser el fragmento y pasa a ser el referente**; la hoja se abre en **P-1** y se llena mientras se lee, en vez de armarse al volcar las tablas. **KD-a:** I-07 se reformula —el hallazgo es el **desacuerdo** entre reafirmaciones, no la duplicación; la subsunción de pruebas es uno de sus síntomas— y gana su segunda salida: la reafirmación que **cierra** es un instrumento de desambiguación y se usa. Toda discordancia sale con el peldaño de la escalera declarado. **KD-b:** I-06 gana el *cómo* que le faltaba —triangular con las otras formulaciones, en especial la operacional—. **KD-c:** I-08 gana la remisión cruzada a E2, **sin fusionarse** con I-07 ni con I-01/I-02. Sale el diagrama `mermaid` de §2.3, que repetía la tabla de §2.1 sin agregar una operación, para hacerle lugar a todo esto bajo el techo de 600 líneas. |
 | 1.3 | 2026-09-26 | Nueva obligación **B-8, compuerta del `?`**: una ambigüedad se pasa por los criterios disponibles antes de elevarla al autor. Surge de un caso de uso real en el que se preguntó lo que un criterio ya escrito resolvía. |
 | 1.2 | 2026-09-26 | Auditoría contra `Icono-Y-Ancla`, que nace como hermano: se detectó que **`Dueño` estaba iconizado** —definido por clasificación, con su procedimiento comprimido al consolidar— y se le restituyó la operación. |
 | 1.1 | 2026-09-25 | **Reencuadre**: la proactividad pasa de ser algo que se contiene a ser una habilidad que se exige y se mide. Se separan los dos ejes —iniciativa para averiguar y proponer, cero autoridad sobre la fuente— y los dos modos de falla (§1.2 literalismo, §1.3 pasividad). Nuevas §3.7 (siete obligaciones de búsqueda) y §3.8 (las preguntas que entrenan la iniciativa). Los siete mecanismos se reencuadran como lo que **habilita** la audacia. §6 se parte en disciplina e iniciativa. Seis anti-patrones de pasividad. `Propuesta` pasa de opcional a obligatoria ante divergencia de fondo, hueco o inconsistencia. |
