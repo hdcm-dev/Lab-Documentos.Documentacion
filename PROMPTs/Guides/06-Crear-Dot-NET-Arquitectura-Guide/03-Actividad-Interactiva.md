@@ -8,7 +8,6 @@
 
 ## Contexto
 
-
   En base a tu apunte , voy a ir leyendo tus conceptos, te voy a ir haciendo preguntas y refutando, vos me iras mejorando el apunte , utilizaras subagentes especializados en didactica, y en edición de libros para ir recolectando el material, que tus subagentes lleven sus notas en `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/06-Crear-Dot-NET-Arquitectura-Guide/OUTPUTs` asi consulta y debanten entre ellos antes de actualizar el apunte.
 
   Mientras yo hago  una actividad práctica, esta va a estar basada en este apunte: `https://docs.google.com/document/d/1A80sKyEk1XlnOwxRyiZPeMgw3y6nYZrd/edit` yo iré leyendo y te pedire cosas y  te refutaré conceptos te pideré ayudas. Y por un lado con tus agentes en didactica y editores de material bibliografico podes ensamblar esa actividad y su desarrollo en `/LAB/Lab-Documentos/Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquiectura-Interactive-Guide.md`
@@ -17,7 +16,9 @@
 
   La actividad es una aplicación de escritorio, voy a hacer una versión basada en resapi, por lo tanto quiero me inicies la solución con un proyecto .net 10  .net con scalar instalado en `/LAB/Lab-Documentos/Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities`, llamale la solución LaEstancia y el proyecto LaEstancia.WebAPI. no hagas lo demas solo la solución y el proyecto y el program, así yo empiezo a escribir los espacios de nombres y las clases 
 
-  La experiencia va a ser interesante quiero hacer algo itneractivo con vos y tus agentes, podes si queres traerlo a martin fowler o algun otro crack del tema. Si necesitas llamar a la mesa para debatir conceptos y ediciciones que tus subagentes llamen a la mesa y planteen sus materiales y revisen el mejor entendimiento y conceptualización del tema siempre aportando definiciones claras y precesisas.
+  La experiencia va a ser interesante, quiero hacer algo interactivo con vos y tus agentes, podes si queres traerlo a martin fowler o algun otro crack del tema. Si necesitas llamar a la mesa para debatir conceptos y ediciciones que tus subagentes llamen a la mesa y planteen sus materiales y revisen el mejor entendimiento y conceptualización del tema siempre aportando definiciones claras y precesisas.
+
+
 
 ---
 
