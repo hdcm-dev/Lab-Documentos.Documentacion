@@ -1,0 +1,45 @@
+== SDK: 8.0.425 · git 2.39.5
+
+######## 1. Solución heredada con BOM + archivos mínimos de CTX-NET (§3.6) ########
+   31:[*.{cs,csproj,props,targets}]
+   32-charset = utf-8-bom
+warning: in the working copy of 'Heredado.sln', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/App/App.csproj', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/App/Program.cs', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/Lib/Class1.cs', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/Lib/Lib.csproj', CRLF will be replaced by LF the next time Git touches it
+-- modos: 100755 .githooks/pre-commit; 100755 tools/ci/compuerta.sh; 
+-- primer commit con el hook activado (sin --no-verify):
+   COMPUERTA commit=sin-commits alcance=--staged
+       POLITICA-TEXTO: Directory.Packages.props: falta el BOM que .editorconfig declara (charset=utf-8-bom)
+       POLITICA-TEXTO: 17 archivo(s) revisado(s), 1 violación(es)
+   COMPUERTA [FALLA] texto: la política de .editorconfig/.gitattributes no se cumple
+   COMPUERTA [ok]    toolchain .NET: SDK 8.0.425 = global.json
+   COMPUERTA [n/a]   toolchain Node: no hay .nvmrc
+   COMPUERTA [n/a]   toolchain Python: no hay .python-version
+   COMPUERTA [ok]    grafo NuGet: src/App/packages.lock.json coincide (--locked-mode)
+   COMPUERTA [ok]    grafo NuGet: src/App/packages.lock.json requested = resolved
+   COMPUERTA [n/a]   grafo npm: no hay package-lock.json
+   COMPUERTA [n/a]   grafo uv: no hay uv.lock
+   COMPUERTA resultado=ROJO (1 paso/s)
+   rc=1
+-- control: Directory.Packages.props también con BOM:
+   COMPUERTA commit=sin-commits alcance=--staged
+   COMPUERTA [ok]    texto: POLITICA-TEXTO: 17 archivo(s) revisado(s), 0 violación(es)
+   COMPUERTA [ok]    toolchain .NET: SDK 8.0.425 = global.json
+   COMPUERTA [n/a]   toolchain Node: no hay .nvmrc
+   COMPUERTA [n/a]   toolchain Python: no hay .python-version
+   COMPUERTA [ok]    grafo NuGet: src/App/packages.lock.json coincide (--locked-mode)
+   COMPUERTA [ok]    grafo NuGet: src/App/packages.lock.json requested = resolved
+   COMPUERTA [n/a]   grafo npm: no hay package-lock.json
+   COMPUERTA [n/a]   grafo uv: no hay uv.lock
+   COMPUERTA resultado=VERDE
+   rc=0
+
+######## 2. A.12 guardado con el nombre que da su campo name: (compuerta) y A.17 ########
+   2:name: compuerta
+   17:      image: ghcr.io/org/imagen-ci@sha256:0000000000000000000000000000000000000000000000000000000000000000
+-- A.17 (registrar-entorno.sh), línea de imagen, con el workflow como compuerta.yml:
+   imagen=NO DECLARADA (runner sin contenedor: capa 4 en el log «Set up job»)
+-- control, el mismo archivo como ci.yml:
+   imagen=ghcr.io/org/imagen-ci@sha256:0000000000000000000000000000000000000000000000000000000000000000

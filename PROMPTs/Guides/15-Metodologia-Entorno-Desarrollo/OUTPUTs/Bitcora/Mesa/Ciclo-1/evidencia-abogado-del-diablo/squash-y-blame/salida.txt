@@ -1,0 +1,14 @@
+Commit de aplastamiento -- no actualizando HEAD
+SHA del squash en main: 65113ddf293737c3c476beecd68017027ced85e2
+-- blame sin ignore-revs
+   65113ddf 1) class Sensor
+   65113ddf 2) {
+   65113ddf 3)     int Leer() => 42; // Atención
+   65113ddf 4) }
+   autor del commit atribuido: migrador
+-- blame con ignore-revs del SHA del squash
+   ^ba10b48 (autora 2026-10-07 20:41:18 -0300 1) class Sensor
+   ^ba10b48 (autora 2026-10-07 20:41:18 -0300 2) {
+   ^ba10b48 (autora 2026-10-07 20:41:18 -0300 3)     int Leer() => 42; // Atención
+   ^ba10b48 (autora 2026-10-07 20:41:18 -0300 4) }
+git version 2.47.3

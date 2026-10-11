@@ -1,0 +1,18 @@
+== privacidad (guía, Examples sin bin/obj/node_modules, notas de P-22)
+guía: 0
+Examples: 0
+notas ciclo 2: 0
+== terminología: cadenas retiradas (03-Parches §8)
+  'Windows + VS |': 0
+  'pnpm ≥ 11': 0
+  'mismo diseño': 0
+  'únicas cinco': 0
+  'prevista para el 2026-10-09': 0
+  'Sólo Python falla siempre': 0
+  'Este comando no pide': 0
+  'cerrado de cinco': 0
+  'verificar.sh de N8': 0
+  'registro de entorno': 2
+== marcas fuera de código
+  total 132, en negrita 132, por marca {'criterio': 88, 'no verificado': 34, 'observado': 7, 'interpretación': 3}
+  *Aplica*: 63 | palabras (wc -w): 54267 | líneas: 3606

@@ -1,0 +1,2036 @@
+[
+[
+"P-19",
+"R",
+true,
+"Todas las fuentes se consultaron el **2026-10-07**."
+],
+[
+"P-19",
+"LINE",
+true,
+"| B14 |"
+],
+[
+"P-19",
+"R",
+true,
+"| B15 | dotnet/roslyn — PR #83320 (fallback de codificación por plataf"
+],
+[
+"P-19",
+"LINE",
+true,
+"| B49 |"
+],
+[
+"P-19",
+"R",
+true,
+"| B155 | SPDX — Specification 3.0.1; specifications (ISO/IEC 5962:2021"
+],
+[
+"P-19",
+"R",
+true,
+"| B193 | `actions/checkout` — repositorio y etiquetas (`git ls-remote`"
+],
+[
+"P-01",
+"R",
+true,
+"status: borrador (pendiente de relectura integral de la mesa)"
+],
+[
+"P-01",
+"R",
+true,
+"fuentes_consultadas: 2026-10-07"
+],
+[
+"P-01",
+"R",
+true,
+"Todo lo que la guía presenta como salida de un comando se ejecutó el 2"
+],
+[
+"P-01",
+"R",
+true,
+"(193 fuentes, Anexo D), más 71 experimentos ejecutables (Anexo E)."
+],
+[
+"P-02",
+"R",
+true,
+"- ***Parte I — El problema y el mapa***\n"
+],
+[
+"P-02",
+"R",
+true,
+"- ***Parte II — Cada capa, en los tres ecosistemas***\n"
+],
+[
+"P-02",
+"R",
+true,
+"- ***Parte III — Integración***\n"
+],
+[
+"P-02",
+"R",
+true,
+"qué pasó, por qué Windows lo tapaba, qué resolvió el fix y qué dejó ab"
+],
+[
+"P-02",
+"R",
+true,
+"la compuerta única, la CI como árbitro"
+],
+[
+"P-03",
+"3a",
+true,
+""
+],
+[
+"P-03",
+"R",
+true,
+"| **Recorrido** | §1 → §12 en orden; correr los experimentos que cada "
+],
+[
+"P-03",
+"R",
+true,
+"→ **Criterios de calidad** (cómo se distingue una versión buena de una"
+],
+[
+"P-03",
+"R",
+true,
+"| **[observado]** | Comportamiento medido en el laboratorio que la doc"
+],
+[
+"P-03",
+"R",
+true,
+"```bash\ncd Examples/N0-modelo-de-capas-y-reproducibilidad && ./correr-"
+],
+[
+"P-03",
+"R",
+true,
+"el [Anexo F](#anexo-f-límites-y-lo-que-no-se-verificó) lo lista."
+],
+[
+"P-04",
+"R",
+true,
+"El caso real no se puede mostrar (es de un repositorio privado). El la"
+],
+[
+"P-04",
+"R",
+true,
+"El fix funcionó, pero dejó tres preguntas"
+],
+[
+"P-04",
+"R",
+true,
+"### 1.4 Qué resolvió el fix y qué dejó abierto"
+],
+[
+"P-04",
+"R",
+true,
+"- y no queda registro de con qué se construyó cada pieza ("
+],
+[
+"P-05",
+"R",
+true,
+"macOS no se separa de ESC-02 porque, para estos temas, se comporta com"
+],
+[
+"P-05",
+"R",
+true,
+"si hay devcontainer, la estructura del repo políglota."
+],
+[
+"P-05",
+"R",
+true,
+"La imagen de CI y del devcontainer y su actualización; SBOM y proceden"
+],
+[
+"P-05",
+"R",
+true,
+"| §9 Procedencia | — | — | — | ○ | ● |"
+],
+[
+"P-05",
+"LINE",
+true,
+"La procedencia (§9) pesa sólo en CI por una decisión de esta"
+],
+[
+"P-06",
+"R",
+true,
+"Es el mapa: los capítulos 4 a 10 desarrollan una capa cada uno."
+],
+[
+"P-06",
+"R",
+true,
+"variables de entorno que el build lee"
+],
+[
+"P-06",
+"R",
+true,
+"| fabricantes | Congelar. |"
+],
+[
+"P-06",
+"R",
+true,
+"| fabricantes | «Congelar el entorno»: un lock congela una sola capa. "
+],
+[
+"P-06",
+"R",
+true,
+"### 3.3 Qué fija cada mecanismo y qué deja libre\n"
+],
+[
+"P-06",
+"R",
+true,
+"### 3.6 Mapa conceptual: «estoy acá → qué aplico»\n"
+],
+[
+"P-06",
+"LINE",
+true,
+"| `global.json` con `version` + `rollForward: disable` | 2 ("
+],
+[
+"P-06",
+"R",
+true,
+"Tres puertas de entrada al resto de la guía, según lo que el lector te"
+],
+[
+"P-06",
+"LINE",
+true,
+"| ESC-01 Windows + Visual Studio | Respetar `.editorconfig`"
+],
+[
+"P-06",
+"R",
+true,
+"| ESC-04 Devcontainer | Imagen por digest; `devcontainer-lock.json`; `"
+],
+[
+"P-06",
+"R",
+true,
+"| ESC-05 CI | Compuerta completa sobre clon limpio; restauración estri"
+],
+[
+"P-06",
+"R",
+true,
+"`*.lock*`, `.npmrc`, índices de uv |"
+],
+[
+"P-06",
+"R",
+true,
+"(E4-2 muestra CPM pidiendo 8.0.2 y NuGet entregando 9.0.0 sin advertir"
+],
+[
+"P-06",
+"APPQ",
+true,
+"¿Por qué el mismo commit da resultados distintos"
+],
+[
+"P-06",
+"APPQ",
+true,
+"¿Un contenedor reemplaza al `global.json` o al lock?"
+],
+[
+"P-06",
+"APPQ",
+true,
+"¿Un rango es siempre peligroso?"
+],
+[
+"P-06",
+"BSE",
+true,
+"### 3.7 Preguntas guía"
+],
+[
+"P-07",
+"R",
+true,
+"El equipo del compilador fijó ese comportamiento en una prueba en abri"
+],
+[
+"P-07",
+"R",
+true,
+"    E -- \"Linux / macOS (o Windows con ACP UTF-8)\" --> L[\"UTF-8 tolera"
+],
+[
+"P-07",
+"R",
+true,
+"La rama «Windows con ACP UTF-8» es una deducción de [B14], [B19] y [B2"
+],
+[
+"P-07",
+"R",
+true,
+"y con SDK 10.0.400 compila (E1-03); el mismo"
+],
+[
+"P-07",
+"LINE",
+true,
+"| Razor (generador) |"
+],
+[
+"P-07",
+"R",
+true,
+"| Node `require`/`import` | correcto | U+FFFD, sin error |"
+],
+[
+"P-07",
+"R",
+true,
+"- **Nadie falla ruidosamente ante cp1252 salvo Python.** Roslyn falla "
+],
+[
+"P-07",
+"R",
+true,
+"Por contexto: en CTX-NET el riesgo es el cp1252 heredado y los literal"
+],
+[
+"P-07",
+"R",
+true,
+"`file` ayuda, pero es heurístico: informa «ISO-8859 text» para cp1252 "
+],
+[
+"P-07",
+"APPQ",
+true,
+"¿Alcanza con que compile en Linux"
+],
+[
+"P-07",
+"APPQ",
+true,
+"¿Alcanza con `-p:CodePage=1252`"
+],
+[
+"P-07",
+"APPQ",
+true,
+"¿Un contenedor resuelve el problema?"
+],
+[
+"P-07",
+"EOS",
+true,
+"### 4.6 Preguntas guía"
+],
+[
+"P-07",
+"BSE",
+true,
+"### 4.8 Plantilla"
+],
+[
+"P-08",
+"R",
+true,
+"El fix del caso convirtió cien archivos"
+],
+[
+"P-08",
+"R",
+true,
+"cumplirse igual en ESC-01 a ESC-05."
+],
+[
+"P-08",
+"R",
+true,
+"(la de `dotnet/runtime` y la base que propone GitHub [B41])"
+],
+[
+"P-08",
+"LINE",
+true,
+"**[criterio]** Para un equipo que construye en Windows y en "
+],
+[
+"P-08",
+"R",
+true,
+"La decisión real es **dónde va BOM**, y se toma por el lector más estr"
+],
+[
+"P-08",
+"tabla 5.2.3",
+true,
+""
+],
+[
+"P-08",
+"LINE",
+true,
+"**[criterio] Para `*.cs`.** En un repositorio nuevo,"
+],
+[
+"P-08",
+"R",
+true,
+"| Herramienta existente | Qué cubre | Límite |\n|---|---|---|"
+],
+[
+"P-08",
+"R",
+true,
+"| `git ls-files --eol` | EOL en índice y disco, atributo efectivo | No"
+],
+[
+"P-08",
+"R",
+true,
+"    Note over R: fusionar con merge commit: el SHA tiene que sobrevivi"
+],
+[
+"P-08",
+"R",
+true,
+"   # tools/migrar-a-utf8.sh (E2-2), por cada archivo que git considera"
+],
+[
+"P-08",
+"R",
+true,
+"5. **Refrescar los working trees.** Los archivos en disco siguen con C"
+],
+[
+"P-08",
+"R",
+true,
+"Un `--amend`, un rebase o un *squash merge* cambian el SHA y rompen el"
+],
+[
+"P-08",
+"R",
+true,
+"#### 5.2.7 `working-tree-encoding` o convertir"
+],
+[
+"P-08",
+"R",
+true,
+"| ESC-05 CI | El árbitro: la compuerta en modo `--base` y `dotnet form"
+],
+[
+"P-08",
+"SPLITQ",
+true,
+"### 5.6 Preguntas guía: 7 preguntas"
+],
+[
+"P-08",
+"R",
+true,
+"Para Razor, con BOM: es lo que producen las plantillas y lo que declar"
+],
+[
+"P-08",
+"R",
+true,
+"`.sln` con BOM porque la CLI lo repone; `.csproj` y `.slnx` sin."
+],
+[
+"P-08",
+"R",
+true,
+"y fusión sin squash (§5.2.6)."
+],
+[
+"P-08",
+"APPQ",
+true,
+"¿Cómo detecto en un PR"
+],
+[
+"P-08",
+"APPQ",
+true,
+"¿Cuándo `working-tree-encoding` y cuándo convertir?"
+],
+[
+"P-08",
+"EOS",
+true,
+"### 5.6 Preguntas guía"
+],
+[
+"P-08",
+"R",
+true,
+"el PR de migración fusionado con squash;"
+],
+[
+"P-08",
+"BSE",
+true,
+"### 5.8 Plantilla"
+],
+[
+"P-08",
+"R",
+true,
+"(la base que propone GitHub [B41], y la que declaraban al 2026-10-07 s"
+],
+[
+"P-08",
+"ítem 3 REVERTIDO",
+true,
+"E2-8 muestra eol también en: *.in, *.verified.json, *.verified.txt, *.verified.xml, bootstrap*.js, gradlew, jquery*.js, jquery*.map"
+],
+[
+"P-09",
+"R",
+true,
+"        PM[\"packageManager\"] -- \"Corepack, si está\" --> PMV[\"pnpm / ya"
+],
+[
+"P-09",
+"R",
+true,
+"entre dos parches del SDK 8 [B90]."
+],
+[
+"P-09",
+"LINE",
+true,
+"**¿Fijar el SDK fija el compilador?** Sí: el compilador viaj"
+],
+[
+"P-09",
+"R",
+true,
+"**[criterio]** `packageManager` sigue siendo útil como declaración (la"
+],
+[
+"P-09",
+"R",
+true,
+"en ESC-02 y ESC-03, configurado"
+],
+[
+"P-09",
+"LINE",
+true,
+"**[criterio] La elección de `rollForward`.** Con `packages.l"
+],
+[
+"P-09",
+"R",
+true,
+"// package.json — declara para quien consume y hace cumplir para quien"
+],
+[
+"P-09",
+"SPLITQ",
+true,
+"### 6.6 Preguntas guía: 7 preguntas"
+],
+[
+"P-09",
+"R",
+true,
+"Fija el SDK con que corren `dotnet` y MSBuild y, por arrastre, el comp"
+],
+[
+"P-09",
+"R",
+true,
+"*Criterio*: exacto con lock files o reproducibilidad bit a bit; `lates"
+],
+[
+"P-09",
+"R",
+true,
+"El compilador sí; el runtime no."
+],
+[
+"P-09",
+"APPQ",
+true,
+"¿`engines` impide instalar?"
+],
+[
+"P-09",
+"REPQ",
+true,
+"¿Cuál es el estado de Corepack y `packageManager`?"
+],
+[
+"P-09",
+"APPQ",
+true,
+"¿`requires-python` o `.python-version`?"
+],
+[
+"P-09",
+"APPQ",
+true,
+"¿Qué respeta y qué ignora una estación Windows con Visual St"
+],
+[
+"P-09",
+"EOS",
+true,
+"### 6.6 Preguntas guía"
+],
+[
+"P-09",
+"BSE",
+true,
+"### 6.8 Plantilla"
+],
+[
+"P-10",
+"R",
+true,
+"NuGet (CPM, `packages.lock.json`, `nuget.config`)"
+],
+[
+"P-10",
+"R",
+true,
+"Sin ese comando, el lock es una sugerencia que la herramienta reescrib"
+],
+[
+"P-10",
+"R",
+true,
+"E4-2 agregó otro caso: si la versión pedida no existe, NuGet resuelve "
+],
+[
+"P-10",
+"R",
+true,
+"Tres reglas del fabricante: commitear el lock en **aplicaciones** y no"
+],
+[
+"P-10",
+"R",
+true,
+"Además, **el conjunto de RID es parte del lock**:"
+],
+[
+"P-10",
+"R",
+true,
+"CPM solo no evita la deriva (E4-2 pidió 8.0.2 y obtuvo 9.0.0)."
+],
+[
+"P-10",
+"R",
+true,
+"pip-tools y `uv pip compile` producen un `requirements.txt` **por plat"
+],
+[
+"P-10",
+"LINE",
+true,
+"| Multiplataforma | sólo los RID declarados |"
+],
+[
+"P-10",
+"LINE",
+true,
+"| Registros en el repo | `nuget.config` (`<clear />`, mapeo)"
+],
+[
+"P-10",
+"R",
+true,
+"| Evidencia | E4-1, E4-2, E4-3 | E4-4 | E4-4 | — | E4-5 | E4-5 | E4-5 "
+],
+[
+"P-10",
+"R",
+true,
+"**Integración en una solución** (el detalle es de"
+],
+[
+"P-10",
+"R",
+true,
+"| ESC-05 CI | Único lugar donde la restauración estricta es obligatori"
+],
+[
+"P-10",
+"R",
+true,
+"| ACT-REV | La lista de §7.6, pregunta 5. |"
+],
+[
+"P-10",
+"UNNUMQ",
+true,
+"### 7.6 Preguntas guía: 6"
+],
+[
+"P-10",
+"R",
+true,
+"CPM sin lock no impide la deriva (E4-2); lock sin CPM congela, pero ca"
+],
+[
+"P-10",
+"APPQ",
+true,
+"¿Qué comando falla y cuál regenera en silencio?"
+],
+[
+"P-10",
+"R",
+true,
+"Depende de si es universal: npm y uv sí (E4-4, E4-5); NuGet sólo para "
+],
+[
+"P-10",
+"R",
+true,
+"El mapeo de fuentes ataca la **confusión de dependencias**, con sus hu"
+],
+[
+"P-10",
+"R",
+true,
+"**[criterio sobre base del fabricante]**"
+],
+[
+"P-10",
+"APPQ",
+true,
+"¿Quién actualiza el lock, cuándo, y qué mira el revisor?"
+],
+[
+"P-10",
+"APPQ",
+true,
+"¿Un contenedor reemplaza al lock?"
+],
+[
+"P-10",
+"EOS",
+true,
+"### 7.6 Preguntas guía"
+],
+[
+"P-10",
+"R",
+true,
+"- tiene un lock por ecosistema, commiteado junto a su manifiesto, gene"
+],
+[
+"P-10",
+"R",
+true,
+"lock en una biblioteca;"
+],
+[
+"P-10",
+"BSE",
+true,
+"### 7.8 Plantilla"
+],
+[
+"P-11",
+"R",
+true,
+"propone mitigarlo con Docker Scout o con Dependabot, que abre PR con e"
+],
+[
+"P-11",
+"R",
+true,
+"1. **Digest en todo lo versionado** que nombra una imagen: `FROM`, `im"
+],
+[
+"P-11",
+"R",
+true,
+"3. **Cadencia alineada con el publicador**"
+],
+[
+"P-11",
+"R",
+true,
+"4. **Etiqueta flotante sólo donde se quiere deriva**"
+],
+[
+"P-11",
+"R",
+true,
+"Un equipo que fija digests y no tiene el punto 2 está peor"
+],
+[
+"P-11",
+"R",
+true,
+"3. **Lo que tiene que ser idéntico entre ESC-01 y ESC-04**:"
+],
+[
+"P-11",
+"R",
+true,
+"que Dependabot actualice un `FROM …@sha256` fijado por digest **[no ve"
+],
+[
+"P-11",
+"R",
+true,
+"**[hallazgo negativo, a revalidar]**"
+],
+[
+"P-11",
+"R",
+true,
+"| ESC-04 Devcontainer | Capas 2 y 4 por digest; *features* con lock | "
+],
+[
+"P-11",
+"R",
+true,
+"| ESC-05 CI | La imagen por digest que construye lo que se publica | R"
+],
+[
+"P-11",
+"R",
+true,
+"```jsonc\n// .devcontainer/devcontainer.json — capa 4 por digest, Node "
+],
+[
+"P-11",
+"UNNUMQ",
+true,
+"### 8.6 Preguntas guía: 7"
+],
+[
+"P-11",
+"SPLITQ",
+true,
+"### 8.6 Preguntas guía: 7 preguntas"
+],
+[
+"P-11",
+"R",
+true,
+"Digest en todo lo que construye artefactos o define el entorno compart"
+],
+[
+"P-11",
+"APPQ",
+true,
+"¿Cómo conviven Visual Studio sin contenedores y el devcontai"
+],
+[
+"P-11",
+"APPQ",
+true,
+"¿Qué tiene que ser idéntico entre la estación Windows y el d"
+],
+[
+"P-11",
+"APPQ",
+true,
+"¿El lock de devcontainer reemplaza a los locks de NuGet, npm"
+],
+[
+"P-11",
+"EOS",
+true,
+"### 8.6 Preguntas guía"
+],
+[
+"P-11",
+"R",
+true,
+"- nombra toda imagen por digest y tiene un mecanismo (bot o trabajo) q"
+],
+[
+"P-11",
+"R",
+true,
+"imágenes de dev y CI elegidas por nombre."
+],
+[
+"P-11",
+"BSE",
+true,
+"### 8.8 Plantilla"
+],
+[
+"P-12",
+"R",
+true,
+"una pieza que ya está publicada"
+],
+[
+"P-12",
+"R",
+true,
+"| **Pieza** (artefacto) |"
+],
+[
+"P-12",
+"R",
+true,
+"grabados **dentro** de la pieza"
+],
+[
+"P-12",
+"R",
+true,
+"Inventario de los componentes de la pieza"
+],
+[
+"P-12",
+"R",
+true,
+"Atestación que identifica la pieza por digest"
+],
+[
+"P-12",
+"R",
+true,
+"Reconstruir la pieza desde el commit"
+],
+[
+"P-12",
+"R",
+true,
+"        A[\"pieza (sha256)\"]"
+],
+[
+"P-12",
+"R",
+true,
+"Compilando la pieza .NET"
+],
+[
+"P-12",
+"R",
+true,
+"| Commit en la pieza |"
+],
+[
+"P-12",
+"R",
+true,
+"| ESC-02 / ESC-03 | Reconstruir una pieza publicada"
+],
+[
+"P-12",
+"R",
+true,
+"(1) el digest de la pieza;"
+],
+[
+"P-12",
+"R",
+true,
+"Una pieza trazable:"
+],
+[
+"P-12",
+"R",
+true,
+"**`npm pack` dio el mismo tarball** desde dos rutas con fechas distint"
+],
+[
+"P-12",
+"R",
+true,
+"| SPDX | 3.0.1 [B155] | ISO/IEC 5962:2021 [B155] |"
+],
+[
+"P-12",
+"R",
+true,
+"**[criterio]** El formato lo elige el consumidor; conviene **uno solo*"
+],
+[
+"P-12",
+"R",
+true,
+"| Firma | Opcional | Requisito desde SLSA Build L2 |"
+],
+[
+"P-12",
+"R",
+true,
+"el commit en `vcs:revision`; `builder.id` **vacío**, porque una build "
+],
+[
+"P-12",
+"R",
+true,
+"Es mejor que nada, pero hay que llamarlo por su nombre."
+],
+[
+"P-12",
+"LINE",
+true,
+"**[criterio] Para el caso** (repositorio privado de una orga"
+],
+[
+"P-12",
+"R",
+true,
+"| ESC-05 CI | **Todo**: `ContinuousIntegrationBuild`, `SOURCE_DATE_EPO"
+],
+[
+"P-12",
+"R",
+true,
+"En CTX-POLI aparecen tres SBOM distintos según el **alcance** —artefac"
+],
+[
+"P-12",
+"R",
+true,
+"  - uses: actions/attest@v4\n"
+],
+[
+"P-12",
+"R",
+true,
+"# Sin plataforma que firme (E6-5): cosign sobre la procedencia de Buil"
+],
+[
+"P-12",
+"R",
+true,
+"--type slsaprovenance1 --insecure-ignore-tlog Pieza.dll        # falla"
+],
+[
+"P-12",
+"SPLITQ",
+true,
+"### 9.6 Preguntas guía: 6 preguntas"
+],
+[
+"P-12",
+"R",
+true,
+"(3) el toolchain efectivo;"
+],
+[
+"P-12",
+"R",
+true,
+"Una procedencia SLSA de la plataforma da 1, 4, 6 y casi siempre 2; el "
+],
+[
+"P-12",
+"APPQ",
+true,
+"¿SBOM o procedencia?"
+],
+[
+"P-12",
+"APPQ",
+true,
+"¿Cómo verifico que dos builds del mismo commit dan el mismo "
+],
+[
+"P-12",
+"APPQ",
+true,
+"¿El SHA en `InformationalVersion` alcanza?"
+],
+[
+"P-12",
+"APPQ",
+true,
+"¿Meto el SBOM dentro del paquete?"
+],
+[
+"P-12",
+"REPQ",
+true,
+"¿Qué nivel SLSA es razonable para un equipo chico?"
+],
+[
+"P-12",
+"EOS",
+true,
+"### 9.6 Preguntas guía"
+],
+[
+"P-12",
+"R",
+true,
+"- su procedencia la firma la plataforma, o se declara con honestidad q"
+],
+[
+"P-12",
+"R",
+true,
+"contar con atestaciones de GitHub"
+],
+[
+"P-12",
+"BSE",
+true,
+"### 9.8 Plantilla"
+],
+[
+"P-13",
+"R",
+true,
+"La misma compuerta sirvió sin cambios para un repo .NET (E7-1), uno No"
+],
+[
+"P-13",
+"R",
+true,
+"En GitHub, las ramas protegidas, los dueños de código requeridos y los"
+],
+[
+"P-13",
+"R",
+true,
+"| Control | Qué impide | Evidencia |\n|---|---|---|\n| Rama protegida co"
+],
+[
+"P-13",
+"R",
+true,
+"Política de texto, toolchain, dependencias; cuándo se descongela una m"
+],
+[
+"P-13",
+"R",
+true,
+"Imagen de CI y devcontainer, compuerta, bots, protección de rama"
+],
+[
+"P-13",
+"R",
+true,
+"| El hook necesita un intérprete de `sh` (Git for Windows trae uno); e"
+],
+[
+"P-13",
+"R",
+true,
+"En CTX-POLI la compuerta corre sus tres pasos para los tres ecosistema"
+],
+[
+"P-13",
+"R",
+true,
+"```bash\n# publicar.sh — compuerta en el acto irreversible (extracto de"
+],
+[
+"P-13",
+"SPLITQ",
+true,
+"### 10.6 Preguntas guía: 7 preguntas"
+],
+[
+"P-13",
+"APPQ",
+true,
+"¿Alcanza con un hook?"
+],
+[
+"P-13",
+"R",
+true,
+"Si se adopta, la política la sigue haciendo cumplir un chequeo que lee"
+],
+[
+"P-13",
+"APPQ",
+true,
+"¿Cómo se descongela algo sin perder trazabilidad?"
+],
+[
+"P-13",
+"APPQ",
+true,
+"¿Por qué un lock que cambia sin su manifiesto es sospechoso?"
+],
+[
+"P-13",
+"APPQ",
+true,
+"¿Qué hago si la plataforma no ofrece protección de rama?"
+],
+[
+"P-13",
+"APPQ",
+true,
+"¿Hay que fijar también las herramientas de la compuerta?"
+],
+[
+"P-13",
+"EOS",
+true,
+"### 10.6 Preguntas guía"
+],
+[
+"P-13",
+"R",
+true,
+"ningún ADR que explique por qué `rollForward` es `disable`."
+],
+[
+"P-13",
+"BSE",
+true,
+"### 10.8 Plantilla"
+],
+[
+"P-14",
+"R",
+true,
+"índices de uv con `explicit = true` y la estrategia `first-index` cont"
+],
+[
+"P-14",
+"R",
+true,
+"`global.json` no cubre a Node ni a Python; dentro de esta frontera, `e"
+],
+[
+"P-14",
+"R",
+true,
+"| A en la estación, **con** `npm ci`, `uv run --locked`, `engine-stric"
+],
+[
+"P-14",
+"R",
+true,
+"**[criterio]** La comparación A = B se hace con la configuración de pu"
+],
+[
+"P-14",
+"R",
+true,
+"Construir la imagen de desarrollo `FROM` la misma base que la CI (§8.2"
+],
+[
+"P-14",
+"R",
+true,
+"el mismo comando que la estación y el devcontainer."
+],
+[
+"P-14",
+"R",
+true,
+"La procedencia exportada por BuildKit no está firmada: la firma la agr"
+],
+[
+"P-14",
+"R",
+true,
+"        REG[\"registro del entorno\"]"
+],
+[
+"P-14",
+"R",
+true,
+"        PRV[\"procedencia: bases por digest, firmada en CI\"]"
+],
+[
+"P-14",
+"R",
+true,
+"    MSB[\"Visual Studio / dotnet build<br/>(MSBuild llama a npm y uv)\"]"
+],
+[
+"P-14",
+"R",
+true,
+"| Imagen | Única | **Devcontainer** y frontera A | E8-5 |\n| | Por comp"
+],
+[
+"P-14",
+"R",
+true,
+"| Frontera A en modo estricto; `engine-strict=true`; correr `verificar"
+],
+[
+"P-14",
+"R",
+true,
+"Imagen única construida desde los nativos, bases por digest"
+],
+[
+"P-14",
+"R",
+true,
+"Frontera B; imagen única o etapas por componente por digest; SBOM de l"
+],
+[
+"P-14",
+"R",
+true,
+"Mantiene el Dockerfile multi-runtime o las cuatro bases por digest;"
+],
+[
+"P-14",
+"R",
+true,
+"```bash\ndocker buildx build --builder n8-attest --target artefacto \\\n "
+],
+[
+"P-14",
+"UNNUMQ",
+true,
+"### 11.6 Preguntas guía: 7"
+],
+[
+"P-14",
+"R",
+true,
+"con cp1252 falla C# en Linux, falla Python y Node corrompe sin error ("
+],
+[
+"P-14",
+"R",
+true,
+"*Aplica*: devcontainer y estación → imagen única; CI por etapas → por "
+],
+[
+"P-14",
+"APPQ",
+true,
+"¿Cómo se fija el toolchain de tres ecosistemas desde un únic"
+],
+[
+"P-14",
+"R",
+true,
+"Primero decidiendo el alcance: locks, artefacto, entorno. Para los loc"
+],
+[
+"P-14",
+"R",
+true,
+"en ESC-01, fuera de MSBuild"
+],
+[
+"P-14",
+"R",
+true,
+"Los dos caminos tienen que dar lo mismo con la configuración de public"
+],
+[
+"P-14",
+"APPQ",
+true,
+"¿Dónde vive la frontera entre la build .NET y las demás?"
+],
+[
+"P-14",
+"APPQ",
+true,
+"¿Alcanza con que los tres locks estén commiteados?"
+],
+[
+"P-14",
+"EOS",
+true,
+"### 11.6 Preguntas guía"
+],
+[
+"P-14",
+"R",
+true,
+"- elige su frontera de build por escenario, con modo estricto en ambas"
+],
+[
+"P-14",
+"R",
+true,
+"- declara el alcance de cada SBOM y deja la procedencia firmada en la "
+],
+[
+"P-14",
+"R",
+true,
+"locks marcados `linguist-generated`."
+],
+[
+"P-14",
+"R",
+true,
+"Todas las del [Anexo A](#anexo-a-plantillas-comentadas), que forman ju"
+],
+[
+"P-14",
+"BSE",
+true,
+"### 11.8 Plantilla"
+],
+[
+"P-14",
+"R",
+true,
+"1. Antes de mirar E8-1, predecí qué lectores fallan con «BOM para todo"
+],
+[
+"P-14",
+"§11.9 consigna 1 REVERTIDA",
+true,
+"E8-1 B: hola.sh OK; cuenta «cinco» con seis nombres"
+],
+[
+"P-15",
+"R",
+true,
+"Los capítulos anteriores se pueden leer en cualquier orden; adoptarlos"
+],
+[
+"P-15",
+"R",
+true,
+"elegir la variante de `*.cs` según el estado del repo."
+],
+[
+"P-15",
+"R",
+true,
+"`.git-blame-ignore-revs` después; fusión con merge commit."
+],
+[
+"P-15",
+"R",
+true,
+"Poner la compuerta de texto en la CI y el hook versionado."
+],
+[
+"P-15",
+"LINE",
+true,
+"| 6 | Congelar el grafo:"
+],
+[
+"P-15",
+"LINE",
+true,
+"| 7 | Construir la imagen de CI"
+],
+[
+"P-15",
+"LINE",
+true,
+"| 8 | En la CI: `ContinuousIntegrationBuild`"
+],
+[
+"P-15",
+"R",
+true,
+"Los pasos 1 a 4 resuelven la primera pregunta del caso; 5 a 7, la segu"
+],
+[
+"P-15",
+"R",
+true,
+"restaura con NuGet y ejecuta el hook de git;"
+],
+[
+"P-15",
+"BSE",
+true,
+"## 12. Hoja de ruta"
+],
+[
+"P-16",
+"R",
+true,
+"y **EA-1** (`Examples/A-plantillas/verificar.sh`) las verifica en conj"
+],
+[
+"P-16",
+"R",
+true,
+"¿El repo es nuevo o heredado ya convertido con BOM (variante B para `*"
+],
+[
+"P-16",
+"R",
+true,
+"# Variante B (código heredado YA convertido a UTF-8 con BOM): descomen"
+],
+[
+"P-16",
+"R",
+true,
+"Fuentes: [B43] (llaves, `unset`, la última sección gana, sin comentari"
+],
+[
+"P-16",
+"R",
+true,
+"¿el disco tiene que tener LF en todas las máquinas (sí, si se construy"
+],
+[
+"P-16",
+"R",
+true,
+"¿hay lock files de NuGet (entonces `disable`)?"
+],
+[
+"P-16",
+"R",
+true,
+"Variante tolerante, sin lock files: `\"version\": \"8.0.400\", \"rollForwar"
+],
+[
+"P-16",
+"R",
+true,
+"  <PropertyGroup>\n    <!-- Capa 3: generar y usar packages.lock.json. "
+],
+[
+"P-16",
+"R",
+true,
+"    <AssemblyMetadata Include=\"ImagenDigest\" Value=\"$(ImagenDigest)\" C"
+],
+[
+"P-16",
+"R",
+true,
+"`LangVersion` puede omitirse (lo fija el TFM) pero nunca valer `latest"
+],
+[
+"P-16",
+"R",
+true,
+"```jsonc\n// Anexo A.9. La etiqueta queda como referencia humana; manda"
+],
+[
+"P-16",
+"R",
+true,
+"Preguntas: ¿qué digest corresponde a la imagen de la CI (misma base)? "
+],
+[
+"P-16",
+"R",
+true,
+"# Imagen de desarrollo y CI con los TRES runtimes (variante \"imagen ún"
+],
+[
+"P-16",
+"R",
+true,
+"ARG NODE_IMAGE=node:22-bookworm-slim@sha256:d649c27dae7ba0137b3cef5dd7"
+],
+[
+"P-16",
+"R",
+true,
+"# Base: el SDK de .NET (Debian 12, la misma familia que node:22-bookwo"
+],
+[
+"P-16",
+"R",
+true,
+"Archivo ejecutado en E8-3, E8-5 y E8-6: `Examples/N8-integracion-polig"
+],
+[
+"P-16",
+"R",
+true,
+"```sh\n#!/bin/sh\n# Anexo A.11 (esqueleto). La versión completa está en\n"
+],
+[
+"P-16",
+"LINE",
+true,
+"Activación, una vez por clon: `git config core.hooksPath .gi"
+],
+[
+"P-16",
+"R",
+true,
+"¿la imagen del job es la misma receta que el devcontainer, por digest?"
+],
+[
+"P-16",
+"R",
+true,
+"    # Misma receta que el devcontainer, por digest (completar)."
+],
+[
+"P-16",
+"R",
+true,
+"¿El repo es privado (el ecosistema `devcontainers` no está soportado a"
+],
+[
+"P-16",
+"R",
+true,
+"  - package-ecosystem: \"github-actions\""
+],
+[
+"P-16",
+"R",
+true,
+"Para imágenes por digest, Renovate documenta `pinDigests` [B108]; que "
+],
+[
+"P-16",
+"R",
+true,
+"¿La aprobación del dueño es obligatoria en el plan del equipo [B177][B"
+],
+[
+"P-16",
+"R",
+true,
+"# (merge commit: un squash o un rebase cambiarían el SHA)."
+],
+[
+"P-17",
+"R",
+true,
+"- [ ] Activé el hook una vez en este clon: `git config core.hooksPath "
+],
+[
+"P-17",
+"R",
+true,
+"- [ ] Tengo instalado el SDK exacto de `global.json`; si Visual Studio"
+],
+[
+"P-17",
+"R",
+true,
+"- [ ] Corro la compuerta antes del push; si da rojo"
+],
+[
+"P-17",
+"R",
+true,
+"- [ ] Después de una migración de codificación, refresqué mi working t"
+],
+[
+"P-17",
+"R",
+true,
+"- [ ] La elección de `rollForward` está escrita en un ADR, coherente c"
+],
+[
+"P-17",
+"R",
+true,
+"- [ ] Cada ejecutable tiene lock; las bibliotecas que se publican, no."
+],
+[
+"P-17",
+"R",
+true,
+"- [ ] Toda imagen (CI, devcontainer, ejecución) va por digest, y un bo"
+],
+[
+"P-17",
+"R",
+true,
+"- [ ] Se generan SBOM y procedencia junto al artefacto; el nivel SLSA "
+],
+[
+"P-18",
+"R",
+true,
+"| EOL | Final de línea: LF o CRLF. | §4.1 |\n"
+],
+[
+"P-18",
+"R",
+true,
+"| **Final de línea** (EOL) |"
+],
+[
+"P-18",
+"R",
+true,
+"| Índice / working tree | Lo que git guarda / lo que está en disco. | "
+],
+[
+"P-18",
+"R",
+true,
+"| Pieza (artefacto) | Lo que sale de la build, identificado por digest"
+],
+[
+"P-18",
+"R",
+true,
+"| Procedencia (*provenance*) | Atestación de cómo, dónde y por quién s"
+],
+[
+"P-18",
+"R",
+true,
+"| SBOM | Inventario de componentes de una pieza. |"
+],
+[
+"P-18",
+"glosario: filas insertadas en orden alfabético",
+true,
+"25"
+],
+[
+"P-18",
+"R",
+true,
+"en SLSA, desde el nivel L2"
+],
+[
+"P-18",
+"R",
+true,
+"un SBOM puede describir"
+],
+[
+"P-20",
+"R",
+true,
+"Fecha de todas las corridas: 2026-10-07, Linux x86_64 con Docker."
+],
+[
+"P-20",
+"E3-1 salida",
+true,
+""
+],
+[
+"P-20",
+"E3-2 salida",
+true,
+""
+],
+[
+"P-20",
+"E3-3 salida",
+true,
+""
+],
+[
+"P-20",
+"E3-4 salida",
+true,
+""
+],
+[
+"P-20",
+"E3-5 salida",
+true,
+""
+],
+[
+"P-20",
+"E3-6 salida",
+true,
+""
+],
+[
+"P-20",
+"R",
+true,
+"| E1-04 | Razor con cp1252 → U+FFFD |"
+],
+[
+"P-20",
+"R",
+true,
+"| E1-05 | Node: módulos, `fs`, `JSON.parse`, `TextDecoder` |"
+],
+[
+"P-20",
+"R",
+true,
+"| E1-12 / E1-13 | Categorías Unicode; cp1252 frente a Latin-1; `file` "
+],
+[
+"P-20",
+"R",
+true,
+"| E2-2 | Migración en tres commits; verificación mecánica; `blame` |"
+],
+[
+"P-20",
+"R",
+true,
+"| E3-2 | SDK → compilador; TFM → C#; runtime al ejecutar; `LangVersion"
+],
+[
+"P-20",
+"R",
+true,
+"| E3-3 | `engines`, `engine-strict`, `devEngines`, Corepack (Node 22/2"
+],
+[
+"P-20",
+"R",
+true,
+"| E4-2 | CPM y *transitive pinning* |"
+],
+[
+"P-20",
+"R",
+true,
+"| E4-4 | npm y pnpm |"
+],
+[
+"P-20",
+"R",
+true,
+"| E8-3 | Frontera de la build |"
+],
+[
+"P-20",
+"R",
+true,
+"| E8-6 | SBOM multi-ecosistema, nativos unidos, BuildKit con procedenc"
+],
+[
+"P-20",
+"R",
+true,
+"| EA-1 | Todas las plantillas del Anexo A, juntas |"
+],
+[
+"P-20",
+"R",
+true,
+"| E2-6 | Plantillas del SDK 8 y 10; `dotnet format`; `dotnet sln add` "
+],
+[
+"P-21",
+"R",
+true,
+"Siguiendo la separación entre hechos e interpretaciones, esta lista re"
+],
+[
+"P-21",
+"R",
+true,
+"- La rama Windows del mecanismo de Roslyn (ACP 1252 y ACP UTF-8), §4.2"
+],
+[
+"P-21",
+"R",
+true,
+"si Dependabot `docker` actualiza un `FROM …@sha256`;"
+],
+[
+"P-21",
+"R",
+true,
+"- El modo UTF-8 por defecto de Python 3.15 en una versión real (final "
+],
+[
+"P-21",
+"R",
+true,
+"- Que el ciclo típico de un «commit de BOM» sea el descrito en §4.2.6 "
+],
+[
+"P-21",
+"R",
+true,
+"**Pendiente de decisión de la mesa.** Si la guía recomienda un formato"
+],
+[
+"P-03",
+"3f **[no verificado en Windows]**",
+true,
+"1 reemplazo(s)"
+],
+[
+"P-03",
+"3f **[no verificado en Visual Studio]**",
+true,
+"0 reemplazo(s)"
+],
+[
+"P-03",
+"3f **[no verificado como ausencia]**",
+true,
+"1 reemplazo(s)"
+],
+[
+"P-03",
+"3f **[no verificado: no hubo runner Windows]**",
+true,
+"1 reemplazo(s)"
+],
+[
+"P-03",
+"3f **[no medido]**",
+true,
+"0 reemplazo(s)"
+],
+[
+"P-03",
+"3f **[no ejercitado en el laboratorio]**",
+true,
+"1 reemplazo(s)"
+],
+[
+"P-03",
+"3f **[hallazgo negativo, a revalidar]**",
+true,
+"0 reemplazo(s)"
+],
+[
+"P-03",
+"3f **[criterio sobre base del fabricante]**",
+true,
+"0 reemplazo(s)"
+],
+[
+"P-03",
+"3f **[criterio, apoyado en E7-4 y en [B83]]**",
+true,
+"1 reemplazo(s)"
+],
+[
+"P-03",
+"3f **[criterio]** El ciclo típico de un commit d",
+true,
+"1 reemplazo(s)"
+],
+[
+"P-03",
+"3f [criterio] sin negrita → en negrita",
+true,
+"20 reemplazo(s)"
+],
+[
+"P-03",
+"3f conteo marcas fuera de código (total, en negrita)",
+true,
+"antes (127, 107) · después (132, 132)"
+],
+[
+"P-12-verif",
+"R",
+true,
+"con qué entorno se construyó cada pieza."
+],
+[
+"P-12-verif",
+"R",
+true,
+"| Saber con qué se construyó una pieza ya publicada |"
+],
+[
+"P-12-verif",
+"R",
+true,
+"**¿Qué capas hay que registrar para afirmar con qué entorno se constru"
+],
+[
+"P-12-verif",
+"R",
+true,
+"Todo lo que se incrusta en la pieza tiene que ser reproducible"
+],
+[
+"P-12-verif",
+"R",
+true,
+"Ninguna pieza se construye sola"
+],
+[
+"P-12-verif",
+"R",
+true,
+"«con qué entorno se ensambló la pieza»"
+],
+[
+"P-12-verif",
+"R",
+true,
+"¿Qué se agrega a la pieza que el SDK no graba?"
+],
+[
+"DER-EA1",
+"R",
+true,
+"POLITICA-TEXTO: 21 archivo(s) revisado(s), 0 violación(es)"
+],
+[
+"VERSION",
+"R",
+true,
+"version: 1.0.0-borrador"
+],
+[
+"VERSION",
+"R",
+true,
+"last_review: 2026-10-07"
+],
+[
+"VERSION",
+"R",
+true,
+"> **Versión 1.0.0-borrador.** Fecha: 2026-10-07."
+],
+[
+"VERSION",
+"R",
+true,
+"- **[Anexo F. Límites y lo que no se verificó](#anexo-f-límites-y-lo-q"
+],
+[
+"VERSION",
+"control de cambios",
+true,
+""
+]
+]

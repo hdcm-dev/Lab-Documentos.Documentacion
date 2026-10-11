@@ -1,0 +1,10 @@
+== sdk:8.0
+8.0.425
+antes   A/A.csproj  ef bb bf
+despues A/A.csproj  ef bb bf
+== sdk:10.0
+10.0.400
+antes   S.slnx  ef bb bf
+antes   A/A.csproj  ef bb bf
+despues S.slnx  3c 53 6f
+despues A/A.csproj  ef bb bf

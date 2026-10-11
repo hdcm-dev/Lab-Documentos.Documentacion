@@ -1,0 +1,31 @@
+# E1 adhoc-AH-002 ciclo 3 (2026-10-09): dueños efectivos de Examples/A-plantillas/repo/.github/CODEOWNERS (= A.14), última coincidencia gana [B178]
+# comando: python3 -I owners.py Examples/A-plantillas/repo  (los cuatro últimos archivos no están en la plantilla; se agregan porque la guía los nombra)
+@org/plataforma                               .devcontainer/devcontainer.json
+@org/arquitectura                             .editorconfig
+@org/desarrollo                               .git-blame-ignore-revs
+@org/arquitectura                             .gitattributes
+@org/desarrollo                               .githooks/pre-commit
+@org/plataforma                               .github/CODEOWNERS
+@org/plataforma                               .github/dependabot.yml
+@org/plataforma                               .github/workflows/ci.yml
+@org/desarrollo                               .gitignore
+@org/desarrollo                               .nvmrc
+@org/desarrollo                               .pre-commit-config.yaml
+@org/desarrollo                               Directory.Build.props
+@org/desarrollo                               Directory.Build.targets
+@org/arquitectura                             Directory.Packages.props
+@org/desarrollo                               docs/adr/0000-plantilla-entorno.md
+@org/arquitectura @org/plataforma             global.json
+@org/desarrollo                               imagen/Dockerfile
+@org/desarrollo                               nuget.config
+@org/desarrollo                               src/App/App.csproj
+@org/desarrollo                               src/App/Program.cs
+@org/arquitectura                             src/App/packages.lock.json
+@org/plataforma                               tools/ci/compuerta.sh
+@org/plataforma                               tools/ci/registrar-entorno.sh
+@org/desarrollo                               tools/gen/.python-version
+@org/desarrollo                               tools/gen/pyproject.toml
+@org/desarrollo                               tools/gen/uv.lock
+@org/desarrollo                               web/.npmrc
+@org/desarrollo                               web/package-lock.json
+@org/desarrollo                               web/package.json

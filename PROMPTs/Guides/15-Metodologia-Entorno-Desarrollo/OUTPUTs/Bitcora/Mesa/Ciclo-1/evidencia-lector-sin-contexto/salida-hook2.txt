@@ -1,0 +1,5 @@
+COMPUERTA commit=sin-commits alcance=--staged
+    python3: can't open file '/tmp/h/r/tools/ci/check_text_policy.py': [Errno 2] No such file or directory
+COMPUERTA [FALLA] texto: la política de .editorconfig/.gitattributes no se cumple
+COMPUERTA [n/a]   toolchain .NET: no hay global.json
+COMPUERTA [n/a]   toolchain Node: no hay .nvmrc

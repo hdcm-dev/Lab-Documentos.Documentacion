@@ -1,0 +1,24 @@
+P-01: prosa +28, evidencia y plantillas +1
+P-02: prosa +2, evidencia y plantillas +0
+P-03: prosa -124, evidencia y plantillas -3
+P-04: prosa +36, evidencia y plantillas +2
+P-05: prosa +92, evidencia y plantillas +6
+P-06: prosa +36, evidencia y plantillas +1
+P-07: prosa -16, evidencia y plantillas +9
+P-08: prosa +146, evidencia y plantillas +4
+P-09: prosa +80, evidencia y plantillas +20
+P-10: prosa +132, evidencia y plantillas +18
+P-11: prosa +121, evidencia y plantillas +2
+P-12: prosa +66, evidencia y plantillas +25
+P-13: prosa +89, evidencia y plantillas +140
+P-14: prosa +29, evidencia y plantillas +0
+P-15: prosa +12, evidencia y plantillas +0
+P-16: prosa +0, evidencia y plantillas +176
+P-17: prosa +3, evidencia y plantillas +65
+P-18: prosa +48, evidencia y plantillas +14
+P-19: prosa -14, evidencia y plantillas +1
+P-20: prosa -74, evidencia y plantillas +0
+P-21: prosa -125, evidencia y plantillas +0
+P-22: prosa -58, evidencia y plantillas +0
+P-23: prosa -16, evidencia y plantillas +0
+total wc -w: 54267 -> 55241 (+974); prosa 43604 -> 44097 (+493); evidencia 10663 -> 11144 (+481); fallas=0

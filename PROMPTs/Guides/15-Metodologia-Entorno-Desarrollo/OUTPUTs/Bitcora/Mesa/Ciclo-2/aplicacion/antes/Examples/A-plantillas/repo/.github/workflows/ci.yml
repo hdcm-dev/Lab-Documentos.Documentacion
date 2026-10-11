@@ -1,0 +1,23 @@
+# Anexo A.12. Ejemplo NO ejecutado en el laboratorio (requiere GitHub).
+name: compuerta
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  compuerta:
+    runs-on: ubuntu-24.04
+    # Imagen construida desde imagen/Dockerfile (A.10), la misma receta que el devcontainer (A.9),
+    # publicada en el registro del equipo y nombrada por digest (completar).
+    container: ghcr.io/org/imagen-ci@sha256:0000000000000000000000000000000000000000000000000000000000000000
+    steps:
+      # Acción fijada por SHA completo; la etiqueta va como comentario.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - run: export SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct) && tools/ci/compuerta.sh --base "origin/${{ github.base_ref }}"
+        if: github.event_name == 'pull_request'
+      - run: export SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct) && tools/ci/compuerta.sh
+        if: github.event_name == 'push'

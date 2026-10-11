@@ -1,0 +1,59 @@
+== 0. Imagen de A.10 propuesta
+   docker build rc=0
+   import editorconfig OK con 3.12.15
+   versionado: 0 archivos de bin/obj/node_modules/.venv (A.18)
+== 1. Compuerta propuesta en modo CI sobre las plantillas (proyectos en subcarpetas)
+COMPUERTA commit=41684fa alcance=todo
+COMPUERTA [ok]    texto: POLITICA-TEXTO: 29 archivo(s) revisado(s), 0 violación(es)
+COMPUERTA [ok]    toolchain .NET: SDK 8.0.425 = global.json
+COMPUERTA [ok]    toolchain Node: 24.21.0 cumple .nvmrc=24.21.0
+COMPUERTA [ok]    toolchain Python: 3.12.15 cumple tools/gen/.python-version=3.12.15
+COMPUERTA [ok]    grafo NuGet: src/App/packages.lock.json coincide (--locked-mode)
+COMPUERTA [ok]    grafo NuGet: src/App/packages.lock.json requested = resolved
+COMPUERTA [ok]    grafo npm: npm ci instaló exactamente web/package-lock.json
+COMPUERTA [ok]    grafo uv: tools/gen/uv.lock al día (uv lock --check)
+COMPUERTA resultado=VERDE
+   rc=0
+== 2. Pasos 8a de A.12, en la misma imagen: build + registro del entorno
+   dotnet build rc=0 (SOURCE_DATE_EPOCH=1791573445)
+   commit=41684faa05ea2b37717a21d648fe80af45142ee5 arbol_limpio=si
+   imagen=ghcr.io/org/imagen-ci@sha256:0000000000000000000000000000000000000000000000000000000000000000
+   dotnet_sdk=8.0.425 compilador_csharp=4.11.0-3.25569.22 (3fb752d4)
+   node=v24.21.0 npm=11.19.0
+   python=3.12.15 uv=0.12.23
+   sha256 src/App/packages.lock.json=696d9560bd754ce84f4e2300300f7c1bb218db0430a1ceb8b948fd73aac40baf
+   sha256 tools/gen/uv.lock=bcf2758b2d2d690bb9607c0727b50622d6bafe64cf4772e24fab2cfe855fe760
+   sha256 web/package-lock.json=72ab32c8c90269a3b223fca3ce3f0cd095212096bda6444490aba1c19fc3a81a
+   sha256 out/App.dll=dd90df2f39b459b24227c9d25704d1fa70c6236393508a73236eb70c234fbe9a
+   rc=0
+== 3. El .cs del caso en cp1252, en una subcarpeta, en el hook (--staged)
+    POLITICA-TEXTO: src/App/Alarma.cs: no es UTF-8 válido (byte 0xc7 en offset 22; ¿cp1252?)
+COMPUERTA [FALLA] texto: la política de .editorconfig/.gitattributes no se cumple
+COMPUERTA resultado=ROJO (1 paso/s)
+   rc=1
+== 4. Versión central inexistente (Primitives 8.0.2): con lock, el restore no avisa
+   restore local: líneas NU1603 = 0
+COMPUERTA [ok]    grafo NuGet: src/App/packages.lock.json coincide (--locked-mode)
+    Microsoft.Extensions.Primitives pide [8.0.2, ) y resolvió 9.0.0 (net8.0)
+COMPUERTA [FALLA] grafo NuGet: src/App/packages.lock.json resolvió otra versión que la pedida (revisar la declaración)
+COMPUERTA resultado=ROJO (1 paso/s)
+   rc=1
+== 5. Una app de escritorio (WinExe, WinForms) recibe lock con A.4b propuesta
+   restore local rc=0; packages.lock.json: SI
+   {"Properties":{"OutputType":"WinExe","RestorePackagesWithLockFile":"true","RestoreLockedMode":"true"}}
+COMPUERTA [ok]    grafo NuGet: src/Escritorio/packages.lock.json coincide (--locked-mode)
+COMPUERTA [ok]    grafo NuGet: src/Escritorio/packages.lock.json requested = resolved
+COMPUERTA resultado=VERDE
+   rc=0
+== 6. web/package.json cambiado sin regenerar su lock (subcarpeta)
+    npm error code EUSAGE
+COMPUERTA [FALLA] grafo npm: web/package-lock.json no coincide con package.json
+COMPUERTA resultado=ROJO (1 paso/s)
+   rc=1
+== 7. La misma compuerta en la imagen de A.10 SIN EditorConfig (receta actual de Examples/A-plantillas)
+   docker build rc=0
+COMPUERTA [FALLA] texto: falta el paquete EditorConfig de Python (EditorConfig==0.17.1; prerrequisito, no una violación)
+COMPUERTA resultado=ROJO (1 paso/s)
+   rc=1
+== 8. YAML de A.12 propuesto
+   ci.yml: YAML válido; permissions: {'contents': 'read', 'packages': 'read'} | container con credentials: True

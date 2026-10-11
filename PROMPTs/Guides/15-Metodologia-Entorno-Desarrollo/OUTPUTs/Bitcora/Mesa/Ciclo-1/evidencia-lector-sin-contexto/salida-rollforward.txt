@@ -1,0 +1,5 @@
+exit=145
+      A compatible .NET SDK was not found.
+Requested SDK version: 8.0.424
+Installed SDKs:
+Install the [8.0.424] .NET SDK or update [/w/global.json] to match an installed SDK.

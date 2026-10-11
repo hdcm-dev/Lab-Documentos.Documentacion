@@ -1,0 +1,30 @@
+-- árbol sucio:
+bash-5.2$ if git diff --quiet && git diff --cached --quiet; then
+>   git pull --ff-only && git rm -rq --cached . && git reset -q --hard
+> else
+>   echo "commiteá o guardá con git stash antes de seguir" >&2
+> fi
+commiteá o guardá con git stash antes de seguir
+bash-5.2$ echo "la terminal sigue abierta"
+la terminal sigue abierta
+bash-5.2$ exit
+estado del shell interactivo: 0
+-- árbol limpio (sin remoto: git pull falla y no se ejecuta lo que sigue):
+bash-5.2$ if git diff --quiet && git diff --cached --quiet; then
+>   git pull --ff-only && git rm -rq --cached . && git reset -q --hard
+> else
+>   echo "commiteá o guardá con git stash antes de seguir" >&2
+> fi
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> main
+
+bash-5.2$ echo "la terminal sigue abierta"
+la terminal sigue abierta
+bash-5.2$ exit

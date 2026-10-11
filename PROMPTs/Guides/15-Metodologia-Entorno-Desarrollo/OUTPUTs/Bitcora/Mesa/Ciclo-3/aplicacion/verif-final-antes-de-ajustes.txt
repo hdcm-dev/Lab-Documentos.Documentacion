@@ -1,0 +1,86 @@
+P-01 | OK    | version: = fila vigente del control de cambios | 1.1.0
+P-01 | OK    | cifra de fuentes = filas | Bnn | del Anexo D | 224 / 224
+P-01 | OK    | rango del front matter = última fuente | 224
+P-01 | OK    | «74 experimentos» = IDs del Anexo E expandidos (filas + sufijos) | filas=66
+P-01 | OK    | 'las ampliaciones de la revisión' = 0 | 
+P-01 | OK    | ruta mínima con fila §3 / E0-6 | 
+P-01 | OK    | regla de §0.3: «todo otro motivo se escribe» | 
+P-01 | OK    | marcas sin motivo: todas metatexto o Windows/VS/Git Bash/ESC-01 | total=20 meta=3 win=17 fuera=[]
+P-02 | OK    | fila ACT-OPS de §2.4 remite a §12, pasos 4–9 | 
+P-03 | OK    | §3.5 sin tabla | 
+P-03 | OK    | §3.5 enlaza #821-qué-fija-un-contenedor-y-qué-no y resuelve | 
+P-03 | OK    | §3.6: fila de capa 6 con A.17 y fila de gobierno con A.18 | 
+P-04 | OK    | celda ≥ 3.15: UnicodeDecodeError con [B220] | 
+P-04 | OK    | child_process remite a E1-11 y E8-1 rc=2 | 
+P-04 | OK    | e1-shebang-node.txt: con-bom status 0 y crlf ENOENT | 
+P-04 | OK    | E8-1: saluda.py FALLA rc=2 | 
+P-04 | OK    | [B220] definida y citada | 
+P-05 | OK    | fila `*.slnx` sin BOM | 
+P-05 | OK    | ninguna fila dice que la CLI repone el BOM de .razor | 
+P-05 | OK    | E2-6: s.slnx con BOM → sin BOM (SDK 10) | 
+P-05 | OK    | E2-6: Items/Clase.cs con BOM; Comp.razor sin BOM tras format | 
+P-05 | OK    | guardián (x4): avisa y la terminal sigue abierta | 
+P-05 | OK    | guardián nuevo sin exit en la guía | 
+P-05 | OK    | [B222] definida y citada | 
+P-06 | OK    | todas las apariciones de CheckSdkVulnerabilities dicen SDK 11 | 4 apariciones; sin SDK 11: []
+P-06 | OK    | celda .NET de §6.3: rango en CI [B56] y lock por defecto **[criterio]** | 
+P-06 | OK    | `paths` con **[no verificado]** para Visual Studio | 
+P-06 | OK    | 'npm y pip' = 0 | 
+P-07 | OK    | el bloque restaura src/App --locked-mode | 
+P-07 | OK    | ya no corre dotnet restore --locked-mode en la raíz | 
+P-08 | OK    | E5-8: 3 × dll 9815b804e89acc33 pdb 39c56299b47eef9f; control 7cd2a836 | 
+P-08 | OK    | 'reconstrucción bit a bit' = 0 en §8 y §12 | 
+P-08 | OK    | §8.2.2: 8a/8b sólo como «§12, paso 8a/8b» | []
+P-08 | OK    | definición «Qué decide cada capa sobre el artefacto» en §8.2.2 | 
+P-08 | OK    | [B218] definida y citada | 
+P-08 | OK    | remisiones a §8.2.2 en el texto (inventario C3-06) | 31
+P-09 | OK    | 'ImagenDigest' = 0 | 
+P-09 | OK    | verificación de consumidor con --signer-workflow y --source-ref | 2
+P-09 | OK    | sigue rotulada Ilustrativo | 
+P-09 | OK    | [B221] definida y citada | 
+P-09 | OK    | §9.8 enlaza A.17 | 
+P-10 | OK    | EA-1 paso 8: sin locks → [n/a] npm y uv, VERDE, rc=0 | 
+P-10 | OK    | §10.4 declara el límite «sin lock» (n/a) | 
+P-10 | OK    | owners.py (x6): arquitectura/plataforma para lo que desarma la compuerta | 
+P-10 | OK    | pre-commit y core.hooksPath se excluyen (la guía lo declara; E1 «Cowardly refusing…» en el voto de evidencia) | 
+P-10 | OK    | consigna de §10.9 con criterio de corrección | 
+P-11 | OK    | 'verificar.sh' no aparece en §11.2.9 ni §11.4 | 
+P-11 | OK    | §11.4 nombra tools/ci/compuerta.sh | 
+P-11 | OK    | párrafos de prosa de §11 < 150 palabras | []
+P-12 | OK    | YAML de §12 (pyyaml no disponible: se valida en checks) | 
+P-12 | OK    | 8b y 9 llevan # [no verificado] | 2
+P-12 | OK    | 8a admite NO DECLARADA sólo con runner alojado | 
+P-13 | OK    | anexoA.py: bloques del Anexo A = Examples/A-plantillas/repo | 22
+P-13 | OK    | EA-1: 1c 3 → 0; 9b registro falla (rc=1) | 
+P-13 | FALLA | extracto de A.17: commit y DLL de la salida versionada de EA-1 | 386d768e c7ab264a
+P-13 | OK    | A.10 con sdk:8.0.425-bookworm-slim@sha256:ec9c0a0d… | 
+P-14 | OK    | B.3 remite a §8.2.2 | 
+P-14 | OK    | B.4 remite a §8.2.2 | 
+P-14 | OK    | B.1 remite a A.11 | 
+P-15 | OK    | alias «lock» y «modo estricto» en el glosario | 
+P-16 | OK    | [B218] definida y citada | 
+P-16 | OK    | [B219] definida y citada | 
+P-16 | OK    | [B220] definida y citada | 
+P-16 | OK    | [B221] definida y citada | 
+P-16 | OK    | [B222] definida y citada | 
+P-16 | OK    | [B223] definida y citada | 
+P-16 | OK    | definidas = citadas | 224 / 224
+P-16 | FALLA | 0 URL repetidas entre filas distintas | {'https://builds.dotnet.microsoft.com/dotnet/release-metadata/releases-index.json': ['B224', 'B62']}
+P-16 | OK    | npm v12 en B63, B64, B150 | 
+P-17 | OK    | fila E5-8 en el Anexo E y salida existente | 
+P-17 | OK    | salidas nuevas existen (E1-11 Node, E2-6) | 
+P-17 | OK    | línea de fechas de las corridas en el Anexo E | 
+P-18 | OK    | «Datos volátiles» con ≥ 12 citas [Bnn] | 13
+P-18 | OK    | trazas P-03, P-04, P-07 nombran sus plantillas | 
+P-19 | OK    | fila 1.1.0 = version: | 1.1.0
+P-19 | OK    | celda ≤ 21 palabras | 7
+P-19 | OK    | 'Práctica de §3' = 0 | 
+P-19 | OK    | 'cuatro marcas de juicio (§0.3)' = 1 | 
+P-19 | OK    | rango del párrafo 1.1.0 = última fuente | 224
+P-20 | OK    | 0 enlaces internos rotos | []
+P-20 | OK    | apertura del Anexo A remite a EA-1 | 
+P-21 | OK    | 0 enlaces internos rotos | []
+P-21 | OK    | §3: «La columna «Capítulo» de §3.2 es el mapa.» | 
+P-22 | OK    | 0 enlaces internos rotos | []
+P-23 | OK    | '**[no verificado]** (requiere Windows)' = 0 | 
+total=85 OK=83 FALLA=2

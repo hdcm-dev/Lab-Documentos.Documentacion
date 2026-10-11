@@ -1,0 +1,7 @@
+== workflow con container:, guardado como compuerta.yml ==
+sed: no se puede leer .github/workflows/ci.yml: No existe el fichero o el directorio
+imagen=NO DECLARADA (runner sin contenedor: capa 4 en el log «Set up job»)
+rc=0
+== el mismo, guardado como ci.yml ==
+imagen=ghcr.io/org/imagen-ci@sha256:0000000000000000000000000000000000000000000000000000000000000000
+rc=0

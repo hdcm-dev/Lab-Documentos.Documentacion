@@ -1,0 +1,8 @@
+<Project>
+  <!-- Anexo A.4b. El lock que gobierna es el del proyecto en la punta de la cadena.
+       Va en .targets y no en .props: cuando se evalúa Directory.Build.props,
+       OutputType todavía no está definido y la condición no se cumple nunca. -->
+  <PropertyGroup Condition="'$(OutputType)' == 'Exe'">
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+</Project>

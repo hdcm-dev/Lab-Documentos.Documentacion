@@ -1,0 +1,17 @@
+
+# --- Ampliación (ciclo 3): la dirección contraria (con BOM antes) y las plantillas de ítem ---
+echo "-- ¿Y si el .csproj y la solución tienen BOM antes de editarlos?"
+W4=$(mktemp -d); cd "$W4"
+dotnet new console -o a >/dev/null 2>&1; dotnet new classlib -o b >/dev/null 2>&1; dotnet new sln -n s >/dev/null 2>&1
+SLN=$(ls s.sln* | head -1)
+for f in a/a.csproj "$SLN"; do sed -i 's/\r$//' "$f"; [ "$(head -c3 "$f" | od -An -tx1 | tr -d ' \n')" = efbbbf ] || sed -i '1s/^/\xef\xbb\xbf/' "$f"; done
+echo "   antes (con BOM puesto a mano):"; estado a/a.csproj; estado "$SLN"
+dotnet sln "$SLN" add a/a.csproj >/dev/null 2>&1; dotnet add a/a.csproj reference b/b.csproj >/dev/null 2>&1
+echo "   después de 'dotnet sln add' y 'dotnet add reference':"; estado a/a.csproj; estado "$SLN"
+echo "-- Plantillas de ítem (class, interface, razorcomponent) dentro de un proyecto: ¿con BOM?"
+W5=$(mktemp -d); cd "$W5"; dotnet new console -o p >/dev/null 2>&1; cd p
+dotnet new class -n Clase -o Items >/dev/null 2>&1; dotnet new interface -n IFace -o Items >/dev/null 2>&1; dotnet new razorcomponent -n Comp -o Items >/dev/null 2>&1
+for f in Items/Clase.cs Items/IFace.cs Items/Comp.razor; do estado "$f"; done
+echo "-- Sin BOM a mano: ¿'dotnet format whitespace' se lo repone al .razor? (.editorconfig sin charset)"
+sed -i '1s/^\xef\xbb\xbf//' Items/Comp.razor; printf 'root = true\n[*]\nend_of_line = lf\n' > .editorconfig
+dotnet format whitespace p.csproj -v q >/dev/null 2>&1; echo "   dotnet format whitespace rc=$?"; estado Items/Comp.razor

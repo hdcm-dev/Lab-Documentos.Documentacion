@@ -1,0 +1,33 @@
+== A.3 en el laboratorio (Examples/A-plantillas/repo/global.json):
+{
+  "sdk": {
+    "version": "8.0.425",
+    "rollForward": "disable",
+    "allowPrerelease": false
+  }
+}
+== ARG de la imagen de A.10:
+6:ARG SDK_IMAGE=mcr.microsoft.com/dotnet/sdk:8.0@sha256:78235e09001f52b6592c458ac010775ebac6725422e80cd0c1650590f67b2743
+15:FROM ${SDK_IMAGE}
+== dotnet sdk check, dentro de mcr.microsoft.com/dotnet/sdk:8.0 (fecha del host: 2026-10-09)
+.NET SDKs:
+Version      Status                                
+---------------------------------------------------
+8.0.425      .NET 8.0 is going out of support soon.
+
+Try out the newest .NET SDK features with .NET 9.0.318.
+
+.NET Runtimes:
+Name                          Version      Status                                
+---------------------------------------------------------------------------------
+Microsoft.AspNetCore.App      8.0.31       .NET 8.0 is going out of support soon.
+Microsoft.NETCore.App         8.0.31       .NET 8.0 is going out of support soon.
+
+
+The latest versions of .NET can be installed from https://aka.ms/dotnet-core-download. For more information about .NET lifecycles, see https://aka.ms/dotnet-core-support.
+
+11.0 sts go-live eol: None latest-sdk: 11.0.100-rc.1.26425.128 latest-release-date: 2026-09-08
+10.0 lts active eol: 2028-11-14 latest-sdk: 10.0.401 latest-release-date: 2026-09-08
+9.0 sts maintenance eol: 2026-11-10 latest-sdk: 9.0.318 latest-release-date: 2026-09-08
+8.0 lts maintenance eol: 2026-11-10 latest-sdk: 8.0.425 latest-release-date: 2026-09-08
+fuente: https://builds.dotnet.microsoft.com/dotnet/release-metadata/releases-index.json (consultado 2026-10-09)

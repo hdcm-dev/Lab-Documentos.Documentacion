@@ -1,0 +1,118 @@
+diff -ru original/repo/Directory.Build.props repo/Directory.Build.props
+--- original/repo/Directory.Build.props	2026-10-09 16:13:30.287412257 -0300
++++ repo/Directory.Build.props	2026-10-09 18:00:07.271140592 -0300
+@@ -21,11 +21,7 @@
+     <IncludeSymbols>true</IncludeSymbols>
+     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+     <!-- NO configurar PathMap a mano: no normaliza el mapa de SourceLink. -->
++    <!-- Con qué SDK e imagen se construyó va AL LADO del artefacto (registro del entorno, A.17),
++         no adentro: un dato incrustado que cambia con la imagen cambia el hash de la DLL. -->
+   </PropertyGroup>
+-
+-  <ItemGroup>
+-    <!-- Lo que el SDK no graba: con qué SDK y en qué imagen (la pasa la CI). -->
+-    <AssemblyMetadata Include="SdkVersion" Value="$(NETCoreSdkVersion)" />
+-    <AssemblyMetadata Include="ImagenDigest" Value="$(ImagenDigest)" Condition="'$(ImagenDigest)' != ''" />
+-  </ItemGroup>
+ </Project>
+diff -ru original/repo/.editorconfig repo/.editorconfig
+--- original/repo/.editorconfig	2026-10-09 16:46:18.058180180 -0300
++++ repo/.editorconfig	2026-10-09 18:00:07.275140672 -0300
+@@ -1,4 +1,4 @@
+-# Política de texto del repositorio (guía §5, §11.3; Anexo A.1).
++# Política de texto del repositorio (guía §5, §11.2.2; Anexo A.1).
+ # La leen los editores al guardar (Visual Studio de fábrica; VS Code con la
+ # extensión EditorConfig) y la compuerta al verificar. Git NO la lee.
+ # Los comentarios van siempre en línea propia: un # después de un valor
+@@ -15,7 +15,9 @@
+ [*.{cmd,bat}]
+ end_of_line = crlf
+ 
+-# Las plantillas y comandos del SDK de .NET crean o reponen estos con BOM.
++# Con BOM: .razor y .cshtml, porque así los crean las plantillas y así los declaran
++# dotnet/aspnetcore y dotnet/aspire; .sln, porque dotnet sln add lo repone.
++# .slnx queda en [*]: dotnet sln add le quita el BOM (SDK 10).
+ [*.{razor,cshtml,sln}]
+ charset = utf-8-bom
+ 
+@@ -25,9 +27,10 @@
+ 
+ # Variante B (heredado YA convertido a UTF-8 con BOM, como el del caso, o elegida
+ # antes de migrar): descomentar. Cubre los archivos de proyecto, que siguen la
+-# convención de *.cs (5.2.3); los Directory.Build.* de este anexo se guardan
+-# entonces con BOM. Con la variante A, lo que crea dotnet new console (Program.cs
+-# y el .csproj, con BOM) se normaliza antes del primer commit.
++# convención de *.cs (5.2.3); los .props y .targets de este anexo (Directory.Build.*,
++# Directory.Packages.props) se guardan entonces con BOM. Con la variante A, cada
++# archivo que crea una plantilla del SDK, de proyecto o de ítem, llega con BOM y se
++# normaliza antes de su commit (dotnet format en los .cs; la compuerta lo señala).
+ # [*.{cs,csproj,props,targets}]
+ # charset = utf-8-bom
+ 
+diff -ru original/repo/.github/CODEOWNERS repo/.github/CODEOWNERS
+--- original/repo/.github/CODEOWNERS	2026-10-07 19:55:18.363828200 -0300
++++ repo/.github/CODEOWNERS	2026-10-09 18:00:07.271140592 -0300
+@@ -3,8 +3,20 @@
+ /.editorconfig             @org/arquitectura
+ /.gitattributes            @org/arquitectura
+ /global.json               @org/arquitectura @org/plataforma
++/.nvmrc                    @org/arquitectura
++**/.python-version         @org/arquitectura
++/Directory.Build.props     @org/arquitectura
++/Directory.Build.targets   @org/arquitectura
+ /Directory.Packages.props  @org/arquitectura
++/nuget.config              @org/arquitectura
++**/.npmrc                  @org/arquitectura
++**/pyproject.toml          @org/arquitectura
+ **/packages.lock.json      @org/arquitectura
++**/package-lock.json       @org/arquitectura
++**/uv.lock                 @org/arquitectura
+ /.devcontainer/            @org/plataforma
++/imagen/                   @org/plataforma
++/.githooks/                @org/plataforma
++/.pre-commit-config.yaml   @org/plataforma
+ /.github/                  @org/plataforma
+ /tools/ci/                 @org/plataforma
+diff -ru original/repo/.github/workflows/ci.yml repo/.github/workflows/ci.yml
+--- original/repo/.github/workflows/ci.yml	2026-10-09 16:13:40.011608464 -0300
++++ repo/.github/workflows/ci.yml	2026-10-09 18:00:07.271140592 -0300
+@@ -1,4 +1,5 @@
+-# Anexo A.12. Ejemplo NO ejecutado en el laboratorio (requiere GitHub).
++# .github/workflows/ci.yml — Anexo A.12. Ejemplo NO ejecutado en el laboratorio (requiere GitHub).
++# A.17 lee el digest de esta ruta; con otro nombre, WORKFLOW_FILE=<ruta>.
+ name: compuerta
+ on:
+   pull_request:
+diff -ru original/repo/imagen/Dockerfile repo/imagen/Dockerfile
+--- original/repo/imagen/Dockerfile	2026-10-09 16:13:30.287412257 -0300
++++ repo/imagen/Dockerfile	2026-10-09 18:00:07.271140592 -0300
+@@ -1,9 +1,10 @@
+-# Imagen de desarrollo y CI con los TRES runtimes (plantilla del Anexo A; la de N8 difiere sólo en NODE_IMAGE).
++# Imagen de desarrollo y CI con los TRES runtimes (plantilla del Anexo A).
+ # Cada runtime se toma de su imagen OFICIAL fijada por digest; no se instala nada
+ # "latest" desde apt. Las versiones deben coincidir con los archivos del repo
+-# (global.json, .nvmrc, tools/gen/.python-version): lo comprueba verificar.sh, no esta imagen.
++# (global.json, .nvmrc, tools/gen/.python-version): lo comprueba la compuerta (A.11), no esta imagen.
++# SDK por etiqueta FIJA + digest: el PR de digest del bot trae parches del SO, no otro SDK (guía 10.2.6).
+ 
+-ARG SDK_IMAGE=mcr.microsoft.com/dotnet/sdk:8.0@sha256:78235e09001f52b6592c458ac010775ebac6725422e80cd0c1650590f67b2743
++ARG SDK_IMAGE=mcr.microsoft.com/dotnet/sdk:8.0.425-bookworm-slim@sha256:ec9c0a0dc5f60adc2065762050638dd5ed5facfc53716d4580a42d86027c8e80
+ ARG NODE_IMAGE=node:24-bookworm-slim@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20
+ ARG UV_IMAGE=ghcr.io/astral-sh/uv:0.12.23@sha256:61d393e44e249f2e4b526b6c7ddcecce245946826e608e11c93ad4f5bba55b21
+ 
+diff -ru original/repo/tools/ci/registrar-entorno.sh repo/tools/ci/registrar-entorno.sh
+--- original/repo/tools/ci/registrar-entorno.sh	2026-10-09 16:13:30.291412338 -0300
++++ repo/tools/ci/registrar-entorno.sh	2026-10-09 18:00:07.271140592 -0300
+@@ -5,8 +5,10 @@
+ set -eu
+ echo "commit=$(git rev-parse HEAD) arbol_limpio=$(git diff --quiet HEAD && echo si || echo NO)"
+ # El digest se declara UNA vez, en el container: del workflow (A.12); el registro lo lee de ahí.
+-img=$(sed -n 's/^ *\(container\|image\): *\([^ ]*@sha256:[0-9a-f]\{64\}\).*/\2/p' .github/workflows/ci.yml | head -1)
+-echo "imagen=${img:-NO DECLARADA (runner sin contenedor: capa 4 en el log «Set up job»)}"
++W=${WORKFLOW_FILE:-.github/workflows/ci.yml}
++[ -f "$W" ] || { echo "registro: no existe $W (indicá la ruta del workflow en WORKFLOW_FILE)" >&2; exit 1; }
++img=$(sed -n 's/^ *\(container\|image\): *\([^ ]*@sha256:[0-9a-f]\{64\}\).*/\2/p' "$W" | head -1)
++echo "imagen=${img:-NO DECLARADA (runner alojado: capa 4 en el log «Set up job», mientras dure su retención)}"
+ sdk=$(dotnet --version); raiz=$(dirname "$(readlink -f "$(command -v dotnet)")")
+ echo "dotnet_sdk=$sdk compilador_csharp=$(dotnet exec "$raiz/sdk/$sdk/Roslyn/bincore/csc.dll" -version)"
+ echo "node=$(node --version) npm=$(npm --version)"

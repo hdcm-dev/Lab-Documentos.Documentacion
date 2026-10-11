@@ -1,0 +1,15 @@
+# E1 builder-id (2026-10-09), builder n8-attest docker-container, BuildKit v0.33.1
+# Contexto: ctx/a.txt ('hola') y Dockerfile.e1 (FROM scratch; COPY a.txt)
+== docker buildx build --builder n8-attest --provenance=mode=max,version=v1 --output type=local,dest=out ctx
+a.txt
+provenance.json
+predicateType= https://slsa.dev/provenance/v1
+runDetails.builder= {'id': ''}
+== docker buildx build --builder n8-attest --provenance=mode=max,version=v1,builder-id=https://ci.ejemplo/runs/42 --output type=local,dest=out ctx
+a.txt
+provenance.json
+predicateType= https://slsa.dev/provenance/v1
+runDetails.builder= {'id': 'https://ci.ejemplo/runs/42'}
+== GITHUB_ACTIONS=true GITHUB_SERVER_URL=https://github.com GITHUB_REPOSITORY=ejemplo/repo GITHUB_RUN_ID=777 docker buildx build --builder n8-attest --provenance=mode=max,version=v1 --output type=local,dest=out ctx (en una estación, no en Actions)
+runDetails.builder= {'id': ''}
+github.com/docker/buildx v0.35.0 a319e5b15052cf6557ceb666eb8ff6e32380b782

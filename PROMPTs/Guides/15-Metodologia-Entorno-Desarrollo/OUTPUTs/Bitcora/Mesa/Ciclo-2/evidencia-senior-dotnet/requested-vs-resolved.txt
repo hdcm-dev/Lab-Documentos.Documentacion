@@ -1,0 +1,7 @@
+== base
+requested=resolved: OK
+rc=0
+== 8.0.2 inexistente, con lock
+lock: Microsoft.Extensions.Primitives pide [8.0.2, ) y resolvió 9.0.0 (net8.0)
+requested≠resolved: REVISAR
+rc=1

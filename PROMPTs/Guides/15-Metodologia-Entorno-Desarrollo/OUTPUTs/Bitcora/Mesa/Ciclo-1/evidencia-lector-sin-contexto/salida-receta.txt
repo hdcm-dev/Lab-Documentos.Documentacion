@@ -1,0 +1,23 @@
+warning: You appear to have cloned an empty repository.
+[dev] cambio local sin commitear:  M src/Program.cs
+== migrar
+convertido CP1252->UTF-8: src/Sensor.cs
+warning: in the working copy of 'src/Sensor.cs', CRLF will be replaced by LF the next time Git touches it
+resumen: 2 convertidos, 1 BOM agregados, 0 BOM quitados
+M  App.sln
+M  Pages/Index.razor
+M  src/App.csproj
+M  src/Program.cs
+M  src/Sensor.cs
+== verificar
+  mecanico   src/Sensor.cs
+verificados 5 archivo(s); 0 con cambio de contenido; 0 alta/baja/renombre
+== compuerta texto (todo)
+POLITICA-TEXTO: 10 archivo(s) revisado(s), 0 violación(es)
+	src/Program.cs
+Please commit your changes or stash them before you merge.
+Aborting
+[dev] tras pull:  M src/Program.cs 
+[dev] tras el refresco del §5.2.6 paso 5: status=''
+0
+[dev] el trabajo sin commitear SE PERDIÓ

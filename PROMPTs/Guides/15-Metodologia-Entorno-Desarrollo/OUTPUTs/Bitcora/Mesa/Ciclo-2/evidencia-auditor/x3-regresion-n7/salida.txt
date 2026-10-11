@@ -1,0 +1,8 @@
+=== E7-01-misma-compuerta-local-y-ci (lab-n2-texto:local)
+   veredictos y códigos iguales a la salida versionada (14 líneas)
+=== E7-03-revisor-cambios-de-entorno (lab-n2-texto:local)
+   veredictos y códigos iguales a la salida versionada (10 líneas)
+=== E7-07-otros-ecosistemas-node (lab-n7-node:local)
+   veredictos y códigos iguales a la salida versionada (5 líneas)
+=== E7-07-otros-ecosistemas-python (lab-n7-python:local)
+   veredictos y códigos iguales a la salida versionada (5 líneas)

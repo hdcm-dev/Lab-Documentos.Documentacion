@@ -1,0 +1,22 @@
+
+===== 1. CPM + transitive pinning: Options (transitiva) queda fijada por la versión central =====
+  Restored /tmp/w/App/App.csproj (in 3.51 sec).
+Logging   ->  "type": "Direct",  "requested": "[8.0.0, )",  "resolved": "8.0.0", 
+Options   ->  "type": "CentralTransitive",  "requested": "[8.0.2, )",  "resolved": "8.0.2", 
+Primitives->  "type": "Transitive",  "resolved": "8.0.0", 
+
+===== 2. Sin transitive pinning la misma PackageVersion NO gobierna a la transitiva =====
+  Restored /tmp/w/App/App.csproj (in 1.12 sec).
+Options   ->  "type": "CentralTransitive",  "requested": "[8.0.2, )",  "resolved": "8.0.0", 
+
+===== 3. Pinning no puede bajar una versión: Options 7.0.0 < 8.0.0 pedida por Logging =====
+error NU1109: Detected package downgrade: Microsoft.Extensions.Options from 8.0.0 to centrally defined 7.0.0. Update the centrally managed package version to a higher ver
+exit=1
+
+===== 4. Con CPM, un Version en el .csproj es un error (la versión vive en un solo lugar) =====
+error NU1008: Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: Microsoft.
+exit=1
+
+===== 5. 'Version' es un mínimo: pinear Primitives a 8.0.2, que NO existe en nuget.org =====
+-- advertencias de NuGet en el restore: 0
+Primitives->  "type": "CentralTransitive",  "requested": "[8.0.2, )",  "resolved": "9.0.0", 

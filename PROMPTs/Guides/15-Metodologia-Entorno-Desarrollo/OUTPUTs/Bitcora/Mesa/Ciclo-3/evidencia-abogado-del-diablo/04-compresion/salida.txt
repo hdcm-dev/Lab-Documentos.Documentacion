@@ -1,0 +1,82 @@
+palabras totales (wc -w equivalente): 54267
+
+== palabras por sección de nivel 2 (con código y tablas)
+   421  ## Índice
+  1157  ## 0. Cómo usar esta guía
+   947  ## 1. El caso: el mismo código, dos resultados
+  1136  ## 2. Marco de referencia: escenarios, contextos y actores
+  3671  ## 3. El entorno como pila de capas
+  3699  ## 4. Codificación y finales de línea
+  4723  ## 5. Una política de texto para el repositorio
+  3555  ## 6. Fijar el toolchain
+  3485  ## 7. Congelar las dependencias
+  3683  ## 8. Contenedores, devcontainers y estaciones Windows
+  3773  ## 9. Procedencia: saber con qué se construyó
+  4527  ## 10. Compuertas y gobierno del entorno
+  5860  ## 11. Una sola solución con .NET, Node.js y Python
+  1148  ## 12. Hoja de ruta: del caso a un equipo con criterio
+  3429  ## Anexo A. Plantillas comentadas
+    22  ## Contexto
+    13  ## Opciones
+    12  ## Decisión y compromisos
+    26  ## Superficie del cambio
+   362  ## Verificación
+   887  ## Anexo B. Listas de verificación por actor
+  1578  ## Anexo C. Glosario
+  3380  ## Anexo D. Bibliografía
+  1218  ## Anexo E. Laboratorio
+   941  ## Anexo F. Trazas, límites y lo que no se verificó
+   200  ## Control de cambios
+
+== afirmaciones repetidas (apariciones fuera de bloques de código)
+  12  el contenedor no arregla / el cp1252 falla igual adentro (E5-1)
+  14  Visual Studio sin devcontainer .NET
+   6  A compatible .NET SDK was not found
+   9  SDK exacto
+  11  [no verificado] (requiere Windows)
+  10  hook se saltea con --no-verify
+   9  imagen/receta: etiqueta fija de SDK y SO
+   4  runner alojado
+ 121  digest
+  16  8a / 8b
+
+== tablas «Aplicación por escenario» (n.4) frente al mapa de §3.6: filas ESC-0n
+filas que empiezan con '| ESC-0': 44
+== tablas gemelas «qué fija un contenedor»
+§3.5 L355-366: 200 palabras
+§8.2.1 L1370-1384: 253 palabras
+== preguntas guía con la misma tesis «el contenedor no reemplaza la política»
+430:**¿Un contenedor reemplaza al `global.json` o al lock?**
+618:**¿Un contenedor resuelve el problema?**
+1312:**¿Un contenedor reemplaza al lock?**
+1535:**¿Qué capas congela realmente un devcontainer?**
+1544:**¿Cómo conviven Visual Studio sin contenedores y el devcontainer?**
+1550:**¿Dónde guardo el repo si trabajo en Windows con contenedores?**
+L430+1: 81 palabras
+L618+1: 49 palabras
+L1312+1: 57 palabras
+L1535+1: 59 palabras
+L1544+1: 41 palabras
+L1550+1: 48 palabras
+== 'Por contexto:' párrafos en n.4
+7
+== párrafos con 'Visual Studio' y 'devcontainer' (línea: palabras)
+38:- **[8. Contenedores, devcontainers y estaciones Windows](#8-contenedores-devcontainers
+120:Un equipo mantiene un sistema .NET heredado de una organización: lo desarrolla con Vi
+431:No. Una imagen por digest fija SO y, si lo trae, el toolchain; pero quien trabaja en V
+662:La política no es una preferencia del editor de cada uno: tiene que viajar con el rep
+1042:| Transversal | **Archivos nativos por ecosistema + un chequeo común + la imagen con
+1060:| **Con lock** (por defecto): `disable` + `packages.lock.json` en los ejecutables + `
+1304:Depende de si es universal: npm, pnpm, Yarn y uv sí (E4-4, E4-5); NuGet sólo para l
+1437:| **Visual Studio** (2022 y 2026) | *Container Tools*: agrega un Dockerfile o la comp
+1438:| **Visual Studio y `devcontainer.json`** | El único soporte documentado es para **p
+1444:El dato que ordena la convivencia es la segunda fila: **quien trabaja con Visual Stud
+1448:1. **El repo declara, las estaciones obedecen, la CI arbitra.** `.gitattributes` y `.
+1497:| ESC-01 Windows + Visual Studio | Contenerizar y depurar la app (Container Tools) | 
+1503:Por contexto: en CTX-NET el devcontainer no reemplaza a Visual Studio para quien trab
+1544:**¿Cómo conviven Visual Studio sin contenedores y el devcontainer?**
+1567:- no exige el devcontainer a quien usa Visual Studio sobre una solución .NET.
+1796:Clonar dos veces en rutas distintas, construir con el mismo toolchain e imagen y comp
+2483:Los pasos 1 a 4 resuelven la primera pregunta del caso; 5 a 7, la segunda; 8a, la ter
+3545:| P-02 | Desarrollo simultáneo con Visual Studio en Windows, Linux y devcontainers |
+3574:- **Hallazgo negativo a revalidar**: que Visual Studio no ofrezca desarrollo .NET den

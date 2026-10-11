@@ -1,0 +1,10 @@
+# Anexo A.14. Último patrón que coincide gana.
+*                          @org/desarrollo
+/.editorconfig             @org/arquitectura
+/.gitattributes            @org/arquitectura
+/global.json               @org/arquitectura @org/plataforma
+/Directory.Packages.props  @org/arquitectura
+**/packages.lock.json      @org/arquitectura
+/.devcontainer/            @org/plataforma
+/.github/                  @org/plataforma
+/tools/ci/                 @org/plataforma

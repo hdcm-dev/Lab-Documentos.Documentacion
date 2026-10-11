@@ -1,0 +1,10 @@
+== A.1 tal cual (variante A): el heredado del caso, ya convertido con BOM (3 .cs + 1 .csproj)
+   violaciones: 4
+== A.1 con la variante B descomentada ([*.cs] charset = utf-8-bom)
+   29:[*.cs]
+   30-charset = utf-8-bom
+src/Servicios/Servicios.csproj:
+	wrong character encoding ("UTF-8-SIG" instead of "utf-8")
+
+1 errors found
+rc=1
