@@ -1,0 +1,6 @@
+repo del usuario uid=1000
+postCreateCommand: "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && git config core.hooksPath .githooks && dotnet --version && node --version && uv --version"
+devcontainer up rc=0
+"outcome":"success"
+en el contenedor: uid=0 core.hooksPath=.githooks status=0 cambios
+contenedor eliminado

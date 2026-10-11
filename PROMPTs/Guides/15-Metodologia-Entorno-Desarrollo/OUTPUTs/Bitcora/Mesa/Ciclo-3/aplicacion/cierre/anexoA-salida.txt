@@ -1,0 +1,25 @@
+igual      .editorconfig
+igual      .gitattributes
+igual      global.json
+igual      Directory.Build.props
+igual      Directory.Build.targets
+igual      Directory.Packages.props
+igual      nuget.config
+igual      web/package.json
+igual      web/.npmrc
+igual      tools/gen/pyproject.toml
+igual      tools/gen/.python-version
+igual      .devcontainer/devcontainer.json
+igual      imagen/Dockerfile
+igual      .githooks/pre-commit
+igual      tools/ci/compuerta.sh
+igual      .github/workflows/ci.yml
+no-archivo A.12 bloque 1 (yaml)
+igual      .github/dependabot.yml
+igual      .github/CODEOWNERS
+igual      .git-blame-ignore-revs
+igual      docs/adr/0000-plantilla-entorno.md
+igual      tools/ci/registrar-entorno.sh
+no-archivo A.17 bloque 1 (text)
+igual      .gitignore
+TODO IGUAL

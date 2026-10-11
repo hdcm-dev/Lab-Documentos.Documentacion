@@ -1,0 +1,8 @@
+8.0.425
+<Project><PropertyGroup Condition="'$(OutputType)' == 'Exe'"><RestorePackagesWithLockFile>true</RestorePackagesWithLockFile></PropertyGroup></Project>
+Win restore rc=0
+  Win: packages.lock.json NO
+WinExe
+Web restore rc=0
+  Web: packages.lock.json SI
+Exe

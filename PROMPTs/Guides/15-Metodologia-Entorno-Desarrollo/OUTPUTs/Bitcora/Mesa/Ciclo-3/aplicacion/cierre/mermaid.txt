@@ -1,0 +1,11 @@
+d01 rc=0 201310 bytes syntax_error=0
+d02 rc=0 203321 bytes syntax_error=0
+d03 rc=0 212646 bytes syntax_error=0
+d04 rc=0 203702 bytes syntax_error=0
+d05 rc=0 193753 bytes syntax_error=0
+d06 rc=0 215927 bytes syntax_error=0
+d07 rc=0 205481 bytes syntax_error=0
+d08 rc=0 206963 bytes syntax_error=0
+d09 rc=0 212920 bytes syntax_error=0
+d10 rc=0 208661 bytes syntax_error=0
+d11 rc=0 215436 bytes syntax_error=0

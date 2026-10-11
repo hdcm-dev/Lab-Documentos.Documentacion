@@ -1,0 +1,18 @@
+== (a) hook de A.11 + esqueleto de A-plantillas, archivo en cp1252
+compuerta: texto, toolchain y restauración estricta (--staged)
+   commit ACEPTADO (exit 0)
+31db068 cp1252
+== (b) compuerta completa de N7 copiada a tools/ci (la que A.11 señala), sin python3 en la estación
+   (no hay python3 en esta estación)
+COMPUERTA commit=sin-commits alcance=--staged
+    /tmp/h/r/tools/ci/compuerta.sh: line 36: python3: command not found
+COMPUERTA [FALLA] texto: la política de .editorconfig/.gitattributes no se cumple
+COMPUERTA [n/a]   toolchain .NET: no hay global.json
+COMPUERTA [n/a]   toolchain Node: no hay .nvmrc
+COMPUERTA [n/a]   toolchain Python: no hay .python-version
+COMPUERTA [n/a]   grafo NuGet: no hay packages.lock.json
+COMPUERTA [n/a]   grafo npm: no hay package-lock.json
+COMPUERTA [n/a]   grafo uv: no hay uv.lock
+COMPUERTA resultado=ROJO (1 paso/s)
+   exit=1
+== (c) con python3 copiando check_text_policy.py junto a la compuerta? -> la guía no lo dice

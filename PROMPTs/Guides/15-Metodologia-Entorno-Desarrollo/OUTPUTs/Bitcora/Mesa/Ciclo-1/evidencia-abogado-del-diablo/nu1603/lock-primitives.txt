@@ -1,0 +1,1 @@
+{"type": "CentralTransitive", "requested": "[8.0.2, )", "resolved": "9.0.0", "contentHash": "N3qEBzmLMYiASUlKxxFIISP4AiwuPTHF5uCh+2CWSwwzAJiIYx0kBJsS30cp1nvhSySFAVi30jecD307jV+8Kg=="}

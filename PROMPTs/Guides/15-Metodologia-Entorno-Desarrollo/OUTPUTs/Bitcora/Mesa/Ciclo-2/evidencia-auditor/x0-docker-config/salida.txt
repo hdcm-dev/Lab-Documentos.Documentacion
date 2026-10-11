@@ -1,0 +1,8 @@
+== plugin por defecto
+github.com/docker/buildx v0.35.0 a319e5b15052cf6557ceb666eb8ff6e32380b782
+== DOCKER_CONFIG=$(mktemp -d)
+github.com/docker/buildx 0.13.1+ds1 0.13.1+ds1-3
+== DOCKER_CONFIG temporal con cli-plugins enlazado
+github.com/docker/buildx v0.35.0 a319e5b15052cf6557ceb666eb8ff6e32380b782
+   --format {{.Manifest.Digest}} (una sola línea esperada):
+sha256:ec9c0a0dc5f60adc2065762050638dd5ed5facfc53716d4580a42d86027c8e80

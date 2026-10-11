@@ -1,0 +1,12 @@
+ls: cannot access 'nw-winforms/packages.lock.json': No such file or directory
+ls: cannot access 'nw-wpf/packages.lock.json': No such file or directory
+/w/err/Program.cs(1,8): error CS8304: Compiler version: '4.11.0-3.25569.22 (3fb752d4)'. Language version: 12.0. [/w/err/err.csproj]
+
+
+For details on the exit code, refer to https://aka.ms/templating-exit-codes#103
+Blazor Web App                                blazor                      [C#]        Web/Blazor/WebAssembly    
+Blazor WebAssembly Standalone App             blazorwasm                  [C#]        Web/Blazor/WebAssembly/PWA
+MSTest Playwright Test Project                mstest-playwright           [C#]        Test/MSTest/Playwright    
+MSTest Test Project                           mstest                      [C#],F#,VB  Test/MSTest               
+Worker Service                                worker                      [C#],F#     Common/Worker/Web         
+xUnit Test Project                            xunit                       [C#],F#,VB  Test/xUnit                

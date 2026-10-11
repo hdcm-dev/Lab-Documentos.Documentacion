@@ -1,0 +1,15 @@
+# C1-13 — A.10 con Node 24 (2026-10-09, host Linux x86_64, Docker)
+# Dockerfile = Examples/N8-integracion-poliglota/imagen/Dockerfile con una sola línea cambiada:
+ARG NODE_IMAGE=node:24-bookworm-slim@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20
+$ docker build -q -t auditor-a10:local --build-arg PYTHON_VERSION=3.12.15 .
+$ docker run --rm auditor-a10:local sh -c 'node -v; npm -v; dotnet --version; python3 --version; uv --version'
+v24.21.0
+11.19.0
+8.0.425
+Python 3.12.15
+uv 0.12.23 (x86_64-unknown-linux-musl)
+# glibc de las dos bases (comparten Debian 12):
+node:24-bookworm-slim  -> ldd (Debian GLIBC 2.36-9+deb12u14) 2.36 · Debian GNU/Linux 12 (bookworm)
+dotnet/sdk:8.0@sha256:78235e09… -> ldd (Debian GLIBC 2.36-9+deb12u14) 2.36 · Debian GNU/Linux 12 (bookworm)
+# Plantilla A-plantillas/repo/web (devEngines >=24 <25, engine-strict) dentro de esa imagen:
+npm install rc=0 · "up to date" · npm run build -> build v24.21.0

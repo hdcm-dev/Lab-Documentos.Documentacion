@@ -1,0 +1,22 @@
+== 0. Imagen: v4.0.2 ; ¿trae python3? no
+== 1. Plantillas limpias (lo que EA-1 da como 0 violaciones con la compuerta propia)
+rc=0
+== 2. El .cs del caso en cp1252, en una SUBCARPETA (src/App), y un .razor sin BOM
+src/App/Alarma.cs:
+	wrong character encoding ("ISO-8859-1" instead of "utf-8")
+src/App/X.razor:
+	wrong character encoding ("Ascii" instead of "utf-8-bom")
+
+2 errors found
+rc=1
+== 3. Salidas de build sin .gitignore: obj/ con BOM (como *.nuget.g.props) y sin versionar
+   sin .gitignore: src/App/obj/App.csproj.nuget.g.props:
+   con .gitignore (obj/ excluido), líneas que mencionan obj/: 0
+== 4. Sólo lo versionado (git ls-files) — equivalente al alcance de la CI sobre clon limpio
+src/App/Alarma.cs:
+	wrong character encoding ("ISO-8859-1" instead of "utf-8")
+src/App/X.razor:
+	wrong character encoding ("Ascii" instead of "utf-8-bom")
+
+2 errors found
+rc=1

@@ -1,0 +1,16 @@
+SDK 8.0.425
+== 1. Plantillas TAL CUAL (política por defecto: lock + disable; NU1603 comentado)
+Consola (Exe), estación                                   rc=0  NU1603:   lock=SI
+Escritorio (WinExe), estación                             rc=0  NU1603: warning NU1603  lock=NO
+Consola (Exe), CI=true                                     rc=0  NU1603:   lock=SI
+Escritorio (WinExe), CI=true                               rc=0  NU1603: warning NU1603  lock=NO
+   OutputType/RestorePackagesWithLockFile/RestoreLockedMode del WinExe en CI:
+{"Properties":{"OutputType":"WinExe","RestorePackagesWithLockFile":"","RestoreLockedMode":"true"}}
+== 2. Lo mismo con NU1603 como error TAMBIÉN en la política con lock (A.4 descomentado)
+   WarningsAsErrors activo: 1
+Consola (Exe), estación, cache fría (genera el lock)     rc=0  NU1603:   lock=SI
+Consola (Exe), CI=true                                     rc=0  NU1603:   lock=SI
+Escritorio (WinExe), estación                             rc=1  NU1603: error NU1603  lock=NO
+Escritorio (WinExe), CI=true                               rc=1  NU1603: error NU1603  lock=NO
+== 3. Entrada del lock de la Consola tras el paso 2 (python3 -I, fuera del contenedor)
+    Microsoft.Extensions.Primitives Direct requested [8.0.2, ) resolved 9.0.0

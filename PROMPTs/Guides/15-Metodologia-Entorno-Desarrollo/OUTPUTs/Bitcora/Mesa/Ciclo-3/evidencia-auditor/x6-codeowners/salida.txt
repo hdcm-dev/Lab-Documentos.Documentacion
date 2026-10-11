@@ -1,0 +1,31 @@
+# x6 (auditor ciclo 3, 2026-10-09): dueños efectivos del CODEOWNERS propuesto (x1-ea1-propuesto/repo), última coincidencia gana [B178]
+# comando: python3 -I owners.py ../x1-ea1-propuesto/repo
+@org/plataforma                               .devcontainer/devcontainer.json
+@org/arquitectura                             .editorconfig
+@org/desarrollo                               .git-blame-ignore-revs
+@org/arquitectura                             .gitattributes
+@org/plataforma                               .githooks/pre-commit
+@org/plataforma                               .github/CODEOWNERS
+@org/plataforma                               .github/dependabot.yml
+@org/plataforma                               .github/workflows/ci.yml
+@org/desarrollo                               .gitignore
+@org/arquitectura                             .nvmrc
+@org/plataforma                               .pre-commit-config.yaml
+@org/arquitectura                             Directory.Build.props
+@org/arquitectura                             Directory.Build.targets
+@org/arquitectura                             Directory.Packages.props
+@org/desarrollo                               docs/adr/0000-plantilla-entorno.md
+@org/arquitectura @org/plataforma             global.json
+@org/plataforma                               imagen/Dockerfile
+@org/arquitectura                             nuget.config
+@org/desarrollo                               src/App/App.csproj
+@org/desarrollo                               src/App/Program.cs
+@org/arquitectura                             src/App/packages.lock.json
+@org/plataforma                               tools/ci/compuerta.sh
+@org/plataforma                               tools/ci/registrar-entorno.sh
+@org/arquitectura                             tools/gen/.python-version
+@org/arquitectura                             tools/gen/pyproject.toml
+@org/arquitectura                             tools/gen/uv.lock
+@org/arquitectura                             web/.npmrc
+@org/arquitectura                             web/package-lock.json
+@org/desarrollo                               web/package.json

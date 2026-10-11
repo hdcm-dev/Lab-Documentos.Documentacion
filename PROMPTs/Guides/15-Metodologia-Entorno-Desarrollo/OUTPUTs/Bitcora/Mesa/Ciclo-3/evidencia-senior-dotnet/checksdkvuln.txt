@@ -1,0 +1,19 @@
+== sdk:8.0
+8.0.425
+Build succeeded.
+true
+/tmp/p/p.csproj : error MSB4057: The target "_CheckForSdkVulnerabilities" does not exist in the project.
+Build failed. Properties, Items, and Target results cannot be obtained. See details in stderr above.
+== sdk:10.0
+10.0.400
+Build succeeded.
+true
+/tmp/p/p.csproj : error MSB4057: The target "_CheckForSdkVulnerabilities" does not exist in the project.
+Build failed. Properties, Items, and Target results cannot be obtained. See details in stderr above.
+== sdk:11.0.100-rc.1
+11.0.100-rc.1.26425.128
+Build succeeded.
+true
+{
+  "TargetResults": {
+    "_CheckForSdkVulnerabilities": {

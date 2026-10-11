@@ -1,0 +1,14 @@
+8.0.425
+rc=0
+== variante P (Directory.Build.props)
+  App: packages.lock.json NO
+  Lib: packages.lock.json NO
+rc=0
+== variante T (Directory.Build.targets)
+  App: packages.lock.json SI
+  Lib: packages.lock.json NO
+== variante T en modo CI (RestoreLockedMode=true, como A.4 con CI=true), cache limpia
+rc=0
+== cambio de versión sin regenerar el lock del ejecutable, modo CI
+rc=1
+error NU1004: The package reference Newtonsoft

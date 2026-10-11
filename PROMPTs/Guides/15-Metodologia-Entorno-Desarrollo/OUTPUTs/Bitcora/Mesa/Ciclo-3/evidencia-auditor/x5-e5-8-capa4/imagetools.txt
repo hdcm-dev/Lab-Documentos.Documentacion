@@ -1,0 +1,33 @@
+# x5: imagetools inspect del SDK fijo (C3-11) y del digest de A.10 (C3-10), buildx v0.35.0, 2026-10-09
+Name:      mcr.microsoft.com/dotnet/sdk:8.0.425-bookworm-slim
+MediaType: application/vnd.docker.distribution.manifest.list.v2+json
+Digest:    sha256:ec9c0a0dc5f60adc2065762050638dd5ed5facfc53716d4580a42d86027c8e80
+           
+Manifests: 
+  Name:      mcr.microsoft.com/dotnet/sdk:8.0.425-bookworm-slim@sha256:e1d5584f7c7f45439449054292acadf4f71730034507186497bab3d539a5a9b7
+  MediaType: application/vnd.docker.distribution.manifest.v2+json
+  Platform:  linux/amd64
+             
+  Name:      mcr.microsoft.com/dotnet/sdk:8.0.425-bookworm-slim@sha256:48cc58e9785b413d9fb774ebd6b4c76aee513c55419e9c51c5c058aaab0c936a
+  MediaType: application/vnd.docker.distribution.manifest.v2+json
+  Platform:  linux/arm/v7
+             
+  Name:      mcr.microsoft.com/dotnet/sdk:8.0.425-bookworm-slim@sha256:c1730b12f7d102b744dac0b1b24c49365597ea5728898624a2666aa882c260f0
+  MediaType: application/vnd.docker.distribution.manifest.v2+json
+  Platform:  linux/arm64
+Name:      mcr.microsoft.com/dotnet/sdk@sha256:78235e09001f52b6592c458ac010775ebac6725422e80cd0c1650590f67b2743
+MediaType: application/vnd.docker.distribution.manifest.list.v2+json
+Digest:    sha256:78235e09001f52b6592c458ac010775ebac6725422e80cd0c1650590f67b2743
+           
+Manifests: 
+  Name:      mcr.microsoft.com/dotnet/sdk@sha256:7ff19b091200c3a3a1bf1eefa6abae9efd7995d8e3298e66aa0d6905872bf642
+  MediaType: application/vnd.docker.distribution.manifest.v2+json
+  Platform:  linux/amd64
+             
+  Name:      mcr.microsoft.com/dotnet/sdk@sha256:4e00e1ac26df7539d51381ba40da7251b5c81ea4940d7964cea98351a03c3647
+  MediaType: application/vnd.docker.distribution.manifest.v2+json
+  Platform:  linux/arm/v7
+             
+  Name:      mcr.microsoft.com/dotnet/sdk@sha256:499ef1502b0215a158a8051a0324dfcc62f69a2f7d0a8bde03b2fb0f5d15edec
+  MediaType: application/vnd.docker.distribution.manifest.v2+json
+  Platform:  linux/arm64

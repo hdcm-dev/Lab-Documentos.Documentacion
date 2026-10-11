@@ -1,0 +1,49 @@
+8.0.425
+== win
+{
+  "Properties": {
+    "OutputType": "Exe",
+    "RestorePackagesWithLockFile": "true"
+  }
+}
+== winexe
+{
+  "Properties": {
+    "OutputType": "WinExe",
+    "RestorePackagesWithLockFile": ""
+  }
+}
+== web
+{
+  "Properties": {
+    "OutputType": "Exe",
+    "RestorePackagesWithLockFile": "true"
+  }
+}
+== test
+{
+  "Properties": {
+    "OutputType": "Library",
+    "RestorePackagesWithLockFile": ""
+  }
+}
+== lib
+{
+  "Properties": {
+    "OutputType": "Library",
+    "RestorePackagesWithLockFile": ""
+  }
+}
+== test: restore 1
+ls: cannot access 'test/packages.lock.json': No such file or directory
+== test: eval tras restore
+{
+  "Properties": {
+    "OutputType": "Exe",
+    "RestorePackagesWithLockFile": "true"
+  }
+}
+== test: restore 2
+ls: cannot access 'test/packages.lock.json': No such file or directory
+== win restore
+win/packages.lock.json

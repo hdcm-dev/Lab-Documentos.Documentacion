@@ -1,0 +1,12 @@
+8.0.425
+== A: CPM + transitive pinning, SIN lock, NU1603 como error
+App.csproj : error NU1603: Warning As Error: App depends on Microsoft.Extensions.Primitives (>= 8.0.2) but Microsoft.Extensions.Primitives 8.0.2 was not found. An approximate best match of Microsoft.Extensions.Primitives 9.0.0 was resolved.
+restore rc=1
+== B: lo mismo CON lock (RestorePackagesWithLockFile), NU1603 como error, cache fria
+  Restored App.csproj (in 892 ms).
+restore rc=0
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        }
+      },
+      "Microsoft.Extensions.Primitives": {
+        "type": "CentralTransitive",

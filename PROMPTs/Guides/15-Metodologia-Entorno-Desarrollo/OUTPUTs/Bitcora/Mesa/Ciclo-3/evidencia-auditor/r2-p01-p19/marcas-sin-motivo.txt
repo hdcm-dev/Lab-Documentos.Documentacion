@@ -1,0 +1,21 @@
+L93: …| 
+L97: …cado]** (requiere una plataforma alojada), **[criterio]** (sobre la base del fabricante). Sin motivo escrito, 
+L113: … la migración (§5.2.6) y de la compuerta (§10) son de shell POSIX. Hay dos vías, ninguna probada en esta guía 
+L385: …bal.json` (instalador independiente si VS trae otro [B56]); correr la compuerta antes del push desde Git Bash 
+L483: … contrario para el compilador, que registra el proveedor de páginas de códigos antes de pedir la página ANSI. 
+L498: …| Roslyn (C#), Windows con ACP 1252 | correcto | correcto | correcto | ídem | ídem | [B14][B19] 
+L530: …uevo y a lo existente sólo con *Format Document* o *Code Cleanup* (para `charset` sobre un archivo existente, 
+L690: …al Studio declara soportar `end_of_line` [B45], así que LF en Windows no debería requerir configuración local 
+L713: …, llega con BOM y se normaliza antes de su commit; la compuerta lo señala (E2-6, EA-1). Las de Visual Studio, 
+L812: …`Examples/N2-politica-de-texto-y-remediacion/tools/Dockerfile`, que los trae. Desde Windows, las vías de §0.4 
+L832: … + Visual Studio | El problema no se ve; Visual Studio respeta el `.editorconfig` (sobre archivos existentes, 
+L1046: …ete) | SDK reemplazado al actualizar VS; VS mínimo por banda; `.nvmrc`/`.python-version` ignorados por el IDE 
+L1056: …s: [".dotnet", "$host$"]` y `errorMessage` admiten un SDK local instalado por script [B56] (en Visual Studio, 
+L1119: ….json`, TFM y `LangVersion`, que pasan por MSBuild. No hay evidencia de que lea `.nvmrc` ni `.python-version` 
+L1243: …to actualiza el lock si cambió el proyecto [B83]; que Visual Studio dispare ese restore al editar el proyecto 
+L2000: … El hook necesita los prerrequisitos de A.11; a mano, desde Git Bash en la raíz: `bash tools/ci/compuerta.sh` 
+L2333: …ls/ci/compuerta.sh`) desde **Git Bash**, que usa el `PATH` de Windows, el mismo que la build de Visual Studio 
+L2868: …e asume `tools/compuerta.sh`. Creados desde Windows, entran sin bit de ejecución (§8.2.5; en un Windows real, 
+L2870: …s pasos de toolchain y grafo, las herramientas que el repo declara (`dotnet`, `node`/`npm`, `uv`). En Windows 
+L3638: …s de la compuerta, `gh attestation verify`; §3.5 comprimida, fila §3 en la ruta mínima, motivo por defecto de 
+marcas sin motivo: 20

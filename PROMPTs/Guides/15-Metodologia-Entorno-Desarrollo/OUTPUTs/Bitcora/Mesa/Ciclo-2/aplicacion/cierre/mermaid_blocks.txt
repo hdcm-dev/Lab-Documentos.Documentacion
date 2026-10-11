@@ -1,0 +1,185 @@
+flowchart LR
+    F["Mismo archivo .cs<br/>en cp1252, sin BOM"] --> W["Windows con página ANSI 1252<br/>Roslyn: UTF-8 falla → cp1252"]
+    F --> L["Linux / contenedor<br/>Roslyn: UTF-8 falla → UTF-8 tolerante"]
+    W --> OK["compila; texto correcto<br/>(el problema no se ve)"]
+    L --> E1["identificador con 'Ç' → CS1056"]
+    L --> E2["literal con 'ó' → U+FFFD → '?' en pantalla"]
+%%%%
+flowchart BT
+    C1["Capa 1 · Bytes del fuente<br/>codificación, BOM, finales de línea<br/><i>.editorconfig · .gitattributes</i>"]
+    C2["Capa 2 · Toolchain<br/>SDK, compilador, runtime, intérprete, gestor de paquetes<br/><i>global.json · .nvmrc/devEngines · .python-version/requires-python</i>"]
+    C3["Capa 3 · Grafo de dependencias<br/>directas + transitivas resueltas<br/><i>packages.lock.json · package-lock.json · uv.lock</i>"]
+    C4["Capa 4 · SO e imagen base<br/>distribución, bibliotecas, locale, arquitectura<br/><i>FROM imagen@sha256 · devcontainer.json</i>"]
+    C5["Capa 5 · Proceso de build<br/>comando, flags, variables, ruta, fecha<br/><i>script de CI · Directory.Build.props · SOURCE_DATE_EPOCH</i>"]
+    C6["Capa 6 · Metadatos y procedencia<br/>qué se registró de 1–5 y quién lo firma<br/><i>versión+SHA · SBOM · atestación</i>"]
+    C1 --> C2 --> C3 --> C4 --> C5 --> C6
+    C4 -. "la imagen puede traer<br/>el toolchain instalado" .-> C2
+%%%%
+flowchart TD
+    A["Roslyn abre un .cs<br/>(o Razor genera un .g.cs)"] --> B{"¿Empieza con BOM?"}
+    B -- "sí" --> U["UTF-8 (el BOM manda)"]
+    B -- no --> C{"¿El proyecto fija CodePage?"}
+    C -- "sí" --> P["Decodifica con esa página SIN probar UTF-8<br/>⇒ un UTF-8 sin BOM sale como mojibake"]
+    C -- no --> D{"¿Es UTF-8 válido?"}
+    D -- sí --> U2["UTF-8 ✔"]
+    D -- no --> E{"Página ANSI del sistema"}
+    E -- "Windows, ACP 1252" --> W["cp1252 ✔ — el caso «en Windows no cambia nada»"]
+    E -- "Linux / macOS" --> L["UTF-8 tolerante ⇒ U+FFFD<br/>literal corrupto · identificador = CS1056"]
+    E -. "Windows con ACP UTF-8" .-> Q["pregunta abierta: la prueba de B15<br/>dice que sigue siendo la ANSI real"]
+%%%%
+flowchart LR
+    ED["Editor / IDE"] -- "lee .editorconfig<br/>charset · end_of_line" --> WT[("Working tree<br/>bytes en disco")]
+    WT -- "git add (clean)<br/>.gitattributes text/eol<br/>o core.autocrlf si no hay atributo" --> IX[("Índice / commits")]
+    IX -- "checkout (smudge)<br/>eol · working-tree-encoding" --> WT
+    WT -- "lee los bytes tal cual" --> CC["Compilador / intérprete"]
+    IX -- "compuerta en hook y CI<br/>valida contra .editorconfig" --> GATE{{"check_text_policy"}}
+%%%%
+sequenceDiagram
+    participant A as Arquitecto
+    participant R as Repositorio
+    participant C as CI
+    A->>R: Commit 1 · política (.editorconfig + .gitattributes + compuerta)
+    Note over R: chico, se revisa leyendo
+    A->>R: Commit 2 · migración mecánica (iconv + BOM según política + git add --renormalize .)
+    A->>C: verificar-commit-mecanico.sh <commit 2>
+    C-->>A: 0 archivos con cambio de contenido
+    Note over R: grande, se revisa con un script
+    A->>R: Commit 3 · .git-blame-ignore-revs con el SHA del commit 2
+    Note over R: un PR por commit (cualquier estrategia de fusión) o un PR con merge commit: se lista el SHA que quedó en main
+%%%%
+flowchart LR
+    subgraph NET[".NET"]
+        GJ["global.json<br/>version + rollForward"] --> SDK["SDK x.y.znn"] --> ROS["compilador C#"]
+        CSP[".csproj TargetFramework"] --> LV["C# por defecto"] --> ROS
+        CSP --> RT["runtime elegido AL EJECUTAR"]
+    end
+    subgraph NODE["Node.js"]
+        NV[".nvmrc"] -. "sólo un gestor de versiones" .-> NR["node"]
+        EN["engines"] -. "avisa (engine-strict: falla)" .-> NR
+        DE["devEngines"] -- "falla" --> NR
+        PM["packageManager"] -- "pnpm (solo) · Yarn con Corepack o yarnPath" --> PMV["pnpm / yarn"]
+    end
+    subgraph PY["Python"]
+        PV[".python-version"] -- "pyenv / uv eligen" --> PI["intérprete"]
+        RP["requires-python"] -- "pip / uv validan" --> PI
+        RV["tool.uv required-version"] -- "falla" --> UV["uv"]
+    end
+%%%%
+flowchart LR
+    M["Manifiesto (rangos)<br/>.csproj / Directory.Packages.props<br/>package.json / pyproject.toml"]
+    R{{"Resolvedor + registros<br/>nuget.config · .npmrc · índices"}}
+    L["Lock file<br/>versión + origen + hash<br/>de TODO el grafo"]
+    D["Desarrollo: resolución libre"]
+    CI["CI: restauración estricta"]
+    OK["Instalación idéntica al lock"]
+    FAIL["Falla visible<br/>NU1004 · EUSAGE · ERR_PNPM_OUTDATED_LOCKFILE<br/>'needs to be updated'"]
+    H["Falla de integridad<br/>NU1403 · EINTEGRITY · DO NOT MATCH THE HASHES"]
+    M --> R --> L
+    D -- "si el manifiesto cambió, REESCRIBE" --> L
+    L --> CI
+    CI -- "coincide" --> OK
+    CI -- "manifiesto ≠ lock" --> FAIL
+    CI -- "bytes ≠ hash" --> H
+%%%%
+flowchart LR
+    subgraph REPO["Repositorio (fuente de verdad)"]
+        GA[".gitattributes · .editorconfig (capa 1)"]
+        GJ["global.json · .nvmrc · requires-python (capa 2)"]
+        LK["locks (capa 3)"]
+        DC["devcontainer.json + lock · imagen@sha256"]
+    end
+    subgraph IMG["Imagen por digest"]
+        OS["SO + libs (capa 4)"]
+        TC["SDK/runtime instalado (capa 2)"]
+    end
+    HOST["Host: checkout, editor, ~/.gitconfig, UID"]
+    DC --> IMG
+    GJ -- "verifica" --> TC
+    HOST -- "bind mount: bytes, EOL, modo, dueño" --> CONT["Contenedor de desarrollo"]
+    IMG --> CONT
+    GA -. "sólo si el checkout la aplicó" .-> HOST
+    LK -- "restauración estricta" --> CONT
+%%%%
+flowchart LR
+    subgraph ANTES["Antes (§4–§8)"]
+        F["fuente fijado"] 
+        T["toolchain fijado"]
+        L["grafo congelado"]
+        I["imagen por digest"]
+    end
+    B["Build en CI<br/>ContinuousIntegrationBuild · SOURCE_DATE_EPOCH"]
+    subgraph SALE["Lo que sale"]
+        A["artefacto (sha256)"]
+        M["metadatos embebidos"]
+        S["SBOM"]
+        P["procedencia SLSA"]
+        FI["firma de la plataforma"]
+    end
+    subgraph DESPUES["Después"]
+        V1["verificar firma + subject = digest"]
+        V2["reconstruir y comparar"]
+    end
+    F & T & L & I --> B --> A
+    A --> M
+    L --> S
+    I -->|resolvedDependencies| P
+    A -->|subject| P
+    P --> FI --> V1
+    A --> V2
+%%%%
+flowchart LR
+    subgraph DECL["Declarar (§5–§8)"]
+        EC[".editorconfig · .gitattributes"]
+        GJ["global.json · .nvmrc · .python-version"]
+        LK["locks"]
+        IM["imagen por digest"]
+    end
+    subgraph CUMPLIR["Hacer cumplir"]
+        C["compuerta.sh (una sola)"]
+        H["hook pre-commit<br/>--staged · se saltea"]
+        CI["CI sobre clon limpio<br/>--base main · árbitro"]
+        SRV["pre-receive / rama protegida"]
+        PUB["publicar"]
+    end
+    subgraph DECIDIR["Decidir"]
+        BOT["bot: abre PR"]
+        REV["revisor + CODEOWNERS"]
+        ADR["ADR"]
+    end
+    DECL --> C --> H & CI & SRV & PUB
+    BOT --> REV --> DECL
+    ADR --> DECL
+    CI -->|registro del entorno| N6["§9 procedencia"]
+%%%%
+flowchart TB
+    subgraph REPO["Repositorio (fuente de verdad)"]
+        direction LR
+        TXT[".editorconfig · .gitattributes<br/>regla general + excepciones por extensión"]
+        VER["global.json (raíz) · .nvmrc (raíz)<br/>tools/gen/.python-version (proyecto uv)"]
+        LCK["tres locks · nuget.config · .npmrc · índices uv"]
+        IMG["imagen/Dockerfile (bases por digest)"]
+    end
+    subgraph GATE["verificar.sh — compuerta única (§10)"]
+        G1["1 texto por extensión"]
+        G2["2 toolchain = archivos nativos"]
+        G3["3 restauración estricta ×3"]
+    end
+    subgraph BUILD["Build"]
+        direction LR
+        PY["Python: uv run --locked gen.py → Datos.g.cs"]
+        NODE["Node: npm ci + npm run build → dist/app.js"]
+        NET["dotnet build<br/>(build.sh: -p:ConstruirPoliglota=false)"]
+        PY --> NET
+        NODE --> NET
+    end
+    subgraph PROC["Trazabilidad (§9)"]
+        REG["registro del entorno<br/>imagen por digest · toolchain efectivo"]
+        SB["SBOM de los locks + SBOM del artefacto"]
+        PRV["procedencia (§11.2.8): (a) la de la plataforma, firmada<br/>+ (b) materiales del entorno registrados<br/>+ (c) el vínculo firmado entre las dos"]
+    end
+    TXT --> G1
+    VER --> G2
+    LCK --> G3
+    IMG -->|"construida desde VER"| G2
+    GATE --> BUILD --> PROC
+    MSB["Visual Studio / dotnet build<br/>(MSBuild llama a npm y uv)"] -.->|"mismo resultado: prueba de regresión en CI"| NET

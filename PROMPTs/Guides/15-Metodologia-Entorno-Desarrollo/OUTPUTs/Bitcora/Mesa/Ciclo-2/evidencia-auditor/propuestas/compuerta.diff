@@ -1,0 +1,98 @@
+--- N7-compuertas-y-gobierno/compuerta/compuerta.sh	2026-10-09 15:03:45.989578276 -0300
++++ repo/tools/ci/compuerta.sh	2026-10-09 16:16:53.263503839 -0300
+@@ -11,6 +11,8 @@
+ #   1. texto ........ .editorconfig + .gitattributes  (N2)
+ #   2. toolchain .... global.json / .nvmrc / .python-version  (N3)
+ #   3. grafo ........ packages.lock.json / package-lock.json / uv.lock  (N4)
++# global.json y .nvmrc se buscan en la raíz; .python-version y los locks, en todo lo
++# versionado (git ls-files): sirve igual con los proyectos en la raíz o en subcarpetas.
+ # Un paso cuyo archivo no existe se declara "n/a". Un paso cuyo archivo existe
+ # pero cuya herramienta falta FALLA: una compuerta que se saltea en silencio es
+ # un agujero, no una compuerta [criterio propio].
+@@ -39,6 +41,8 @@
+     mal "texto: falta python3 (prerrequisito de la compuerta, no una violación)"
+   elif [ ! -f "$DIR/check_text_policy.py" ]; then
+     mal "texto: falta check_text_policy.py junto a compuerta.sh (prerrequisito, no violación)"
++  elif ! python3 -c 'import editorconfig' 2>/dev/null; then
++    mal "texto: falta el paquete EditorConfig de Python (EditorConfig==0.17.1; prerrequisito, no una violación)"
+   elif salida=$(python3 "$DIR/check_text_policy.py" "$@" 2>&1); then
+     ok "texto: ${salida##*$'\n'}"
+   else
+@@ -63,12 +67,15 @@
+                   *) mal "toolchain Node: .nvmrc pide $pedido; hay '${real:-ninguno}'" ;; esac
+ else na "toolchain Node: no hay .nvmrc"; fi
+ 
+-if [ -f .python-version ]; then
+-  pedido=$(tr -d ' \r\n' < .python-version)
+-  if tiene uv; then real=$(uv run --no-sync python -c 'import platform;print(platform.python_version())' 2>/dev/null) || real=""
+-  else real=""; fi
+-  case "$real" in "$pedido"|"$pedido".*) ok "toolchain Python: $real cumple .python-version=$pedido" ;;
+-                  *) mal "toolchain Python: .python-version pide $pedido; uv resuelve '${real:-ninguno}'" ;; esac
++pvs=$(git ls-files '*.python-version')
++if [ -n "$pvs" ]; then
++  for pv in $pvs; do
++    d=$(dirname "$pv"); pedido=$(tr -d ' \r\n' < "$pv")
++    if tiene uv; then real=$(cd "$d" && uv run --no-sync python -c 'import platform;print(platform.python_version())' 2>/dev/null) || real=""
++    else real=""; fi
++    case "$real" in "$pedido"|"$pedido".*) ok "toolchain Python: $real cumple $pv=$pedido" ;;
++                    *) mal "toolchain Python: $pv pide $pedido; uv resuelve '${real:-ninguno}'" ;; esac
++  done
+ else na "toolchain Python: no hay .python-version"; fi
+ 
+ # 3. Grafo congelado (N4): restauración ESTRICTA, nunca regenerar ------------
+@@ -78,20 +85,46 @@
+     d=$(dirname "$lock")
+     if tiene dotnet && out=$(dotnet restore "$d" --locked-mode 2>&1); then ok "grafo NuGet: $lock coincide (--locked-mode)"
+     else printf '%s\n' "${out:-dotnet no está instalado}" | grep -iE 'error|NU1|not found|requested' | sed 's/^ *//; s/^/    /' | head -4
+-         mal "grafo NuGet: restore --locked-mode falló para $lock"; fi
++         mal "grafo NuGet: restore --locked-mode falló para $lock"; continue; fi
++    # Con lock, NuGet no avisa (NU1603) si aproximó una versión pedida que no existe:
++    # se compara la cota inferior de "requested" con "resolved" en las entradas Direct y
++    # CentralTransitive. [criterio] También marca una subida legítima: se resuelve subiendo
++    # la versión declarada (PackageVersion) a la resuelta, en un PR que se revisa.
++    if out=$(python3 - "$lock" 2>&1 <<'PY'
++import json, sys
++malos = []
++for tfm, deps in json.load(open(sys.argv[1], encoding="utf-8"))["dependencies"].items():
++    for nombre, d in deps.items():
++        if d.get("type") in ("Direct", "CentralTransitive") and "requested" in d:
++            piso = d["requested"].strip("[( ").split(",")[0].strip(" )]")
++            if piso != d.get("resolved"):
++                malos.append(f"{nombre} pide {d['requested']} y resolvió {d['resolved']} ({tfm})")
++print("\n".join(malos)); sys.exit(1 if malos else 0)
++PY
++    ); then ok "grafo NuGet: $lock requested = resolved"
++    else printf '%s\n' "$out" | sed 's/^/    /' | head -4
++         mal "grafo NuGet: $lock resolvió otra versión que la pedida (revisar la declaración)"; fi
+   done
+ else na "grafo NuGet: no hay packages.lock.json"; fi
+ 
+-if [ -f package-lock.json ]; then
+-  if tiene npm && out=$(npm ci --ignore-scripts --no-audit --no-fund 2>&1); then ok "grafo npm: npm ci instaló exactamente package-lock.json"
+-  else printf '%s\n' "${out:-npm no está instalado}" | grep -E 'npm (error|ERR)' | head -4 | sed 's/^/    /'
+-       mal "grafo npm: package-lock.json no coincide con package.json"; fi
++locks=$(git ls-files '*package-lock.json')
++if [ -n "$locks" ]; then
++  for lock in $locks; do
++    d=$(dirname "$lock")
++    if tiene npm && out=$(cd "$d" && npm ci --ignore-scripts --no-audit --no-fund 2>&1); then ok "grafo npm: npm ci instaló exactamente $lock"
++    else printf '%s\n' "${out:-npm no está instalado}" | grep -E 'npm (error|ERR)' | head -4 | sed 's/^/    /'
++         mal "grafo npm: $lock no coincide con package.json"; fi
++  done
+ else na "grafo npm: no hay package-lock.json"; fi
+ 
+-if [ -f uv.lock ]; then
+-  if tiene uv && out=$(uv lock --check 2>&1); then ok "grafo uv: uv.lock al día (uv lock --check)"
+-  else printf '%s\n' "${out:-uv no está instalado}" | grep -v '^ *$' | tail -2 | sed 's/^/    /'
+-       mal "grafo uv: uv.lock no coincide con pyproject.toml"; fi
++locks=$(git ls-files '*uv.lock')
++if [ -n "$locks" ]; then
++  for lock in $locks; do
++    d=$(dirname "$lock")
++    if tiene uv && out=$(cd "$d" && uv lock --check 2>&1); then ok "grafo uv: $lock al día (uv lock --check)"
++    else printf '%s\n' "${out:-uv no está instalado}" | grep -v '^ *$' | tail -2 | sed 's/^/    /'
++         mal "grafo uv: $lock no coincide con pyproject.toml"; fi
++  done
+ else na "grafo uv: no hay uv.lock"; fi
+ 
+ if [ "$fallas" -eq 0 ]; then echo "COMPUERTA resultado=VERDE"; exit 0; fi

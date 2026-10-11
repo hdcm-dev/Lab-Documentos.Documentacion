@@ -1,0 +1,7 @@
+encabezados=183 anclas=183 enlaces internos=92 rotos=0 slugs duplicados=[]
+índice en orden con ## : True (20 entradas, 20 encabezados ##)
+enlaces relativos=3 inexistentes=[]
+rutas `Examples/…` citadas=39 inexistentes=[]
+Bnn definidas=223 citadas=223 citadas sin definir=[] definidas sin citar=[]
+IDs de experimento en el cuerpo=72 sin fila en el Anexo E=[]; filas del Anexo E=66
+bloques mermaid=11 yaml=7 bloques cerrados=True

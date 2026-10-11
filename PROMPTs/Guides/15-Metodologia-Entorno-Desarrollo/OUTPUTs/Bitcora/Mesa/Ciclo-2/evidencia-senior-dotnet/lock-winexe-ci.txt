@@ -1,0 +1,12 @@
+== WinExe (WPF), CI=true, plantillas A.4 + A.4b
+{
+  "Properties": {
+    "OutputType": "WinExe",
+    "RestorePackagesWithLockFile": "",
+    "RestoreLockedMode": "true"
+  }
+}
+  Determining projects to restore...
+  Restored /w/winexe/winexe.csproj (in 3.25 sec).
+rc=0
+ls: cannot access 'winexe/packages.lock.json': No such file or directory

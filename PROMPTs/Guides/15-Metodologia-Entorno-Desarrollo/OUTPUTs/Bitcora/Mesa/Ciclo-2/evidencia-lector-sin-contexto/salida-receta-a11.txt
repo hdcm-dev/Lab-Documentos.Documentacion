@@ -1,0 +1,67 @@
+== SDK: 8.0.425 · git 2.39.5
+
+################ 1. Estación «Windows» (core.fileMode=false) ################
+-- BOM de lo que crea el SDK (head -c3 | od):
+   Heredado.sln           efbbbf
+   src/App/App.csproj     efbbbf
+   src/App/Program.cs     efbbbf
+   src/Lib/Lib.csproj     efbbbf
+   src/Lib/Class1.cs      efbbbf
+-- .editorconfig tras descomentar la variante B:
+   29:[*.cs]
+   30-charset = utf-8-bom
+-- restore: locks generados: ./src/App/packages.lock.json 
+warning: in the working copy of 'Heredado.sln', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/App/App.csproj', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/App/Program.cs', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/Lib/Class1.cs', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/Lib/Lib.csproj', CRLF will be replaced by LF the next time Git touches it
+-- modos registrados en el índice:
+   100644 .githooks/pre-commit
+   100644 tools/ci/check_text_policy.py
+   100644 tools/ci/compuerta.sh
+-- compuerta a mano, como dice A.11 para Windows (bash tools/ci/compuerta.sh --staged):
+   COMPUERTA commit=sin-commits alcance=--staged
+       POLITICA-TEXTO: src/App/App.csproj: tiene BOM y .editorconfig declara charset=utf-8 (sin BOM)
+       POLITICA-TEXTO: src/App/obj/App.csproj.nuget.g.props: tiene BOM y .editorconfig declara charset=utf-8 (sin BOM)
+       POLITICA-TEXTO: src/App/obj/App.csproj.nuget.g.targets: tiene BOM y .editorconfig declara charset=utf-8 (sin BOM)
+       POLITICA-TEXTO: src/Lib/Lib.csproj: tiene BOM y .editorconfig declara charset=utf-8 (sin BOM)
+       POLITICA-TEXTO: src/Lib/obj/Lib.csproj.nuget.g.props: tiene BOM y .editorconfig declara charset=utf-8 (sin BOM)
+       POLITICA-TEXTO: src/Lib/obj/Lib.csproj.nuget.g.targets: tiene BOM y .editorconfig declara charset=utf-8 (sin BOM)
+       POLITICA-TEXTO: 26 archivo(s) revisado(s), 6 violación(es)
+   COMPUERTA [FALLA] texto: la política de .editorconfig/.gitattributes no se cumple
+   COMPUERTA [ok]    toolchain .NET: SDK 8.0.425 = global.json
+   COMPUERTA [n/a]   toolchain Node: no hay .nvmrc
+   COMPUERTA [n/a]   toolchain Python: no hay .python-version
+   COMPUERTA [ok]    grafo NuGet: src/App/packages.lock.json coincide (--locked-mode)
+   COMPUERTA [n/a]   grafo npm: no hay package-lock.json
+   COMPUERTA [n/a]   grafo uv: no hay uv.lock
+   COMPUERTA resultado=ROJO (1 paso/s)
+   rc=1
+-- commit inicial hecho (--no-verify sólo para fijar el punto de partida)
+
+################ 2. Clon de un compañero en Linux / devcontainer ################
+-- commit de un .cs en cp1252 con el hook activado:
+   hint: The '.githooks/pre-commit' hook was ignored because it's not set as executable.
+   hint: You can disable this warning with `git config advice.ignoredHook false`.
+   [main b5d499d] sensor cp1252
+    1 file changed, 2 insertions(+)
+    create mode 100644 src/Lib/Sensor.cs
+   rc=0
+-- paso de CI de A.12, tal cual (tools/ci/compuerta.sh sin bash delante):
+   /out/receta-a11.sh: line 51: tools/ci/compuerta.sh: Permission denied
+   rc=126
+
+################ 3. Control: el bit registrado con git update-index --chmod=+x ################
+   COMPUERTA commit=976c7d9 alcance=--staged
+       POLITICA-TEXTO: src/Lib/Sensor.cs: no es UTF-8 válido (byte 0xf3 en offset 63; ¿cp1252?)
+       POLITICA-TEXTO: 1 archivo(s) revisado(s), 1 violación(es)
+   COMPUERTA [FALLA] texto: la política de .editorconfig/.gitattributes no se cumple
+   COMPUERTA [ok]    toolchain .NET: SDK 8.0.425 = global.json
+   COMPUERTA [n/a]   toolchain Node: no hay .nvmrc
+   COMPUERTA [n/a]   toolchain Python: no hay .python-version
+   COMPUERTA [ok]    grafo NuGet: src/App/packages.lock.json coincide (--locked-mode)
+   COMPUERTA [n/a]   grafo npm: no hay package-lock.json
+   COMPUERTA [n/a]   grafo uv: no hay uv.lock
+   COMPUERTA resultado=ROJO (1 paso/s)
+   rc=1

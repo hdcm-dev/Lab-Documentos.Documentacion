@@ -1,0 +1,96 @@
+P-01 | OK    | ^version: 1.0.0$ = 1 | 
+P-01 | OK    | ^status: vigente = 1 | 
+P-01 | OK    | '217 fuentes' = 1 | 
+P-01 | OK    | índice = encabezados ## | 20 = 20, rotos 0
+P-02 | OK    | 'únicas cinco' = 0 | 
+P-02 | OK    | 'consultada el 2026-10-07.' = 0 | 
+P-02 | OK    | 'MSYS_NO_PATHCONV=1' = 1 en §0.4 | 
+P-02 | OK    | 'cli-plugins' = 1 | 1
+P-02 | OK    | ruta mínima: 9 filas | 9
+P-02 | OK    | comando de §0.4 tal cual → buildx v0.35.0 | github.com/docker/buildx v0.35.0 a319e5b15052cf6557ceb666eb8
+P-03 | OK    | líneas del bloque text de §1.2 en e1-roslyn-sdk8.txt | 0 faltan: []
+P-03 | OK    | '^$ docker run --rm -v' = 0 | 
+P-04 | OK    | 'Windows + VS |' = 0 | 
+P-04 | OK    | 'Windows+VS' = 0 | 
+P-04 | OK    | ACT-ARQ cita pasos que existen en §12 | citados ['1']; §12 ['1', '10', '2', '3', '4', '5', '6', '7', '8a', '8b', '9']
+P-05 | OK    | 'En el Recorrido, leé ahora' = 0 | 
+P-05 | OK    | §3.7 P2 sin NU1603 ni requested | **¿«Congelar» y «fijar» son lo mismo?** No. Fijar 
+P-05 | OK    | conteo de *Aplica* (antes de P-05: 64; no debe bajar) | 63
+P-06 | OK    | 'rama main al' = 0 | 
+P-06 | OK    | 'Sólo Python falla siempre' = 0 | 
+P-06 | OK    | 'prevista para el 2026-10-09' = 0 | 
+P-06 | OK    | 'E1-03). En E1-03' = 0 | 
+P-06 | OK    | [B205] definida y citada | 
+P-07 | OK    | EA-1 paso 1c: 2 violaciones sin BOM y 0 con BOM en Directory.Build.* | ['2 violación(es)', '0 violación(es)']
+P-07 | OK    | §5.7 tras «Señales»: 6 ítems '- ' | 6
+P-07 | OK    | respuesta de §5.9.2 = bloque B de A.1 | 
+P-07 | OK    | gating: EA-1 paso 1 da 25 archivo(s) | 
+P-08 | OK    | 'pnpm ≥ 11' = 0 | 
+P-08 | OK    | 'desde la 11, lo hace cumplir' = 0 | 
+P-08 | OK    | [B206] definida y citada | 
+P-08 | OK    | [B207] definida y citada | 
+P-08 | OK    | §6.2.2 cita 'A compatible .NET SDK was not found' una vez | 
+P-08 | OK    | §6.6 P2 y A.3 remiten a §6.4 | 
+P-08 | OK    | fila ESC-04 de §6.4 sin digest | 
+P-08 | OK    | celda «Qué cuesta» cita [B56] | 
+P-09 | OK    | EA-1 paso 8: sin NU1603, pide [8.0.2, ) y resolvió 9.0.0, ROJO | 
+P-09 | OK    | EA-1 paso 2c: WinExe con packages.lock.json | 
+P-09 | OK    | 'sólo cuando detectan CI' = 0 | 
+P-09 | OK    | '**[no verificado]** |' en §7.3 = 0 | 
+P-09 | OK    | [B215] definida y citada | 
+P-09 | OK    | [B83] en §7.2.1 | 6
+P-10 | OK    | §8.5 JSONC válido | 1 bloque(s)
+P-10 | OK    | postCreateCommand de §8.5 y de A.9 con safe.directory | 
+P-10 | OK    | devcontainer up: outcome success y core.hooksPath | 
+P-10 | OK    | [B213] definida y citada | 
+P-10 | OK    | [B216] definida y citada | 
+P-11 | OK    | §9.2.4 ≤ 600 palabras | 598
+P-11 | OK    | refs [Bnn] de §9.2.4 conservadas (o en §9.3) | 
+P-11 | OK    | 'cómo completarlo en BuildKit no se verificó' = 0 | 
+P-11 | OK    | '^export SOURCE_DATE_EPOCH' = 1 | 1
+P-11 | OK    | GITHUB_ENV en §9.5 | 
+P-11 | OK    | 'ilustrativ' = 4 | 4
+P-11 | OK    | #924-procedencia-slsa-y-firma resuelve | 
+P-11 | OK    | [B208] definida y citada | 
+P-12 | OK    | EA-1 paso 8: VERDE con Python de tools/gen y npm de web/ | 
+P-12 | OK    | EA-1 paso 8: cp1252 → ¿cp1252? y ROJO | 
+P-12 | OK    | caso (d): falta el paquete EditorConfig | 
+P-12 | OK    | 'mismo diseño' = 0 | 
+P-12 | OK    | 'minimum_pre_commit_version' = 1 | 
+P-12 | OK    | [B214] definida y citada | 
+P-12 | OK    | fila de GitHub de §10.2.7 sin [B186] | 1
+P-13 | OK    | 'version=v1' en §11.5 = 1 | 
+P-13 | OK    | 'Este comando no pide' = 0 | 
+P-13 | OK    | E8-6 con version=v1: rc=0, provenance/v1, builder.id vacío, 5 materiales | 
+P-13 | OK    | extracto de verificar.sh: líneas en el archivo | 1 bloque(s), faltan []
+P-13 | OK    | comentario del .csproj de §11.5 = archivo | 
+P-13 | OK    | §11.9 con dos consignas | 2
+P-13 | OK    | 'piezas' en §11 = 0 | 
+P-14 | OK    | YAML de §12 válido (PyYAML 6.0.3) | dict
+P-14 | OK    | validaciones: 11 líneas (1–10 con 8a y 8b) | 11
+P-14 | OK    | ruta mínima remite a la Práctica integradora, que existe | 
+P-15 | OK    | [B210] definida y citada | 
+P-15 | OK    | [B211] definida y citada | 
+P-15 | OK    | [B212] definida y citada | 
+P-15 | OK    | [B216] definida y citada | 
+P-15 | OK    | [B217] definida y citada | 
+P-15 | OK    | 'verificar.sh de N8' = 0 | 
+P-15 | OK    | bloque text de A.17 = líneas del paso 9 de EA-1 (… en hashes) | []
+P-16 | OK    | '¿La imagen sigue fijada por digest' = 0 | 
+P-16 | OK    | B.4 con 8 ítems | 8
+P-17 | OK    | término «Manifiesto» en el Anexo C | 
+P-17 | OK    | término «Registro de paquetes» en el Anexo C | 
+P-17 | OK    | término «VS» en el Anexo C | 
+P-17 | OK    | término «Escenario» en el Anexo C | 
+P-17 | OK    | términos nuevos en orden alfabético con sus vecinos | []
+P-17 | OK    | remisiones del Anexo C resuelven | 0
+P-19 | OK    | fila EA-1 nombra pasos 1c, 2c, 8, 9 y 10 | 
+P-19 | OK    | esos pasos existen en verificar.sh | 
+P-20 | OK    | 'Formato de SBOM' en Anexo F = 0 | 
+P-20 | OK    | 'cómo completar `builder.id`' = 0 | 
+P-20 | OK    | 'Datos volátiles al 2026-10-07' = 0 | 
+P-20 | OK    | título del Anexo F = entrada del índice | 
+P-20 | OK    | R-03 remite a §3.7 y §4–§11; P-09 a n.3 | 
+P-21 | OK    | ninguna celda > 60 palabras | 21
+P-21 | OK    | 'cerrado de cinco' = 0 | 
+P-21 | OK    | última fila = version: | ('1.0.0', '| 1.0.0 | 2026-10-09')

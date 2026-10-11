@@ -1,0 +1,10 @@
+== A.1 tal cual (variante A)
+POLITICA-TEXTO: 10 archivo(s) revisado(s), 4 violación(es)
+   29:[*.{cs,csproj,props,targets}]
+   30-charset = utf-8-bom
+== Variante B ampliada, con Directory.Build.* copiados del Anexo A (sin BOM)
+   POLITICA-TEXTO: Directory.Build.props: falta el BOM que .editorconfig declara (charset=utf-8-bom)
+   POLITICA-TEXTO: Directory.Build.targets: falta el BOM que .editorconfig declara (charset=utf-8-bom)
+   POLITICA-TEXTO: 10 archivo(s) revisado(s), 2 violación(es)
+== Variante B ampliada, con Directory.Build.* guardados con BOM
+   POLITICA-TEXTO: 10 archivo(s) revisado(s), 0 violación(es)

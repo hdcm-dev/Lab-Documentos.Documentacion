@@ -1,0 +1,44 @@
+warning: in the working copy of 'Heredado.sln', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/App/App.csproj', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/App/Program.cs', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/Lib/Class1.cs', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/Lib/Lib.csproj', CRLF will be replaced by LF the next time Git touches it
+COMPUERTA commit=sin-commits alcance=--staged
+COMPUERTA [n/a]   texto: no hay .editorconfig
+COMPUERTA [ok]    toolchain .NET: SDK 8.0.425 = global.json
+COMPUERTA [n/a]   toolchain Node: no hay .nvmrc
+COMPUERTA [n/a]   toolchain Python: no hay .python-version
+COMPUERTA [ok]    grafo NuGet: src/App/packages.lock.json coincide (--locked-mode)
+COMPUERTA [n/a]   grafo npm: no hay package-lock.json
+COMPUERTA [n/a]   grafo uv: no hay uv.lock
+COMPUERTA resultado=VERDE
+-- commit inicial (hook en verde)
+-- agrego ProjectReference App -> Lib y restauro (como el IDE):
+    M src/App/App.csproj
+    M src/App/packages.lock.json
+warning: in the working copy of 'src/App/App.csproj', CRLF will be replaced by LF the next time Git touches it
+-- commit con SÓLO el .csproj marcado (hook --staged):
+   COMPUERTA commit=26f99d4 alcance=--staged
+   COMPUERTA [n/a]   texto: no hay .editorconfig
+   COMPUERTA [ok]    toolchain .NET: SDK 8.0.425 = global.json
+   COMPUERTA [n/a]   toolchain Node: no hay .nvmrc
+   COMPUERTA [n/a]   toolchain Python: no hay .python-version
+   COMPUERTA [ok]    grafo NuGet: src/App/packages.lock.json coincide (--locked-mode)
+   COMPUERTA [n/a]   grafo npm: no hay package-lock.json
+   COMPUERTA [n/a]   grafo uv: no hay uv.lock
+   COMPUERTA resultado=VERDE
+   [main bbff270] referencia a Lib
+    1 file changed, 1 insertion(+)
+   rc=0
+-- CI: clon limpio y la misma compuerta (sin alcance, como en main):
+   COMPUERTA commit=bbff270 alcance=todo
+   COMPUERTA [n/a]   texto: no hay .editorconfig
+   COMPUERTA [ok]    toolchain .NET: SDK 8.0.425 = global.json
+   COMPUERTA [n/a]   toolchain Node: no hay .nvmrc
+   COMPUERTA [n/a]   toolchain Python: no hay .python-version
+       /tmp/w2/ci/src/App/App.csproj : error NU1004: A new project reference to Lib was found for net8.0 target framework.The packages lock file is inconsistent with the project dependencies so restore can't be run in locked mode. Disable the RestoreLockedMode MSBuild property or pass an explicit --force-evaluate option to run restore to update the lock file.
+   COMPUERTA [FALLA] grafo NuGet: restore --locked-mode falló para src/App/packages.lock.json
+   COMPUERTA [n/a]   grafo npm: no hay package-lock.json
+   COMPUERTA [n/a]   grafo uv: no hay uv.lock
+   COMPUERTA resultado=ROJO (1 paso/s)
+   rc=1

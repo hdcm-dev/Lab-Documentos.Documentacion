@@ -1,0 +1,40 @@
+--- original/verificar.sh	2026-10-09 17:02:06.695091081 -0300
++++ verificar.sh	2026-10-09 18:00:22.127436358 -0300
+@@ -40,10 +40,10 @@
+   W=/tmp/b && mkdir -p $W && cd $W && git init -q -b main .
+   dotnet new sln -n Heredado >/dev/null; dotnet new console -n App -o src/App >/dev/null; dotnet new classlib -n Lib -o src/Lib >/dev/null
+   for f in $(find src -name "*.cs" -o -name "*.csproj"); do head -c3 "$f" | od -An -tx1 | grep -q "ef bb bf" || { printf "\xef\xbb\xbf" | cat - "$f" > t && mv t "$f"; }; done
+-  cp /r/.editorconfig /r/.gitattributes /r/.gitignore /r/Directory.Build.props /r/Directory.Build.targets .
++  cp /r/.editorconfig /r/.gitattributes /r/.gitignore /r/Directory.Build.props /r/Directory.Build.targets /r/Directory.Packages.props .
+   sed -i "s/^# \[\*\.{cs,csproj,props,targets}\]$/[*.{cs,csproj,props,targets}]/; s/^# charset = utf-8-bom$/charset = utf-8-bom/" .editorconfig
+-  git add -A; python3 /tools/check_text_policy.py 2>&1 | sed "s/^/  /"; echo "  rc=${PIPESTATUS[0]} (se esperan 2: los Directory.Build.* sin BOM)"
+-  for f in Directory.Build.props Directory.Build.targets; do printf "\xef\xbb\xbf" | cat - "$f" > t && mv t "$f"; done
++  git add -A; python3 /tools/check_text_policy.py 2>&1 | sed "s/^/  /"; echo "  rc=${PIPESTATUS[0]} (se esperan 3: los Directory.Build.* y Directory.Packages.props sin BOM)"
++  for f in Directory.Build.props Directory.Build.targets Directory.Packages.props; do printf "\xef\xbb\xbf" | cat - "$f" > t && mv t "$f"; done
+   git add -A; python3 /tools/check_text_policy.py 2>&1 | sed "s/^/  /"; echo "  rc=${PIPESTATUS[0]}"'
+ 
+ echo "== 2. .NET: la condición de CI de Directory.Build.props"
+@@ -143,13 +143,21 @@
+   CI=true bash tools/ci/compuerta.sh | grep -E "grafo NuGet|pide|resultado"; echo "  rc=${PIPESTATUS[0]}"; git reset -q --hard HEAD~1; rm -rf src/App/obj
+   echo "-- web/package.json cambiado sin regenerar su lock:"
+   sed -i "s/\"private\": true,/\"private\": true,\n  \"dependencies\": { \"is-number\": \"7.0.0\" },/" web/package.json; git commit -qam dep
+-  CI=true bash tools/ci/compuerta.sh | grep -E "grafo npm|resultado"; echo "  rc=${PIPESTATUS[0]}"; git reset -q --hard HEAD~1'
++  CI=true bash tools/ci/compuerta.sh | grep -E "grafo npm|resultado"; echo "  rc=${PIPESTATUS[0]}"; git reset -q --hard HEAD~1
++  echo "-- web/ y tools/gen/ versionados SIN su lock, como quedan al copiar las plantillas (límite declarado, 10.2.2):"
++  git rm -q --cached web/package-lock.json tools/gen/uv.lock && git commit -qm "sin locks de npm y uv"
++  CI=true bash tools/ci/compuerta.sh | grep -E "grafo (npm|uv)|resultado"; echo "  rc=${PIPESTATUS[0]} (verde: lo detecta la revisión, no la compuerta)"; git reset -q --hard HEAD~1'
+ 
+ echo "== 9. Los run: de A.12 en la misma imagen: SOURCE_DATE_EPOCH por GITHUB_ENV, build y registro del entorno (A.17)"
+ docker run --rm $U -v "$T8":/w -w /w ea1-imagen:local bash -c '
+   GITHUB_ENV=/tmp/github_env; echo "SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct)" >> "$GITHUB_ENV"; set -a; . "$GITHUB_ENV"; set +a
+   CI=true dotnet build src/App -c Release -o out -v q -nologo >/dev/null && echo "  dotnet build rc=0"
+-  bash tools/ci/registrar-entorno.sh out/App.dll | sed "s/^/  /"; echo "  rc=${PIPESTATUS[0]}"; rm -rf out'
++  bash tools/ci/registrar-entorno.sh out/App.dll | sed "s/^/  /"; echo "  rc=${PIPESTATUS[0]}"
++  echo "== 9b. El workflow guardado con otro nombre: el registro falla en vez de escribir NO DECLARADA"
++  mv .github/workflows/ci.yml .github/workflows/compuerta.yml
++  bash tools/ci/registrar-entorno.sh out/App.dll 2>&1 | grep -E "^registro|^imagen" | sed "s/^/  /"; echo "  rc=${PIPESTATUS[0]} (se espera 1)"
++  WORKFLOW_FILE=.github/workflows/compuerta.yml bash tools/ci/registrar-entorno.sh out/App.dll | grep "^imagen" | sed "s/^/  /"
++  mv .github/workflows/compuerta.yml .github/workflows/ci.yml; rm -rf out'
+ rm -rf "$T8"
+ 
+ echo "== 10. El devcontainer de A.9 con la CLI de referencia, en host Linux"

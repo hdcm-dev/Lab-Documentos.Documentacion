@@ -1,0 +1,130 @@
+{
+ "antes": {
+  "total": 54267,
+  "prosa": 43604,
+  "evidencia": 10663
+ },
+ "despues": {
+  "total": 55241,
+  "prosa": 44097,
+  "evidencia": 11144
+ },
+ "parches": [
+  {
+   "id": "P-01",
+   "prosa": 28,
+   "evidencia": 1
+  },
+  {
+   "id": "P-02",
+   "prosa": 2,
+   "evidencia": 0
+  },
+  {
+   "id": "P-03",
+   "prosa": -124,
+   "evidencia": -3
+  },
+  {
+   "id": "P-04",
+   "prosa": 36,
+   "evidencia": 2
+  },
+  {
+   "id": "P-05",
+   "prosa": 92,
+   "evidencia": 6
+  },
+  {
+   "id": "P-06",
+   "prosa": 36,
+   "evidencia": 1
+  },
+  {
+   "id": "P-07",
+   "prosa": -16,
+   "evidencia": 9
+  },
+  {
+   "id": "P-08",
+   "prosa": 146,
+   "evidencia": 4
+  },
+  {
+   "id": "P-09",
+   "prosa": 80,
+   "evidencia": 20
+  },
+  {
+   "id": "P-10",
+   "prosa": 132,
+   "evidencia": 18
+  },
+  {
+   "id": "P-11",
+   "prosa": 121,
+   "evidencia": 2
+  },
+  {
+   "id": "P-12",
+   "prosa": 66,
+   "evidencia": 25
+  },
+  {
+   "id": "P-13",
+   "prosa": 89,
+   "evidencia": 140
+  },
+  {
+   "id": "P-14",
+   "prosa": 29,
+   "evidencia": 0
+  },
+  {
+   "id": "P-15",
+   "prosa": 12,
+   "evidencia": 0
+  },
+  {
+   "id": "P-16",
+   "prosa": 0,
+   "evidencia": 176
+  },
+  {
+   "id": "P-17",
+   "prosa": 3,
+   "evidencia": 65
+  },
+  {
+   "id": "P-18",
+   "prosa": 48,
+   "evidencia": 14
+  },
+  {
+   "id": "P-19",
+   "prosa": -14,
+   "evidencia": 1
+  },
+  {
+   "id": "P-20",
+   "prosa": -74,
+   "evidencia": 0
+  },
+  {
+   "id": "P-21",
+   "prosa": -125,
+   "evidencia": 0
+  },
+  {
+   "id": "P-22",
+   "prosa": -58,
+   "evidencia": 0
+  },
+  {
+   "id": "P-23",
+   "prosa": -16,
+   "evidencia": 0
+  }
+ ],
+ "fallas": 0
+}

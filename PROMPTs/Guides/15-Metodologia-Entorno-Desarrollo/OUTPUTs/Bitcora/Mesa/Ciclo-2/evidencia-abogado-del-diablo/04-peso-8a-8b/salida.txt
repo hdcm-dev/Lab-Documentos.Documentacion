@@ -1,0 +1,16 @@
+§9.2.4 Procedencia SLSA y firma (8b)       L1634-L1665  931 palabras
+§9.2.3 SBOM (8a)                           L1615-L1633  298 palabras
+§11.2.8 SBOM y procedencia políglota       L2175-L2184  405 palabras
+registro del entorno     18 apariciones
+registro de entorno      5 apariciones
+registrar-entorno        1 apariciones
+cosign                   13 apariciones
+SLSA                     58 apariciones
+builder\.id              22 apariciones
+atestaci                 20 apariciones
+bloques de código que muestran el registro del entorno (formato/contenido): 1
+   > solucion/
+bloques de código de procedencia/firma: 3
+   > # GitHub Actions (repo público o plan Enterprise Cloud): procedencia firmada por la plataforma [B158].
+   > # Sin plataforma que firme (E6-5): cosign sobre la procedencia de BuildKit. NO es SLSA L2; con builder.id vací
+   > # Una vez por máquina: un builder docker-container, que exporta procedencia y SBOM (§9.2.4).

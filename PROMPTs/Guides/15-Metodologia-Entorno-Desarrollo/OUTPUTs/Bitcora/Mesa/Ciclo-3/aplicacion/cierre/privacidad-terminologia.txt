@@ -1,0 +1,24 @@
+== privacidad (guía, Examples sin bin/obj/node_modules, notas de P-24)
+guía: 0
+Examples: 0
+notas ciclo 3: 0
+== terminología: cadenas retiradas en el ciclo 3 (03-Parches §8)
+  'ImagenDigest': 0
+  '**[no verificado]** (requiere Windows)': 0
+  'npm y pip': 0
+  'reconstrucción bit a bit': 0
+  'Práctica de §3': 0
+  'las ampliaciones de la revisión': 0
+  'CheckSdkVulnerabilities=true': 0
+  'porque las herramientas del SDK lo reponen': 0
+  'B224': 0
+  'verificar.sh' por sección:
+    0.4 El laboratorio 1
+    10.2 Cómo funciona 1
+    11.1 Definición 1
+    11.2 Cómo funciona 1
+    11.5 Ejemplos concretos 1
+    Anexo A. Plantillas comentadas 1
+    Anexo E. Laboratorio 1
+== marcas fuera de código
+  por marca {'criterio': 85, 'no verificado': 36, 'observado': 12, 'interpretación': 5} | *Aplica*: 61 | palabras (wc -w): 55261 | líneas: 3637

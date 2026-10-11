@@ -1,0 +1,40 @@
+== SDK 8.0.425
+-- 1. plantilla de proyecto (dotnet new blazor)
+*.razor: conBOM=9 sinBOM=0
+*.cs: conBOM=0 sinBOM=1
+*.csproj: conBOM=0 sinBOM=1
+-- 2. plantillas de ITEM: dotnet new razorcomponent / class / interface
+Items/Nuevo.razor: BOM
+Items/Clase.cs: BOM
+Items/IFace.cs: BOM
+-- 3. se quita el BOM de TODOS los .razor existentes y se corren comandos habituales del SDK
+*.razor: conBOM=0 sinBOM=10
+dotnet build rc=0
+dotnet format whitespace --verify-no-changes (charset=utf-8) rc=2
+dotnet format whitespace (aplica) rc=0
+dotnet add package rc=0
+-- 4. después de build, format y add package:
+*.razor: conBOM=0 sinBOM=10
+-- 5. ¿Razor compila igual con y sin BOM? (texto no ASCII en el .razor)
+build con .razor UTF-8 SIN BOM y acentos rc=0
+en la DLL: 0 coincidencias ASCII de 'Atenci' (UTF-16 no se ve con grep)
+== SDK 10.0.400
+-- 1. plantilla de proyecto (dotnet new blazor)
+*.razor: conBOM=11 sinBOM=0
+*.cs: conBOM=0 sinBOM=1
+*.csproj: conBOM=0 sinBOM=1
+-- 2. plantillas de ITEM: dotnet new razorcomponent / class / interface
+Items/Nuevo.razor: BOM
+Items/Clase.cs: BOM
+Items/IFace.cs: BOM
+-- 3. se quita el BOM de TODOS los .razor existentes y se corren comandos habituales del SDK
+*.razor: conBOM=0 sinBOM=12
+dotnet build rc=0
+dotnet format whitespace --verify-no-changes (charset=utf-8) rc=2
+dotnet format whitespace (aplica) rc=0
+dotnet add package rc=0
+-- 4. después de build, format y add package:
+*.razor: conBOM=0 sinBOM=12
+-- 5. ¿Razor compila igual con y sin BOM? (texto no ASCII en el .razor)
+build con .razor UTF-8 SIN BOM y acentos rc=0
+en la DLL: 0 coincidencias ASCII de 'Atenci' (UTF-16 no se ve con grep)
