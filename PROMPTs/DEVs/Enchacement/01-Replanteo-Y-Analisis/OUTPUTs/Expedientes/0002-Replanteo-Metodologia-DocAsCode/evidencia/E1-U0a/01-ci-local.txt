@@ -1,0 +1,21 @@
+# ci-local.sh sobre el worktree en 8c3fc99 (2026-10-27T12:53:29Z)
+== 1/3 herramientas: lychee 0.18.1
+<fc-work>/tools/cache2/lychee-0.18.1.tar.gz: La suma coincide
+lychee 0.18.1
+== 2/3 enlaces: lychee --offline --include-fragments Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion
+🔍 24 Total (in 0s) ✅ 15 OK 🚫 0 Errors 👻 9 Excluded
+== 3/3 estructura: markdownlint-cli2 0.17.2 Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion
+markdownlint-cli2 v0.17.2 (markdownlint v0.37.4)
+Finding: Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/**/*.md
+Linting: 15 file(s)
+Summary: 0 error(s)
+== docs-guard: verde
+exit=0
+
+# criterio 1
+CHANGELOG.md:15:#### Delegación del merge (Conformacion-Pull-Request-Automatico 2.0)
+CHANGELOG.md:35:#### Delegación del merge (Conformacion-Pull-Request-Automatico 2.0)
+
+# criterio 4
+self-hosted, i7infra-dev: 1
+container: 0

@@ -1,0 +1,8 @@
+# Evidencia del caso: el texto se versiona; las capturas, los volcados crudos y los originales con datos
+# que no se publican quedan locales (Rule-Expediente §3.6 y §3.8).
+evidencia/local/
+**/evidencia*/**/*.png
+**/evidencia*/**/*.jpg
+**/evidencia*/**/*.ndjson
+**/evidencia*/**/*.mp4
+**/evidencia*/**/*.apk

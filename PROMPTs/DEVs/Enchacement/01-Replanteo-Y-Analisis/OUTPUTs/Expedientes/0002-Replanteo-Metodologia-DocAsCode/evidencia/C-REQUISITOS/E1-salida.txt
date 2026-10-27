@@ -1,0 +1,22 @@
+== Muestra actual (29 cláusulas)
+atomica si=14 no=15 | univoca si=14 no=15 | verificable si=16 parcial=10 no=3 | criterio si=9 parcial=8 no=12
+-- sin criterio completo (parcial o no):
+M01 M02 M03 M04 M05 M06 M08 M09 M10 M11 M12 M13 M17 M20 M22 M23 M26 M27 M28 M29 
+-- términos vagos (léxico) en la muestra actual:
+      2 Frescura
+      1 sin leer
+      1 siga abierta
+      1 lo avisa
+      1 inmutable
+      1 frescura
+      1 favorable
+      1 empieza
+      1 con criterio
+      1 clara
+      1 antes de construir
+== Reescritura DCE (24 cláusulas que reemplazan a las sin criterio)
+incompletas: 0
+-- términos vagos en la reescritura:
+0
+-- cobertura: ids sin criterio que la reescritura cubre
+cubiertos: 20

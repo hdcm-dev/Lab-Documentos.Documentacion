@@ -1,0 +1,14 @@
+  GenerateOpenApiDocuments:
+    dotnet "/root/.nuget/packages/microsoft.extensions.apidescription.server/10.0.11/build/../tools/dotnet-getdocument.dll" --assembly "/w/MovilidadUrbana.ApiWeb/bin/Release/net10.0/MovilidadUrbana.ApiWeb.dll" --file-list "obj/MovilidadUrbana.ApiWeb.OpenApiFiles.cache" --framework ".NETCoreApp,Version=v10.0" --output "/w/MovilidadUrbana.ApiWeb/contracts" --project "MovilidadUrbana.ApiWeb" --assets-file "/w/MovilidadUrbana.ApiWeb/obj/project.assets.json" --platform "AnyCPU" --file-name openapi
+  Writing document named 'v1' to '/w/MovilidadUrbana.ApiWeb/contracts/openapi.json'.
+    0 Warning(s)
+    0 Error(s)
+Time Elapsed 00:00:15.77
+total 28
+drwxr-xr-x  2 root   root    4096 Oct 26 18:05 .
+drwxrwxr-x 13 ubuntu ubuntu  4096 Oct 26 18:05 ..
+-rw-r--r--  1 root   root   16883 Oct 26 18:05 openapi.json
+
+real	0m16,619s
+user	0m0,020s
+sys	0m0,005s

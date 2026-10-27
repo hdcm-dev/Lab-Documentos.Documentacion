@@ -1,0 +1,30 @@
+id	fuente	texto	atomica	univoca	verificable	criterio
+M01	N04:114	Requerimientos — salida: Lista de audiencias y tareas; requisitos de la documentación	no	no	no	no
+M02	N04:115	Análisis — salida: Inventario con estado conservar/actualizar/quitar	si	si	parcial	no
+M03	N04:116	Diseño — salida: Árbol de tipos, topología por pieza, contrato de frontmatter, ADR	no	no	parcial	no
+M04	N04:117	Implementación — salida: Páginas, referencia generada, ejemplos que compilan	no	si	parcial	parcial
+M05	N04:118	Integración — salida: Compuertas en verde, sitio y salidas para agentes publicados	no	no	si	parcial
+M06	N04:119	Mantenimiento — salida: Revisión por frescura, re-indexado, reintegración	no	no	no	no
+M07	GUIA:564	Planificar — mecanismo: La tabla familia → portal de 5.1; la cobertura CU → página de 7.7	no	si	si	si
+M08	GUIA:565	Derivar y redactar — mecanismo: Frontmatter con traces y versión de la fuente; origin y confidence si participó un agente	no	si	si	parcial
+M09	GUIA:566	Revisar — Otra persona lo lee con criterio; mecanismo: la revisión del PR; los chequeos de CI de 7.7	no	no	parcial	no
+M10	GUIA:567	Publicar — mecanismo: El documento viaja con la versión: tag, despliegue, CHANGELOG	no	no	parcial	no
+M11	GUIA:568	Mantener — mecanismo: Trazas con versión, last_review o ms.date, translation_of	no	no	parcial	no
+M12	GUIA:569	Deprecar — mecanismo: Estado obsoleto; sección Deprecated del changelog	no	si	si	parcial
+M13	GUIA:570	Archivar — mecanismo: Carpeta de archivo inmutable, versión archivada	no	no	parcial	no
+M14	GUIA:465	Frontmatter — falla cuando falta un campo obligatorio, o roles tiene un valor que no está en el enum Role	si	si	si	si
+M15	GUIA:466	Enlaces rotos — falla cuando un enlace .md apunta a una página inexistente	si	si	si	si
+M16	GUIA:467	Cruce de rol — falla cuando una página enlaza a otra que algún rol lector no puede ver	si	si	si	si
+M17	GUIA:468	HTML crudo — una página trae HTML; el chequeo lo avisa antes	si	no	si	parcial
+M18	GUIA:469	Cobertura — falla cuando un CU del panel con actor Alumno o Administrador no tiene ninguna página que lo trace	si	si	si	si
+M19	GUIA:470	Frescura de la derivación — falla cuando la versión en traces es menor que la del CU	si	si	si	si
+M20	GUIA:471	Frescura de la traducción — falla cuando la revisión de translation_of es anterior al último cambio de la fuente	si	no	si	parcial
+M21	GUIA:472	E2E de acceso — falla cuando una sesión de alumno obtiene una página o una línea de llms.txt de administrador	si	si	si	si
+M22	F001:131	Un escalón no empieza sin el dictamen favorable de la compuerta anterior	si	no	parcial	no
+M23	N07:V1	Cada escalón tiene objetivo, alcance, sistema, qué demuestra y criterio de éxito medible	no	si	si	parcial
+M24	N07:V2	La mini demo no inventa roles y no modifica el repo de código sin expediente	no	si	si	si
+M25	N07:V3	Cada demo trae al menos un defecto plantado que el validador detecta	si	si	si	si
+M26	N07:V4	La piloto declara su vía normativa antes de construir	si	no	parcial	no
+M27	N07:V5	El conocimiento extraído de la piloto se puede aplicar al SDD-B sin leer la piloto	si	no	parcial	no
+M28	N07:V6	Ninguna escritura concurrente sobre la ia-db de Geometría mientras la otra corrida siga abierta	si	no	si	parcial
+M29	TP:26	Definir una metodología clara en evaluación de requerimientos, análisis, diseño, implementación e integración de documentación técnica de sistemas	no	no	no	no

@@ -1,0 +1,55 @@
+# Corridas en el runner (API de Actions), 2026-10-27T13:21:49Z
+# id nombre estado conclusión creada iniciada actualizada
+## PR #11, primera cabeza 8c3fc99
+40505934724 docs-guard completed success 2026-10-27T12:42:50Z 2026-10-27T12:42:50Z 2026-10-27T12:50:08Z
+40505934654 framework-concept-demo completed success 2026-10-27T12:42:50Z 2026-10-27T12:42:50Z 2026-10-27T12:56:13Z
+## Par rojo/verde (PR #12, base = rama de U0a, cerrado sin fusionar)
+### rojo 12d8999 (enlace plantado)
+40505938877 framework-concept-demo completed cancelled 2026-10-27T12:42:52Z 2026-10-27T12:42:52Z 2026-10-27T13:01:08Z
+40505939059 docs-guard completed failure 2026-10-27T12:42:52Z 2026-10-27T12:42:52Z 2026-10-27T12:47:58Z
+### verde c5cf38f (revertido)
+40507350933 framework-concept-demo completed success 2026-10-27T12:53:23Z 2026-10-27T12:53:23Z 2026-10-27T13:10:17Z
+40507350875 docs-guard completed success 2026-10-27T12:53:23Z 2026-10-27T12:53:23Z 2026-10-27T12:54:38Z
+## PR #11, cabeza auditada 87c3b65 (tras merge de main, check estricto)
+40508915299 framework-concept-demo completed success 2026-10-27T13:04:47Z 2026-10-27T13:04:47Z 2026-10-27T13:13:30Z
+40508916199 docs-guard completed success 2026-10-27T13:04:47Z 2026-10-27T13:04:47Z 2026-10-27T13:21:13Z
+## jobs de 40505934724
+docs-guard i7infra-runner-dev creado 2026-10-27T12:42:51Z iniciado 2026-10-27T12:49:05Z fin 2026-10-27T12:50:07Z success
+   Set up job success
+   Checkout del repositorio que se verifica success
+   Checkout de las herramientas de docs-guard success
+   1/3 herramientas success
+   2/3 enlaces success
+   3/3 estructura success
+   Post Checkout de las herramientas de docs-guard success
+   Post Checkout del repositorio que se verifica success
+   Complete job success
+## jobs de 40505939059
+docs-guard i7infra-runner-dev creado 2026-10-27T12:42:53Z iniciado 2026-10-27T12:47:07Z fin 2026-10-27T12:47:58Z failure
+   Set up job success
+   Checkout del repositorio que se verifica success
+   Checkout de las herramientas de docs-guard success
+   1/3 herramientas success
+   2/3 enlaces failure
+   3/3 estructura skipped
+   Post Checkout de las herramientas de docs-guard success
+   Post Checkout del repositorio que se verifica success
+   Complete job success
+## jobs de 40508916199
+docs-guard i7infra-runner-dev creado 2026-10-27T13:04:48Z iniciado 2026-10-27T13:20:16Z fin 2026-10-27T13:21:12Z success
+   Set up job success
+   Checkout del repositorio que se verifica success
+   Checkout de las herramientas de docs-guard success
+   1/3 herramientas success
+   2/3 enlaces success
+   3/3 estructura success
+   Post Checkout de las herramientas de docs-guard success
+   Post Checkout del repositorio que se verifica success
+   Complete job success
+## merge
+{
+  "sha": "f603984a3a4b35ea62feb7e5b3f68c0ad3331311",
+  "merged": true,
+  "message": "Pull Request successfully merged"
+}
+rama borrada: DELETE 204, GET 404 (ambas ramas)

@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "remark-frontmatter",
+    ["remark-lint-frontmatter-schema", { "schemas": {
+      "./schemas/cuerpo.schema.json": ["corpus/**/Sistema-Documentador-Tecnico-Guide.md", "corpus/mini/**/*.md"],
+      "./schemas/ayuda.schema.json": ["corpus/**/Web/Ayuda/**/*.md"]
+    } }]
+  ]
+}

@@ -1,0 +1,22 @@
+# E4 — OpenAPI emitido en build (copia de MovilidadUrbana.ApiWeb, contenedor mcr.microsoft.com/dotnet/sdk:10.0)
+
+Cambios al .csproj de la copia:
+10a11
+>     <OpenApiDocumentsDirectory>$(MSBuildProjectDirectory)/openapi</OpenApiDocumentsDirectory>
+17a19
+>     <PackageReference Include="Microsoft.Extensions.ApiDescription.Server" Version="10.0.11"><PrivateAssets>all</PrivateAssets><IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets></PackageReference>
+
+dotnet build -c Release -> Build succeeded. 0 Warning(s) 0 Error(s) (00:00:16.67)
+16883 MovilidadUrbana.ApiWeb.json
+sha256 6be9cd09f6a9b55befdb49b68b0f5c131d1105d0547c5e41ff2f62352aebfd15
+openapi 3.1.1 | info {'title': 'MovilidadUrbana.ApiWeb | v1', 'version': '1.0.0'}
+  GET /api/v1/encuestas/contador — Cuántas encuestas registró esta sesión.
+  POST /api/v1/encuestas/pasos/{paso}/validacion — Valida un paso —1, 2 o 3— sin registrar nada.
+  POST /api/v1/encuestas — Registra una encuesta completa. Valida los tres pasos antes de guardar.
+  GET /api/v1/localidades — Lista las localidades de la sesión.
+  POST /api/v1/localidades — Da de alta una localidad.
+  GET /api/v1/localidades/{id} — Devuelve una localidad por su identificador.
+  PUT /api/v1/localidades/{id} — Modifica una localidad existente.
+  DELETE /api/v1/localidades/{id} — Da de baja una localidad.
+apariciones de X-Sesion-Id: 0
+XML docs: bin/Release/net10.0/MovilidadUrbana.ApiWeb.xml presente

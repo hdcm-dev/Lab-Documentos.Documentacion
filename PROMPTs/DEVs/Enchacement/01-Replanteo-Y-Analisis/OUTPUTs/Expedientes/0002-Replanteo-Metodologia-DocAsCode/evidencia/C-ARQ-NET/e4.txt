@@ -1,0 +1,11 @@
+    0 Error(s)
+diff --git a/MovilidadUrbana.ApiWeb/contracts/openapi.json b/MovilidadUrbana.ApiWeb/contracts/openapi.json
+index 87017fa..d622b9e 100644
+--- a/MovilidadUrbana.ApiWeb/contracts/openapi.json
++++ b/MovilidadUrbana.ApiWeb/contracts/openapi.json
+@@ -397 +397 @@
+-        "summary": "Da de baja una localidad.",
++        "summary": "Elimina una localidad de la sesión.",
+diff_exit=1
+    0 Error(s)
+restaurado_diff_exit=0

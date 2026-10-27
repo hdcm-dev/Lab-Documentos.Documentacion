@@ -1,0 +1,19 @@
+# Ensayo de cierre E1-U0c: barrido S2 (patrón del folio 099 §11) sobre el árbol a agregar. 2026-10-27
+# Árbol: PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs, en el worktree de la rama exp0002/e1-u0c-expediente-y-bitacoras, ya reemplazado (antes de crear esta evidencia)
+# Patrón A (099 §11, -i): directorio personal (/|-)home[/-]x, /Users/, C:\Users, usuario del host, servicio privado y su organización;
+#   extendido por la carta común: repos privados citados, runner de la organización privada, IPv4 privadas y CGNAT
+$ grep -rnIiE '<patrón A>' "$T"
+Bitacoras/I01-Topologia-De-Repositorios.md:257:| 10 | https://kubernetes.io/docs/home/supported-doc-versions/ | Available Documentation Versions | Versión actual + 4 |
+Expedientes/0002-Replanteo-Metodologia-DocAsCode/actuaciones/099-resolucion.md:419:| Comando | `grep -rnIiE` con el patrón del directorio personal del host (`/home/<usuario>`, `/U
+Expedientes/0002-Replanteo-Metodologia-DocAsCode/evidencia/C-ACADEMICO/E01-veinte-referencias-apa.md:26:- **Metadatos.** `python3 -I scripts/meta.py <dir>` extrae `<title>`, `autho
+exit=0
+# Las 3 coincidencias son falsos positivos: una URL pública de kubernetes.io (docs/home/), la API pública de GitHub
+# (/users/<autor de software>, -i) y el folio 099 citando su propio patrón (C:\Users).
+# Patrón B = A con /Users/ sensible a mayúsculas, descartando sólo esas dos citas públicas:
+$ { grep -rnIiE '<patrón A sin /Users/>' "$T" | grep -vE 'kubernetes\.io/docs/home/|099-resolucion\.md:419:'; grep -rnIE '/Users/[A-Za-z]' "$T"; }
+exit=1 / 1 (1 = sin coincidencias: VACÍO)
+# Reemplazos aplicados a la copia (redact.py; rutas del host a rutas desde la raíz del workspace y alias del README):
+#   2 memoria del agente · 99 raíz del workspace del equipo · 14 carpeta de intermedios · 146 base de conocimientos privada
+#   3 repo privado de runners · 2 cuenta/usuario · 1+1 servicio y organización en la cita L10 · 2 organización · 2 contenedor · 9 runner privado
+$ git ls-files <EXP>/evidencia/local | wc -l   (tras git add)
+0
