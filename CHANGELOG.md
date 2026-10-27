@@ -187,7 +187,7 @@ guía misma.
   **[F]** contra su fuente—, de evidencia —cada bloque de código y cada cifra contra el archivo del
   workspace— y editorial contra el marco normativo. Salieron 39 correcciones, y las que más importan
   son de la misma familia: afirmaciones ciertas de los cinco repositorios de referencia enunciadas
-  como si valieran para todo el workspace. `GDA.Core.APP` sí firma con certificado de distribución y
+  como si valieran para todo el workspace. Una app híbrida de referencia de la organización sí firma con certificado de distribución y
   publica a TestFlight, sí firma APK con almacén de claves desde secretos, y seis workflows bajo
   `Repos-Docker/` sí anclan acciones por SHA. Las tres quedaron acotadas a su alcance real.
 - La revisión bibliográfica corrigió además tres afirmaciones sobre el comportamiento de la
