@@ -1,0 +1,26 @@
+Reproducción de la falla del cierre (folio 042), emulador fc-android-emu-hpdev, 2026-10-27 (hora del emulador, UTC).
+APK Release x64 de main (sin cambios), arranque en frío con la semilla ya revisada.
+
+== A. Pantalla encendida (am start -W: LaunchState COLD, TotalTime 5349)
+10-27 16:02:41.799 I/FC      ( 3053): t=3693ms arranque: pantalla visible
+10-27 16:02:50.203 I/FC      ( 3053): t=12104ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-27 16:02:53.840 I/FC      ( 3053): t=15742ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-27 16:03:01.953 I/FC      ( 3053): t=23855ms servidor: req#1 GET /index.html
+(el WebView carga; el emulador recién reiniciado estaba lento)
+
+== B. input keyevent KEYCODE_SLEEP antes de arrancar (mWakefulness=Asleep)
+am start -W: LaunchState: UNKNOWN (0), WaitTime: 3011   (igual que en las 5 corridas del cierre)
+10-27 16:03:14.381 I/FC      ( 3867): t=396ms arranque: pantalla visible
+10-27 16:03:14.473 W/ActivityTaskManager(  507): Activity pause timeout for ActivityRecord{b0fe11f u0 com.frameworkconcept.demo/crc64787f1d937be9295a.MainActivity} t61}
+10-27 16:03:16.787 I/FC      ( 3867): t=2810ms db: esquema 1 comprobado
+10-27 16:03:17.984 I/FC      ( 3867): t=4008ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-27 16:03:18.000 I/FC      ( 3867): t=4023ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-27 16:03:18.816 I/FC      ( 3867): t=4840ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-27 16:03:28.828 I/FC      ( 3867): t=14851ms contenido: consulta del arranque en frío (sin Listo a los 10 s)
+(ningún «servidor: req#», ninguna «carga iniciada», ninguna marca: lo mismo que el registro del cierre)
+
+== C. Se enciende la pantalla (KEYCODE_WAKEUP) a los ~40 s, el mismo proceso
+10-27 16:03:58.081 I/FC      ( 3867): t=44104ms servidor: req#6 GET /_framework/dotnet.js
+10-27 16:03:58.108 I/FC      ( 3867): t=44132ms contenido: carga iniciada (1.0.0+5d5c2b4)
+10-27 16:04:01.375 I/chromium( 3867): [INFO:CONSOLE:83] "FC-MARCA primer-render contenido=1.0.0+5d5c2b4 perf.now=3764ms", source: https://0.0.0.1/js/puente.js (83)
+10-27 16:04:02.095 I/FC      ( 3867): t=48118ms puente Listo(1.0.0+5d5c2b4)
