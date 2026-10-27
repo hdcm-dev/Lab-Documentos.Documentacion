@@ -1,0 +1,96 @@
+== corrida 1
+Starting: Intent { cmp=com.frameworkconcept.demo/crc64787f1d937be9295a.MainActivity }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: com.frameworkconcept.demo/crc64787f1d937be9295a.MainActivity
+WaitTime: 3028
+Complete
+10-27 13:15:47.222 12627 12627 I FC      : t=746ms arranque: pantalla visible
+10-27 13:15:48.216 12627 12648 I FC      : t=1745ms db: esquema 1 comprobado
+10-27 13:15:48.252 12627 12648 I FC      : t=1781ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-27 13:15:48.792 12627 12648 I FC      : t=2322ms sesión: al arrancar SinCuenta
+10-27 13:15:48.861 12627 12648 I FC      : t=2391ms claves: demo-2026 cargada
+10-27 13:15:49.096 12627 12648 I FC      : t=2625ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-27 13:15:49.097 12627 12648 I FC      : t=2627ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-27 13:15:49.287 12627 12627 I FC      : t=2817ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-27 13:15:59.296 12627 12627 I FC      : t=12825ms contenido: consulta del arranque en frío (sin Listo a los 10 s)
+10-27 13:15:59.333 12627 12648 I FC      : t=12863ms canal: GET dev/puente-1/indice.json
+== corrida 2
+Starting: Intent { cmp=com.frameworkconcept.demo/crc64787f1d937be9295a.MainActivity }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: com.frameworkconcept.demo/crc64787f1d937be9295a.MainActivity
+WaitTime: 3024
+Complete
+10-27 13:16:15.587 12676 12676 I FC      : t=774ms arranque: pantalla visible
+10-27 13:16:16.661 12676 12697 I FC      : t=1853ms db: esquema 1 comprobado
+10-27 13:16:16.700 12676 12697 I FC      : t=1893ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-27 13:16:17.240 12676 12697 I FC      : t=2433ms sesión: al arrancar SinCuenta
+10-27 13:16:17.306 12676 12697 I FC      : t=2499ms claves: demo-2026 cargada
+10-27 13:16:17.526 12676 12707 I FC      : t=2718ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-27 13:16:17.527 12676 12707 I FC      : t=2719ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-27 13:16:17.686 12676 12676 I FC      : t=2878ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-27 13:16:27.695 12676 12676 I FC      : t=12888ms contenido: consulta del arranque en frío (sin Listo a los 10 s)
+10-27 13:16:27.732 12676 12697 I FC      : t=12924ms canal: GET dev/puente-1/indice.json
+== corrida 3
+Starting: Intent { cmp=com.frameworkconcept.demo/crc64787f1d937be9295a.MainActivity }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: com.frameworkconcept.demo/crc64787f1d937be9295a.MainActivity
+WaitTime: 3014
+Complete
+10-27 13:16:43.407 12726 12726 I FC      : t=852ms arranque: pantalla visible
+10-27 13:16:44.368 12726 12747 I FC      : t=1819ms db: esquema 1 comprobado
+10-27 13:16:44.408 12726 12747 I FC      : t=1858ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-27 13:16:44.922 12726 12747 I FC      : t=2373ms sesión: al arrancar SinCuenta
+10-27 13:16:44.982 12726 12747 I FC      : t=2433ms claves: demo-2026 cargada
+10-27 13:16:45.210 12726 12747 I FC      : t=2661ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-27 13:16:45.211 12726 12747 I FC      : t=2662ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-27 13:16:45.361 12726 12726 I FC      : t=2811ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-27 13:16:55.371 12726 12726 I FC      : t=12821ms contenido: consulta del arranque en frío (sin Listo a los 10 s)
+10-27 13:16:55.410 12726 12747 I FC      : t=12861ms canal: GET dev/puente-1/indice.json
+== corrida 4
+Starting: Intent { cmp=com.frameworkconcept.demo/crc64787f1d937be9295a.MainActivity }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: com.frameworkconcept.demo/crc64787f1d937be9295a.MainActivity
+WaitTime: 3009
+Complete
+10-27 13:17:07.523 12776 12776 I FC      : t=747ms arranque: pantalla visible
+10-27 13:17:08.404 12776 12798 I FC      : t=1635ms db: esquema 1 comprobado
+10-27 13:17:08.432 12776 12798 I FC      : t=1662ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-27 13:17:08.961 12776 12798 I FC      : t=2192ms sesión: al arrancar SinCuenta
+10-27 13:17:09.030 12776 12798 I FC      : t=2261ms claves: demo-2026 cargada
+10-27 13:17:09.245 12776 12798 I FC      : t=2476ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-27 13:17:09.246 12776 12798 I FC      : t=2477ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-27 13:17:09.395 12776 12776 I FC      : t=2626ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-27 13:17:19.404 12776 12776 I FC      : t=12635ms contenido: consulta del arranque en frío (sin Listo a los 10 s)
+10-27 13:17:19.434 12776 12808 I FC      : t=12665ms canal: GET dev/puente-1/indice.json
+== corrida 5
+Starting: Intent { cmp=com.frameworkconcept.demo/crc64787f1d937be9295a.MainActivity }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: com.frameworkconcept.demo/crc64787f1d937be9295a.MainActivity
+WaitTime: 3032
+Complete
+10-27 13:17:32.806 12826 12826 I FC      : t=786ms arranque: pantalla visible
+10-27 13:17:33.762 12826 12849 I FC      : t=1748ms db: esquema 1 comprobado
+10-27 13:17:33.792 12826 12849 I FC      : t=1778ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-27 13:17:34.336 12826 12849 I FC      : t=2323ms sesión: al arrancar SinCuenta
+10-27 13:17:34.405 12826 12849 I FC      : t=2392ms claves: demo-2026 cargada
+10-27 13:17:34.639 12826 12851 I FC      : t=2626ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-27 13:17:34.640 12826 12851 I FC      : t=2627ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-27 13:17:34.828 12826 12826 I FC      : t=2814ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-27 13:17:44.838 12826 12826 I FC      : t=12825ms contenido: consulta del arranque en frío (sin Listo a los 10 s)
+10-27 13:17:44.870 12826 12859 I FC      : t=12857ms canal: GET dev/puente-1/indice.json
+10-27 13:18:04.348 12892 12892 I FC      : t=751ms arranque: pantalla visible
+10-27 13:18:05.232 12892 12912 I FC      : t=1640ms db: esquema 1 comprobado
+10-27 13:18:05.264 12892 12912 I FC      : t=1671ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-27 13:18:05.799 12892 12912 I FC      : t=2206ms sesión: al arrancar SinCuenta
+10-27 13:18:05.865 12892 12912 I FC      : t=2272ms claves: demo-2026 cargada
+10-27 13:18:06.075 12892 12912 I FC      : t=2482ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-27 13:18:06.075 12892 12912 I FC      : t=2483ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-27 13:18:06.226 12892 12892 I FC      : t=2634ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-27 13:18:16.235 12892 12892 I FC      : t=12643ms contenido: consulta del arranque en frío (sin Listo a los 10 s)
+10-27 13:18:16.276 12892 12912 I FC      : t=12684ms canal: GET dev/puente-1/indice.json
+10-27 13:18:46.371 12892 12914 I FC      : t=42778ms consulta (ArranqueEnFrio): SinRed Ninguno — dev/puente-1/indice.json: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
