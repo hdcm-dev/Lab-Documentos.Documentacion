@@ -39,3 +39,49 @@ reloj que P1 usa para el TPR.
   TPR. Queda abierto por qué el contenido no emite `Listo` en este arranque (sin canal y con la red dada por caída): es
   un hallazgo nuevo, distinto del TPR del g42.
 - Al terminar se desinstaló `com.frameworkconcept.demo` del emulador.
+
+## Causa y nueva medición (folio 042, 2026-10-27)
+
+| Campo | Valor |
+| --- | --- |
+| Fecha | 2026-10-27 16:02–16:35 (hora del emulador, UTC) |
+| Dispositivo | `fc-android-emu-hpdev` (Android 13, WebView 155), recién reiniciado |
+| APK | `com.frameworkconcept.demo`, Release x64 sin depuración (`flags` sin `DEBUGGABLE`), de la rama del folio 042; `sha256 5e224ac9…a40ca`; contenido `1.0.0+5d5c2b4` (semilla) |
+| Procedimiento | `scripts/guion.sh tpr`: pantalla encendida y sin bloqueo comprobados, y por corrida `KEYCODE_WAKEUP` + `am force-stop` + `am start -W` + 20 s; TPR con `FrameworkConcept.Tools tpr` |
+| Registros | `p1-tpr-reproduccion-pantalla-apagada.txt`, `p1-tpr-emulador-2-am-start.txt`, `p1-tpr-emulador-2-logcat.txt` |
+
+**Causa.** La pantalla del emulador estaba apagada en las 5 corridas del cierre:
+
+- **Hecho.** Con `input keyevent KEYCODE_SLEEP` antes del arranque, el registro es idéntico al del cierre:
+  `LaunchState: UNKNOWN (0)`, `WaitTime` ~3 000 ms, «Activity pause timeout», «hybridwebview agregado» y nada más; ni un
+  pedido del WebView, ni «carga iniciada», ni marca; a los 10 s, «sin Listo a los 10 s».
+- **Hecho.** Al encender la pantalla, el mismo proceso pide el contenido, registra la marca y avisa «Listo».
+- **Hecho.** Con la pantalla encendida, el mismo APK de `main` arrancó `COLD` y cargó el contenido.
+- **Interpretación.** La marca y su camino en el contenido estaban bien: sin actividad al frente, el WebView no carga.
+  Lo que faltaba era que la medición comprobara la pantalla y que el registro dijera por qué no hubo marca.
+
+**Arreglo** (PR del folio 042 en la demo): `guion.sh tpr` (pantalla encendida, sin bloqueo, `LaunchState` guardado),
+`FrameworkConcept.Tools tpr` (TPR por proceso desde el inicio del proceso hasta la línea `FC-MARCA primer-render`, con
+diagnóstico de la corrida sin marca), una línea del cascarón a los 10 s si el WebView no pidió el contenido, y
+`Gate.Tests/Medicion/LectorDeTprTests.cs` (4 pruebas).
+
+| Corrida | `LaunchState` | `TotalTime` (ms) | TPR (ms) |
+| --- | --- | --- | --- |
+| 1 | COLD | 2 829 | 12 451 |
+| 2 | COLD | 2 625 | 9 780 |
+| 3 | COLD | 2 626 | 10 505 |
+| 4 | COLD | 2 486 | 11 256 |
+| 5 | COLD | 2 300 | 9 641 |
+| Máximo | — | 2 829 | **12 451** |
+
+- **Hecho.** 5 de 5 corridas con marca. Desglose de la corrida 2: pantalla visible 907 ms, `ContenidoListo` 5 091 ms,
+  WebView agregado 5 978 ms, primer pedido 6 697 ms, marca 9 780 ms.
+- **Conclusión.** **TPR OBTENIDO en el emulador: máximo 12 451 ms.** Como dice el alcance de arriba, no juzga el umbral
+  de P1; el emulador recién reiniciado estaba más lento que en la medición del cierre (`ContenidoListo` ~5,1 s contra
+  ~2,6 s).
+- Al terminar se desinstaló `com.frameworkconcept.demo`, el emulador quedó en la pantalla de inicio y se liberó su
+  reserva.
+
+**Moto g42 — NO MEDIDO.** El candado de escenarios estuvo tomado por otra sesión de mayor prioridad de 12:16 a 14:20
+(-03), con un intento por minuto en los últimos 45 minutos; el teléfono no se tocó. La condición de revisión (2) de P1
+sigue abierta, sin número nuevo (folio 042).
