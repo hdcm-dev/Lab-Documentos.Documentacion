@@ -1,0 +1,36 @@
+ensayo: qué reglas de IA.SDD cambiaron entre 13.16 (2026-09-13) y 13.22 (2026-10-23)
+fecha-hora: 2026-10-26T15:09:04-03:00
+repo: /IA/SDD/IA.SDD  HEAD=d4035aa
+comando 1: git log --format='%h %ad %s' --date=short -1 -- SDD/Devs/Rules/Rules-Documentacion.md
+66db293 2026-08-22 fix(sdd): el reemplazo reescribió 52 filas de registro históricas, y el barrido no podía verlo
+comando 2: git log --since=2026-09-13 --name-only | grep ^SDD/Devs/Rules/ | sort | uniq -c
+      4 SDD/Devs/Rules/Expediente-Rules.md
+      2 SDD/Devs/Rules/Root-Rules.md
+      2 SDD/Devs/Rules/Mesa-Rules.md
+      2 SDD/Devs/Rules/Catalogo-De-Criterios.md
+      1 SDD/Devs/Rules/Rules-Contexto.md
+      1 SDD/Devs/Rules/Rules-Base-Conocimiento.md
+      1 SDD/Devs/Rules/Rules-Backlog-Tecnico.md
+      1 SDD/Devs/Rules/Migracion-Rules.md
+      1 SDD/Devs/Rules/Deriva-Rules.md
+comando 3: git diff --stat <commit 13.16> HEAD -- SDD/Devs/Orchestrator/Master-Prompt.md SDD/Devs/Rules/Rules-Documentacion.md (commit 13.16 = último que tocó CHANGELOG hasta 2026-09-13: 5489cc7)
+ SDD/Devs/Orchestrator/Master-Prompt.md | 25 ++++++++++++++++++-------
+ 1 file changed, 18 insertions(+), 7 deletions(-)
+comando 4: git diff 5489cc7 HEAD -- SDD/Devs/Orchestrator/Master-Prompt.md | grep -c AG-00110
+3
+
+--- corrección (agregada 2026-10-26T15:14:36-03:00; la corrida anterior se conserva) ---
+El comando 3 usó 5489cc7, que NO es el commit de 13.16. Base correcta: padre del primer commit que agrega "## [13.17]".
+comando 5: git log --format='%h %ad' --date=iso -S"## [13.17]" --reverse -- CHANGELOG.md | head -1
+cab03ed 2026-09-13 12:21:08 -0300   (padre: 8c55a1e)
+comando 6: git diff --stat 8c55a1e HEAD -- SDD/Devs/Orchestrator/Master-Prompt.md SDD/Devs/Rules/Rules-Documentacion.md
+ SDD/Devs/Orchestrator/Master-Prompt.md | 37 +++++++++++++++++++++++++++-------
+ 1 file changed, 30 insertions(+), 7 deletions(-)
+comando 7: git diff 8c55a1e HEAD -- SDD/Devs/Orchestrator/Master-Prompt.md | grep '^+' | grep -oE 'Versión:\*\* [0-9.]+|Reintegración a la especificación|1 bis\.|^\+9\. \*\*Versión de cabecera|^\+10\. \*\*Reintegración de expedientes|SDD/Expedientes/' | sort -u
+1 bis.
++10. **Reintegración de expedientes
++9. **Versión de cabecera
+Reintegración a la especificación
+SDD/Expedientes/
+Versión:** 8.21
+Conclusión: Rules-Documentacion.md sin cambios en el tramo en ambos cálculos; Master-Prompt 8.19 -> 8.21 agrega reintegración en Fase I (1 bis), comprobaciones 9 y 10 de la compuerta, y la carpeta SDD/Expedientes/.

@@ -1,0 +1,14 @@
+set -u
+cd /tmp/w
+t0=$(date +%s.%N)
+curl -sSL -o lychee.tgz https://github.com/lycheeverse/lychee/releases/download/lychee-v0.20.1/lychee-x86_64-unknown-linux-gnu.tar.gz && tar xzf lychee.tgz && echo "lychee: $(./lychee --version 2>&1)"
+t1=$(date +%s.%N)
+npm i --silent --no-audit --no-fund markdownlint-cli2@0.18.1 mermaid jsdom >/dev/null 2>&1; echo "npm exit=$?"
+t2=$(date +%s.%N)
+./lychee --offline --include-fragments --no-progress /g >/tmp/w/lychee.out 2>&1; echo "lychee exit=$?"
+t3=$(date +%s.%N)
+npx markdownlint-cli2 "/g/**/*.md" >/dev/null 2>&1; echo "mdlint exit=$?"
+cp /h/mermaid-parse.mjs . && node mermaid-parse.mjs /g | tail -1; echo "mermaid exit=$?"
+t4=$(date +%s.%N)
+du -sh node_modules
+python3 -c "print(\"install_lychee=%.1f install_npm=%.1f run=%.1f total=%.1f\" % ($t1-$t0, $t2-$t1, $t4-$t2, $t4-$t0))"

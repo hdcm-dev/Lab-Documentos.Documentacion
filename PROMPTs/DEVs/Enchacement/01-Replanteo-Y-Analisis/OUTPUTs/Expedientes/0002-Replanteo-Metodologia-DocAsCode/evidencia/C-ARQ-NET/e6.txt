@@ -1,0 +1,3 @@
+build_exit=255
+/x/docfx/docs/tecnica/arquitectura.md(23,1): warning InvalidFileLink: Invalid file link:(~/docs/usuario/no-existe.md).
+    1 warning(s)

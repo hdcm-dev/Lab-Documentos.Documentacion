@@ -1,0 +1,8 @@
+comando: ls -la actuaciones/ (desde la carpeta del expediente)
+fecha-hora: 2026-10-26T15:06:52-03:00
+oct 26 14:50 001-providencia-apertura.md
+oct 26 14:51 002-presentacion-del-caso.md
+oct 26 14:56 003-propuesta-de-panel.md
+oct 26 15:03 004-acta-jurado-composicion.md
+oct 26 14:49 0060-informe-marcos-sdd-de-mercado.md
+oct 26 14:50 0070-informe-complementos-de-industria.md

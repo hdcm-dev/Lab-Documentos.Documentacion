@@ -1,0 +1,80 @@
+--- /dev/fd/63	2026-10-26 18:44:07.359964111 -0300
++++ /dev/fd/62	2026-10-26 18:44:07.359964111 -0300
+@@ -1,7 +1,7 @@
+ {
+   "openapi": "3.1.1",
+   "info": {
+-    "title": "MovilidadUrbana.ApiWeb | v1",
++    "title": "Movilidad Urbana — API",
+     "version": "1.0.0"
+   },
+   "paths": {
+@@ -11,6 +11,17 @@
+           "Encuestas"
+         ],
+         "summary": "Cuántas encuestas registró esta sesión.",
++        "parameters": [
++          {
++            "name": "X-Sesion-Id",
++            "in": "header",
++            "description": "Identificador de sesión. Si falta, la respuesta trae uno nuevo en el mismo encabezado.",
++            "schema": {
++              "type": "string",
++              "format": "uuid"
++            }
++          }
++        ],
+         "responses": {
+           "200": {
+             "description": "OK",
+@@ -41,6 +52,15 @@
+               "type": "integer",
+               "format": "int32"
+             }
++          },
++          {
++            "name": "X-Sesion-Id",
++            "in": "header",
++            "description": "Identificador de sesión. Si falta, la respuesta trae uno nuevo en el mismo encabezado.",
++            "schema": {
++              "type": "string",
++              "format": "uuid"
++            }
+           }
+         ],
+         "requestBody": {
+@@ -93,6 +113,17 @@
+           "Encuestas"
+         ],
+         "summary": "Registra una encuesta completa. Valida los tres pasos antes de guardar.",
++        "parameters": [
++          {
++            "name": "X-Sesion-Id",
++            "in": "header",
++            "description": "Identificador de sesión. Si falta, la respuesta trae uno nuevo en el mismo encabezado.",
++            "schema": {
++              "type": "string",
++              "format": "uuid"
++            }
++          }
++        ],
+         "requestBody": {
+           "content": {
+             "application/json": {
+@@ -143,6 +174,17 @@
+           "Localidades"
+         ],
+         "summary": "Lista las localidades de la sesión.",
++        "parameters": [
++          {
++            "name": "X-Sesion-Id",
++            "in": "header",
++            "description": "Identificador de sesión. Si falta, la respuesta trae uno nuevo en el mismo encabezado.",
++            "schema": {
++              "type": "string",
++              "format": "uuid"
++            }
++          }
++        ],
+         "responses": {
+           "200": {

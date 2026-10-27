@@ -1,0 +1,4 @@
+WARNING -  Doc file 'tecnica/arquitectura.md' contains a link '../usuario/no-existe.md', but the target 'usuario/no-existe.md' is not found among documentation files.
+Aborted with 1 warnings in strict mode!
+exit=1
+exit_con_-q=0

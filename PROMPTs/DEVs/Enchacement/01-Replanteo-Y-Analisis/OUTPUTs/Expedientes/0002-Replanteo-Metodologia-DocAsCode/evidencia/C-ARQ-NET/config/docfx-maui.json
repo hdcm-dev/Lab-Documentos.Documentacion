@@ -1,0 +1,1 @@
+{ "metadata": [ { "src": [ { "src": "../src/MovilidadUrbana.MAUI", "files": [ "*.csproj" ] } ], "dest": "api" } ] }

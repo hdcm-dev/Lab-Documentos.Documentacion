@@ -1,0 +1,25 @@
+id	dado	cuando	entonces	instrumento
+M01a	un sistema con su registro de requerimientos documentales	se cierra la fase de requerimientos	cada audiencia declarada tiene al menos una tarea con identificador	conteo por script sobre el registro
+M01b	un registro de requerimientos documentales	se cierra la fase de requerimientos	cada requerimiento tiene origen citado, prioridad D/C/O y un criterio Dado/Cuando/Entonces	validador de esquema del registro
+M01c	un registro con requerimientos priorizados	se cierra la evaluación	cada requerimiento tiene estado aceptado, rechazado o diferido con motivo y firma de la persona que decide	conteo de estados y de firmas
+M02	el inventario de piezas existentes del sistema	se cierra la fase de análisis	toda pieza listada por el comando de inventario tiene un estado del conjunto conservar/actualizar/quitar	diff entre la salida del comando y el inventario: vacío
+M03a	el diseño de un sistema	se cierra la fase de diseño	cada pieza del inventario tiene fila con topología, fuente de verdad, ancla, compuerta, audiencia y canal	conteo de celdas vacías: cero
+M03b	el contrato de frontmatter del diseño	se cierra la fase de diseño	existe un esquema JSON versionado y una prueba negativa que lo pone en rojo	corrida del validador con y sin defecto plantado
+M04	una página de ejemplo con código	se abre su PR	el ejemplo compila en el contenedor del build con advertencias como error	salida del build en CI
+M05	un PR que toca documentación	corre el workflow documental en runs-on [self-hosted, i7infra-dev]	el agregador termina en éxito y cada compuerta bloqueante figura en la lista declarada del workflow	estado del check y grep de la lista
+M06	una página con last_review y plazo declarado en días	la tarea programada corre	la página con last_review más vieja que su plazo abre un aviso con su doc_id	salida de la tarea programada
+M07	un CU con actor persona en el sistema	corre la compuerta de cobertura	existe al menos una página cuyo traces lo nombra	validador de cobertura
+M08	una página con origin distinto de human	corre la compuerta de frontmatter	la página trae confidence y traces con versión	validador de esquema
+M09	un PR de documentación abierto por un agente	se decide su merge	consta la aprobación de la persona responsable en el PR o una delegación asentada vigente y la guarda G1-G4 en verde	registro del PR y del informe de conformación
+M10	un tag de versión del código	se publica	el CHANGELOG de esa versión lista los doc_id cambiados desde el tag anterior	diff de nombres entre tags contra el CHANGELOG
+M11	una página traducida	corre la compuerta de traducción	el commit de translation_of es igual o posterior al último commit que tocó la fuente	git log sobre la fuente y el campo
+M12	una página en estado obsoleto	se publica la versión	la sección Deprecated del CHANGELOG nombra su doc_id	grep en el CHANGELOG
+M13	una carpeta de archivo publicada en la rama principal	llega un PR que modifica o borra un archivo dentro de ella	la compuerta de archivo termina en error	git diff --name-status contra la rama principal
+M17	una página con HTML crudo	corre la compuerta de HTML	la compuerta termina en error y nombra la línea	validador de HTML
+M20	una página traducida con translation_of en un formato distinto del declarado	corre la compuerta de traducción	la compuerta termina en error de formato	validador de esquema
+M22	la compuerta del escalón N con dictamen en un folio resolucion	se abre la primera rama o el primer despacho del escalón N+1	el folio resolucion del escalón N existe con fecha anterior y veredicto procede en cada criterio de aceptación de la compuerta	fecha del folio frente a la fecha de la primera rama o despacho
+M26	la piloto	se abre su primera rama de código	existe el ADR de apartamiento o la resolución de la vía normativa con fecha anterior	fecha del ADR frente a la de la rama
+M27	el conocimiento extraído de la piloto	lo lee la comisión de lector sin contexto para planificar el escalón 3	la comisión registra cero preguntas cuya respuesta exija abrir archivos de la piloto	informe del lector
+M28	un PR del repositorio auxiliar de Geometría de otra corrida abierto	esta corrida intenta escribir en ia-db	la escritura no ocurre y el folio lo registra	git ls-remote refs/pull y git status
+M29	la metodología publicada	la comisión de lector sin contexto la aplica a un sistema no relevado	produce las salidas de las cinco fases sin preguntas cuya respuesta exija salir del cuerpo de la metodología	informe del lector con cero preguntas
+M23	la ficha de un escalón en el dictamen	se abre la compuerta del escalón	la ficha trae los cinco campos objetivo, alcance, sistema, qué demuestra y criterio de éxito, y cada criterio tiene forma Dado/Cuando/Entonces con instrumento	conteo de campos y de criterios sin instrumento: cero

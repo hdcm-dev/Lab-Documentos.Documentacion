@@ -1,0 +1,5 @@
+exit=1
+[webpackbar] ✔ Server: Compiled with some errors in 2.97s
+[webpackbar] ✔ Client: Compiled with some errors in 8.81s
+[ERROR] Client bundle compiled with errors therefore further build is impossible.
+Error: MDX compilation failed for file "/x/docusaurus/docs/tecnica/arquitectura.md"

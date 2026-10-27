@@ -1,0 +1,10 @@
+# links.py sobre la guía del documentador, 2026-10-26 (rutas relativas a Guides/)
+enlaces internos a .md: 9; rotos: 8; destinos rotos distintos: 5
+  L189: ../Documentacion-Tecnica/README.md -> roto | id esperado (índice de la guía): 0 coincidencia(s) 
+  L203: ../Documentacion-Tecnica/30-Arquitectura/ADR.md -> roto | id esperado DOC-ADR: 1 coincidencia(s) Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/ADR.md
+  L203: ../Documentacion-Tecnica/30-Arquitectura/SAD.md -> roto | id esperado DOC-SAD: 1 coincidencia(s) Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/SAD.md
+  L203: ../Documentacion-Tecnica/95-Transversales/Spec-Driven-Development.md -> roto | id esperado DOC-SDD: 1 coincidencia(s) Documentacion-Tecnica/Creacion-Guias-Tecnicas/95-Transversales/Spec-Driven-Development.md
+  L432: ../Documentacion-Tecnica/README.md -> roto | id esperado (índice de la guía): 0 coincidencia(s) 
+  L590: ../Documentacion-Tecnica/60-Desarrollo/Change-Log.md -> roto | id esperado DOC-CHANGELOG: 1 coincidencia(s) Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md
+  L625: ../Documentacion-Tecnica/60-Desarrollo/Change-Log.md -> roto | id esperado DOC-CHANGELOG: 1 coincidencia(s) Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md
+  L633: ../Documentacion-Tecnica/README.md -> roto | id esperado (índice de la guía): 0 coincidencia(s) 
