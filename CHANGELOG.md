@@ -12,6 +12,7 @@ guía misma.
 
 ### Añadido
 
+- **`ia-db/` v4.1** — reindexado incremental de `Lab-Documentos` hasta `fe10086` (merge de E1-U4f): índices nuevos `11_Sistema-Documentador-SDEI.md` (cuerpo `SDEI`, mini demo, `docs-guard`, `AGENTS.md`, expediente 0002) y `12_Framework-Concept.md`; actualizados 00, 01, 08, 10 y el README (manifiesto con `base_commit`). Parte de la v4.0 del 2026-10-18, que se publica en este mismo cambio. Expediente 0002 (DocAsCode), unidad E1-U5.
 - **Framework Concept, folio 042** — constancia de la marca `primer-render` (la falta del cierre era la pantalla apagada del emulador) y nueva medición del TPR en el emulador (`E03-Red-Y-Autenticacion/P1-TPR-EN-EMULADOR.md` y sus registros); el moto g42 sigue sin medir. Entrada 27 de la bitácora.
 - **`.github/workflows/verificar.yml`** — job `docs-guard` que llama al workflow reutilizable de `hdcm-dev/Lab-Documentos` fijado por SHA (`f603984`), sobre `.github/`; el job `verificar` pasa al runner propio `[self-hosted, i7infra-dev]` con su action fijada por SHA y guarda contra forks. Documentado en `.github/README.md`. Expediente 0002 (DocAsCode), unidad E1-U0b.
 
