@@ -1,0 +1,7 @@
+10-25 20:00:39.926 I/AndroidRuntime( 3966): VM exiting with result code 0, cleanup skipped.
+10-25 20:00:40.255 I/ActivityManager(  539): Killing 3966:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0a167i0 (adj 0): isolated not needed
+10-25 20:00:42.899 W/.android.chrom( 5389): Long monitor contention with owner CrAsyncTask #2 (5420) at boolean hj.g(java.lang.String)(chromium-TrichromeChromeGoogle.aab-stable-410410686:13) waiters=0 in boolean hj.g(java.lang.String) for 3.078s
+10-25 20:00:49.830 I/ActivityManager(  539): Start proc 5675:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0i1 for  {com.frameworkconcept.ensayo01/org.chromium.content.app.SandboxedProcessService0:0}
+10-25 20:00:51.600 I/chromium( 5503): [INFO:CONSOLE(6)] "E01-MARCA index-html-cargado perf.now=1184ms", source: https://0.0.0.1/bridge.js (6)
+10-25 20:00:51.611 I/chromium( 5503): [INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token '{'", source: https://0.0.0.1/_framework/blazor.webassembly.w3qd1tpl0e.js (1)
+10-25 20:00:54.655 I/chromium( 5503): [INFO:CONSOLE(0)] "The resource https://0.0.0.1/_framework/dotnet.j6limjia9c.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source:  (0)

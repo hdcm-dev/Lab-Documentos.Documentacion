@@ -1,0 +1,3 @@
+Encuesta dibujada desde la definición v1 (paso 1): errores al intentar avanzar vacío.
+Chromium headless (playwright-core 1.62.1), puente SIMULADO (Testing/puente-simulado.js), 2026-10-26T11:01:44.961Z; NO es el cascarón ni el teléfono.
+Comprobado: el renderizador genérico dibuja el paso 1 y DefinicionValidator da los mensajes de la definición.

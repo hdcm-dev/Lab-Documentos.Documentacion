@@ -1,0 +1,26 @@
+10-26 23:24:49.082 D/AndroidRuntime(28335): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 23:24:49.088 I/AndroidRuntime(28335): Using default boot image
+10-26 23:24:49.088 I/AndroidRuntime(28335): Leaving lock profiling enabled
+10-26 23:24:49.218 D/AndroidRuntime(28335): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 23:24:50.315 D/AndroidRuntime(28335): Shutting down VM
+10-26 23:24:53.282 I/FC      (28062): t=115574ms sesión: Vencida --IngresoIniciado--> Ingresando
+10-26 23:24:53.288 I/FC      (28062): t=115579ms acciones: localidades.guardar=no, encuesta.enviar=no, outbox.enviarAhora=no, sesion.ingresar=no
+10-26 23:24:53.673 I/FC      (28062): t=115964ms sesión: pantalla propia IngresoPage
+10-26 23:24:54.575 I/FC      (28062): t=116866ms sesión: abriendo el navegador del sistema
+10-26 23:25:08.213 I/FC      (28062): t=130504ms red: salud ok (HTTP 200)
+10-26 23:25:13.519 D/AndroidRuntime(28407): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 23:25:13.525 I/AndroidRuntime(28407): Using default boot image
+10-26 23:25:13.525 I/AndroidRuntime(28407): Leaving lock profiling enabled
+10-26 23:25:13.658 D/AndroidRuntime(28407): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 23:25:14.765 D/AndroidRuntime(28407): Shutting down VM
+10-26 23:25:49.328 I/FC      (28062): t=171619ms app: reanudada
+10-26 23:25:49.344 I/FC      (28062): t=171635ms consulta (Reanudacion): Omitida Ninguno — reanudación antes de 15 minutos
+10-26 23:25:50.060 I/FC      (28062): t=172352ms sesión: ingresó encuestador (oidc:0b278ed9-d37e-45a5-a8f8-4504d440b1ab)
+10-26 23:25:50.061 I/FC      (28062): t=172352ms sesión: Ingresando --IngresoExitoso--> Activa
+10-26 23:25:50.075 I/FC      (28062): t=172367ms acciones: localidades.guardar=sí, encuesta.enviar=sí, outbox.enviarAhora=sí, sesion.ingresar=no
+10-26 23:26:04.583 D/AndroidRuntime(28522): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 23:26:04.588 I/AndroidRuntime(28522): Using default boot image
+10-26 23:26:04.588 I/AndroidRuntime(28522): Leaving lock profiling enabled
+10-26 23:26:04.725 D/AndroidRuntime(28522): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 23:26:05.854 D/AndroidRuntime(28522): Shutting down VM
+10-26 23:26:19.369 I/FC      (28062): t=201660ms sesión: desbloqueo con la seguridad del teléfono activado

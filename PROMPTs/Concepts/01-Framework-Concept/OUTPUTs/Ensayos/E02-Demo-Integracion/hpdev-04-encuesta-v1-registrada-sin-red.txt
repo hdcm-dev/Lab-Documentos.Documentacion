@@ -1,0 +1,3 @@
+Encuesta registrada SIN receptor: queda en el outbox con su clave y la definición v1.
+Emulador fc-android-emu-hpdev (Android 13 API 33 x86_64, WebView 155.0.8059.43, 540x1200 a 420 dpi = 205 dp de ancho), APK Debug android-x64 de A3, canal https://203.0.113.10:8099 (Tailscale, sin túnel), 2026-10-26, 11:36 UTC; receptor detenido.
+Pantalla: «Por enviar: 1», definición encuesta-movilidad v1, clave 06ddabf6179645cd931977e125231880. logcat-hpdev-02: encolada, intento 1 → Pendiente (Connection failure).

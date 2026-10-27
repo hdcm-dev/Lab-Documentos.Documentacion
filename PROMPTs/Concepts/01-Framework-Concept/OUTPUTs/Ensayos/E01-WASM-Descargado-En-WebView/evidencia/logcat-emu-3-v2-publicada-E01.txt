@@ -1,0 +1,9 @@
+10-25 20:01:25.288 I/E01     ( 6365): t=2430ms main-page-appearing
+10-25 20:01:25.324 I/E01     ( 6365): t=2501ms manifiesto: GET http://172.17.0.1:8099/manifest.json
+10-25 20:01:32.186 I/E01     ( 6365): t=9363ms descarga contenido-v2.zip 3394807 bytes en 3409 ms, sha256=b7fb650c6b9fd81901c01a71daa59acb76609386c5959ed8c9bf01fdbee253a3
+10-25 20:01:32.579 I/E01     ( 6365): t=9756ms activada v2 (antes v1); descomprimir 378 ms
+10-25 20:01:32.581 I/E01     ( 6365): t=9758ms actualizador: instalada v2 (antes v1)
+10-25 20:01:33.700 I/E01     ( 6365): t=10877ms hybridwebview-agregado
+10-25 20:01:34.550 I/chromium( 6365): [INFO:CONSOLE(6)] "E01-MARCA index-html-cargado perf.now=1015ms", source: https://0.0.0.1/bridge.js (6)
+10-25 20:01:34.553 I/chromium( 6365): [INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token '{'", source: https://0.0.0.1/_framework/blazor.webassembly.w3qd1tpl0e.js (1)
+10-25 20:01:34.778 I/E01     ( 6365): t=11955ms js-marca 'index-html-cargado' perf.now=1015ms

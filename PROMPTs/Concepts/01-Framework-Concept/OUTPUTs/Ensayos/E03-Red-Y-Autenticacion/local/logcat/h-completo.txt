@@ -1,0 +1,186 @@
+10-26 23:46:02.494 I/FC      (30935): t=1524ms arranque: pantalla visible
+10-26 23:46:05.154 I/FC      (30935): t=4191ms db: esquema 1 comprobado
+10-26 23:46:06.179 I/FC      (30935): t=5215ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:46:09.758 I/FC      (30935): t=8794ms red: salud ok (HTTP 200)
+10-26 23:46:09.758 I/FC      (30935): t=8795ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:46:11.919 I/FC      (30935): t=10956ms sesión: al arrancar Vencida
+10-26 23:46:12.187 I/FC      (30935): t=11223ms claves: demo-2026 cargada
+10-26 23:46:14.983 I/FC      (30935): t=14019ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-26 23:46:14.989 I/FC      (30935): t=14026ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-26 23:46:17.296 I/FC      (30935): t=16333ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-26 23:46:21.188 I/FC      (30935): t=20224ms contenido: carga iniciada (1.0.0+5d5c2b4)
+10-26 23:46:23.747 I/FC      (30935): t=22784ms puente Listo(1.0.0+5d5c2b4)
+10-26 23:46:23.748 I/FC      (30935): t=22784ms contenido: consulta del arranque en frío (tras Listo)
+10-26 23:46:23.756 I/FC      (30935): t=22793ms canal: GET dev/puente-1/indice.json
+10-26 23:46:24.021 I/FC      (30935): t=23057ms canal: GET dev/puente-1/indice.json.sig
+10-26 23:46:24.324 I/FC      (30935): t=23360ms consulta (ArranqueEnFrio): AlDia Ninguno — contenido: al día (1.0.0+5d5c2b4); definición encuesta-movilidad v1: al día
+10-26 23:47:09.921 I/FC      (30935): t=68957ms red: salud ok (HTTP 200)
+10-26 23:47:20.521 I/FC      (30935): t=79557ms sesión: Vencida --IngresoIniciado--> Ingresando
+10-26 23:47:20.532 I/FC      (30935): t=79569ms acciones: localidades.guardar=no, encuesta.enviar=no, outbox.enviarAhora=no, sesion.ingresar=no
+10-26 23:47:20.883 I/FC      (30935): t=79920ms sesión: pantalla propia IngresoPage
+10-26 23:47:22.077 I/FC      (30935): t=81113ms sesión: abriendo el navegador del sistema
+10-26 23:47:30.329 I/FC      (30935): t=89365ms sesión: ingresó encuestador (oidc:0b278ed9-d37e-45a5-a8f8-4504d440b1ab)
+10-26 23:47:30.329 I/FC      (30935): t=89366ms sesión: Ingresando --IngresoExitoso--> Activa
+10-26 23:47:30.330 I/FC      (30935): t=89366ms acciones: localidades.guardar=sí, encuesta.enviar=sí, outbox.enviarAhora=sí, sesion.ingresar=no
+10-26 23:48:04.313 I/FC      (30935): t=123349ms sesión: desbloqueo con la seguridad del teléfono activado
+10-26 23:48:10.063 I/FC      (30935): t=129099ms red: salud ok (HTTP 200)
+10-26 23:48:25.178 I/FC      (31270): t=2691ms arranque: pantalla visible
+10-26 23:48:26.115 I/FC      (31270): t=3632ms db: esquema 1 comprobado
+10-26 23:48:27.906 I/FC      (31270): t=5424ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:48:32.487 I/FC      (31270): t=10004ms red: salud falla (WebException: Socket closed)
+10-26 23:48:42.858 I/FC      (31270): t=20375ms sesión: al arrancar Revocada
+10-26 23:48:43.889 I/FC      (31270): t=21406ms claves: demo-2026 cargada
+10-26 23:48:48.103 I/FC      (31270): t=25620ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-26 23:48:48.106 I/FC      (31270): t=25624ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-26 23:48:49.773 I/FC      (31270): t=27290ms red: salud ok (HTTP 200)
+10-26 23:48:49.774 I/FC      (31270): t=27291ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:48:49.774 I/FC      (31270): t=27292ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:48:50.898 I/FC      (31270): t=28415ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-26 23:48:58.123 I/FC      (31270): t=35641ms contenido: carga iniciada (1.0.0+5d5c2b4)
+10-26 23:49:00.534 I/FC      (31270): t=38052ms puente Listo(1.0.0+5d5c2b4)
+10-26 23:49:00.534 I/FC      (31270): t=38052ms contenido: consulta del arranque en frío (tras Listo)
+10-26 23:49:00.552 I/FC      (31270): t=38069ms canal: GET dev/puente-1/indice.json
+10-26 23:49:00.686 I/FC      (31270): t=38204ms canal: GET dev/puente-1/indice.json.sig
+10-26 23:49:00.852 I/FC      (31270): t=38369ms consulta (ArranqueEnFrio): AlDia Ninguno — contenido: al día (1.0.0+5d5c2b4); definición encuesta-movilidad v1: al día
+10-26 23:49:26.393 I/FC      (31270): t=63911ms sesión: Revocada --IngresoIniciado--> Ingresando
+10-26 23:49:26.400 I/FC      (31270): t=63918ms acciones: localidades.guardar=no, encuesta.enviar=no, outbox.enviarAhora=no, sesion.ingresar=no
+10-26 23:49:26.754 I/FC      (31270): t=64272ms sesión: pantalla propia IngresoPage
+10-26 23:49:28.564 I/wpa_supplicant(30398): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=4 locally_generated=1
+10-26 23:49:29.395 I/FC      (31270): t=66913ms red: llamada fallida (emisor WebException)
+10-26 23:49:29.462 I/FC      (31270): t=66979ms red: RedSinServidor (señal LlamadaFallida; sistema con internet)
+10-26 23:49:29.767 I/FC      (31270): t=67285ms red: salud falla (WebException: Failed to connect to /203.0.113.10:8099)
+10-26 23:49:31.693 I/FC      (31270): t=69211ms red: sistema sin internet, perfiles []
+10-26 23:49:31.699 I/FC      (31270): t=69211ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:49:39.714 I/FC      (31270): t=77232ms red: sistema con internet, perfiles [WiFi]
+10-26 23:49:39.715 I/FC      (31270): t=77233ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:49:40.511 I/FC      (31270): t=78029ms red: salud ok (HTTP 200)
+10-26 23:49:40.512 I/FC      (31270): t=78029ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:49:40.512 I/FC      (31270): t=78029ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:49:55.576 I/wpa_supplicant(30398): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=4 locally_generated=1
+10-26 23:49:58.690 I/FC      (31270): t=96207ms red: sistema sin internet, perfiles []
+10-26 23:49:58.691 I/FC      (31270): t=96208ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:50:08.489 I/FC      (31270): t=106003ms red: sistema con internet, perfiles [WiFi]
+10-26 23:50:08.489 I/FC      (31270): t=106007ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:50:09.230 I/FC      (31270): t=106747ms red: salud ok (HTTP 200)
+10-26 23:50:09.231 I/FC      (31270): t=106748ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:50:09.231 I/FC      (31270): t=106749ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:50:30.563 I/wpa_supplicant(30398): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=4 locally_generated=1
+10-26 23:50:33.795 I/FC      (31270): t=131312ms red: sistema sin internet, perfiles []
+10-26 23:50:33.797 I/FC      (31270): t=131314ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:50:43.516 I/FC      (31270): t=141034ms red: sistema con internet, perfiles [WiFi]
+10-26 23:50:43.517 I/FC      (31270): t=141034ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:50:44.576 I/FC      (31270): t=142094ms red: salud ok (HTTP 200)
+10-26 23:50:44.577 I/FC      (31270): t=142095ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:50:44.577 I/FC      (31270): t=142095ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:50:52.593 I/wpa_supplicant(30398): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=4 locally_generated=1
+10-26 23:50:55.297 I/FC      (31270): t=152814ms red: sistema sin internet, perfiles []
+10-26 23:50:55.298 I/FC      (31270): t=152816ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:51:03.700 I/FC      (31270): t=161217ms red: sistema con internet, perfiles [WiFi]
+10-26 23:51:03.701 I/FC      (31270): t=161218ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:51:05.183 I/FC      (31270): t=162700ms red: salud ok (HTTP 200)
+10-26 23:51:05.183 I/FC      (31270): t=162701ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:51:05.184 I/FC      (31270): t=162701ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:51:08.560 I/wpa_supplicant(30398): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=4 locally_generated=1
+10-26 23:51:11.897 I/FC      (31270): t=169414ms red: sistema sin internet, perfiles []
+10-26 23:51:11.908 I/FC      (31270): t=169425ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:51:20.370 I/FC      (31270): t=177887ms red: sistema con internet, perfiles [WiFi]
+10-26 23:51:20.371 I/FC      (31270): t=177888ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:51:21.298 I/FC      (31270): t=178816ms red: salud ok (HTTP 200)
+10-26 23:51:21.299 I/FC      (31270): t=178816ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:51:21.299 I/FC      (31270): t=178817ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:51:28.591 I/wpa_supplicant(30398): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=4 locally_generated=1
+10-26 23:51:31.189 I/FC      (31270): t=188706ms red: sistema sin internet, perfiles []
+10-26 23:51:31.190 I/FC      (31270): t=188708ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:51:38.389 I/FC      (31270): t=195906ms red: sistema con internet, perfiles [WiFi]
+10-26 23:51:38.390 I/FC      (31270): t=195907ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:51:40.368 I/FC      (31270): t=197886ms red: salud ok (HTTP 200)
+10-26 23:51:40.370 I/FC      (31270): t=197887ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:51:40.371 I/FC      (31270): t=197889ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:52:13.584 I/wpa_supplicant(30398): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=4 locally_generated=1
+10-26 23:52:16.006 I/FC      (31270): t=233524ms red: sistema sin internet, perfiles []
+10-26 23:52:16.078 I/FC      (31270): t=233595ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:52:26.672 I/FC      (31270): t=244190ms red: sistema con internet, perfiles [WiFi]
+10-26 23:52:26.678 I/FC      (31270): t=244195ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:52:27.390 I/FC      (31270): t=244907ms red: salud ok (HTTP 200)
+10-26 23:52:27.390 I/FC      (31270): t=244908ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:52:27.391 I/FC      (31270): t=244908ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:52:49.696 I/wpa_supplicant(30398): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=4 locally_generated=1
+10-26 23:52:52.806 I/FC      (31270): t=270323ms red: sistema sin internet, perfiles []
+10-26 23:52:52.806 I/FC      (31270): t=270324ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:52:59.573 I/FC      (31270): t=277091ms red: sistema con internet, perfiles [WiFi]
+10-26 23:52:59.575 I/FC      (31270): t=277092ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:53:00.699 I/FC      (31270): t=278216ms red: salud ok (HTTP 200)
+10-26 23:53:00.707 I/FC      (31270): t=278224ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:53:00.708 I/FC      (31270): t=278225ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:53:01.115 I/wpa_supplicant(30398): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=3 locally_generated=1
+10-26 23:53:02.109 I/FC      (31270): t=279627ms red: sistema sin internet, perfiles []
+10-26 23:53:02.110 I/FC      (31270): t=279627ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:53:11.979 I/FC      (31270): t=289496ms red: sistema con internet, perfiles [WiFi]
+10-26 23:53:11.983 I/FC      (31270): t=289501ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:53:14.975 I/wpa_supplicant(31852): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=3 locally_generated=1
+10-26 23:53:16.203 I/FC      (31270): t=293721ms red: salud falla (sin respuesta en 3 s)
+10-26 23:53:17.465 I/FC      (31270): t=294982ms red: sistema sin internet, perfiles []
+10-26 23:53:17.465 I/FC      (31270): t=294983ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:53:25.782 I/FC      (31270): t=303300ms red: sistema con internet, perfiles [WiFi]
+10-26 23:53:25.785 I/FC      (31270): t=303303ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:53:26.997 I/FC      (31270): t=304515ms red: salud ok (HTTP 200)
+10-26 23:53:26.997 I/FC      (31270): t=304515ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:53:26.998 I/FC      (31270): t=304515ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:53:38.575 I/wpa_supplicant(31852): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=4 locally_generated=1
+10-26 23:53:40.606 I/FC      (31270): t=318124ms red: sistema sin internet, perfiles []
+10-26 23:53:40.607 I/FC      (31270): t=318125ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:53:49.489 I/FC      (31270): t=327007ms red: sistema con internet, perfiles [WiFi]
+10-26 23:53:49.568 I/FC      (31270): t=327086ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:53:50.689 I/FC      (31270): t=328194ms red: salud ok (HTTP 200)
+10-26 23:53:50.689 I/FC      (31270): t=328207ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:53:50.689 I/FC      (31270): t=328207ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:53:56.576 I/wpa_supplicant(31852): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=4 locally_generated=1
+10-26 23:53:59.369 I/FC      (31270): t=336887ms red: sistema sin internet, perfiles []
+10-26 23:53:59.371 I/FC      (31270): t=336888ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:54:05.673 I/FC      (31270): t=343191ms red: sistema con internet, perfiles [WiFi]
+10-26 23:54:05.680 I/FC      (31270): t=343197ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:54:06.402 I/FC      (31270): t=343919ms red: salud ok (HTTP 200)
+10-26 23:54:06.403 I/FC      (31270): t=343921ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:54:06.404 I/FC      (31270): t=343921ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:54:19.579 I/wpa_supplicant(31852): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=4 locally_generated=1
+10-26 23:54:22.589 I/FC      (31270): t=360106ms red: sistema sin internet, perfiles []
+10-26 23:54:22.596 I/FC      (31270): t=360113ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:54:30.187 I/FC      (31270): t=367704ms red: sistema con internet, perfiles [WiFi]
+10-26 23:54:30.188 I/FC      (31270): t=367706ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:54:30.974 I/FC      (31270): t=368491ms red: salud ok (HTTP 200)
+10-26 23:54:30.976 I/FC      (31270): t=368493ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:54:30.978 I/FC      (31270): t=368495ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:54:31.020 I/wpa_supplicant(31852): wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=3 locally_generated=1
+10-26 23:54:33.488 I/FC      (31270): t=370995ms red: sistema sin internet, perfiles []
+10-26 23:54:33.489 I/FC      (31270): t=371006ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:55:35.798 I/FC      (31270): t=433316ms red: sistema con internet, perfiles [WiFi]
+10-26 23:55:35.799 I/FC      (31270): t=433316ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:55:36.684 I/FC      (31270): t=434202ms red: salud ok (HTTP 200)
+10-26 23:55:36.685 I/FC      (31270): t=434203ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:55:36.686 I/FC      (31270): t=434203ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:57:05.108 I/FC      (32145): t=2084ms arranque: pantalla visible
+10-26 23:57:06.890 I/FC      (32145): t=3872ms db: esquema 1 comprobado
+10-26 23:57:08.787 I/FC      (32145): t=5768ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:57:13.386 I/FC      (32145): t=10367ms red: salud falla (WebException: Socket closed)
+10-26 23:57:20.571 I/FC      (32145): t=17552ms sesión: al arrancar Vencida
+10-26 23:57:21.971 I/FC      (32145): t=18952ms claves: demo-2026 cargada
+10-26 23:57:25.784 I/FC      (32145): t=22765ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-26 23:57:25.788 I/FC      (32145): t=22769ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-26 23:57:29.118 I/FC      (32145): t=26099ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-26 23:57:30.294 I/FC      (32145): t=27276ms red: salud ok (HTTP 200)
+10-26 23:57:30.296 I/FC      (32145): t=27277ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:57:30.297 I/FC      (32145): t=27279ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:57:30.407 I/FC      (32145): t=27389ms acciones: localidades.guardar=sí, encuesta.enviar=pendiente, outbox.enviarAhora=no, sesion.ingresar=sí
+10-26 23:57:35.437 I/FC      (32145): t=32418ms contenido: carga iniciada (1.0.0+5d5c2b4)
+10-26 23:57:37.746 I/FC      (32145): t=34727ms puente Listo(1.0.0+5d5c2b4)
+10-26 23:57:37.746 I/FC      (32145): t=34727ms contenido: consulta del arranque en frío (tras Listo)
+10-26 23:57:37.752 I/FC      (32145): t=34734ms canal: GET dev/puente-1/indice.json
+10-26 23:57:37.926 I/FC      (32145): t=34907ms canal: GET dev/puente-1/indice.json.sig
+10-26 23:57:38.078 I/FC      (32145): t=35060ms consulta (ArranqueEnFrio): AlDia Ninguno — contenido: al día (1.0.0+5d5c2b4); definición encuesta-movilidad v1: al día
+10-26 23:57:52.369 I/FC      (32145): t=49351ms sesión: Vencida --IngresoIniciado--> Ingresando
+10-26 23:57:52.371 I/FC      (32145): t=49352ms acciones: localidades.guardar=no, encuesta.enviar=no, outbox.enviarAhora=no, sesion.ingresar=no
+10-26 23:57:52.751 I/FC      (32145): t=49733ms sesión: pantalla propia IngresoPage
+10-26 23:57:54.016 I/FC      (32145): t=50998ms sesión: abriendo el navegador del sistema
+10-26 23:58:05.136 I/FC      (32145): t=62118ms sesión: ingresó encuestador (oidc:0b278ed9-d37e-45a5-a8f8-4504d440b1ab)
+10-26 23:58:05.136 I/FC      (32145): t=62118ms sesión: Ingresando --IngresoExitoso--> Activa
+10-26 23:58:05.137 I/FC      (32145): t=62118ms acciones: localidades.guardar=sí, encuesta.enviar=sí, outbox.enviarAhora=sí, sesion.ingresar=no

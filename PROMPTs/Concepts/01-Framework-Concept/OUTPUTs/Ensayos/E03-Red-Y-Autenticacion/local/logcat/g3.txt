@@ -1,0 +1,7 @@
+10-26 23:40:38.004 I/FC      (28826): t=771423ms red: sistema con internet, perfiles [WiFi]
+10-26 23:40:38.005 I/FC      (28826): t=771424ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:40:38.005 I/FC      (28826): t=771425ms acciones: localidades.guardar=no, encuesta.enviar=no, outbox.enviarAhora=no, sesion.ingresar=no
+10-26 23:40:39.692 I/FC      (28826): t=773112ms red: salud ok (HTTP 200)
+10-26 23:40:39.692 I/FC      (28826): t=773112ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:40:39.692 I/FC      (28826): t=773112ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:40:39.693 I/FC      (28826): t=773113ms acciones: localidades.guardar=no, encuesta.enviar=no, outbox.enviarAhora=no, sesion.ingresar=sí

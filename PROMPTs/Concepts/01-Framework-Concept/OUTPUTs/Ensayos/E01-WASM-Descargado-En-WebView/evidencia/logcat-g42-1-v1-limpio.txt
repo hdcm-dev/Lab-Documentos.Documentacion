@@ -1,0 +1,66 @@
+10-25 17:04:06.425 I/E01     (17138): t=1114ms main-page-appearing
+10-25 17:04:06.449 I/E01     (17138): t=1146ms manifiesto: GET https://regulation-ideal-california-protocols.trycloudflare.com/manifest.json
+10-25 17:04:08.606 I/E01     (17138): t=3303ms descarga contenido-v1.zip 3394811 bytes en 1262 ms, sha256=b7828d721900ad3a689cfff5e6b22a89f4b52f934290c3cc4bd982939cfa4416
+10-25 17:04:09.003 I/E01     (17138): t=3700ms activada v1 (antes ninguna); descomprimir 392 ms
+10-25 17:04:09.005 I/E01     (17138): t=3702ms actualizador: instalada v1 (antes ninguna)
+10-25 17:04:09.106 D/nativeloader(17138): Load /data/app/~~IdpKsjKJ2mfJDXaORvDEgg==/com.google.android.webview-50-wIEYDFbTZFxOxan7j8w==/base.apk!/lib/arm64-v8a/libwebviewchromium.so using class loader ns clns-5 (caller=/data/app/~~IdpKsjKJ2mfJDXaORvDEgg==/com.google.android.webview-50-wIEYDFbTZFxOxan7j8w==/base.apk): ok
+10-25 17:04:09.110 D/nativeloader(17138): Load /system/lib64/libwebviewchromium_plat_support.so using class loader ns clns-5 (caller=/data/app/~~IdpKsjKJ2mfJDXaORvDEgg==/com.google.android.webview-50-wIEYDFbTZFxOxan7j8w==/base.apk): ok
+10-25 17:04:09.120 I/chromium(17138): [1025/170409.114476:INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+10-25 17:04:09.120 I/chromium(17138): [1025/170409.120454:INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+10-25 17:04:09.203 I/ActivityManager( 1875): Start proc 17328:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0i232 for  {com.frameworkconcept.ensayo01/org.chromium.content.app.SandboxedProcessService0:0}
+10-25 17:04:09.247 I/cr_WebViewApkApp(17328): version=155.0.8059.43 (805904303) minSdkVersion=29 processName=com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 splits=<none>
+10-25 17:04:09.374 I/E01     (17138): t=4071ms hybridwebview-agregado
+10-25 17:04:09.383 W/chromium(17328): [WARNING:content/app/android/content_main_android.cc:82] android_setCpu already initialized
+10-25 17:04:09.403 I/E01     (17138): t=4100ms req#1 GET https://0.0.0.1/ → content/current/index.html
+10-25 17:04:09.417 W/chromium(17328): [WARNING:content/child/runtime_features.cc:476] Fenced frames cannot be enabled in this configuration. Use --enable-features=FencedFrames instead.
+10-25 17:04:09.511 I/E01     (17138): t=4209ms req#2 GET https://0.0.0.1/_framework/dotnet.j6limjia9c.js → content/current/_framework/dotnet.j6limjia9c.js
+10-25 17:04:09.515 I/E01     (17138): t=4213ms req#3 GET https://0.0.0.1/css/app.css → content/current/css/app.css
+10-25 17:04:09.516 I/E01     (17138): t=4214ms req#4 GET https://0.0.0.1/_framework/hybridwebview.js → sin manejar (por defecto)
+10-25 17:04:09.517 I/E01     (17138): t=4214ms req#5 GET https://0.0.0.1/bridge.js → content/current/bridge.js
+10-25 17:04:09.518 I/E01     (17138): t=4215ms req#6 GET https://0.0.0.1/_framework/blazor.webassembly.w3qd1tpl0e.js → content/current/_framework/blazor.webassembly.w3qd1tpl0e.js
+10-25 17:04:09.590 I/E01     (17138): t=4287ms req#7 POST https://0.0.0.1/__hwvInvokeDotNet → sin manejar (por defecto)
+10-25 17:04:09.629 I/E01     (17138): t=4327ms js-marca 'index-html-cargado' perf.now=211ms
+10-25 17:04:09.691 I/E01     (17138): t=4388ms req#8 GET https://0.0.0.1/_framework/dotnet.runtime.zbexyp8zrs.js → content/current/_framework/dotnet.runtime.zbexyp8zrs.js
+10-25 17:04:09.696 I/E01     (17138): t=4394ms req#9 GET https://0.0.0.1/_framework/dotnet.native.vzj2a6aakt.js → content/current/_framework/dotnet.native.vzj2a6aakt.js
+10-25 17:04:09.698 I/E01     (17138): t=4395ms req#10 GET https://0.0.0.1/_framework/dotnet.native.nxw7lo0lh5.wasm → content/current/_framework/dotnet.native.nxw7lo0lh5.wasm
+10-25 17:04:09.762 I/E01     (17138): t=4459ms req#12 GET https://0.0.0.1/_framework/System.Runtime.InteropServices.JavaScript.4euq9hr5ei.wasm → content/current/_framework/System.Runtime.InteropServices.JavaScript.4euq9hr5ei.wasm
+10-25 17:04:09.762 I/E01     (17138): t=4459ms req#11 GET https://0.0.0.1/_framework/System.Private.CoreLib.msz5vt1qee.wasm → content/current/_framework/System.Private.CoreLib.msz5vt1qee.wasm
+10-25 17:04:09.764 I/E01     (17138): t=4461ms req#16 GET https://0.0.0.1/_framework/Microsoft.Extensions.Configuration.Json.jygd6wn873.wasm → content/current/_framework/Microsoft.Extensions.Configuration.Json.jygd6wn873.wasm
+10-25 17:04:09.764 I/E01     (17138): t=4461ms req#15 GET https://0.0.0.1/_framework/Microsoft.Extensions.Configuration.Abstractions.phvn7pjmsp.wasm → content/current/_framework/Microsoft.Extensions.Configuration.Abstractions.phvn7pjmsp.wasm
+10-25 17:04:09.765 I/E01     (17138): t=4463ms req#18 GET https://0.0.0.1/_framework/Microsoft.Extensions.DependencyInjection.Abstractions.hsik2aczsr.wasm → content/current/_framework/Microsoft.Extensions.DependencyInjection.Abstractions.hsik2aczsr.wasm
+10-25 17:04:09.766 I/E01     (17138): t=4463ms req#13 GET https://0.0.0.1/_framework/Microsoft.AspNetCore.Components.Web.lkf3z2jzku.wasm → content/current/_framework/Microsoft.AspNetCore.Components.Web.lkf3z2jzku.wasm
+10-25 17:04:09.766 I/E01     (17138): t=4463ms req#14 GET https://0.0.0.1/_framework/Microsoft.AspNetCore.Components.WebAssembly.rwhqrt84j9.wasm → content/current/_framework/Microsoft.AspNetCore.Components.WebAssembly.rwhqrt84j9.wasm
+10-25 17:04:09.766 I/E01     (17138): t=4463ms req#19 GET https://0.0.0.1/_framework/Microsoft.Extensions.DependencyInjection.39rq5qhzej.wasm → content/current/_framework/Microsoft.Extensions.DependencyInjection.39rq5qhzej.wasm
+10-25 17:04:09.767 I/E01     (17138): t=4464ms req#20 GET https://0.0.0.1/_framework/Microsoft.Extensions.Logging.dy5gfgwl7j.wasm → content/current/_framework/Microsoft.Extensions.Logging.dy5gfgwl7j.wasm
+10-25 17:04:09.802 I/E01     (17138): t=4499ms req#17 GET https://0.0.0.1/_framework/Microsoft.AspNetCore.Components.gri0o0sgcj.wasm → content/current/_framework/Microsoft.AspNetCore.Components.gri0o0sgcj.wasm
+10-25 17:04:09.803 I/E01     (17138): t=4500ms req#23 GET https://0.0.0.1/_framework/Microsoft.JSInterop.tdeb81kcma.wasm → content/current/_framework/Microsoft.JSInterop.tdeb81kcma.wasm
+10-25 17:04:09.803 I/E01     (17138): t=4500ms req#22 GET https://0.0.0.1/_framework/Microsoft.Extensions.Options.tudf80nl92.wasm → content/current/_framework/Microsoft.Extensions.Options.tudf80nl92.wasm
+10-25 17:04:09.804 I/E01     (17138): t=4501ms req#25 GET https://0.0.0.1/_framework/System.Collections.Immutable.igro7rli9l.wasm → content/current/_framework/System.Collections.Immutable.igro7rli9l.wasm
+10-25 17:04:09.805 I/E01     (17138): t=4502ms req#26 GET https://0.0.0.1/_framework/System.Collections.8x260u3smb.wasm → content/current/_framework/System.Collections.8x260u3smb.wasm
+10-25 17:04:09.805 I/E01     (17138): t=4502ms req#28 GET https://0.0.0.1/_framework/System.Collections.Concurrent.lfxontdfyu.wasm → content/current/_framework/System.Collections.Concurrent.lfxontdfyu.wasm
+10-25 17:04:09.806 I/E01     (17138): t=4503ms req#27 GET https://0.0.0.1/_framework/Microsoft.Extensions.Logging.Abstractions.be0wuzjape.wasm → content/current/_framework/Microsoft.Extensions.Logging.Abstractions.be0wuzjape.wasm
+10-25 17:04:09.806 I/E01     (17138): t=4503ms req#30 GET https://0.0.0.1/_framework/System.ComponentModel.tpqldnnl29.wasm → content/current/_framework/System.ComponentModel.tpqldnnl29.wasm
+10-25 17:04:09.806 I/E01     (17138): t=4503ms req#31 GET https://0.0.0.1/_framework/System.Console.4kydlmvr8i.wasm → content/current/_framework/System.Console.4kydlmvr8i.wasm
+10-25 17:04:09.807 I/E01     (17138): t=4504ms req#24 GET https://0.0.0.1/_framework/Microsoft.Extensions.Primitives.pbdkwmm8bm.wasm → content/current/_framework/Microsoft.Extensions.Primitives.pbdkwmm8bm.wasm
+10-25 17:04:09.807 I/E01     (17138): t=4504ms req#32 GET https://0.0.0.1/_framework/System.Diagnostics.DiagnosticSource.lj6o32yk8x.wasm → content/current/_framework/System.Diagnostics.DiagnosticSource.lj6o32yk8x.wasm
+10-25 17:04:09.807 I/E01     (17138): t=4504ms req#33 GET https://0.0.0.1/_framework/System.IO.Pipelines.9azjszgsci.wasm → content/current/_framework/System.IO.Pipelines.9azjszgsci.wasm
+10-25 17:04:09.807 I/E01     (17138): t=4504ms req#21 GET https://0.0.0.1/_framework/Microsoft.Extensions.Configuration.t6ukke4ckb.wasm → content/current/_framework/Microsoft.Extensions.Configuration.t6ukke4ckb.wasm
+10-25 17:04:09.808 I/E01     (17138): t=4505ms req#34 GET https://0.0.0.1/_framework/System.Net.Http.no9gk5pvk1.wasm → content/current/_framework/System.Net.Http.no9gk5pvk1.wasm
+10-25 17:04:09.808 I/E01     (17138): t=4505ms req#36 GET https://0.0.0.1/_framework/System.Memory.7rya89d2eq.wasm → content/current/_framework/System.Memory.7rya89d2eq.wasm
+10-25 17:04:09.809 I/E01     (17138): t=4506ms req#38 GET https://0.0.0.1/_framework/System.Runtime.vp3oc0sac6.wasm → content/current/_framework/System.Runtime.vp3oc0sac6.wasm
+10-25 17:04:09.809 I/E01     (17138): t=4506ms req#29 GET https://0.0.0.1/_framework/Microsoft.JSInterop.WebAssembly.cok88e5v83.wasm → content/current/_framework/Microsoft.JSInterop.WebAssembly.cok88e5v83.wasm
+10-25 17:04:09.809 I/E01     (17138): t=4506ms req#39 GET https://0.0.0.1/_framework/System.Security.Cryptography.2lkfgnu7ed.wasm → content/current/_framework/System.Security.Cryptography.2lkfgnu7ed.wasm
+10-25 17:04:09.809 I/E01     (17138): t=4506ms req#35 GET https://0.0.0.1/_framework/System.Linq.1dh3v4why9.wasm → content/current/_framework/System.Linq.1dh3v4why9.wasm
+10-25 17:04:09.810 I/E01     (17138): t=4507ms req#41 GET https://0.0.0.1/_framework/System.Text.Encodings.Web.jgr0b8ttes.wasm → content/current/_framework/System.Text.Encodings.Web.jgr0b8ttes.wasm
+10-25 17:04:09.810 I/E01     (17138): t=4507ms req#42 GET https://0.0.0.1/_framework/System.Text.RegularExpressions.yr5d4qzp60.wasm → content/current/_framework/System.Text.RegularExpressions.yr5d4qzp60.wasm
+10-25 17:04:09.810 I/E01     (17138): t=4508ms req#40 GET https://0.0.0.1/_framework/System.Net.Primitives.kxpg9rp39o.wasm → content/current/_framework/System.Net.Primitives.kxpg9rp39o.wasm
+10-25 17:04:09.811 I/E01     (17138): t=4508ms req#43 GET https://0.0.0.1/_framework/Contenido.u7b4b6w15x.wasm → content/current/_framework/Contenido.u7b4b6w15x.wasm
+10-25 17:04:09.811 I/E01     (17138): t=4508ms req#44 GET https://0.0.0.1/_framework/icudt_no_CJK.lfu7j35m59.dat → content/current/_framework/icudt_no_CJK.lfu7j35m59.dat
+10-25 17:04:09.811 I/E01     (17138): t=4509ms req#45 GET https://0.0.0.1/_framework/System.Text.Json.zs847lmboq.wasm → content/current/_framework/System.Text.Json.zs847lmboq.wasm
+10-25 17:04:09.812 I/E01     (17138): t=4510ms req#46 GET https://0.0.0.1/favicon.ico → sin manejar (por defecto)
+10-25 17:04:09.813 I/E01     (17138): t=4510ms req#37 GET https://0.0.0.1/_framework/System.Private.Uri.g3vdzb2obd.wasm → content/current/_framework/System.Private.Uri.g3vdzb2obd.wasm
+10-25 17:04:11.578 I/E01     (17138): t=6275ms req#47 POST https://0.0.0.1/__hwvInvokeDotNet → sin manejar (por defecto)
+10-25 17:04:11.579 I/E01     (17138): t=6277ms js-marca 'primer-render v1' perf.now=2216ms
+10-25 17:04:11.634 I/E01     (17138): t=6331ms req#48 POST https://0.0.0.1/__hwvInvokeDotNet → sin manejar (por defecto)
+10-25 17:04:11.645 I/E01     (17138): t=6343ms puente DeviceInfo → {"modulo":"device.info","fabricante":"motorola","modelo":"moto g42","plataforma":"Android","version":"13","contenido":"v1"}
+10-25 17:04:11.717 I/ActivityManager( 1875): Start proc 17387:com.google.android.webview:webview_service/u0a240 for service {com.google.android.webview/org.chromium.android_webview.services.VariationsSeedServer}

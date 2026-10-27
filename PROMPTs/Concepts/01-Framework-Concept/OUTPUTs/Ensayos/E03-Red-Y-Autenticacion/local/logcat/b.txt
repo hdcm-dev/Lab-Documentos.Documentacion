@@ -1,0 +1,42 @@
+10-26 23:26:36.562 I/FC      (28585): t=2388ms arranque: pantalla visible
+10-26 23:26:37.652 I/FC      (28585): t=3483ms db: esquema 1 comprobado
+10-26 23:26:37.803 I/FC      (28585): t=3634ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:26:40.375 D/AndroidRuntime(28617): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 23:26:40.397 I/AndroidRuntime(28617): Using default boot image
+10-26 23:26:40.398 I/AndroidRuntime(28617): Leaving lock profiling enabled
+10-26 23:26:40.625 D/AndroidRuntime(28617): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 23:26:42.121 D/AndroidRuntime(28617): Shutting down VM
+10-26 23:26:42.383 I/FC      (28585): t=8215ms red: salud ok (HTTP 200)
+10-26 23:26:42.384 I/FC      (28585): t=8215ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:26:45.560 I/FC      (28585): t=11391ms sesión: al arrancar Bloqueada
+10-26 23:26:47.084 I/FC      (28585): t=12915ms claves: demo-2026 cargada
+10-26 23:26:48.684 D/AndroidRuntime(28642): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 23:26:48.701 I/AndroidRuntime(28642): Using default boot image
+10-26 23:26:48.702 I/AndroidRuntime(28642): Leaving lock profiling enabled
+10-26 23:26:49.109 I/FC      (28585): t=14941ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-26 23:26:49.111 I/FC      (28585): t=14942ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-26 23:26:49.416 D/AndroidRuntime(28642): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 23:26:50.862 D/AndroidRuntime(28642): Shutting down VM
+10-26 23:26:51.710 I/FC      (28585): t=17542ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-26 23:26:56.238 D/AndroidRuntime(28722): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 23:26:56.242 I/AndroidRuntime(28722): Using default boot image
+10-26 23:26:56.242 I/AndroidRuntime(28722): Leaving lock profiling enabled
+10-26 23:26:56.957 D/AndroidRuntime(28722): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 23:26:57.073 I/FC      (28585): t=22904ms contenido: carga iniciada (1.0.0+5d5c2b4)
+10-26 23:26:58.116 D/AndroidRuntime(28722): Shutting down VM
+10-26 23:26:59.367 I/chromium(28585): [INFO:CONSOLE:83] "FC-MARCA primer-render contenido=1.0.0+5d5c2b4 perf.now=5412ms", source: https://0.0.0.1/js/puente.js (83)
+10-26 23:26:59.442 I/FC      (28585): t=25273ms sesión: pantalla propia DesbloqueoPage
+10-26 23:26:59.481 I/FC      (28585): t=25312ms puente Listo(1.0.0+5d5c2b4)
+10-26 23:26:59.481 I/FC      (28585): t=25313ms contenido: consulta del arranque en frío (tras Listo)
+10-26 23:26:59.488 I/FC      (28585): t=25320ms canal: GET dev/puente-1/indice.json
+10-26 23:26:59.629 I/FC      (28585): t=25461ms canal: GET dev/puente-1/indice.json.sig
+10-26 23:26:59.938 I/FC      (28585): t=25770ms consulta (ArranqueEnFrio): AlDia Ninguno — contenido: al día (1.0.0+5d5c2b4); definición encuesta-movilidad v1: al día
+10-26 23:27:03.555 D/AndroidRuntime(28747): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 23:27:03.560 I/AndroidRuntime(28747): Using default boot image
+10-26 23:27:03.560 I/AndroidRuntime(28747): Leaving lock profiling enabled
+10-26 23:27:03.710 D/AndroidRuntime(28747): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 23:27:04.760 D/AndroidRuntime(28747): Shutting down VM
+10-26 23:27:27.793 I/FC      (28585): t=53625ms sesión: desbloqueada con la seguridad del teléfono
+10-26 23:27:27.876 I/FC      (28585): t=53708ms sesión: Bloqueada --DesbloqueoExitoso--> Activa
+10-26 23:27:28.500 I/FC      (28585): t=54332ms acciones: localidades.guardar=sí, encuesta.enviar=sí, outbox.enviarAhora=sí, sesion.ingresar=no
+10-26 23:27:29.981 I/FC      (28585): t=55812ms sesión: access renovado (vence 23:32:29Z)

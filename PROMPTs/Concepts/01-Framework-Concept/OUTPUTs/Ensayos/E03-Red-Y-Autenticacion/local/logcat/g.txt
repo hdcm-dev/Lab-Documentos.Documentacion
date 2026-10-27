@@ -1,0 +1,5 @@
+10-26 23:36:53.844 I/AndroidRuntime(29550): VM exiting with result code 0, cleanup skipped.
+10-26 23:36:54.788 I/FC      (28826): t=548207ms red: sistema sin internet, perfiles []
+10-26 23:36:54.788 I/FC      (28826): t=548208ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:36:54.788 I/FC      (28826): t=548208ms acciones: localidades.guardar=sí, encuesta.enviar=pendiente, outbox.enviarAhora=no, sesion.ingresar=no
+10-26 23:39:19.753 I/FC      (28826): t=693172ms outbox: encolada bcb21b59d8d2493097a81f369fe7e725 (encuesta-movilidad v1)

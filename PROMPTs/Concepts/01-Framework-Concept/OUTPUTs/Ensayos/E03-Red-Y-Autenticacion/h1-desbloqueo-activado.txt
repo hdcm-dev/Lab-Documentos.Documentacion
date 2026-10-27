@@ -1,0 +1,3 @@
+Paso h (1/3), preparación: reingreso (SSO) y se acepta otra vez «¿Usar la seguridad del teléfono…?» con la huella; la oferta desaparece y la sesión queda Activa con el refresh sellado en el Keystore.
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T20:48:10-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado: logcat «sesión: desbloqueo con la seguridad del teléfono activado» (fc-work/demo/e03/integ/logcat/h.txt); en ese momento el teléfono tiene PIN 1234 y huella 1.

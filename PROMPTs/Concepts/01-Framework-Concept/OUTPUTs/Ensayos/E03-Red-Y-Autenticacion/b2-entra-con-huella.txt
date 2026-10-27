@@ -1,0 +1,3 @@
+Paso b (2/2): con la huella simulada (emu finger touch 1) el diálogo se cierra y la app entra como «encuestador» en Activa, sin pedir cuenta ni abrir el navegador; aviso «En línea», «Por enviar: 0».
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T20:27:42-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado: logcat «desbloqueada con la seguridad del teléfono» 23:27:27.793Z → «Bloqueada --DesbloqueoExitoso--> Activa» → «access renovado (vence 23:32:29Z)» (el refresh abierto con el Keystore se canjeó); de la huella a la app con foco: 6,9 s medidos desde el host (incluye la ida y vuelta por ssh/adb).

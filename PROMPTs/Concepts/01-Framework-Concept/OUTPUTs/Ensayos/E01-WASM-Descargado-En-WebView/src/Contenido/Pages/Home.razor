@@ -1,0 +1,44 @@
+@page "/"
+@using System.Reflection
+@inject IJSRuntime JS
+
+<PageTitle>Contenido E01</PageTitle>
+
+<h1 id="version">Contenido @Version</h1>
+
+<p>Paquete Blazor WebAssembly servido desde la carpeta descargada.</p>
+
+<button id="btn-device-info" @onclick="PedirInfo">device.info</button>
+
+<pre id="resultado">@resultado</pre>
+
+@code {
+    static readonly string Version = typeof(App).Assembly
+        .GetCustomAttributes<AssemblyMetadataAttribute>()
+        .FirstOrDefault(a => a.Key == "ContenidoVersion")?.Value ?? "?";
+
+    string resultado = "(sin pedir)";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("e01.primerRender", Version);
+            // Llamada automática para que el ensayo no dependa de un toque en pantalla.
+            await PedirInfo();
+            StateHasChanged();
+        }
+    }
+
+    async Task PedirInfo()
+    {
+        try
+        {
+            resultado = await JS.InvokeAsync<string>("e01.deviceInfo");
+        }
+        catch (Exception ex)
+        {
+            resultado = "ERROR: " + ex.Message;
+        }
+    }
+}

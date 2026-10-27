@@ -1,0 +1,3 @@
+Paso g (2/3): confirmado «Cerrar sesión» (el aviso dice «Lo pendiente se conserva y sale cuando vuelvas a ingresar con esta cuenta»): la app vuelve a la pantalla propia «Ingresar»; sin red, «Ingresar con tu cuenta» está deshabilitado con el motivo «Sin conexión».
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T20:40:27-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado: logcat 23:40:07.267Z «sesión: cerrada por la persona (oidc:0b278ed9-…); pendientes conservados 1» → «Activa --Cierre--> SinCuenta» → «acciones: … sesion.ingresar=no» → «pantalla propia IngresoPage».

@@ -1,0 +1,3 @@
+Paso h (2/3): con el desbloqueo activado se quita el PIN de bloqueo de pantalla (locksettings clear --old 1234; las huellas pasan a 0) y se reabre la app: no pide desbloqueo; queda «Revocada» con la banda «La seguridad del teléfono cambió: ingresá de nuevo con tu cuenta.» y «Ingresar de nuevo»; se sigue trabajando local.
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T20:49:24-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado: «Lock credential cleared», dumpsys fingerprint "count":0; logcat 23:48:42.858Z «sesión: al arrancar Revocada» (la clave AES del Keystore ligada al bloqueo quedó invalidada; DISENO §3: Revocada = clave invalidada).

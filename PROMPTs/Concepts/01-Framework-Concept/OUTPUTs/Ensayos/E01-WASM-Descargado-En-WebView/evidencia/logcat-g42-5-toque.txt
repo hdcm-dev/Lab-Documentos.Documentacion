@@ -1,0 +1,1 @@
+10-25 17:07:59.551 I/E01     (18120): t=61554ms puente DeviceInfo → {"modulo":"device.info","fabricante":"motorola","modelo":"moto g42","plataforma":"Android","version":"13","contenido":"v2"}

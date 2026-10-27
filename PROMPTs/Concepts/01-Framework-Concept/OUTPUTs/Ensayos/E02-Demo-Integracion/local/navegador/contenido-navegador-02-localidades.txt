@@ -1,0 +1,3 @@
+ABM de localidades (caso base) sobre documents.* del puente: las 2 sembradas más Rosario.
+Chromium headless (playwright-core 1.62.1), puente SIMULADO (Testing/puente-simulado.js), 2026-10-26T11:01:42.166Z; NO es el cascarón ni el teléfono.
+Comprobado: siembra de 2, errores de validación del caso base al guardar vacío, alta guardada como documento JSON (3 en la colección).

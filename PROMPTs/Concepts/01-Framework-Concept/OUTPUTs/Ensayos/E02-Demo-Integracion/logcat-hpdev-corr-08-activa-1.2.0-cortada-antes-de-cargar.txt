@@ -1,0 +1,13 @@
+10-26 13:07:52.216 14308 14308 D DOTNET  : AndroidCryptoNative_InitLibraryOnLoad: jint AndroidCryptoNative_InitLibraryOnLoad(JavaVM *, void *) in /__w/1/s/src/runtime/src/native/libs/System.Security.Cryptography.Native.Android/pal_jni.c
+10-26 13:07:52.217 14308 14308 D DOTNET  : GetOptionalClassGRef: optional class com/android/org/conscrypt/OpenSSLEngineImpl was not found
+10-26 13:07:52.784 14308 14308 I FC      : t=942ms arranque: pantalla visible
+10-26 13:07:53.922 14308 14330 I FC      : t=2084ms db: esquema 1 comprobado
+10-26 13:07:54.753 14308 14330 I FC      : t=2916ms claves: demo-2026 cargada
+10-26 13:07:56.538 14308 14330 I FC      : t=4700ms actualizador: activada 1.2.0+5d5c2b4 (desde staging)
+10-26 13:07:56.538 14308 14330 I FC      : t=4701ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-26 13:07:56.538 14308 14330 I FC      : t=4701ms actualizador: retención: borrada 1.0.0+5d5c2b4
+10-26 13:07:56.540 14308 14330 I FC      : t=4703ms arranque: ContenidoListo 1.2.0+5d5c2b4
+10-26 13:07:57.136 14308 14308 I FC      : t=5299ms contenido: hybridwebview agregado (1.2.0+5d5c2b4)
+10-26 13:07:57.489 14308 14354 E chromium: [1026/130757.489245:ERROR:android_webview/browser/variations/variations_seed_loader.cc:36] Seed missing signature.
+10-26 13:07:57.492 14308 14354 I chromium: [1026/130757.492366:INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+10-26 13:07:58.414 14308 14361 I FC      : t=6577ms servidor: req#1 GET /index.html

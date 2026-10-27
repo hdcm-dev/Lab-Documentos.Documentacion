@@ -1,0 +1,21 @@
+host:
+{"version":"v1","archivo":"contenido-v1.zip","sha256":"b7828d721900ad3a689cfff5e6b22a89f4b52f934290c3cc4bd982939cfa4416","tamano":3394811}
+
+g42 -> 198.51.100.9:
+g42 -> 203.0.113.10:
+g42 -> example.com:80 (control):
+g42 -> 198.51.100.9:8099 (rc):
+--- ping (una variable: herramienta ping en vez de nc)
+ping 192.0.2.1:
+rc=124
+2 packets transmitted, 2 received, 0% packet loss, time 1003ms
+rtt min/avg/max/mdev = 27.575/27.867/28.160/0.336 ms
+ping 198.51.100.9:
+2 packets transmitted, 0 received, 100% packet loss, time 1002ms
+
+ping 203.0.113.10:
+2 packets transmitted, 0 received, 100% packet loss, time 1003ms
+
+ping 1.1.1.1:
+2 packets transmitted, 1 received, 50% packet loss, time 1000ms
+rtt min/avg/max/mdev = 40.740/40.740/40.740/0.000 ms

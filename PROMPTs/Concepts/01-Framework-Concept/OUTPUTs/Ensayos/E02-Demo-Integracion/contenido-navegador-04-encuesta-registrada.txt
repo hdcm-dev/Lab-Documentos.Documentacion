@@ -1,0 +1,3 @@
+Encuesta registrada con la definición v1, encolada por encuestas.enqueueRespuesta; red cortada por evento.
+Chromium headless (playwright-core 1.62.1), puente SIMULADO (Testing/puente-simulado.js), 2026-10-26T09:59:54.068Z; NO es el cascarón ni el teléfono.
+Comprobado: fila del outbox con encuestaId=encuesta-movilidad, versionDefinicion=1, versionContenido=1.0.0 y clave 8b8ea00f8ff54956bbef3a20930ed62e; eventos outbox.changed y network.changed.

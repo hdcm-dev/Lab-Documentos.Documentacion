@@ -1,0 +1,112 @@
+10-26 07:51:04.459 22871 22871 D nativeloader: Load /data/app/~~bg_ik4czNHPxEu69X6YD4w==/com.frameworkconcept.demo-Hh6HKL_z5JGWQnJ5_ixLhQ==/lib/arm64/libmonodroid.so using class loader ns clns-4 (caller=/data/app/~~bg_ik4czNHPxEu69X6YD4w==/com.frameworkconcept.demo-Hh6HKL_z5JGWQnJ5_ixLhQ==/base.apk!classes2.dex): ok
+10-26 07:51:04.465 22871 22871 W monodroid: Failed to create directory '/data/user/0/com.frameworkconcept.demo/files/.__override__/arm64-v8a'. File exists
+10-26 07:51:04.465 22871 22871 W monodroid: Creating public update directory: `/data/user/0/com.frameworkconcept.demo/files/.__override__/arm64-v8a`
+10-26 07:51:04.465 22871 22871 W monodroid: runtime args empty
+10-26 07:51:04.480 22871 22871 W monodroid-assembly: open_from_update_dir: assembly file DOES NOT EXIST
+10-26 07:51:04.514 22871 22871 D DOTNET  : AndroidCryptoNative_InitLibraryOnLoad: jint AndroidCryptoNative_InitLibraryOnLoad(JavaVM *, void *) in /__w/1/s/src/runtime/src/native/libs/System.Security.Cryptography.Native.Android/pal_jni.c
+10-26 07:51:04.514 22871 22871 D DOTNET  : GetOptionalClassGRef: optional class com/android/org/conscrypt/OpenSSLEngineImpl was not found
+10-26 07:51:05.497 22871 22871 I FC      : t=1332ms arranque: pantalla visible
+10-26 07:51:05.685 22871 22922 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es-AR/Microsoft.EntityFrameworkCore.resources.dll
+10-26 07:51:05.685 22871 22922 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:05.685 22871 22922 W monodroid-assembly: open_from_update_dir: assembly file DOES NOT EXIST
+10-26 07:51:05.685 22871 22922 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es-AR/Microsoft.EntityFrameworkCore.resources.dll
+10-26 07:51:05.685 22871 22922 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:05.701 22871 22922 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es/Microsoft.EntityFrameworkCore.resources.dll
+10-26 07:51:05.701 22871 22922 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:05.701 22871 22922 W monodroid-assembly: open_from_update_dir: assembly file DOES NOT EXIST
+10-26 07:51:05.701 22871 22922 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es/Microsoft.EntityFrameworkCore.resources.dll
+10-26 07:51:05.701 22871 22922 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:07.055 22871 22922 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es-AR/Microsoft.EntityFrameworkCore.Relational.resources.dll
+10-26 07:51:07.055 22871 22922 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:07.055 22871 22922 W monodroid-assembly: open_from_update_dir: assembly file DOES NOT EXIST
+10-26 07:51:07.055 22871 22922 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es-AR/Microsoft.EntityFrameworkCore.Relational.resources.dll
+10-26 07:51:07.055 22871 22922 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:07.056 22871 22922 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es/Microsoft.EntityFrameworkCore.Relational.resources.dll
+10-26 07:51:07.056 22871 22922 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:07.056 22871 22922 W monodroid-assembly: open_from_update_dir: assembly file DOES NOT EXIST
+10-26 07:51:07.056 22871 22922 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es/Microsoft.EntityFrameworkCore.Relational.resources.dll
+10-26 07:51:07.056 22871 22922 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:07.124 22871 22922 I FC      : t=2970ms db: esquema 1 comprobado
+10-26 07:51:07.339 22871 22922 I FC      : t=3185ms claves: demo-2026 cargada
+10-26 07:51:08.116 22871 22926 I FC      : t=3963ms semilla: contenido 1.0.0+5d5c2b4, 1 definición(es)
+10-26 07:51:08.422 22871 22963 I FC      : t=4268ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-26 07:51:08.835 22871 22871 I FC      : t=4681ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-26 07:51:09.061 22871 22871 D nativeloader: Load /data/app/~~IdpKsjKJ2mfJDXaORvDEgg==/com.google.android.webview-50-wIEYDFbTZFxOxan7j8w==/base.apk!/lib/arm64-v8a/libwebviewchromium.so using class loader ns clns-5 (caller=/data/app/~~IdpKsjKJ2mfJDXaORvDEgg==/com.google.android.webview-50-wIEYDFbTZFxOxan7j8w==/base.apk): ok
+10-26 07:51:09.064 22871 22871 D nativeloader: Load /system/lib64/libwebviewchromium_plat_support.so using class loader ns clns-5 (caller=/data/app/~~IdpKsjKJ2mfJDXaORvDEgg==/com.google.android.webview-50-wIEYDFbTZFxOxan7j8w==/base.apk): ok
+10-26 07:51:09.068 22871 22972 I chromium: [1026/075109.067172:INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+10-26 07:51:09.398 22871 22979 I FC      : t=5244ms servidor: req#1 GET /index.html
+10-26 07:51:09.534 22871 22986 I FC      : t=5380ms servidor: req#3 GET /css/app.css
+10-26 07:51:09.555 22871 22979 I FC      : t=5402ms servidor: req#4 GET /js/puente.js
+10-26 07:51:09.578 22871 22979 I FC      : t=5424ms servidor: req#5 GET /_framework/blazor.webassembly.js
+10-26 07:51:09.664 22871 22979 I FC      : t=5510ms servidor: req#6 GET /_framework/dotnet.js
+10-26 07:51:09.677 22871 22982 I FC      : t=5523ms servidor: req#7 GET /favicon.ico → sin manejar
+10-26 07:51:09.758 22871 22979 I FC      : t=5604ms servidor: req#8 GET /_framework/dotnet.runtime.js
+10-26 07:51:09.758 22871 22982 I FC      : t=5604ms servidor: req#9 GET /_framework/dotnet.native.js
+10-26 07:51:09.767 22871 22983 I FC      : t=5613ms servidor: req#10 GET /_framework/dotnet.native.wasm
+10-26 07:51:09.810 22871 22982 I FC      : t=5656ms servidor: req#11 GET /_framework/System.Private.CoreLib.wasm
+10-26 07:51:09.815 22871 22982 I FC      : t=5662ms servidor: req#12 GET /_framework/System.Runtime.InteropServices.JavaScript.wasm
+10-26 07:51:09.821 22871 22983 I FC      : t=5667ms servidor: req#13 GET /_framework/FrameworkConcept.Content.wasm
+10-26 07:51:09.821 22871 22982 I FC      : t=5667ms servidor: req#15 GET /_framework/Microsoft.Extensions.Configuration.Abstractions.wasm
+10-26 07:51:09.830 22871 22982 I FC      : t=5676ms servidor: req#17 GET /_framework/Microsoft.Extensions.Configuration.Json.wasm
+10-26 07:51:09.831 22871 22989 I FC      : t=5677ms servidor: req#16 GET /_framework/Microsoft.AspNetCore.Components.Web.wasm
+10-26 07:51:09.835 22871 22983 I FC      : t=5681ms servidor: req#19 GET /_framework/Microsoft.Extensions.Configuration.wasm
+10-26 07:51:09.836 22871 22986 I FC      : t=5682ms servidor: req#14 GET /_framework/Microsoft.AspNetCore.Components.WebAssembly.wasm
+10-26 07:51:09.838 22871 22979 I FC      : t=5684ms servidor: req#20 GET /_framework/FrameworkConcept.Core.wasm
+10-26 07:51:09.841 22871 22982 I FC      : t=5687ms servidor: req#21 GET /_framework/Microsoft.Extensions.DependencyInjection.wasm
+10-26 07:51:09.841 22871 22998 I FC      : t=5687ms servidor: req#18 GET /_framework/Microsoft.AspNetCore.Components.wasm
+10-26 07:51:09.844 22871 22986 I FC      : t=5691ms servidor: req#23 GET /_framework/Microsoft.Extensions.Logging.wasm
+10-26 07:51:09.844 22871 22989 I FC      : t=5691ms servidor: req#22 GET /_framework/Microsoft.Extensions.DependencyInjection.Abstractions.wasm
+10-26 07:51:09.845 22871 22983 I FC      : t=5691ms servidor: req#24 GET /_framework/Microsoft.Extensions.Logging.Abstractions.wasm
+10-26 07:51:09.847 22871 22982 I FC      : t=5693ms servidor: req#27 GET /_framework/Microsoft.Extensions.Primitives.wasm
+10-26 07:51:09.850 22871 22979 I FC      : t=5696ms servidor: req#25 GET /_framework/Microsoft.Extensions.Options.wasm
+10-26 07:51:09.851 22871 22998 I FC      : t=5697ms servidor: req#26 GET /_framework/Microsoft.JSInterop.WebAssembly.wasm
+10-26 07:51:09.852 22871 22983 I FC      : t=5699ms servidor: req#28 GET /_framework/System.Collections.Immutable.wasm
+10-26 07:51:09.853 22871 22989 I FC      : t=5699ms servidor: req#31 GET /_framework/System.Collections.wasm
+10-26 07:51:09.853 22871 22982 I FC      : t=5700ms servidor: req#30 GET /_framework/System.Collections.Concurrent.wasm
+10-26 07:51:09.854 22871 22986 I FC      : t=5700ms servidor: req#29 GET /_framework/Microsoft.JSInterop.wasm
+10-26 07:51:09.857 22871 22979 I FC      : t=5703ms servidor: req#32 GET /_framework/System.ComponentModel.wasm
+10-26 07:51:09.860 22871 22983 I FC      : t=5706ms servidor: req#33 GET /_framework/System.Diagnostics.DiagnosticSource.wasm
+10-26 07:51:09.861 22871 22986 I FC      : t=5708ms servidor: req#34 GET /_framework/System.IO.Pipelines.wasm
+10-26 07:51:09.862 22871 22979 I FC      : t=5708ms servidor: req#35 GET /_framework/System.Linq.wasm
+10-26 07:51:09.866 22871 22982 I FC      : t=5712ms servidor: req#38 GET /_framework/System.IO.Compression.ZipFile.wasm
+10-26 07:51:09.867 22871 22998 I FC      : t=5713ms servidor: req#36 GET /_framework/System.Console.wasm
+10-26 07:51:09.867 22871 22979 I FC      : t=5713ms servidor: req#40 GET /_framework/System.Runtime.wasm
+10-26 07:51:09.867 22871 22989 I FC      : t=5714ms servidor: req#37 GET /_framework/System.IO.Compression.wasm
+10-26 07:51:09.867 22871 22983 I FC      : t=5714ms servidor: req#39 GET /_framework/System.Memory.wasm
+10-26 07:51:09.869 22871 22986 I FC      : t=5716ms servidor: req#41 GET /_framework/System.Private.Uri.wasm
+10-26 07:51:09.870 22871 22979 I FC      : t=5717ms servidor: req#42 GET /_framework/System.Text.Json.wasm
+10-26 07:51:09.872 22871 22989 I FC      : t=5718ms servidor: req#46 GET /_framework/System.Text.RegularExpressions.wasm
+10-26 07:51:09.872 22871 22998 I FC      : t=5718ms servidor: req#45 GET /_framework/System.Text.Encodings.Web.wasm
+10-26 07:51:09.873 22871 22982 I FC      : t=5719ms servidor: req#44 GET /_framework/System.Security.Cryptography.wasm
+10-26 07:51:09.873 22871 22983 I FC      : t=5719ms servidor: req#43 GET /_framework/System.Threading.wasm
+10-26 07:51:09.876 22871 22986 I FC      : t=5722ms servidor: req#47 GET /_framework/icudt_no_CJK.dat
+10-26 07:51:10.457 22871 22871 I chromium: [INFO:CONSOLE:4] "MONO_WASM: WebAssembly resource does not have the expected content type "application/wasm", so falling back to slower ArrayBuffer instantiation.", source: https://0.0.0.1/_framework/dotnet.js (4)
+10-26 07:51:12.419 22871 22871 I chromium: [INFO:CONSOLE:83] "FC-MARCA primer-render contenido=1.0.0+5d5c2b4 perf.now=3147ms", source: https://0.0.0.1/js/puente.js (83)
+10-26 07:51:12.531 22871 22924 I FC      : t=8377ms puente Listo(1.0.0+5d5c2b4)
+10-26 07:51:12.531 22871 22924 I FC      : t=8377ms contenido: consulta del arranque en frío (tras Listo)
+10-26 07:51:12.571 22871 23041 I FC      : t=8417ms canal: GET dev/puente-1/indice.json
+10-26 07:51:12.945 22871 23041 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es-AR/System.Private.CoreLib.resources.dll
+10-26 07:51:12.945 22871 23041 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:12.945 22871 23041 W monodroid-assembly: open_from_update_dir: assembly file DOES NOT EXIST
+10-26 07:51:12.945 22871 23041 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es-AR/System.Private.CoreLib.resources.dll
+10-26 07:51:12.945 22871 23041 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:12.946 22871 23041 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es/System.Private.CoreLib.resources.dll
+10-26 07:51:12.946 22871 23041 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:12.946 22871 23041 W monodroid-assembly: open_from_update_dir: assembly file DOES NOT EXIST
+10-26 07:51:12.946 22871 23041 W monodroid-assembly: open_from_bundles: failed to load bundled assembly es/System.Private.CoreLib.resources.dll
+10-26 07:51:12.946 22871 23041 W monodroid-assembly: open_from_bundles: the assembly might have been uploaded to the device with FastDev instead
+10-26 07:51:13.003 22871 23041 I FC      : t=8849ms consulta (ArranqueEnFrio): SinRed Ninguno — dev/puente-1/indice.json: HTTP 530
+10-26 07:51:29.306 22871 23029 E cr_AutofillHintsService: 	at org.chromium.components.autofill_public.ViewType.writeToParcel(chromium-SystemWebViewGoogle6432.aab-stable-805904303:3)
+10-26 07:51:29.306 22871 23029 E cr_AutofillHintsService: 	at WV.oy0.j(chromium-SystemWebViewGoogle6432.aab-stable-805904303:44)
+10-26 07:51:29.306 22871 23029 E cr_AutofillHintsService: 	at WV.uc.onTransact(chromium-SystemWebViewGoogle6432.aab-stable-805904303:61)
+10-26 07:51:33.983 22871 22883 E cr_AutofillHintsService: 	at org.chromium.components.autofill_public.ViewType.writeToParcel(chromium-SystemWebViewGoogle6432.aab-stable-805904303:3)
+10-26 07:51:33.983 22871 22883 E cr_AutofillHintsService: 	at WV.oy0.j(chromium-SystemWebViewGoogle6432.aab-stable-805904303:44)
+10-26 07:51:33.983 22871 22883 E cr_AutofillHintsService: 	at WV.uc.onTransact(chromium-SystemWebViewGoogle6432.aab-stable-805904303:61)
+10-26 07:51:38.119 22871 22883 E cr_AutofillHintsService: 	at org.chromium.components.autofill_public.ViewType.writeToParcel(chromium-SystemWebViewGoogle6432.aab-stable-805904303:3)
+10-26 07:51:38.119 22871 22883 E cr_AutofillHintsService: 	at WV.oy0.j(chromium-SystemWebViewGoogle6432.aab-stable-805904303:44)
+10-26 07:51:38.119 22871 22883 E cr_AutofillHintsService: 	at WV.uc.onTransact(chromium-SystemWebViewGoogle6432.aab-stable-805904303:61)
+10-26 07:51:58.407 22871 22979 I FC      : t=54253ms outbox: encolada 2d7f508dc7be466ebc47a3df77ebfa0e (encuesta-movilidad v1)
+10-26 07:51:58.717 22871 22922 I FC      : t=54564ms outbox: 2d7f508dc7be466ebc47a3df77ebfa0e intento 1 → Pendiente (HTTP 530 error code: 1033
+10-26 07:51:58.717 22871 22922 I FC      : )
+10-26 07:52:29.467 22871 22922 I FC      : t=85313ms outbox: 2d7f508dc7be466ebc47a3df77ebfa0e intento 2 → Pendiente (HTTP 530 error code: 1033
+10-26 07:52:29.467 22871 22922 I FC      : )

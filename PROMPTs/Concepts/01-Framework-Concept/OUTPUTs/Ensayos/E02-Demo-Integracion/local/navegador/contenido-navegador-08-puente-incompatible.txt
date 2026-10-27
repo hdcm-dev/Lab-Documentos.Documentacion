@@ -1,0 +1,3 @@
+El cascarón informa puente 2.0.0; el contenido (compatible >=1.0.0 <2.0.0) no muestra pantallas.
+Chromium headless (playwright-core 1.62.1), puente SIMULADO (Testing/puente-simulado.js), 2026-10-26T11:01:57.657Z; NO es el cascarón ni el teléfono.
+Comprobado: mensaje de incompatibilidad y bridge.ready NO llamado, para que el próximo arranque vuelva a previous.
