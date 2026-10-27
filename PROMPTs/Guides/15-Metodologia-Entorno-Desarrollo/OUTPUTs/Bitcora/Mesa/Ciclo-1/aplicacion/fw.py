@@ -2,7 +2,7 @@
 """Aplicador de parches de la mesa (ciclo 1) sobre la guía. Corre siempre desde la copia original."""
 import re, sys, os, json
 SP = "<scratchpad>"
-GUIA = "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md"
+GUIA = "<workspace>/LAB/Lab-Documentos/Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md"
 S = open(SP + "/bk/guide-orig.md", encoding="utf-8").read()
 LOG = []          # (pid, op, ok, detalle)
 SNAP = {}         # pid -> texto antes del parche (para revertir)

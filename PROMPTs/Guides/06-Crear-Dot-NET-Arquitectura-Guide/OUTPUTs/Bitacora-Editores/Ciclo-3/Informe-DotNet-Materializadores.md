@@ -170,7 +170,7 @@ Es el hallazgo con más filo pedagógico (NET3-03) y el único que un lector no 
 
 ## 5. Fuentes y comandos
 
-**Guía revisada.** `/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md`, v2.2.0, `last_review: 2026-09-20`. Secciones leídas: §3.1, §3.3, §3.4, §5.1, §5.4, §5.5, §6.1, §6.3, §7.2, §7.4, Anexo C, Anexo D.
+**Guía revisada.** `<workspace>/LAB/Lab-Documentos/Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md`, v2.2.0, `last_review: 2026-09-20`. Secciones leídas: §3.1, §3.3, §3.4, §5.1, §5.4, §5.5, §6.1, §6.3, §7.2, §7.4, Anexo C, Anexo D.
 
 **Evidencia reutilizada (no se volvió a medir).** `Examples/Dot-NET-Arquitectura-Lab/Variantes/capturas/V05-ciclo-efcore.txt` y `V07-sin-ctor-privado.txt`, misma imagen y mismo SDK que esta corrida.
 

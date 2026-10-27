@@ -119,7 +119,7 @@ BEFORE_SECTION_END("### 5.8 Plantilla", """### 5.9 Práctica
 2. Con la tabla de §5.2.3, escribí la política de un repo con `.sh`, `appsettings.json`, `.razor` y `.cs` heredados ya convertidos con BOM. Compará con A.1, variante B. *Respuesta esperada*: `[*]` sin BOM y LF; `.razor` y `.cs` con `utf-8-bom`; `.sh` sin BOM y LF también en `.gitattributes`.""")
 
 # --- Verificación fáctica del ítem 3 de P-08 contra su propia evidencia (E2-8) ---
-E28 = "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Metodologia-Entorno-Desarrollo/Examples/N2-politica-de-texto-y-remediacion/salidas/e8-repos-de-referencia.txt"
+E28 = "<workspace>/LAB/Lab-Documentos/Guides/Metodologia-Entorno-Desarrollo/Examples/N2-politica-de-texto-y-remediacion/salidas/e8-repos-de-referencia.txt"
 eol_pat = set()
 for l in open(E28, encoding="utf-8"):
     if "eol=" in l and not l.startswith("*"):
