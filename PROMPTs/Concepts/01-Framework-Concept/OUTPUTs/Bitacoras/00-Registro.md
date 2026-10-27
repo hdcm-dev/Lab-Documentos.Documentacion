@@ -38,6 +38,7 @@
 | 23 | 2026-10-26 13:15 | PO pidió autenticación con la seguridad del SO y manejo de red completo (folio 038). Workflow de incremento lanzado (`w6ad39ffl`): diseño fino → red ∥ autenticación → integración en hpdev → revisión → corrección | `Demo/DISENO-RED-Y-AUTENTICACION.md`, `../Ensayos/E03-…` | Guía (A4) |
 | 24 | 2026-10-26 | Incremento cerrado: recorrido de red y autenticación en hpdev; revisiones 1 P0 + varios P1, todos corregidos (ci-local 211/102/52). H-1: la mesa mantuvo P4 (huella, rostro, PIN o patrón) como apartamiento del borrador §4, avisado al PO. Abiertos: carrera dueño/token sin ensayo, g42 sin usar. Guía A4 lanzada (`wi5p8r8tb`) | `../Ensayos/E03-Red-Y-Autenticacion/correcciones.md` | Entrega (A5) |
 | 25 | 2026-10-27 | Cierre. El PO aprobó la redacción y el cierre (folio 039; PR #13 y #15 fusionados). Las pruebas móviles se hicieron en el emulador de hpdev: TPR no obtenido, porque `primer-render` no llegó en 5 arranques en frío. El g42 seguía reservado por ESCENARIOS y no se tocó. Limpieza: volumen `fc-nuget` y la parte propia de `fc-work` borrados; se conservan `fc-android-emu` y lo ajeno. Expediente ARCHIVADO | `../Expedientes/0001-…/actuaciones/040-…`, `../Ensayos/E03-…/P1-TPR-EN-EMULADOR.md` | — |
+| 26 | 2026-10-27 10:43 | ESCENARIOS liberó el candado del g42: se desinstalaron `com.frameworkconcept.{demo,ensayo01,seguridad01}` (Success); no se midió en el g42. Pendiente del folio 040 cerrado | `../Expedientes/0001-…/actuaciones/041-…` | — |
 
 ## Rutas de trabajo
 
