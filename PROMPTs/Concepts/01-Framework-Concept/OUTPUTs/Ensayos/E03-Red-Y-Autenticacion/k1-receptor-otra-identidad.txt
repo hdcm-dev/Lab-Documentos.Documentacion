@@ -1,0 +1,43 @@
+# k1 — Receptor: otra identidad no lee ni pisa una respuesta ajena (corrector E03, brecha P1-5). 2026-10-27T00:16:41Z
+# Keycloak se reimportó al levantar: los «sub» cambiaron, así que A crea primero una respuesta nueva.
+--- A crea corrector-0b17ece11d53
+201
+--- GET /respuestas sin token
+401
+--- GET /respuestas con token de B: aceptadas, carta muerta
+0 0
+--- GET /respuestas con token de A: claves
+['corrector-0b17ece11d53']
+--- GET /respuestas/corrector-0b17ece11d53 con token de B
+404
+--- GET /respuestas/corrector-0b17ece11d53 con token de A
+HTTP/2 200 
+etag: "1"
+--- POST de B con If-Match: * (el escenario de la brecha)
+{
+  "status": 403,
+  "detalle": "la respuesta con esa clave es de otra identidad"
+} 403
+--- POST de B con If-Match: "1" (la versión correcta)
+{
+  "status": 403,
+  "detalle": "la respuesta con esa clave es de otra identidad"
+} 403
+--- POST de A con If-Match: * (ya no se acepta)
+{
+  "status": 412,
+  "detalle": "If-Match no coincide: la versión actual es 1",
+  "versionActual": 1
+} 412
+--- respuesta de A tras los intentos
+version 1 dueno 56fcf059-06f7-4200-83e7-1c7de9bc8ff7 usuario encuestador intacta
+--- POST de A con If-Match: "1" (su dueño, versión correcta)
+200
+version 2 dueno 56fcf059-06f7-4200-83e7-1c7de9bc8ff7 usuario encuestador
+--- log del receptor
+      Request finished HTTP/2 POST https://localhost:8099/respuestas - 403 - application/json;+charset=utf-8 1.6851ms
+      respuestas: corrector-0b17ece11d53 encuesta-movilidad v1 → 403 dueño supervisora (cd5fa090-0455-4685-9377-6d2ef632b623)
+      Setting HTTP status code 403.
+      Request finished HTTP/2 POST https://localhost:8099/respuestas - 403 - application/json;+charset=utf-8 2.7127ms
+      respuestas: corrector-0b17ece11d53 encuesta-movilidad v1 → 412 dueño encuestador (56fcf059-06f7-4200-83e7-1c7de9bc8ff7)
+      respuestas: corrector-0b17ece11d53 encuesta-movilidad v1 → 200 dueño encuestador (56fcf059-06f7-4200-83e7-1c7de9bc8ff7)

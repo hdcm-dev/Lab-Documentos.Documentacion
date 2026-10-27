@@ -1,0 +1,3 @@
+El contenido abierto en un navegador común, sin window.HybridWebView.
+Chromium headless (playwright-core 1.62.1), puente SIMULADO (Testing/puente-simulado.js), 2026-10-26T11:01:59.871Z; NO es el cascarón ni el teléfono.
+Comprobado: estado «sin puente» en lugar de pantallas que no podrían guardar.

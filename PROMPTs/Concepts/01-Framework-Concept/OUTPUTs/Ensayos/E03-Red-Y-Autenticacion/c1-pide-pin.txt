@@ -1,0 +1,3 @@
+Paso c (1/2): reabierta la app (force-stop + am start), en el diálogo del sistema se toca «Use PIN»: Android muestra el campo de PIN del bloqueo de pantalla. La captura sale negra: ventana segura.
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T20:28:44-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado: mCurrentFocus=BiometricPrompt en modo credencial; uiautomator con systemui:id/auth_credential_input y lockPassword, título «Desbloquear», subtítulo «Usá la seguridad del teléfono para entrar.» (fc-work/demo/e03/integ/logcat/c1-pin-ui.xml).

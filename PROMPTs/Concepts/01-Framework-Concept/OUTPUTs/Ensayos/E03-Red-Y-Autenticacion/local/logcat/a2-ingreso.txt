@@ -1,0 +1,15 @@
+10-26 22:27:41.780 D/AndroidRuntime(26422): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:27:41.785 I/AndroidRuntime(26422): Using default boot image
+10-26 22:27:41.785 I/AndroidRuntime(26422): Leaving lock profiling enabled
+10-26 22:27:41.910 D/AndroidRuntime(26422): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:27:43.034 D/AndroidRuntime(26422): Shutting down VM
+10-26 22:27:46.245 I/FC      (26291): t=45148ms sesión: SinCuenta --IngresoIniciado--> Ingresando
+10-26 22:27:46.251 I/FC      (26291): t=45154ms acciones: localidades.guardar=no, encuesta.enviar=no, outbox.enviarAhora=no, sesion.ingresar=no
+10-26 22:27:47.310 I/FC      (26291): t=46213ms sesión: abriendo el navegador del sistema
+10-26 22:28:08.734 I/FC      (26291): t=67637ms red: salud ok (HTTP 200)
+10-26 22:28:38.008 I/FC      (26291): t=96912ms app: reanudada
+10-26 22:28:38.078 I/FC      (26291): t=96982ms consulta (Reanudacion): Omitida Ninguno — reanudación antes de 15 minutos
+10-26 22:28:38.234 I/FC      (26291): t=97137ms red: salud ok (HTTP 200)
+10-26 22:28:38.420 I/FC      (26291): t=97324ms sesión: ingresó encuestador (oidc:0b278ed9-d37e-45a5-a8f8-4504d440b1ab)
+10-26 22:28:38.420 I/FC      (26291): t=97324ms sesión: Ingresando --IngresoExitoso--> Activa
+10-26 22:28:38.421 I/FC      (26291): t=97325ms acciones: localidades.guardar=sí, encuesta.enviar=sí, outbox.enviarAhora=sí, sesion.ingresar=no

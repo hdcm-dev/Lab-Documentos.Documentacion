@@ -1,0 +1,39 @@
+{
+  "aceptadas": [
+    {
+      "clave": "f3702b58ed19425a8ac838384d7088da",
+      "version": 1,
+      "estado": "aceptada",
+      "recibidaEn": "2026-10-26T23:33:22.3504865+00:00",
+      "reenvios": 0,
+      "envio": {
+        "claveIdempotencia": "f3702b58ed19425a8ac838384d7088da",
+        "encuestaId": "encuesta-movilidad",
+        "versionDefinicion": 1,
+        "versionContenido": "1.0.0+5d5c2b4",
+        "registradaEn": "2026-10-26T23:31:24.678+00:00",
+        "valores": {
+          "nombre": "Ana Prueba",
+          "edad": 34,
+          "localidad": "Corrientes",
+          "medios": [
+            "colectivo",
+            "bicicleta"
+          ],
+          "frecuencia": "diaria",
+          "distancia": 12,
+          "minutos": 40,
+          "motivo": "trabajo"
+        },
+        "definicion": {
+          "encuestaId": "encuesta-movilidad",
+          "versionDefinicion": 1
+        }
+      },
+      "dueno": "0b278ed9-d37e-45a5-a8f8-4504d440b1ab",
+      "usuario": "encuestador"
+    }
+  ],
+  "cartaMuerta": [],
+  "reenviosQueNoSeDuplicaron": 0
+}

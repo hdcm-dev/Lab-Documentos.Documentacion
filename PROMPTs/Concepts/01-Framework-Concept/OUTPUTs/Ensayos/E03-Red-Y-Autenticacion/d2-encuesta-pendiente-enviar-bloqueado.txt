@@ -1,0 +1,3 @@
+Paso d (2/3): sin red se registra una encuesta completa (Encolable): queda guardada con su clave de envío, «Por enviar: 1», y «Enviar ahora» (SoloEnLinea) deshabilitado con el motivo «Sin conexión» a la vista.
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T20:31:43-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado: logcat 23:31:25.130Z «outbox: encolada f3702b58ed19425a8ac838384d7088da (encuesta-movilidad v1)»; «acciones: encuesta.enviar=pendiente, outbox.enviarAhora=no»; un toque sobre «Enviar ahora» no genera ninguna línea FC (el botón está deshabilitado; no llega al puente).

@@ -1,0 +1,3 @@
+captura: local/j3-cierre-sin-red-sso-vivo.png (2026-10-27T00:29:38Z)
+corrector E03; emulador fc-android-emu-hpdev; APK x64 corregido
+Cierre de sesión SIN red (modo avión): no hubo revocación; al volver la red la sesión SSO de encuestador sigue viva en fc-keycloak (local/logcat/j3-sesiones-sso-tras-cierre-sin-red.txt). Es el escenario de H-2.

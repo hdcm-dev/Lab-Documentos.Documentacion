@@ -1,0 +1,3 @@
+captura: local/i2-frio-motivo-visible.png (2026-10-27T00:51:12Z)
+corrector E03; emulador fc-android-emu-hpdev; APK x64 corregido
+APK con el motivo visible en SinCuenta: arranque en frío con identidad guardada y sin desbloqueo → «Tu sesión venció: ingresá con tu cuenta. Lo pendiente se conserva y sale con ella.» (brecha P1-6).

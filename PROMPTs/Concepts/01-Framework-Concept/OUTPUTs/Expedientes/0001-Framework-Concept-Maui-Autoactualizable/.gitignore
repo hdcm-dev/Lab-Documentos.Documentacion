@@ -1,0 +1,8 @@
+# Evidencia del caso: el texto se versiona; las capturas y los volcados crudos quedan locales.
+# Sin almacén de evidencia, lo que se retoma en un caso posterior es el expediente procesado.
+evidencia/local/
+**/evidencia*/**/*.png
+**/evidencia*/**/*.jpg
+**/evidencia*/**/*.ndjson
+**/evidencia*/**/*.mp4
+**/evidencia*/**/*.apk

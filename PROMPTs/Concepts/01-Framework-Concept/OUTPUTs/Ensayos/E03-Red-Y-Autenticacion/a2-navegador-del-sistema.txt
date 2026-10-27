@@ -1,0 +1,3 @@
+Paso a (2/4): «Ingresar con tu cuenta» abre Chrome Custom Tab (navegador del sistema) con el formulario de fc-keycloak, realm fc-demo; candado de TLS válido (CA de demostración como CA de usuario).
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T19:28:09-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado: dumpsys window mCurrentFocus = com.android.chrome/...customtabs.CustomTabActivity; el formulario aparece porque las sesiones SSO de encuestador y supervisora se cerraron antes por la API de administración (HTTP 204).

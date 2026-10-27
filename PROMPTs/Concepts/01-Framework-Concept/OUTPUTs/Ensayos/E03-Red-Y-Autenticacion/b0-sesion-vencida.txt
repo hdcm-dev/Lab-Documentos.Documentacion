@@ -1,0 +1,3 @@
+Observado antes del paso b: la app se reabre 52 min después del ingreso (22:30Z→23:22Z) y la sesión está «Vencida»: no pide desbloqueo y muestra la banda «Tu sesión venció: ingresá para enviar lo pendiente» con «Ingresar de nuevo»; se sigue trabajando local.
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T20:24:41-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado: logcat «sesión: al arrancar Vencida» (t=14383ms); el realm fc-demo tiene ssoSessionIdleTimeout 1800 s (infra/keycloak/realm-fc-demo.json), así que el refresh venció a los 30 min sin uso. Comportamiento esperado (DISENO §3, P4: vencer no borra).

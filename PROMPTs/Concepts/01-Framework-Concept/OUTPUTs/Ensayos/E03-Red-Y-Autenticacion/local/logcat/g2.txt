@@ -1,0 +1,4 @@
+10-26 23:40:07.267 I/FC      (28826): t=740687ms sesión: cerrada por la persona (oidc:0b278ed9-d37e-45a5-a8f8-4504d440b1ab); pendientes conservados 1
+10-26 23:40:07.268 I/FC      (28826): t=740687ms sesión: Activa --Cierre--> SinCuenta
+10-26 23:40:07.268 I/FC      (28826): t=740688ms acciones: localidades.guardar=no, encuesta.enviar=no, outbox.enviarAhora=no, sesion.ingresar=no
+10-26 23:40:07.283 I/FC      (28826): t=740703ms sesión: pantalla propia IngresoPage

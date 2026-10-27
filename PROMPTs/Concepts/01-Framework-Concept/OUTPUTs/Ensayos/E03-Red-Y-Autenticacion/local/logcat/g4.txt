@@ -1,0 +1,16 @@
+10-26 23:41:16.210 I/FC      (28826): t=809629ms sesión: SinCuenta --IngresoIniciado--> Ingresando
+10-26 23:41:16.211 I/FC      (28826): t=809630ms acciones: localidades.guardar=no, encuesta.enviar=no, outbox.enviarAhora=no, sesion.ingresar=no
+10-26 23:41:16.224 I/FC      (28826): t=809643ms sesión: abriendo el navegador del sistema
+10-26 23:41:21.793 I/FC      (28826): t=815213ms app: reanudada
+10-26 23:41:21.855 I/FC      (28826): t=815275ms consulta (Reanudacion): Omitida Ninguno — reanudación antes de 15 minutos
+10-26 23:41:22.199 I/FC      (28826): t=815618ms red: salud ok (HTTP 200)
+10-26 23:41:28.389 I/FC      (28826): t=821809ms sesión: ingresó encuestador (oidc:0b278ed9-d37e-45a5-a8f8-4504d440b1ab)
+10-26 23:41:28.390 I/FC      (28826): t=821810ms sesión: Ingresando --IngresoExitoso--> Activa
+10-26 23:41:28.391 I/FC      (28826): t=821811ms acciones: localidades.guardar=sí, encuesta.enviar=sí, outbox.enviarAhora=sí, sesion.ingresar=no
+10-26 23:41:29.053 I/FC      (28826): t=822473ms outbox: bcb21b59d8d2493097a81f369fe7e725 intento 1 → Enviada (HTTP 201 {
+10-26 23:41:29.053 I/FC      (28826):   "clave": "bcb21b59d8d2493097a81f369fe7e725",
+10-26 23:41:29.053 I/FC      (28826):   "estado": "aceptada",
+10-26 23:41:29.053 I/FC      (28826):   "dueno": "0b278ed9-d37e-45a5-a8f8-4504d440b1ab",
+10-26 23:41:29.053 I/FC      (28826):   "version": 1,
+10-26 23:41:29.053 I/FC      (28826):   "duplicada": false
+10-26 23:41:29.053 I/FC      (28826): })
