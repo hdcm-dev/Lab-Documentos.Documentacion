@@ -1,0 +1,39 @@
+# Control mínimo de los PR de documentación: da a la guarda de merge (Conformacion-Pull-Request-Automatico §3.3, G3)
+# una corrida que leer. Revisa lo que el PR agrega: sin claves privadas ni artefactos binarios pesados.
+name: Verificar
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Sin claves privadas ni binarios pesados en lo que agrega el PR
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          set -u
+          if [ -n "$BASE_SHA" ]; then RANGO="$BASE_SHA...$HEAD_SHA"; else RANGO="HEAD~1...HEAD"; fi
+          FALLA=0
+          if git diff "$RANGO" | grep -E '^\+' | grep -qE 'BEGIN ([A-Z]+ )?PRIVATE KEY'; then
+            echo "::error::El PR agrega una clave privada."; FALLA=1
+          fi
+          while IFS= read -r f; do
+            [ -f "$f" ] || continue
+            case "$f" in *.apk|*.aab|*.keystore|*.jks|*.p12) echo "::error::Artefacto no versionable: $f"; FALLA=1;; esac
+            t=$(stat -c %s "$f")
+            if [ "$t" -gt 5242880 ]; then echo "::error::Archivo de más de 5 MiB: $f ($t bytes)"; FALLA=1; fi
+          done < <(git diff --name-only --diff-filter=AM "$RANGO")
+          [ "$FALLA" -eq 0 ] && echo "Verificar: en orden."
+          exit "$FALLA"
