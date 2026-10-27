@@ -8,6 +8,21 @@ documental que se lee entero, no un artefacto que alguien instala en una versió
 versionado semántico que la guía enseña aplica al software que ese procedimiento libera, no a la
 guía misma.
 
+## [No publicado] - 2026-10-27
+
+### Añadido
+
+- **`.github/workflows/verificar.yml`** — job `docs-guard` que llama al workflow reutilizable de `hdcm-dev/Lab-Documentos` fijado por SHA (`f603984`), sobre `.github/`; el job `verificar` pasa al runner propio `[self-hosted, i7infra-dev]` con su action fijada por SHA y guarda contra forks. Documentado en `.github/README.md`. Expediente 0002 (DocAsCode), unidad E1-U0b.
+
+### Delegación del merge (Conformacion-Pull-Request-Automatico 2.0, expediente 0002)
+
+- **Fecha:** 2026-10-27. **Responsable:** el responsable del producto (PO). **Asiento:** folio 130 §2 del expediente 0002 de DocAsCode (respuesta L2).
+- **Testimonio del PO (L2, literal):** «esto surgió porque despues de un avance surgia preguntas y confirmaciones tontas … Mi objetivo es que se enriquesca de tal forma el conocimiento analitico que los subagentes con este conocimiento puedan orquestar de forma automatica todo el proceso de desarrollo».
+- **Alcance:** los PR del expediente 0002 en `hdcm-dev/Lab-Documentos.Documentacion`, **incluido el primer merge del repositorio** (pedido explícito del PO).
+- **Guarda:** G1–G4; techo de espera 120 minutos (runner único y compartido); intervalo de relectura 30 segundos; estado `clean` y controles de la cabeza en éxito (al menos uno).
+- **Método:** commit de merge atado al SHA de la cabeza, nunca `squash`; la rama remota se borra tras leer que el merge dio.
+- **Excepción:** un cuestionamiento particular del PO sobre la unidad la vuelve manual; lo irreversible con consecuencia externa sale al PO.
+
 ## [No publicado] - 2026-10-26
 
 ### Añadido
