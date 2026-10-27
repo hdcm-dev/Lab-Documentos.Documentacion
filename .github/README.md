@@ -59,3 +59,5 @@ bash ../Lab-Documentos/scripts/ci-local.sh todo .github
 
 El SHA aparece dos veces en `verificar.yml` (en `uses:` y en `herramientas-ref`) y deben coincidir: así el workflow
 y sus scripts son del mismo commit.
+
+Ver también [el anexo](anexo-inexistente.md).
