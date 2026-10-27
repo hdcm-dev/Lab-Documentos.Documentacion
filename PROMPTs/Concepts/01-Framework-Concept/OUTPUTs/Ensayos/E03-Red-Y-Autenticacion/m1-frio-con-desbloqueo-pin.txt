@@ -1,0 +1,3 @@
+captura: local/m1-frio-con-desbloqueo-pin.png (2026-10-27T00:44:44Z)
+corrector E03; emulador fc-android-emu-hpdev; APK x64 corregido
+Arranque en frío con desbloqueo activado: 'al arrancar Bloqueada', diálogo del sistema, PIN 1234 → Activa. La prueba local abre la entrada (P4); sin ella no se abre (i1).

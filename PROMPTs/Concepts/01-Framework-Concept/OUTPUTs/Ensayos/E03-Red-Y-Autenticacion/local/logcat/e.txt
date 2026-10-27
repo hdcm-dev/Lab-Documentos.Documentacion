@@ -1,0 +1,6 @@
+10-26 23:32:05.496 I/FC      (28826): t=258915ms red: sistema con internet, perfiles [WiFi]
+10-26 23:32:05.496 I/FC      (28826): t=258916ms red: RedSinServidor (señal SistemaConRed; sistema con internet)
+10-26 23:32:05.496 I/FC      (28826): t=258916ms acciones: localidades.guardar=sí, encuesta.enviar=pendiente, outbox.enviarAhora=no, sesion.ingresar=no
+10-26 23:32:05.617 I/FC      (28826): t=259037ms red: salud falla (HttpRequestException: Connection failure)
+10-26 23:32:20.741 I/FC      (28826): t=274161ms red: salud falla (HttpRequestException: Connection failure)
+10-26 23:32:40.873 I/FC      (28826): t=294292ms red: salud falla (HttpRequestException: Connection failure)

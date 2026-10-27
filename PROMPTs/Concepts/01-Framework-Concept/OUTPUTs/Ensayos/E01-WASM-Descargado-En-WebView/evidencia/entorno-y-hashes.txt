@@ -1,0 +1,33 @@
+## imagen
+sha256:9cd6103e09436893aa1172db267069076edcc26eb53d973ad7b7a8ee67091797 2026-09-13T02:29:05.355242345-03:00
+10.0.400
+maui-android                           10.0.20/10.0.100            SDK 10.0.400            
+"Microsoft.Maui.Controls/10.0.20"
+"Microsoft.AspNetCore.Components.WebAssembly/10.0.11"
+## emulador
+Pkg.Revision=32.1.15
+11
+30
+x86_64
+## sha256 y tamaños
+3a7d2e351b585d1ddb013655d170039a4f1412a536de4689b284c08b0baf6628 18607649 src/Cascaron/bin/Release/net10.0-android/android-x64/com.frameworkconcept.ensayo01-Signed.apk
+eb6250e06de4585b76edab2c7858cc4c64cc2a47a278d262369993848b264f9c 18492132 src/Cascaron/bin/Release/net10.0-android/android-arm64/com.frameworkconcept.ensayo01-Signed.apk
+b7828d721900ad3a689cfff5e6b22a89f4b52f934290c3cc4bd982939cfa4416 3394811 evidencia/local/servidor/contenido-v1.zip
+b7fb650c6b9fd81901c01a71daa59acb76609386c5959ed8c9bf01fdbee253a3 3394807 evidencia/local/servidor/contenido-v2.zip
+c11aed22525b336a33b2d366dd5cff67dd90c86c791b76aa83ef367b0c2d367c 23549 evidencia/local/captura-emu-1-v1-limpio.png
+fba43ec72ce50591c9d7508aee238002c740603621f36db0ec2b525ad24a734c 23570 evidencia/local/captura-emu-2-v1-relanzar.png
+9f9bd4b23ffad525730bbfaeb7508eb6f0227dc8bac1bbb81b4adf1ad51182cf 24072 evidencia/local/captura-emu-3-v2-publicada.png
+5dd7eb22c19fefd5a137fcc596944f41c8f889a316c6c2cff56fd626322acd55 124040 evidencia/local/captura-g42-1-v1-limpio.png
+ebfdc9fb5eedfee444515101b86f878f85929408424ae6c2c6565c72853f7425 117812 evidencia/local/captura-g42-2-v1-relanzar.png
+8c784a3d89e949c6568a16dfc4217f3b8f7dc58a2775c5ced7b5f8505835d648 121345 evidencia/local/captura-g42-3-v2-publicada.png
+9a407790167b67d9fc0b95e72a9a4ddd8ba1f650059b3ff64ef093e0966f78f3 173845 evidencia/local/captura-g42-4-sha-adulterado.png
+wwwroot total (con .br/.gz): 15375370
+solo .br: 2735736 bytes en 45 archivos
+sin comprimir (paquete): 9125729
+## 5 mayores del paquete
+3002094 _framework/dotnet.native.nxw7lo0lh5.wasm
+1601813 _framework/System.Private.CoreLib.msz5vt1qee.wasm
+1107168 _framework/icudt_no_CJK.lfu7j35m59.dat
+956416 _framework/icudt_CJK.tjcz0u77k5.dat
+550832 _framework/icudt_EFIGS.tptq2av103.dat
+371477 _framework/System.Text.Json.zs847lmboq.wasm

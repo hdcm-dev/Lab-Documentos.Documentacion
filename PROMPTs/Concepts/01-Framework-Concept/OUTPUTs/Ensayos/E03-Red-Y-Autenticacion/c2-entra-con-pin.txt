@@ -1,0 +1,3 @@
+Paso c (2/2): con el PIN 1234 en el diálogo del sistema la app entra como «encuestador» en Activa, sin pedir cuenta; aviso «En línea».
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T20:29:05-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado: logcat «desbloqueada con la seguridad del teléfono» 23:28:52.695Z → «Bloqueada --DesbloqueoExitoso--> Activa» → «access renovado (vence 23:33:54Z)»; del PIN a la app con foco: 6,7 s medidos desde el host. La misma clave del Keystore se abre con huella (b) y con PIN (c): setUserAuthenticationParameters con BIOMETRIC_STRONG|DEVICE_CREDENTIAL.

@@ -1,0 +1,71 @@
+10-26 11:36:55.792  9927  9927 D DOTNET  : AndroidCryptoNative_InitLibraryOnLoad: jint AndroidCryptoNative_InitLibraryOnLoad(JavaVM *, void *) in /__w/1/s/src/runtime/src/native/libs/System.Security.Cryptography.Native.Android/pal_jni.c
+10-26 11:36:55.793  9927  9927 D DOTNET  : GetOptionalClassGRef: optional class com/android/org/conscrypt/OpenSSLEngineImpl was not found
+10-26 11:36:56.343  9927  9927 I FC      : t=1038ms arranque: pantalla visible
+10-26 11:36:57.331  9927  9948 I FC      : t=2032ms db: esquema 1 comprobado
+10-26 11:36:57.721  9927  9948 I FC      : t=2423ms claves: demo-2026 cargada
+10-26 11:37:05.026  9927  9962 I FC      : t=9728ms semilla: contenido 1.0.0+5d5c2b4, 1 definición(es)
+10-26 11:37:09.595  9927  9964 I FC      : t=14296ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-26 11:37:13.396  9927  9927 I FC      : t=18098ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-26 11:37:15.613  9927  9948 I FC      : t=20315ms outbox: 06ddabf6179645cd931977e125231880 intento 2 → Enviada (HTTP 201 {
+10-26 11:37:15.613  9927  9948 I FC      :   "clave": "06ddabf6179645cd931977e125231880",
+10-26 11:37:15.613  9927  9948 I FC      :   "estado": "aceptada",
+10-26 11:37:15.613  9927  9948 I FC      :   "version": 1,
+10-26 11:37:15.613  9927  9948 I FC      :   "duplicada": false
+10-26 11:37:15.613  9927  9948 I FC      : })
+10-26 11:37:18.012  9927  9970 E chromium: [1026/113718.011865:ERROR:android_webview/browser/variations/variations_seed_loader.cc:36] Seed missing signature.
+10-26 11:37:18.013  9927  9970 I chromium: [1026/113718.013361:INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+10-26 11:37:21.626  9927  9991 I FC      : t=26327ms servidor: req#1 GET /index.html
+10-26 11:37:22.148  9927  9994 I FC      : t=26849ms servidor: req#2 GET /css/app.css
+10-26 11:37:22.206  9927  9990 I FC      : t=26907ms servidor: req#4 GET /js/puente.js
+10-26 11:37:22.224  9927  9990 I FC      : t=26926ms servidor: req#5 GET /_framework/blazor.webassembly.js
+10-26 11:37:22.330  9927  9989 I FC      : t=27032ms servidor: req#6 GET /_framework/dotnet.js
+10-26 11:37:22.337  9927  9991 I FC      : t=27038ms servidor: req#7 GET /favicon.ico → sin manejar
+10-26 11:37:22.410  9927  9989 I FC      : t=27111ms servidor: req#8 GET /_framework/dotnet.runtime.js
+10-26 11:37:22.419  9927  9994 I FC      : t=27121ms servidor: req#9 GET /_framework/dotnet.native.wasm
+10-26 11:37:22.427  9927  9991 I FC      : t=27128ms servidor: req#10 GET /_framework/dotnet.native.js
+10-26 11:37:22.500  9927  9989 I FC      : t=27202ms servidor: req#11 GET /_framework/System.Private.CoreLib.wasm
+10-26 11:37:22.502  9927  9996 I FC      : t=27203ms servidor: req#13 GET /_framework/FrameworkConcept.Content.wasm
+10-26 11:37:22.507  9927  9995 I FC      : t=27205ms servidor: req#14 GET /_framework/FrameworkConcept.Core.wasm
+10-26 11:37:22.509  9927  9989 I FC      : t=27211ms servidor: req#17 GET /_framework/Microsoft.AspNetCore.Components.WebAssembly.wasm
+10-26 11:37:22.513  9927  9990 I FC      : t=27206ms servidor: req#15 GET /_framework/Microsoft.AspNetCore.Components.Web.wasm
+10-26 11:37:22.514  9927  9994 I FC      : t=27207ms servidor: req#12 GET /_framework/System.Runtime.InteropServices.JavaScript.wasm
+10-26 11:37:22.515  9927  9989 I FC      : t=27217ms servidor: req#20 GET /_framework/Microsoft.Extensions.Configuration.wasm
+10-26 11:37:22.518  9927  9990 I FC      : t=27218ms servidor: req#21 GET /_framework/Microsoft.Extensions.DependencyInjection.Abstractions.wasm
+10-26 11:37:22.520  9927  9990 I FC      : t=27221ms servidor: req#23 GET /_framework/Microsoft.Extensions.Logging.Abstractions.wasm
+10-26 11:37:22.520  9927  9991 I FC      : t=27219ms servidor: req#16 GET /_framework/Microsoft.AspNetCore.Components.wasm
+10-26 11:37:22.520  9927  9994 I FC      : t=27220ms servidor: req#22 GET /_framework/Microsoft.Extensions.DependencyInjection.wasm
+10-26 11:37:22.520  9927  9996 I FC      : t=27214ms servidor: req#19 GET /_framework/Microsoft.Extensions.Configuration.Json.wasm
+10-26 11:37:22.522  9927  9995 I FC      : t=27212ms servidor: req#18 GET /_framework/Microsoft.Extensions.Configuration.Abstractions.wasm
+10-26 11:37:22.525  9927  9991 I FC      : t=27227ms servidor: req#25 GET /_framework/Microsoft.Extensions.Primitives.wasm
+10-26 11:37:22.529  9927  9994 I FC      : t=27230ms servidor: req#27 GET /_framework/Microsoft.Extensions.Options.wasm
+10-26 11:37:22.530  9927  9996 I FC      : t=27232ms servidor: req#24 GET /_framework/Microsoft.Extensions.Logging.wasm
+10-26 11:37:22.544  9927  9989 I FC      : t=27246ms servidor: req#28 GET /_framework/Microsoft.JSInterop.WebAssembly.wasm
+10-26 11:37:22.547  9927  9990 I FC      : t=27249ms servidor: req#29 GET /_framework/System.Collections.Concurrent.wasm
+10-26 11:37:22.548  9927  9995 I FC      : t=27247ms servidor: req#26 GET /_framework/Microsoft.JSInterop.wasm
+10-26 11:37:22.550  9927  9995 I FC      : t=27252ms servidor: req#33 GET /_framework/System.Diagnostics.DiagnosticSource.wasm
+10-26 11:37:22.554  9927  9990 I FC      : t=27253ms servidor: req#34 GET /_framework/System.IO.Compression.ZipFile.wasm
+10-26 11:37:22.554  9927  9996 I FC      : t=27254ms servidor: req#31 GET /_framework/System.Collections.Immutable.wasm
+10-26 11:37:22.555  9927  9991 I FC      : t=27254ms servidor: req#30 GET /_framework/System.Collections.wasm
+10-26 11:37:22.557  9927  9991 I FC      : t=27258ms servidor: req#36 GET /_framework/System.IO.Pipelines.wasm
+10-26 11:37:22.561  9927  9991 I FC      : t=27263ms servidor: req#39 GET /_framework/System.Private.Uri.wasm
+10-26 11:37:22.563  9927  9991 I FC      : t=27264ms servidor: req#40 GET /_framework/System.Runtime.wasm
+10-26 11:37:22.565  9927  9991 I FC      : t=27266ms servidor: req#41 GET /_framework/System.Security.Cryptography.wasm
+10-26 11:37:22.566  9927  9991 I FC      : t=27268ms servidor: req#42 GET /_framework/System.Text.Encodings.Web.wasm
+10-26 11:37:22.568  9927  9991 I FC      : t=27269ms servidor: req#43 GET /_framework/System.Text.Json.wasm
+10-26 11:37:22.570  9927  9991 I FC      : t=27272ms servidor: req#44 GET /_framework/System.Text.RegularExpressions.wasm
+10-26 11:37:22.571  9927  9991 I FC      : t=27273ms servidor: req#45 GET /_framework/System.Threading.wasm
+10-26 11:37:22.581  9927  9991 I FC      : t=27282ms servidor: req#46 GET /_framework/icudt_EFIGS.dat
+10-26 11:37:22.583  9927  9996 I FC      : t=27259ms servidor: req#37 GET /_framework/System.IO.Compression.wasm
+10-26 11:37:22.586  9927  9989 I FC      : t=27255ms servidor: req#35 GET /_framework/System.Console.wasm
+10-26 11:37:22.586  9927  9994 I FC      : t=27261ms servidor: req#32 GET /_framework/System.ComponentModel.wasm
+10-26 11:37:22.587  9927  9995 I FC      : t=27284ms servidor: req#47 GET /_framework/System.Memory.wasm
+10-26 11:37:22.587  9927  9990 I FC      : t=27260ms servidor: req#38 GET /_framework/System.Linq.wasm
+10-26 11:37:23.157  9927  9927 I chromium: [INFO:CONSOLE:4] "MONO_WASM: WebAssembly resource does not have the expected content type "application/wasm", so falling back to slower ArrayBuffer instantiation.", source: https://0.0.0.1/_framework/dotnet.js (4)
+10-26 11:37:23.406  9927  9927 I FC      : t=28107ms contenido: consulta del arranque en frío (sin Listo a los 10 s)
+10-26 11:37:23.413  9927  9948 I FC      : t=28115ms canal: GET dev/puente-1/indice.json
+10-26 11:37:23.618  9927  9964 I FC      : t=28319ms canal: GET dev/puente-1/indice.json.sig
+10-26 11:37:23.892  9927  9948 I FC      : t=28594ms canal: GET dev/puente-1/paquetes/contenido-1.1.0.zip
+10-26 11:37:24.450  9927  9927 I chromium: [INFO:CONSOLE:83] "FC-MARCA primer-render contenido=1.0.0+5d5c2b4 perf.now=4647ms", source: https://0.0.0.1/js/puente.js (83)
+10-26 11:37:24.518  9927  9990 I FC      : t=29219ms puente Listo(1.0.0+5d5c2b4)
+10-26 11:37:32.619  9927  9964 I FC      : t=37321ms canal: GET dev/puente-1/definiciones/encuesta-movilidad/v2.json
+10-26 11:37:32.861  9927  9962 I FC      : t=37562ms consulta (ArranqueEnFrio): Preparado Ninguno — contenido: 1.1.0+5d5c2b4 preparada; se activa en el próximo arranque en frío; definición encuesta-movilidad v2: guardada; rige desde la próxima encuesta

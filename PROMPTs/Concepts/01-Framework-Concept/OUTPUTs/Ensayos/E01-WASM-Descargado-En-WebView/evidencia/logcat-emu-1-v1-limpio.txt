@@ -1,0 +1,7 @@
+10-25 19:59:55.176 I/ActivityManager(  539): Start proc 3777:com.android.chrome/u0a130 for broadcast {com.android.chrome/org.chromium.chrome.browser.browserservices.ClientAppBroadcastReceiver}
+10-25 19:59:58.714 E/chromium( 3404): [ERROR:filesystem_posix.cc(62)] mkdir /data/user/0/com.frameworkconcept.ensayo01/cache/WebView/Crashpad: No such file or directory (2)
+10-25 19:59:58.718 I/ActivityManager(  539): Start proc 3966:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0ai9000 for  {com.frameworkconcept.ensayo01/org.chromium.content.app.SandboxedProcessService0:0}
+10-25 19:59:59.714 I/anhw    ( 1324): Scheduling Phenotype for a PhenotypeSyncImmediately(6, org.chromium.net.cronet) one off with window [1, 2] in seconds [CONTEXT service_id=51 ]
+10-25 20:00:00.768 I/chromium( 3404): [INFO:CONSOLE(6)] "E01-MARCA index-html-cargado perf.now=1519ms", source: https://0.0.0.1/bridge.js (6)
+10-25 20:00:01.391 I/chromium( 3404): [INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token '{'", source: https://0.0.0.1/_framework/blazor.webassembly.w3qd1tpl0e.js (1)
+10-25 20:00:04.305 I/chromium( 3404): [INFO:CONSOLE(0)] "The resource https://0.0.0.1/_framework/dotnet.j6limjia9c.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source:  (0)

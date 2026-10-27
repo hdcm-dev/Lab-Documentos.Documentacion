@@ -1,0 +1,3 @@
+Inicio del contenido v1 (1.0.0) con la definición v1: versiones de contenido, definición, puente y capacidades.
+Chromium headless (playwright-core 1.62.1), puente SIMULADO (Testing/puente-simulado.js), 2026-10-26T11:01:38.708Z; NO es el cascarón ni el teléfono.
+Comprobado: versiones 1.0.0 / v1 / 1.0.0, Listo(1.0.0) recibido por el puente, sobre JSON-RPC 2.0 con v, CSP sin violaciones.

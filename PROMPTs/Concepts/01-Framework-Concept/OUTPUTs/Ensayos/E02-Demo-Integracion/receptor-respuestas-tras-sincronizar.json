@@ -1,0 +1,37 @@
+{
+  "aceptadas": [
+    {
+      "clave": "06ddabf6179645cd931977e125231880",
+      "version": 1,
+      "estado": "aceptada",
+      "recibidaEn": "2026-10-26T11:37:10.7645011+00:00",
+      "reenvios": 0,
+      "envio": {
+        "claveIdempotencia": "06ddabf6179645cd931977e125231880",
+        "encuestaId": "encuesta-movilidad",
+        "versionDefinicion": 1,
+        "versionContenido": "1.0.0+5d5c2b4",
+        "registradaEn": "2026-10-26T11:36:06.74+00:00",
+        "valores": {
+          "nombre": "Ana Perez",
+          "edad": 34,
+          "localidad": "Corrientes",
+          "medios": [
+            "bicicleta",
+            "tren"
+          ],
+          "frecuencia": "diaria",
+          "distancia": 12.5,
+          "minutos": 45,
+          "motivo": "trabajo"
+        },
+        "definicion": {
+          "encuestaId": "encuesta-movilidad",
+          "versionDefinicion": 1
+        }
+      }
+    }
+  ],
+  "cartaMuerta": [],
+  "reenviosQueNoSeDuplicaron": 0
+}

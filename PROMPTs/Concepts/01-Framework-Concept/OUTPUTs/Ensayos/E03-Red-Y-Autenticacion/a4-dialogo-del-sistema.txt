@@ -1,0 +1,3 @@
+Paso a (4/4, antes): al tocar «Sí, usarla» aparece el diálogo del sistema (BiometricPrompt). La captura sale negra: la ventana del sistema es segura y screencap no la copia.
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T19:29:30-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado por uiautomator dump: mCurrentFocus = BiometricPrompt, con los textos «Usar la seguridad del teléfono» y «Confirmá para guardar tu sesión en este teléfono.» (dump en fc-work/demo/e03/integ/logcat/a4-dialogo-ui.xml).

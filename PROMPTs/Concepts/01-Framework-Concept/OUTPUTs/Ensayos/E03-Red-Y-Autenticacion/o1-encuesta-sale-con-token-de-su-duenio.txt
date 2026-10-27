@@ -1,0 +1,3 @@
+captura: local/o1-encuesta-sale-con-token-de-su-duenio.png (2026-10-27T00:56:30Z)
+corrector E03; emulador fc-android-emu-hpdev; APK x64 corregido
+Con la sesión Activa y en línea, se registra una encuesta (Carla Corrector): el sincronizador toma el token de SU dueño junto con la fila (ObtenerAccessTokenParaAsync) y sale; el receptor la guarda con dueño encuestador. Regresión del envío tras la corrección de la carrera (brecha P1-7).

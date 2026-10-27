@@ -1,0 +1,64 @@
+10-26 13:00:17.734 13230 13230 D DOTNET  : AndroidCryptoNative_InitLibraryOnLoad: jint AndroidCryptoNative_InitLibraryOnLoad(JavaVM *, void *) in /__w/1/s/src/runtime/src/native/libs/System.Security.Cryptography.Native.Android/pal_jni.c
+10-26 13:00:17.734 13230 13230 D DOTNET  : GetOptionalClassGRef: optional class com/android/org/conscrypt/OpenSSLEngineImpl was not found
+10-26 13:00:18.250 13230 13230 I FC      : t=1282ms arranque: pantalla visible
+10-26 13:00:19.222 13230 13252 I FC      : t=2259ms db: esquema 1 comprobado
+10-26 13:00:24.435 13230 13252 I FC      : t=7473ms claves: demo-2026 cargada
+10-26 13:00:31.753 13230 13252 I FC      : t=14791ms actualizador: semilla: ya revisada para esta instalación del cascarón; no se carga
+10-26 13:00:31.767 13230 13252 I FC      : t=14805ms arranque: ContenidoListo 1.0.0+5d5c2b4
+10-26 13:00:37.090 13230 13230 I FC      : t=20127ms contenido: hybridwebview agregado (1.0.0+5d5c2b4)
+10-26 13:00:39.269 13230 13272 E chromium: [1026/130039.258850:ERROR:android_webview/browser/variations/variations_seed_loader.cc:36] Seed missing signature.
+10-26 13:00:39.270 13230 13272 I chromium: [1026/130039.270006:INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+10-26 13:00:40.029 13230 13279 I FC      : t=23066ms servidor: req#1 GET /index.html
+10-26 13:00:40.200 13230 13281 I FC      : t=23238ms servidor: req#2 GET /css/app.css
+10-26 13:00:40.270 13230 13279 I FC      : t=23307ms servidor: req#4 GET /js/puente.js
+10-26 13:00:40.277 13230 13279 I FC      : t=23314ms servidor: req#5 GET /_framework/blazor.webassembly.js
+10-26 13:00:40.326 13230 13279 I FC      : t=23364ms servidor: req#6 GET /_framework/dotnet.js
+10-26 13:00:40.335 13230 13332 I FC      : t=23373ms contenido: carga iniciada (1.0.0+5d5c2b4)
+10-26 13:00:40.348 13230 13281 I FC      : t=23385ms servidor: req#7 GET /favicon.ico → sin manejar
+10-26 13:00:40.357 13230 13281 I FC      : t=23395ms servidor: req#8 GET /_framework/dotnet.runtime.js
+10-26 13:00:40.375 13230 13297 I FC      : t=23412ms servidor: req#9 GET /_framework/dotnet.native.js
+10-26 13:00:40.376 13230 13281 I FC      : t=23413ms servidor: req#10 GET /_framework/dotnet.native.wasm
+10-26 13:00:40.430 13230 13298 I FC      : t=23467ms servidor: req#11 GET /_framework/FrameworkConcept.Core.wasm
+10-26 13:00:40.432 13230 13297 I FC      : t=23469ms servidor: req#12 GET /_framework/System.Private.CoreLib.wasm
+10-26 13:00:40.435 13230 13279 I FC      : t=23471ms servidor: req#14 GET /_framework/FrameworkConcept.Content.wasm
+10-26 13:00:40.436 13230 13298 I FC      : t=23474ms servidor: req#16 GET /_framework/Microsoft.AspNetCore.Components.WebAssembly.wasm
+10-26 13:00:40.436 13230 13280 I FC      : t=23474ms servidor: req#13 GET /_framework/System.Runtime.InteropServices.JavaScript.wasm
+10-26 13:00:40.446 13230 13280 I FC      : t=23483ms servidor: req#19 GET /_framework/Microsoft.Extensions.Configuration.wasm
+10-26 13:00:40.448 13230 13281 I FC      : t=23472ms servidor: req#15 GET /_framework/Microsoft.AspNetCore.Components.Web.wasm
+10-26 13:00:40.450 13230 13281 I FC      : t=23488ms servidor: req#20 GET /_framework/Microsoft.Extensions.DependencyInjection.Abstractions.wasm
+10-26 13:00:40.458 13230 13279 I FC      : t=23484ms servidor: req#17 GET /_framework/Microsoft.AspNetCore.Components.wasm
+10-26 13:00:40.459 13230 13297 I FC      : t=23489ms servidor: req#18 GET /_framework/Microsoft.Extensions.Configuration.Abstractions.wasm
+10-26 13:00:40.463 13230 13280 I FC      : t=23492ms servidor: req#21 GET /_framework/Microsoft.Extensions.DependencyInjection.wasm
+10-26 13:00:40.473 13230 13280 I FC      : t=23511ms servidor: req#22 GET /_framework/Microsoft.Extensions.Primitives.wasm
+10-26 13:00:40.484 13230 13281 I FC      : t=23513ms servidor: req#23 GET /_framework/Microsoft.JSInterop.WebAssembly.wasm
+10-26 13:00:40.485 13230 13281 I FC      : t=23523ms servidor: req#27 GET /_framework/Microsoft.JSInterop.wasm
+10-26 13:00:40.488 13230 13298 I FC      : t=23526ms servidor: req#24 GET /_framework/Microsoft.Extensions.Configuration.Json.wasm
+10-26 13:00:40.490 13230 13279 I FC      : t=23521ms servidor: req#26 GET /_framework/Microsoft.Extensions.Logging.Abstractions.wasm
+10-26 13:00:40.491 13230 13280 I FC      : t=23526ms servidor: req#29 GET /_framework/System.Collections.Immutable.wasm
+10-26 13:00:40.491 13230 13281 I FC      : t=23526ms servidor: req#28 GET /_framework/System.Collections.Concurrent.wasm
+10-26 13:00:40.493 13230 13297 I FC      : t=23527ms servidor: req#30 GET /_framework/Microsoft.Extensions.Logging.wasm
+10-26 13:00:40.494 13230 13299 I FC      : t=23519ms servidor: req#25 GET /_framework/Microsoft.Extensions.Options.wasm
+10-26 13:00:40.506 13230 13279 I FC      : t=23544ms servidor: req#31 GET /_framework/System.Collections.wasm
+10-26 13:00:40.507 13230 13281 I FC      : t=23544ms servidor: req#32 GET /_framework/System.ComponentModel.wasm
+10-26 13:00:40.509 13230 13281 I FC      : t=23546ms servidor: req#37 GET /_framework/System.IO.Pipelines.wasm
+10-26 13:00:40.511 13230 13280 I FC      : t=23547ms servidor: req#33 GET /_framework/System.Console.wasm
+10-26 13:00:40.513 13230 13280 I FC      : t=23551ms servidor: req#39 GET /_framework/System.Memory.wasm
+10-26 13:00:40.515 13230 13297 I FC      : t=23548ms servidor: req#34 GET /_framework/System.Diagnostics.DiagnosticSource.wasm
+10-26 13:00:40.517 13230 13297 I FC      : t=23554ms servidor: req#41 GET /_framework/System.Runtime.wasm
+10-26 13:00:40.517 13230 13281 I FC      : t=23552ms servidor: req#40 GET /_framework/System.Private.Uri.wasm
+10-26 13:00:40.517 13230 13279 I FC      : t=23548ms servidor: req#38 GET /_framework/System.Linq.wasm
+10-26 13:00:40.519 13230 13279 I FC      : t=23556ms servidor: req#42 GET /_framework/System.Security.Cryptography.wasm
+10-26 13:00:40.522 13230 13299 I FC      : t=23553ms servidor: req#35 GET /_framework/System.IO.Compression.ZipFile.wasm
+10-26 13:00:40.522 13230 13298 I FC      : t=23552ms servidor: req#36 GET /_framework/System.IO.Compression.wasm
+10-26 13:00:40.524 13230 13298 I FC      : t=23562ms servidor: req#46 GET /_framework/System.Threading.wasm
+10-26 13:00:40.536 13230 13281 I FC      : t=23559ms servidor: req#44 GET /_framework/System.Text.Json.wasm
+10-26 13:00:40.536 13230 13297 I FC      : t=23558ms servidor: req#43 GET /_framework/System.Text.Encodings.Web.wasm
+10-26 13:00:40.539 13230 13280 I FC      : t=23569ms servidor: req#45 GET /_framework/System.Text.RegularExpressions.wasm
+10-26 13:00:40.579 13230 13299 I FC      : t=23617ms servidor: req#47 GET /_framework/icudt_EFIGS.dat
+10-26 13:00:41.123 13230 13230 I chromium: [INFO:CONSOLE:4] "MONO_WASM: WebAssembly resource does not have the expected content type "application/wasm", so falling back to slower ArrayBuffer instantiation.", source: https://0.0.0.1/_framework/dotnet.js (4)
+10-26 13:00:42.632 13230 13230 I chromium: [INFO:CONSOLE:83] "FC-MARCA primer-render contenido=1.0.0+5d5c2b4 perf.now=2993ms", source: https://0.0.0.1/js/puente.js (83)
+10-26 13:00:42.721 13230 13332 I FC      : t=25758ms puente Listo(1.0.0+5d5c2b4)
+10-26 13:00:42.721 13230 13332 I FC      : t=25759ms contenido: consulta del arranque en frío (tras Listo)
+10-26 13:00:42.734 13230 13252 I FC      : t=25772ms canal: GET dev/puente-1/indice.json
+10-26 13:00:43.679 13230 13252 I FC      : t=26717ms canal: GET dev/puente-1/indice.json.sig
+10-26 13:00:43.895 13230 13332 I FC      : t=26932ms consulta (ArranqueEnFrio): AlDia Ninguno — contenido: al día (1.0.0+5d5c2b4); definición encuesta-movilidad v1: al día
