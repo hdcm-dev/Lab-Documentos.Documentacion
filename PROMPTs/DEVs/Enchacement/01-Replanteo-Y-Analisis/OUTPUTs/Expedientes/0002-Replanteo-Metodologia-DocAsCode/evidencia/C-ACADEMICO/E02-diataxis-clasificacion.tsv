@@ -1,0 +1,46 @@
+linea	seccion	tipo	motivo (brujula: accion/cognicion x adquisicion/aplicacion)
+16	Resumen ejecutivo	E	informa cognicion; responde por que el modelo es el estandar
+24	1. Que es el sitio consultado	E	introduce el caso para comprender
+32	1.1 Evidencia: el generador es Mintlify	E	evidencia que sostiene una comprension; no guia una accion
+42	1.2 Evidencia: el fuente es Markdown (MDX)	E	idem
+66	1.3 Evidencia: la referencia de API sale de OpenAPI	E	idem
+92	1.4 Evidencia: el sitio esta pensado tambien para agentes	E	idem
+100	2.1 Definicion	E	definicion con su fuente, para comprender
+110	2.2 Flujo de trabajo	E	describe el modelo para comprenderlo; el lector no lo ejecuta
+125	2.3 Evidencia de adopcion en la industria	E	sostiene una tesis
+138	2.4 Como se publica	E	describe como publica Mintlify; no instruye al lector
+148	3. Piezas de un sistema documentador	R	tabla de consulta pieza-funcion-alternativas
+163	3.1 Sobre la estructura del contenido	E	presenta Diataxis y su razon
+169	4. Respuesta a las preguntas planteadas	E	respuestas razonadas
+181	5. Audiencias, privilegios (intro)	E	plantea el problema
+185	5.1 Dos cadenas, dos portales	E+R	argumento + tabla familia-portal de consulta
+205	5.2 Un vault, varias publicaciones	E	diagrama y razon de fuente unica
+230	5.3 Privilegios	E	distingue dos problemas
+238	5.4 Como se llama esto en la industria	R	tabla terminologica de consulta
+252	6. Caso Lab-Geometria (intro)	E	plantea las preguntas del caso
+256	6.1 Estado verificado	R	estado del proyecto en un commit; consulta
+271	6.2 Mismo repositorio o auxiliar	E	criterio de decision con su razon
+286	6.3 Coherencia de ramas y versiones	E	razonamiento
+294	6.4 Renderiza el panel o un servicio aparte	E	razonamiento por lector
+325	7. Propuesta (intro)	E	encuadre de la propuesta
+331	7.1 Que se toma de OneSignal	R	tabla de correspondencia
+345	7.2 Arquitectura	E+R	diagrama razonado + tabla de piezas de consulta
+377	7.3 Estructura y contrato del frontmatter	R	contrato de campos
+413	7.4 Derivacion desde la especificacion	E+G	razon de derivar + receta seccion CU -> seccion de ayuda
+434	7.5 Roles	E	consecuencias de diseno
+444	7.6 Idiomas	E	razonamiento con tabla de apoyo
+461	7.7 Validaciones en CI	R	tabla de chequeos
+474	7.8 Prueba de concepto	E+R	informe de experimento + tabla de resultados
+524	7.9 Como entraria en Lab-Geometria	G	pasos ordenados para una meta
+540	8.1 Que dice la norma	E	encuadre normativo
+546	8.2 Las fases	E+R	diagrama de estados razonado + tabla fase-mecanismo
+574	8.3 Acoplamiento con el ciclo del codigo	E	razonamiento
+593	8.4 Estados y metadatos	E+R	comparacion razonada + tabla de consulta
+611	8.5 Tres formas de envejecer	E	razonamiento con tabla de apoyo
+623	8.6 Deprecar y archivar	E	razonamiento
+631	8.7 Quien hace que en el ciclo	R	tabla fase-actor
+646	8.8 Recorrido de punta a punta	E	ejemplo narrado para comprender (no lo ejecuta el lector)
+656	9. Preguntas guia	X	pieza formativa del Profile (PERFIL:61), fuera de los cuatro tipos
+676	10. Observaciones	X	procedencia (Rule-Evidences)
+694	11. Glosario	R	consulta
+717	12. Registro de evidencias	X	procedencia (Rule-Evidences)

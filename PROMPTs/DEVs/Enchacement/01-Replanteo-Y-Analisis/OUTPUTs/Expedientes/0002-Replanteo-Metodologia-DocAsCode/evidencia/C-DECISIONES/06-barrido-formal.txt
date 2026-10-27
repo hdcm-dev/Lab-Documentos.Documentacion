@@ -1,0 +1,37 @@
+ensayo: barrido de cuantificadores del pedido (función formal, RM:216)
+fecha-hora: 2026-10-26T15:10:28-03:00
+comando: grep -n -o -iwE 'tod[oa]s?|siempre|ningun[oa]?|nunca|cada|solo|sólo|únicamente|primero|finalmente|necesari[oa]s?|deben?|debe ser|debería' Replanteo-Y-Analisis.md
+sha256 del pedido: 101e1bc4f8c933bb64d77a88e37f13d50ee49539b488b18bf6bd0bb256e826aa
+--- salida (línea: término) ---
+20:solo
+20:debe
+30:finalmente
+32:primero
+36:debería
+36:deben
+36:deben
+36:todas
+36:necesarias
+42:deben
+42:Deben
+42:necesario
+42:Debe ser
+42:deben
+44:toda
+44:debe
+46:únicamente
+46:debe
+49:cada
+51:debe
+51:cada
+51:Cada
+51:debe
+51:debe
+51:necesaria
+55:cada
+55:finalmente
+55:todo
+61:Toda
+61:debe
+--- números en el pedido (umbrales explícitos) ---
+(ninguno: el pedido no trae umbrales numéricos)

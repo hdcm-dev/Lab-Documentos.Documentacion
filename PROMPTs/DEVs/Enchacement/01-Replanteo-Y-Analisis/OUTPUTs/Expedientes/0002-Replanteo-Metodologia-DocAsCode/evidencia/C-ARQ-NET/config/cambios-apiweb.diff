@@ -1,0 +1,36 @@
+--- //LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor/src/MovilidadUrbana.ApiWeb/MovilidadUrbana.ApiWeb.csproj	2026-09-18 08:51:05.465624225 -0300
++++ MovilidadUrbana.ApiWeb/MovilidadUrbana.ApiWeb.csproj	2026-10-26 15:05:13.230823057 -0300
+@@ -9,12 +9,15 @@
+     <ImplicitUsings>enable</ImplicitUsings>
+     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+     <NoWarn>$(NoWarn);CS1591</NoWarn>
++    <OpenApiDocumentsDirectory>$(MSBuildProjectDirectory)/contracts</OpenApiDocumentsDirectory>
++    <OpenApiGenerateDocumentsOptions>--file-name openapi</OpenApiGenerateDocumentsOptions>
+   </PropertyGroup>
+ 
+   <ItemGroup>
+     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.11" />
+     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.11" />
+     <PackageReference Include="Scalar.AspNetCore" Version="2.17.3" />
++    <PackageReference Include="Microsoft.Extensions.ApiDescription.Server" Version="10.0.11"><PrivateAssets>all</PrivateAssets><IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets></PackageReference>
+   </ItemGroup>
+ 
+   <ItemGroup>
+--- //LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor/src/MovilidadUrbana.ApiWeb/Program.cs	2026-09-18 08:52:56.807823806 -0300
++++ MovilidadUrbana.ApiWeb/Program.cs	2026-10-26 18:41:13.544595789 -0300
+@@ -21,11 +21,13 @@
+ // --- Presentación REST ------------------------------------------------------------------------
+ builder.Services.AddControllers();
+ builder.Services.AddProblemDetails();
+-builder.Services.AddOpenApi();
++builder.Services.AddOpenApi(opciones => MovilidadUrbana.ApiWeb.Documentation.ContratoOpenApi.Configurar(opciones));
+ 
+ var app = builder.Build();
+ 
+-DatabaseInitializer.Initialize(app.Services);
++// Al generar el contrato en build (GetDocument.Insider) no se toca la base.
++if (System.Reflection.Assembly.GetEntryAssembly()?.GetName().Name != "GetDocument.Insider")
++    DatabaseInitializer.Initialize(app.Services);
+ 
+ app.UseExceptionHandler();
+ app.UseStatusCodePages();

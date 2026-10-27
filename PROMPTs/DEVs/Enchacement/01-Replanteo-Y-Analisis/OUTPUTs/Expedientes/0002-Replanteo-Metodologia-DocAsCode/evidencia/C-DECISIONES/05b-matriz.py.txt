@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+"""Matriz de decisión C-DECISIONES: puntaje ponderado, sensibilidad ±10 %, barrido 0,10–0,40 y punto de inversión.
+Pesos y escalas: evidencia/C-DECISIONES/01-pesos-asentados.md (asentados antes de puntuar)."""
+import itertools, json, sys
+
+W = {"K1": 0.25, "K2": 0.25, "K3": 0.25, "K4": 0.25}
+K = list(W)
+
+# Q -> {alternativa: (K1, K2, K3, K4)}; las observables de cada celda están en el informe 015 §5.
+M = {
+ "Q03": {"A1 única mismo repo": (3,2,4,2), "A2 única dedicado": (3,3,2,1),
+         "A3 híbrido agregado único": (3,2,4,4), "A4 por pieza D1-D8": (4,5,4,4)},
+ "Q06": {"B1 compuerta cross-repo en PR": (3,2,2,2), "B2 aviso programado": (4,4,4,3),
+         "B3 aviso en PR + programado": (3,4,4,3)},
+ "Q08": {"C1 fuente única por ruta": (4,1,5,3), "C2 submódulo": (4,2,2,3),
+         "C3 copia fiel con versión y huella + compuerta": (4,4,4,4), "C4 copias libres": (5,4,1,1)},
+ "Q09": {"D1 SemVer + changelog por versión": (3,4,4,4), "D2 ritmo propio, ancla SHA": (4,5,3,3),
+         "D3 CalVer por merge": (4,4,4,3), "D4 ritmo propio + tag por compuerta de escalón": (4,5,4,3)},
+ "Q13": {"E1 aprobación humana por PR": (4,2,2,5), "E2 delegación + guarda G1-G4 + reservas": (4,4,4,4)},
+ "Q19": {"G1 una sola idéntica": (5,3,3,2), "G2 tronco común + variantes declaradas": (4,4,5,4),
+         "G3 una por tipo de sistema": (2,3,2,2)},
+ "Q22": {"H1 un workflow central multi-repo": (4,1,2,2), "H2 plantilla versionada instanciada por repo": (3,4,5,4),
+         "H3 uno a mano por repo": (4,4,3,3)},
+ "Q23": {"J1 todo bloquea": (4,2,3,2), "J2 todo avisa": (5,4,4,1), "J3 regla de clasificación": (3,5,4,5)},
+ "Q26": {"DocFX": (4,4,4,3), "MkDocs + Material": (3,3,4,2), "Docusaurus": (2,3,5,3),
+         "Render embebido (PoC)": (5,5,2,2), "Estático simple": (4,3,2,2)},
+ "Q30": {"L1 sólo KB-privada": (5,2,3,3), "L2 sólo IA.SDD/Conocimiento": (5,3,2,3),
+         "L3 fuente IKB + copia con cierre y huella": (3,4,5,4), "L4 fuente IA.SDD + copia en IKB": (3,4,3,4)},
+ "Q32": {"M1 apartamiento con ADR": (4,4,2,3), "M2 cambio de norma": (3,2,5,4),
+         "M3 apartamiento con ADR + propuesta de norma al lote": (3,4,4,4)},
+ "Q17": {"P1 2651x liviana + marcos abiertos": (4,5,4,5), "P2 sólo marcos abiertos": (4,5,4,4),
+         "P3 2651x completa + DITA + 26512": (1,2,3,4)},
+ "Q46": {"No comprar; índice rotulado": (5,5,4,3), "Comprar ahora": (4,3,4,5),
+         "Comprar al ocurrir el evento": (4,4,4,4)},
+ "Q33": {"N1 migrar a 13.22 antes": (4,3,4,4), "N2 correr sobre 13.16": (5,5,2,2),
+         "N3 migración selectiva": (4,3,3,1)},
+}
+
+def score(v, w): return sum(w[k]*x for k, x in zip(K, v))
+
+def ranking(alts, w):
+    return sorted(((score(v, w), a) for a, v in alts.items()), reverse=True)
+
+def renorm(k, f):
+    w = dict(W); w[k] = W[k]*f
+    s = sum(w.values()); return {x: y/s for x, y in w.items()}
+
+out = {}
+for q, alts in M.items():
+    r = ranking(alts, W)
+    win, margin = r[0][1], r[0][0]-r[1][0]
+    flips = []
+    for k in K:
+        for f in (0.9, 1.1):
+            rw = ranking(alts, renorm(k, f))
+            if rw[0][1] != win: flips.append(f"{k}x{f}->{rw[0][1]}")
+    sweep = []
+    for k in K:
+        for i in range(10, 41):
+            p = i/100; rest = (1-p)/3
+            w = {x: (p if x == k else rest) for x in K}
+            rw = ranking(alts, w)
+            if rw[0][1] != win: sweep.append((k, p, rw[0][1])); break
+    # punto de inversión: cuántos puntos debe bajar una sola celda del ganador para perder (peso 0,25)
+    inv = round(margin/0.25, 2)
+    firm = margin >= 0.30 - 1e-9 and not flips
+    out[q] = dict(ranking=[(round(s, 2), a) for s, a in r], ganador=win, margen=round(margin, 2),
+                  inversiones_10pct=flips, barrido_inversion=sweep, puntos_de_celda_para_invertir=inv,
+                  decision="FIRME" if firm else "CON REVISION")
+
+json.dump(out, sys.stdout, ensure_ascii=False, indent=1)

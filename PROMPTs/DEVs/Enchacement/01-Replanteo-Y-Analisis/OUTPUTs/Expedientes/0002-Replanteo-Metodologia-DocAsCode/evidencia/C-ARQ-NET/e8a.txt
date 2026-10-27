@@ -1,0 +1,5 @@
+docfx_exit=255
+An issue was encountered verifying workloads. For more information, run "dotnet workload update".
+/usr/share/dotnet/sdk/10.0.403/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.ImportWorkloads.targets(38,5): error NETSDK1147: To build this project, the following workloads must be installed: maui-android [/x/src/MovilidadUrbana.MAUI/MovilidadUrbana.MAUI.csproj]
+/usr/share/dotnet/sdk/10.0.403/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.ImportWorkloads.targets(38,5): error NETSDK1147: To install these workloads, run the following command: dotnet workload restore [/x/src/MovilidadUrbana.MAUI/MovilidadUrbana.MAUI.csproj]
+api_yml=0

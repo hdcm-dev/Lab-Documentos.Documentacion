@@ -1,0 +1,169 @@
+#!/usr/bin/env python3
+"""Matriz de decisión del despacho A01 (expediente 0002, folio 080).
+
+Siete criterios del despacho, pesos asentados en el folio 080 §4 antes de correr este guion.
+Escala anclada 1-5 (folio 080 §4.3). Filtros duros excluyen antes de ponderar.
+Salida: puntaje por alternativa, margen, sensibilidad +-10 % por peso (renormalizado),
+pesos iguales y proyección «sólo TP:36» (K1-K3 a 1/3).
+Sin red, sin reloj, sin dependencias: python3 -I matriz_a01.py
+"""
+import json
+
+CRIT = ["K1 simplicidad", "K2 practicidad", "K3 escalabilidad", "K4 costo de adopción",
+        "K5 doble audiencia", "K6 coherencia SDD", "K7 riesgo de deriva"]
+W = [0.15, 0.15, 0.15, 0.10, 0.15, 0.15, 0.15]
+
+# id: [(alternativa, (K1..K7), filtro_o_None)]
+D = {
+ "D01": [("A Ratificar panel + providencia opción B (K6)", (4,5,5,5,3,5,3), None),
+         ("B Ratificar + opción A", (5,5,2,5,3,3,3), None),
+         ("C Recomponer el panel", (2,2,3,2,3,2,3), None)],
+ "D02": [("A U0 por repo destino + U1 deuda ampliada, antes del enriquecimiento", (4,5,5,4,4,5,5), None),
+         ("B Escribir primero, controles después", (5,2,2,4,3,2,1), None),
+         ("C Deuda dentro del enriquecimiento", (4,3,3,4,3,4,2), None)],
+ "D03": [("A Catálogo cerrado de clases", (4,5,5,4,4,4,4), None),
+         ("B D1-D8 pieza por pieza en cada proyecto", (3,3,4,3,4,4,4), None),
+         ("C Única: mismo repo", (3,2,4,2,3,2,3), None),
+         ("D Única: repo dedicado", (3,3,2,3,3,3,2), None)],
+ "D04": [("A Commit / base_commit+base_tag / versión de cuerpo + tag por compuerta", (4,5,4,4,4,4,5), None),
+         ("B SHA + SemVer por documento", (3,3,4,3,4,3,5), None),
+         ("C Sólo tag", (4,1,3,3,3,3,3), None),
+         ("D Ninguna ancla", (5,5,2,5,2,2,1), None)],
+ "D05": [("A Sin sitio versionado; guías sin generador; DocFX sólo sitio técnico .NET", (5,5,4,5,4,4,4), None),
+         ("B DocFX para guías y referencia", (3,4,4,3,4,4,4), None),
+         ("C MkDocs + Material", (4,3,3,3,3,3,3), None),
+         ("D Docusaurus", (2,3,4,1,3,3,4), None)],
+ "D06": [("A Dos carriles + cita por ID calificado + permalink", (4,4,5,4,5,4,5), None),
+         ("B Compuerta entre repos en cada PR", (3,2,2,3,4,3,5), None),
+         ("C Sólo aviso programado", (5,4,4,5,3,3,2), None),
+         ("D Rutas relativas (hoy)", (5,2,1,5,2,2,1), None)],
+ "D07": [("A Obligatorios mínimos + condicionales al sitio; MCP fuera", (4,5,5,4,5,5,4), None),
+         ("B Todos obligatorios ya", (3,3,4,3,4,4,4), None),
+         ("C llms.txt como canal principal", (4,2,3,4,2,3,3), None),
+         ("D Sólo ia-db", (5,4,2,5,2,4,3), None)],
+ "D08": [("A Clases D/P/H; P y H con aprobación explícita", (4,4,5,4,5,5,4), None),
+         ("B Aprobación explícita en todo PR", (5,2,2,4,4,3,4), None),
+         ("C La delegación cubre también P", (4,5,5,5,3,4,3), None)],
+ "D09": [("A RDA 10 + description; corpus_id/version en README; vocabulario CGT", (4,4,5,4,5,5,4), None),
+         ("B Prefijo de producto global + enums nuevos", (3,3,5,2,5,3,4), None),
+         ("C Sólo los 9 campos de la carta", (5,4,3,5,3,3,3), None)],
+ "D10": [("A Dos niveles + registro generado + RN-LOC provisionales en la demo", (4,4,5,4,5,4,5), None),
+         ("B ID en el XML doc del código", (4,2,5,3,4,4,5), None),
+         ("C ruta:constante", (5,4,2,5,3,2,1), None)],
+ "D11": [("A 2651x liviana + Diátaxis/arc42/C4/MADR; guía de estudio por Profile", (4,5,4,4,4,4,3), None),
+         ("B Sólo marcos abiertos", (4,5,4,5,4,3,3), "F6 TP:36 estándares"),
+         ("C 2651x completa + DITA + 26512", (1,2,3,1,3,3,3), None)],
+ "D12": [("A No comprar; cita sin apartado; compra al evento E2", (5,5,4,5,3,3,3), None),
+         ("B Comprar ahora", (4,3,4,2,3,4,3), None),
+         ("C No comprar nunca", (5,5,2,5,3,2,3), None)],
+ "D13": [("A Tronco + 4 variantes", (4,4,5,4,4,4,4), None),
+         ("B Una sola idéntica", (5,3,3,4,3,3,3), None),
+         ("C Una por tipo de sistema", (2,3,2,2,3,2,2), None)],
+ "D14": [("A Cinco fases (1a/1b) + deriva en fase 5 + RRD por perfil", (4,5,4,5,4,4,4), None),
+         ("B Seis fases por el lote + RRD", (4,3,4,4,4,4,4), None),
+         ("C Sin RRD (NB/CU o sección SDD)", (4,3,2,4,3,3,3), None)],
+ "D15": [("A PR como unidad; expediente por RE §1; Reintegra + A13", (4,5,4,5,3,5,4), None),
+         ("B Expediente por cada cambio", (2,2,2,2,3,3,4), None),
+         ("C Reintegro a criterio", (5,4,3,5,3,2,1), None)],
+ "D16": [("A Plantilla «Cómo intervenir» + instancia por proyecto", (4,5,5,4,5,4,4), None),
+         ("B Sección en la guía", (4,3,3,5,3,3,3), None),
+         ("C Sólo plantilla de PR", (5,3,3,5,3,3,3), None)],
+ "D17": [("A Plantilla docs-guard copiada por repo, en el runner", (4,4,5,4,4,5,4), None),
+         ("B workflow_call reutilizable", (4,2,4,4,4,4,4), None),
+         ("C Workflow central", (4,1,2,3,4,2,3), None),
+         ("D ubuntu-latest", (5,5,4,5,4,3,4), "F1 TP:34 runner")],
+ "D18": [("A Regla de cinco condiciones + K1-K7 + CQ/PE anexos", (3,5,5,4,5,4,5), None),
+         ("B Todo bloquea", (4,2,3,2,4,3,4), None),
+         ("C Todo avisa", (5,4,4,5,3,3,1), None)],
+ "D19": [("A OpenAPI en build + diff; XML en API; CS1591 por tipo", (4,4,5,4,5,4,5), None),
+         ("B OpenAPI sólo en runtime", (5,4,3,5,2,3,1), None),
+         ("C CS1591 obligatorio en todo", (3,2,4,2,4,4,5), None)],
+ "D20": [("A Catálogo integrado de clases + flujo", (4,4,5,4,5,4,4), None),
+         ("B Sólo toolchain", (4,4,3,4,3,3,3), "F7 decisión 2 de la presidencia"),
+         ("C Portal agregador multi-repo", (2,2,5,1,4,3,4), None)],
+ "D21": [("A Fuente IKB + copia fijada + compuerta; vendor git archive en SDD-B", (4,4,5,4,4,5,5), None),
+         ("B Referencia sin copia", (4,1,5,5,3,2,3), None),
+         ("C Submódulo", (4,2,2,3,3,3,4), None),
+         ("D Copias libres (hoy)", (5,4,1,5,3,2,1), None)],
+ "D22": [("A Conocimiento + compuerta + Momento 2; nada nuevo del SDD-B", (5,4,5,5,4,5,4), None),
+         ("B Fase o subagente nuevo", (2,2,3,2,4,2,3), None),
+         ("C Importar ya tres piezas del SDD-B", (4,3,4,4,3,3,3), None)],
+ "D23": [("A Apartamiento ADR + ADR de diseño PO + propuesta al lote (E3)", (3,4,4,4,4,4,4), None),
+         ("B Cambio de norma ya", (3,2,5,3,4,2,4), None),
+         ("C Sólo apartamiento", (4,4,2,4,4,4,3), None)],
+ "D24": [("A Migrar a 13.22 antes, unidad propia", (4,3,4,3,3,5,4), None),
+         ("B Piloto sobre 13.16", (5,5,2,5,3,2,2), None),
+         ("C Migración selectiva", (4,3,3,3,3,1,3), None)],
+ "D25": [("A Examples/ + source.lock SHA; código por propuesta a Lab-E2E", (4,4,4,4,4,4,4), None),
+         ("B Junto al código (Lab-E2E.WebBlazor/docs/)", (4,2,5,2,4,4,5), None),
+         ("C Híbrido con agregador", (2,2,4,2,4,3,4), None)],
+ "D26": [("A Folio de criterios previo + paquete G-a..G-g + resolución en 0002", (4,5,5,4,4,5,5), None),
+         ("B Expediente propio por repo de escalón", (3,3,3,3,3,4,4), None),
+         ("C Criterios fijados al cerrar", (5,4,3,5,3,3,2), None)],
+ "D27": [("A Cuerpo documental, 7 temas, 3 rutas", (3,4,5,3,5,5,4), None),
+         ("B Archivo único enriquecido", (5,4,2,5,4,2,3), "F8 TP:67-68 Profile"),
+         ("C Archivo único + satélites", (3,3,3,3,3,2,2), None)],
+ "D28": [("A APA 7 castellano + fecha siempre + anexo ref-", (4,4,5,4,5,4,4), None),
+         ("B Cita por dominio (hoy)", (5,5,2,5,2,2,2), None),
+         ("C IEEE numérico / ISO 690 sin estilo", (3,3,3,3,4,3,4), None)],
+ "D29": [("A Elevar al lote; default sin tocar el Profile", (4,5,4,5,4,5,3), None),
+         ("B Elevar y esperar", (5,2,3,5,3,5,3), None),
+         ("C Modificar el Profile", (4,4,4,4,4,1,3), "F4 PROMPTs del PO")],
+}
+
+
+def score(s, w):
+    return round(sum(a * b for a, b in zip(s, w)), 4)
+
+
+def winner(alts, w):
+    ok = [(n, score(s, w)) for n, s, f in alts if f is None]
+    ok.sort(key=lambda x: -x[1])
+    return ok
+
+
+def variants():
+    out = {}
+    for i in range(len(W)):
+        for sign in (+1, -1):
+            w = list(W)
+            w[i] = W[i] * (1 + 0.10 * sign)
+            t = sum(w)
+            out[f"{CRIT[i].split()[0]}{'+' if sign > 0 else '-'}10%"] = [x / t for x in w]
+    out["iguales"] = [1 / 7] * 7
+    out["solo_TP36"] = [1 / 3, 1 / 3, 1 / 3, 0, 0, 0, 0]
+    return out
+
+
+res = {}
+V = variants()
+for d, alts in D.items():
+    base = winner(alts, W)
+    top, second = base[0], base[1]
+    margin = round(top[1] - second[1], 4)
+    flips = []
+    for k, w in V.items():
+        if winner(alts, w)[0][0] != top[0]:
+            flips.append(k)
+    pm10 = [f for f in flips if f.endswith("%")]
+    estado = "FIRME" if margin >= 0.30 and not pm10 else "CON REVISIÓN"
+    res[d] = {
+        "puntajes": {n: score(s, W) for n, s, f in alts},
+        "excluidas": {n: f for n, s, f in alts if f},
+        "gana": top[0], "segunda": second[0], "margen": margin,
+        "invierte_en": flips, "estado": estado,
+    }
+
+print("pesos:", dict(zip(CRIT, W)), "suma", round(sum(W), 4))
+for d, r in res.items():
+    print(f"\n{d}  {r['estado']}  margen {r['margen']:.2f}")
+    for n, p in sorted(r["puntajes"].items(), key=lambda x: -x[1]):
+        ex = f"  [excluida: {r['excluidas'][n]}]" if n in r["excluidas"] else ""
+        print(f"  {p:.2f}  {n}{ex}")
+    print("  se invierte con:", ", ".join(r["invierte_en"]) or "ninguna variante")
+firmes = [d for d, r in res.items() if r["estado"] == "FIRME"]
+rev = [d for d, r in res.items() if r["estado"] != "FIRME"]
+print("\nFIRME:", " ".join(firmes))
+print("CON REVISIÓN:", " ".join(rev))
+with open("salida_a01.json", "w", encoding="utf-8") as f:
+    json.dump(res, f, ensure_ascii=False, indent=1)

@@ -1,0 +1,4 @@
+archivo: 01-pesos-asentados.md
+fecha-hora: 2026-10-26T15:06:46-03:00
+sha256: 627d7e61fdfbffe97ae47155b3fba7d1e5c15ddc6d81bc835af8e070790de5a3
+mtime: 2026-10-26 15:06:40.564893134 -0300

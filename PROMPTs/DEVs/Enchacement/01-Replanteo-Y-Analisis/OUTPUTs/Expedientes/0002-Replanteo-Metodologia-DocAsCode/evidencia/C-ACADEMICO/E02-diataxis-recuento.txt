@@ -1,0 +1,4 @@
+# Salida de diataxis-tally (2026-10-26)
+unidades clasificadas: 45
+por tipo: {'E': 27, 'E+G': 1, 'E+R': 5, 'G': 1, 'R': 8, 'X': 3}
+un solo tipo: 36 (80 %); mixtas: 6 (13 %); fuera de Diataxis: 3; tutoriales: 0; guias practicas puras: 1

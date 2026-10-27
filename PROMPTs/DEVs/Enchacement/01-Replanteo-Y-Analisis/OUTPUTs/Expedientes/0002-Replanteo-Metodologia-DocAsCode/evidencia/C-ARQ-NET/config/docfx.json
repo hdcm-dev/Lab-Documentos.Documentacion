@@ -1,0 +1,14 @@
+{
+  "metadata": [
+    { "src": [ { "src": "../src/MovilidadUrbana.ApiWeb", "files": [ "*.csproj" ] } ],
+      "dest": "api", "outputFormat": "mref" }
+  ],
+  "build": {
+    "content": [
+      { "files": [ "api/**.yml", "api/index.md" ] },
+      { "files": [ "docs/**.md", "docs/**/toc.yml", "toc.yml" ] }
+    ],
+    "output": "_site",
+    "template": [ "default", "modern" ]
+  }
+}

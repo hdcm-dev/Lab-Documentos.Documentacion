@@ -1,0 +1,7 @@
+# Ensayo E3 — traza a ruta:símbolo frente al historial (2026-10-26)
+10ce735 | src/MovilidadUrbana.MAUI/Dominio/Reglas/ReglasDeLocalidad.cs | RESUELVE | línea de LargoMinimoDelNombre: 11 | static partial class ReglasDeLocalidad
+10ce735 | src/MovilidadUrbana.MAUI/Domain/Rules/LocalidadRules.cs | NO RESUELVE
+946d023 | src/MovilidadUrbana.MAUI/Dominio/Reglas/ReglasDeLocalidad.cs | NO RESUELVE
+946d023 | src/MovilidadUrbana.MAUI/Domain/Rules/LocalidadRules.cs | RESUELVE | línea de LargoMinimoDelNombre: 11 | static partial class LocalidadRules
+8fb4c3a | src/MovilidadUrbana.MAUI/Dominio/Reglas/ReglasDeLocalidad.cs | NO RESUELVE
+8fb4c3a | src/MovilidadUrbana.MAUI/Domain/Rules/LocalidadRules.cs | RESUELVE | línea de LargoMinimoDelNombre: 11 | static partial class LocalidadRules

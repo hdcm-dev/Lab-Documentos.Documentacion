@@ -1,0 +1,28 @@
+# Ensayo E2 — fases propuestas frente al pedido literal (2026-10-26)
+101e1bc4f8c933bb
+## Líneas del pedido que enumeran fases
+1:# Tool-Prompt — Replanteo y analisis sistema de documentación DocAsCode
+4:> - ultracode leer y ejecutar `/LAB/Lab-Documentos/Lab-Documentos.Documentacion/PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/Replanteo-Y-Analisis.md`
+6:> Overview: Replanteo y analisis sistema de documentación DocAsCode
+14:  Partiendo del desarrollo actual sobre lo que es materia de documentación a usuario de sistema, su diseño, desarrollo e implementación contamos con esto: 
+18:  Se hace neceario investigar y establecer métodlogias de diseño, implementación e integración en  los sistemas. Actualmente se cuentan `/LAB/Lab-Documentos/Lab-Documentos.Documentacion/ia-db/README.md`, el cual tiene su propio marco SDD de diseño asis
+20:  Para crear una metodología común de como analizar requerimientos documentales, diseño, implementación e integración usando DocAsCode queda entender que conviene hacer, si tener un repositorio dedicado a la documentación con su propio ciclo evolutivo
+26:  Definir una metodlogía clara en evaluarción de requerimientos, analisis, diseño, implementación e integración de documetnación técnica de sistemas.
+30:  - Analizar los temas planteados en el contexto y objetivos, las diferentes estrategias en base  a los sistemas que venimos cubriendo. Se puede enriqueser la guía actual, crear demostraciones y ejemplos (podes montar una mini demo basado en `MovilidadUrba
+36:  - Crea una mesa basada en los conocimientos: `KB-privada/Knowledges/Knowledge-Mesa-De-Expertos-A-Pedido.md` y `KB-privada/Knowledges/Knowledge-Mesa-Consulta-A-Un-Tercero.md` , en esta mesa determinar que especialistas en el tema nece
+53:    Una vez abordados los distintos núcleos conceptuales, realiza una fase de integración en la que se consoliden sus resultados, se resuelvan dependencias o contradicciones entre ellos y se reconstruya el modelo completo.
+57:    Para poder cumplir con esta regla aproyate en ir generando registros que puedas retomar y evaluar markdowns en `/LAB/Lab-Documentos/Lab-Documentos.Documentacion/PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Bitacoras`
+## Fase -> TP:18 | TP:20 | TP:26 | origen
+evaluarción de requerimientos|evaluación de requerimientos | 0 | 0 | 1 | del pedido
+requerimientos | 0 | 1 | 1 | del pedido
+analisis|análisis|analizar | 0 | 1 | 1 | del pedido
+diseño | 1 | 1 | 1 | del pedido
+implementación | 1 | 1 | 1 | del pedido
+integración | 1 | 1 | 1 | del pedido
+mantenim | 0 | 0 | 0 | AGREGADO (no está en TP:18/20/26; apariciones en todo TP: 0)
+publica | 0 | 0 | 0 | AGREGADO (no está en TP:18/20/26; apariciones en todo TP: 0)
+deprec | 0 | 0 | 0 | AGREGADO (no está en TP:18/20/26; apariciones en todo TP: 0)
+archiv | 0 | 0 | 0 | AGREGADO (no está en TP:18/20/26; apariciones en todo TP: 0)
+planific | 0 | 0 | 0 | AGREGADO (no está en TP:18/20/26; apariciones en todo TP: 3)
+revis | 0 | 0 | 0 | AGREGADO (no está en TP:18/20/26; apariciones en todo TP: 0)
+redact|deriv | 0 | 0 | 0 | AGREGADO (no está en TP:18/20/26; apariciones en todo TP: 0)
