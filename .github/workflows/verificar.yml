@@ -1,5 +1,14 @@
-# Control mínimo de los PR de documentación: da a la guarda de merge (Conformacion-Pull-Request-Automatico §3.3, G3)
-# una corrida que leer. Revisa lo que el PR agrega: sin claves privadas ni artefactos binarios pesados.
+# Verificar: control de los PR de documentación de Lab-Documentos.Documentacion. Da a la guarda de merge
+# (Conformacion-Pull-Request-Automatico, G3) corridas que leer.
+#
+# Jobs:
+#   verificar   lo que el PR agrega: sin claves privadas ni artefactos binarios pesados.
+#   docs-guard  llama al workflow reutilizable de Lab-Documentos, fijado por SHA (expediente 0002, unidad E1-U0b).
+#               Verifica enlaces internos, anclas y estructura de la carpeta «ruta».
+#
+# Seguridad: permissions contents: read; sin pull_request_target; actions y workflow llamado fijados por SHA;
+# un PR desde un fork no corre en el runner propio (guarda «if:»); ningún secreto.
+# Documentación: .github/README.md
 name: Verificar
 
 on:
@@ -9,12 +18,17 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: verificar-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   verificar:
-    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: [self-hosted, i7infra-dev]
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -37,3 +51,10 @@ jobs:
           done < <(git diff --name-only --diff-filter=AM "$RANGO")
           [ "$FALLA" -eq 0 ] && echo "Verificar: en orden."
           exit "$FALLA"
+
+  docs-guard:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    uses: hdcm-dev/Lab-Documentos/.github/workflows/docs-guard.yml@f603984a3a4b35ea62feb7e5b3f68c0ad3331311 # E1-U0a
+    with:
+      ruta: .github
+      herramientas-ref: f603984a3a4b35ea62feb7e5b3f68c0ad3331311
