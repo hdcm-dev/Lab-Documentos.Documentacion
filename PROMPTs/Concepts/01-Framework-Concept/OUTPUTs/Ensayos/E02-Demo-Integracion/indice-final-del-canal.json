@@ -1,0 +1,53 @@
+{
+  "formato": 1,
+  "canal": "dev",
+  "puenteMayor": 1,
+  "keyId": "demo-2026",
+  "emitido": "2026-10-26T11:41:27+00:00",
+  "expires": "2026-11-25T11:41:27+00:00",
+  "entradas": {
+    "contenido": [
+      {
+        "version": "1.0.0+5d5c2b4",
+        "ruta": "paquetes/contenido-1.0.0.zip",
+        "size": 3757811,
+        "sha256": "2a498fbc63640e7214dcff76643f9c0cb196217dc353f10e6dfa3c236e89e624",
+        "mandatory": false
+      },
+      {
+        "version": "1.1.0+5d5c2b4",
+        "ruta": "paquetes/contenido-1.1.0.zip",
+        "size": 3757823,
+        "sha256": "762738be8132d201e5e5980271c4816f2197c9de4f494a172b4806fce812fb7b",
+        "mandatory": false
+      },
+      {
+        "version": "1.2.0+5d5c2b4",
+        "ruta": "paquetes/contenido-1.2.0.zip",
+        "size": 3757754,
+        "sha256": "9d08b215bcbfcc91abaf507a1b4cda6f4373535efac544bd4d0ebd9dad531e4a",
+        "mandatory": false
+      }
+    ],
+    "definiciones": [
+      {
+        "encuestaId": "encuesta-movilidad",
+        "version": 1,
+        "ruta": "definiciones/encuesta-movilidad/v1.json",
+        "size": 4559,
+        "sha256": "c4be9234f71862e92e1c097121c570ba501732342accebbe5d6303a405623998",
+        "compatibleConContenido": ">=1.0.0 <2.0.0"
+      },
+      {
+        "encuestaId": "encuesta-movilidad",
+        "version": 2,
+        "ruta": "definiciones/encuesta-movilidad/v2.json",
+        "size": 4940,
+        "sha256": "e566bca0211c84b1e6c8ff912b87eb6901e7045369ac82d7f1f8d3711024f84d",
+        "compatibleConContenido": ">=1.0.0 <2.0.0"
+      }
+    ]
+  },
+  "retiradas": [],
+  "definicionesRetiradas": []
+}

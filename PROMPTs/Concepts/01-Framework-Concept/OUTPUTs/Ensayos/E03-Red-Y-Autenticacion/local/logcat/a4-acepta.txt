@@ -1,0 +1,73 @@
+10-26 22:29:17.459 D/AndroidRuntime(26651): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:29:17.466 I/AndroidRuntime(26651): Using default boot image
+10-26 22:29:17.466 I/AndroidRuntime(26651): Leaving lock profiling enabled
+10-26 22:29:17.604 D/AndroidRuntime(26651): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:29:18.664 D/AndroidRuntime(26651): Shutting down VM
+10-26 22:29:38.400 I/FC      (26291): t=157303ms red: salud ok (HTTP 200)
+10-26 22:30:32.325 I/FC      (26291): t=211228ms sesión: desbloqueo con la seguridad del teléfono activado
+10-26 22:30:38.602 I/FC      (26291): t=217506ms red: salud ok (HTTP 200)
+10-26 22:30:56.747 D/AndroidRuntime(26800): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:30:56.753 I/AndroidRuntime(26800): Using default boot image
+10-26 22:30:56.753 I/AndroidRuntime(26800): Leaving lock profiling enabled
+10-26 22:30:56.889 D/AndroidRuntime(26800): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:30:58.029 D/AndroidRuntime(26800): Shutting down VM
+10-26 22:31:04.342 D/AndroidRuntime(26825): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:31:04.346 I/AndroidRuntime(26825): Using default boot image
+10-26 22:31:04.346 I/AndroidRuntime(26825): Leaving lock profiling enabled
+10-26 22:31:04.478 D/AndroidRuntime(26825): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:31:05.548 D/AndroidRuntime(26825): Shutting down VM
+10-26 22:31:11.841 D/AndroidRuntime(26853): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:31:11.845 I/AndroidRuntime(26853): Using default boot image
+10-26 22:31:11.845 I/AndroidRuntime(26853): Leaving lock profiling enabled
+10-26 22:31:11.973 D/AndroidRuntime(26853): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:31:13.055 D/AndroidRuntime(26853): Shutting down VM
+10-26 22:31:16.327 D/AndroidRuntime(26871): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:31:16.331 I/AndroidRuntime(26871): Using default boot image
+10-26 22:31:16.331 I/AndroidRuntime(26871): Leaving lock profiling enabled
+10-26 22:31:16.454 D/AndroidRuntime(26871): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:31:17.600 D/AndroidRuntime(26871): Shutting down VM
+10-26 22:31:20.891 D/AndroidRuntime(26889): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:31:20.896 I/AndroidRuntime(26889): Using default boot image
+10-26 22:31:20.896 I/AndroidRuntime(26889): Leaving lock profiling enabled
+10-26 22:31:21.030 D/AndroidRuntime(26889): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:31:22.093 D/AndroidRuntime(26889): Shutting down VM
+10-26 22:31:26.849 D/AndroidRuntime(26913): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:31:26.853 I/AndroidRuntime(26913): Using default boot image
+10-26 22:31:26.853 I/AndroidRuntime(26913): Leaving lock profiling enabled
+10-26 22:31:26.993 D/AndroidRuntime(26913): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:31:28.046 D/AndroidRuntime(26913): Shutting down VM
+10-26 22:31:35.030 D/AndroidRuntime(26932): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:31:35.034 I/AndroidRuntime(26932): Using default boot image
+10-26 22:31:35.034 I/AndroidRuntime(26932): Leaving lock profiling enabled
+10-26 22:31:35.156 D/AndroidRuntime(26932): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:31:36.185 D/AndroidRuntime(26932): Shutting down VM
+10-26 22:31:38.772 I/FC      (26291): t=277676ms red: salud ok (HTTP 200)
+10-26 22:31:42.637 D/AndroidRuntime(26956): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:31:42.641 I/AndroidRuntime(26956): Using default boot image
+10-26 22:31:42.641 I/AndroidRuntime(26956): Leaving lock profiling enabled
+10-26 22:31:42.763 D/AndroidRuntime(26956): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:31:43.850 D/AndroidRuntime(26956): Shutting down VM
+10-26 22:31:47.008 D/AndroidRuntime(26973): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:31:47.013 I/AndroidRuntime(26973): Using default boot image
+10-26 22:31:47.013 I/AndroidRuntime(26973): Leaving lock profiling enabled
+10-26 22:31:47.142 D/AndroidRuntime(26973): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:31:48.204 D/AndroidRuntime(26973): Shutting down VM
+10-26 22:31:56.384 D/AndroidRuntime(27006): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:31:56.390 I/AndroidRuntime(27006): Using default boot image
+10-26 22:31:56.390 I/AndroidRuntime(27006): Leaving lock profiling enabled
+10-26 22:31:56.575 D/AndroidRuntime(27006): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:31:57.737 D/AndroidRuntime(27006): Shutting down VM
+10-26 22:32:38.881 I/FC      (26291): t=337785ms red: salud ok (HTTP 200)
+10-26 22:32:52.938 D/AndroidRuntime(27038): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:32:52.942 I/AndroidRuntime(27038): Using default boot image
+10-26 22:32:52.942 I/AndroidRuntime(27038): Leaving lock profiling enabled
+10-26 22:32:53.042 D/AndroidRuntime(27038): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:32:54.065 D/AndroidRuntime(27038): Shutting down VM
+10-26 22:33:01.118 D/AndroidRuntime(27061): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 22:33:01.125 I/AndroidRuntime(27061): Using default boot image
+10-26 22:33:01.125 I/AndroidRuntime(27061): Leaving lock profiling enabled
+10-26 22:33:01.237 D/AndroidRuntime(27061): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 22:33:02.302 D/AndroidRuntime(27061): Shutting down VM
+10-26 22:33:06.005 I/FC      (26291): t=364908ms app: reanudada
+10-26 22:33:06.088 I/FC      (26291): t=364991ms consulta (Reanudacion): Omitida Ninguno — reanudación antes de 15 minutos
+10-26 22:33:06.199 I/FC      (26291): t=365102ms red: salud ok (HTTP 200)

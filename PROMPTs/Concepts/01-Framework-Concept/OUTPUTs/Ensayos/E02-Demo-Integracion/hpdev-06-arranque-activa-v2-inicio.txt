@@ -1,0 +1,3 @@
+Siguiente arranque en frío: el contenido 1.1.0 se activa ANTES de mostrar; cabecera azul y tarjeta «Novedades de esta versión».
+Emulador fc-android-emu-hpdev (Android 13 API 33 x86_64, WebView 155.0.8059.43, 540x1200 a 420 dpi = 205 dp de ancho), APK Debug android-x64 de A3, canal https://203.0.113.10:8099 (Tailscale, sin túnel), 2026-10-26, 11:39 UTC; receptor arriba.
+logcat-hpdev-06: «activada 1.1.0+5d5c2b4 (desde staging)», Listo(1.1.0) a t=31 155 ms, consulta AlDia (contenido 1.1.0, definición v2).

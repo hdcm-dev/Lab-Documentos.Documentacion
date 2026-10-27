@@ -1,0 +1,3 @@
+Tercer arranque: el cascarón encuentra la marca, vuelve a previous (1.1.0) y anota 1.2.0 como fallida.
+Emulador fc-android-emu-hpdev (Android 13 API 33 x86_64, WebView 155.0.8059.43, 540x1200 a 420 dpi = 205 dp de ancho), APK Debug android-x64 de A3, canal https://203.0.113.10:8099 (Tailscale, sin túnel), 2026-10-26, 11:45 UTC; receptor arriba.
+logcat-hpdev-11: «rollback: 1.2.0 no confirmó Listo; queda como fallida», «vuelve a previous 1.1.0»; la consulta posterior responde «Rechazado FallidaLocal — no se reinstala».

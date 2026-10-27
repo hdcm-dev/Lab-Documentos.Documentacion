@@ -1,0 +1,8 @@
+10-25 17:06:58.638 I/E01     (18120): t=634ms main-page-appearing
+10-25 17:06:58.652 I/E01     (18120): t=656ms manifiesto: GET https://regulation-ideal-california-protocols.trycloudflare.com/manifest.json
+10-25 17:07:01.669 I/E01     (18120): t=3672ms descarga contenido-v1.zip 3394811 bytes en 1591 ms, sha256=b7828d721900ad3a689cfff5e6b22a89f4b52f934290c3cc4bd982939cfa4416
+10-25 17:07:01.680 I/E01     (18120): t=3684ms actualizador: RECHAZADO: sha256 no coincide (esperado 0000000000000000000000000000000000000000000000000000000000000000, obtenido b7828d721900ad3a689cfff5e6b22a89f4b52f934290c3cc4bd982939cfa4416)
+10-25 17:07:01.911 I/E01     (18120): t=3915ms hybridwebview-agregado
+10-25 17:07:02.147 I/E01     (18120): t=4151ms js-marca 'index-html-cargado' perf.now=196ms
+10-25 17:07:03.898 I/E01     (18120): t=5901ms js-marca 'primer-render v2' perf.now=1998ms
+10-25 17:07:03.967 I/E01     (18120): t=5970ms puente DeviceInfo → {"modulo":"device.info","fabricante":"motorola","modelo":"moto g42","plataforma":"Android","version":"13","contenido":"v2"}

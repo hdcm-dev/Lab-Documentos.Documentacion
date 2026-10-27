@@ -1,0 +1,25 @@
+10-26 23:29:08.583 I/AndroidRuntime(22874): VM exiting with result code 0, cleanup skipped.
+10-26 23:29:09.457 I/FC      (28826): t=82877ms red: sistema sin internet, perfiles []
+10-26 23:29:09.457 I/FC      (28826): t=82877ms red: SinRed (señal SistemaSinRed; sistema sin internet)
+10-26 23:29:09.457 I/FC      (28826): t=82877ms acciones: localidades.guardar=sí, encuesta.enviar=pendiente, outbox.enviarAhora=no, sesion.ingresar=no
+10-26 23:29:32.131 D/AndroidRuntime(29193): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 23:29:32.136 I/AndroidRuntime(29193): Using default boot image
+10-26 23:29:32.136 I/AndroidRuntime(29193): Leaving lock profiling enabled
+10-26 23:29:32.259 D/AndroidRuntime(29193): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 23:29:33.377 D/AndroidRuntime(29193): Shutting down VM
+10-26 23:30:24.389 D/AndroidRuntime(29318): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 23:30:24.394 I/AndroidRuntime(29318): Using default boot image
+10-26 23:30:24.394 I/AndroidRuntime(29318): Leaving lock profiling enabled
+10-26 23:30:24.519 D/AndroidRuntime(29318): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 23:30:25.589 D/AndroidRuntime(29318): Shutting down VM
+10-26 23:30:42.671 D/AndroidRuntime(29370): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 23:30:42.676 I/AndroidRuntime(29370): Using default boot image
+10-26 23:30:42.676 I/AndroidRuntime(29370): Leaving lock profiling enabled
+10-26 23:30:42.810 D/AndroidRuntime(29370): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 23:30:43.890 D/AndroidRuntime(29370): Shutting down VM
+10-26 23:31:09.412 D/AndroidRuntime(29455): >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-26 23:31:09.418 I/AndroidRuntime(29455): Using default boot image
+10-26 23:31:09.418 I/AndroidRuntime(29455): Leaving lock profiling enabled
+10-26 23:31:09.561 D/AndroidRuntime(29455): Calling main entry com.android.commands.uiautomator.Launcher
+10-26 23:31:10.616 D/AndroidRuntime(29455): Shutting down VM
+10-26 23:31:25.130 I/FC      (28826): t=218549ms outbox: encolada f3702b58ed19425a8ac838384d7088da (encuesta-movilidad v1)

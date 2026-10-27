@@ -1,0 +1,3 @@
+Pantalla Diagnóstico del cascarón al final del recorrido: versiones de cascarón, puente, contenido y definición, canal y huella del contrato.
+Emulador fc-android-emu-hpdev (Android 13 API 33 x86_64, WebView 155.0.8059.43, 540x1200 a 420 dpi = 205 dp de ancho), APK Debug android-x64 de A3, canal https://203.0.113.10:8099 (Tailscale, sin túnel), 2026-10-26, 11:46 UTC; receptor arriba.
+Cascarón 1.0.0 (build 1), puente 1.0.0, contenido 1.1.0+5d5c2b4, definición v2 (guardadas v1 y v2), canal dev — https://203.0.113.10:8099/.

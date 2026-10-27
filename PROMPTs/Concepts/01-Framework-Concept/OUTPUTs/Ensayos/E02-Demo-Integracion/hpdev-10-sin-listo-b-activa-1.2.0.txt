@@ -1,0 +1,3 @@
+Segundo arranque: 1.2.0 se activa antes de mostrar y se dibuja, pero NUNCA avisa Listo (queda la marca «pendiente»).
+Emulador fc-android-emu-hpdev (Android 13 API 33 x86_64, WebView 155.0.8059.43, 540x1200 a 420 dpi = 205 dp de ancho), APK Debug android-x64 de A3, canal https://203.0.113.10:8099 (Tailscale, sin túnel), 2026-10-26, 11:43 UTC; receptor arriba.
+logcat-hpdev-10: «activada 1.2.0+5d5c2b4 (desde staging)», «retención: borrada 1.0.0», sin «puente Listo» en todo el proceso.

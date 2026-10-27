@@ -8,6 +8,20 @@ documental que se lee entero, no un artefacto que alguien instala en una versió
 versionado semántico que la guía enseña aplica al software que ese procedimiento libera, no a la
 guía misma.
 
+## [No publicado] - 2026-10-26
+
+### Añadido
+
+- **`PROMPTs/Concepts/01-Framework-Concept/`** — prompt, insumos y salidas del expediente 0001 (Framework Concept: app MAUI autoactualizable sin tienda): bitácoras, ensayos E01–E03 con su evidencia liviana, y el expediente con sus folios. Redactado según S2: la app privada de referencia figura como «una app híbrida de referencia de la organización», las IP internas como direcciones de documentación (RFC 5737) y las rutas locales como marcadores. La guía y la demo que resultan viven en `hdcm-dev/Lab-Documentos` (`Concepts/Framework-Concept/`).
+
+### Delegación del merge (Conformacion-Pull-Request-Automatico 2.0)
+
+- **Fecha:** 2026-10-25. **Decidió:** el responsable del producto (PO). **Asiento:** folio 007 del expediente 0001 de Framework Concept (`PROMPTs/Concepts/01-Framework-Concept/OUTPUTs/Expedientes/0001-Framework-Concept-Maui-Autoactualizable/actuaciones/007-providencia-delegacion-del-merge.md`, en `hdcm-dev/Lab-Documentos.Documentacion`).
+- **Alcance:** los PR del expediente 0001 en `hdcm-dev/Lab-Documentos` y `hdcm-dev/Lab-Documentos.Documentacion`.
+- **Guarda:** techo de espera 60 minutos; intervalo de relectura 30 segundos; estado `clean` y controles de la cabeza en éxito (al menos uno).
+- **Método:** commit de merge atado al SHA de la cabeza, nunca `squash`; la rama remota se borra tras leer que el merge dio.
+- **Excepción:** un cuestionamiento particular del PO sobre la unidad la vuelve manual.
+
 ## [No publicado] - 2026-09-20
 
 ### Añadido

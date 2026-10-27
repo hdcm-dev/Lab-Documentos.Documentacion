@@ -1,0 +1,13 @@
+10-26 23:33:21.656 I/FC      (28826): t=335075ms red: salud ok (HTTP 200)
+10-26 23:33:21.657 I/FC      (28826): t=335076ms red: EnLinea (señal SaludOk; sistema con internet)
+10-26 23:33:21.657 I/FC      (28826): t=335076ms outbox: volvió el servidor; se envía lo pendiente
+10-26 23:33:21.658 I/FC      (28826): t=335077ms acciones: localidades.guardar=sí, encuesta.enviar=sí, outbox.enviarAhora=sí, sesion.ingresar=no
+10-26 23:33:22.227 I/FC      (28826): t=335647ms outbox: f3702b58ed19425a8ac838384d7088da intento 1 → Enviada (HTTP 201 {
+10-26 23:33:22.227 I/FC      (28826):   "clave": "f3702b58ed19425a8ac838384d7088da",
+10-26 23:33:22.227 I/FC      (28826):   "estado": "aceptada",
+10-26 23:33:22.227 I/FC      (28826):   "dueno": "0b278ed9-d37e-45a5-a8f8-4504d440b1ab",
+10-26 23:33:22.227 I/FC      (28826):   "version": 1,
+10-26 23:33:22.227 I/FC      (28826):   "duplicada": false
+10-26 23:33:22.227 I/FC      (28826): })
+10-26 23:34:21.814 I/FC      (28826): t=395233ms red: salud ok (HTTP 200)
+10-26 23:35:21.952 I/FC      (28826): t=455371ms red: salud ok (HTTP 200)

@@ -1,0 +1,3 @@
+Paso a (3/4): vuelta del navegador por el redirect com.frameworkconcept.demo://callback; sesión Activa como «encuestador», aviso «En línea», y la oferta «¿Usar la seguridad del teléfono para entrar?».
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T19:29:04-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado: logcat «sesión: ingresó encuestador (oidc:0b278ed9-…)» y «Ingresando --IngresoExitoso--> Activa»; las acciones pasan de todas «no» a localidades/encuesta/enviarAhora «sí» y sesion.ingresar «no» (Ya ingresaste).

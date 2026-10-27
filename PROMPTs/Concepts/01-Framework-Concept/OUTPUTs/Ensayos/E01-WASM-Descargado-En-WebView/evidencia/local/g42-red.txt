@@ -1,0 +1,29 @@
+    inet 127.0.0.1/8 scope host lo
+    inet 192.0.2.14/24 brd 192.0.2.255 scope global dynamic wlan0
+192.0.2.0/24 dev wlan0 proto kernel scope link src 192.0.2.14 
+13
+    versionName=155.0.8059.43
+Failed to write while dumping service package: Broken pipe
+466
+---host
+    inet 127.0.0.1/8 scope host lo
+    inet 198.51.100.9/24 brd 198.51.100.255 scope global noprefixroute enp1s0
+    inet 203.0.113.10/32 scope global tailscale0
+    inet 198.51.100.10/32 scope global shim0
+    inet 172.30.0.1/16 brd 172.30.255.255 scope global br-3111f5428286
+    inet 198.18.0.1/20 brd 198.18.15.255 scope global br-44e0b3537759
+    inet 172.28.0.1/16 brd 172.28.255.255 scope global br-a43a4ff207a0
+    inet 172.24.0.1/16 brd 172.24.255.255 scope global br-dbd4e9b67c54
+    inet 172.19.0.1/16 brd 172.19.255.255 scope global br-e055741e669f
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-f7055ca75ab5
+    inet 172.21.0.1/16 brd 172.21.255.255 scope global br-29e7e9828a8d
+    inet 172.20.0.1/16 brd 172.20.255.255 scope global br-5de0efd9fe1d
+    inet 172.25.0.1/16 brd 172.25.255.255 scope global br-7911b554f99f
+    inet 172.23.0.1/16 brd 172.23.255.255 scope global br-ad23fd9eeba0
+    inet 172.29.0.1/16 brd 172.29.255.255 scope global br-c47ddf81c877
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+    inet 172.26.0.1/16 brd 172.26.255.255 scope global br-2f038d042d9a
+    inet 172.22.0.1/16 brd 172.22.255.255 scope global br-7661c60028c9
+    inet 172.27.0.1/16 brd 172.27.255.255 scope global br-eaf0453f107d
+    inet 172.31.250.1/24 brd 172.31.250.255 scope global br-8c8024ff378e
+203.0.113.10

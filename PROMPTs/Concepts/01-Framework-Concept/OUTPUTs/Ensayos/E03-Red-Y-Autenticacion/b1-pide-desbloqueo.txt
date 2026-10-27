@@ -1,0 +1,3 @@
+Paso b (1/2): app cerrada (am force-stop) y reabierta: el cascarón pasa a su pantalla propia «Desbloquear» y abre solo el diálogo del sistema (BiometricPrompt). La captura sale negra porque esa ventana es segura.
+emulador fc-android-emu-hpdev (Android 13, API 33, x86_64), adb exec-out screencap -p, 2026-10-26T20:27:07-03:00; APK x64 Debug, canal https://203.0.113.10:8099, emisor https://203.0.113.10:8443/realms/fc-demo
+Comprobado: logcat «sesión: al arrancar Bloqueada» (t=11391ms) y «pantalla propia DesbloqueoPage» (t=25273ms); mCurrentFocus=BiometricPrompt; uiautomator: «Usá la seguridad del teléfono para entrar.», «Touch the fingerprint sensor», «Use PIN» (fc-work/demo/e03/integ/logcat/b1-dialogo-ui.xml). No pide cuenta.

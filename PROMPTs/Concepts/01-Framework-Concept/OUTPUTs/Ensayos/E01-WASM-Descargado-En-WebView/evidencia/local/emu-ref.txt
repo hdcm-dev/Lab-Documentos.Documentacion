@@ -1,0 +1,84 @@
+android-emu-banco-home|/var/lib/docker/volumes/android-emu-banco-home/_data->/home/dev/.android rw=true
+|<repositorio privado de la app de referencia> rw=false
+android-emu-<privado>-sdk|/var/lib/docker/volumes/android-emu-<privado>-sdk/_data->/opt/emu-sdk rw=false
+
+["EMU_API=34","EMU_AVD=banco34","EMU_RAM_MB=3072","EMU_BUILD=10696886","PATH=/opt/emu-sdk/platform-tools:/opt/emu-sdk/emulator:/opt/android-sdk/cmdline-tools/latest/bin:/opt/android-sdk/platform-tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","APP_UID=1654","ASPNETCORE_HTTP_PORTS=8080","DOTNET_RUNNING_IN_CONTAINER=true","DOTNET_VERSION=10.0.11","ASPNET_VERSION=10.0.11","DOTNET_GENERATE_ASPNET_CERTIFICATE=false","DOTNET_NOLOGO=1","DOTNET_SDK_VERSION=10.0.400","DOTNET_USE_POLLING_FILE_WATCHER=true","NUGET_XMLDOC_MODE=skip","POWERSHELL_DISTRIBUTION_CHANNEL=PSDocker-DotnetSDK-Ubuntu-24.04","DEBIAN_FRONTEND=noninteractive","JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64","ANDROID_HOME=/opt/android-sdk","ANDROID_SDK_ROOT=/opt/android-sdk","DOTNET_CLI_TELEMETRY_OPTOUT=1","LANG=es_AR.UTF-8","EMU_SDK=/opt/emu-sdk","DISPLAY=:1"]
+#!/usr/bin/env bash
+# Levanta: SDK del emulador (si falta) -> AVD (si falta) -> Xvfb -> emulador -> x11vnc -> noVNC.
+set -euo pipefail
+
+SDK="${EMU_SDK:-/opt/emu-sdk}"
+API="${EMU_API:-34}"
+IMG="system-images;android-${API};google_apis;x86_64"
+AVD="${EMU_AVD:-<privado>}"
+RAM="${EMU_RAM_MB:-3072}"
+GEOM="${EMU_GEOMETRY:-1080x2400x24}"
+SDKMGR=/opt/android-sdk/cmdline-tools/latest/bin/sdkmanager
+export ANDROID_SDK_ROOT="$SDK" ANDROID_HOME="$SDK" ANDROID_AVD_HOME="$HOME/.android/avd"
+
+log() { echo "[emu $(date +%H:%M:%S)] $*"; }
+
+# 1) SDK agregado, en el volumen. Licencias: las ya aceptadas de la imagen base.
+mkdir -p "$SDK/licenses" "$ANDROID_AVD_HOME"
+cp -n /opt/android-sdk/licenses/* "$SDK/licenses/" 2>/dev/null || true
+if [ ! -x "$SDK/emulator/emulator" ] || [ ! -d "$SDK/system-images/android-${API}/google_apis/x86_64" ] \
+   || [ ! -x "$SDK/platform-tools/adb" ] || [ ! -x "$SDK/cmdline-tools/latest/bin/avdmanager" ]; then
+  log "instalando emulator, platform-tools y $IMG en $SDK (una sola vez)"
+  yes | "$SDKMGR" --sdk_root="$SDK" --licenses >/dev/null 2>&1 || true
+  "$SDKMGR" --sdk_root="$SDK" "cmdline-tools;latest" "emulator" "platform-tools" "platforms;android-${API}" "$IMG"
+fi
+
+# 1b) Emulador fijo en 33.x (build 10696886). El 37.x que instala sdkmanager se cuelga y da
+# segfault en i7infra (i7-3770K, Ivy Bridge, sin AVX2): «detected a hanging thread 'QEMU2 CPU0
+# thread'», con API 34 y con API 30, con ventana y sin ella. El 33.x arranca API 30 en ~33 s.
+EMU_BUILD="${EMU_BUILD:-10696886}"
+EMU_DIR="$SDK/emulator-$EMU_BUILD"
+if [ ! -x "$EMU_DIR/emulator" ]; then
+  log "bajando emulator-linux_x64-$EMU_BUILD.zip"
+  curl -sSL -o /tmp/emu.zip "https://dl.google.com/android/repository/emulator-linux_x64-$EMU_BUILD.zip"
+  rm -rf /tmp/emu-x && unzip -q /tmp/emu.zip -d /tmp/emu-x && mv /tmp/emu-x/emulator "$EMU_DIR" && rm -rf /tmp/emu.zip /tmp/emu-x
+fi
+
+# 2) AVD, en el volumen del home (~/.android).
+if [ ! -f "$ANDROID_AVD_HOME/$AVD.ini" ]; then
+  log "creando AVD $AVD"
+  # avdmanager no acepta --sdk_root y busca las system-images en el SDK donde está instalado:
+  # por eso se usa el de las cmdline-tools instaladas en el volumen, no el de la imagen base.
+  echo no | "$SDK/cmdline-tools/latest/bin/avdmanager" create avd -n "$AVD" -k "$IMG" -d pixel_6 -f
+  cfg="$ANDROID_AVD_HOME/$AVD.avd/config.ini"
+  sed -i '/^hw.ramSize/d;/^hw.keyboard/d;/^hw.gpu/d;/^disk.dataPartition.size/d' "$cfg"
+  printf 'hw.ramSize=%s\nhw.keyboard=yes\nhw.gpu.enabled=yes\nhw.gpu.mode=swiftshader_indirect\ndisk.dataPartition.size=6G\n' "$RAM" >> "$cfg"
+fi
+
+# 2b) Candados de una corrida anterior que murió sin cerrar: sin borrarlos el emulador sale con
+# «Running multiple emulators with the same AVD».
+find "$ANDROID_AVD_HOME/$AVD.avd" -maxdepth 2 -name '*.lock' -exec rm -rf {} + 2>/dev/null || true
+
+# 3) Pantalla virtual.
+rm -f /tmp/.X1-lock /tmp/.X11-unix/X1
+Xvfb :1 -screen 0 "$GEOM" -nolisten tcp &
+for i in $(seq 1 30); do [ -e /tmp/.X11-unix/X1 ] && break; sleep 0.5; done
+export DISPLAY=:1
+
+# 4) Emulador, con ventana dentro del Xvfb.
+log "arrancando emulador ($AVD, ${RAM} MB)"
+"$EMU_DIR/emulator" -avd "$AVD" -gpu swiftshader_indirect -no-audio -no-boot-anim \
+  -no-snapshot-save -memory "$RAM" -accel on -skin 540x1200 &
+EMU_PID=$!
+
+# 5) VNC con contraseña (VNC clásico: sólo cuentan 8 caracteres, por eso es de 8) (de VNC_PASSWORD, que viene del .env) + noVNC en 0.0.0.0:6080.
+: "${VNC_PASSWORD:?falta VNC_PASSWORD (ver .env)}"
+mkdir -p "$HOME/.vnc"
+x11vnc -storepasswd "$VNC_PASSWORD" "$HOME/.vnc/passwd" >/dev/null 2>&1
+unset VNC_PASSWORD
+x11vnc -display :1 -rfbauth "$HOME/.vnc/passwd" -rfbport 5900 -localhost -forever -shared -noxdamage -quiet &
+websockify --web /usr/share/novnc 0.0.0.0:6080 localhost:5900 &
+
+# 6) Esperar el arranque (sólo informativo: el contenedor queda vivo mientras viva el emulador).
+(
+  adb wait-for-device
+  until [ "$(adb shell getprop sys.boot_completed 2>/dev/null | tr -d '\r')" = "1" ]; do sleep 3; done
+  log "sys.boot_completed=1"
+) &
+
+wait "$EMU_PID"
