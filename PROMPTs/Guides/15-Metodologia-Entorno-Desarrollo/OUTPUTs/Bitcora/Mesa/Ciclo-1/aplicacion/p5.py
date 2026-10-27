@@ -107,7 +107,7 @@ R("Todas las del [Anexo A](#anexo-a-plantillas-comentadas), que forman juntas un
 P14_C1 = "1. Antes de mirar E8-1, predecí qué lectores fallan con «BOM para todo». *Respuesta esperada*: cinco —los dos shebangs, `json.load`, `tomllib`, `JSON.parse` y la comparación de `.nvmrc`—, ninguno de .NET (§11.2.1)."
 BEFORE_SECTION_END("### 11.8 Plantilla", "### 11.9 Práctica\n\n" + P14_C1 + "\n2. Copiá la compuerta de N7 (con `check_text_policy.py`) dentro de la solución de N8, corrélas a las dos y explicá cada diferencia. *Respuesta esperada*: la de N7 declara `n/a` el Python, el lock de npm y el de uv, porque los busca en la raíz; `verificar.sh` los encuentra porque tiene las rutas (§10.2.2).")
 # --- Verificación fáctica de la consigna 1 de §11.9 contra E8-1 ---
-E81 = "/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos/Guides/Metodologia-Entorno-Desarrollo/Examples/N8-integracion-poliglota/salidas/E8-1-choque-de-convenciones.txt"
+E81 = "<workspace>/LAB/Lab-Documentos/Guides/Metodologia-Entorno-Desarrollo/Examples/N8-integracion-poliglota/salidas/E8-1-choque-de-convenciones.txt"
 t = open(E81, encoding="utf-8").read()
 secB = t.split("### B.")[1].split("### C.")[0]
 hola_ok = any("hola.sh" in l and l.rstrip().endswith("OK") for l in secB.split("\n"))

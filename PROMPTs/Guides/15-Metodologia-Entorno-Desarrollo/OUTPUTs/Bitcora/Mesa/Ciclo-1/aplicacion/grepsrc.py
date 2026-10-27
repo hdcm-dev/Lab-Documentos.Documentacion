@@ -2,7 +2,7 @@ import sys, re, glob, json
 exec(open("fw.py", encoding="utf-8").read())
 for p in ["p1.py","p2.py","p3.py","p4.py","p5.py","p6.py"]:
     exec(open(p, encoding="utf-8").read())
-B="/home/fernando/workspaces/workspace-dev/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/15-Metodologia-Entorno-Desarrollo/OUTPUTs/Bitcora"
+B="<workspace>/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/15-Metodologia-Entorno-Desarrollo/OUTPUTs/Bitcora"
 files = glob.glob(B+"/Nucleos/*.md") + [B+"/03-Marco-De-Referencia.md", B+"/04-Integracion.md"]
 txt = {f: open(f, encoding="utf-8").read() for f in files}
 strip = lambda s: re.sub(r"[*`]", "", s)
