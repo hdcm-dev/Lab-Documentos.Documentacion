@@ -1,0 +1,22 @@
+# Sistema documentador técnico
+
+> Guía del sistema documentador técnico, versión guia-actual@2026-10-26. Cada entrada apunta a la página en Markdown limpio generado desde la fuente.
+
+## Guía
+
+- [SDT-P01 · Resumen ejecutivo](01-resumen-ejecutivo.md): Este apunte responde a una pregunta concreta: (~215 tokens)
+- [SDT-P02 · 1. Qué es el sitio consultado](02-1-que-es-el-sitio-consultado.md): La URL consultada (limpia de los parámetros de tracking `_gl`, `_ga`, `_gcl_*`, que son de Google Analytics y no cambian el contenido) es: (~1023 tokens)
+- [SDT-P03 · 2. El modelo general: *docs as code*](03-2-el-modelo-general-docs-as-code.md): Write the Docs, la comunidad de referencia de redactores técnicos, lo define así (`writethedocs.org/guide/docs-as-code/`, consultada el 2026-09-16): (~766 tokens)
+- [SDT-P04 · 3. Piezas de un sistema documentador](04-3-piezas-de-un-sistema-documentador.md): Lo observado en OneSignal y en los repos citados se descompone en piezas estables. (~512 tokens)
+- [SDT-P05 · 4. Respuesta a las preguntas planteadas](05-4-respuesta-a-las-preguntas-planteadas.md): **¿Los documentos base son Markdown?** Sí, verificado: (~299 tokens)
+- [SDT-P06 · 5. Audiencias, privilegios y el lugar de la especificación](06-5-audiencias-privilegios-y-el-lugar-de-la-especifi.md): La pregunta cambia de escala cuando el proyecto no es OneSignal sino uno propio: (~2005 tokens)
+- [SDT-P07 · 6. Caso: un panel de control en .NET — Lab-Geometria](07-6-caso-un-panel-de-control-en-net-lab-geometria.md): Las secciones anteriores describen el modelo en abstracto. (~1919 tokens)
+- [SDT-P08 · 7. Propuesta: ayuda por rol en Lab-Geometria](08-7-propuesta-ayuda-por-rol-en-lab-geometria.md): El punto de partida es concreto. (~4136 tokens)
+- [SDT-P09 · 8. La documentación como parte del ciclo de desarrollo](09-8-la-documentacion-como-parte-del-ciclo-de-desarro.md): Las secciones anteriores tratan la documentación como un producto que se escribe, se compila y se publica. (~3119 tokens)
+- [SDT-P10 · 9. Preguntas guía para diseñar un documentador propio](10-9-preguntas-guia-para-disenar-un-documentador-prop.md): 1. (~637 tokens)
+- [SDT-P11 · 10. Observaciones](11-10-observaciones.md): 10. Observaciones (~514 tokens)
+
+## Optional
+
+- [SDT-P12 · 11. Glosario](12-11-glosario.md): 11. Glosario (~621 tokens)
+- [SDT-P13 · 12. Registro de evidencias](13-12-registro-de-evidencias.md): Las consultas de las secciones 1 a 4 se realizaron el 2026-09-16; las de la sección 5, el 2026-09-19; las de las secciones 6 a 8, el 2026-09-19 sobre Lab-Geomet (~1720 tokens)

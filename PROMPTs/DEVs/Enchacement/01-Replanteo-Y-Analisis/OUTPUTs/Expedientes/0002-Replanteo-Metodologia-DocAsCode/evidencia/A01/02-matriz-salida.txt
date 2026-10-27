@@ -1,0 +1,185 @@
+pesos: {'K1 simplicidad': 0.15, 'K2 practicidad': 0.15, 'K3 escalabilidad': 0.15, 'K4 costo de adopción': 0.1, 'K5 doble audiencia': 0.15, 'K6 coherencia SDD': 0.15, 'K7 riesgo de deriva': 0.15} suma 1.0
+
+D01  FIRME  margen 0.60
+  4.25  A Ratificar panel + providencia opción B (K6)
+  3.65  B Ratificar + opción A
+  2.45  C Recomponer el panel
+  se invierte con: ninguna variante
+
+D02  FIRME  margen 1.35
+  4.60  A U0 por repo destino + U1 deuda ampliada, antes del enriquecimiento
+  3.25  C Deuda dentro del enriquecimiento
+  2.65  B Escribir primero, controles después
+  se invierte con: ninguna variante
+
+D03  FIRME  margen 0.70
+  4.30  A Catálogo cerrado de clases
+  3.60  B D1-D8 pieza por pieza en cada proyecto
+  2.75  C Única: mismo repo
+  2.70  D Única: repo dedicado
+  se invierte con: ninguna variante
+
+D04  FIRME  margen 0.70
+  4.30  A Commit / base_commit+base_tag / versión de cuerpo + tag por compuerta
+  3.60  B SHA + SemVer por documento
+  3.05  D Ninguna ancla
+  2.85  C Sólo tag
+  se invierte con: ninguna variante
+
+D05  FIRME  margen 0.65
+  4.40  A Sin sitio versionado; guías sin generador; DocFX sólo sitio técnico .NET
+  3.75  B DocFX para guías y referencia
+  3.15  C MkDocs + Material
+  2.95  D Docusaurus
+  se invierte con: ninguna variante
+
+D06  FIRME  margen 0.80
+  4.45  A Dos carriles + cita por ID calificado + permalink
+  3.65  C Sólo aviso programado
+  3.15  B Compuerta entre repos en cada PR
+  2.45  D Rutas relativas (hoy)
+  se invierte con: ninguna variante
+
+D07  FIRME  margen 1.00
+  4.60  A Obligatorios mínimos + condicionales al sitio; MCP fuera
+  3.60  B Todos obligatorios ya
+  3.50  D Sólo ia-db
+  2.95  C llms.txt como canal principal
+  se invierte con: ninguna variante
+
+D08  FIRME  margen 0.35
+  4.45  A Clases D/P/H; P y H con aprobación explícita
+  4.10  C La delegación cubre también P
+  3.40  B Aprobación explícita en todo PR
+  se invierte con: solo_TP36
+
+D09  FIRME  margen 0.80
+  4.45  A RDA 10 + description; corpus_id/version en README; vocabulario CGT
+  3.65  B Prefijo de producto global + enums nuevos
+  3.65  C Sólo los 9 campos de la carta
+  se invierte con: ninguna variante
+
+D10  FIRME  margen 0.55
+  4.45  A Dos niveles + registro generado + RN-LOC provisionales en la demo
+  3.90  B ID en el XML doc del código
+  3.05  C ruta:constante
+  se invierte con: ninguna variante
+
+D11  FIRME  margen 1.65
+  4.00  A 2651x liviana + Diátaxis/arc42/C4/MADR; guía de estudio por Profile
+  3.95  B Sólo marcos abiertos  [excluida: F6 TP:36 estándares]
+  2.35  C 2651x completa + DITA + 26512
+  se invierte con: ninguna variante
+
+D12  FIRME  margen 0.45
+  3.95  A No comprar; cita sin apartado; compra al evento E2
+  3.50  C No comprar nunca
+  3.35  B Comprar ahora
+  se invierte con: ninguna variante
+
+D13  FIRME  margen 0.75
+  4.15  A Tronco + 4 variantes
+  3.40  B Una sola idéntica
+  2.30  C Una por tipo de sistema
+  se invierte con: ninguna variante
+
+D14  FIRME  margen 0.40
+  4.25  A Cinco fases (1a/1b) + deriva en fase 5 + RRD por perfil
+  3.85  B Seis fases por el lote + RRD
+  3.10  C Sin RRD (NB/CU o sección SDD)
+  se invierte con: ninguna variante
+
+D15  FIRME  margen 1.05
+  4.25  A PR como unidad; expediente por RE §1; Reintegra + A13
+  3.20  C Reintegro a criterio
+  2.60  B Expediente por cada cambio
+  se invierte con: ninguna variante
+
+D16  FIRME  margen 0.95
+  4.45  A Plantilla «Cómo intervenir» + instancia por proyecto
+  3.50  C Sólo plantilla de PR
+  3.35  B Sección en la guía
+  se invierte con: ninguna variante
+
+D17  FIRME  margen 0.60
+  4.30  A Plantilla docs-guard copiada por repo, en el runner
+  4.25  D ubuntu-latest  [excluida: F1 TP:34 runner]
+  3.70  B workflow_call reutilizable
+  2.70  C Workflow central
+  se invierte con: ninguna variante
+
+D18  FIRME  margen 0.95
+  4.45  A Regla de cinco condiciones + K1-K7 + CQ/PE anexos
+  3.50  C Todo avisa
+  3.20  B Todo bloquea
+  se invierte con: ninguna variante
+
+D19  FIRME  margen 0.95
+  4.45  A OpenAPI en build + diff; XML en API; CS1591 por tipo
+  3.50  C CS1591 obligatorio en todo
+  3.20  B OpenAPI sólo en runtime
+  se invierte con: ninguna variante
+
+D20  FIRME  margen 1.20
+  4.30  A Catálogo integrado de clases + flujo
+  3.40  B Sólo toolchain  [excluida: F7 decisión 2 de la presidencia]
+  3.10  C Portal agregador multi-repo
+  se invierte con: ninguna variante
+
+D21  FIRME  margen 1.25
+  4.45  A Fuente IKB + copia fijada + compuerta; vendor git archive en SDD-B
+  3.20  B Referencia sin copia
+  3.00  C Submódulo
+  2.90  D Copias libres (hoy)
+  se invierte con: ninguna variante
+
+D22  FIRME  margen 1.15
+  4.55  A Conocimiento + compuerta + Momento 2; nada nuevo del SDD-B
+  3.40  C Importar ya tres piezas del SDD-B
+  2.60  B Fase o subagente nuevo
+  se invierte con: ninguna variante
+
+D23  FIRME  margen 0.30
+  3.85  A Apartamiento ADR + ADR de diseño PO + propuesta al lote (E3)
+  3.55  C Sólo apartamiento
+  3.30  B Cambio de norma ya
+  se invierte con: ninguna variante
+
+D24  FIRME  margen 0.40
+  3.75  A Migrar a 13.22 antes, unidad propia
+  3.35  B Piloto sobre 13.16
+  2.85  C Migración selectiva
+  se invierte con: solo_TP36
+
+D25  CON REVISIÓN  margen 0.20
+  4.00  A Examples/ + source.lock SHA; código por propuesta a Lab-E2E
+  3.80  B Junto al código (Lab-E2E.WebBlazor/docs/)
+  3.05  C Híbrido con agregador
+  se invierte con: ninguna variante
+
+D26  FIRME  margen 1.10
+  4.60  A Folio de criterios previo + paquete G-a..G-g + resolución en 0002
+  3.50  C Criterios fijados al cerrar
+  3.30  B Expediente propio por repo de escalón
+  se invierte con: ninguna variante
+
+D27  FIRME  margen 1.50
+  4.20  A Cuerpo documental, 7 temas, 3 rutas
+  3.50  B Archivo único enriquecido  [excluida: F8 TP:67-68 Profile]
+  2.70  C Archivo único + satélites
+  se invierte con: ninguna variante
+
+D28  FIRME  margen 1.00
+  4.30  A APA 7 castellano + fecha siempre + anexo ref-
+  3.30  C IEEE numérico / ISO 690 sin estilo
+  3.20  B Cita por dominio (hoy)
+  se invierte con: ninguna variante
+
+D29  FIRME  margen 0.60
+  4.25  A Elevar al lote; default sin tocar el Profile
+  3.65  B Elevar y esperar
+  3.40  C Modificar el Profile  [excluida: F4 PROMPTs del PO]
+  se invierte con: ninguna variante
+
+FIRME: D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D26 D27 D28 D29
+CON REVISIÓN: D25

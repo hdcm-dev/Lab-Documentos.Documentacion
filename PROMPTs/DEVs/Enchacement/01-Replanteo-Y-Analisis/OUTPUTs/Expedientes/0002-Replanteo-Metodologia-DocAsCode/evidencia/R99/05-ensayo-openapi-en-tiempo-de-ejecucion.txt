@@ -1,0 +1,7 @@
+Método: git archive 8fb4c3a src (Lab-E2E.WebBlazor) a un directorio de ensayo; docker run --rm mcr.microsoft.com/dotnet/sdk:10.0;
+  ASPNETCORE_ENVIRONMENT=Development; dotnet build -c Release; se arranca la DLL de MovilidadUrbana.ApiWeb y se pide
+  GET http://127.0.0.1:5099/openapi/v1.json. Sin tocar el .csproj (que en 8fb4c3a no referencia ApiDescription.Server;
+  sí trae GenerateDocumentationFile=true y NoWarn CS1591, líneas 10-11). Fecha: 2026-10-26. Quién: R99.
+Resultado: build 0 errores (20,4 s, NuGet en frío); curl_exit=0; HTTP 200; paths=5, operaciones=8; tiempo total del contenedor 26 s.
+Huella del JSON obtenido (sha256, 16 primeros): 3aa29bb91b005150. El JSON no se conserva (se borró con el directorio de ensayo).
+Lectura: la condición (b) de D25 (no poder emitir el contrato sin tocar el .csproj) no se da si se acepta extraer en ejecución.

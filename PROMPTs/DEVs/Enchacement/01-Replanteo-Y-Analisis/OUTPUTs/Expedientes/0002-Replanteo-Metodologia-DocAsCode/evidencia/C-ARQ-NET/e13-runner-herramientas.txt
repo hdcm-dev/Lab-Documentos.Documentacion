@@ -1,0 +1,17 @@
+dotnet: /usr/share/dotnet/dotnet
+python3: /usr/bin/python3
+pip3: /usr/bin/pip3
+node: /usr/local/bin/node
+npm: /usr/local/bin/npm
+java: /usr/lib/jvm/java-21-openjdk-amd64/bin/java
+docker: /usr/bin/docker
+git: /usr/bin/git
+8.0.426 [/usr/share/dotnet/sdk]
+10.0.402 [/usr/share/dotnet/sdk]
+
+Installed Workload Id      Manifest Version       Installation Source
+---------------------------------------------------------------------
+maui-android               10.0.110/10.0.100      SDK 10.0.400       
+Python 3.12.3
+venv ok
+v24.19.0

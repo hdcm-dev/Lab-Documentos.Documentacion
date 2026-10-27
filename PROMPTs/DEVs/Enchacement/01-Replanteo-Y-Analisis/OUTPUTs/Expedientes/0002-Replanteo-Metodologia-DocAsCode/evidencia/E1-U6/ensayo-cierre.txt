@@ -1,0 +1,12 @@
+# Ensayo de cierre E1-U6 (2026-10-27)
+## git diff --stat origin/main...HEAD
+ ...sta-Expediente-Documentacion-Desde-El-Codigo.md | 103 +++++++++++++++++++++
+ 1 file changed, 103 insertions(+)
+## archivos fuera de docs/propuestas (debe estar vacío)
+## barrido S2 (debe estar vacío)
+(fin)
+## Guarda CPA (PR #12, head 83542ab)
+09:53:29 st=unstable n=1 enc=1 ... 09:59:16 st=clean mg=true n=1 enc=0 mal=0
+CI success
+MSHA=59399ba6678c56c3219988a5f9666fc4e0047160
+rama=404 ; 83542ab alcanzable desde origin/main

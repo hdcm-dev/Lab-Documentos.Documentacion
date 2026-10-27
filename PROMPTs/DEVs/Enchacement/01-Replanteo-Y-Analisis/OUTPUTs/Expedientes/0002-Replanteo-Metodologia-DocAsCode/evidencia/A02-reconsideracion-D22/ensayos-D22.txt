@@ -1,0 +1,38 @@
+Ensayos del despacho A02 (reconsideración de D22) — 2026-10-26
+Alias: <SDD-B> = raíz del repositorio de código del servicio de notificaciones push (privado), commit 9641e74 (2026-10-21).
+Intermedios en una carpeta de trabajo fuera del workspace, borrada al terminar. Sólo se registran recuentos, nunca contenido.
+
+R-A1 · Techo de tamaño del conocimiento de la mesa (norma: <SDD-B>/Prompts/Agentes/_reglas_base_conocimiento.md §4.6, :164-171)
+  $ awk '/^## 10\./{exit} {print}' <SDD-B>/Prompts/Conocimientos/Knowledge-Mesa-De-Expertos-A-Pedido.md | wc -c
+  99841          (techo `propio`: 100000 B, medido sin §10 -> margen 159 B; el §0 no declara la excepción de §5)
+  $ wc -c ...Knowledge-Mesa-De-Expertos-A-Pedido.md      -> 122632 (con §10)
+  $ cabecera + §0 (nivel 1)                               -> 9134 B (techo 12000 B)
+
+R-A2 · El barrido de la mesa toma una fila nueva del índice sin tocar la mesa (K-Mesa §3.4 y §5.1, barrido literal)
+  Copia de <SDD-B>/Prompts/Conocimientos/Index-Knowledge.md + 1 fila simulada (alias provisional DocAsCode-Doble-Audiencia, Consumidor transversal, Estado Propuesto)
+  $ grep '^| `Knowledge-' Index-Knowledge.md | cut -d'|' -f3,5,11 | grep -ci documenta   (original)  -> 0
+  $ ... | grep -i DocAsCode   (con la fila)  -> 1 línea: `DocAsCode-Doble-Audiencia` | Documentación como código para dos audiencias...
+  filas Knowledge-: 18 -> 19
+
+R-A3 · Cambio propuesto a <SDD-B>/Prompts/Agentes/_convenciones_comunes.md §5 (cuarta vía), aplicado sobre una copia
+  $ diff original copia  -> 74c74,77 (1 línea -> 4; +326 B; 44214 -> 44540 B)
+  K2 (ningún archivo de Prompts/Agentes nombra un documento del catálogo, _reglas_base_conocimiento.md :160-162):
+  $ for a in <19 alias>; do grep -l "$a" agregado.txt; done ; grep -c Knowledge- agregado.txt  -> sin coincidencias; 0
+  Observable para E3: grep -c "verificación mecánica de la documentación" <SDD-B>/Prompts/Agentes/_convenciones_comunes.md : hoy 0, aplicado 1
+
+R-A4 · Compuerta anti-inyección de F017 (evidencia/C-AGENTES-IA/herramientas/agent_channels.py check) sobre una copia de <SDD-B>
+  Prompts/Agentes (30 .md)        rc=1  23 hallazgos: 21 C2-invisibles + 2 C3-frase-a-agente
+      los 21 C2 son U+FEFF y los 21 están al inicio del archivo (BOM) -> falsos positivos
+  Prompts/Conocimientos           rc=1  166 hallazgos: 78 C1-comentario-html + 88 C5-html-oculto
+      por regex, C1: 78 dentro de bloques de código, 0 fuera; C5: 95 coincidencias en bloque, 4 fuera (esqueletos HTML de las plantillas)
+  docs/ (103 carpetas, 742 .md)   66 C1 + 1 C3 + 1 C5 = 68 hallazgos (C1: 11 en bloque, 55 fuera)
+  Total: 257 hallazgos; el CI del SDD-B quedaría en rojo el primer día si K1 entra en modo bloqueante.
+
+R-A5 · Runners (sin nombrar la etiqueta privada)
+  <SDD-B>/.github/workflows/ci.yml:38 y otros cinco jobs: runner autoalojado de su propia organización (etiqueta propia, no i7infra-dev)
+  <SDD-B>/.github/workflows/crear-etiqueta.yml:200: usa python3 en ese runner -> python3 disponible (evidencia indirecta)
+  <SDD-B.Doc>/.github/workflows/verificar.yml:10: runs-on: ubuntu-latest (alojado por GitHub)
+
+R-A6 · Precedente de propuesta a las convenciones sin aplicar
+  <SDD-B>/docs/expedientes/0041-…/actuaciones/007-propuesta.md :10 y §4 (:126-172): propuesta a _convenciones_comunes.md §10, «sin aplicar», con SI NO RESPONDÉS
+  $ grep -n "prescribió y falla" <SDD-B>/Prompts/Agentes/_convenciones_comunes.md  -> sin salida (versión vigente 1.7, 2026-10-08, :3-5)

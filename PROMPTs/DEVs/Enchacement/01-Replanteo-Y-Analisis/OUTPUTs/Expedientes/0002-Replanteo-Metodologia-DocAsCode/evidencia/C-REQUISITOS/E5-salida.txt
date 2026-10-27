@@ -1,0 +1,15 @@
+# Ensayo E5 — verificación de Q01 sobre el folio 004 (2026-10-26)
+9bedbdf9fba78b4b
+lectores=2: 27 preguntas
+lectores=3: 17 preguntas
+lectores=4: 2 preguntas
+preguntas en la tabla: 46
+postergados contados como lectores (debe ser 0): 0
+filas del panel que cuentan en el techo: 5
+providencia posterior al 004 que asiente la opción B (K6):
+001-providencia-apertura.md
+002-presentacion-del-caso.md
+003-propuesta-de-panel.md
+004-acta-jurado-composicion.md
+0060-informe-marcos-sdd-de-mercado.md
+0070-informe-complementos-de-industria.md

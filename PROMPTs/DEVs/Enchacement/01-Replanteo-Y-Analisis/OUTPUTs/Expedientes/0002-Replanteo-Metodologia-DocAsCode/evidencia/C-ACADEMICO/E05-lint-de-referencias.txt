@@ -1,0 +1,11 @@
+# reflint.py, 2026-10-26
+## Dot-NET-Arquitectura-Guide.md (Anexo E)
+referencias: 51; con algún defecto de formato: 0
+citadas en el texto: 51; citadas sin entrada: []; entradas nunca citadas: 0 []
+## Sistema-Documentador-Tecnico-Guide.md
+referencias: 0; con algún defecto de formato: 0
+citadas en el texto: 0; citadas sin entrada: []; entradas nunca citadas: 0 []
+## Prueba negativa (archivo sintético neg.md, 3 líneas)
+referencias: 2; con algún defecto de formato: 1
+   ref-lacan -> sin año o s. f., sin título en cursiva, URL sin fecha de consulta
+citadas en el texto: 2; citadas sin entrada: ['ref-x']; entradas nunca citadas: 1 ['ref-ok']

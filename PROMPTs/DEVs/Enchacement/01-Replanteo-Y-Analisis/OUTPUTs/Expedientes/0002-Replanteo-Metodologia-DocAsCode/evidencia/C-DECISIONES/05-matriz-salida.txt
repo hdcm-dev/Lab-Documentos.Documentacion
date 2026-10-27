@@ -1,0 +1,392 @@
+ensayo: matriz de decisión ponderada, sensibilidad ±10 % por peso, barrido 0,10–0,40 y punto de inversión
+fecha-hora: 2026-10-26T15:14:36-03:00 (segunda corrida: suma Q17 y Q46; las 12 filas de la primera corrida no cambiaron)
+comando: docker run --rm -u <uid>:<gid> -v <dir de ensayo>:/w:ro -w /w python:3.12-slim python3 -I matriz.py
+imagen: python:3.12-slim id ec7d6c95cd36
+pesos: 01-pesos-asentados.md, sha256 627d7e61fdfbffe97ae47155b3fba7d1e5c15ddc6d81bc835af8e070790de5a3 (igual a 02-huella-pesos.txt)
+guion: 05b-matriz.py.txt, sha256 6ef93c9bb4420223f6ad538153100c942ae886adcc645603643eb8fa433b7c4e
+salida sha256: 0e83ee39564f1a03b4c0022b5a739141c3ad5889aacd5d25af92c6dba92d70ac
+--- salida ---
+{
+ "Q03": {
+  "ranking": [
+   [
+    4.25,
+    "A4 por pieza D1-D8"
+   ],
+   [
+    3.25,
+    "A3 híbrido agregado único"
+   ],
+   [
+    2.75,
+    "A1 única mismo repo"
+   ],
+   [
+    2.25,
+    "A2 única dedicado"
+   ]
+  ],
+  "ganador": "A4 por pieza D1-D8",
+  "margen": 1.0,
+  "inversiones_10pct": [],
+  "barrido_inversion": [],
+  "puntos_de_celda_para_invertir": 4.0,
+  "decision": "FIRME"
+ },
+ "Q06": {
+  "ranking": [
+   [
+    3.75,
+    "B2 aviso programado"
+   ],
+   [
+    3.5,
+    "B3 aviso en PR + programado"
+   ],
+   [
+    2.25,
+    "B1 compuerta cross-repo en PR"
+   ]
+  ],
+  "ganador": "B2 aviso programado",
+  "margen": 0.25,
+  "inversiones_10pct": [],
+  "barrido_inversion": [],
+  "puntos_de_celda_para_invertir": 1.0,
+  "decision": "CON REVISION"
+ },
+ "Q08": {
+  "ranking": [
+   [
+    4.0,
+    "C3 copia fiel con versión y huella + compuerta"
+   ],
+   [
+    3.25,
+    "C1 fuente única por ruta"
+   ],
+   [
+    2.75,
+    "C4 copias libres"
+   ],
+   [
+    2.75,
+    "C2 submódulo"
+   ]
+  ],
+  "ganador": "C3 copia fiel con versión y huella + compuerta",
+  "margen": 0.75,
+  "inversiones_10pct": [],
+  "barrido_inversion": [],
+  "puntos_de_celda_para_invertir": 3.0,
+  "decision": "FIRME"
+ },
+ "Q09": {
+  "ranking": [
+   [
+    4.0,
+    "D4 ritmo propio + tag por compuerta de escalón"
+   ],
+   [
+    3.75,
+    "D3 CalVer por merge"
+   ],
+   [
+    3.75,
+    "D2 ritmo propio, ancla SHA"
+   ],
+   [
+    3.75,
+    "D1 SemVer + changelog por versión"
+   ]
+  ],
+  "ganador": "D4 ritmo propio + tag por compuerta de escalón",
+  "margen": 0.25,
+  "inversiones_10pct": [],
+  "barrido_inversion": [],
+  "puntos_de_celda_para_invertir": 1.0,
+  "decision": "CON REVISION"
+ },
+ "Q13": {
+  "ranking": [
+   [
+    4.0,
+    "E2 delegación + guarda G1-G4 + reservas"
+   ],
+   [
+    3.25,
+    "E1 aprobación humana por PR"
+   ]
+  ],
+  "ganador": "E2 delegación + guarda G1-G4 + reservas",
+  "margen": 0.75,
+  "inversiones_10pct": [],
+  "barrido_inversion": [],
+  "puntos_de_celda_para_invertir": 3.0,
+  "decision": "FIRME"
+ },
+ "Q19": {
+  "ranking": [
+   [
+    4.25,
+    "G2 tronco común + variantes declaradas"
+   ],
+   [
+    3.25,
+    "G1 una sola idéntica"
+   ],
+   [
+    2.25,
+    "G3 una por tipo de sistema"
+   ]
+  ],
+  "ganador": "G2 tronco común + variantes declaradas",
+  "margen": 1.0,
+  "inversiones_10pct": [],
+  "barrido_inversion": [],
+  "puntos_de_celda_para_invertir": 4.0,
+  "decision": "FIRME"
+ },
+ "Q22": {
+  "ranking": [
+   [
+    4.0,
+    "H2 plantilla versionada instanciada por repo"
+   ],
+   [
+    3.5,
+    "H3 uno a mano por repo"
+   ],
+   [
+    2.25,
+    "H1 un workflow central multi-repo"
+   ]
+  ],
+  "ganador": "H2 plantilla versionada instanciada por repo",
+  "margen": 0.5,
+  "inversiones_10pct": [],
+  "barrido_inversion": [],
+  "puntos_de_celda_para_invertir": 2.0,
+  "decision": "FIRME"
+ },
+ "Q23": {
+  "ranking": [
+   [
+    4.25,
+    "J3 regla de clasificación"
+   ],
+   [
+    3.5,
+    "J2 todo avisa"
+   ],
+   [
+    2.75,
+    "J1 todo bloquea"
+   ]
+  ],
+  "ganador": "J3 regla de clasificación",
+  "margen": 0.75,
+  "inversiones_10pct": [],
+  "barrido_inversion": [],
+  "puntos_de_celda_para_invertir": 3.0,
+  "decision": "FIRME"
+ },
+ "Q26": {
+  "ranking": [
+   [
+    3.75,
+    "DocFX"
+   ],
+   [
+    3.5,
+    "Render embebido (PoC)"
+   ],
+   [
+    3.25,
+    "Docusaurus"
+   ],
+   [
+    3.0,
+    "MkDocs + Material"
+   ],
+   [
+    2.75,
+    "Estático simple"
+   ]
+  ],
+  "ganador": "DocFX",
+  "margen": 0.25,
+  "inversiones_10pct": [],
+  "barrido_inversion": [
+   [
+    "K1",
+    0.4,
+    "Render embebido (PoC)"
+   ],
+   [
+    "K2",
+    0.4,
+    "Render embebido (PoC)"
+   ],
+   [
+    "K3",
+    0.1,
+    "Render embebido (PoC)"
+   ]
+  ],
+  "puntos_de_celda_para_invertir": 1.0,
+  "decision": "CON REVISION"
+ },
+ "Q30": {
+  "ranking": [
+   [
+    4.0,
+    "L3 fuente IKB + copia con cierre y huella"
+   ],
+   [
+    3.5,
+    "L4 fuente IA.SDD + copia en IKB"
+   ],
+   [
+    3.25,
+    "L2 sólo IA.SDD/Conocimiento"
+   ],
+   [
+    3.25,
+    "L1 sólo KB-privada"
+   ]
+  ],
+  "ganador": "L3 fuente IKB + copia con cierre y huella",
+  "margen": 0.5,
+  "inversiones_10pct": [],
+  "barrido_inversion": [],
+  "puntos_de_celda_para_invertir": 2.0,
+  "decision": "FIRME"
+ },
+ "Q32": {
+  "ranking": [
+   [
+    3.75,
+    "M3 apartamiento con ADR + propuesta de norma al lote"
+   ],
+   [
+    3.5,
+    "M2 cambio de norma"
+   ],
+   [
+    3.25,
+    "M1 apartamiento con ADR"
+   ]
+  ],
+  "ganador": "M3 apartamiento con ADR + propuesta de norma al lote",
+  "margen": 0.25,
+  "inversiones_10pct": [],
+  "barrido_inversion": [
+   [
+    "K2",
+    0.1,
+    "M2 cambio de norma"
+   ]
+  ],
+  "puntos_de_celda_para_invertir": 1.0,
+  "decision": "CON REVISION"
+ },
+ "Q17": {
+  "ranking": [
+   [
+    4.5,
+    "P1 2651x liviana + marcos abiertos"
+   ],
+   [
+    4.25,
+    "P2 sólo marcos abiertos"
+   ],
+   [
+    2.5,
+    "P3 2651x completa + DITA + 26512"
+   ]
+  ],
+  "ganador": "P1 2651x liviana + marcos abiertos",
+  "margen": 0.25,
+  "inversiones_10pct": [],
+  "barrido_inversion": [],
+  "puntos_de_celda_para_invertir": 1.0,
+  "decision": "CON REVISION"
+ },
+ "Q46": {
+  "ranking": [
+   [
+    4.25,
+    "No comprar; índice rotulado"
+   ],
+   [
+    4.0,
+    "Comprar al ocurrir el evento"
+   ],
+   [
+    4.0,
+    "Comprar ahora"
+   ]
+  ],
+  "ganador": "No comprar; índice rotulado",
+  "margen": 0.25,
+  "inversiones_10pct": [],
+  "barrido_inversion": [
+   [
+    "K2",
+    0.1,
+    "Comprar ahora"
+   ],
+   [
+    "K4",
+    0.34,
+    "Comprar ahora"
+   ]
+  ],
+  "puntos_de_celda_para_invertir": 1.0,
+  "decision": "CON REVISION"
+ },
+ "Q33": {
+  "ranking": [
+   [
+    3.75,
+    "N1 migrar a 13.22 antes"
+   ],
+   [
+    3.5,
+    "N2 correr sobre 13.16"
+   ],
+   [
+    2.75,
+    "N3 migración selectiva"
+   ]
+  ],
+  "ganador": "N1 migrar a 13.22 antes",
+  "margen": 0.25,
+  "inversiones_10pct": [],
+  "barrido_inversion": [
+   [
+    "K1",
+    0.4,
+    "N2 correr sobre 13.16"
+   ],
+   [
+    "K2",
+    0.34,
+    "N2 correr sobre 13.16"
+   ],
+   [
+    "K3",
+    0.1,
+    "N2 correr sobre 13.16"
+   ],
+   [
+    "K4",
+    0.1,
+    "N2 correr sobre 13.16"
+   ]
+  ],
+  "puntos_de_celda_para_invertir": 1.0,
+  "decision": "CON REVISION"
+ }
+}

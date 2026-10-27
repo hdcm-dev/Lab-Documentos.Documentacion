@@ -1,0 +1,42 @@
+Método: docker inspect (variables no secretas y archivo .runner sin credenciales) y docker logs --since 72h del contenedor del runner con etiqueta i7infra-dev. Fecha: 2026-10-26. Quién: R99. Nombres de organización omitidos a propósito.
+Runner i7infra-dev: RUNNER_SCOPE=org (organización de los repos Lab-*, IA.*), EPHEMERAL=true, LABELS=i7infra,i7infra-dev,dotnet,maui-android, 4 CPU, 8 GB, único volumen persistente /cache, sin /var/run/docker.sock.
+El repositorio del SDD-B pertenece a OTRA organización; sus workflows usan otra etiqueta self-hosted (ci.yml:38 y otros del SDD-B), no i7infra-dev.
+Herramientas presentes en el runner: dotnet 8/10 + maui-android, python3, node 24, git; NO lychee, markdownlint, docfx (ver también evidencia/C-ARQ-NET/e13).
+
+Ciclo efímero medido en el log (fin de un job -> 'Listening for Jobs' del siguiente registro):
+2026-10-26 08:48:16Z: Running job: Publicar la aplicación
+2026-10-26 08:51:01Z: Job Publicar la aplicación completed with result: Succeeded
+2026-10-26 08:51:58Z: Listening for Jobs
+2026-10-26 08:52:25Z: Running job: Preparar matriz
+2026-10-26 08:52:52Z: Job Preparar matriz completed with result: Succeeded
+2026-10-26 08:53:49Z: Listening for Jobs
+2026-10-26 08:54:00Z: Running job: Pruebas (webkit · shard 2)
+2026-10-26 08:54:36Z: Job Pruebas (webkit · shard 2) completed with result: Failed
+2026-10-26 08:55:32Z: Listening for Jobs
+2026-10-26 08:55:44Z: Running job: Pruebas (webkit · shard 1)
+2026-10-26 08:56:20Z: Job Pruebas (webkit · shard 1) completed with result: Failed
+2026-10-26 08:57:17Z: Listening for Jobs
+2026-10-26 08:57:28Z: Running job: Pruebas (mobile-chrome · shard 2)
+2026-10-26 08:58:03Z: Job Pruebas (mobile-chrome · shard 2) completed with result: Failed
+2026-10-26 08:58:59Z: Listening for Jobs
+2026-10-26 08:59:10Z: Running job: Pruebas (firefox · shard 2)
+2026-10-26 08:59:46Z: Job Pruebas (firefox · shard 2) completed with result: Failed
+2026-10-26 09:00:43Z: Listening for Jobs
+2026-10-26 09:00:54Z: Running job: Pruebas (chromium · shard 2)
+2026-10-26 09:01:30Z: Job Pruebas (chromium · shard 2) completed with result: Failed
+2026-10-26 09:02:27Z: Listening for Jobs
+2026-10-26 09:02:38Z: Running job: Pruebas (mobile-chrome · shard 1)
+2026-10-26 09:03:16Z: Job Pruebas (mobile-chrome · shard 1) completed with result: Failed
+2026-10-26 09:04:12Z: Listening for Jobs
+2026-10-26 09:04:23Z: Running job: Pruebas (firefox · shard 1)
+2026-10-26 09:04:58Z: Job Pruebas (firefox · shard 1) completed with result: Failed
+2026-10-26 09:05:54Z: Listening for Jobs
+2026-10-26 09:06:05Z: Running job: Pruebas (chromium · shard 1)
+2026-10-26 09:06:40Z: Job Pruebas (chromium · shard 1) completed with result: Failed
+2026-10-26 09:07:37Z: Listening for Jobs
+2026-10-26 09:07:48Z: Running job: Reporte unificado
+2026-10-26 09:08:28Z: Job Reporte unificado completed with result: Failed
+2026-10-26 09:09:24Z: Listening for Jobs
+
+Lectura: ~56-57 s entre fin de job y nuevo registro, ~11 s hasta tomar el siguiente; una corrida E2E diaria = 11 jobs, ~20 min de ocupación.
+Lab-E2E.WebBlazor: commit db775c5 «Pasar los workflows a runners de GitHub y dejar el propio como ejemplo»; ci.yml:40-41 comenta [self-hosted, i7infra-dev] y usa ubuntu-latest.

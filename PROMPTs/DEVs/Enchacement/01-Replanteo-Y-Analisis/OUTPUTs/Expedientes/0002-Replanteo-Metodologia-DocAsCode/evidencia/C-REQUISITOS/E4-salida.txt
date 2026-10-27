@@ -1,0 +1,15 @@
+# Ensayo E4 — versiones de un mismo conocimiento: IA.SDD/Conocimiento frente a KB-privada (2026-10-26)
+IA.SDD d4035aa 2026-10-23 · KB-privada 1585af9 2026-10-25
+Knowledge-Cadena-De-Consecuencias | IA.SDD 1.0 | KB 2.0
+Knowledge-Clean-Architecture-DataManager | IA.SDD 1.0 | KB 2.1
+Knowledge-Conformacion-Pull-Request-Automatico | IA.SDD 1.0 | KB 2.0
+Knowledge-Conformacion-Pull-Request-Manual | IA.SDD 1.0 | KB 2.0
+Knowledge-Entorno-De-Ejecucion-Del-Agente | IA.SDD 1.0 | KB 2.0
+Knowledge-Excepcion-A-Un-Conocimiento | IA.SDD 1.0 | KB 2.0
+Knowledge-Mesa-De-Expertos-A-Pedido | IA.SDD 2.0 | KB 3.1
+Knowledge-Template-Blazor-Interactive-Server-SDD-Default | IA.SDD 1.0 | KB 2.0
+Knowledge-Template-HTML-SDD-Default | IA.SDD 1.0 | KB 2.0
+Total: 9 · con versión distinta: 9
+## Contenido (diff de líneas) de dos copias
+Knowledge-Mesa-De-Expertos-A-Pedido: IA.SDD 580 l. · KB 608 l. · líneas que difieren: 396 · Hereda-de/Sustituye en la copia: **Hereda-de:** — **Sustituye:** —
+Knowledge-Cadena-De-Consecuencias: IA.SDD 160 l. · KB 197 l. · líneas que difieren: 139 · Hereda-de/Sustituye en la copia: **Hereda-de:** — **Sustituye:** —

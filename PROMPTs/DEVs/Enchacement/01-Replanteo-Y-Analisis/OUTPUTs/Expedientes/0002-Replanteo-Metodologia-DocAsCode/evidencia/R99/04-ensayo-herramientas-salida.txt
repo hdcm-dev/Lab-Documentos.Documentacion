@@ -1,0 +1,12 @@
+Método: docker run --rm --entrypoint bash --cpus 4 --memory 8g sobre la imagen del runner i7infra-dev (sin registrarlo), montajes de sólo lectura: guía (/g) y herramientas de C-VERIFICACION (/h). Fecha: 2026-10-26. Quién: R99.
+Dos corridas en frío consecutivas:
+mermaid exit=0
+242M	node_modules
+install_lychee=0.9 install_npm=16.1 run=2.6 total=19.6
+wall_container=21 s
+mermaid exit=0
+242M	node_modules
+install_lychee=1.0 install_npm=13.3 run=2.8 total=17.0
+wall_container=18 s
+
+lychee exit=2 sobre la guía: enlaces rotos vigentes (esperado hasta U1). node_modules 242M por corrida (no persiste: el runner sólo conserva /cache).

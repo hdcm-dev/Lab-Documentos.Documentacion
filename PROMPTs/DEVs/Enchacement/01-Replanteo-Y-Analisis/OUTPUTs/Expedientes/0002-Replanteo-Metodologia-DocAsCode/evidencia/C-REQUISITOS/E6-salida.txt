@@ -1,0 +1,18 @@
+## Ensayo E6 — PR auxiliar de Geometría y workflow de Concepts (2026-10-26)
+refs del remoto (Lab-Geometria.Documentacion):
+0202722 refs/heads/main
+4cdfd5e refs/pull/1/head
+27291b1 refs/pull/2/head
+4c03e40 refs/pull/2/merge
+b47d22b refs/pull/3/head
+3783ab1 refs/pull/3/merge
+runs-on de verificar.yml en la rama del PR #2:
+14:    runs-on: ubuntu-latest
+Lab-Documentos 5d5c2b4 2026-10-11 · git status de .github/:
+?? .github/
+runs-on en framework-concept-demo.yml:
+7:#   P6.4  runs-on [self-hosted, i7infra-dev] con guarda de mismo repositorio (un PR desde un fork no corre en
+42:    runs-on: [self-hosted, i7infra-dev]
+87:    runs-on: [self-hosted, i7infra-dev]
+148:    runs-on: [self-hosted, i7infra-dev]
+168:    runs-on: [self-hosted, i7infra-dev]

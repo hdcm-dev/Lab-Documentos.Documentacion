@@ -1,0 +1,53 @@
+# quotes.py: citas literales de la guía contra la página actual (descargas del 2026-10-26)
+R03	SI	A push to the production branch triggers a deployment
+R03	SI	find broken links, check accessibility, validate OpenAPI specs
+R04	SI	Reference any number of OpenAPI specifications in the navigation element of your docs.json to create pages for your API endpoints
+R04	SI	Generated endpoint pages have these default metadata values
+R05	NO	Documentation as Code (Docs as Code) refers to a philosophy that you should be writing documentation with the same tools as code
+R05	SI	following the same workflows as development teams, and being integrated in the product team
+R06	NO	four distinct needs, and four corresponding forms of documentation - tutorials, how-to guides, technical reference and explanation
+R07	SI	an open source framework for building developer portals
+R08	SI	homegrown docs-like-code solution
+R08	SI	Engineers write their documentation in Markdown files which live together with their code
+R08	SI	from the Service's page in Backstage Catalog
+R09	SI	Users must belong to at least one of the listed groups to access the page
+R09	SI	they'll receive a 404 error
+R10	SI	in the project repository under doc/arch/adr-NNN.md
+R10	SI	a conversation with a future developer
+R13	SI	groups control visibility but do not restrict access to a page
+R13	SI	Use authentication to restrict access to sensitive content
+R14	SI	Most of the time, you don't need versioning as it will just increase your build time, and introduce complexity to your codebase
+R14	NO	linking to immutable standalone deployment
+R15	SI	isn't an infallible way to detect the user's preferred language
+R15	SI	a production app should include a way for a user to customize their choice of culture
+R15	SI	Generally, only localize text, not HTML
+R15	SI	if not found, it reverts to the parent culture
+R17	SI	the last time the article was substantially edited or guaranteed fresh
+R17	SI	Identifies the article's owner
+R18	SI	Keep an Unreleased section at the top to track upcoming changes
+R18	SI	for soon-to-be removed features
+R19	SI	Static site generator for .NET API documentation
+R20	SI	A fast, powerful, CommonMark compliant, extensible Markdown processor for .NET
+TOTAL 26/29
+
+# status.txt (curl -L, 2026-10-26T18:37 -03:00)
+R01 200 https://documentation.onesignal.com/reference/create-user
+R02 200 https://documentation.onesignal.com/llms.txt
+R03 200 https://mintlify.com/docs/quickstart
+R04 200 https://mintlify.com/docs/api-playground/openapi-setup
+R05 200 https://www.writethedocs.org/guide/docs-as-code/
+R06 200 https://diataxis.fr/
+R07 200 https://backstage.io/docs/overview/what-is-backstage
+R08 200 https://backstage.io/docs/features/techdocs/
+R09 200 https://mintlify.com/docs/deploy/authentication-setup
+R10 200 https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+R11 200 https://arc42.org/overview
+R12 200 https://docs.oasis-open.org/dita/dita/v1.3/os/part1-base/archSpec/base/condproc.html
+R13 200 https://mintlify.com/docs/deploy/personalization-setup
+R14 200 https://docusaurus.io/docs/versioning
+R15 200 https://learn.microsoft.com/en-us/aspnet/core/fundamentals/localization
+R16 200 https://docusaurus.io/docs/i18n/tutorial
+R17 200 https://learn.microsoft.com/en-us/contribute/content/metadata
+R18 200 https://keepachangelog.com/en/1.1.0/
+R19 200 https://github.com/dotnet/docfx
+R20 200 https://github.com/xoofx/markdig

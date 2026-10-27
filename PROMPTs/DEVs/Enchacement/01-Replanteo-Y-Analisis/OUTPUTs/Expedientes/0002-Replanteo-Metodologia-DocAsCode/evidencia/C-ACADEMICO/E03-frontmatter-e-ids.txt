@@ -1,0 +1,37 @@
+# fm.py sobre /LAB/Lab-Documentos/Lab-Documentos/Guides (Lab-Documentos 5d5c2b4), 2026-10-26
+archivos .md: 294; con frontmatter: 219
+campos (presencia): title=219, traces=211, doc_id=207, doc_type=207, status=207, origin=207, confidence=207, owner=207, last_review=207, audience=207, description=12, roles=10, order=10, topic=7, version=3, prerequisites=3
+doc_type: 19 valores distintos -> 'tema':116; 'familia':28; 'marco-de-referencia':16; 'anexo':15; 'guia-practica':6; 'indice':5; 'guia-de-estudio':4; 'mapa':3; 'study-guide':2; 'documento-tematico':2; 'guia-rapida':2; 'analisis':1
+status: 3 valores distintos -> 'vigente':205; 'draft':1; 'en construcción':1
+origin: 4 valores distintos -> 'ia-assisted':184; 'agente':19; 'ai-assisted':3; 'agent':1
+confidence: 6 valores distintos -> 'alta':191; 'media':12; 'high':1; 'alta en lo verificado en máquina y rotul':1; 'alta en lo capturado en laboratorio; med':1; 'alta en lo respaldado por experimento o ':1
+prefijos de doc_id: TEM-=75, DOC-=31, FAM-=28, MARCO-=16, ANEXO-=13, GUIA-=7, ARQ-=7, GF-=7, MET-=6, MAPA-=3, GHF-=3, GHA-=2, E2E-00=2, E2E-01=2, ANALISIS-=1
+
+# doc_id repetidos entre guías
+doc_id distintos en frontmatter: 177; repetidos: 18
+  ANEXO-CHECK 2 ['Arquitectura/Organizacion-Estilo-Patrones-Codigo', 'Despliegue/Documentacion-Informe-Despliegue']
+  ANEXO-GLOSARIO 3 ['Arquitectura/Organizacion-Estilo-Patrones-Codigo', 'Despliegue/Documentacion-Informe-Despliegue', 'Documentacion-Tecnica/Creacion-Guias-Tecnicas']
+  ANEXO-PENDIENTES 2 ['Despliegue/Documentacion-Informe-Despliegue', 'Documentacion-Tecnica/Creacion-Guias-Tecnicas']
+  ANEXO-REFERENCIAS 3 ['Arquitectura/Organizacion-Estilo-Patrones-Codigo', 'Arquitectura/Organizacion-Estilo-Rest-API', 'Despliegue/Documentacion-Informe-Despliegue']
+  E2E-00 2 ['Testing/E2E-Guide', 'Testing/Lab-E2E.WebBlazor-Guides']
+  E2E-01 2 ['Testing/E2E-Guide', 'Testing/Lab-E2E.WebBlazor-Guides']
+  FAM-ARQ 2 ['Despliegue/Documentacion-Informe-Despliegue', 'Documentacion-Tecnica/Creacion-Guias-Tecnicas']
+  GF-09-ESCENARIOS 2 ['GitFlow/Git-Flow-Guides', 'Testing/Lab-E2E.WebBlazor-Guides']
+  GF-AX-WF 2 ['GitFlow/Estandares-Modelo-Ramas-Guide', 'Testing/Lab-E2E.WebBlazor-Guides']
+  GF-GUIA 2 ['GitFlow/Estandares-Modelo-Ramas-Guide', 'Testing/Lab-E2E.WebBlazor-Guides']
+  GHA-00 2 ['Despliegue/GitHub-Action-Guide', 'Testing/Lab-E2E.WebBlazor-Guides']
+  GHF-GUIA 2 ['GitFlow/Git-Flow-Guides', 'Testing/Lab-E2E.WebBlazor-Guides']
+  GUIA-INDICE 3 ['Arquitectura/Organizacion-Estilo-Patrones-Codigo', 'Despliegue/Documentacion-Informe-Despliegue', 'Documentacion-Tecnica/Creacion-Guias-Tecnicas']
+  MAPA-CONCEPTUAL 3 ['Arquitectura/Organizacion-Estilo-Patrones-Codigo', 'Despliegue/Documentacion-Informe-Despliegue', 'Documentacion-Tecnica/Creacion-Guias-Tecnicas']
+  MARCO-ACTORES 4 ['Arquitectura/Organizacion-Estilo-Patrones-Codigo', 'Arquitectura/Organizacion-Estilo-Rest-API', 'Despliegue/Documentacion-Informe-Despliegue', 'Documentacion-Tecnica/Creacion-Guias-Tecnicas']
+  MARCO-CONTEXTOS 4 ['Arquitectura/Organizacion-Estilo-Patrones-Codigo', 'Arquitectura/Organizacion-Estilo-Rest-API', 'Despliegue/Documentacion-Informe-Despliegue', 'Documentacion-Tecnica/Creacion-Guias-Tecnicas']
+  MARCO-CONVENCIONES 4 ['Arquitectura/Organizacion-Estilo-Patrones-Codigo', 'Arquitectura/Organizacion-Estilo-Rest-API', 'Despliegue/Documentacion-Informe-Despliegue', 'Documentacion-Tecnica/Creacion-Guias-Tecnicas']
+  MARCO-ESCENARIOS 4 ['Arquitectura/Organizacion-Estilo-Patrones-Codigo', 'Arquitectura/Organizacion-Estilo-Rest-API', 'Despliegue/Documentacion-Informe-Despliegue', 'Documentacion-Tecnica/Creacion-Guias-Tecnicas']
+
+# grep -rl -E '^status: draft|^origin: agent$|^confidence: high$' Guides/  (los tres valores atípicos de una sola aparición)
+Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md
+# grep -ci 'ejercicio' en la guía del documentador: 0
+lista propuesta: doc_type = indice|marco-de-referencia|familia|mapa|tema|anexo|ejemplo; status, origin y confidence como Q14
+docs con algún valor fuera de la lista propuesta: 26 {'status': 2, 'origin': 23, 'confidence': 4, 'doc_type': 24}
+doc_type fuera de lista: {'study-guide': 2, 'study-guide-activity': 1, 'guia-de-estudio': 4, 'study-note': 1, 'guia-rapida': 2, 'guia-practica': 6, 'documento-tematico': 2, 'caso-de-diseño': 1, 'metodo-propuesto': 1, 'documento-integrador': 1, 'guia-estudio': 1, 'cuaderno-ejercicios': 1, 'analisis': 1}
+con guia-de-estudio en la lista y sus 5 sinonimos mapeados: docs fuera de lista 25 {'status': 2, 'origin': 23, 'confidence': 4, 'doc_type': 15}
