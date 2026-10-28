@@ -61,3 +61,13 @@
 - **Conformación de PR** por `Knowledge-Conformacion-Pull-Request-Automatico`: guarda `clean` + CI en verde (incluido `fw-ok`), merge atado al SHA y, **sólo si el merge salió bien**, borrar la rama.
 - El moto g42 es del PO: sólo paquetes propios, nunca sus apps de producción.
 - Si te llega un mensaje del PO a mitad de un workflow, lo atiende la presidencia; los subagentes terminan su tarea.
+
+---
+
+> **2026-10-28 — Estado después de la reanudación.** Los pasos 1 a 3 de §5 están hechos:
+> - Constancia **043**: caída de i7infra, runner `hpdev-runner-dev` y pérdidas. El volumen `fc-demo-keystore` solo tenía el `debug.keystore`, que `guion.sh apk` regenera, así que el pendiente 3 queda cerrado.
+> - **PR #14** cerrado sin fusionar, porque `main` ya tenía el dato del folio 042. El enlace que le faltaba entró en Lab-Documentos #29.
+> - Constancia **044**: redacción en el lugar de las fugas del repo público (folio 041, rutas del temporal de sesiones, un emulador privado), en Lab-Documentos.Documentacion #25. La historia conserva los datos y reescribirla lo decide el PO.
+> - Las claves de la demo (`Demo/claves/`) y los 7 `*.log` ignorados de E01 están respaldados fuera de los repos, en la carpeta de rescate de hpdev.
+>
+> Siguen abiertos: el **pendiente 2** (TPR en el g42, con un candado nuevo en hpdev y aviso al PO), la compuerta y el APK de la demo en `hpdev-runner-dev` (sin verificar hasta que un PR toque `Demo/`) y el **pendiente 4**: la fila `run_id` del anexo §6 y el glosario siguen nombrando `i7infra-runner-dev`.
