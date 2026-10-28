@@ -219,7 +219,7 @@ MDN [D5]. El WebView 83 del emulador no la parsea. No es un fallo del mecanismo 
 
 **Consecuencia de diseño:** el cascarón tiene que exigir una versión mínima de WebView (≥ 94 medida acá; el valor real
 que exige .NET 10 en conjunto **NO VERIFICADO**: puede haber otra sintaxis más nueva más adelante en los archivos) y, si
-no la cumple, mostrar la pantalla propia «actualizá Android System WebView» en vez del contenido. El emulador de banco
+no la cumple, mostrar la pantalla propia «actualizá Android System WebView» en vez del contenido. El emulador <privado>
 del laboratorio (API 30, imagen sin Play) no sirve como dispositivo de prueba E2E para el contenido WASM.
 
 ### 6.4 Alternativas probadas y descartadas
@@ -319,7 +319,7 @@ Piezas crudas en `evidencia/local/` (no versionables):
 | Incidente | Qué pasó | Cómo se resolvió |
 | --- | --- | --- |
 | /vm sin inodos | /vm llegó al 100 % de inodos (691 200/691 200, 531 GB libres) por scratchpads de otras sesiones; la herramienta de comandos no podía crear su archivo de salida | Avisado a la presidencia; se siguió por otra vía hasta que liberaron (518 mil libres al cierre). El ensayo nunca escribió en /vm |
-| KVM en el emulador | Primer `fc-android-emu` sin permiso sobre `/dev/kvm` | Se recreó con `--group-add 993` (mismo valor que `<privado>`); booteó en 74 s |
+| KVM en el emulador | Primer `fc-android-emu` sin permiso sobre `/dev/kvm` | Se recreó con `--group-add 993` (mismo valor que `android-emu-<privado>`); booteó en 74 s |
 | Red del g42 | El g42 está en 192.0.2.0/24; desde él no responden 198.51.100.9 ni 203.0.113.10 (ping 100 % perdido), sí Internet (1.1.1.1) [C3] | Túnel efímero `cloudflared` hacia el nginx del ensayo; se bajó al terminar. **Criterio propio:** expone el contenido del ensayo (sin secretos) durante ~10 min |
 | Toque en el botón | Las coordenadas del primer `input tap` no caían sobre el botón (la etiqueta de rechazo era más larga) | Una variable: se ubicó el botón con `uiautomator dump` (bounds `[27,1518][364,1609]`) y el toque en (195,1563) disparó el puente [C7] |
 
