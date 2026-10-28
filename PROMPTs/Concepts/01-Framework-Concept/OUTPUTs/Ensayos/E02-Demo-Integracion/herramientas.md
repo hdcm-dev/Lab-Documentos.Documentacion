@@ -89,7 +89,7 @@ otros tramos.
 
 ```bash
 export FC_ADB_CONTENEDOR=adb-contenedor
-export FC_LOCK={tmp-de-sesiones}/<proyecto>/d06315cb-0943-445c-8b8b-431f50c7e47a/scratchpad/escenarios.lock
+export FC_LOCK={dir-de-trabajo}/escenarios.lock
 scripts/guion.sh dispositivo -H 203.0.113.30 -P 5037 -s <serie-del-g42>
 scripts/guion.sh demo        -H 203.0.113.30 -P 5037 -s <serie-del-g42>   # NO VERIFICADO
 ```

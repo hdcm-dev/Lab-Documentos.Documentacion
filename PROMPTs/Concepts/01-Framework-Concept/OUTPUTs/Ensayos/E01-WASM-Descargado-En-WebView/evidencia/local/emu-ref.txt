@@ -1,4 +1,4 @@
-<privado>-home|/var/lib/docker/volumes/<privado>-home/_data->/home/dev/.android rw=true
+android-emu-<privado>-home|/var/lib/docker/volumes/android-emu-<privado>-home/_data->/home/dev/.android rw=true
 |<repositorio privado de la app de referencia> rw=false
 android-emu-<privado>-sdk|/var/lib/docker/volumes/android-emu-<privado>-sdk/_data->/opt/emu-sdk rw=false
 

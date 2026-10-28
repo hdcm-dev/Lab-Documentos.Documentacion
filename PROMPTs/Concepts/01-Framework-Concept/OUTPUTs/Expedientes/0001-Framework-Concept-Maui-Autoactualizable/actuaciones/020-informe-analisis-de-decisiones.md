@@ -104,7 +104,7 @@ contenido al cambio del sobre**, que sólo llega con un release del cascarón po
 - **Costo medido:** 76 líneas de programa contra las 83 de E-ASD-1 (`wc -l`). La compilación tardó 10,8 s.
 - **Eje que no quedó fijo:** el dispositivo. Corrió en Linux x64, no en el g42.
 
-Huellas (evidencia cruda local en `{tmp-de-sesiones}/<proyecto>/6e043f4a-ac59-44a7-a89a-8b2093f94f90/scratchpad/e-ad/`, no versionable):
+Huellas (evidencia cruda local en `{dir-de-trabajo}/e-ad/`, no versionable):
 
 | Pieza | sha256 |
 | --- | --- |

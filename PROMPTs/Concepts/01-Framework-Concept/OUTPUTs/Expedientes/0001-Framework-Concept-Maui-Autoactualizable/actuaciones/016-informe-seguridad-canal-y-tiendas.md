@@ -75,7 +75,7 @@ APK.
 | Generador de vectores | `…/scratchpad/seg/ens/vec/gen.sh` | `e38ccffc1d493134636d6dca4c553168d3296c3b2642ecb403ebc4774f2189c5` |
 | APK probado | (borrado con `bin/obj`) | `c4b90d02760ab2f60d13e21f7d0bd1fab9557f8a24d1861030b67612e01d1d30` |
 
-(`…` = `{tmp-de-sesiones}/<proyecto>/6e043f4a-ac59-44a7-a89a-8b2093f94f90`)
+(`…` = `{dir-de-sesion}`)
 
 **Incidentes que declaro.**
 

@@ -73,7 +73,7 @@ Comando: `docker images --format '{{.Repository}}:{{.Tag}}\t{{.ID}}\t{{.Size}}\t
 | `adb-contenedor:net10` | d7617b8510a8 | 6,31 GB | 7 semanas |
 
 Contenedores de otros escenarios que **no se tocaron** (`docker ps`): `android-emu-<privado>` (Up 5 days,
-`0.0.0.0:6080->6080`), `<privado>` (Up 3 days, `6080/tcp` sin publicar), `runner-github-dev`,
+`0.0.0.0:6080->6080`), `android-emu-<privado>` (Up 3 days, `6080/tcp` sin publicar), `runner-github-dev`,
 `runner-github-ng`, `runner-github-ap25`, `adb-contenedor` (Up 10 days). No hay ningún contenedor `lab-e2e-*`
 corriendo.
 
@@ -489,7 +489,7 @@ partir de las fuentes citadas, sin ejecutar (con motivo).
 
 Reglas comunes: nunca compilar en el repo original; intermedios fuera de `/vm` (en `~/fc-work/…` o
 volúmenes Docker); nombres de contenedor con prefijo `fc-`; no tocar `android-emu-<privado>`,
-`<privado>` ni contenedores ajenos.
+`android-emu-<privado>` ni contenedores ajenos.
 
 ### 8.1 Compilar un APK MAUI x64 / arm64 (probada, §3.3)
 
