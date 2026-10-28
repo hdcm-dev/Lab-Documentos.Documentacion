@@ -2,9 +2,9 @@
 # Tool-Prompt — Investigación
 
 > **Invocación**:
-> - Leer y ejecutar `/LAB/Lab-Documentos.Documentacion/PROMPTs/Guides/14-Sistema-De-Documentador-Tecnico/Crear-Analizar-Sistema-De-Documentador-Tecnico-Guide.md`
+> - Leer y ejecutar `/LAB/Lab-Documentos/Lab-Documentos.Documentacion/PROMPTs/Guides/14-Sistema-De-Documentador-Tecnico/Crear-Analizar-Sistema-De-Documentador-Tecnico-Guide.md`
 >
-> Overview: Investigación
+> Overview: Investigación sobre la organización de la documentación
 
 ---
 

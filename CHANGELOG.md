@@ -12,6 +12,7 @@ guía misma.
 
 ### Añadido
 
+- **`PROMPTs/`** — ediciones del PO en los prompts de las guías 06 y 14 y del indexado (ruta completa de los archivos, invocación con `ultracode`, título del encargo 14), y los `Reanudar.md` del Framework Concept y de la guía 14 escritos tras la caída de i7infra (ruta del home redactada).
 - **Framework Concept, folio 043** — constancia de la caída de i7infra: el runner pasa a `hpdev-runner-dev` (la compuerta y el APK de la demo todavía no corrieron ahí), se perdieron el volumen `fc-demo-keystore` (el `debug.keystore`, que `guion.sh apk` regenera) y el candado de escenarios, y el PR #14 de Lab-Documentos se cerró sin fusionar, superado por el folio 042 (el enlace que faltaba va en el #29). Entrada 28 de la bitácora.
 
 ## [No publicado] - 2026-10-27
