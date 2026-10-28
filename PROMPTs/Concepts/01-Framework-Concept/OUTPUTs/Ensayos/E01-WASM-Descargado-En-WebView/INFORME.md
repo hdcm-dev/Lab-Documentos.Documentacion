@@ -295,7 +295,7 @@ obligue a caer a B en Android.
 | C6 | `evidencia/corrida-g42.log`, `evidencia/logcat-g42-{1,2,3}-*.txt` | Corridas en el g42 |
 | C7 | `evidencia/corrida-g42-extra.log`, `evidencia/logcat-g42-{4,5}-*.txt` | sha adulterado y toque real |
 
-Piezas crudas en `evidencia/local/` (no versionables):
+Piezas crudas no versionables, que quedan fuera del repositorio (`evidencia/local/apk/` y `evidencia/local/servidor/`). El resto de `evidencia/local/` (las capturas, `alcance.txt`, `g42-red.txt` y las demás piezas de texto) está versionado y redactado:
 
 | Pieza | sha256 | Bytes |
 | --- | --- | --- |
