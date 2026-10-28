@@ -17,23 +17,28 @@ origen: expediente 0002 (DocAsCode), unidad E1-U0b
 ## Definiciones
 
 - **Verificar**: el workflow [`workflows/verificar.yml`](workflows/verificar.yml) de este repositorio.
-- **docs-guard**: workflow reutilizable (`workflow_call`) de `hdcm-dev/Lab-Documentos`; verifica enlaces internos,
-  anclas y estructura de una carpeta de Markdown.
+- **docs-guard**: workflow reutilizable (`workflow_call`) de `hdcm-dev/Lab-Documentos`; corre los grupos PR-1 a PR-7
+  (enlaces, esquema, anti-inyección, estructura y mermaid, trazas, contrato, fijadas) y su autoprueba sobre una
+  carpeta de Markdown.
 - **Runner propio**: la máquina autohospedada con las etiquetas `self-hosted` e `i7infra-dev`.
 - **Fijado por SHA**: la referencia a otro workflow o action se hace por commit completo, no por rama ni etiqueta.
 
 ## Qué corre en cada PR
 
+Disparadores: `pull_request`, `push` a `main` (la corrida sobre el commit de merge queda en `main`) y
+`workflow_dispatch`.
+
 | Job | Qué verifica | Dónde corre |
 | --- | --- | --- |
-| `verificar` | Lo que el PR agrega: sin claves privadas ni binarios pesados | Runner propio |
-| `docs-guard` | `lychee --offline --include-fragments` y `markdownlint-cli2` estructural sobre esta carpeta | Runner propio (lo declara el workflow llamado) |
+| `verificar` | Lo que el PR (o el merge, en `push`) agrega: sin claves privadas ni binarios pesados | Runner propio |
+| `docs-guard (.github)` | PR-1 a PR-7 y autoprueba sobre esta carpeta | Runner propio (lo declara el workflow llamado) |
+| `docs-guard (expediente)` | PR-1 a PR-7 y autoprueba sobre `PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Expedientes/0002-Replanteo-Metodologia-DocAsCode` | Runner propio (lo declara el workflow llamado) |
 
 ```mermaid
 flowchart LR
-  PR[pull_request] --> V[verificar]
-  PR --> G[docs-guard de Lab-Documentos @SHA]
-  G --> H[herramientas] --> E[enlaces] --> S[estructura]
+  PR[pull_request o push a main] --> V[verificar]
+  PR --> G[docs-guard de Lab-Documentos @SHA, una corrida por ruta]
+  G --> H[herramientas] --> P[PR-1 a PR-7] --> A[autoprueba] --> X[agregador]
 ```
 
 El workflow llamado declara su propio `runs-on`; el registro del job muestra el nombre del runner que lo tomó.
@@ -51,8 +56,9 @@ El workflow llamado declara su propio `runs-on`; el registro del job muestra el 
 Ejemplo, con un clon de Lab-Documentos en el commit fijado:
 
 ```bash
-git -C ../Lab-Documentos checkout f603984a3a4b35ea62feb7e5b3f68c0ad3331311
+git -C ../Lab-Documentos checkout d65d52be2e236af4e858e2492c796845c21831d3
 bash ../Lab-Documentos/scripts/ci-local.sh todo .github
+bash ../Lab-Documentos/scripts/ci-local.sh todo PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Expedientes/0002-Replanteo-Metodologia-DocAsCode
 ```
 
 ## Cambiar la versión de docs-guard
