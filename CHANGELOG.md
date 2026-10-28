@@ -8,6 +8,12 @@ documental que se lee entero, no un artefacto que alguien instala en una versió
 versionado semántico que la guía enseña aplica al software que ese procedimiento libera, no a la
 guía misma.
 
+## [No publicado] - 2026-10-28
+
+### Añadido
+
+- **Framework Concept, folio 043** — constancia de la caída de i7infra: el runner pasa a `hpdev-runner-dev` (la compuerta y el APK de la demo todavía no corrieron ahí), se perdieron el volumen `fc-demo-keystore` (el `debug.keystore`, que `guion.sh apk` regenera) y el candado de escenarios, y el PR #14 de Lab-Documentos se cerró sin fusionar, superado por el folio 042 (el enlace que faltaba va en el #29). Entrada 28 de la bitácora.
+
 ## [No publicado] - 2026-10-27
 
 ### Añadido
