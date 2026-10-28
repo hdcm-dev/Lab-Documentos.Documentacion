@@ -10,7 +10,7 @@
 
   En base a lo último que me contestaste:
 
-  Esto último que escribiste estuvo muy bueno, incorporarlo en el documento: `LAB/Lab-Documentos/Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` , a esas preguntas que anexaste en,  Cada objeto responde una pregunta, agregale una respuesta explicativa
+  Esto último que escribiste estuvo muy bueno, incorporarlo en el documento: `LAB/Lab-Documentos/Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` , a esas preguntas que anexaste en, cada objeto responde una pregunta, agregale una respuesta explicativa
 
   y luego hace lo siguiente:
   
