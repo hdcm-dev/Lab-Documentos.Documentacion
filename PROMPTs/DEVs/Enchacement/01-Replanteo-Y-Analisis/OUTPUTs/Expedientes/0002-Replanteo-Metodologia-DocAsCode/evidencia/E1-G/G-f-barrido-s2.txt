@@ -1,0 +1,192 @@
+G-f — Barrido S2: vacío sobre todo lo versionado en repos públicos
+Umbral: N09 §9.2 fila G-f («Barrido S2 | Vacío»); folio 133 §2, fila G-f («todo lo versionado en repos públicos |
+  corre el barrido S2 | sale vacío | grep de rutas de host, IPs privadas, usuarios y nombres privados | salida vacía»).
+Medido el 2026-10-28 (11:59Z) en hpdev (contingencia por la caída de i7infra), Python 3.11.2, `xargs grep` = GNU grep
+  3.8 (corregido: decía ugrep 7.8.4, que es la función `grep` del shell del agente), sin contenedores.
+Árboles (sólo archivos versionados, `git ls-files`):
+  A. hdcm-dev/Lab-Documentos, worktree de sólo lectura {dir-de-trabajo}/ld-main, detached en 490646b (main tras el
+     merge del #28): 1165 archivos.
+  B. hdcm-dev/Lab-Documentos.Documentacion, worktree {dir-de-trabajo}/ldd-e1g, rama exp0002/e1g-resolucion en e0e520f:
+     `OUTPUTs/Expedientes/0002-Replanteo-Metodologia-DocAsCode` + `OUTPUTs/Bitacoras` (bajo
+     PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/): 178 archivos.
+
+================================================================================
+1. Patrón (variante más amplia de 099 §11 y E1-U0c/01-barrido-s2.txt, más lo que pide la carta común)
+================================================================================
+Fuentes: 099-resolucion.md:419 (directorio personal del host `/home/<usuario>`, `/Users/`, `C:\Users`, usuario del
+host, servicio privado y su organización); E1-U0c/01-barrido-s2.txt:3-4 (más repos privados citados, runner de la
+organización privada, IPv4 privadas y CGNAT). Se agrega la raíz de máquinas del anfitrión ({raíz-de-máquinas}) y los nombres que
+ocultan los alias del README del expediente. Los nombres reales van en un archivo de patrones fuera del repo
+({dir-de-trabajo}); acá se escriben con el alias. 20 líneas, `-i`:
+
+  (/|-)home[/-][a-z]            directorio personal (y variantes con guion)
+  /Users/[A-Za-z]               idem macOS
+  C:\\Users                     idem Windows
+  (^|[^A-Za-z0-9_.-])/{raíz-de-máquinas}/  raíz de máquinas del anfitrión
+  {usuario-del-host}            nombre de pila = usuario del equipo
+  {apellido-del-PO}             apellido (cubre las cuentas del PO)
+  {id-numérico-de-cuenta}       id de la cuenta que figura en remotos del equipo
+  (^|[^0-9.])10\.N\.N\.N        IPv4 privada 10/8
+  192\.168\.[0-9]               IPv4 privada 192.168/16
+  172\.(1[6-9]|2[0-9]|3[01])\.  IPv4 privada 172.16/12
+  (^|[^0-9.])100\.(64-127)\.N.N CGNAT (tailnet)
+  {organización-del-SDD-B}      raíz del nombre de la organización privada (cubre sus variantes)
+  {servicio-del-SDD-B}          nombre del servicio privado
+  {org-de-INFRA-privada}        organización de los repos de runners
+  {INFRA-privada} (2 formas)    nombre del repo privado de runners y su raíz
+  {KB-privada}                  nombre del repo de la base de conocimientos privada
+  {dir-intermedios-del-agente}  nombre de la carpeta de intermedios del agente
+  {memoria-del-agente}          ruta de la memoria del agente
+  {proyecto-privado}            proyecto de investigación privado del PO
+
+$ cd {dir-de-trabajo}/ld-main && git ls-files -z | xargs -0 grep -nIiE -f <patrones> > ld.txt
+exit=0 · 97 líneas con coincidencia, 32 archivos (corregido: decía 33; `cut -d: -f1 | sort -u | wc -l` = 32)
+$ cd {dir-de-trabajo}/ldd-e1g && git ls-files -z -- <EXP> <Bitacoras> | xargs -0 grep -nIiE -f <patrones> > ldd.txt
+exit=0 · 15 líneas con coincidencia, 10 archivos
+
+Conteo por patrón en A (ocurrencias, `grep -o`): home 53 · /Users/ 2 · C:\Users 3 · raíz-de-máquinas 0 · usuario-del-host 11 ·
+apellido 8 · id de cuenta 0 · 10/8 30 · 192.168 8 · 172.16/12 0 · CGNAT 0 · organización-del-SDD-B 3 ·
+servicio-del-SDD-B 0 · org-de-INFRA-privada 0 · INFRA-privada 0 · KB-privada 0 · dir-intermedios 0 · memoria 0 ·
+proyecto-privado 0.
+
+Resultado: NO VACÍO. Clasificación abajo: 8 líneas son defecto (3 clases); el resto, falso positivo justificado.
+
+================================================================================
+2. Defectos
+================================================================================
+D1. Nombre de la organización privada del SDD-B (variante «…Groups» como nombre de fuente NuGet) — árbol A
+    Guides/Despliegue/DevOps-Guide/publish-nuget.md:26,42,62
+    Origen: anterior a E1 (commit de reorganización 9162e07, 2026-09-28; blame de la línea 26 → fab7258). E1 no tocó
+    el archivo, pero G-f abarca «todo lo versionado en repos públicos». La organización existe en GitHub (su página de
+    org responde 200 sin credencial) y sus repos son privados (404); el README del expediente la oculta con el alias
+    {organización-del-SDD-B}. Corrección: reemplazar por un nombre genérico (p. ej. `MiOrg-GitHub`,
+    `nuget-push-miorg`), como ya hace la línea 22 con `<owner>`.
+
+D2. Carpeta del workspace que nombra el repo privado de runners (INFRA-privada) — árbol A
+    Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2949
+    Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2953
+    La ruta está escrita desde la raíz del workspace (forma permitida), pero su último segmento es la carpeta local de
+    INFRA-privada. Los folios del expediente escriben esa misma ruta con el alias (R03-SDD-Lab-Documentos.md:361:
+    `INFRA-privada/docker/…`). Origen: anterior a E1 (blame → fab7258); el commit 3a7ec67 (2026-10-27, «Redacta el
+    nombre de la app privada…», PR #13) tocó estas guías y no la cubrió. Corrección: `INFRA-privada/` o «el repo de
+    runners de prueba».
+
+D3. Ruta del anfitrión bajo {raíz-de-máquinas} (carpeta de intermedios del agente) — árbol B
+    Bitacoras/R07-Reglas-PromptFramework.md:304            (VER-C04: «Intermedios fuera de `/{raíz-de-máquinas}/…`»)
+    Expedientes/0002-…/actuaciones/014-informe-c-arq-net.md:93
+    Expedientes/0002-…/actuaciones/090-reconsideracion.md:213
+    Las tres citan la ruta absoluta de la carpeta temporal del agente en el equipo, como lugar donde NO dejar
+    intermedios. El patrón de E1-U0c no incluía la raíz de máquinas, por eso pasó; la carta común lo prohíbe. No expone datos
+    personales ni credenciales, sólo la disposición del anfitrión. Corrección: «fuera del scratchpad del agente» o
+    `{scratchpad-del-agente}`.
+
+================================================================================
+3. Falsos positivos justificados
+================================================================================
+Árbol A (89 líneas):
+  - Ruta sintética `/home/x/otra` (la «segunda ruta» a propósito en los ensayos de reproducibilidad; `x` no es un
+    usuario): Guides/Metodologia-Entorno-Desarrollo/Examples/N0-modelo-de-capas-y-reproducibilidad/README.md:80,82;
+    …/N0-…/capa5-proceso/experimento.sh:22,23,24,26,27,28; …/N0-…/capa5-proceso/verificacion-sourceroot.sh:16,17,18,
+    19,20,23,24,25,26,27; …/N0-…/salidas/E0-5-capa5-proceso.txt:4,8,9; …/N0-…/salidas/E0-5b-verificacion-sourceroot.txt:2,4;
+    …/N6-procedencia-y-trazabilidad/e2-determinismo-dotnet/experimento.sh:29,30,32,36,37,39; …/N6-…/e2-…/verificar-sdk11-rc1.sh:17,18;
+    …/N6-…/e3-node-pack-y-sbom/experimento.sh:12; …/N6-…/e4-python-wheel-y-sbom/experimento.sh:21,22,23,24;
+    …/N6-…/e5-procedencia-slsa-firmada/experimento.sh:41; …/N6-…/salidas/e2-determinismo-dotnet.txt:33,38;
+    Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1644.
+  - `/home/runner/work/…` (ruta estándar de los runners alojados de GitHub): …/N5-entornos-en-contenedores/
+    e8-capa4-y-artefacto/experimento.sh:8; …/N5-…/salidas/E5-8-capa4-y-artefacto.txt:3.
+  - `/Users/runner/.dotnet` (runner macOS alojado de GitHub): Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:1872;
+    Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:1876.
+  - URL pública `github.com/NuGet/Home/issues/…`: Metodologia-Entorno-Desarrollo-Guide.md:3353.
+  - Versión `10.0.400.1` (workload set de .NET, no IP): Concepts/Framework-Concept/03-Integracion-Y-Versionado.md:222;
+    Concepts/Framework-Concept/05-La-Demo-Como-Caso-De-Estudio.md:98; Concepts/Framework-Concept/Demo/README.md:13,199,258;
+    Concepts/Framework-Concept/Demo/contenedor/Dockerfile:6,52; Concepts/Framework-Concept/Demo/scripts/contenedor.sh:9.
+  - `10.0.2.2` (alias documentado del loopback del host en el emulador de Android, citado de Microsoft Learn):
+    Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Consumo-desde-Blazor-y-MAUI.md:168,446,450,621;
+    Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:163.
+  - Red de laboratorio didáctica de la guía de seguridad (`10.10.0.x` inventada junto a 198.51.100.0/24 y
+    203.0.113.0/24 de documentación RFC 5737; `192.168.56.x` = red host-only por defecto de VirtualBox; el ejercicio
+    1.1 pide justamente clasificarlas como privadas) y `C:\Users\…` de ejemplo (`C:\Users\...`, usuario ficticio
+    `sqlbackup` en un caso de malware): Guides/Otros/Seguridad-Red-Windows-Guide/Beginning-Security-Windows-Network-Guide.md:
+    55,80,444,447,581,653,654,655,714,715,1000,1001,1061,1064,1164,1165;
+    Guides/Otros/Seguridad-Red-Windows-Guide/Cuaderno-Ejercicios-Seguridad-Windows.md:40,127,128,129,203,236.
+  - Nombre y cuenta pública de autoría del PO (no el usuario del equipo): `owner:` del frontmatter, convención previa
+    a E1 (blame de Metodologia-Entorno-Desarrollo-Guide.md:9 → 5d5c2b4, base del expediente):
+    Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:9;
+    Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:9; Guides/Dot-NET-Arquitectura-Guide/
+    Dot-NET-Arquiectura-Interactive-Guide.md:9; Metodologia-Entorno-Desarrollo-Guide.md:9; CHANGELOG.md:171 (asiento de
+    E1 que cita esa convención). Cita APA y atribución de autor: Dot-NET-Arquiectura-Interactive-Guide.md:15,106;
+    Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Contextos/Contexto.md:28,39. Nombre de pila en un dato
+    de prueba (`Name = "…"` de un `User` ficticio): Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/
+    Panorama-De-Pruebas-Automatizadas.md:129,156,170.
+    Ver observación O1.
+
+Árbol B (12 líneas):
+  - Bitacoras/I01-Topologia-De-Repositorios.md:257 — URL pública kubernetes.io/docs/home/… (ya justificado en E1-U0c).
+  - Expedientes/0002-…/actuaciones/099-resolucion.md:419 — el folio cita su propio patrón (`/home/<usuario>`, `C:\Users`).
+  - Expedientes/0002-…/evidencia/C-ACADEMICO/E01-veinte-referencias-apa.md:26 — API pública de GitHub `/users/<autor>`.
+  - Expedientes/0002-…/evidencia/E1-U0c/01-barrido-s2.txt:3,6,11 — la evidencia de E1-U0c cita su patrón y sus FP.
+  - Bitacoras/R03-SDD-Lab-Documentos.md:361 — la ruta ya va bajo el alias `INFRA-privada/`; lo que coincide es el nombre
+    del contenedor del runner de la organización pública.
+  - Bitacoras/R06-Geometria-Estado-Documental.md:143,245; actuaciones/014-informe-c-arq-net.md:124,632;
+    evidencia/C-ARQ-NET/config/rerun-dotnet.sh:23 — nombre del contenedor/imagen del runner de la organización
+    pública hdcm-dev (etiqueta `i7infra-dev`, pública en los workflows). No es el runner del SDD-B, que tiene su alias.
+
+================================================================================
+4. Controles complementarios
+================================================================================
+- Cero coincidencias en ambos árboles para: id de cuenta, CGNAT, 172.16/12, servicio-del-SDD-B,
+  org-de-INFRA-privada, nombre del repo INFRA-privada, KB-privada, carpeta de memoria del agente, proyecto privado.
+- Visibilidad sin credencial (api.github.com): repos de INFRA-privada (2), del SDD-B y KB-privada → 404 (privados);
+  hdcm-dev/Lab-Documentos → 200. Organizaciones del SDD-B y de INFRA-privada → 200 (el nombre existe en público;
+  igual se ocultan por el README).
+- Este archivo y G-d-traces.txt (aún sin versionar en la rama) pasan el mismo patrón: ver la pasada final más abajo.
+
+================================================================================
+5. Veredicto
+================================================================================
+NO_CUMPLE: el barrido no sale vacío. 8 líneas en 3 clases de defecto (D1 3 líneas y D2 2 líneas en Lab-Documentos,
+anteriores a E1; D3 3 líneas en el expediente y las bitácoras, versionadas por E1-U0c). Ninguna expone credenciales,
+IPs del PO ni datos personales no públicos; se propone severidad no P0 y corrección en una rama de reparación de E1-G
+(D1/D2 en Lab-Documentos, D3 en .Documentacion), repitiendo este barrido sobre el SHA del merge.
+
+O1. Las guías publican la cuenta pública de autoría del PO en `owner:` mientras el expediente la oculta con
+    {cuenta-del-PO}. No es fuga (es la autoría de un repo público del PO y figura en los commits), pero los dos
+    criterios conviven sin regla escrita. Queda para la presidencia.
+
+================================================================================
+6. Pasada final sobre la evidencia nueva de E1-G (sin versionar todavía)
+================================================================================
+$ grep -nIiE -f <patrones> evidencia/E1-G/G-f-barrido-s2.txt evidencia/E1-G/G-d-traces.txt
+G-d-traces.txt: 0 coincidencias.
+G-f-barrido-s2.txt: 11 coincidencias (líneas 16, 47, 87, 95, 97, 99, 100, 103, 107, 108, 125), todas citas de este
+  mismo archivo al patrón o a los falsos positivos de §3 (mismo caso que E1-U0c/01-barrido-s2.txt:3,6,11). Cero
+  coincidencias de la raíz de máquinas, del usuario del equipo, de cuentas o de nombres privados.
+
+================================================================================
+7. Refutación (sostiene NO_CUMPLE; objeta el «no P0»), reproducida por la crítica del paquete el 2026-10-28
+================================================================================
+Mismo patrón de §1 (20 líneas) y, donde se indica, el ampliado de S2-folios.txt §1 (28 líneas). Sólo conteos y
+archivo:línea; los valores no se transcriben.
+
+a) Árbol A, reproducción: 97 líneas en 32 archivos (`cmp` contra la salida guardada de §1: igual).
+b) Lab-Documentos.Documentacion ENTERO en origin/main f51c065 (`git ls-tree -r --name-only -z origin/main |
+   xargs -0 /usr/bin/grep -nIiE -f <patrones>`): 210 líneas en 95 archivos. Por clase (archivos/líneas):
+     directorio personal 42/96 (de ellas, 6 en 6 archivos con el usuario del equipo) · /Users/ 1/1 ·
+     C:\Users 3/4 · {raíz-de-máquinas} 26/33 (23 archivos bajo PROMPTs/Concepts/01-Framework-Concept/ y los 3
+     de D3) · {usuario-del-host} 14/19 · {apellido-del-PO} 6/9 · 10/8 10/18 · 172.16/12 5/21 · CGNAT 1/1 ·
+     {organización-del-SDD-B} 10/10 · {INFRA-privada} 9/21 · {dir-intermedios-del-agente} 26/33 · resto 0.
+   Con el patrón ampliado: identificadores privados de R-PRIV y de la app privada en 9, 10 y 10 archivos (tres
+   de sus cinco líneas; las otras dos, 0); dominio del correo personal del PO 1/1; serie del teléfono 1/1; carpeta local de INFRA-privada 2/2.
+   (Las clases se solapan: una línea puede contar en varias.)
+c) Hallazgos puntuales, verificados por archivo:línea:
+   - PROMPTs/Concepts/01-Framework-Concept/OUTPUTs/Expedientes/0001-…/actuaciones/
+     041-constancia-g42-liberado-y-limpieza.md:17 — coincide la clase CGNAT (IP del tailnet) y, con el patrón
+     ampliado, la serie del teléfono; versionado en a4d26c8 (2026-10-27).
+   - PROMPTs/Concepts/01-Framework-Concept/OUTPUTs/Bitacoras/00-Registro.md:36 — {organización-del-SDD-B}.
+   - 12 archivos versionados bajo …/evidencia/local/ (`git ls-tree -r --name-only origin/main | grep -c
+     '/evidencia/local/'` = 12).
+d) Lab-E2E.WebBlazor en 59399ba (merge de E1-U6): 11 líneas en 2 archivos (`.devcontainer/devcontainer.json` 5,
+   `.devcontainer/dev.sh` 6), todas de la clase «directorio personal»: son el directorio personal del usuario
+   genérico `dev` del contenedor, candidato a falso positivo. Con el patrón ampliado aparecen además 5 líneas con identificadores
+   de la app privada en esos mismos archivos (último commit que toca `.devcontainer/`: 3e119b8, 2026-09-13,
+   anterior a E1).

@@ -1,0 +1,111 @@
+G-d — Trazas: 100 % de las traces del escalón E1 resuelven
+Umbral: N09 §9.2 fila G-d; folio 133, fila G-d («corre traces-resolve | 100 % resuelven | script | salida»).
+Medido el 2026-10-28 en hpdev (contingencia por la caída de i7infra), Python 3.11.2, sin contenedores.
+Árbol: hdcm-dev/Lab-Documentos, worktree de sólo lectura {dir-de-trabajo}/ld-main, detached en
+  490646bcba9db31d55d2710ddf2e73b9f5adaa89 (main tras el merge del #28).
+Herramienta: tools/docs-guard/dg.py, subcomando «trazas» (PR-5 traces-resolve), con la invocación de
+  scripts/ci-local.sh (paso «trazas», RUTA por defecto = Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion; ci-local.sh:30 y :99)
+  y la del verificar.sh de la mini demo (paso C3, ...MovilidadUrbana-Mini-Demo/verificar.sh:141).
+Rutas del host reemplazadas por {dir-de-trabajo}. GDE = Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion
+
+================================================================================
+1. Cuerpo SDEI completo (equivale al job docs-guard, PR-5)
+================================================================================
+$ cd {dir-de-trabajo}/ld-main && bash scripts/ci-local.sh trazas
+(idéntico a: python3 -I tools/docs-guard/dg.py trazas GDE)
+== PR-5 trazas (GDE)
+GDE/Examples/Prueba-Ayuda-Por-Rol/Web/Ayuda/es/administrador/dar-desenlace.md:1: aviso traza-no-verificable: CU-00029@1.1: ID de un sistema externo sin source.lock que fije contra qué SHA resolverla
+GDE/Examples/Prueba-Ayuda-Por-Rol/Web/Ayuda/es/administrador/gobernar-las-cuentas.md:1: aviso traza-no-verificable: CU-00023@1.1: (ídem)
+GDE/Examples/Prueba-Ayuda-Por-Rol/Web/Ayuda/es/administrador/resetear-una-contrasena.md:1: aviso traza-no-verificable: CU-00024@1.1: (ídem)
+GDE/Examples/Prueba-Ayuda-Por-Rol/Web/Ayuda/es/alumno/consultar-mis-trabajos.md:1: aviso traza-no-verificable: CU-00028@1.1: (ídem)
+GDE/Examples/Prueba-Ayuda-Por-Rol/Web/Ayuda/es/alumno/consultar-mis-trabajos.md:1: aviso traza-no-verificable: CU-00029@1.1: (ídem)
+GDE/Examples/Prueba-Ayuda-Por-Rol/Web/Ayuda/es/alumno/enviar-un-trabajo.md:1: aviso traza-no-verificable: CU-00026@1.1: (ídem)
+GDE/Examples/Prueba-Ayuda-Por-Rol/Web/Ayuda/es/comun/cambiar-la-contrasena.md:1: aviso traza-no-verificable: CU-00022@1.1: (ídem)
+GDE/Examples/Prueba-Ayuda-Por-Rol/Web/Ayuda/es/comun/cambiar-la-contrasena.md:1: aviso traza-no-verificable: CU-00024@1.1: (ídem)
+GDE/Examples/Prueba-Ayuda-Por-Rol/Web/Ayuda/es/comun/ingresar.md:1: aviso traza-no-verificable: CU-00022@1.1: (ídem)
+anclas: 2 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: verde (errores=0 avisos=9) trazas=121 resueltas=112 anclas=0 anclas-resueltas=0
+exit=0
+
+================================================================================
+2. Mini demo con la fuente fijada (equivale al paso C3 de mini-demo-movilidad)
+================================================================================
+$ TRABAJO={dir-de-trabajo}/gd/md bash GDE/Examples/MovilidadUrbana-Mini-Demo/verificar.sh fuente
+== fuente: https://github.com/hdcm-dev/Lab-E2E.WebBlazor.git @ 8fb4c3a8b1cc629027f456c7c3ce19e041164c06 y main
+  8fb4c3a8b1cc629027f456c7c3ce19e041164c06 -> 8fb4c3a8b1cc629027f456c7c3ce19e041164c06 (103 archivos)
+  main -> 59399ba6678c56c3219988a5f9666fc4e0047160 (103 archivos)
+exit=0
+
+$ GITHUB_ACTIONS=false python3 -I tools/docs-guard/dg.py trazas --raiz . --fuente {dir-de-trabajo}/gd/md/sha GDE/Examples/MovilidadUrbana-Mini-Demo
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=17 resueltas=17 anclas=10 anclas-resueltas=10
+exit=0
+
+$ python3 -I tools/docs-guard/dg.py trazas --raiz . --deriva --fuente {dir-de-trabajo}/gd/md/comparar GDE/Examples/MovilidadUrbana-Mini-Demo
+== PR-5 traces-resolve (deriva: sólo avisa): verde (errores=0 avisos=0) anclas=10 resueltas=10
+exit=0
+(deriva contra main de Lab-E2E.WebBlazor 59399ba: informativa, A1; no entra al umbral)
+
+================================================================================
+3. Qué traces son «del escalón E1»
+================================================================================
+Base anterior a E1: 507afd6 (main antes del merge del #11, primera unidad de E1). Se listaron las traces del
+frontmatter de cada .md bajo GDE en 507afd6 y en 490646b con el mismo lector de frontmatter de dg.py
+(script de una sola vez en el scratchpad; par archivo<TAB>traza, comparado con comm):
+
+  traces en 490646b ........................ 121
+  heredadas (mismo archivo y misma traza en 507afd6) .. 14
+  agregadas por E1 ........................... 107
+
+Heredadas (14):
+  5 en GDE/Sistema-Documentador-Tecnico-Guide.md: DOC-ADR, DOC-MANUAL, DOC-SAD, DOC-SDD, DOC-SRS  -> resuelven
+  9 en GDE/Examples/Prueba-Ayuda-Por-Rol/Web/Ayuda/es/** (CU-000nn@1.1)            -> aviso traza-no-verificable
+$ git diff --stat 507afd6 490646b -- GDE/Examples/Prueba-Ayuda-Por-Rol/Web/Ayuda/es
+(vacío: E1 no tocó esas páginas; son la prueba de concepto E0, commit dade777 del 2026-09-21)
+
+Agregadas por E1 (107), por prefijo del ID trazado:
+  ANX-SDEI 48 · MARCO 16 · MAPA 12 · RD 9 · RN-LOC 8 · TEM-SDEI 5 · IDX 5 · GP-SDEI 2 · DEMO-MU 2
+
+Cuenta: resueltas 112 = 107 de E1 + 5 heredadas DOC-*. Las 9 que no resuelven son todas heredadas de E0.
+
+================================================================================
+4. Resultado
+================================================================================
+  traces de E1 ............. 107 / 107 resuelven (100 %)
+  anclas de nivel 2 (E1-U3)   10 / 10 resuelven contra 8fb4c3a (100 %); 10 / 10 contra main (deriva 0)
+  cuerpo SDEI completo ..... 112 / 121 (92,6 %); las 9 restantes: CU-* de prefijo «externo»
+                             (tools/docs-guard/prefijos.txt:33) en páginas E0 sin source.lock;
+                             la herramienta las marca «no verificable» y avisa por diseño (README de docs-guard §4,
+                             «Trazas a otro sistema»).
+Nota: pasar --fuente de la mini demo a todo el cuerpo (invocación que ningún workflow hace) convierte esas 9 en
+  ERROR traza-no-resuelve (trazas=121 resueltas=112), porque con --fuente el aviso se omite (dg.py, cmd_trazas).
+  No cambia la cuenta de E1.
+Veredicto G-d: CUMPLE para las traces del escalón E1. Queda abierto (no E1): las 9 traces CU-* de la prueba E0.
+
+================================================================================
+5. Refutación (no sostiene el CUMPLE: NO_CUMPLE), reproducida por la crítica del paquete el 2026-10-28
+================================================================================
+El instrumento de §1 recorre sólo la RUTA por defecto (GDE). E1 agregó traces fuera de ella, en AGENTS.md,
+README.md y Guides/README.md (E1-U1 3167f7d, E1-U4e c483d80). Sobre una copia de 490646b (git archive) en
+{dir-de-trabajo}:
+
+$ python3 -I tools/docs-guard/dg.py trazas AGENTS.md README.md Guides/README.md
+README.md:1: ERROR traza-ambigua: GUIA-INDICE: declarado 4 veces (Concepts/Framework-Concept/Developer-Guide.md, …)
+Guides/README.md:1: ERROR traza-ambigua: GUIA-INDICE: declarado 4 veces (…)
+== PR-5 traces-resolve: ROJO (errores=2 avisos=0) trazas=12 resueltas=10 anclas=0 anclas-resueltas=0
+
+  => traces que agregó E1 en el repo: 107 + 12 = 119; resuelven 107 + 10 = 117 (98,3 %).
+
+Regresión en Concepts/Framework-Concept (mismo dg.py de 490646b sobre los dos árboles):
+$ (árbol de 507afd6) python3 -I <dg.py de 490646b> trazas --raiz . Concepts/Framework-Concept
+== PR-5 traces-resolve: ROJO (errores=6 avisos=0) trazas=89 resueltas=83 …
+$ (árbol de 490646b) python3 -I tools/docs-guard/dg.py trazas Concepts/Framework-Concept
+== PR-5 traces-resolve: ROJO (errores=29 avisos=0) trazas=89 resueltas=60 …
+$ … | grep -o 'traza-ambigua: TEM-0[0-9]' | sort | uniq -c
+     10 traza-ambigua: TEM-04
+      5 traza-ambigua: TEM-05
+      8 traza-ambigua: TEM-06
+  => 23 traza-ambigua nuevas: TEM-04, TEM-05 y TEM-06 quedan declarados dos veces
+     (Concepts/Framework-Concept/… y GDE/TEM-0n-….md, agregados por E1-U4c fc6351e).
+
+Ninguna lectura del umbral llega al 100 %: cuerpo SDEI 112/121 (92,6 %); toda trace agregada por E1 117/119.
+Veredicto final de G-d: NO_CUMPLE (folio 245 §5).
