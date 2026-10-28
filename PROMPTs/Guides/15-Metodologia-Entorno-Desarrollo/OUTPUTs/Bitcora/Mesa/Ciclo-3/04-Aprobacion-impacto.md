@@ -22,7 +22,7 @@ Todas sobre la copia parcheada (`guia-parcheada.md`, «L*n*» = línea de esa co
 | J-I9 | P-21 op 2 comprime la respuesta de §10.6 sobre el hook que rechaza un `.cs` válido en Windows | Sale «sin `python3` el verificador no corre». Ésa es la causa probable que la pregunta pide diagnosticar y la misma que motivó C3-21; ahora queda a un salto, en A.11 | `guia-parcheada.md` L2076–L2077 |
 | J-I10 | P-10 op 11, criterio de corrección de «Volver al mapa»: «tres filas respaldadas sólo por una fuente» | Es correcto: en §3.3, `PackageReference Version` ([B83][B84]), `requires-python` ([B71][B73]) y `SOURCE_DATE_EPOCH` ([B03]) | tabla §3.3 de la copia |
 | J-I11 | P-16 / P-18: los `[Bnn]` que P-18 reparte en «Datos volátiles» | B07 SLSA v1.2, B61 política de soporte, B62 metadatos, B68 Node, B93 npm v11/v12, B155 SPDX 3.0.1, B156 CycloneDX 1.7, B180 pre-commit 4.6.2, B193 checkout v7.0.1 y B205 Python 3.15.0: cada uno dice lo que se le atribuye. B181 tiene las tres URL que B217 deja de repetir | Anexo D de la copia |
-| J-I12 | Privacidad sobre la copia parcheada | `grep -ciE "GDA|SGM|Notions|BotonPanico|oordenada"` → 0 | `guia-parcheada.md` |
+| J-I12 | Privacidad sobre la copia parcheada | `grep -ciE -f <patrón-R-PRIV>` → 0 | `guia-parcheada.md` |
 
 ## 2. Decisiones
 

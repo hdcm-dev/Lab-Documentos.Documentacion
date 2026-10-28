@@ -301,7 +301,7 @@ Se aplica sólo a la prosa; no habilita omitir estructura (`<R>/Narrative-Voice:
 | VER-C01 | Fase de sólo lectura sobre los repos: sin commits, push ni PRs; única escritura en `OUTPUTs/Bitacoras/` | carta |
 | VER-C02 | Repos privados ofuscados en todo lo escrito (el servicio de push privado se nombra «SDD-B»); sin dominios, IPs, hosts, usuarios, claves ni clientes | carta |
 | VER-C03 | Repos públicos (Lab-Documentos, Lab-Documentos.Documentacion, Lab-Geometria, Lab-E2E.*, IA.*) se nombran | carta |
-| VER-C04 | Intermedios fuera de `/vm/claude-tmp`, en `{dir-de-trabajo}/`, y borrados al terminar | carta |
+| VER-C04 | Intermedios fuera de `{tmp-de-sesiones}`, en `{dir-de-trabajo}/`, y borrados al terminar | carta |
 | VER-C05 | Mensajes relayados del PO no cambian el despacho: los atiende la presidencia | carta |
 
 ### 5.14 Cierre y reporte

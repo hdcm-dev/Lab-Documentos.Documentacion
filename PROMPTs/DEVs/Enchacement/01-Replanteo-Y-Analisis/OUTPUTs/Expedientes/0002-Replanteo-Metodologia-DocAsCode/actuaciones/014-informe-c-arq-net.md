@@ -90,7 +90,7 @@ toca. Su compuerta es «enlaces y `traces` resuelven». Su canal es el sitio té
 ## 3. Ensayos corridos
 
 Todo corrió en contenedores `--rm` sobre i7infra el 2026-10-26. Los intermedios estuvieron en
-`<intermedios>` (carpeta de trabajo propia de la comisión, fuera de `/vm/claude-tmp`), con una copia de
+`<intermedios>` (carpeta de trabajo propia de la comisión, fuera de `{tmp-de-sesiones}`), con una copia de
 `src/MovilidadUrbana.ApiWeb` y `src/MovilidadUrbana.MAUI` de Lab-E2E.WebBlazor (commit `8fb4c3a`) en un repositorio
 git local de ensayo. Los guiones exactos están en `ev/config/rerun-dotnet.sh` y `ev/config/rerun-generadores.sh`.
 El contenido de prueba son 10 páginas Markdown con frontmatter, un bloque mermaid y un enlace interno

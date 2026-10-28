@@ -1,0 +1,3 @@
+# <patrón-R-PRIV>: la lista literal de identificadores privados del control R-PRIV vive fuera del repo
+# (expediente 0002 de Lab-Documentos.Documentacion, corrigenda 254 §8). Si se copia acá, no se versiona.
+*.local.txt

@@ -46,7 +46,7 @@
 | Rule-Dual-Audience | Bloques `entradas`/`salidas`/`validaciones` en procesos ejecutables | §5.2.6, §10.2.2, §12 sin bloque | **Falta** (requisitos-06) |
 | Rule-Indexing | Sincronizar la ia-db con documentos nuevos | ia-db de `Lab-Documentos.Documentacion` no menciona la guía | **Falta y queda fuera del alcance de escritura** (requisitos-07) |
 | Rule-Evidences | Fuente con fecha o experimento; criterio rotulado | §0.3 marcas; Anexo D (fechas), Anexo E, Anexo F | Cumple (el fondo lo juzga verificación-evidencia) |
-| R-PRIV | Sin identificadores privados | `grep -rn -i -E "GDA|SGM|Notions|BotonPanico|oordenadaExtacta"` sobre guía y `Examples/` → 0 líneas | Cumple |
+| R-PRIV | Sin identificadores privados | `grep -rn -i -E -f <patrón-R-PRIV>` sobre guía y `Examples/` → 0 líneas | Cumple |
 
 ### 1.3 Pedidos de proceso (no son materia de la guía)
 

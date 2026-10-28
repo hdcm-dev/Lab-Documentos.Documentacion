@@ -6,7 +6,7 @@ status: vigente
 origin: agent
 confidence: alta en las medidas de §4, corridas sobre main de los dos repos con el comando que se transcribe; la forma de cada expresión pública es criterio propio de la presidencia
 owner: presidencia de la mesa de Replanteo y análisis DocAsCode (vuelta de E1)
-last_review: 2026-10-28T13:35:47-03:00
+last_review: 2026-10-28T13:50:00-03:00
 audience: [PO, presidencia, refutador, agentes que reparen E1, verificadores de E1-G2, bitacorista]
 traces: [EXP0002-F099, EXP0002-F245, EXP0002-F250, EXP0002-F251, EXP0002-F253, R07]
 ---
@@ -30,6 +30,7 @@ traces: [EXP0002-F099, EXP0002-F245, EXP0002-F250, EXP0002-F251, EXP0002-F253, R
 5. [Cómo se corre](#5-cómo-se-corre)
 6. [Efecto](#6-efecto)
 7. [Pase](#7-pase)
+8. [Redacciones hacia adelante (U28)](#8-redacciones-hacia-adelante-u28)
 
 ## 1. Qué se corrige
 
@@ -131,3 +132,50 @@ git ls-files -z                      | xargs -0 grep -nIiE -f "$PRIV"  # parte p
 
 A la presidencia, con `251`, `252` y `253`, para fusionar antes de abrir cualquier rama `exp0002/e1r-*`; a U28, U40 y
 U41 para el uso del patrón · presidencia.
+
+## 8. Redacciones hacia adelante (U28)
+
+Agregado por la unidad U28 del acta `250` (DEC-06; defectos DEF-60, DEF-64, DEF-66 y DEF-68), en la rama
+`exp0002/e1r-fugas-ldd`, sobre `main` `6ed5f91`. Es una edición mínima de redacción: en cada línea sólo el valor real
+pasa a su alias; el resto de la línea, la numeración y el contenido no cambian. Los valores reales quedan en
+`{resguardo-privado}` (folio `253`, valores de la mesa). La historia de `main` no se reescribe: las versiones previas
+siguen en los commits que la columna «Entró» indica, y su reescritura es del lote al PO (U02).
+
+| Fuga (R4) | Archivo:línea | Clase | Pasa a | Entró |
+| --- | --- | --- | --- | --- |
+| F4 | `Bitacoras/R07-Reglas-PromptFramework.md:304` (VER-C04) | carpeta de intermedios del agente | `{tmp-de-sesiones}` | E1-U0c |
+| F4 | `actuaciones/014-informe-c-arq-net.md:93` | ídem | `{tmp-de-sesiones}` | E1-U0c |
+| F4 | `actuaciones/090-reconsideracion.md:213` | ídem | `{tmp-de-sesiones}` | E1-U0c |
+| F5 | `PROMPTs/Guides/14-Sistema-De-Documentador-Tecnico/OUTPUTs/Reanudar.md:59` | temporal de sesiones y raíz de worktrees | `{tmp-de-sesiones}`, `{raíz-de-worktrees}/` | PR #24 (`888ea71`); aviso al PO por U02 |
+| F6 | guía 15, `OUTPUTs/Bitcora/Mesa/`: `Ciclo-1/00-Convocatoria.md:51`, `Ciclo-1/Informe-requisitos.md:49`, `Ciclo-2/04-Aprobacion-impacto.md:18`, `Ciclo-2/04-Aprobacion-riesgo.md:24`, `Ciclo-2/05-Aplicacion.md:131`, `Ciclo-2/Informe-requisitos.md:46`, `Ciclo-3/04-Aprobacion-impacto.md:25`, `Ciclo-3/05-Aplicacion.md:165`, `Ciclo-3/Informe-requisitos.md:45` (9) | identificadores del control R-PRIV escritos dentro del `grep` | `-f <patrón-R-PRIV>` | `8da0cd9` |
+| F7 | guía 15, `OUTPUTs/Bitcora/Mesa/Ciclo-1/04-Aprobacion-evidencia.md:27` | salida de `stat -c %U` | `{usuario-del-host}` | `8da0cd9` |
+| F8 | guía 06, `OUTPUTs/Bitacora-Editores/09-Fuente-Actividad-La-Estancia.md:8` | correo personal | `{correo-del-PO}` | `10cb997` |
+| dudosa | `evidencia/C-VERIFICACION/herramientas/cita-linea.mjs:6` | carpeta local de INFRA-privada en la lista de raíces | expresión general: cualquier carpeta de primer nivel que empiece con mayúscula | E1 (C-VERIFICACION) |
+
+Rutas abreviadas: `Bitacoras/` es `PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Bitacoras/`;
+`actuaciones/` y `evidencia/` son las de este expediente.
+
+**`<patrón-R-PRIV>` (F6).** El chequeo de privacidad de la guía 15 sigue siendo ejecutable sin publicar los literales:
+`PROMPTs/Guides/15-Metodologia-Entorno-Desarrollo/OUTPUTs/Bitcora/Mesa/privacidad-r-priv.sh` corre el mismo
+`grep -rn -i -E` de las bitácoras y lee las expresiones de `PATRON_R_PRIV` o, si no está, de
+`patron-R-PRIV.local.txt` junto al guion; el `.gitignore` de esa carpeta excluye `*.local.txt`. Sin archivo de patrones
+termina con código 2 y lo declara: no afirma R-PRIV. Medido con un patrón local de las cinco expresiones que
+registraban las bitácoras: la guía (`OUTPUTs/Metodlogia-Entorno-Desarrollo.md`) da 0 coincidencias (exit 0); el
+prompt de la guía 15, que es F9, da sus 2 líneas (exit 1), como control positivo.
+
+**`cita-linea.mjs` (dudosa).** Con el mismo criterio que la generalización de `dg.py:797` (U12), la lista cerrada de
+raíces pasa a la forma de una raíz del workspace. Medido con Node sobre esta rama: en
+`PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/` la salida es idéntica antes y después (`citas-a-raiz=161
+sin-linea=112`); en todo `PROMPTs/` pasa de 313 a 322 citas a raíz y de 261 a 268 sin línea, con 0 infracciones
+perdidas y 7 nuevas, de raíces del workspace que la lista cerrada no tenía.
+
+**Medida de aceptación (U28),** sobre el árbol de esta rama:
+
+| Medida | Resultado |
+| --- | --- |
+| `git diff --name-only origin/main...HEAD \| grep -v '/OUTPUTs/'` | Vacío |
+| Parte privada (§3, sha256 verificado) sobre las líneas que agrega el diff | 0 |
+| Patrón de 33 líneas de R4 sobre las líneas que agrega el diff | 0 |
+| Barrido en dos partes más el patrón de R4 sobre todos los archivos versionados: reales que quedan | 5: F9 (2) y F10 (3), prompts del PO. F3 ya salió por el PR #28 de Framework-Concept |
+| Dudosas que quedan | 18 de Framework-Concept (R2 y `evidencia/local`) y `CHANGELOG.md:218` (antes `:217`, va en U33) |
+| Coincidencias fuera de la clasificación de R4 | 28, todas de clases genéricas y en archivos posteriores a R4 (`250`, `G-f-barrido-s2.txt`, `S2-folios.txt`): autocitas del patrón, rutas sintéticas, runners alojados y redes didácticas. Falsos positivos |

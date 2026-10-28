@@ -43,7 +43,7 @@
 | Dual-Audience | Front matter con `traces` | L1–L18; tabla en Anexo F | Cumple con imprecisiones de la tabla (requisitos-02) |
 | Dual-Audience | Bloques `entradas`/`salidas`/`validaciones` | §5.2.6 L792–L810, §12 L2401–L2418 | Cumple; §12 incompleto (requisitos-05) |
 | Rule-Indexing | ia-db | Fuera de alcance, registrado (P-24) | Cerrado, no se reabre |
-| R-PRIV | Sin identificadores privados | `grep -rn -i -E "GDA|SGM|Notions|BotonPanico|oordenadaExtacta"` sobre guía y `Examples/` → sin salida | Cumple |
+| R-PRIV | Sin identificadores privados | `grep -rn -i -E -f <patrón-R-PRIV>` sobre guía y `Examples/` → sin salida | Cumple |
 | Encargo | `.gitignore` del laboratorio | `Examples/.gitignore`: bin/, obj/, node_modules/, .venv/, __pycache__/ | Cumple |
 
 ## 2. Hallazgos

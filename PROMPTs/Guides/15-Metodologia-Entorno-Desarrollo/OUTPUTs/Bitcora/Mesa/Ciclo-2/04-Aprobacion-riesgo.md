@@ -21,7 +21,7 @@ No tomé los chequeos de `03-Parches.md` §8 por buenos: los volví a correr sob
 | R9 | Python 3.15.0 publicada (P-06, P-18, P-20) | `curl https://www.python.org/downloads/release/python-3150/` y `…/ftp/python/3.15.0/` | «Release date: Oct. 9, 2026»; «This is the stable release of Python 3.15.0»; «PEP 686: Python now uses UTF-8 as the default encoding»; existe `Python-3.15.0.tgz` |
 | R10 | Plantillas de A.12, A.17 y A.18 = laboratorio propuesto (P-15, P-23) | bloque del Anexo A parcheado vs. archivo de `x7-ea1-propuesto/repo/` | 3/3 iguales byte a byte |
 | R11 | Corridas que sostienen P-12, P-15 y P-23 | `tail` de `x7-ea1-propuesto/salida.txt` y `x3-regresion-n7/salida.txt` | EA-1 de diez pasos `rc=0`, paso 10 `"outcome":"success"`; E7-03 y E7-07 (Node y Python) «veredictos y códigos iguales» |
-| R12 | Privacidad | `grep -ciE 'GDA\|SGM\|Notions\|BotonPanico\|Coordenada'` | 0 antes, 0 después |
+| R12 | Privacidad | `grep -ciE -f <patrón-R-PRIV>` | 0 antes, 0 después |
 | R13 | Digest en ESC-04 (C2-23) | filas `ESC-04` con «digest», antes y después | §6.4 y §9.4 dejan de pedirlo; queda en §11.4 «bases por digest» de la imagen de la CI (receta de A.10), que es donde corresponde |
 | R14 | `safe.directory` (C2-11) | `grep` | acotado a `${containerWorkspaceFolder}`; ninguna aparición de `'*'` |
 | R15 | `MSYS_NO_PATHCONV` (C2-10) | `grep` | «con `MSYS_NO_PATHCONV=1` delante»: prefijo por comando, no variable global, como pedí en el voto |
