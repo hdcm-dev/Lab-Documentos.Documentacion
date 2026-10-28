@@ -73,7 +73,7 @@ Comando: `docker images --format '{{.Repository}}:{{.Tag}}\t{{.ID}}\t{{.Size}}\t
 | `adb-contenedor:net10` | d7617b8510a8 | 6,31 GB | 7 semanas |
 
 Contenedores de otros escenarios que **no se tocaron** (`docker ps`): `android-emu-<privado>` (Up 5 days,
-`0.0.0.0:6080->6080`), `android-emu-banco` (Up 3 days, `6080/tcp` sin publicar), `runner-github-dev`,
+`0.0.0.0:6080->6080`), `android-emu-<privado>` (Up 3 days, `6080/tcp` sin publicar), `runner-github-dev`,
 `runner-github-ng`, `runner-github-ap25`, `adb-contenedor` (Up 10 days). No hay ningún contenedor `lab-e2e-*`
 corriendo.
 
@@ -213,13 +213,13 @@ Fuentes: `/LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor/.devcontainer/dev.sh` y
 ### 3.2 Compilación medida (android-x64)
 
 Copia de trabajo: sólo el proyecto, tomado del commit `8fb4c3a` (2026-09-18) con `git archive` (árbol de trabajo
-limpio), en `/vm/claude-tmp/fc-r2/mu` del host. El repo original no se tocó.
+limpio), en `{tmp-de-sesiones}/fc-r2/mu` del host. El repo original no se tocó.
 
 ```bash
-git -C /LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor archive HEAD src/MovilidadUrbana.MAUI | tar -x -C /vm/claude-tmp/fc-r2/mu
+git -C /LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor archive HEAD src/MovilidadUrbana.MAUI | tar -x -C {tmp-de-sesiones}/fc-r2/mu
 docker volume create fc-nuget
 docker run --rm --name fc-build-apk -u 0 -v fc-nuget:/home/dev/.nuget lab-e2e-maui-dev:net10 chown -R dev:dev /home/dev/.nuget
-docker run --rm --name fc-build-apk -v fc-nuget:/home/dev/.nuget -v /vm/claude-tmp/fc-r2/mu:/work -w /work \
+docker run --rm --name fc-build-apk -v fc-nuget:/home/dev/.nuget -v {tmp-de-sesiones}/fc-r2/mu:/work -w /work \
   lab-e2e-maui-dev:net10 bash -lc 'dotnet build src/MovilidadUrbana.MAUI/MovilidadUrbana.MAUI.csproj -c Debug \
   -f net10.0-android -p:AndroidPackageFormat=apk -p:RuntimeIdentifier=android-x64 -p:EmbedAssembliesIntoApk=true'
 ```
@@ -461,8 +461,8 @@ instalan/desinstalan paquetes `com.frameworkconcept.*`.
 > publicación WASM (§2.4), verificación del emulador (§4), reconfirmación del g42 (§6.2) y las recetas (§8).
 > Para no volver a caer: todos los intermedios de la segunda corrida fueron a `~/fc-work/r2/` (disco
 > `/`, 53,7 M inodos libres) o a volúmenes Docker, y se borraron al terminar; también se borró la copia vieja
-> `/vm/claude-tmp/fc-r2/mu` (≈ 8 750 entradas). Al cerrar: `df -i /vm` → 164 204 usados, 526 996 libres.
-> Quedan sólo los logs en `/vm/claude-tmp/fc-r2/` y los APK en `~/fc-work/r2/apk/`.
+> `{tmp-de-sesiones}/fc-r2/mu` (≈ 8 750 entradas). Al cerrar: `df -i /vm` → 164 204 usados, 526 996 libres.
+> Quedan sólo los logs en `{tmp-de-sesiones}/fc-r2/` y los APK en `~/fc-work/r2/apk/`.
 > Lo que sigue es el registro original del bloqueo.
 
 **BLOQUEO: compilación android-arm64 y todo comando posterior — `No space left on device` / el entorno de comandos
@@ -471,12 +471,12 @@ comando mínimo (`df -i /vm`) sin cambiar nada: mismo error.**
 
 - `df -i /vm` (último comando que corrió): 691 200 inodos, 691 060 usados, **140 libres**. Espacio en bytes: 531 GB
   libres.
-- Reparto medido antes del bloqueo (`find | wc -l`): `/vm/claude-tmp/claude-1000/-home-fernando-workspaces-workspace-dev`
+- Reparto medido antes del bloqueo (`find | wc -l`): `{tmp-de-sesiones}/<proyecto>`
   ≈ 679 000 entradas, sobre todo scratchpads de **otras** sesiones (≈ 258 000, 119 000, 103 000, 83 000 y 33 000
-  entradas en cinco carpetas de sesión). La copia de este relevamiento (`/vm/claude-tmp/fc-r2`) usa ≈ 8 750.
+  entradas en cinco carpetas de sesión). La copia de este relevamiento (`{tmp-de-sesiones}/fc-r2`) usa ≈ 8 750.
 - No se borró nada: el entorno pidió avisar al PO antes de borrar para hacer lugar, y lo de otras sesiones no es
   de este relevador. Para destrabar hace falta que el PO (o la presidencia) libere inodos; lo propio de este
-  relevamiento que se puede borrar sin pérdida es `/vm/claude-tmp/fc-r2/mu/src/MovilidadUrbana.MAUI/{bin,obj}`
+  relevamiento que se puede borrar sin pérdida es `{tmp-de-sesiones}/fc-r2/mu/src/MovilidadUrbana.MAUI/{bin,obj}`
   (el APK x64 está ahí mismo) y el volumen Docker `fc-nuget` no ocupa `/vm`.
 - Observación de criterio propio: `/vm` es ext4 con sólo ~691 000 inodos para 674 GB; compilaciones .NET/Android
   (miles de archivos chicos por build) lo agotan. Para ensayos conviene trabajar en un volumen Docker (vive en
@@ -489,7 +489,7 @@ partir de las fuentes citadas, sin ejecutar (con motivo).
 
 Reglas comunes: nunca compilar en el repo original; intermedios fuera de `/vm` (en `~/fc-work/…` o
 volúmenes Docker); nombres de contenedor con prefijo `fc-`; no tocar `android-emu-<privado>`,
-`android-emu-banco` ni contenedores ajenos.
+`android-emu-<privado>` ni contenedores ajenos.
 
 ### 8.1 Compilar un APK MAUI x64 / arm64 (probada, §3.3)
 

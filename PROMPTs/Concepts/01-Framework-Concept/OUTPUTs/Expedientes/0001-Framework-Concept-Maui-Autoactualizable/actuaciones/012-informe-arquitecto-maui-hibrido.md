@@ -135,7 +135,7 @@ Ninguna. T-1 (rango, H-06) y T-2 (N = 3 con la semilla, H-10) se cumplen. T-3 no
 
 ## 7. Ensayos propios: E02-B y E02-R
 
-Teléfono de juicio: moto g42 `<serie-del-g42>`, Android 13, WebView 155. Compilación en contenedores `lab-e2e-maui-dev:net10` (SDK 10.0.400, Maui 10.0.20). Intermedios en `~/fc-work/arq-e02r/`, fuera de `/vm/claude-tmp`. Las corridas de E02-R van bajo el candado `escenarios.lock`. E02-B se corrió **antes** de que llegara la regla del candado.
+Teléfono de juicio: moto g42 `<serie-del-g42>`, Android 13, WebView 155. Compilación en contenedores `lab-e2e-maui-dev:net10` (SDK 10.0.400, Maui 10.0.20). Intermedios en `~/fc-work/arq-e02r/`, fuera de `{tmp-de-sesiones}`. Las corridas de E02-R van bajo el candado `escenarios.lock`. E02-B se corrió **antes** de que llegara la regla del candado.
 
 ### 7.1 E02-B: línea base del modelo B (`BlazorWebView` compilado que renderiza un formulario desde JSON)
 
