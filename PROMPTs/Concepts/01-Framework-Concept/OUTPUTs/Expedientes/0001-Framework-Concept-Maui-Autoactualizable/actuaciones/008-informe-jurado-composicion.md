@@ -145,7 +145,7 @@ Toda pregunta queda cubierta por al menos una comisión, y cada comisión tiene 
 - **Fuentes**: cada comisión de dominio cita fuente externa (norma con número, publicación con autor, documentación
   oficial con URL y fecha de consulta); **una cláusula cuyo apartado no se verificó se cita sin apartado**.
 - **Ensayos** (autorizados por `EV001:39`, «Los investigadores especializados pueden ensayar»): en contenedores Docker
-  con prefijo `fc-`, intermedios fuera de `/vm/claude-tmp`; el teléfono g42 por
+  con prefijo `fc-`, intermedios fuera de `{tmp-de-sesiones}`; el teléfono g42 por
   `adb -H 203.0.113.30 -P 5037 -s <serie-del-g42>`, **sólo con paquetes `com.frameworkconcept.*`**, sin tocar otras apps
   ni ajustes (folio 002); el emulador `fc-android-emu` está corriendo pero su WebView 83 **no ejecuta Blazor .NET 10**
   (E01 §1): un ensayo de contenido Blazor se mide en el g42. iOS no es observable: se declara, no se supone.

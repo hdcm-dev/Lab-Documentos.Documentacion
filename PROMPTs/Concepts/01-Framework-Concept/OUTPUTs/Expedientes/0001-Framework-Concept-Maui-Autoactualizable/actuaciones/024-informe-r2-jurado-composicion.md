@@ -152,7 +152,7 @@ que es de la presidencia.
 - Tope de 12 hallazgos, «lo que revisé y está bien» hasta tres, solicitud de convocatoria fuera de mandato,
   `Cadena-De-Consecuencias` §2 antes de recomendar, ficha de `Excepcion-A-Un-Conocimiento` §5.1 si se propone no
   seguir una convención que rige.
-- Ensayos sólo en contenedores `fc-` con intermedios fuera de `/vm/claude-tmp`, borrados al terminar. **Sin g42 ni
+- Ensayos sólo en contenedores `fc-` con intermedios fuera de `{tmp-de-sesiones}`, borrados al terminar. **Sin g42 ni
   emulador** en esta ronda: si hace falta medir en un dispositivo, obstáculo de una línea a la presidencia. Nada
   irreversible.
 

@@ -14,7 +14,7 @@ ESCENARIOS liberara el candado `escenarios.lock`.
 
 - El 2026-10-27 a las 10:43 el candado estaba libre (`flock -n` concedido, sin procesos de esa sesión vivos). Se tomó
   el candado durante la operación.
-- Por `adb -H 100.66.63.98 -P 5037 -s ZY32GSJ88S` se desinstalaron `com.frameworkconcept.demo`,
+- Por `adb -H 203.0.113.30 -P 5037 -s <serie-del-g42>` se desinstalaron `com.frameworkconcept.demo`,
   `com.frameworkconcept.ensayo01` y `com.frameworkconcept.seguridad01`: las tres respondieron `Success` y
   `pm list packages` ya no lista ningún `com.frameworkconcept.*`. No se tocó otra app ni el servidor de adb.
 - El g42 no se usó para medir, como pidió el PO.
