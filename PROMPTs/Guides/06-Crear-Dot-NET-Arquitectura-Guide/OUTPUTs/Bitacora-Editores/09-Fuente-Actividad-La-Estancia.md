@@ -5,7 +5,7 @@
 > inventar el dominio ni volver a pedir el documento original.
 >
 > **Origen**: `actividad3.3_iterfaces_clases_abstractas.docx`, Google Drive `1A80sKyEk1XlnOwxRyiZPeMgw3y6nYZrd`,
-> propiedad de <correo>, creado 2026-07-30, última modificación 2026-09-15.
+> propiedad de {correo-del-PO}, creado 2026-07-30, última modificación 2026-09-15.
 > Leído el 2026-09-24 por el conector de Drive.
 >
 > **Autor**: Filipuzzi, Fernando — UTN FRP, TUP, Programación II, 2026.

@@ -3,6 +3,7 @@
 // Salida: una línea por infracción; exit 1 si hay alguna.
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+// Raíz del workspace: cualquier carpeta de primer nivel que empiece con mayúscula (corrigenda 254 §8).
 const raices = /^\/[A-Z][A-Za-z0-9.-]*\//;
 const re = /`(\/[^`\s]+\.(md|cs|csproj|yml|yaml|json|props|razor|sh|txt|ps1))(:[0-9][0-9,\-]*)?`/g;
 function* walk(d){ for(const n of readdirSync(d)){ const p=join(d,n); const s=statSync(p); if(s.isDirectory()){ if(!['bin','obj','node_modules','.git'].includes(n)) yield* walk(p);} else if(p.endsWith('.md')) yield p; } }

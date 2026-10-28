@@ -162,7 +162,7 @@ N8 no se tocó. En total cambiaron 25 archivos de `Examples/`: 7 nuevos y 18 mod
 | Mermaid | `minlag/mermaid-cli` 12.0.0 en contenedor | 11 de 11 renderizan con rc=0; ningún SVG contiene «Syntax error» (`cierre/mermaid.txt`) |
 | YAML | PyYAML 6.0.3 en `python:3.12-slim` | 7 de 7 válidos (`cierre/yaml.txt`) |
 | Anexo A ↔ laboratorio | `anexoA.py` | TODO IGUAL, 22 bloques (`cierre/anexoA-salida.txt`) |
-| Privacidad | `grep -ciE 'GDA\|SGM\|{organización-del-SDD-B}\|BotonPanico\|oordenada'` | guía 0; `Examples/` 0 archivos; notas de P-24 0 |
+| Privacidad | `grep -ciE -f <patrón-R-PRIV>` | guía 0; `Examples/` 0 archivos; notas de P-24 0 |
 | Terminología | `grep -cF` de las cadenas retiradas | `ImagenDigest`, `**[no verificado]** (requiere Windows)`, `npm y pip`, `reconstrucción bit a bit`, `Práctica de §3`, `las ampliaciones de la revisión`, `CheckSdkVulnerabilities=true`, «porque las herramientas del SDK lo reponen», `B224`: **0** cada una. `verificar.sh` aparece en §0.4, §10.2, §11.1 (el árbol de la solución de N8), §11.2, §11.5, Anexo A y Anexo E; no en §11.2.9 ni en §11.4 |
 | Marcas | conteo fuera de código | `[criterio]` 85, `[no verificado]` 36, `[observado]` 12, `[interpretación]` 5; *Aplica* 61 |
 | Verificación de los parches | `aplicacion/verif.py` | 87 comprobaciones, 86 OK, 1 FALLA (P-18, ≥ 12 citas; derivada de R-1, §3) |
