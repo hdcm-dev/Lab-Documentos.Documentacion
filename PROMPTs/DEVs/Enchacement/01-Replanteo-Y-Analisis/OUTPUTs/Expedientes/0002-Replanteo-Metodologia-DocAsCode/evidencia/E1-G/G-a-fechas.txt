@@ -1,0 +1,113 @@
+G-a — Fecha del folio de criterios (133) y de la providencia (132) frente a la primera rama de E1
+Expediente 0002, compuerta E1-G. Medido el 2026-10-28 en hpdev (i7infra caído el 2026-10-28 00:50 -03).
+Criterio (133 §2, fila G-a): «Dado este folio, cuando se abre la primera rama de E1, entonces la fecha
+del folio es anterior». Instrumento: `git log` de la primera rama. Evidencia esperada: fecha y SHA.
+Horas en UTC (Z) salvo indicación; -03 = hora local del PO.
+
+------------------------------------------------------------------------------------------------
+1. Fecha asentada en los folios (frontmatter y tabla de carátula)
+------------------------------------------------------------------------------------------------
+$ grep -n 'last_review\|^| Fecha' actuaciones/132-providencia-opcion-b.md actuaciones/133-providencia-criterios-e1.md
+132-providencia-opcion-b.md:9:last_review: 2026-10-27
+132-providencia-opcion-b.md:19:| Fecha | 2026-10-27, anterior a la primera rama de E1 |
+133-providencia-criterios-e1.md:9:last_review: 2026-10-27
+133-providencia-criterios-e1.md:19:| Fecha | 2026-10-27, anterior a la primera rama de E1 (G-a) |
+
+=> Granularidad de día. La fecha asentada es IGUAL (no anterior) a la de la primera rama (2026-10-27);
+   la precedencia la afirma el propio folio en texto («anterior a la primera rama»), sin hora.
+
+------------------------------------------------------------------------------------------------
+2. Commit que versiona los folios (Lab-Documentos.Documentacion)
+------------------------------------------------------------------------------------------------
+$ git log --follow --format='%h %aI %s' -- .../actuaciones/{132,133}-*.md
+cc2bfd6 2026-10-27T11:57:10-03:00 Expediente 0002 y bitácoras del replanteo DocAsCode (E1-U0c)   (= 14:57:10Z)
+(ambos folios: un único commit; idem 130, 131, 210 y N10-Plan-De-Implementacion.md)
+$ git log --format='%h %aI %s' -- PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs
+cc2bfd6 2026-10-27T11:57:10-03:00 ...        <- primer y único commit previo del árbol OUTPUTs/ del expediente
+PR: https://github.com/hdcm-dev/Lab-Documentos.Documentacion/pull/20  creado 14:57:38Z, fusionado 15:01:17Z (merge 60d94f3)
+Sin cambios posteriores: `git diff --stat cc2bfd6 HEAD -- actuaciones/13[23]*` vacío.
+  blob de 133 en cc2bfd6: 207fb5bb3adcd559005b28dd2dee4cd2c85e4635
+  sha256 actual 133: b148b17eb01f4822032f30f92068c86de692f8bb0d7b155e2d4142e0e62849a4
+  sha256 actual 132: 2e58ba86136a59430e2931be9e31de76a98e78f6cc0a66acc297bf1c2dd4740a
+El contenido de 133 no cita PR, SHA ni folios 21x (grep '#[0-9]+|[0-9a-f]{7,40}|21[0-9]-' sin aciertos fuera
+del índice): nada en el texto delata redacción posterior a la apertura de las ramas.
+
+=> git NO prueba la precedencia: el versionado (14:57:10Z) es POSTERIOR a la primera rama (ver 3).
+
+------------------------------------------------------------------------------------------------
+3. Ramas de E1 por API (primer commit de cada rama y apertura del PR), ordenadas
+------------------------------------------------------------------------------------------------
+GET /repos/hdcm-dev/<repo>/pulls/<n> y /pulls/<n>/commits; primer commit = menor author.date.
+repo#PR                         rama                                       1er commit  author.date   PR creado     fusionado
+Lab-E2E.WebBlazor#12   (U6)     exp0002/e1-u6-propuesta-expediente         83542ab     12:41:00Z     12:41:12Z     12:59:18Z
+Lab-Documentos#11      (U0a)    exp0002/e1-u0a-delegacion-y-docs-guard     8c3fc99     12:42:19Z     12:42:47Z     13:21:33Z
+Lab-Documentos.Documentacion#17 (U0b) exp0002/e1-u0b-delegacion-y-verificar 0cf7e8a    13:24:23Z     13:24:37Z     13:56:12Z
+Lab-Documentos#15      (U1)     exp0002/e1-u1-saneamiento-guia             3167f7d     13:26:47Z     13:27:00Z     14:26:50Z
+Lab-Documentos.Documentacion#20 (U0c) exp0002/e1-u0c-expediente-y-bitacoras cc2bfd6    14:57:10Z     14:57:38Z     15:01:17Z
+Lab-Documentos#16 (U2) 265481d 15:25:24Z · #19 (U3) 8c75722 19:11:02Z · #20 (U4a) db7c8ce 19:17:04Z ·
+#21 (U4e) c483d80 20:45:01Z · #22 (U4b) a70b24a 21:13:05Z · #23 (U4d) f697528 21:14:44Z · #24 (U4c) fc6351e 21:19:51Z ·
+#25 (U4f) 6839258 22:17:34Z · Lab-Documentos.Documentacion#22 (U5) 8ef1fb0 22:44:01Z  (todo 2026-10-27)
+Ramas de par rojo/verde (no se fusionan; agregadas tras la refutación):
+Lab-Documentos#12 (par de U0a)   exp0002/e1-u0a-par-rojo-verde        12d8999     12:42:30Z
+Lab-Documentos.Documentacion#18 (par de U0b) exp0002/e1-u0b-par-rojo-verde 99eedde 13:24:38Z
+
+=> Primera rama de E1 = Lab-E2E.WebBlazor#12 (E1-U6), 83542ab, 2026-10-27T12:41:00Z — no #11 ni #17
+   como supone el despacho: #11 la sigue por 79 s; #17 es 43 min posterior. U6 y U0a son la onda 1 de
+   N10 §14 (en paralelo), así que la «primera rama» es cualquiera de las dos.
+
+------------------------------------------------------------------------------------------------
+4. Cómo se resuelve la fecha de emisión (el folio no estaba versionado al abrir la rama)
+------------------------------------------------------------------------------------------------
+No existe un sello de tiempo independiente de la emisión de 132/133: se escribieron en i7infra, sin
+versionar hasta cc2bfd6; las transcripciones de la presidencia del 2026-10-27 no están en hpdev
+(ninguna transcripción local del expediente 0002 tiene entradas del 2026-10-27; hay dos .jsonl de otro
+proyecto, 20:43–20:45Z, sin relación con el expediente) y no hay copia previa de 133 en evidencia/
+(la única copia en hpdev tiene mtime de clon, 2026-10-28 08:30 -03). Lo que queda es testimonial:
+
+a) Cuerpo del PR Lab-Documentos#11, creado 2026-10-27T12:42:47Z, NUNCA editado
+   (GraphQL pullRequest{lastEditedAt userContentEdits{totalCount}} -> lastEditedAt null, totalCount 0):
+     «Dependencia: PRE-03 (folio 133), hecha; la rama sale de `origin/main`.»
+   => cota superior con sello de GitHub: 133 existía (según el agente de U0a) a las 12:42:47Z, y el
+      agente lo declara hecho antes de sacar la rama (1er commit 12:42:19Z).
+b) Folio 210 (E1-U0a), línea 71: «La dependencia PRE-03 ya estaba hecha (folio 133): la rama salió de
+   `origin/main`.» — versionado recién en cc2bfd6 (14:57Z), misma autoría: no agrega sello independiente.
+c) N10 §14, líneas 505 y 519: «PRE-01 y PRE-03 están hechos (folios 132 y 133)»; onda 0 = PRE-01, PRE-03,
+   antes de la onda 1 (U0a ∥ U6). Versionado en cc2bfd6: describe el orden planeado, no lo sella.
+d) Lab-E2E.WebBlazor#12 (la rama realmente primera): cuerpo sin edición (totalCount 0) y commit 83542ab
+   no citan 132, 133 ni PRE-03. No hay testimonio alguno para la precedencia frente a 12:41:00Z.
+e) 132 no se cita en ningún PR de E1 medido; su precedencia sólo se apoya en 132:19 y en N10 §14.
+
+------------------------------------------------------------------------------------------------
+5. Resultado
+------------------------------------------------------------------------------------------------
+- Instrumento de 133 (git log): no puede demostrar G-a. El único commit de 132/133 (cc2bfd6, 14:57:10Z)
+  es 2 h 16 min POSTERIOR al primer commit de E1 (83542ab, 12:41:00Z).
+- Fecha asentada: 2026-10-27, el mismo día de la primera rama; no es «anterior» a granularidad de día.
+- Testimonio fechado por GitHub: sólo el de #11 (12:42:47Z), y es autodeclarado; frente a #12 (12:41:00Z)
+  no hay ninguno.
+- No hay evidencia en contra (nada sugiere emisión posterior), pero tampoco medida que pruebe la precedencia.
+VEREDICTO: INSUFICIENTE (no P0). La precedencia es plausible y coherente con el plan, pero no medible con
+el instrumento prescripto ni con sello independiente.
+Remedio propuesto para la norma: los folios PRE (onda 0) se versionan y fusionan ANTES de abrir la primera
+rama, y G-a compara el commit del folio con el primer commit de la primera rama; o bien el folio asienta la
+hora (ISO 8601 con zona) además del día.
+
+Artefactos crudos de la medición: {dir-de-trabajo}/ga/*.json (respuestas de la API, no versionadas).
+
+------------------------------------------------------------------------------------------------
+6. Refutación (sostiene INSUFICIENTE), reproducida por la crítica del paquete el 2026-10-28
+------------------------------------------------------------------------------------------------
+a) Eventos de los tres repos (GET /repos/hdcm-dev/<repo>/events), primeras ramas exp0002:
+   Lab-E2E.WebBlazor             2026-10-27T12:41:11Z CreateEvent exp0002/e1-u6-propuesta-expediente
+   Lab-Documentos                2026-10-27T12:42:21Z CreateEvent exp0002/e1-u0a-delegacion-y-docs-guard
+                                 2026-10-27T12:42:33Z CreateEvent exp0002/e1-u0a-par-rojo-verde
+   Lab-Documentos.Documentacion  2026-10-27T13:24:25Z CreateEvent exp0002/e1-u0b-delegacion-y-verificar
+   => ninguna rama exp0002 creada antes de 12:41:11Z (la API de eventos cubre los últimos 90 días).
+b) El commit 8c3fc99 (E1-U0a, 12:42:19Z) agrega en CHANGELOG.md: «Asiento: folio 130 §2 del expediente 0002
+   … (`130-respuestas-del-po-y-asiento.md`, en hdcm-dev/Lab-Documentos.Documentacion)»; 130 recién se versiona
+   en cc2bfd6 (14:57:10Z). La autodeclaración de #11 sobre 133 tiene el mismo peso.
+c) Instrumento por criterio (segunda mitad del umbral de N09 §9.2): 133 §2, 7/7 filas con instrumento;
+   133 §3, 12/12 unidades con instrumento. Huecos parciales: §4 (umbrales P-5) sin instrumento; E1-U2,
+   el tag docs-guard-v1.0.0 no lo cubre «Actions; API de issues»; E1-U4a, «anexos enlazados desde el Mapa»
+   no lo cubre «validador de frontmatter».
+
