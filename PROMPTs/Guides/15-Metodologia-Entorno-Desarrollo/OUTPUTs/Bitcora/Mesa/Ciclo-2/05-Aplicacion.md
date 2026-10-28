@@ -128,7 +128,7 @@ Los archivos de `Examples/` que cambiaron están listados en `aplicacion/example
 | Bloques de código | ídem | todos cerrados |
 | Mermaid | `minlag/mermaid-cli` 12.0.0, contenedor | 11 de 11 renderizan; ningún SVG contiene «Syntax error» (`aplicacion/cierre/mermaid.txt`) |
 | YAML | PyYAML 6.0.3 en `python:3.12-slim` | 7 de 7 válidos; el `.pre-commit-config.yaml` de §10.5 pasa `pre-commit validate-config` con pre-commit 4.4.0 (`aplicacion/cierre/yaml-precommit.txt`) |
-| Privacidad | `grep -ciE 'GDA\|SGM\|Notions\|BotonPanico\|Coordenada'` | guía 0; `Examples/` 0 archivos; notas del ciclo 2 en la capa de origen 0 |
+| Privacidad | `grep -ciE -f <patrón-R-PRIV>` | guía 0; `Examples/` 0 archivos; notas del ciclo 2 en la capa de origen 0 |
 | Terminología: cadenas retiradas | `grep -cF` | 0 en cada una: `Windows + VS \|`, `pnpm ≥ 11`, `mismo diseño`, `únicas cinco`, `prevista para el 2026-10-09`, `Sólo Python falla siempre`, `Este comando no pide`, `cerrado de cinco`, `verificar.sh de N8` |
 | Terminología: «registro de entorno» | `grep -c` | quedan 2, las dos dentro de bloques que copian archivos del laboratorio (A.16 y el extracto de `publicar.sh`), como prevé `03-Parches.md` §9 |
 | Marcas de juicio fuera de código | script de `aplicacion/cierre/privacidad-terminologia.txt` | 132, como antes, todas en negrita. `[no verificado]` 38 → 34 y `[observado]` 3 → 7 (cuatro pasan a dato con versión) |

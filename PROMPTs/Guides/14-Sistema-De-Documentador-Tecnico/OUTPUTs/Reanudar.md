@@ -56,7 +56,7 @@ Fuera de este expediente, en el mismo repo: **#14** `cierre/0001-tpr-emulador` (
 | Antes (i7infra) | Ahora (hpdev) |
 |---|---|
 | Runner `i7infra-runner-dev` | `hpdev-runner-dev` (hdcm-dev), con las mismas etiquetas (`i7infra`, `i7infra-dev`, …) más `hpdev`. **Ojo con E-F12** (el criterio que verifica el nombre del runner en el registro del job): ahora el registro dirá `hpdev-runner-dev`; anotarlo en el folio como cambio de entorno, no como falla |
-| Worktrees de trabajo en `{dir-de-trabajo}/wt/…` en i7infra | Perdidos. Crear los nuevos fuera de `/vm/claude-tmp` y fuera del workspace (p. ej. `/vm/wt/`) |
+| Worktrees de trabajo en `{dir-de-trabajo}/wt/…` en i7infra | Perdidos. Crear los nuevos fuera de `{tmp-de-sesiones}` y fuera del workspace (p. ej. `{raíz-de-worktrees}/`) |
 | Generador de sitio usado en la verificación de E1-G (render del cuerpo SDEI) | No hay rastro en hpdev de cuál era ni de su salida: si G-x lo exige, rehacer la demostración |
 | `scripts/ci-local.sh` | Sigue en el repo; corre igual en hpdev (Docker, Python, Node 22 y .NET 10/8 instalados) |
 

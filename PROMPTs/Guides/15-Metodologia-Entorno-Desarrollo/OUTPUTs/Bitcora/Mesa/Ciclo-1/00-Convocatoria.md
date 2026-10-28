@@ -48,7 +48,7 @@ Inventario, no juicio. Cada señal con ubicación en la guía.
 **Chequeo mecánico de privacidad (E1, 2026-10-07).**
 
 ```text
-$ grep -rn -i -E "GDA|SGM|Notions|BotonPanico|oordenadaExtacta" Metodologia-Entorno-Desarrollo-Guide.md Examples | grep -v -E "/(bin|obj|node_modules|\.venv)/"
+$ grep -rn -i -E -f <patrón-R-PRIV> Metodologia-Entorno-Desarrollo-Guide.md Examples | grep -v -E "/(bin|obj|node_modules|\.venv)/"
 (sin salida)
 $ grep -o -i -w -E "nunca|siempre|todos|todas|ninguno|ninguna|único|única" Metodologia-Entorno-Desarrollo-Guide.md | wc -l
 147

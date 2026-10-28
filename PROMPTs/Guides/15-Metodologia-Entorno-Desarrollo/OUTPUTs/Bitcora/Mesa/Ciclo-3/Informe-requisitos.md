@@ -42,7 +42,7 @@
 | Dual-Audience | Front matter con `traces` | L1–L18; tabla en Anexo F L3544–L3561 | Cumple con imprecisiones (requisitos-04) |
 | Dual-Audience | `entradas`/`salidas`/`validaciones` | §5.2.6, §12 L2487–L2512 (11 validaciones) | Cumple en forma; dos validaciones sin experimento ni rótulo (requisitos-02) |
 | R-PO | No inventar; evidencia | 217 `[Bnn]` definidas = citadas; 73 experimentos (65 filas en Anexo E con subvariantes) = cifra de L26 | Cumple |
-| R-PRIV | Sin identificadores privados | `grep -ciE 'GDA|SGM|Notions|BotonPanico|oordenadaExtacta'` guía → 0; `grep -rliE` sobre `Examples/` → sin salida | Cumple |
+| R-PRIV | Sin identificadores privados | `grep -ciE -f <patrón-R-PRIV>` guía → 0; `grep -rliE` sobre `Examples/` → sin salida | Cumple |
 | Encargo | `.gitignore` del laboratorio | `Examples/.gitignore`: bin/, obj/, node_modules/, .venv/, __pycache__/ | Cumple |
 | Versión | Estado de obra finalizada | L5 `version: 1.0.0`, L6 `status: vigente`, Control de cambios L3601 | Cumple (C2-56 cerrado) |
 

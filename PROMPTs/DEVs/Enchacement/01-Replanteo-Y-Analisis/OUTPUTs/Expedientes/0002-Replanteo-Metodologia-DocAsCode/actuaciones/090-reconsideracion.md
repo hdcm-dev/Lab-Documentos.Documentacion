@@ -210,7 +210,7 @@ flowchart LR
 
 ## 11. Constancia de ensayos y limpieza
 
-- **Creado:** una carpeta de trabajo propia del despacho, fuera del workspace y fuera de `/vm/claude-tmp`, con copias
+- **Creado:** una carpeta de trabajo propia del despacho, fuera del workspace y fuera de `{tmp-de-sesiones}`, con copias
   de `Index-Knowledge.md`, de CC y de `Prompts/` y `docs/` del SDD-B, y las salidas del chequeo. No se usaron
   contenedores.
 - **Borrado:** la carpeta completa, al terminar.
