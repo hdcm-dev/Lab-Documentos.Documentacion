@@ -1,0 +1,66 @@
+S2 — Barrido de los folios 240, 245, 249 y de evidencia/E1-G
+Medido el 2026-10-28 en hpdev, con GNU grep 3.8 (/usr/bin/grep, no la función del shell), sobre el worktree
+{dir-de-trabajo}/ldd-e1g (rama exp0002/e1g-resolucion), archivos sin versionar al momento del barrido. Repetido tras la crítica del paquete (secciones
+de refutación agregadas a la evidencia), con el patrón ampliado de §1.
+
+================================================================================
+1. Patrón
+================================================================================
+El de G-f-barrido-s2.txt §1 (20 líneas, -i), más 8 líneas que la refutación de G-f señaló como faltantes. Los
+nombres reales van en un archivo de patrones fuera del repo ({dir-de-trabajo}); acá se escriben con alias.
+
+  1-20  las 20 líneas de G-f-barrido-s2.txt §1 (directorio personal, /Users/, C:\Users, {raíz-de-máquinas},
+        {usuario-del-host}, {apellido-del-PO}, {id-numérico-de-cuenta}, IPv4 10/8, 192.168/16, 172.16/12, CGNAT,
+        {organización-del-SDD-B}, {servicio-del-SDD-B}, {org-de-INFRA-privada}, {INFRA-privada} (2 formas),
+        {KB-privada}, {dir-intermedios-del-agente}, {memoria-del-agente}, {proyecto-privado})
+  21-25 identificadores privados del control R-PRIV y de la app privada (5 líneas, con borde de palabra donde son
+        siglas)
+  26    dominio del correo personal del PO
+  27    serie del teléfono de pruebas del PO
+  28    carpeta local de INFRA-privada (la que disparó D2 de G-f por accidente)
+
+================================================================================
+2. Comando y salida
+================================================================================
+$ cd <EXP> && for f in actuaciones/240-*.md actuaciones/245-*.md actuaciones/249-*.md evidencia/E1-G/*; do
+    /usr/bin/grep -cIiE -f <patrones> "$f"; done
+
+  0  actuaciones/240-constancia-caida-i7infra-y-reconciliacion.md
+  0  actuaciones/245-resolucion-compuerta-e1.md
+  0  actuaciones/249-providencia-estado.md
+  0  evidencia/E1-G/antecedentes-prs.md
+  0  evidencia/E1-G/criterios-por-unidad.md
+  0  evidencia/E1-G/G-a-fechas.txt
+  0  evidencia/E1-G/G-b-corridas.md
+  0  evidencia/E1-G/G-c-negativas.md
+  0  evidencia/E1-G/G-d-traces.txt
+  0  evidencia/E1-G/G-e-lectura-dudas.md
+ 12  evidencia/E1-G/G-f-barrido-s2.txt
+  0  evidencia/E1-G/G-g-lista-ver.md
+
+(Este archivo, S2-folios.txt, se escribió después del barrido; no contiene valores reales, sólo alias.)
+
+================================================================================
+3. Clasificación de las 12 coincidencias de G-f-barrido-s2.txt
+================================================================================
+Todas son autocitas del patrón o de los falsos positivos que G-f ya justifica; ninguna es un dato privado:
+  :16   el folio cita su propio patrón (`/home/<usuario>`, `/Users/`, `C:\Users`)
+  :47   la línea de conteo nombra las clases del patrón ("home", "/Users/", "C:\Users")
+  :87   ruta sintética `/home/x/otra` de los ensayos N0/N6
+  :95   `/home/runner/work/…`, runner alojado de GitHub
+  :97   `/Users/runner/.dotnet`, runner macOS alojado de GitHub
+  :99   URL pública de un issue de NuGet (`…/NuGet/Home/issues/…`)
+  :100  versión `10.0.400.1` de .NET, no IP
+  :103  `10.0.2.2`, alias del loopback del host en el emulador de Android
+  :107  redes de documentación RFC 5737 y `192.168.56.x` de VirtualBox, en la guía de seguridad
+  :108  `C:\Users\…` con usuario ficticio, de la misma guía
+  :125  099-resolucion.md:419 cita su propio patrón
+  :175  §7 (refutación) nombra la clase «C:\Users» del patrón en un conteo
+
+================================================================================
+4. Resultado
+================================================================================
+Folios 240, 245 y 249: vacío. evidencia/E1-G: vacío salvo las 12 autocitas de §3.
+Fuera de lo barrido acá: las fugas de G-f (245 §5, G-f) siguen en los repos y no se tocaron.
+Re-barrido de este mismo archivo con el mismo patrón: 12 coincidencias (líneas 12, 47-56 y 58), todas autocitas
+del patrón (§1) o de la clasificación de §3; ninguna es un dato privado.
