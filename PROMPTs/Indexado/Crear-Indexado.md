@@ -7,4 +7,4 @@
 
 ---
 
-Leer y ejecutar `/IA/PROMPTs/IA.Prompts/Tool-Prompts/Indexado-Documentado/Iniciar-Indexado.md` de `/LAB/Lab-Documentos` y deja la indexación en `/LAB/Lab-Documentos.Documentacion/ia-db`
+ultracode Leer y ejecutar `/IA/PROMPTs/IA.Prompts/Tool-Prompts/Indexado-Documentado/Iniciar-Indexado.md` de `/LAB/Lab-Documentos` y deja la indexación en `/LAB/Lab-Documentos.Documentacion/ia-db`
