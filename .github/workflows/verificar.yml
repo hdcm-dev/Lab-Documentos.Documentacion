@@ -3,8 +3,12 @@
 #
 # Jobs:
 #   verificar   lo que el PR agrega: sin claves privadas ni artefactos binarios pesados.
-#   docs-guard  llama al workflow reutilizable de Lab-Documentos, fijado por SHA (expediente 0002, unidad E1-U0b).
-#               Verifica enlaces internos, anclas y estructura de la carpeta «ruta».
+#   docs-guard  llama al workflow reutilizable de Lab-Documentos, fijado por SHA del main vigente de Lab-Documentos
+#               (grupos PR-1 a PR-7 y autoprueba; expediente 0002, unidades E1-U0b y U11-H-A de la vuelta de E1).
+#               Una corrida por «ruta»: .github y la carpeta del expediente 0002 (DEF-05, DEF-17).
+#
+# Disparadores: pull_request, push a main (la corrida sobre el commit de merge queda en main; DEF-06) y
+# workflow_dispatch.
 #
 # Seguridad: permissions contents: read; sin pull_request_target; actions y workflow llamado fijados por SHA;
 # un PR desde un fork no corre en el runner propio (guarda «if:»); ningún secreto.
@@ -13,6 +17,8 @@ name: Verificar
 
 on:
   pull_request:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -54,7 +60,14 @@ jobs:
 
   docs-guard:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
-    uses: hdcm-dev/Lab-Documentos/.github/workflows/docs-guard.yml@f603984a3a4b35ea62feb7e5b3f68c0ad3331311 # E1-U0a
+    strategy:
+      fail-fast: false
+      matrix:
+        ruta:
+          - .github
+          - PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Expedientes/0002-Replanteo-Metodologia-DocAsCode
+    # main de Lab-Documentos al 2026-10-28 (merge del PR #30). Subir el pin es clase H.
+    uses: hdcm-dev/Lab-Documentos/.github/workflows/docs-guard.yml@d65d52be2e236af4e858e2492c796845c21831d3
     with:
-      ruta: .github
-      herramientas-ref: f603984a3a4b35ea62feb7e5b3f68c0ad3331311
+      ruta: ${{ matrix.ruta }}
+      herramientas-ref: d65d52be2e236af4e858e2492c796845c21831d3
