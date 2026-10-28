@@ -62,6 +62,9 @@ jobs:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     strategy:
       fail-fast: false
+      # En serie: el workflow llamado declara concurrency «docs-<workflow>-<ref>», igual para las dos rutas, y con
+      # cancel-in-progress en pull_request una corrida cancelaba a la otra (corrida 40730687021).
+      max-parallel: 1
       matrix:
         ruta:
           - .github
