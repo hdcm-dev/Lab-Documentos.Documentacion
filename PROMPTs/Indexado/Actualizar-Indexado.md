@@ -7,4 +7,4 @@
 
 ---
 
-Leer y ejecutar `/IA/PROMPTs/IA.Prompts/Tool-Prompts/Indexado-Documentado/Actualizar-Indexado.md` del workspace ia-db federada en `/LAB/Lab-Documentos.Documentacion/ia-db`
+ultracode Leer y ejecutar `/IA/PROMPTs/IA.Prompts/Tool-Prompts/Indexado-Documentado/Actualizar-Indexado.md` del workspace ia-db federada en `/LAB/Lab-Documentos.Documentacion/ia-db`

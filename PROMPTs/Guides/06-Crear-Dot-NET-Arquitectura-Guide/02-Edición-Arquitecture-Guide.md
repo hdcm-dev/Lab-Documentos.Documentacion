@@ -1,5 +1,5 @@
 
-  hacé una mesa con espacialistas tomando editor de libros, un acádemico relacionado con pedagogia, podes traer a un agente que personifique a martin fowler, y alguien especialista en .net c#, en la que tomaria a `LAB/Lab-Documentos/Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` y lo reeditaria, agregaría ejemplos claros con snipped de código que haya definiciones, explicacion, snipped , asociación del código con las definiciones y los conceptos, no me quedaría solo en la alegoría iría en la materialización del concepto mediante el código, 
+  hacé una mesa con espacialistas tomando editor de libros, un acádemico relacionado con pedagogia, podes traer a un agente que personifique a martin fowler, y alguien especialista en .net c#, en la que tomaria a `/LAB/Lab-Documentos/Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` y lo reeditaria, agregaría ejemplos claros con snipped de código que haya definiciones, explicacion, snipped , asociación del código con las definiciones y los conceptos, no me quedaría solo en la alegoría iría en la materialización del concepto mediante el código, 
 
 ---
 
