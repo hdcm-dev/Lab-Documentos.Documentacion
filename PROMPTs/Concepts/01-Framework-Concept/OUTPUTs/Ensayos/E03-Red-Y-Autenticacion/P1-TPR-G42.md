@@ -51,3 +51,30 @@ umbral. La condición de revisión (2) de P1 **sigue abierta**, ahora con estas 
 **Para medirlo por su definición** hay que llevar la marca por una vía que el cascarón registre: por ejemplo, que
 `puente.js` la mande por el puente y el cascarón la escriba con su etiqueta `FC`. Es un cambio en `Demo/`, pendiente
 de decisión.
+
+## Medición por su definición (2026-10-29, folio 049)
+
+El PO pidió tomar la marca. En la rama `fc/0001-tpr-por-puente` de Lab-Documentos (PR #36), al llegar «Listo» el
+cascarón le pide al WebView la hora de la marca (`performance.timeOrigin` + `startTime`) y escribe en su bitácora
+`FC-MARCA primer-render … tpr=Nms (leída por el cascarón)`, con la etiqueta `FC` y contado desde el inicio del
+proceso. No cambia el contrato del puente. Mismo teléfono, mismos dos candados, pantalla encendida y sin bloqueo,
+`scripts/guion.sh instalar` y `scripts/guion.sh tpr`; después, `adb uninstall`. El APK se compiló en hpdev con la
+imagen del runner (`dotnet-maui`).
+
+| APK | Corridas | TPR (ms) | Máximo | Veredicto |
+| --- | --- | --- | --- | --- |
+| Release | 5/5 `COLD`, 5/5 con marca | 9 152 · 7 309 · 6 940 · 6 928 · 6 874 | 9 152 | **NO CUMPLE** (umbral 5 000) |
+| Debug (el que arma la CI) | 5/5 `COLD`, 5/5 con marca | 14 062 · 9 066 · 8 092 · 8 110 · 8 216 | 14 062 | no juzga el umbral (sin optimizar) |
+
+Evidencia: `p1-tpr-g42-cascaron-release-{am-start,logcat}.txt` y `p1-tpr-g42-cascaron-debug-{am-start,logcat}.txt`.
+
+- **Por qué no llegaba la marca.** Con el APK Debug, la línea de consola de `puente.js` sí aparece en el logcat del
+  g42 (5 de 5); con el Release, no aparece en ninguna corrida. Lo que filtra la consola es el modo de compilación, no
+  el teléfono en sí. La 047 midió con Release.
+- **El método nuevo coincide con el anterior.** En las corridas Debug, donde hay las dos marcas, el TPR del cascarón
+  y el de la línea de consola difieren entre 8 y 11 ms.
+- **La estimación de la 047 se confirma.** Estimado: de 6,7 a 7,7 s en régimen y de 9,1 a 9,6 s en la primera
+  corrida; medido: de 6,9 a 7,3 s y 9,2 s.
+
+**Interpretación.** El umbral de P1 no se cumple en el g42: se abre la condición de revisión (2) de P1, que prevé
+evaluar la alternativa «C-min». Esa evaluación es una decisión del PO.
