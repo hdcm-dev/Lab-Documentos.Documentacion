@@ -1,0 +1,50 @@
+# Ensayo de cierre E1-U4c: scripts/ci-local.sh todo
+# Fecha: 2026-10-27. Cabeza fc6351e (rama exp0002/e1-u4c-temas-04-06, rebasada sobre origin/main 2fdf859). GUIA-DIR = Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion
+# Salida recortada: se omiten las líneas «aviso» (AI-4 del anexo de referencias; 9 traza-no-verificable de la PoC de ayuda por rol) y el detalle por caso de autoprueba.
+
+== herramientas: lychee 0.18.1, mermaid (lockfile), markdownlint-cli2 0.17.2
+lychee 0.18.1
+mermaid 11.4.1
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion AGENTS.md)
+🔍 542 Total (in 0s) ✅ 489 OK 🚫 0 Errors 👻 53 Excluded
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+
+== PR-2 esquema (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion)
+== PR-2 esquema: verde (errores=0 avisos=0) archivos-con-frontmatter=41 sin-frontmatter-fuera-del-cuerpo=1
+
+== PR-3 anti-inyección (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion AGENTS.md)
+== PR-3 anti-inyeccion: verde (errores=0 avisos=28) AI-1=0 AI-2=0 AI-3=0 AI-4=28 AI-5=0
+
+== PR-4 estructura: markdownlint-cli2 y mermaid (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion AGENTS.md)
+markdownlint-cli2 v0.17.2 (markdownlint v0.37.4)
+Finding: GUIA-DIR/**/*.md AGENTS.md
+Linting: 43 file(s)
+Summary: 0 error(s)
+== PR-4 mermaid: verde (bloques=28 invalidos=0)
+
+== PR-5 trazas (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion)
+anclas: 2 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: verde (errores=0 avisos=9) trazas=121 resueltas=112 anclas=0 anclas-resueltas=0
+
+== PR-6 contrato (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion)
+GUIA-DIR/Examples/MovilidadUrbana-Mini-Demo/contracts/openapi.json: lo extrae y compara .github/workflows/mini-demo-movilidad.yml (source.lock); este job no compila el código
+== PR-6 contratos: verde (errores=0 avisos=0) contratos=1
+
+== PR-7 fijadas y reflint (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion)
+no aplica: la ruta no tiene piezas fijadas (BASE-FIJADA.md)
+== PR-7 fijadas: verde (errores=0 avisos=0) piezas=0
+== PR-7 reflint: verde (errores=0 avisos=0) referencias=51
+
+== autoprueba: pares rojo/verde por control (G-c) y fixture permanente AK-7
+== autoprueba: verde
+
+== agregador docs-guard
+  enlaces      verde
+  esquema      verde
+  ai           verde
+  estructura   verde
+  trazas       verde
+  contrato     verde
+  fijadas      verde
+  autoprueba   verde
+== docs-guard: verde

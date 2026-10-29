@@ -1,0 +1,36 @@
+# E1-U4d — ensayo del TEM-07 §3.1: traces-resolve contra el SDD de Lab-Geometria, 2026-10-27
+# Corrida 1: comandos de trabajo (dg.py del worktree, base 080f158). Las rutas locales se reemplazaron por $E.
+Lab-Geometria origin/main 5f07b12, git archive de SDD/Docs; dg.py del worktree
+declaraciones en encabezados (todo SDD/Docs): 1280; sin _legacy: 803
+### caso A: traces [CU-08002@1.11], fuente geo
+ayuda.md:1: ERROR traza-ambigua: CU-08002@1.11: declarado 3 veces ($E/geo/SDD/Docs/Producto/Contratos-Inter-Unidad/CU-08002-Contrato-De-Administracion-De-Cuentas.md, $E/geo/SDD/Docs/Producto/Contratos-Inter-Unidad/_legacy/2026-09-13/CU-08002-Contrato-De-Administracion-De-Cuentas-v1.9.md, $E/geo/SDD/Docs/Producto/Contratos-Inter-Unidad/_legacy/2026-09-14/CU-08002-Contrato-De-Administracion-De-Cuentas-v1.10.md)
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=1 resueltas=0 anclas=0 anclas-resueltas=0
+exit=1
+### caso B: traces [CU-08002@1.11], fuente geo-vigente
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=1 resueltas=1 anclas=0 anclas-resueltas=0
+exit=0
+### caso C: traces [CU-08002@1.10], fuente geo-vigente
+ayuda.md:1: ERROR traza-version-desfasada: CU-08002@1.10: la declaración está en 1.11
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=1 resueltas=0 anclas=0 anclas-resueltas=0
+exit=1
+### caso D: traces [CU-03], fuente geo-vigente
+ayuda.md:1: ERROR traza-no-resuelve: CU-03: el ID no está declarado en el registro
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=1 resueltas=0 anclas=0 anclas-resueltas=0
+exit=1
+geo ids= 829 ambiguos= 355 [('CU-02', 9), ('CU-03', 9), ('H-01', 8), ('H-02', 8), ('H-03', 8), ('H-04', 8)]
+geo-vigente ids= 715 ambiguos= 52 [('H-01', 8), ('H-02', 8), ('H-03', 8), ('H-04', 8), ('H-05', 8), ('H-06', 7)]
+prefijos ambiguos sin _legacy: {'H': 12, 'N': 9, 'A': 3, 'M': 7, 'BT': 9, 'D': 4, 'P2': 2, 'P3': 3, 'E': 3}
+[]
+
+# Corrida 2: el guion publicado en TEM-07 §3.1, extraído del archivo y corrido sobre un clon nuevo de Lab-Geometria (E cambiado de /tmp/ensayo a una carpeta de trabajo)
+ayuda.md:1: ERROR traza-ambigua: CU-08002@1.11: declarado 3 veces ($E/geo/SDD/Docs/Producto/Contratos-Inter-Unidad/CU-08002-Contrato-De-Administracion-De-Cuentas.md, $E/geo/SDD/Docs/Producto/Contratos-Inter-Unidad/_legacy/2026-09-13/CU-08002-Contrato-De-Administracion-De-Cuentas-v1.9.md, $E/geo/SDD/Docs/Producto/Contratos-Inter-Unidad/_legacy/2026-09-14/CU-08002-Contrato-De-Administracion-De-Cuentas-v1.10.md)
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=1 resueltas=0 anclas=0 anclas-resueltas=0
+caso A: exit=1
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=1 resueltas=1 anclas=0 anclas-resueltas=0
+caso B: exit=0
+ayuda.md:1: ERROR traza-version-desfasada: CU-08002@1.10: la declaración está en 1.11
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=1 resueltas=0 anclas=0 anclas-resueltas=0
+caso C: exit=1
+ayuda.md:1: ERROR traza-no-resuelve: CU-03: el ID no está declarado en el registro
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=1 resueltas=0 anclas=0 anclas-resueltas=0
+caso D: exit=1

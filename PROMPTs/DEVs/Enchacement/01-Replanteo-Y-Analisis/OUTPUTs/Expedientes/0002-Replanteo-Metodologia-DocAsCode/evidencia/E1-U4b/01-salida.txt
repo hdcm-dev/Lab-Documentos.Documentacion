@@ -1,0 +1,15 @@
+commit: 080f158
+piezas .md con frontmatter, por doc_type:
+  anexo                  7
+  anexo-referencias      1
+  ayuda (sin doc_id)     12
+  ficha                  2
+  guia-practica          5
+  indice                 1
+  mapa                   1
+  marco-de-referencia    1
+  rrd                    1
+  study-note             1
+  sin frontmatter (README de ejemplos): 1
+piezas que no son prosa: Examples/MovilidadUrbana-Mini-Demo/contracts/openapi.json, Examples/MovilidadUrbana-Mini-Demo/source.lock, Examples/MovilidadUrbana-Mini-Demo/verificar.sh, Examples/Prueba-Ayuda-Por-Rol/.devcontainer/devcontainer.json
+workflows que corren compuertas: docs-enlaces-semanal.yml, docs-guard.yml, framework-concept-demo.yml, mini-demo-movilidad.yml
