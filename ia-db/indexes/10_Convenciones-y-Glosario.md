@@ -21,7 +21,7 @@ Rutas relativas a `Lab-Documentos/`. Abreviaturas de guía usadas en las tablas:
 | **DT** | `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/` (`GUIA-INDICE`) | [01](01_Documentacion-Tecnica.md) |
 | **SDT** | `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md` (`DOC-SDT-0001`, obsoleto) | [01](01_Documentacion-Tecnica.md) |
 | **SDEI** | Cuerpo `SDEI` en la misma carpeta (`IDX-SDEI`, `corpus_id: SDEI`), con `AGENTS.md` y `tools/docs-guard/` | [11](11_Sistema-Documentador-SDEI.md) |
-| **FC** | `Concepts/Framework-Concept/` (`GUIA-INDICE` en `Developer-Guide.md`) | [12](12_Framework-Concept.md) |
+| **FC** | `Concepts/Framework-Concept/` (`FC-GUIA-INDICE` en `Developer-Guide.md`, prefijo `FC-` desde `0989a15`) | [12](12_Framework-Concept.md) |
 | **IS** | `Guides/Despliegue/Documentacion-Informe-Despliegue/` (informe de solución) | [02](02_Informe-de-Solucion.md) |
 | **OEP** | `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/` | [03](03_Organizacion-Codigo-NET.md) |
 | **REST** | `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` | [04](04_Diseno-REST-API.md) |
@@ -123,7 +123,7 @@ Relevado con `awk` sobre el primer bloque de frontmatter de cada `.md` (2026-10-
 | `doc_id` | Veces | Causa |
 |---|---:|---|
 | `MARCO-ESCENARIOS`, `MARCO-CONTEXTOS`, `MARCO-ACTORES`, `MARCO-CONVENCIONES` | 4 c/u | Aparato común de DT, IS, OEP, REST — **a propósito**; se desambigua por ruta |
-| `GUIA-INDICE` | 4 | Ídem (DT, IS, OEP) y, desde `fe10086`, `Concepts/Framework-Concept/Developer-Guide.md` |
+| `GUIA-INDICE` | 3 | Ídem (DT, IS, OEP). El Framework Concept lo usó entre `fe10086` y `0989a15`; hoy es `FC-GUIA-INDICE` |
 | `MAPA-CONCEPTUAL`, `ANEXO-GLOSARIO`, `ANEXO-REFERENCIAS` | 3 c/u | Ídem (DT, IS, OEP; `ANEXO-REFERENCIAS` también en REST) |
 | `ANEXO-CHECK`, `ANEXO-PENDIENTES` | 2 c/u | Ídem |
 | `FAM-ARQ` | 2 | Familia «Arquitectura» de DT (`30-Arquitectura/`) y de IS (`20-Arquitectura/`) |
