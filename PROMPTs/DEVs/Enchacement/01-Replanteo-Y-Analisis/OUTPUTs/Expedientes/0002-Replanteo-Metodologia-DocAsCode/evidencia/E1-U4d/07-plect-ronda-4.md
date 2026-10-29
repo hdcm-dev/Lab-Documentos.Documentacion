@@ -1,0 +1,51 @@
+# E1-U4d — P-LECT de TEM-07, ronda 4, 2026-10-27
+# Lector sin contexto: claude -p sin herramientas; recibe sólo 00-Marco (referencia) y TEM-07 en su estado de la ronda, con la consigna:
+#   Prueba de lectura P-LECT. Sos un lector sin contexto: estudiante de sistemas que nunca vio este repositorio ni el proyecto. No uses herramientas ni leas otros archivos: sólo el texto de abajo (dos documentos de una guía: 00-Marco, que fija el vocabulario, y el tema TEM-07). Leé el Marco como referencia y evaluá el TEM-07. Anotá TODAS las dudas concretas sobre TEM-07 que el texto NO responde (términos sin definir en su primer uso, saltos, referencias a cosas que no están, contradicciones, instrucciones ambiguas, ejemplos que no se pueden reproducir). No anotes dudas que el propio texto responde: en ese caso indicá dónde. Formato de salida: una tabla Markdown con columnas | # | Sección de TEM-07 | Duda | ¿La responde el texto? (no / sí, en …) | Gravedad (alta/media/baja) |, y al final una línea «Dudas sin respuesta: N» y otra «Dudas altas sin respuesta: N». Respondé en castellano.
+
+| # | Sección de TEM-07 | Duda | ¿La responde el texto? (no / sí, en …) | Gravedad (alta/media/baja) |
+| --- | --- | --- | --- | --- |
+| 1 | Frontmatter | `traces` incluye `ANX-SDEI-REFERENCIAS`, `ANX-SDEI-CQ` y `GP-SDEI-INTERVENIR`. Ninguno de los dos documentos dice a qué documento corresponde cada uno. Se puede suponer que `GP-SDEI-INTERVENIR` es «Cómo intervenir», pero el texto no lo confirma. | no | baja |
+| 2 | Estado | «Escalón» se usa antes de definirlo. | sí, en el mismo párrafo y en §1.4 | baja |
+| 3 | Estado | IA.SDD aparece nombrado sin decir qué es. | sí, en §1.4 («Marco SDD y proyecto destino») | baja |
+| 4 | Estado / §1.3 | El Marco dice que Lab-Geometria «tiene un marco SDD» y que SDD-B es «el segundo marco, junto al de Lab-Geometria». TEM-07 dice que el marco es IA.SDD y que Lab-Geometria es el proyecto destino. ¿Los «dos marcos propios» de §1.3 son IA.SDD y SDD-B? Hay que deducirlo. | no | baja |
+| 5 | §1.1 | Presenta los tres grados de Böckeler (spec-first, spec-anchored, spec-as-source), pero no dice en cuál están IA.SDD o SDD-B ni para qué sirve esa clasificación en el resto del tema. | no | baja |
+| 6 | §1.1 | «Anillo evaluar» y «radar» de Thoughtworks no se explican. | no | baja |
+| 7 | §1.1 punto 2 vs §2 (CTX-SDEI-2) | Primero dice que el RRD vive junto a la especificación, «no en un archivo aparte». Después dice que es «un archivo `doc_type: rrd` del proyecto destino». ¿Qué significa entonces «aparte»: fuera de la carpeta de la especificación, o fuera del repositorio? | no | media |
+| 8 | §1.1 punto 3 | ¿Qué escenario usa SHA y cuál usa etiqueta? | sí, en la tabla de §2 (columna «Contra qué resuelve») | baja |
+| 9 | §1.2 | Promete que la compuerta da rojo cuando la versión deja de existir, pero el caso «sin `source.lock` ni `--fuente`» sólo avisa. | sí, la última fila de la tabla de CI en §3.1 reconoce que la promesa no se cumple todavía | baja |
+| 10 | §1.3 | ¿Qué es la «hoja de integración del proyecto»? | sí, en §6 | baja |
+| 11 | §1.4 «Cuerpos de la categoría 11» | «Cuerpo» se usa como «documentación por rol», mientras que el Marco lo define como «conjunto de documentos bajo un README con `corpus_id`». Es el mismo término con dos sentidos. | no | baja |
+| 12 | §1.4 «Prefijo externo» | Usa `dg.py` y `--fuente` antes de definirlos. | sí, en §3.1 | baja |
+| 13 | §1.4 «Prefijo externo» | La regla busca un `source.lock` «en su carpeta o más arriba». ¿Hasta dónde sube: la raíz del repositorio o `--raiz`? | no | baja |
+| 14 | §1.4 / §3.3 | El prefijo `RF` aparece en la lista de prefijos externos y en el ejemplo de Kiro, pero no se define. «Especificación» sólo nombra `NB`, `CU`, `RN` y `ADR`. | no | baja |
+| 15 | §1.4 / §6 («Prefijos que se trazan») | Si un SDD usa un prefijo que no está en el registro cerrado, ¿cómo se agrega, quién lo decide y qué clase de intervención es? La hoja de §6 pregunta si el prefijo «está como externo», pero no dice qué hacer si no está. | no | media |
+| 16 | §1.4 «Conocimiento compartido» | ¿Está activa `CL-11` en ESC-SDEI-3? | sí, coincide con el Marco §2.5, y §2.1 explica cuándo se activa | baja |
+| 17 | §2, fila ESC-SDEI-2 | Usa «trazas de nivel 1» y «anclas de nivel 2» sin definirlas en ninguno de los dos documentos. Tampoco dice qué control verifica el nivel 2 ni si da rojo o sólo avisa. | no | media |
+| 18 | §2 (tablas y «La frontera») | El catálogo `CL-nn` está en el Mapa, que no se incluye. No se sabe qué son CL-02, 04, 05, 08, 09, 10 y 13. Por eso no se puede comprobar la frase «no tienen par en el SDD **o** salen del build», ni saber cuál de las dos cosas vale para cada clase. | no | media |
+| 19 | §2, fila ESC-SDEI-4 | SDD-B tiene la norma y la especificación en el mismo repositorio. ¿Dónde viven sus páginas? Si viven en el mismo repositorio, según CTX-SDEI-3 el ancla sería el commit, no «la etiqueta de cada línea». ¿Le afectan las dos limitaciones de `dg.py` del caso «mismo repositorio» de §3.1? ¿Tiene versiones congeladas? Además, «línea de versión» no se define. | no | media |
+| 20 | §2 «Por contexto» | ¿Por qué sólo tres contextos y no CTX-SDEI-1 (sitio)? | sí, se deduce del Marco CTX-SDEI-1: «hoy ningún escenario publica sitio» | baja |
+| 21 | §2, regla de fases | Nombra «el plan de sprint de IA.SDD» sin explicar qué es. | no | baja |
+| 22 | §2 «La frontera» | ¿Quién decide una divergencia que no es ni «especificación contra intención» ni «cambio de norma»? Por ejemplo, la documentación técnica de la categoría 11 contradice la ayuda. Tampoco queda claro de quién es la «persona responsable»: §2.1 dice «de cada SDD» y §3.3 dice «del proyecto». En ESC-SDEI-3, ¿una regla de IA.SDD la cambia el responsable de IA.SDD o el de Lab-Geometria? | no | media |
+| 23 | §2, cita de IA.SDD | El Marco fija la forma `Repo@ancla:corpus_id/doc_id` para citar entre repositorios. Acá se cita con ruta y línea. ¿Es una excepción porque IA.SDD no tiene `corpus_id`? El texto no lo dice. | no | baja |
+| 24 | §2, fila CL-03 | No explica qué es «la consolidación de cierre de la categoría 11». Además, §3.1 dice que docs-guard sólo recibe las carpetas del sistema documentador. Entonces, ¿qué control exige que `AGENTS.md` exista y que sus enlaces resuelvan? | no | media |
+| 25 | §2, fila CL-07 vs final de §3.1 | La fila CL-07 dice que el proyecto agrega frontmatter a la documentación técnica cuando adopta la compuerta. El final de §3.1 dice que el frontmatter de los documentos del SDD no se controla y que a docs-guard se le pasan sólo la ayuda y el RRD. ¿La categoría 11 entra en la compuerta o no? Si no entra, ¿para qué se le agrega frontmatter? | no | **alta** |
+| 26 | §3.1, último párrafo | Dice que un documento sin frontmatter «fuera de un cuerpo nuevo sólo avisa». ¿Qué es un «cuerpo nuevo»? ¿Qué pasa dentro de uno? | no | media |
+| 27 | §2.1, capa A | No dice dónde están «la base de conocimiento común del laboratorio» ni «la carpeta de conocimiento de cada SDD». ¿IA.SDD y Lab-Geometria tienen esa carpeta? | no | baja |
+| 28 | §2.1, capa B | Habla de la «norma de cada orquestador», pero el orquestador puede ser una persona. ¿Se refiere a las reglas que el SDD le da al orquestador? | no | baja |
+| 29 | §3.1 | Llama a CU-08002 «contrato de administración de cuentas». ¿Es un caso de uso del front o de la API? Si es de la API, el ejemplo contradice la regla de §3.2: la ayuda traza al caso de uso del front. | no | media |
+| 30 | §3.1 | Primero dice «una página de ayuda de Lab-Geometria» y después que la página «vive fuera del repositorio». | sí, en el mismo párrafo: es una página de ensayo | baja |
+| 31 | §3.1, guion y salida | El guion imprime `exit=$?`, pero la salida recortada no lo muestra. No se dice qué código de salida corresponde a verde, rojo o aviso. Además, el recorte no es parejo: en A, el error y el resumen van en una línea; en C y D, sin resumen. | no | media |
+| 32 | §3.1, cifras | Las cifras (829 IDs, 355 repetidos; 715 y 52) no salen del guion. No se dice con qué comando se cuentan, así que no se pueden reproducir. | no | media |
+| 33 | §3.1, tabla de CI, fila 2 | En el ensayo, `--raiz` limita el registro propio a la carpeta de páginas. ¿Por qué en Lab-Geometria no alcanza con `--raiz` igual a las carpetas del sistema documentador y `--fuente` igual a una copia de `SDD/Docs` sin `_legacy/`? El texto afirma que `dg.py` «arma el registro con todo el repositorio» sin explicar por qué `--raiz` no lo evita. | no | media |
+| 34 | §3.1 / §2 CTX-SDEI-2 | En Lab-Geometria, el RRD vive «junto a la especificación» y además es una de las carpetas que se verifican. Si queda dentro de lo que entra como registro, ¿su `doc_id` se lee dos veces y da `traza-ambigua`? El texto sólo dice que la carpeta la fija el escalón 2; el conflicto no se trata. | no | media |
+| 35 | §3.1, caso C | Ante `traza-version-desfasada`, el texto dice que «hay que revisarla». ¿Quién la revisa? ¿Es de clase P? ¿Alcanza con subir la traza a `@1.11` después de releer? | no | baja |
+| 36 | §3.3 | Si un `requirements.md` declara varios IDs con encabezados `###`, ¿dónde va la línea `**Versión:**` de cada uno? ¿`dg.py` toma la primera que aparece debajo de cada encabezado? | no | media |
+| 37 | §3.3 | «No un cambio a la herramienta, que no trae una norma propia»: ¿la herramienta es `dg.py` o Spec Kit/Kiro? | no | baja |
+| 38 | §4, pregunta 5 | ¿Quién acepta cada fila del RRD? | sí, en el Marco §4 (ACT-SDEI-2, analista) | baja |
+| 39 | §5 «Ancla explícita» | No define qué es un «documento de estructura». No hay un criterio para decidir cuándo una traza puede ir sin versión. | no | baja |
+| 40 | §6 | La plantilla no tiene ningún ejemplo completo, ni siquiera para Lab-Geometria. Por ejemplo, ¿qué versión de IA.SDD usa Lab-Geometria? El enlace de §2 cita `bac7e48`, pero nunca dice que sea la versión del proyecto. | no | media |
+| 41 | §6 | En la primera fila llama «ficha» a la hoja, cuando el Marco define «ficha» como una regla o un caso de uso con ID. | no | baja |
+| 42 | §3.2 / §3.1 / navegación | Remite a cosas que no están en el texto: TEM-05, TEM-06 (en redacción, aunque sería el tema de compuertas que precede a este), `Examples/Prueba-Ayuda-Por-Rol/` y `mini-demo-movilidad.yml`. | no | baja |
+
+Dudas sin respuesta: 32
+Dudas altas sin respuesta: 1

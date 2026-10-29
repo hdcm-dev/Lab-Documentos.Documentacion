@@ -1,0 +1,13 @@
+# Defectos plantados en E1-U4b sobre el worktree, uno por vez y revertidos (2026-10-27). Salida recortada.
+== defecto 1: cita a un ancla inexistente (ref-fowler-2031)
+[ERROR] Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Referencias.md#ref-fowler-2031 | Cannot find fragment
+rc=1
+== defecto 2: traza a un tema inexistente (TEM-SDEI-09)
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/TEM-02-Ciclo-Documental.md:1: ERROR traza-no-resuelve: TEM-SDEI-09: el ID no está declarado en el registro
+rc=1
+== defecto 3: un encabezado renombrado («Preguntas para guiar»), chequeo 05
+TEM-01-Sistema-Documentador.md: seis encabezados en orden=True anterior=True siguiente=True fuentes citadas=14 citas sin ancla=0
+TEM-02-Ciclo-Documental.md: seis encabezados en orden=False anterior=True siguiente=True fuentes citadas=6 citas sin ancla=0
+TEM-03-Topologia-Y-Versionado.md: seis encabezados en orden=True anterior=True siguiente=True fuentes citadas=11 citas sin ancla=0
+resultado: ROJO
+rc=1

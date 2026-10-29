@@ -1,0 +1,4 @@
+TEM-01-Sistema-Documentador.md: seis encabezados en orden=True anterior=True siguiente=True fuentes citadas=14 citas sin ancla=0
+TEM-02-Ciclo-Documental.md: seis encabezados en orden=True anterior=True siguiente=True fuentes citadas=6 citas sin ancla=0
+TEM-03-Topologia-Y-Versionado.md: seis encabezados en orden=True anterior=True siguiente=True fuentes citadas=11 citas sin ancla=0
+resultado: verde

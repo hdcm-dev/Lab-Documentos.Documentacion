@@ -1,0 +1,35 @@
+# P-LECT ronda 1, TEM-SDEI-02 (lector: sesión nueva de Claude Code, no interactiva, sin herramientas, que recibió sólo el texto del tema)
+
+# Prueba de lectura P-LECT — TEM-SDEI-02 «El ciclo documental»
+
+Encontré 25 dudas que el texto no responde. Cinco son graves porque impiden llenar la plantilla o responder las preguntas guía: el significado de las clases H/D/P, la fase a la que vuelve una pieza que derivó, dónde se anota quién decidió y cuándo, si la compuerta comprueba de verdad la decisión de 1b, y dónde se escriben las cláusulas.
+
+| ID | Sección | Cita breve | Duda | Gravedad | ¿Probablemente en un enlazado? |
+| --- | --- | --- | --- | --- | --- |
+| D-01 | Definición › tabla de fases (fase 5) y Estados | «fusiona lo de clase H» / «Fusiona lo de clase D o P sin reserva» / «un acto de una persona (clase H)» | ¿Qué son las clases H, D y P? H parece querer decir «humano», pero D y P no se explican. Tampoco está claro qué tienen que ver con las clases `CL-nn` del catálogo que se asignan en la fase 3. Sin esto no puedo saber quién fusiona cada cosa. | alta | sí |
+| D-02 | Definición › diagrama y tabla (5m) | «devuelve la pieza a la captura» / «Propone la corrección (vuelve a 1a o a 4)» | El diagrama y su leyenda dicen que la pieza vuelve a 1a. La tabla y los criterios de calidad dicen «1a o 4». ¿Con qué criterio se elige una u otra? La pregunta guía 4 pide justo esa respuesta. | alta | no |
+| D-03 | RRD y Anexo › plantilla | «con quién decidió y cuándo» / la columna «Decide y fecha» del archivo | La plantilla tiene solo la columna `Decisión` y su valor es un estado. ¿En qué columna van quién decidió, la fecha y el motivo de un `diferido` o `rechazado`? El ejemplo menciona una columna «Decide y fecha» que la plantilla no trae. | alta | sí |
+| D-04 | Ensayo y ejemplo de cláusula | «toda fila tiene decisión en `aceptado`, `rechazado`, `diferido` o `pendiente`» | `pendiente` es lo que sale de 1a y no una decisión, pero la compuerta lo acepta. Entonces, ¿la compuerta puede comprobar que 1b ocurrió? ¿Comprueba que la fila diga quién la tomó, como pide `obliga`, o solo el vocabulario? Esto contradice «la fase 1b no se puede cerrar con un ok». | alta | no |
+| D-05 | Cláusulas con criterio y Anexo | «La plantilla está en el Anexo» / «Plantilla comentada de un RRD con una cláusula» | El bloque de la plantilla trae solo el RRD y ningún campo de cláusula. ¿Dónde se escribe una cláusula: en el RRD, en otro documento, con qué `doc_type`? ¿Qué formato tiene el `id`? | alta | no |
+| D-06 | Tabla de fases (1b) frente a Aplicación por escenario | «Acepta, rechaza o difiere cada fila (`ACT-SDEI-2`)» | El ejemplo de cláusula da a entender que `ACT-SDEI-2` es el Analista. Pero la tabla de escenarios pone a Docente o a PO como quien decide en 1b. ¿Quién es el actor de 1b, en general o según el escenario? | media | no |
+| D-07 | RRD (tabla «vive en») y Contexto | «Tiene un marco… guiado por especificación (`CTX-SDEI-2`)» / «`CTX-SDEI-2` con SDD» / «`CTX-SDEI-2` sin SDD» | Si `CTX-SDEI-2` es «tener un marco de especificación», ¿cómo puede existir sin SDD? ¿Qué significa SDD, y qué son `CTX-SDEI-1` y `CTX-SDEI-3`? | media | sí |
+| D-08 | Tabla de fases (1a y 2) | «inventario de pantallas y endpoints» (entra en 1a) / «Inventario hecho por comando» (sale de 2) | ¿Son el mismo inventario o dos distintos? ¿Qué comando lo genera? | media | sí |
+| D-09 | Tabla de fases (2) | «fichas de reglas y casos de uso» / «Decide las divergencias entre lo que la regla dice y lo que se quiso» | ¿Qué es una ficha de regla y qué campos tiene? ¿«La regla» es la que está implementada en el código? ¿Dónde queda escrita la decisión sobre una divergencia? | media | sí |
+| D-10 | Tabla de fases (controles) | «`traces-resolve`», «Grupos PR-1 a PR-7 de `docs-guard`», «la compuerta» | ¿Qué comprueba `traces-resolve`? ¿Qué cubre cada grupo PR-n (aparte de PR-2, «esquema»)? ¿«Compuerta» y `docs-guard` son lo mismo? | media | sí |
+| D-11 | Tabla de fases (5) y Ejemplo RRD | «Guarda de merge, con la delegación asentada» / «la tomó la mesa del expediente, por delegación del PO» | ¿Dónde y cómo se asienta una delegación? ¿La «mesa del expediente» es una persona? El tema exige que 1b la decida una persona. | media | sí |
+| D-12 | Tabla de fases (5) y Ejemplos | «anclas fijadas» / «ancladas al SHA» / «`RN-LOC-01@1.1`» | ¿Qué es un ancla, en qué momento se fija, y qué indica el sufijo `@1.1`: la versión de la ficha o un commit? | media | sí |
+| D-13 | Anexo › guía de campos y Ejemplo RD-01 | «¿Está en el vocabulario de `audience`?» / Audiencia: «persona usuaria» | «persona usuaria» no figura entre los valores de `audience` que muestra este mismo documento. ¿Es válido? ¿Cuál es el vocabulario? | media | sí |
+| D-14 | RRD › tabla «vive en» (3.ª fila) | «El requerimiento va en la necesidad o el caso de uso del producto, y el RRD lo referencia» | En ese caso, ¿dónde vive el RRD que hace la referencia? ¿Junto a la especificación o en `docs/_requisitos.md`? | media | no |
+| D-15 | Estados del documento | «Un documento `obsoleto` dice cuál lo reemplaza» | ¿En qué campo lo dice? Los diez campos de la plantilla no lo incluyen. Cuando se corrige un documento `vigente` (vuelta a 4), ¿vuelve a `borrador`? | media | sí |
+| D-16 | Qué no es | «un cambio chico recorre 1a a 5 en un solo pull request» | Si todo va en un solo PR, ¿cómo y en qué momento deja la persona su decisión de 1b? ¿Editando la fila, aprobando el PR? | media | no |
+| D-17 | Ensayo reproducible | «Precondición: un clon de Lab-Documentos y Python 3» | El script está en otro repositorio (Lab-Documentos.Documentacion), que la precondición no menciona, y no se muestra el RRD de entrada. ¿Qué hay que clonar y cómo se reproduce? | media | no |
+| D-18 | Anexo › plantilla | «`doc_id: <PREFIJO-NN>`» | ¿Qué prefijo le corresponde a un RRD? | media | sí |
+| D-19 | Tabla de fases (1a, 2, 3) y Escenarios | «el RRD de la fase 1»; «casos de uso»; «decisión de arquitectura» | ¿Dónde se guarda la decisión de arquitectura y con qué formato (¿ADR?)? | baja | sí |
+| D-20 | Tabla de fases (4) | «referencia emitida en el build» / «referencia generada» | ¿Referencia de qué: API, CLI? ¿Qué herramienta la genera? | baja | sí |
+| D-21 | RRD › tabla «vive en» | «`docs/_requisitos.md` del árbol que documenta» | ¿Qué es «el árbol que documenta»: la raíz del repositorio, la carpeta `docs` de cada componente? | baja | sí |
+| D-22 | Tabla de fases (1b) | «`diferido`» | ¿Cuándo o por qué vuelve a evaluarse una fila diferida? | baja | no |
+| D-23 | Aplicación por escenario | «PO», «con el PO para la confidencialidad» | La sigla PO no se expande (¿Product Owner?) y no se explica qué decide sobre confidencialidad. | baja | no |
+| D-24 | Ejemplos y Fuentes | «expediente 0002 de DocAsCode» | ¿Qué es un expediente en este proyecto? | baja | sí |
+| D-25 | Tabla de fases (5m) | «Carril programado semanal» | ¿Qué es un «carril»: un job de CI programado? ¿Dónde se configura? | baja | sí |
+
+Total: 25 dudas; altas: 5; medias: 13; bajas: 7
