@@ -1,0 +1,17 @@
+# Ensayo TEM-06 (E1-U4c): un defecto, una línea roja
+# Fecha: 2026-10-27. Cabeza fc6351e (rama exp0002/e1-u4c-temas-04-06, rebasada sobre origin/main 2fdf859). GUIA-DIR = Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion
+# Se agrega al final de TEM-06 un enlace a #9-no-existe, se corre el grupo PR-1 y se revierte. El verde de partida está en 01 (PR-1: 542 enlaces, 0 errores).
+
+$ printf "\nVer la [sección inexistente](#9-no-existe).\n" >> GUIA-DIR/TEM-06-Compuertas-Y-CI.md
+$ scripts/ci-local.sh enlaces
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion AGENTS.md)
+[ERROR] file:///…/GUIA-DIR/TEM-06-Compuertas-Y-CI.md#9-no-existe | Cannot find fragment
+Issues found in 1 input. Find details below.
+
+[GUIA-DIR/TEM-06-Compuertas-Y-CI.md]:
+[ERROR] file:///…/GUIA-DIR/TEM-06-Compuertas-Y-CI.md#9-no-existe | Cannot find fragment
+
+🔍 543 Total (in 0s) ✅ 489 OK 🚫 1 Error 👻 53 Excluded
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+rc=1
+$ git checkout -- GUIA-DIR/TEM-06-Compuertas-Y-CI.md   # revertido
