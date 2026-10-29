@@ -1,0 +1,16 @@
+== caso 1: la página traza a @1.0 y la ficha está en 1.1
+ayuda.md:1: ERROR traza-version-desfasada: DEMO-TEM03-01@1.0: la declaración está en 1.1
+anclas: 2 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=2 resueltas=1 anclas=0 anclas-resueltas=0
+rc=1
+== caso 2: la página traza a @1.1
+anclas: 2 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=2 resueltas=2 anclas=0 anclas-resueltas=0
+rc=0
+== caso 3: el ID se declara en dos documentos
+ayuda.md:1: ERROR traza-ambigua: DEMO-TEM03-01@1.1: declarado 2 veces (fichas.md, otra-guia.md)
+fichas.md:1: ERROR traza-ambigua: DEMO-TEM03-01: declarado 2 veces (fichas.md, otra-guia.md)
+otra-guia.md:1: ERROR traza-ambigua: DEMO-TEM03-01: declarado 2 veces (fichas.md, otra-guia.md)
+anclas: 3 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: ROJO (errores=3 avisos=0) trazas=3 resueltas=0 anclas=0 anclas-resueltas=0
+rc=1

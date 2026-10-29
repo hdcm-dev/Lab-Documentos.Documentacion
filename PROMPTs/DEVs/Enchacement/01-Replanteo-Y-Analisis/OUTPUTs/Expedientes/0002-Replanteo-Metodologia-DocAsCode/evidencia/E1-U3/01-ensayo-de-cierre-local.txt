@@ -1,0 +1,70 @@
+E1-U3 — ensayo de cierre local (2026-10-27). Imagen del runner (runner-github-dev/dotnet-maui:2.338.1, --entrypoint bash,
+sin registrar runner), worktree de la rama exp0002/e1-u3-mini-demo-movilidad montado en /w; caché NuGet propia.
+Comandos: scripts/ci-local.sh autoprueba; <DEMO>/verificar.sh todo. Salida recortada (sin las líneas del build).
+
+== autoprueba: pares rojo/verde por control (G-c) y fixture permanente AK-7
+  ok    PR-1 lychee                  rojo (rc=2)
+  ok    PR-1 lychee                  verde (rc=0)
+  ok    PR-1 fuera                   rojo (rc=1)
+  ok    PR-1 fuera                   verde (rc=0)
+  ok    PR-2 esquema                 rojo (rc=1)
+  ok    PR-2 esquema                 verde (rc=0)
+  ok    PR-5 trazas                  rojo (rc=1)
+  ok    PR-5 trazas                  verde (rc=0)
+  ok    PR-7 fijadas                 rojo (rc=1)
+  ok    PR-7 fijadas                 verde (rc=0)
+  ok    PR-7 reflint                 rojo (rc=1)
+  ok    PR-7 reflint                 verde (rc=0)
+  ok    PR-5 anclas                  rojo (rc=1)
+  ok    PR-5 anclas                  verde (rc=0)
+  ok    PR-3 AI-1                    rojo (rc=1)
+  ok    PR-3 AI-2                    rojo (rc=1)
+  ok    PR-3 AI-4                    rojo (rc=1)
+  ok    PR-3 AI-5                    rojo (rc=1)
+  ok    PR-3 AI (página limpia)     verde (rc=0)
+  ok    PR-3 AI-3 avisa              verde (rc=0)
+  ok    PR-3 AI-4 avisa en anexo     verde (rc=0)
+  ok    PR-4 markdownlint            rojo (rc=1)
+  ok    PR-4 markdownlint            verde (rc=0)
+  ok    PR-4 mermaid                 rojo (rc=1)
+  ok    PR-4 mermaid                 verde (rc=0)
+  ok    PR-6 contrato                rojo (rc=1)
+  ok    PR-6 contrato                verde (rc=0)
+  ok    AK-7 fixture permanente      rojo (rc=1; AI-1..AI-5 detectados)
+== autoprueba: verde
+== fuente: https://github.com/hdcm-dev/Lab-E2E.WebBlazor.git @ 8fb4c3a8b1cc629027f456c7c3ce19e041164c06 y main
+  8fb4c3a8b1cc629027f456c7c3ce19e041164c06 -> 8fb4c3a8b1cc629027f456c7c3ce19e041164c06 (103 archivos)
+  main -> 59399ba6678c56c3219988a5f9666fc4e0047160 (103 archivos)
+== contrato: extracción en ejecución (SHA)
+  contrato: 5 rutas, 8 operaciones, OpenAPI 3.1.1
+  extraído en 11 s
+== contrato: extracción en ejecución (main)
+  contrato: 5 rutas, 8 operaciones, OpenAPI 3.1.1
+  extraído en 6 s
+== C1 contrato: contracts/openapi.json frente al extraído de 8fb4c3a8b1cc629027f456c7c3ce19e041164c06
+    == PR-6 contrato: verde (errores=0 avisos=0) operaciones=8
+  ok    C1: verde (rc=0)
+== C2 plantado: una operación de más tiene que dar exit 1
+    /trabajo/plantado.json:1: ERROR operacion-nueva: GET /api/v1/plantada no está en el contrato versionado
+    == PR-6 contrato: ROJO (errores=1 avisos=0) operaciones=8
+  ok    C2: rojo (rc=1)
+== C3 trazas: traces-resolve y anclas contra 8fb4c3a8b1cc629027f456c7c3ce19e041164c06
+    == PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=17 resueltas=17 anclas=10 anclas-resueltas=10
+  ok    C3: verde (rc=0)
+== C4 negativa: RN-LOC-01 sin corregir (defecto real 60/80) tiene que dar rojo
+    RN-LOC-01.md:62: ERROR ancla-no-contiene: LocalidadRules.NombreValido no contiene «LargoMaximoDelNombre»
+    RN-LOC-01.md:63: ERROR ancla-valor-distinto: NombreEntry.MaxLength: la ficha afirma 60 y el código tiene 80
+    == PR-5 traces-resolve: ROJO (errores=2 avisos=0) trazas=1 resueltas=1 anclas=6 anclas-resueltas=4
+  ok    C4: rojo por el defecto real 60/80 (rc=1, 2 anclas)
+== A1 deriva contra main (avisa, no bloquea)
+    == PR-6 contrato: verde (errores=0 avisos=0) operaciones=8
+  contrato: sin deriva frente a main (59399ba6678c56c3219988a5f9666fc4e0047160)
+    == PR-5 traces-resolve (deriva: sólo avisa): verde (errores=0 avisos=0) anclas=10 resueltas=10
+  anclas: sin deriva frente a main (59399ba6678c56c3219988a5f9666fc4e0047160)
+== agregador mini demo
+  C1  verde
+  C2  verde
+  C3  verde
+  C4  verde
+== mini demo: verde
+== tiempo de pared: 20 s

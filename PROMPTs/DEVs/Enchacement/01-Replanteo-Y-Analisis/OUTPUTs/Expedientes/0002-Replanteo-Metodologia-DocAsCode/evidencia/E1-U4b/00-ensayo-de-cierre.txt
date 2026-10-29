@@ -1,0 +1,59 @@
+# Ensayo de cierre E1-U4b: scripts/ci-local.sh todo sobre 6dddbd7 (rama exp0002/e1-u4b-temas-01-03 con origin/main 4fa998e integrado), 2026-10-27. Salida recortada.
+# La primera corrida, sobre a70b24a (antes de integrar main), dio el mismo resultado con 403 enlaces y 21 bloques mermaid.
+== herramientas: lychee 0.18.1, mermaid (lockfile), markdownlint-cli2 0.17.2
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion AGENTS.md)
+🔍 430 Total (in 0s) ✅ 382 OK 🚫 0 Errors 👻 48 Excluded
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+== PR-2 esquema (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion)
+== PR-2 esquema: verde (errores=0 avisos=0) archivos-con-frontmatter=35 sin-frontmatter-fuera-del-cuerpo=1
+== PR-3 anti-inyección (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion AGENTS.md)
+== PR-3 anti-inyeccion: verde (errores=0 avisos=26) AI-1=0 AI-2=0 AI-3=0 AI-4=26 AI-5=0
+== PR-4 estructura: markdownlint-cli2 y mermaid (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion AGENTS.md)
+== PR-4 mermaid: verde (bloques=22 invalidos=0)
+== PR-5 trazas (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion)
+== PR-5 traces-resolve: verde (errores=0 avisos=9) trazas=90 resueltas=81 anclas=0 anclas-resueltas=0
+== PR-6 contrato (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion)
+== PR-6 contratos: verde (errores=0 avisos=0) contratos=1
+== PR-7 fijadas y reflint (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion)
+== PR-7 fijadas: verde (errores=0 avisos=0) piezas=0
+== PR-7 reflint: verde (errores=0 avisos=0) referencias=47
+== autoprueba: pares rojo/verde por control (G-c) y fixture permanente AK-7
+  ok    PR-1 lychee                  rojo (rc=2)
+  ok    PR-1 lychee                  verde (rc=0)
+  ok    PR-1 fuera                   rojo (rc=1)
+  ok    PR-1 fuera                   verde (rc=0)
+  ok    PR-2 esquema                 rojo (rc=1)
+  ok    PR-2 esquema                 verde (rc=0)
+  ok    PR-5 trazas                  rojo (rc=1)
+  ok    PR-5 trazas                  verde (rc=0)
+  ok    PR-7 fijadas                 rojo (rc=1)
+  ok    PR-7 fijadas                 verde (rc=0)
+  ok    PR-7 reflint                 rojo (rc=1)
+  ok    PR-7 reflint                 verde (rc=0)
+  ok    PR-5 anclas                  rojo (rc=1)
+  ok    PR-5 anclas                  verde (rc=0)
+  ok    PR-3 AI-1                    rojo (rc=1)
+  ok    PR-3 AI-2                    rojo (rc=1)
+  ok    PR-3 AI-4                    rojo (rc=1)
+  ok    PR-3 AI-5                    rojo (rc=1)
+  ok    PR-3 AI (página limpia)     verde (rc=0)
+  ok    PR-3 AI-3 avisa              verde (rc=0)
+  ok    PR-3 AI-4 avisa en anexo     verde (rc=0)
+  ok    PR-4 markdownlint            rojo (rc=1)
+  ok    PR-4 markdownlint            verde (rc=0)
+  ok    PR-4 mermaid                 rojo (rc=1)
+  ok    PR-4 mermaid                 verde (rc=0)
+  ok    PR-6 contrato                rojo (rc=1)
+  ok    PR-6 contrato                verde (rc=0)
+  ok    AK-7 fixture permanente      rojo (rc=1; AI-1..AI-5 detectados)
+== autoprueba: verde
+== agregador docs-guard
+  enlaces      verde
+  esquema      verde
+  ai           verde
+  estructura   verde
+  trazas       verde
+  contrato     verde
+  fijadas      verde
+  autoprueba   verde
+== docs-guard: verde
