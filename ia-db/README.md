@@ -161,5 +161,12 @@ Lab-Documentos/
   - Tamaño: ningún índice pasa de 500 líneas (el mayor, 08, tiene 423). Duplicación: 0 líneas largas repetidas
     entre archivos.
   - Barrido S2 (repo público): 0 rutas del host, 0 IP privadas, 0 nombres de repos privados en la ia-db.
+- Actualizado  : 2026-10-29 · Versión: **4.2** (incremental y acotada; unidad U34 del expediente 0002, con la lista
+  de cambios de la línea Framework Concept). Índice 12 re-verificado contra `main` `66d3b5a` (2026-10-29): IDs con
+  prefijo `FC-` (LD #33), cuentas de líneas, constancias 043–048, runner `hpdev-runner-dev` y Keycloak descrito por su
+  función (LD #34); en 10 y 00 sólo las menciones de `GUIA-INDICE`. Los demás índices conservan su corte: 11 y los
+  otros cambios de `fe10086` → `66d3b5a` fuera de `Concepts/` (`docs-guard`, `AGENTS.md`, workflows, redacciones S2)
+  se reindexan al cerrar la vuelta E1-R, cuando el cuerpo `SDEI` deje de moverse. La v4.0 que quedó sin publicar en
+  i7infra se conserva en el resguardo privado y no cambia nada de esta versión (constancia 258 §6)
 - Actualizar   : `/IA/PROMPTs/IA.Prompts/Tool-Prompts/Indexado-Documentado/Actualizar-Indexado.md`
   (invocación local: `/LAB/Lab-Documentos.Documentacion/PROMPTs/Indexado/Actualizar-Indexado.md`)
