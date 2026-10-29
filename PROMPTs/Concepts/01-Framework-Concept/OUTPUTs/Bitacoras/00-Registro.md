@@ -47,6 +47,7 @@
 | 32 | 2026-10-28 21:00 | Folio 047 (constancia): TPR en el g42 con el teléfono que conectó el PO y los dos candados de hpdev. 5/5 `COLD`; «puente Listo» de 7 308 a 7 715 ms en régimen y 9 661 ms en la primera; la marca no llega al logcat (el WebView del g42 no reenvía la consola): TPR no obtenido, acotado entre 4,4 y 7,7 s, estimado de 6,7 a 7,7 s. Condición (2) de P1 abierta | `../Ensayos/E03-Red-Y-Autenticacion/P1-TPR-G42.md` | Marca por el puente (decisión del PO) |
 | 33 | 2026-10-29 09:20 | Folio 048 (constancia): la compuerta y el APK de la demo corrieron en `hpdev-runner-dev` (run `40847315104`, LD #34); se cierra ese pendiente de la 043. `fw-ok`, `docs-guard` y un `verificar` cayeron en `i7infra-runner-dev`: corrige la 046. La ia-db de FC queda para el reindexado único de la sesión 0002 | `../Expedientes/0001-…/actuaciones/048-…` | Parar `i7infra-runner-dev` (PO); marca por el puente (PO) |
 | 34 | 2026-10-29 21:40 | Folio 049 (constancia): el PO pidió tomar la marca; el cascarón la lee del WebView al llegar «Listo» y la escribe con `FC` (LD #36). TPR del g42 con APK Release: 9 152 · 7 309 · 6 940 · 6 928 · 6 874 ms → **NO CUMPLE**; se abre la condición (2) de P1. La consola llega al logcat sólo en Debug (causa de la 047). |
+| 35 | 2026-10-29 | Folio 050 (dictamen): el PO pidió evaluar C-min (condición 2 de P1). Mesa de 9: el 60 % del TPR es tramo nativo (piso 4 207 ms sin WASM); C-min no se adopta; se propone E04 «arranque superpuesto» (estimado 4,5–5,3 s, sin medir) con C-min como control. Al PO: cuatro decisiones. |
 
 ## Rutas de trabajo
 
