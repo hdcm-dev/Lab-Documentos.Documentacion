@@ -32,7 +32,6 @@ Disparadores: `pull_request`, `push` a `main` (la corrida sobre el commit de mer
 | --- | --- | --- |
 | `verificar` | Lo que el PR (o el merge, en `push`) agrega: sin claves privadas ni binarios pesados | Runner propio |
 | `docs-guard (.github)` | PR-1 a PR-7 y autoprueba sobre esta carpeta | Runner propio (lo declara el workflow llamado) |
-| `docs-guard (expediente)` | PR-1 a PR-7 y autoprueba sobre `PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Expedientes/0002-Replanteo-Metodologia-DocAsCode` | Runner propio (lo declara el workflow llamado) |
 
 ```mermaid
 flowchart LR
@@ -56,10 +55,12 @@ El workflow llamado declara su propio `runs-on`; el registro del job muestra el 
 Ejemplo, con un clon de Lab-Documentos en el commit fijado:
 
 ```bash
-git -C ../Lab-Documentos checkout d65d52be2e236af4e858e2492c796845c21831d3
+git -C ../Lab-Documentos checkout b25b71b4c9f0a68f9583e47e79baa4fc37819e4d
 bash ../Lab-Documentos/scripts/ci-local.sh todo .github
-bash ../Lab-Documentos/scripts/ci-local.sh todo PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Expedientes/0002-Replanteo-Metodologia-DocAsCode
 ```
+
+La carpeta del expediente 0002 no está en la matriz (acta `257`, D06, opción b): sus trazas se miden en local con el
+mismo comando sobre esa ruta y se informan en los folios, sin bloquear.
 
 ## Cambiar la versión de docs-guard
 
