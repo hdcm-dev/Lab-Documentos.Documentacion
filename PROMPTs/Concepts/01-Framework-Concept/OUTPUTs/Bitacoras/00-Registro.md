@@ -48,6 +48,7 @@
 | 33 | 2026-10-29 09:20 | Folio 048 (constancia): la compuerta y el APK de la demo corrieron en `hpdev-runner-dev` (run `40847315104`, LD #34); se cierra ese pendiente de la 043. `fw-ok`, `docs-guard` y un `verificar` cayeron en `i7infra-runner-dev`: corrige la 046. La ia-db de FC queda para el reindexado único de la sesión 0002 | `../Expedientes/0001-…/actuaciones/048-…` | Parar `i7infra-runner-dev` (PO); marca por el puente (PO) |
 | 34 | 2026-10-29 21:40 | Folio 049 (constancia): el PO pidió tomar la marca; el cascarón la lee del WebView al llegar «Listo» y la escribe con `FC` (LD #36). TPR del g42 con APK Release: 9 152 · 7 309 · 6 940 · 6 928 · 6 874 ms → **NO CUMPLE**; se abre la condición (2) de P1. La consola llega al logcat sólo en Debug (causa de la 047). |
 | 35 | 2026-10-29 | Folio 050 (dictamen): el PO pidió evaluar C-min (condición 2 de P1). Mesa de 9: el 60 % del TPR es tramo nativo (piso 4 207 ms sin WASM); C-min no se adopta; se propone E04 «arranque superpuesto» (estimado 4,5–5,3 s, sin medir) con C-min como control. Al PO: cuatro decisiones. |
+| 36 | 2026-10-29 | Folio 051 (constancia): historia de LD y LDD reescrita con filter-repo (aprobación del PO en las dos líneas), con 0 fugas en todos los blobs y la punta idéntica. LD `b25b71b`→`bf86669`, LDD `b9f4317`→`15d8452`; tag `docs-guard-v1.0.0` anotado. Quedan los `refs/pull/*` (GitHub Support). |
 
 ## Rutas de trabajo
 
