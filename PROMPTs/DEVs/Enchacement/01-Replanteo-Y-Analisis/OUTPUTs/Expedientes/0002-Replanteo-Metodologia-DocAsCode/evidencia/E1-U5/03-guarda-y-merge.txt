@@ -1,0 +1,9 @@
+# E1-U5 — guarda G1-G4 y merge (PR #22, 2026-10-27)
+FIN-VERDE
+40597128735 Verificar success
+docs-guard / docs-guard success runner=-
+verificar success runner=-
+relectura final: G1 open head=8ef1fb0 · G2 mergeable=true clean · G3 run 40597128735 success (verificar, docs-guard) en i7infra-runner-dev [self-hosted,i7infra-dev] · G4 sin reserva
+merge: PUT /pulls/22/merge sha=8ef1fb0 method=merge -> merged=true sha=e0e520f2d5ca323d46cf202aacfba8e06349e283
+rama remota: DELETE 204; GET branches -> 404
+commit de merge: 0 corridas (Verificar corre sólo en pull_request y workflow_dispatch)

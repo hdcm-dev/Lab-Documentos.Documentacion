@@ -1,0 +1,38 @@
+E1-U3 — primera corrida (2026-10-27), antes de las correcciones de LD-02 y LD-03. Se conserva porque muestra los dos defectos
+del propio script que motivaron las lecciones: la raíz se calculaba con git (en un worktree montado no resuelve) y un rc=2
+(error de uso) se contaba como el rojo esperado de C2 y C4.
+
+##### VERIFICAR
+fatal: not a git repository: <workspace>/LAB/Lab-Documentos/Lab-Documentos/.git/worktrees/e1-u3
+== fuente: https://github.com/hdcm-dev/Lab-E2E.WebBlazor.git @ 8fb4c3a8b1cc629027f456c7c3ce19e041164c06 y main
+  8fb4c3a8b1cc629027f456c7c3ce19e041164c06 -> 8fb4c3a8b1cc629027f456c7c3ce19e041164c06 (103 archivos)
+  main -> 59399ba6678c56c3219988a5f9666fc4e0047160 (103 archivos)
+== contrato: extracción en ejecución (SHA)
+  contrato: 5 rutas, 8 operaciones, OpenAPI 3.1.1
+  extraído en 12 s
+== contrato: extracción en ejecución (main)
+  contrato: 5 rutas, 8 operaciones, OpenAPI 3.1.1
+  extraído en 6 s
+== C1 contrato: contracts/openapi.json frente al extraído de 8fb4c3a8b1cc629027f456c7c3ce19e041164c06
+    python3: can't open file '/tools/docs-guard/dg.py': [Errno 2] No such file or directory
+  FALLA C1: esperaba verde y dio rojo (rc=2)
+== C2 plantado: una operación de más tiene que dar exit 1
+    python3: can't open file '/tools/docs-guard/dg.py': [Errno 2] No such file or directory
+  ok    C2: rojo (rc=2)
+== C3 trazas: traces-resolve y anclas contra 8fb4c3a8b1cc629027f456c7c3ce19e041164c06
+    python3: can't open file '/tools/docs-guard/dg.py': [Errno 2] No such file or directory
+  FALLA C3: esperaba verde y dio rojo (rc=2)
+== C4 negativa: RN-LOC-01 sin corregir (defecto real 60/80) tiene que dar rojo
+    python3: can't open file '/tools/docs-guard/dg.py': [Errno 2] No such file or directory
+  ok    C4: rojo (rc=2)
+== A1 deriva contra main (avisa, no bloquea)
+python3: can't open file '/tools/docs-guard/dg.py': [Errno 2] No such file or directory
+AVISO: deriva del contrato frente a main (59399ba6678c56c3219988a5f9666fc4e0047160): actualizar source.lock y contracts/openapi.json
+python3: can't open file '/tools/docs-guard/dg.py': [Errno 2] No such file or directory
+== agregador mini demo
+  C1  ROJO
+  C2  verde
+  C3  ROJO
+  C4  verde
+== mini demo: ROJO
+== tiempo de pared: 21 s

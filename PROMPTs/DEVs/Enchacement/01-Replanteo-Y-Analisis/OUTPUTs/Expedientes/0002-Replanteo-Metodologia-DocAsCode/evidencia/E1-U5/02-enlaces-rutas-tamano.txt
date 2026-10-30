@@ -1,0 +1,35 @@
+# E1-U5 — enlaces, anclas y rutas citadas de la ia-db (2026-10-27)
+ROTO wt/e1-u5/ia-db/README.md …
+ROTO wt/e1-u5/ia-db/indexes/04_Diseno-REST-API.md …
+enlaces 186 rotos 2
+NOEXISTE 01_Documentacion-Tecnica.md Guides/Sistema-Documentador-Tecnico-Guide
+NOEXISTE 08_Ramas-CI-CD-y-DevOps.md scripts/dotnet.sh
+NOEXISTE 00_MASTER-INDEX.md Guides/references/arquitectura
+NOEXISTE 00_MASTER-INDEX.md Guides/Git-Flow-Guides
+NOEXISTE 00_MASTER-INDEX.md Guides/Sistema-Documentador-Tecnico-Guide
+NOEXISTE 00_MASTER-INDEX.md Guides/Git-Flow-Guides
+NOEXISTE 00_MASTER-INDEX.md Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md
+NOEXISTE 00_MASTER-INDEX.md Guides/Test-Guide
+NOEXISTE 00_MASTER-INDEX.md Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Actividades/Actividad-3-Diseñar-Modelo-De-Dominio.md
+rutas 231 inexistentes 9
+
+# enlaces relativos del corpus: 5d5c2b4 y fe10086 (mismo script)
+2732 253
+3211 246
+
+# tamaño
+   165 ia-db/README.md
+   359 ia-db/indexes/00_MASTER-INDEX.md
+   278 ia-db/indexes/01_Documentacion-Tecnica.md
+   404 ia-db/indexes/02_Informe-de-Solucion.md
+   353 ia-db/indexes/03_Organizacion-Codigo-NET.md
+   334 ia-db/indexes/04_Diseno-REST-API.md
+   413 ia-db/indexes/05_Arquitectura-NET-y-Laboratorio.md
+   259 ia-db/indexes/06_Metodologia-Entorno-Desarrollo.md
+   358 ia-db/indexes/07_Testing-E2E.md
+   423 ia-db/indexes/08_Ramas-CI-CD-y-DevOps.md
+   375 ia-db/indexes/09_IA-Agiles-UX-y-Otros.md
+   333 ia-db/indexes/10_Convenciones-y-Glosario.md
+   223 ia-db/indexes/11_Sistema-Documentador-SDEI.md
+   113 ia-db/indexes/12_Framework-Concept.md
+  4390 total

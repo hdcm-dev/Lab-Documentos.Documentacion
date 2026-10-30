@@ -1,0 +1,44 @@
+# E1-U4e — enlaces de AGENTS.md (lychee --offline --include-fragments -v)
+## lychee sólo sobre AGENTS.md
+[200] file://<worktree>/README.md
+[200] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Referencias.md
+[200] file://<worktree>/tools/docs-guard/excepciones.txt
+[200] file://<worktree>/tools/docs-guard/README.md
+[200] file://<worktree>/Guides/README.md
+[200] file://<worktree>/CHANGELOG.md
+[200] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Patrones-De-Ejemplos.md
+[200] file://<worktree>/scripts/ci-local.sh
+[200] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Glosario.md
+[200] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Esquema-Frontmatter-Y-Prefijos.md
+[200] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/01-Mapa.md
+[200] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Criterios-De-Calidad.md
+[200] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Como-Decidir.md
+[200] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/README.md
+[200] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Lista-De-Verificacion.md#8-cara-agente
+[200] file://<worktree>/AGENTS.md#1-definiciones
+[200] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/00-Marco.md#5-convenciones
+[200] file://<worktree>/AGENTS.md#5-qu%C3%A9-puede-y-qu%C3%A9-no-puede-cambiar-un-agente
+[200] file://<worktree>/AGENTS.md#2-qu%C3%A9-es-este-repositorio
+[200] file://<worktree>/AGENTS.md#4-c%C3%B3mo-validar-antes-de-proponer
+[200] file://<worktree>/AGENTS.md#7-un-ejemplo-agregar-una-p%C3%A1gina-al-cuerpo
+[200] file://<worktree>/AGENTS.md#6-anexos-de-referencia
+[200] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Como-Decidir.md#6-qui%C3%A9n-decide
+[200] file://<worktree>/AGENTS.md#8-c%C3%B3mo-cambia-este-archivo
+[200] file://<worktree>/AGENTS.md#3-ruta-de-lectura-del-agente
+[200] file://<worktree>/tools/docs-guard/README.md#5-qu%C3%A9-bloquea-y-qu%C3%A9-avisa
+
+🔍 26 Total (in 0s) ✅ 26 OK 🚫 0 Errors
+
+## defecto plantado: un destino y un ancla rotos en AGENTS.md
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion AGENTS.md)
+[ERROR] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Glosario-No-Existe.md | Cannot find file
+[ERROR] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/00-Marco.md#9-no-existe | Cannot find fragment
+Issues found in 1 input. Find details below.
+
+[AGENTS.md]:
+[ERROR] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Glosario-No-Existe.md | Cannot find file
+[ERROR] file://<worktree>/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/00-Marco.md#9-no-existe | Cannot find fragment
+
+🔍 319 Total (in 0s) ✅ 285 OK 🚫 2 Errors 👻 32 Excluded
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+rc=1
