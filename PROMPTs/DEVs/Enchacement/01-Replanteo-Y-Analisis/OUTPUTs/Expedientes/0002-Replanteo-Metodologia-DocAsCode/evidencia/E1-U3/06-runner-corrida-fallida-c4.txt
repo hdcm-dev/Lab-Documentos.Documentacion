@@ -1,0 +1,44 @@
+E1-U3 — corrida del runner que falló (run 40568169682, cabeza d841992, 2026-10-27). C1-C3 en verde y A1 sin deriva; C4 dio
+FALLA con el rojo correcto porque en el runner dg.py anota con ::error y C4 contaba líneas « ERROR ». Corregido en 26e61fd (LD-14).
+Job: 19:26:48Z-19:28:13Z (1 min 25 s), en cola desde 19:20:12Z. Paso de verificación: 19:27:11Z-19:28:04Z.
+
+== fuente: https://github.com/hdcm-dev/Lab-E2E.WebBlazor.git @ 8fb4c3a8b1cc629027f456c7c3ce19e041164c06 y main
+  8fb4c3a8b1cc629027f456c7c3ce19e041164c06 -> 8fb4c3a8b1cc629027f456c7c3ce19e041164c06 (103 archivos)
+  main -> 59399ba6678c56c3219988a5f9666fc4e0047160 (103 archivos)
+== contrato: extracción en ejecución (SHA)
+
+
+  contrato: 5 rutas, 8 operaciones, OpenAPI 3.1.1
+  extraído en 25 s
+== contrato: extracción en ejecución (main)
+
+
+  contrato: 5 rutas, 8 operaciones, OpenAPI 3.1.1
+  extraído en 14 s
+== C1 contrato: contracts/openapi.json frente al extraído de 8fb4c3a8b1cc629027f456c7c3ce19e041164c06
+    == PR-6 contrato: verde (errores=0 avisos=0) operaciones=8
+  ok    C1: verde (rc=0)
+== C2 plantado: una operación de más tiene que dar exit 1
+##[error]operacion-nueva: GET /api/v1/plantada no está en el contrato versionado
+    == PR-6 contrato: ROJO (errores=1 avisos=0) operaciones=8
+  ok    C2: rojo (rc=1)
+== C3 trazas: traces-resolve y anclas contra 8fb4c3a8b1cc629027f456c7c3ce19e041164c06
+    == PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=17 resueltas=17 anclas=10 anclas-resueltas=10
+  ok    C3: verde (rc=0)
+== C4 negativa: RN-LOC-01 sin corregir (defecto real 60/80) tiene que dar rojo
+##[error]ancla-no-contiene: LocalidadRules.NombreValido no contiene «LargoMaximoDelNombre»
+##[error]ancla-valor-distinto: NombreEntry.MaxLength: la ficha afirma 60 y el código tiene 80
+    == PR-5 traces-resolve: ROJO (errores=2 avisos=0) trazas=1 resueltas=1 anclas=6 anclas-resueltas=4
+  FALLA C4: se esperaban exactamente 2 errores y rc=1 (rc=1)
+== A1 deriva contra main (avisa, no bloquea)
+    == PR-6 contrato: verde (errores=0 avisos=0) operaciones=8
+  contrato: sin deriva frente a main (59399ba6678c56c3219988a5f9666fc4e0047160)
+    == PR-5 traces-resolve (deriva: sólo avisa): verde (errores=0 avisos=0) anclas=10 resueltas=10
+  anclas: sin deriva frente a main (59399ba6678c56c3219988a5f9666fc4e0047160)
+== agregador mini demo
+  C1  verde
+  C2  verde
+  C3  verde
+  C4  ROJO
+== mini demo: ROJO
+== tiempo de pared: 53 s

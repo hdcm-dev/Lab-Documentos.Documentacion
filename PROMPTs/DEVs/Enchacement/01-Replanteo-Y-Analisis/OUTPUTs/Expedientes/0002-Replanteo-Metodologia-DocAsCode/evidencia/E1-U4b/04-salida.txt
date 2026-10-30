@@ -1,0 +1,19 @@
+corte: 2026-10-27 · ventana desde: 2024-10-27
+práct repositorio                  ruta                             commit       fecha      ≤24m
+P1     github/docs                  content                          ee20fda5d481 2026-10-27 sí
+P1     github/docs                  .github/workflows/link-check-daily.yml 7abf80d21149 2026-01-26 sí
+P1     kubernetes/website           content/en                       ed70e311737a 2026-10-26 sí
+P1     MicrosoftDocs/azure-docs     articles                         d7e590b2008f 2026-10-27 sí
+P2     github/rest-api-description  descriptions                     a5c38c137866 2026-10-27 sí
+P2     stripe/openapi               openapi                          a6cd9878ad3d 2026-10-26 sí
+P3     mintlify/docs                .vale.ini                        4a8f15c3dc3f 2026-08-14 sí
+P3     openshift/openshift-docs     .vale.ini                        df831314fea6 2026-08-25 sí
+P3     grafana/grafana              .vale.ini                        5427e8d92b28 2026-08-03 sí
+P4     backstage/backstage          docs                             82079b4e75b6 2026-10-27 sí
+P4     grafana/grafana              docs/sources                     7b102dddd2bf 2026-10-27 sí
+P5     kubernetes/website           content/en                       ed70e311737a 2026-10-26 sí
+P5     istio/istio.io               content                          2100f4033a62 2026-10-27 sí
+P5     kubernetes/website           ramas release-1.*: 33 (la última: release-1.36)
+P5     istio/istio.io               ramas release-1.*: 33 (la última: release-1.31)
+P6     facebook/docusaurus          website/versioned_docs           206e741f1fed 2026-10-16 sí
+P6     jestjs/jest                  website/versioned_docs           ea7258e3338b 2026-08-31 sí

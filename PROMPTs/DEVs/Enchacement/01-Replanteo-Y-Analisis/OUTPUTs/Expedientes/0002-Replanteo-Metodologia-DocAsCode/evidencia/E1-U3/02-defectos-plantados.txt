@@ -1,0 +1,38 @@
+E1-U3 — defectos plantados, uno por vez, sobre una copia de la demo (2026-10-27). La demo se restauró y se comprobó con diff -r.
+Árbol del código: el de verificar.sh fuente ($TRABAJO/sha = 8fb4c3a; $TRABAJO/comparar = main 59399ba).
+
+### P1 traza desfasada (ayuda traza RN-LOC-01@1.0; la ficha está en 1.1) -> C3
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/MovilidadUrbana-Mini-Demo/docs/ayuda/alta-de-localidad.md:1: ERROR traza-version-desfasada: RN-LOC-01@1.0: la declaración está en 1.1
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=17 resueltas=16 anclas=10 anclas-resueltas=10
+rc=1
+
+### P2 traza a un RD- que no existe -> C3
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/MovilidadUrbana-Mini-Demo/docs/ayuda/alta-de-localidad.md:1: ERROR traza-no-resuelve: RD-09: el ID no está declarado en el registro
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=17 resueltas=16 anclas=10 anclas-resueltas=10
+rc=1
+
+### P3 ancla con un SHA distinto del de source.lock -> C3
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/MovilidadUrbana-Mini-Demo/docs/fichas/RN-LOC-01.md:57: ERROR ancla-sha-distinto: 59399ba no es el SHA de source.lock (8fb4c3a8b1cc)
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=17 resueltas=17 anclas=10 anclas-resueltas=9
+rc=1
+
+### P4 ancla a un símbolo que no existe en el SHA -> C3
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/MovilidadUrbana-Mini-Demo/docs/fichas/RN-LOC-02.md:54: ERROR ancla-sin-simbolo: src/MovilidadUrbana.MAUI/Application/Localidades/LocalidadService.cs#LocalidadService.GuardarAsync no se encuentra
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=17 resueltas=17 anclas=10 anclas-resueltas=9
+rc=1
+
+### P5 contrato versionado sin DELETE /api/v1/localidades/{id} -> C1
+$TRABAJO/sha/openapi.json:1: ERROR operacion-nueva: DELETE /api/v1/localidades/{id} no está en el contrato versionado
+== PR-6 contrato: ROJO (errores=1 avisos=0) operaciones=7
+rc=1
+
+### P6a deriva simulada de anclas (main con MaxLength 70) -> A1 avisa, rc 0
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/MovilidadUrbana-Mini-Demo/docs/fichas/RN-LOC-01.md:61: aviso ancla-valor-distinto: NombreEntry.MaxLength: la ficha afirma 80 y el código tiene 70
+== PR-5 traces-resolve (deriva: sólo avisa): verde (errores=0 avisos=1) anclas=10 resueltas=9
+rc=0
+
+### P6b deriva simulada del contrato (main con una operación nueva) -> A1 avisa (verificar.sh no bloquea)
+$TRABAJO/deriva/openapi.json:1: ERROR operacion-nueva: GET /api/v1/nueva no está en el contrato versionado
+== PR-6 contrato: ROJO (errores=1 avisos=0) operaciones=8
+rc=1
+

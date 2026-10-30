@@ -1,0 +1,19 @@
+# E1-G — barrido S2 (G-f) sobre lo que E1 agregó en los repos públicos, 2026-10-28
+# Patrón: directorio personal (/home/<x>, /Users/, C:\Users), usuario y apellido del host, servicio privado (SDD-B) y su organización,
+#   otros repos privados del espacio de trabajo, runner y contenedor de la organización privada, carpeta de intermedios, IPv4 privadas y CGNAT
+# Alcance: líneas agregadas (git diff -U0 <base>..main) — Lab-Documentos 507afd6..fe10086; Lab-Documentos.Documentacion 7141c61..e0e520f;
+#   Lab-E2E.WebBlazor 8fb4c3a..59399ba; Lab-Geometria sin cambios de E1; rama de reparación e1g sobre fe10086
+== Lab-Documentos: 2 coincidencias
+      2 {apellido-del-PO}
+      2 <usuario>
+== Lab-Documentos.Documentacion: 20 coincidencias
+      3 {tmp-de-sesiones}
+      3 C:\Users
+     15 {dir-de-trabajo}
+      2 /home/<usuario>
+== Lab-E2E.WebBlazor: 0 coincidencias
+== rama-e1g-reparaciones: 0 coincidencias
+# Clasificación:
+#  - Lab-Documentos: <usuario> en 'owner:' de la guía de un solo archivo (convención previa a E1, el handle público del autor; 3 guías ya lo usaban en 507afd6) y su cita en el CHANGELOG. Heredado, no lo introduce E1.
+#  - Lab-Documentos.Documentacion: '{dir-de-trabajo}' (nombre relativo de la carpeta de intermedios, sin ruta ni usuario) en folios 2xx y evidencias; la URL pública de kubernetes.io (docs/home/, 2 de las coincidencias de home); el patrón citado por 099 y por la evidencia de U0c (C:\Users, /home/<usuario>); la regla de la carta «fuera de {tmp-de-sesiones}» (3), un directorio genérico sin usuario. Ni ruta personal del host, ni IP, ni usuario.
+#  - Lab-E2E.WebBlazor y rama de reparación: vacío.

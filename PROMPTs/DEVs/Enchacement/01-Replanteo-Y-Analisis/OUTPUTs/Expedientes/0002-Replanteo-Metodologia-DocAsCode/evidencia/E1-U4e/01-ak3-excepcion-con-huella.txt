@@ -1,0 +1,12 @@
+# E1-U4e — AI sobre AGENTS.md antes de la excepción (AI-3 avisa)
+$ python3 -I tools/docs-guard/dg.py ai AGENTS.md
+AGENTS.md:17: aviso AI-3 frase-dirigida-al-agente: Instrucciones para agentes
+== PR-3 anti-inyeccion: verde (errores=0 avisos=1) AI-1=0 AI-2=0 AI-3=1 AI-4=0 AI-5=0
+
+# Con la excepción de huella 244955627254…fafb en tools/docs-guard/excepciones.txt
+== PR-3 anti-inyeccion: verde (errores=0 avisos=0) AI-1=0 AI-2=0 AI-3=0 AI-4=0 AI-5=0
+
+# Archivo cambiado (una línea agregada) y huella sin renovar: la excepción deja de valer
+AGENTS.md:17: aviso AI-3 frase-dirigida-al-agente: Instrucciones para agentes
+== PR-3 anti-inyeccion: verde (errores=0 avisos=1) AI-1=0 AI-2=0 AI-3=1 AI-4=0 AI-5=0
+rc=0

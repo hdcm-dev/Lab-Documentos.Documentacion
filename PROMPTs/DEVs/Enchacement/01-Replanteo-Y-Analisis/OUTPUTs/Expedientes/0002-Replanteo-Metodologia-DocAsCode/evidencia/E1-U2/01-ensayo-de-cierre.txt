@@ -1,0 +1,43 @@
+# E1-U2 — ensayo de cierre: ci-local.sh todo con cada defecto plantado, uno por vez (2026-10-27)
+# Script: copia del worktree por caso; agregador del ci-local.sh. Rutas del equipo recortadas.
+
+00 sin defecto (base)              rc=0  rojos: ninguno                  esperado: ninguno
+01 PR-1 enlace roto                rc=1  rojos: enlaces                  esperado: enlaces
+      [ERROR] file://Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/no-existe-ensayo.md | Cannot find file
+      [ERROR] file://Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/no-existe-ensayo.md | Cannot find file
+02 PR-1 relativo fuera del repo    rc=1  rojos: enlaces                  esperado: enlaces
+      [ERROR] file://{dir-de-trabajo}/afuera.md | Cannot find file
+      [ERROR] file://{dir-de-trabajo}/afuera.md | Cannot find file
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:769: ERROR relativo-fuera-del-repo: ../../../../../afuera.md
+03 PR-2 falta description          rc=1  rojos: esquema                  esperado: esquema
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+04 PR-2 prefijo no registrado      rc=1  rojos: esquema                  esperado: esquema
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:1: ERROR prefijo: «ZZZ-» no está en el registro (prefijos.txt)
+05 PR-3 AI-1 comentario HTML       rc=1  rojos: ai                       esperado: ai
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:769: ERROR AI-1 comentario-html: <!-- instruccion escondida -->
+06 PR-3 AI-2 invisible             rc=1  rojos: ai                       esperado: ai
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:769: ERROR AI-2 caracter-invisible: U+200B
+07 PR-3 AI-4 dominio               rc=1  rojos: ai                       esperado: ai
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:769: ERROR AI-4 dominio-no-permitido: exfiltracion.invalid
+08 PR-3 AI-5 HTML oculto           rc=1  rojos: ai                       esperado: ai
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:769: ERROR AI-5 html-oculto: <div hidden>
+09 PR-3 AI-3 frase (avisa)         rc=0  rojos: ninguno                  esperado: ninguno (aviso AI-3)
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:769: aviso AI-3 frase-dirigida-al-agente: Nota para el agente
+10 PR-4 markdownlint               rc=1  rojos: estructura               esperado: estructura
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/Lanzar-Example.md:129 MD001/heading-increment Heading levels should only increment by one level at a time [Expected: h3; Actual: h4]
+11 PR-4 mermaid inválido          rc=1  rojos: estructura               esperado: estructura
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:769: ERROR mermaid inválido: Parse error on line 3:
+12 PR-5 traza que no resuelve      rc=1  rojos: trazas                   esperado: trazas
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:1: ERROR traza-no-resuelve: DOC-NO-EXISTE: el ID no está declarado en el registro
+13 PR-6 contrato sin extracción   rc=1  rojos: contrato                 esperado: contrato
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/contracts/openapi.json:1: ERROR contrato-sin-extraccion: hay contrato versionado pero el build no dejó contracts/.generado/openapi.json
+14 PR-7 pieza fijada cambiada      rc=1  rojos: fijadas                  esperado: fijadas
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Knowledges/BASE-FIJADA.md:3: ERROR huella-distinta: Knowledges/X.md cambió respecto de lo fijado
+15 PR-7 reflint en cuerpo nuevo    rc=1  rojos: fijadas                  esperado: fijadas
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Cuerpo-Ensayo/Referencias.md:16: ERROR ref-sin-anio: ref-x
+      Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Cuerpo-Ensayo/Referencias.md:16: ERROR ref-sin-titulo-en-cursiva: ref-x
+16 AK-7 fixture desarmado          rc=1  rojos: autoprueba               esperado: autoprueba
+        FALLA AK-7 fixture permanente      rc=0; no detectados: AI-1 AI-2 AI-3 AI-4 AI-5
+17 AI-1 desactivado en el código  rc=1  rojos: autoprueba               esperado: autoprueba
+        FALLA PR-3 AI-1                    esperaba rojo y dio verde (rc=0)
+        FALLA AK-7 fixture permanente      rc=1; no detectados: AI-1
