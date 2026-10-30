@@ -50,6 +50,7 @@
 | 35 | 2026-10-29 | Folio 050 (dictamen): el PO pidió evaluar C-min (condición 2 de P1). Mesa de 9: el 60 % del TPR es tramo nativo (piso 4 207 ms sin WASM); C-min no se adopta; se propone E04 «arranque superpuesto» (estimado 4,5–5,3 s, sin medir) con C-min como control. Al PO: cuatro decisiones. |
 | 36 | 2026-10-29 | Folio 051 (constancia): historia de LD y LDD reescrita con filter-repo (aprobación del PO en las dos líneas), con 0 fugas en todos los blobs y la punta idéntica. LD `b25b71b`→`bf86669`, LDD `b9f4317`→`15d8452`; tag `docs-guard-v1.0.0` anotado. Quedan los `refs/pull/*` (GitHub Support). |
 | 37 | 2026-10-29 | Folio 052 (constancia): E04 en el g42 (rama descartable `fc/e04-arranque-superpuesto`). V1: 9 648 · 5 199 · 4 952 · 4 928 · 4 777 ms; V2 peor (5,2–5,6 s en régimen). V1 baja el régimen unos 2 s; R1 sin versión que adelantar no mejora. Al PO: semilla desde el APK. |
+| 38 | 2026-10-30 | Folio 053 (constancia): V1S (semilla del APK, firma verificada) en el g42. Primer arranque: 8 783 · 7 930 · 8 572 ms; régimen como V1. Mono arranca lento en el primer uso tras instalar: la corrida recién instalada no baja de 5 s con este modelo. Al PO: si esa corrida cuenta (P1 dice «contenido ya instalado»). |
 
 ## Rutas de trabajo
 

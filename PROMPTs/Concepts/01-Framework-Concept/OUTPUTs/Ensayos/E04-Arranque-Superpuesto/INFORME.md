@@ -44,3 +44,30 @@ R1 sólo baja si el primer arranque tiene una versión servible sin esperar al a
 firmada servida desde el APK» del dictamen 050 (decisión 2 del PO). Con esa semilla, R1 debería comportarse como R2–R5
 (estimación, sin medir). Y el régimen de V1 queda en el borde: hace falta otra palanca de unos 200–300 ms para tener
 margen.
+
+## V1S — semilla del APK servida en el primer arranque (2026-10-30, folio 053)
+
+El PO aprobó la semilla de fábrica firmada dentro del APK. La rama descartable `fc/e04-semilla-apk` (`a6cc5e5`) agrega
+`-p:FcE04=V1S`: en el primer arranque, sin `puntero.json`, el cascarón verifica la semilla del APK (firma ES256 del
+índice, tamaño y sha256 del zip) y la sirve desde memoria mientras el actualizador la instala como siempre.
+
+| Serie | Corridas (ms) |
+| --- | --- |
+| `guion.sh tpr` (R1 + 4 en régimen) | R1 sin datos (el búfer del logcat rotó durante la instalación, como en la 047) · 5 554 · 5 064 · 4 893 · 4 953 |
+| Primer arranque recién instalado, 3 veces, búfer de 16 MB | 8 783 · 7 930 · 8 572 |
+
+Evidencia: `e04-V1S-{logcat,am-start}.txt` y `e04-V1S-primer-arranque-{1,2,3}-logcat.txt`.
+
+- **La semilla se sirve desde el primer momento**: `req#1 GET /index.html (semilla del APK)` entre los 3,5 y los
+  4,2 s, y el último `_framework` entre los 4,1 y los 4,9 s.
+- **El primer arranque solo baja de unos 9,6 s a 7,9–8,8 s**, por dos causas:
+  1. El saludo del contenido llega recién entre los 6,4 y los 7,7 s. Mono arranca más lento en el primer uso, con
+     las cachés del WebView vacías tras la instalación.
+  2. El cascarón retiene el saludo hasta que el actualizador decide (`ContenidoListo` entre los 7,5 y los 8,3 s),
+     porque en el primer arranque sigue creando la base e instalando la semilla en disco.
+- **El régimen queda como V1**: de 4,9 a 5,6 s.
+
+**Lectura.** Aunque se adelantara la respuesta al saludo, el primer arranque quedaría por encima de unos 6,5 s, porque
+el propio arranque de Mono en el primer uso ya lo supera. Con este modelo, la corrida recién instalada no baja de 5 s
+en el g42. Ojo: el método de P1 (035:325-337) dice «con el contenido ya instalado». Si la corrida recién instalada no
+cuenta, el veredicto depende sólo del régimen, que con V1 está en el borde: 4,8 a 5,2 s, o 4,9 a 5,6 s según la serie.

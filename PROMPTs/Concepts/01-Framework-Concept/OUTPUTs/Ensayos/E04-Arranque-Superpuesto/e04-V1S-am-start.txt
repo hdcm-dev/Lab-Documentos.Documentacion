@@ -1,0 +1,20 @@
+== corrida 1
+LaunchState: COLD
+TotalTime: 2240
+WaitTime: 2258
+== corrida 2
+LaunchState: COLD
+TotalTime: 1614
+WaitTime: 1617
+== corrida 3
+LaunchState: COLD
+TotalTime: 1367
+WaitTime: 1375
+== corrida 4
+LaunchState: COLD
+TotalTime: 1275
+WaitTime: 1277
+== corrida 5
+LaunchState: COLD
+TotalTime: 1243
+WaitTime: 1253
