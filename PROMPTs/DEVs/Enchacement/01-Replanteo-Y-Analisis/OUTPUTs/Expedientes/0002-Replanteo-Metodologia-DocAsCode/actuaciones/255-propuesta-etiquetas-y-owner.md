@@ -2,7 +2,7 @@
 doc_id: EXP0002-F255
 doc_type: providencia
 title: Propuesta H al PO — política de etiquetas, situación del tag docs-guard-v1.0.0 y regla owner/alias
-status: borrador
+status: vigente
 origin: agent
 confidence: alta (cada hecho lleva el comando que lo mide, corrido el 2026-10-28 sobre main de los dos repos)
 owner: presidencia de la mesa de Replanteo y análisis DocAsCode (vuelta de E1)
@@ -87,9 +87,10 @@ U14 del acta `250` («el tag existe sólo con el ok del PO») suponen que el tag
 Lectura de la presidencia:
 
 - La etiqueta nació entre el merge de #16 (2026-10-27T15:04:27-03:00) y la medida I-2 de E1-G. El plan la había
-  reservado al PO (`N10:222`) y `133` §3 la pedía como entregable de E1-U2: lo más probable es que la haya empujado la
-  unidad E1-U2, con la credencial compartida, sin el ok del PO. No hay registro que lo pruebe ni que lo descarte;
-  queda como **hecho H sin autorización asentada**.
+  reservado al PO (`N10:222`) y `133` §3 la pedía como entregable de E1-U2: la creó la unidad E1-U2: su folio, rescatado
+  de i7infra por el #36, lo asienta como acto propio (`212-e1-u2.md:61`, `:75`: «referencia ligera creada por la
+  API»). Corrección de la premisa (`257` D06): el tag **tiene asiento**, pero no autorización del PO (`N10:222`);
+  queda como **hecho H asentado y sin autorizar**.
 - Es liviana, contra P-ET-2 y contra `TEM-03:61` y `:69`, que piden anotada.
 - Como nada la consume, conservarla o reemplazarla no cambia ninguna corrida de CI.
 
@@ -148,3 +149,19 @@ marca «[espera PO]» y no lo fusiona un agente (`252` §3).
 
 Mientras tanto, E1-G2 no espera: mide con lo fusionado y declara la política, el tag y la regla owner/alias como
 reservas nombradas (`251` §6, punto 5; DEC-20).
+
+## 7. Resolución del PO (2026-10-29)
+
+El PO delegó en la presidencia «armar una solución definitiva» para los cuatro PR H, tomando como base el diseño de
+i7infra y lo avanzado en hpdev, y aprobó en la misma sesión reescribir la historia de los dos repositorios. Se
+resuelve:
+
+| # | Resolución | Por qué |
+| --- | --- | --- |
+| 1 | **Política aprobada**: P-ET-1 a P-ET-6 | Default de la mesa; coincide con `TEM-03:61` y `:69` |
+| 2 | **T-B**: el tag se recrea **anotado** sobre el commit que reemplace a `c0766dc` en la historia reescrita, con mensaje que cite el #16, este folio y la resolución | La reescritura ya mueve todas las referencias públicas: lo irreversible de T-B deja de ser un costo propio, y la etiqueta queda conforme a P-ET-2 sin excepción |
+| 3 | **O-A**: `owner:` es un rol o una pieza, nunca una cuenta | Default de la mesa; una sola regla para todo lo público |
+
+Siguientes pasos: T-B lo ejecuta quien hace la reescritura y se mide con `git cat-file -t docs-guard-v1.0.0` =
+`tag`; las reparaciones P de §6 (filas 1 y 3) entran en la vuelta E1-R.
+
