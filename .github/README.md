@@ -55,7 +55,7 @@ El workflow llamado declara su propio `runs-on`; el registro del job muestra el 
 Ejemplo, con un clon de Lab-Documentos en el commit fijado:
 
 ```bash
-git -C ../Lab-Documentos checkout b25b71b4c9f0a68f9583e47e79baa4fc37819e4d
+git -C ../Lab-Documentos checkout bf866697b0688708eb28cdde2ffdb0a968e7a953
 bash ../Lab-Documentos/scripts/ci-local.sh todo .github
 ```
 
