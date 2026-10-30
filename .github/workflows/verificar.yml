@@ -5,7 +5,8 @@
 #   verificar   lo que el PR agrega: sin claves privadas ni artefactos binarios pesados.
 #   docs-guard  llama al workflow reutilizable de Lab-Documentos, fijado por SHA del main vigente de Lab-Documentos
 #               (grupos PR-1 a PR-7 y autoprueba; expediente 0002, unidades E1-U0b y U11-H-A de la vuelta de E1).
-#               Una corrida por «ruta»: .github y la carpeta del expediente 0002 (DEF-05, DEF-17).
+#               Ruta: .github. La carpeta del expediente 0002 queda fuera de la matriz (opción b del acta 257,
+#               D06): sus trazas se miden en local con dg.py y se informan sin bloquear (DEF-17).
 #
 # Disparadores: pull_request, push a main (la corrida sobre el commit de merge queda en main; DEF-06) y
 # workflow_dispatch.
@@ -68,9 +69,8 @@ jobs:
       matrix:
         ruta:
           - .github
-          - PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Expedientes/0002-Replanteo-Metodologia-DocAsCode
-    # main de Lab-Documentos al 2026-10-28 (merge del PR #30). Subir el pin es clase H.
-    uses: hdcm-dev/Lab-Documentos/.github/workflows/docs-guard.yml@d65d52be2e236af4e858e2492c796845c21831d3
+    # main de Lab-Documentos al 2026-10-29 (merge del PR #31). Subir el pin es clase H.
+    uses: hdcm-dev/Lab-Documentos/.github/workflows/docs-guard.yml@b25b71b4c9f0a68f9583e47e79baa4fc37819e4d
     with:
       ruta: ${{ matrix.ruta }}
-      herramientas-ref: d65d52be2e236af4e858e2492c796845c21831d3
+      herramientas-ref: b25b71b4c9f0a68f9583e47e79baa4fc37819e4d
