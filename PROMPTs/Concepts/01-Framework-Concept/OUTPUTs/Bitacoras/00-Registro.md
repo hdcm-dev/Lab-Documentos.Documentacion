@@ -52,6 +52,7 @@
 | 37 | 2026-10-29 | Folio 052 (constancia): E04 en el g42 (rama descartable `fc/e04-arranque-superpuesto`). V1: 9 648 · 5 199 · 4 952 · 4 928 · 4 777 ms; V2 peor (5,2–5,6 s en régimen). V1 baja el régimen unos 2 s; R1 sin versión que adelantar no mejora. Al PO: semilla desde el APK. |
 | 38 | 2026-10-30 | Folio 053 (constancia): V1S (semilla del APK, firma verificada) en el g42. Primer arranque: 8 783 · 7 930 · 8 572 ms; régimen como V1. Mono arranca lento en el primer uso tras instalar: la corrida recién instalada no baja de 5 s con este modelo. Al PO: si esa corrida cuenta (P1 dice «contenido ya instalado»). |
 | 39 | 2026-10-30 | Folio 054 (dictamen): mesa de UX y flujo a pedido del PO (primer arranque, sin conexión, verificar al loguearse, nada de pantalla en blanco). Flujo «nunca bloquear» con dos niveles (normal / obligatoria) y presentación con avance y leyendas; consulta al login con aplicación diferida y tarjeta «Reiniciar ahora». Al PO: cinco decisiones. |
+| 40 | 2026-10-31 | Folio 055 (dictamen): mesa de estándares, UX y diseño sobre las decisiones abiertas (primer uso fuera de los 5 s con tope de 10 s, V1+V1S a main con salvaguarda, PIN propio de respaldo, tres relojes de sesión sin conexión, decisiones UX 054); 17 preguntas al PO. Folio 056 (constancia): login con formulario probado en el g42 por adb; «Bloquear» abre BiometricPrompt; cancelar no bloquea; falta el desbloqueo completo (patrón del PO o emulador, que el host no admitió por carga). |
 
 ## Rutas de trabajo
 
