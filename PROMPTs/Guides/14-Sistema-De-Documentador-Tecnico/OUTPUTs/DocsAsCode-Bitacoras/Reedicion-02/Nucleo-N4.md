@@ -4,7 +4,7 @@ doc_type: bitacora-nucleo
 title: Núcleo N4 — Aplicación a Geometría (relevamiento, mapeo contra SDEI y diseño del ensayo)
 status: borrador
 origin: agent
-confidence: alta en lo medido (comandos y rutas citadas, corridos el 2026-11-01 en hpdev); media en las propuestas, que son [criterio propio] y las decide la mesa
+confidence: alta en lo medido (comandos y rutas citadas, corridos el 2026-11-01 en el equipo de pruebas); media en las propuestas, que son [criterio propio] y las decide la mesa
 owner: presidencia de la reedición DocsAsCode — lector del núcleo N4
 last_review: 2026-11-01
 traces: [DB-R02-00, MARCO-SDEI, MAPA-SDEI]
@@ -31,7 +31,7 @@ afirmación.
    7. [Despliegue en geometria.aplicada.stream](#37-despliegue-en-geometriaaplicadastream)
    8. [Estado git (sólo lectura)](#38-estado-git-sólo-lectura)
 4. [Mapeo concepto SDEI → Geometría → brecha](#4-mapeo-concepto-sdei--geometría--brecha)
-5. [Ensayo de trazas corrido en hpdev](#5-ensayo-de-trazas-corrido-en-hpdev)
+5. [Ensayo de trazas corrido en el equipo de pruebas](#5-ensayo-de-trazas-corrido-en-el-equipo-de-pruebas)
 6. [Hallazgos de coherencia entre SDEI y Geometría](#6-hallazgos-de-coherencia-entre-sdei-y-geometría)
 7. [Propuesta: cómo ensayar el conocimiento de especificación sobre Geometría](#7-propuesta-cómo-ensayar-el-conocimiento-de-especificación-sobre-geometría)
 8. [Propuesta: material de Geometría para enriquecer el libro](#8-propuesta-material-de-geometría-para-enriquecer-el-libro)
@@ -143,9 +143,9 @@ análisis y prompts; el despliegue sale de `main`.*
 - **Lab-Geometria no tiene control documental en CI.** Sus workflows son `ci.yml` (árbol de la solución, build, test,
   cobertura, `verify-stage-d/e/h`), `e2e.yml` y `deploy-front-ftp.yml` (`grep run: LG/.github/workflows/*.yml`). No
   menciona `docs-guard` (`git grep -l docs-guard 5f07b12` → nada).
-- `e2e.yml` corre en `runs-on: [self-hosted, i7infra-dev]` (l. 69 y 149). Esa etiqueta la atiende hoy
-  `hpdev-runner-dev`: el último `docs-guard` de Lab-Documentos (run 41327937941, 2026-11-01 16:45 UTC) corrió ahí con
-  etiquetas `['self-hosted','i7infra-dev']` (API pública de Actions, consultada el 2026-11-01).
+- `e2e.yml` corre en `runs-on: [self-hosted, {runner-anterior-del-cuerpo}]` (l. 69 y 149). Esa etiqueta la atiende hoy
+  `{runner-del-cuerpo}`: el último `docs-guard` de Lab-Documentos (run 41327937941, 2026-11-01 16:45 UTC) corrió ahí con
+  etiquetas `['self-hosted','{runner-anterior-del-cuerpo}']` (API pública de Actions, consultada el 2026-11-01).
 - **Lab-Geometria.Documentacion tiene un control documental propuesto pero sin fusionar**: el PR #2
   (`entrega/delegacion-y-verificar`, `27291b1`, abierto el 2026-10-26) agrega `.github/workflows/verificar.yml`
   (`ubuntu-latest`) y `.github/scripts/verificar.py`, que comprueba enlaces internos y la forma de la ia-db según el
@@ -201,7 +201,7 @@ Etiqueta más reciente de Lab-Geometria: `v1.2.0`.
 | `CTX-SDEI-1` con o sin sitio (`00-Marco.md:115-119`) | Sin sitio de documentación; sí sitio del producto y explorador Scalar públicos (§3.7) | El Marco dice «hoy ningún escenario publica sitio» (l. 119): cierto para documentación, pero conviene distinguir el sitio del producto y la referencia API navegable, que en Geometría sí son públicos |
 | `CTX-SDEI-2` con SDD (`00-Marco.md:121-125`) | SDD 13.16 con registro de IDs y versiones (§3.3) | RRD (CL-02) inexistente; su carpeta «la fija el escalón 2» (`TEM-07:139`) |
 | `CTX-SDEI-3` topología (`00-Marco.md:127-131`) | Especificación en el repo de código; ia-db en el hermano (§3.1) | Coincide con `TEM-03` §«Lab-Geometria»; la ia-db no usa `base_commit` sino una revisión en prosa |
-| `CTX-SDEI-4` organización del runner (`00-Marco.md:133-138`) | Mismo propietario `hdcm-dev` que Lab-Documentos; `e2e.yml` ya usa `[self-hosted, i7infra-dev]` | Puede llamar al `docs-guard.yml` reutilizable (`workflow_call`, `.github/workflows/docs-guard.yml:32`); no lo hace |
+| `CTX-SDEI-4` organización del runner (`00-Marco.md:133-138`) | Mismo propietario `hdcm-dev` que Lab-Documentos; `e2e.yml` ya usa `[self-hosted, {runner-anterior-del-cuerpo}]` | Puede llamar al `docs-guard.yml` reutilizable (`workflow_call`, `.github/workflows/docs-guard.yml:32`); no lo hace |
 | CL-01 Especificación | `SDD/Docs`, CU/RN/ADR versionados | Sin brecha; trampa conocida: `_legacy/` duplica IDs (§5) |
 | CL-02 RRD | No existe | Falta crear el `doc_type: rrd`; ubicación por decidir (clase H/P) |
 | CL-03 `AGENTS.md` | Existe, derivado del contrato (§3.3) | Sin control que verifique sus enlaces en CI |
@@ -215,16 +215,16 @@ Etiqueta más reciente de Lab-Geometria: `v1.2.0`.
 | CL-13 README y CHANGELOG | `changelog.md` en ambos repos | La ia-db registra que los PR #234 y #235 no tienen entrada (`LGD/ia-db/README.md:141`, observación N-1) |
 | CL-14 Canales derivados | `/llms.txt` 404 | Latente, coherente con `01-Mapa.md` §4 |
 | Compuerta `docs-guard` PR-1..7 (TEM-06) | Ausente en LG; en LGD sólo `Verificar` propuesto (PR #2) | Dos verificadores de enlaces potenciales, uno por repo: el riesgo ya lo anotó el expediente 0002 (`010-informe-c-requisitos.md:231`) |
-| `traces-resolve` contra un SDD (TEM-07 §ejemplo) | Ensayo reproducido en hpdev (§5) | Sigue pendiente lo que `TEM-07:239` pide a `dg.py`: excluir carpetas y resolver prefijos externos en el mismo repo |
+| `traces-resolve` contra un SDD (TEM-07 §ejemplo) | Ensayo reproducido en el equipo de pruebas (§5) | Sigue pendiente lo que `TEM-07:239` pide a `dg.py`: excluir carpetas y resolver prefijos externos en el mismo repo |
 | Actores `ACT-SDEI-1..6` | PO, mesas de agentes, alumnos y docentes; delegación del merge asentada en `AGENTS.md:67` | Sin brecha de concepto |
 | Guarda de merge (Marco §1) | G1–G4 con techo 60 min en LG (`LGD/ia-db/README.md:132`); 20 min en el PR #2 de LGD | Dos techos distintos por repo: no es contradicción, pero el libro puede usarlo como ejemplo de parámetro por repositorio |
 
-## 5. Ensayo de trazas corrido en hpdev
+## 5. Ensayo de trazas corrido en el equipo de pruebas
 
 Objetivo: comprobar con el `dg.py` vigente (`{dir-de-trabajo}/wt/dac-LD/tools/docs-guard/dg.py`, último commit `b3916b8`) qué trazas
 resuelven contra el SDD real en `5f07b12`. Mismo guion que `SDEI/TEM-07-Marco-SDD.md` §«Resolver una traza…», con
 carpetas en `{dir-de-trabajo}/ensayos/n4-geometria/`. `geo` = `SDD/Docs` entero (1.187 `.md`); `geo-vigente` =
-sin `_legacy/` (561 `.md`). Host: `hpdev`.
+sin `_legacy/` (561 `.md`). Host: `{equipo-de-pruebas}`.
 
 ```text
 [Compilado: salida del 2026-11-01, una línea por caso]
@@ -335,7 +335,7 @@ Además: corregir `Examples/Prueba-Ayuda-Por-Rol` según H1 sería el enriquecim
   PO. Hasta que se fusione, LGD no tiene controles que la guarda G3 pueda leer.
 - **Despliegue real**: cualquier prueba de la ayuda en ejecución usa instancia y puertos propios, nunca
   `lab-geometria-web/api`.
-- **Runner**: si Lab-Geometria adopta `docs-guard` con `[self-hosted, i7infra-dev]`, comparte la cola con su `e2e.yml` y
+- **Runner**: si Lab-Geometria adopta `docs-guard` con `[self-hosted, {runner-anterior-del-cuerpo}]`, comparte la cola con su `e2e.yml` y
   con la CI de Lab-Documentos (ya pasó una espera de ~30 min, `DocsAsCode-Bitacoras/08-…-Onda2.md:60`).
 - **Nombres**: «G2» designa dos cosas distintas en el expediente 0002 (compuerta de la piloto en `001`; segunda compuerta
   de E1 en `253`–`265`). Conviene que el expediente 0003 nombre la piloto como «escalón 2» y no «G2».

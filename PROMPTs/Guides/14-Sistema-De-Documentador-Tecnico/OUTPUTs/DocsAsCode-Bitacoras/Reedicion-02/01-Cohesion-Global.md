@@ -98,7 +98,7 @@ relevamiento.*
 | **Herramienta común** (`tools/docs-guard/**`, `prefijos.txt`, workflows, `CHANGELOG.md`) | N1, N2, N3, N4, N5, N7 | N1-05: `PE` cambia de sentido en `prefijos.txt` (N1:83); N1-25 y N7 H3: dibujar mermaid en PR-4 (N1:103, N7:218); U4d: excluir carpetas (N1 §5); N4 caso R: precedencia de versión (N4 §5); N5 B2, B3, B8: versión de ID en sección, IDs locales, marca HTML ajena (N5 §4); N3 M-1: prefijo `KNW` y `doc_type: conocimiento` (N3:481); N2 D-N2-2: evita `LIB` para no abrir PR común (N2:273); N7 H8: `CHANGELOG` para la delegación (N7:223) | El PR común **ya es inevitable** (N1-05 y N7 H8 lo exigen aunque nadie elija `KNW` ni `LIB`). El argumento de N2 para preferir `DOC-SDEI-GUIA` pierde peso. Hay que decidir **qué entra** en ese PR y qué se difiere a un expediente de herramienta (pregunta P-04 de la propuesta de panel) |
 | **Regla de traza de una página de ayuda** | N1, N4 | N1-21: las páginas de la prueba no trazan a un `RD-` (N1:99); N4 H1: trazan a casos de uso de la API y no del front (N4:262) | No se contradicen: la regla es **compuesta**. `TEM-05:88` pide «la fila `RD-` y el caso de uso de la unidad de la pantalla». El ejemplo viola **las dos mitades**. Un solo ítem, con dos defectos |
 | **Guía obsoleta `DOC-SDT-0001`** | N1, N2, N3, N4, N6 | Siete remisiones vivas (N1 §3); siete filas parciales (N2 §5.4, §9.3); `TEM-03:245` la usa (N3 §7; N4 H5); arc42 y Nygard en contexto sólo viven ahí (N6 §5 punto 2) | El archivado depende de que el libro absorba el portal, arc42 y Nygard; un solo cambio |
-| **Etiqueta de runner `i7infra-dev`** | N1, N2, N3, N4, N7 | N1-35, severidad baja, nota en el Marco (N1:113); N2 H-5: nombra una máquina en un repo público (N2:693); N3 §4.4: es un parámetro del laboratorio, no norma; N4 §9: Lab-Geometria comparte cola; N7: la sirve `hpdev-runner-dev` | Ver contradicción C-07 |
+| **Etiqueta de runner `{runner-anterior-del-cuerpo}`** | N1, N2, N3, N4, N7 | N1-35, severidad baja, nota en el Marco (N1:113); N2 H-5: nombra una máquina en un repo público (N2:693); N3 §4.4: es un parámetro del laboratorio, no norma; N4 §9: Lab-Geometria comparte cola; N7: la sirve `{runner-del-cuerpo}` | Ver contradicción C-07 |
 | **Ensayos de reproducción** | N3, N4, N5 | Tres protocolos parecidos con métricas, insumos y lugares distintos | Ver contradicciones C-03 a C-06 |
 | **Sitio publicado** | N6, N7, Plan | Plan §6: «Sitio MkDocs. Se construye en contenedor»; N7 H4: LD no tiene generador, es un ensayo; N6 §5 punto 5: Material for MkDocs termina su vida el 2027-05-05 | El plan describe como pieza lo que es un ensayo; la mesa decide si hay sitio |
 | **Commits que ya no existen** (`080f158`, `fe10086`) | N1, N4 | N1-17: no son ancestros de `main` y un clon nuevo falla (N1:95); N4 §5: el ensayo de TEM-07 «se reproduce» con el `dg.py` actual, pero corrido sobre el SDD de Geometría, no con el guion literal | El ensayo se reproduce en su **resultado**; el **guion** publicado no corre. Las dos cosas son ciertas |
@@ -245,7 +245,7 @@ correr; las rondas editoriales van al final porque los ensayos todavía pueden c
 
 ## 8. Mediciones propias de esta crítica
 
-Todas del 2026-11-01, en hpdev.
+Todas del 2026-11-01, en el equipo de pruebas.
 
 | # | Comando | Salida |
 | --- | --- | --- |

@@ -65,7 +65,7 @@ Crear-Analizar-Sistema-De-Documentador-Tecnico-Guide.md  OUTPUTs
 | --- | --- | --- |
 | Prompt 02 | clon del PO, `PROMPTs/Guides/14-…/02-Ajuste-Coherencia-Reedicion-Documentacion.md` | Pedido y reglas |
 | Plan vigente | `{dir-de-trabajo}/wt/dac-LDD/PROMPTs/Guides/14-…/OUTPUTs/DocsAsCode-Bitacoras/Reedicion-02/00-Plan.md` | Productos, núcleos, territorios |
-| Regla de forma | `/IA/IA.Knowledge.Base/Rules/Rule-Forma-De-Conocimiento.md` (1.3, 596 líneas) | Forma común de una pieza |
+| Regla de forma | `KB-privada/Rules/Rule-Forma-De-Conocimiento.md` (1.3, 596 líneas) | Forma común de una pieza |
 | Ejemplar 1 | `IA.Knowledge.Base/Knowledges/Knowledge-Logica-De-Decision.md` (362 líneas) | Pieza con Índice y §0–§10 |
 | Ejemplar 2 | `IA.Knowledge.Base/Knowledges/Knowledge-Release-Y-Despliegue-Versionado.md` (647 líneas) | Invariantes, apéndice por destino, condiciones de aplicabilidad |
 | Ejemplar 3 | `IA.Knowledge.Base/Knowledges/Knowledge-Indexing.md` (321 líneas) | Pieza de construcción con variables y resultado esperado |
@@ -234,15 +234,15 @@ Si se trasladan tal cual, el conocimiento queda atado a este laboratorio:
 
 | Dónde | Texto | Qué es en realidad |
 | --- | --- | --- |
-| `99-Anexos/Como-Decidir.md:82` | F1 «no corre en el runner que fija el caso (`[self-hosted, i7infra-dev]`)» | Parámetro: el runner que fija cada proyecto |
+| `99-Anexos/Como-Decidir.md:82` | F1 «no corre en el runner que fija el caso (`[self-hosted, {runner-anterior-del-cuerpo}]`)» | Parámetro: el runner que fija cada proyecto |
 | `99-Anexos/Como-Decidir.md:84` | F3 «nombra un repositorio privado (se usa su alias)» | Invariante I-09, no un filtro del caso |
 | `99-Anexos/Como-Decidir.md:89` | F8 «no aplica el Profile de guía de estudio» | Parámetro: sólo para cuerpos formativos (escenario 1) |
-| `00-Marco.md` §1, fila «Runner» | `[self-hosted, i7infra-dev]` | Parámetro (D-09) |
+| `00-Marco.md` §1, fila «Runner» | `[self-hosted, {runner-anterior-del-cuerpo}]` | Parámetro (D-09) |
 | `99-Anexos/Como-Decidir.md:74-76` | Pesos 0,15 y 0,10 | Valor por defecto razonado: se fija antes de puntuar en cada proyecto |
 | `00-Marco.md:171` | Castellano rioplatense con voseo | Parámetro de idioma y estilo (D-16) |
 
 Esa etiqueta de runner es la de todos los workflows del repo (`grep -n runs-on .github/workflows/*.yml`: los cuatro
-dicen `[self-hosted, i7infra-dev]`). Es dato de Lab-Documentos, no norma DocsAsCode.
+dicen `[self-hosted, {runner-anterior-del-cuerpo}]`). Es dato de Lab-Documentos, no norma DocsAsCode.
 
 ## 5. Propuesta de forma
 
@@ -419,7 +419,7 @@ flowchart LR
 1. **Oráculo antes.** Para cada caso, un agente distinto del que corre escribe la respuesta esperada a D-01…D-17,
    con evidencia, y se guarda su `sha256sum`. Si un valor del oráculo no se puede fijar, la decisión queda «sin
    oráculo» y no cuenta para la coincidencia. Es la misma regla de «pesos fijados antes» de `Como-Decidir.md:74-76`.
-2. **Corrida ciega.** Un subagente nuevo, sin memoria ni carta con contexto del laboratorio, corre en hpdev en un
+2. **Corrida ciega.** Un subagente nuevo, sin memoria ni carta con contexto del laboratorio, corre en el equipo de pruebas en un
    contenedor o worktree que tiene sólo: el archivo del conocimiento; el repo del caso en su SHA; y la plantilla A-01
    vacía. Ve LD sólo en C0, y como objeto: puede leer el proyecto, pero no el cuerpo SDEI. En C1–C3 no puede leer LD
    ni LDD.

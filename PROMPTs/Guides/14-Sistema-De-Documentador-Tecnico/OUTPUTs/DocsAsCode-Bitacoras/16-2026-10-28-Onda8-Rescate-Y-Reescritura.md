@@ -1,7 +1,7 @@
 ---
 doc_id: DB16
 doc_type: bitacora-fase
-title: Onda 8 de E1 — compuerta E1-G, caída y rescate de i7infra, clase H, ia-db v4.2, reescritura de la historia y repin (2026-10-28 a 2026-11-01)
+title: Onda 8 de E1 — compuerta E1-G, caída y rescate de {equipo-anterior}, clase H, ia-db v4.2, reescritura de la historia y repin (2026-10-28 a 2026-11-01)
 status: cerrada
 origin: agent
 confidence: alta en los merges (merged_at y merge_commit_sha de la API de GitHub, más la equivalencia por número de PR en git log de la historia nueva, consultados el 2026-11-01); alta en los folios citados (leídos en {dir-de-trabajo}/wt/dac-LDD); media en las lecciones, que son lectura del bitacorista
@@ -16,7 +16,7 @@ traces: [DB15, EXP0002-F240, EXP0002-F245, EXP0002-F257, EXP0002-F258, EXP0002-F
 
 1. [Definiciones](#1-definiciones)
 2. [Qué pasó](#2-qué-pasó)
-   1. [Compuerta E1-G y caída de i7infra (2026-10-28)](#21-compuerta-e1-g-y-caída-de-i7infra-2026-10-28)
+   1. [Compuerta E1-G y caída de {equipo-anterior} (2026-10-28)](#21-compuerta-e1-g-y-caída-de-equipo-anterior-2026-10-28)
    2. [Mesa de recuperación y rescate (2026-10-28 y 29)](#22-mesa-de-recuperación-y-rescate-2026-10-28-y-29)
    3. [Clase H e ia-db v4.2 (2026-10-29)](#23-clase-h-e-ia-db-v42-2026-10-29)
    4. [Reescritura de la historia y repin (2026-10-29)](#24-reescritura-de-la-historia-y-repin-2026-10-29)
@@ -31,7 +31,7 @@ traces: [DB15, EXP0002-F240, EXP0002-F245, EXP0002-F257, EXP0002-F258, EXP0002-F
 
 - **Onda 8**: la compuerta E1-G del escalón 1 (N10 §14). El `245` la resolvió INSUFICIENTE, y eso abrió una vuelta:
   E1-R (reparaciones) y E1-G2 (nueva compuerta, resolución en el `265`).
-- **i7infra / hpdev**: los dos equipos de trabajo. i7infra era el principal hasta su caída. hpdev quedó como principal
+- **{equipo-anterior} / {equipo-de-pruebas}**: los dos equipos de trabajo. {equipo-anterior} era el principal hasta su caída. {equipo-de-pruebas} quedó como principal
   de esta línea hasta el `265` (`257` D15).
 - **Clase H / clase P**: un PR de clase H toca normas, workflows o etiquetas y espera al PO. Uno de clase P es una
   reparación que un agente puede fusionar por conformación automática.
@@ -43,9 +43,9 @@ traces: [DB15, EXP0002-F240, EXP0002-F245, EXP0002-F257, EXP0002-F258, EXP0002-F
 
 ```mermaid
 flowchart TD
-  A["2026-10-28 · i7infra pierde la red (00:50 −03)"] --> B["hpdev: compuerta E1-G · 245 INSUFICIENTE"]
+  A["2026-10-28 · {equipo-anterior} pierde la red (00:50 −03)"] --> B["{equipo-de-pruebas}: compuerta E1-G · 245 INSUFICIENTE"]
   B --> C["Vuelta E1: acta 250, corrigendas 251 a 256"]
-  A --> D["i7infra vuelve sin apagarse · trabajo sin publicar"]
+  A --> D["{equipo-anterior} vuelve sin apagarse · trabajo sin publicar"]
   C --> E["Acta 257 · mesa de recuperación"]
   D --> E
   E --> F["2026-10-29 · LDD #36 rescate (258) · LDD #39 corrigenda 259"]
@@ -56,11 +56,11 @@ flowchart TD
   J --> K["2026-11-01 · folio 261 · bitácora 16 · reedición prompt 02"]
 ```
 
-### 2.1 Compuerta E1-G y caída de i7infra (2026-10-28)
+### 2.1 Compuerta E1-G y caída de {equipo-anterior} (2026-10-28)
 
-- La sesión de i7infra corrió la verificación E1-G y escribió el `290-compuerta-e1.md` («PROCEDE CON RESERVA»). Cerca
-  de las 00:50 −03, i7infra perdió la red sin apagarse (`258:34-35`; `257:45`).
-- hpdev dio lo de i7infra por perdido y trabajó todo el día:
+- La sesión de {equipo-anterior} corrió la verificación E1-G y escribió el `290-compuerta-e1.md` («PROCEDE CON RESERVA»). Cerca
+  de las 00:50 −03, {equipo-anterior} perdió la red sin apagarse (`258:34-35`; `257:45`).
+- {equipo-de-pruebas} dio lo de {equipo-anterior} por perdido y trabajó todo el día:
   - `240`: constancia de la caída.
   - `245`: resolución de E1-G, **INSUFICIENTE, una sola vuelta**.
   - `249`: providencia de estado.
@@ -70,16 +70,16 @@ flowchart TD
 
 ### 2.2 Mesa de recuperación y rescate (2026-10-28 y 29)
 
-- i7infra volvió a la noche con el trabajo de E1 en su árbol, sin publicar. No había commits del expediente sólo en
-  i7infra (`258:34-37`).
-- El mandato del PO fue «toma como base i7infra, en esto estaba mejor que lo que tenia aquí» (`258:39-40`).
+- {equipo-anterior} volvió a la noche con el trabajo de E1 en su árbol, sin publicar. No había commits del expediente sólo en
+  {equipo-anterior} (`258:34-37`).
+- El mandato del PO fue «toma como base {equipo-anterior}, en esto estaba mejor que lo que tenia aquí» (`258:39-40`).
 - La mesa de recuperación falló en el acta `257`:
   - P1 queda como columna.
   - Ningún folio fusionado se edita (D04).
   - Rige el `245`: el `290` entra sustituido (D03).
   - Los PR H se ajustan con merge, nunca con rebase (D06).
 - **LDD #36** (merge nuevo `0bb43b7`, 2026-10-29 12:07 −03) metió el rescate como archivos nuevos:
-  - los 11 folios de i7infra;
+  - los 11 folios de {equipo-anterior};
   - su evidencia;
   - las bitácoras 00 y 03–15 de esta carpeta;
   - el acta `257` y la constancia `258`, con la tabla de folios por nombre completo.
@@ -92,7 +92,7 @@ flowchart TD
   Concept) y las menciones de `GUIA-INDICE` en 00 y 10. Según el mensaje de `c3bf57c`, «los demás índices conservan su
   corte hasta cerrar la vuelta E1-R». U34 queda **parcial**.
 - **Delegación del PO** (respuesta literal en el `261` §2): «busca el mejor camino que tome como base el diseño hecho
-  en i7infra […] y arma una solución definitiva». Con eso se resolvió el `255` §7:
+  en {equipo-anterior} […] y arma una solución definitiva». Con eso se resolvió el `255` §7:
   - política de etiquetas P-ET-1 a P-ET-6;
   - T-B: tag recreado y anotado;
   - O-A: `owner:` es un rol, nunca una cuenta.
@@ -153,7 +153,7 @@ el `merge_commit_sha` que todavía devuelve la API (historia vieja). Horas en �
 | LDD #29 | Acta 250 y corrigenda 256 | 2026-10-28 13:22 | `c86654f` | `009d266` |
 | LDD #30 | Folios 251 a 254 | 2026-10-28 13:41 | `7ea9c52` | `6ed5f91` |
 | LDD #31 | U28: redacción F4 a F8 | 2026-10-28 13:52 | `07979e1` | `3e6f266` |
-| LDD #36 | Rescate de i7infra, 257 y 258 | 2026-10-29 12:07 | `0bb43b7` | `5dadc00` |
+| LDD #36 | Rescate de {equipo-anterior}, 257 y 258 | 2026-10-29 12:07 | `0bb43b7` | `5dadc00` |
 | LDD #37 | ia-db v4.2 (U34 parcial) | 2026-10-29 18:05 | `6a784fd` | `be3a133` |
 | LDD #39 | Corrigenda 259 | 2026-10-29 19:12 | `2ef8fbf` | `85d4220` |
 | LD #32 | H: `AGENTS.md` (U13) | 2026-10-29 22:38 | `9f6c3fb` | `48cfbb3` |
@@ -190,7 +190,7 @@ Comprobación: `git merge-base --is-ancestor <viejo> origin/main` da falso para 
 
 | # | Lección | Por qué importa |
 |---|---|---|
-| L1 | Lo que no se publica no existe para la otra máquina. La pérdida de i7infra fue de visibilidad, no de datos | hpdev rehízo durante un día cosas que estaban hechas (`259` §1). Publicar por unidad, aunque sea en rama, achica esa ventana |
+| L1 | Lo que no se publica no existe para la otra máquina. La pérdida de {equipo-anterior} fue de visibilidad, no de datos | {equipo-de-pruebas} rehízo durante un día cosas que estaban hechas (`259` §1). Publicar por unidad, aunque sea en rama, achica esa ventana |
 | L2 | Una decisión que sirve de fundamento a otras («No reescribir») se revierte con un folio que diga qué fundamento cambia, no con ediciones | Las decisiones `257` D02 y D06 siguen en pie con otro fundamento (`261` §8); editarlas habría roto la regla de `257` D04 |
 | L3 | Un pin por SHA no sobrevive a una reescritura: el repin va en el mismo turno que el force-push, y se mide con árboles idénticos | LDD #41 entró cinco minutos después del force-push y la CI quedó verde |
 | L4 | Los controles que exigen «ancestro de main» (U30, U32) se rompen con los SHA viejos | Hay que citar el par viejo/nuevo (`261` §7) |
@@ -206,7 +206,7 @@ Comprobación: `git merge-base --is-ancestor <viejo> origin/main` da falso para 
 | BIT-9 | `257` D12 preveía dos entradas, «16-Onda8-E1-G» y «17-Caida-i7infra-E1-R». Esta entrada junta las dos, y el número 17 pasa a la reedición del prompt 02 | Desvío declarado. El addendum a `OUTPUTs/Reanudar.md` (U35) sigue pendiente |
 | BIT-10 | `refs/pull/*` de GitHub conserva copias de la historia vieja (`051:43-45`) | Abierto · decide el PO (pedido a GitHub Support) |
 | BIT-11 | `base_commit` de la ia-db (`fe10086`) y los SHA de la carátula (`5d5c2b4`, `8da0cd9`) son de la historia vieja | Se leen por §4. La ia-db se actualiza en el reindexado de cierre (U34) |
-| BIT-5 | Credencial local `h.cfg` en i7infra (PE-10) | Pendiente de verificación del PO (K50-I7, `257` D08). No se comprueba desde esta línea: i7infra está en sólo lectura y no se toca |
+| BIT-5 | Credencial local `h.cfg` en {equipo-anterior} (PE-10) | Pendiente de verificación del PO (K50-I7, `257` D08). No se comprueba desde esta línea: {equipo-anterior} está en sólo lectura y no se toca |
 
 ## 7. Efecto sobre el punto de continuación
 

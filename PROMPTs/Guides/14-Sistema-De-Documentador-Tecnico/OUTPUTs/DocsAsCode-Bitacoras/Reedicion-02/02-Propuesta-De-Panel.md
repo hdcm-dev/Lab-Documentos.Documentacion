@@ -60,7 +60,7 @@ Consecuencias de la lectura que ordenan esta propuesta:
 | Pieza | Literal | Canal y fecha | Huella SHA-256 |
 | --- | --- | --- | --- |
 | Prompt 02 | El archivo entero, 104 líneas (`wc -l`) | Archivo del PO, sin versionar, clon `…/Lab-Documentos.Documentacion/PROMPTs/Guides/14-Sistema-De-Documentador-Tecnico/02-Ajuste-Coherencia-Reedicion-Documentacion.md` | `da388e9dc72c2ce0d379f65fd1c5a5f8048f9b26694b056af60a329d44f74b37` (`sha256sum` del archivo, 2026-11-01) |
-| Pedido del chat | «bueno en función de lo que tenemos, ejecuta lo siguiente […] pero tenes que sumar los ajustes de coherencias que indicas, pruebas en hpdev o donde haya recursos disponibles, tenes que coordinar con los agentes lanzados en la sesión `FRAMEWORK MAUI` […] así que coordina con dischos agentes para que no se pisen con los PR, por ahi revisen como pueden trabajar en paralelo sin interferirse mutuamente y generar conflictos - y busquen el mejor camino, tal vez deberian armonizar las ramas e instanciar una clon del repo en paralelo como estrategia de trabajo. espues que coordines con los subagentes de `FRAMEWORK MAUI` arma el plan y ponelo en marcha» | Chat de la sesión, 2026-11-01, relayado por el arnés | `a824d94906e65e7ed3a9e140b6ecca1864cb04e2da42447feaa95ea6ee6802bb` (texto completo tal como llegó, en el scratchpad: `{dir-de-trabajo}/scratchpad/pedido-chat-2026-11-01.txt`) |
+| Pedido del chat | «bueno en función de lo que tenemos, ejecuta lo siguiente […] pero tenes que sumar los ajustes de coherencias que indicas, pruebas en el equipo de pruebas o donde haya recursos disponibles, tenes que coordinar con los agentes lanzados en la sesión `FRAMEWORK MAUI` […] así que coordina con dischos agentes para que no se pisen con los PR, por ahi revisen como pueden trabajar en paralelo sin interferirse mutuamente y generar conflictos - y busquen el mejor camino, tal vez deberian armonizar las ramas e instanciar una clon del repo en paralelo como estrategia de trabajo. espues que coordines con los subagentes de `FRAMEWORK MAUI` arma el plan y ponelo en marcha» | Chat de la sesión, 2026-11-01, relayado por el arnés | `a824d94906e65e7ed3a9e140b6ecca1864cb04e2da42447feaa95ea6ee6802bb` (texto completo tal como llegó, en el scratchpad: `{dir-de-trabajo}/scratchpad/pedido-chat-2026-11-01.txt`) |
 
 El pedido del chat responde a un mensaje anterior de la sesión que ofrecía escribir la bitácora 16 de la onda 8 y
 actualizar el índice. «Los ajustes de coherencias que indicás» remite a ese mensaje (Plan §1 lo registra igual).
@@ -103,7 +103,7 @@ Clases de cada frase según Mesa-De-Expertos-A-Pedido §3.1: incógnita, dato, r
 | # | Frase | Clase | Origen |
 | --- | --- | --- | --- |
 | E-25 | «sumar los ajustes de coherencias que indicas» | Requisito | Chat del 2026-11-01; remite a la onda 8 sin bitácora, índice y pendientes ya resueltos (Plan §1) |
-| E-26 | «pruebas en hpdev o donde haya recursos disponibles» | Requisito (lugar de las pruebas) | Chat |
+| E-26 | «pruebas en el equipo de pruebas o donde haya recursos disponibles» | Requisito (lugar de las pruebas) | Chat |
 | E-27 | Coordinar con FRAMEWORK MAUI para que no se pisen los PR | Requisito | Chat |
 | E-28 | «tal vez deberian armonizar las ramas e instanciar una clon del repo en paralelo» | **Deseable** | Chat («tal vez») |
 | E-29 | «arma el plan y ponelo en marcha» | Requisito | Chat |
@@ -161,7 +161,7 @@ autocontenido, no delta y con índice que abre con sus fundamentos y suma refere
 [E-10, E-12, E-14, E-21, E-24], revisado como libro en seis intervenciones [E-11], acompañado de un conocimiento de
 especificación que alguien sin contexto pueda aplicar [E-03, E-13] y cuya efectividad se pruebe aplicándolo a
 Geometría y al servicio privado sin exponer a este en lo público [E-04, E-06], con toda afirmación respaldada por
-evidencia [E-23], las pruebas corridas en hpdev [E-26] y los PR coordinados con FRAMEWORK MAUI [E-27], sumando los
+evidencia [E-23], las pruebas corridas en el equipo de pruebas [E-26] y los PR coordinados con FRAMEWORK MAUI [E-27], sumando los
 ajustes de coherencia de la corrida anterior [E-25].
 
 Fuera del objetivo, como deseables: enriquecer los ejemplos con material de Geometría (E-05) y armonizar las ramas
@@ -239,7 +239,7 @@ Versiones tomadas con `grep -m1 '^\*\*Versión'` de cada documento.
 | Logica-De-Decision | 1.0 | Decisiones de la mesa | Criterios de decisión pedidos (E-18) |
 | Indexing | 2.1 | ia-db de LDD | Rule-Indexing del RuleSet (N2 §2.2) |
 | Icono-Y-Ancla | — | Glosario y definiciones del libro | Su Tema es «entregar una definición de modo que quien la lee pueda operar con ella» |
-| Turnos-De-Recursos-Compartidos-En-Un-Host | 1.1 (condicional) | Pruebas pesadas en hpdev | Supuesto: el runner y los contenedores son compartidos (N4 §9; N7 §2) |
+| Turnos-De-Recursos-Compartidos-En-Un-Host | 1.1 (condicional) | Pruebas pesadas en el equipo de pruebas | Supuesto: el runner y los contenedores son compartidos (N4 §9; N7 §2) |
 | Versionado-Producto-Integral | — (condicional) | Versión del cuerpo y familias de versión del caso privado | Supuesto: un producto multiartefacto (N5 §2, familias sin etiqueta) |
 | Entorno-De-Ejecucion-Del-Agente | — (condicional) | Mensajes de otra sesión a mitad de turno | Supuesto: dos sesiones en los mismos repos (chat, E-27) |
 
@@ -304,7 +304,7 @@ fuentes externas con URL y fecha de consulta o norma con su número; la base es 
 | --- | --- | --- | --- |
 | **Análisis de decisiones** | Por cada pregunta P-xx de §7, criterios (simplicidad, practicidad, escalabilidad, fuente única, paso por la compuerta) y cadena de consecuencias de cada alternativa; además, el camino de compromiso de cada ficha de excepción admitida | Pedido E-16 y E-18; Mesa-De-Expertos-A-Pedido §2.1, paso 6 bis | La norma lo convoca sólo ante una ficha admitida; el pedido lo amplía a todas las preguntas. No emite hallazgos (§4, «Criterio de corte») |
 | Jurado | Dos folios: composición y veredicto | Mesa-De-Expertos-A-Pedido §2.1, pasos 4 y 8 | Vota esta propuesta |
-| Peritos e investigadores | Ensayos: reproducción del conocimiento (N3 §5.6), render del libro (N2 §12.3), P-LECT del tutorial, prueba de ayuda por rol levantada | E-19; §2.2, clase «investigación de un defecto» | Corren en hpdev (E-26), con la guarda de recursos si aplica |
+| Peritos e investigadores | Ensayos: reproducción del conocimiento (N3 §5.6), render del libro (N2 §12.3), P-LECT del tutorial, prueba de ayuda por rol levantada | E-19; §2.2, clase «investigación de un defecto» | Corren en el equipo de pruebas (E-26), con la guarda de recursos si aplica |
 | Quien aplica | Presidencia de la reedición; los **editores** de las seis intervenciones (contenido, académica, estilo, ortotipográfica, diseño editorial, pruebas) | §4, «Quién aplica»; Prompt:42 «que los editores editen» | Nunca un rol del panel. Quien diseña un parche no lo vota (§3.2) |
 | Coordinador y entrevistador | Ver §6.5 | Mesa-Consulta-A-Un-Tercero §1 | Una sola mano en el canal |
 
@@ -355,7 +355,7 @@ Cada pregunta trae las alternativas que sacaron los núcleos. El dictamen respon
 | P-04 | ¿Qué entra en el PR común y cuándo? | A. Un PR por repo con prefijos (`PE` corregido, `KNW` o `LIB` si se eligen), fila de delegación en `CHANGELOG` y dibujado de mermaid en PR-4 (N1-05, N3 M-1, N7 H3, H8). B. A más cambios de `dg.py`: exclusión de carpetas (N1 U4d, N4 §5), precedencia de versión (N4 caso R), IDs locales y versión de IDs en sección (N5 B2-B3). C. Sólo delegación y prefijos; la herramienta va a un expediente propio (clase H, N1 §8 punto 5) |
 | P-09 | ¿Cómo se asienta la delegación del merge del expediente 0003? | Providencia en el expediente y fila de `CHANGELOG` en el PR común (N7 H8). Ampliar el alcance de la delegación del 0002. Conformación manual hasta el cierre |
 | P-10 | ¿Cómo se citan los commits que la reescritura dejó fuera de `main` (`080f158`, `fe10086`)? | SHA nuevo del merge equivalente con el mapa de commits del rescate y número de PR (N1-17: `e3841b6` #19, `6878568` #25). Sólo número de PR. URL de `refs/pull`, que la API todavía sirve (N1-17) |
-| P-11 | ¿Qué se hace con la etiqueta de runner `i7infra-dev`? | Nota en el Marco: etiqueta histórica (N1-35). Parámetro en el conocimiento, sin tocar workflows (N3 §4.4). Renombrarla en LD, LDD y Lab-Geometria y en el runner (N2 H-5; clase H, archivo común) |
+| P-11 | ¿Qué se hace con la etiqueta de runner `{runner-anterior-del-cuerpo}`? | Nota en el Marco: etiqueta histórica (N1-35). Parámetro en el conocimiento, sin tocar workflows (N3 §4.4). Renombrarla en LD, LDD y Lab-Geometria y en el runner (N2 H-5; clase H, archivo común) |
 | P-12 | ¿Cómo se cierran U25 y U26 (evidencia de los ensayos)? | Corrida nueva en `evidencia/E1-R/` y marcas con URL y SHA de LDD antes del libro (N1-18). Sólo URL y SHA en el libro; la corrida, en los ensayos de la fase 4 |
 | P-19 | ¿Hay sitio publicado? | No; ensayo informativo por PR del libro (N7 H4, §6 paso 5). Sitio con MkDocs y slug compatible con GitHub (N7 §3.3), con el riesgo de fin de vida de Material (N6 §5 punto 5). Otro generador citado como ejemplo con fecha (N6) |
 | P-20 | ¿El dibujado de mermaid queda como control local o entra a la CI? | Control local obligatorio antes de cada PR (N7 H3). Paso nuevo de PR-4 en el PR común (N1-25, N7 H3) |
@@ -389,7 +389,7 @@ Cada pregunta trae las alternativas que sacaron los núcleos. El dictamen respon
 | Campo | Valor |
 | --- | --- |
 | LECTURA P0-P3 | **P0**: viola una restricción dura (lo privado expuesto en lo público, un dato falso sobre el ejemplo conductor, un guion publicado que no corre, la compuerta en rojo) o hace imposible el objetivo. **P1**: retrabajo o lectura divergente entre lectores o aplicadores (un término con dos sentidos, dos reglas que se contradicen). **P2**: pérdida acotada (una cita de línea vieja, una referencia sin fecha). **P3**: claridad |
-| RESTRICCIONES DURAS | Regla de documentación (Prompt:79); no inventar y evidencia verificable (Prompt:96-98); alias para lo privado (E-06; `00-Marco.md:170`); territorios y PR coordinados con FRAMEWORK MAUI (E-27; Plan §5); `PROMPTs/` del PO sólo en `OUTPUTs/`; nada se escribe en i7infra; nada se instala en un host sin acuerdo del PO; guarda G1-G4 y merge atado al SHA (N7 §4.2) |
+| RESTRICCIONES DURAS | Regla de documentación (Prompt:79); no inventar y evidencia verificable (Prompt:96-98); alias para lo privado (E-06; `00-Marco.md:170`); territorios y PR coordinados con FRAMEWORK MAUI (E-27; Plan §5); `PROMPTs/` del PO sólo en `OUTPUTs/`; nada se escribe en {equipo-anterior}; nada se instala en un host sin acuerdo del PO; guarda G1-G4 y merge atado al SHA (N7 §4.2) |
 | FUERA DE ALCANCE | `Concepts/Framework-Concept/**` y `PROMPTs/Concepts/**` (FRAMEWORK MAUI); `Guides/IA/Dot-Net-Integration-AI-Layer-Guide` y `PROMPTs/Guides/16-IA-Layer`; el código y la especificación de Geometría y del servicio privado (L-3); el despliegue real de Geometría (N4 §3.7) |
 | MEDIOS | `scripts/ci-local.sh`, `tools/medios/mermaid.sh`, `enlaces_anclas.py`, `verificar.sh` de la mini demo, ensayo MkDocs informativo, barrido de lo privado, API pública de GitHub (N7 §6-§7). Sin observar: render del libro completo, prueba de ayuda por rol levantada |
 | EXPEDIENTE | `Lab-Documentos.Documentacion/PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Expedientes/0003-Reedicion-DocsAsCode-Y-Especificacion/` (falta el folio 001) |
