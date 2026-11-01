@@ -1,0 +1,3 @@
+  COPIA_PLANTADA (cita a la copia del par rojo, no a repo/)	salida/A-01.md:130	README.md:41
+  COPIA_PLANTADA (cita a la copia del par rojo, no a repo/)	salida/inventario/par-rojo-verde-LGD-verificar.txt:5	README.md:41
+citas: 108 (distintas: 90); fallan: 0; ambiguas resueltas: 0

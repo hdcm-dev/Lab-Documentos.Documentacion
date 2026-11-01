@@ -1,0 +1,24 @@
+# Compuerta documental (carril PR). Corre el mismo guion que se corre en local.
+# Bloquea sólo sobre `docs/` (línea de base 0); lo heredado de `SDD/` se mide y avisa.
+# Etiqueta de runner: la que fije el proyecto (D-09, decisión de una persona). La que ya usa
+# `ci.yml` para trabajos sin red propia es `ubuntu-latest`; queda como valor propuesto.
+name: docs-guard
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docs-guard:
+    runs-on: ubuntu-latest   # {etiqueta-runner} de Linux del proyecto; pendiente de D-09
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compuerta sobre docs/ (bloquea)
+        run: bash scripts/docs-guard.sh docs
+      - name: Línea de base de SDD/Docs (avisa)
+        run: bash scripts/docs-guard.sh --linea-de-base SDD/Docs | tail -n 1

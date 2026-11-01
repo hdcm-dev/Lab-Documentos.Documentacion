@@ -1,0 +1,18 @@
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (_vacio AGENTS.md)
+🔍 2 Total (in 0s) ✅ 2 OK 🚫 0 Errors
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+rc[enlaces]=0
+== PR-3 anti-inyección (_vacio AGENTS.md)
+== PR-3 anti-inyeccion: verde (errores=0 avisos=0) AI-1=0 AI-2=0 AI-3=0 AI-4=0 AI-5=0
+rc[ai]=0
+== PR-4 estructura: markdownlint-cli2, mermaid y mermaid-arroba (_vacio AGENTS.md)
+markdownlint-cli2 v0.17.2 (markdownlint v0.37.4)
+Finding: _vacio/**/*.md AGENTS.md
+Linting: 1 file(s)
+Summary: 0 error(s)
+== PR-4 mermaid: verde (bloques=0 invalidos=0)
+== PR-4 mermaid-arroba: verde (errores=0 avisos=0) bloques=0
+rc[estructura]=0
+== PR-5 trazas (_vacio AGENTS.md README.md)
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=0 resueltas=0 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc[trazas]=0

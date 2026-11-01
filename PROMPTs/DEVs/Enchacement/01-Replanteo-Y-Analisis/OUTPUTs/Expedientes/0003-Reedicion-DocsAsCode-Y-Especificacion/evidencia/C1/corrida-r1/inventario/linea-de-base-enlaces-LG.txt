@@ -1,0 +1,14 @@
+LG entero: archivos=1288 enlaces_rotos=5838
+  SDD/Docs/Audit/DoR-Tramo-k-2026-09-12.md:65: ...
+  SDD/Docs/Audit/DoR-Tramo-k-2026-09-12.md:207: ...
+  samples/api/01-basico/README.md:9: ../../../SDD/Docs/Proyectos/GeometriaFactory-Api/08-Calidad-Y-Pruebas/Matriz-Sensado-Deriva.md
+  samples/api/02-intermedio/README.md:9: ../../../SDD/Docs/Proyectos/GeometriaFactory-Api/08-Calidad-Y-Pruebas/Matriz-Sensado-Deriva.md
+  samples/api/03-avanzado/README.md:9: ../../../SDD/Docs/Proyectos/GeometriaFactory-Api/08-Calidad-Y-Pruebas/Matriz-Sensado-Deriva.md
+  samples/contracts/01-basico/README.md:7: ../../../SDD/Docs/Proyectos/GeometriaFactory-Contracts/10-Examples/ejemplo-01-basico.md
+  samples/contracts/01-basico/README.md:9: ../../../SDD/Docs/Proyectos/GeometriaFactory-Contracts/08-Calidad-Y-Pruebas/Matriz-Sensado-Deriva.md
+  samples/contracts/02-intermedio/README.md:7: ../../../SDD/Docs/Proyectos/GeometriaFactory-Contracts/10-Examples/ejemplo-02-intermedio.md
+  samples/contracts/02-intermedio/README.md:9: ../../../SDD/Docs/Proyectos/GeometriaFactory-Contracts/08-Calidad-Y-Pruebas/Matriz-Sensado-Deriva.md
+  samples/contracts/03-avanzado/README.md:7: ../../../SDD/Docs/Proyectos/GeometriaFactory-Contracts/10-Examples/ejemplo-03-avanzado.md
+  samples/contracts/03-avanzado/README.md:9: ../../../SDD/Docs/Proyectos/GeometriaFactory-Contracts/08-Calidad-Y-Pruebas/Matriz-Sensado-Deriva.md
+LG vivo (sin _legacy ni Maquetas): archivos=608 enlaces_rotos=11
+LG SDD/Docs vivo: archivos=560 enlaces_rotos=2

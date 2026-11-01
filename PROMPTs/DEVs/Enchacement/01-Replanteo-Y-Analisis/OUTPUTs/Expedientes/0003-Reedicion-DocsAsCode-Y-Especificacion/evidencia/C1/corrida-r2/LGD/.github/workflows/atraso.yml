@@ -1,0 +1,37 @@
+# Carril programado (A-10): sólo avisa, con un issue. No bloquea: usa red y no depende del PR.
+# Vigila: (1) atraso en commits de la ia-db respecto de Lab-Geometria main, según ia-db/source.lock;
+#         (2) frescura: documentos cuyo last_review supera 365 días (cuando lleven frontmatter).
+name: atraso
+
+on:
+  schedule:
+    - cron: "0 10 * * 1"   # semanal, lunes
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  atraso:
+    runs-on: ubuntu-latest   # {etiqueta-runner} de Linux; pendiente de D-09
+    steps:
+      - uses: actions/checkout@v4
+      - name: Medir atraso de la ia-db
+        id: medir
+        env:
+          REPO_CODIGO: ${{ vars.REPO_CODIGO }}   # {dueño}/Lab-Geometria, definido como variable
+        run: |
+          sha=$(awk '/^sha:/ {print $2}' ia-db/source.lock)
+          git clone --filter=blob:none --no-checkout "https://github.com/${REPO_CODIGO}.git" codigo
+          atraso=$(git -C codigo rev-list --count "${sha}..origin/main")
+          echo "atraso=${atraso}" >> "$GITHUB_OUTPUT"
+          echo "Atraso de la ia-db: ${atraso} commits"
+      - name: Abrir issue si hay atraso
+        if: steps.medir.outputs.atraso != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --title "ia-db atrasada ${{ steps.medir.outputs.atraso }} commits" \
+            --body "ia-db/source.lock fija una revisión que está ${{ steps.medir.outputs.atraso }} commits detrás de main." \
+            --repo "${{ github.repository }}"

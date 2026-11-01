@@ -1,0 +1,15 @@
+# Registro cerrado de prefijos (A-02). PREFIJO ámbito descripción
+# interno: se declara en este repo y bloquea si no resuelve.
+# externo: familia del marco SDD; se resuelve contra el registro del marco en IA.SDD@8c55a1e
+#          (PRODUCT-MANIFEST §1.1, línea 39). Ese registro no está disponible acá: avisa.
+DOC interno documento del sistema documentador (ficha, proceso, esquema, informe)
+RD interno requerimiento documental (RRD)
+NB externo necesidad de negocio
+CU externo caso de uso
+RN externo regla de negocio
+ADR externo decisión de arquitectura
+BT externo tarea de backlog
+US externo historia de usuario
+TC externo caso de prueba
+QG externo puerta de calidad
+AG externo rol de agente del marco

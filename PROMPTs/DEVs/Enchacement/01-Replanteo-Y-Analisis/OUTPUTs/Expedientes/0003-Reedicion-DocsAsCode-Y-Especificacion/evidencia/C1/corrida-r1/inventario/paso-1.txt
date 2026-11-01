@@ -1,0 +1,102 @@
+$ ls repo/ ; ls -a repo/LG repo/LGD | grep .git
+LG
+LGD
+0
+$ git -C repo/LG rev-parse HEAD
+fatal: no es un repositorio git (ni ningún padre en el punto de montaje /)
+$ find repo/LG -type f -not -path '*/.git/*' | wc -l
+1888
+$ find repo/LGD -type f -not -path '*/.git/*' | wc -l
+97
+$ md con/sin frontmatter en LG (primera línea '---')
+md=1288 con_frontmatter=12 sin=1276
+$ md con/sin frontmatter en LGD (primera línea '---')
+md=57 con_frontmatter=0 sin=57
+$ find . -maxdepth 2 -type d (sin .git)
+LG
+LG/.config
+LGD
+LGD/Analisis
+LGD/Analisis/01-Analisis-Contexto-Existente
+LGD/Analisis/02-Definicion-Ideas
+LG/deploy
+LG/deploy/e2e
+LG/.devcontainer
+LGD/.github
+LGD/.github/scripts
+LGD/.github/workflows
+LGD/ia-db
+LGD/ia-db/indexes
+LGD/PROMPTs
+LGD/PROMPTs/Analisis
+LGD/PROMPTs/Features
+LGD/PROMPTs/Fixs
+LGD/PROMPTs/Guides
+LGD/PROMPTs/Indexado
+LGD/PROMPTs/SDD
+LG/.github
+LG/.github/workflows
+LG/samples
+LG/samples/api
+LG/samples/application
+LG/samples/contracts
+LG/samples/domain
+LG/samples/infrastructure
+LG/samples/visor
+LG/samples/web
+LG/scripts
+LG/SDD
+LG/SDD/Docs
+LG/SDD/Expedientes
+LG/SDD/Intake
+LG/SDD/Maquetas
+LG/src
+LG/src/GeometriaFactory.Api
+LG/src/GeometriaFactory.Application
+LG/src/GeometriaFactory.Contracts
+LG/src/GeometriaFactory.Domain
+LG/src/GeometriaFactory.Infrastructure
+LG/src/GeometriaFactory.Web
+LG/tests
+LG/tests/GeometriaFactory.Application.Tests
+LG/tests/GeometriaFactory.Domain.Tests
+LG/tests/GeometriaFactory.E2ETests
+LG/tests/GeometriaFactory.Integration.Tests
+LG/tools
+LG/visor
+LG/visor/src
+LG/visor/verification
+LG/.vscode
+$ ls */.github/workflows */.github/scripts
+LGD/.github/scripts:
+verificar.py
+
+LGD/.github/workflows:
+verificar.yml
+
+LG/.github/workflows:
+ci.yml
+deploy-front-ftp.yml
+e2e.yml
+$ grep -n runs-on|cron
+LGD/.github/workflows/verificar.yml:14:    runs-on: ubuntu-latest
+LG/.github/workflows/ci.yml:47:    runs-on: ubuntu-latest
+LG/.github/workflows/deploy-front-ftp.yml:50:    runs-on: ubuntu-latest
+LG/.github/workflows/e2e.yml:69:    runs-on: [self-hosted, {etiqueta-runner}]
+LG/.github/workflows/e2e.yml:130:    runs-on: ubuntu-latest
+LG/.github/workflows/e2e.yml:149:    runs-on: [self-hosted, {etiqueta-runner}]
+LG/.github/workflows/e2e.yml:209:    runs-on: ubuntu-latest
+$ python3 -I -B LGD/.github/scripts/verificar.py | tail -2
+Enlaces fuera del repositorio, no comprobables acá: 1
+Resultado: 0 errores, 0 avisos
+exit=0
+$ grep -rln {etiqueta-runner} (sin _legacy) | wc -l, por repo [nombre real reemplazado por alias {etiqueta-runner} en la ficha]
+LG 11  LGD 2
+$ find LG LGD -iname "mkdocs*" -o -iname "docfx*" -o -iname "docusaurus*" | wc -l
+0
+$ grep -rln "source.lock\|base_commit" LG LGD | wc -l
+0
+$ find LG LGD -name AGENTS.md
+LG/AGENTS.md
+$ grep -rEln IPv4 repo/LG (md, yml, sh; sin _legacy) | wc -l
+20

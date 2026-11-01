@@ -1,0 +1,47 @@
+Inventario del paso 1 — corrido el 2026-11-01 desde {dir-de-trabajo}/C1-r2/repo
+(sólo lectura; salida recortada)
+
+$ ls repo ; git rev-parse HEAD (en LG y LGD)
+LG  LGD
+fatal: no es un repositorio git  (ambos: la copia no trae .git; SHA no legible)
+
+$ find <r> -type f | wc -l ; huella del árbol (sha256 de sha256sum ordenado)
+LG  1888 archivos  huella a5261c3a64bde8e6
+LGD   97 archivos  huella 61d2b64f609779f5
+
+$ find (maxdepth 3) — carpetas principales
+LG: AGENTS.md README.md changelog.md .github/workflows/{ci,deploy-front-ftp,e2e}.yml SDD/{Docs,Expedientes,Intake,Maquetas}
+    src/ (6 proyectos) visor/ samples/ scripts/ tests/ tools/ deploy/ .devcontainer
+LGD: README.md changelog.md .github/{workflows/verificar.yml,scripts/verificar.py} ia-db/{README.md,indexes/00..12} Analisis/ PROMPTs/
+
+$ Markdown con y sin frontmatter (primera línea '---')
+LG  md=1288 con_frontmatter=12   (5 fuera de _legacy, en SDD/Docs/**/11-Documentacion)
+LGD md=57   con_frontmatter=0
+LG: 679 .md bajo carpetas _legacy
+
+$ grep runs-on en workflows
+LG ci.yml:47 ubuntu-latest ; e2e.yml:69,149 [self-hosted, <runner propio>] ; e2e.yml:130,209 ubuntu-latest ; deploy-front-ftp.yml:50 ubuntu-latest
+LGD verificar.yml:14 ubuntu-latest
+$ grep schedule|cron en workflows -> (vacío): no hay carril programado
+
+$ find mkdocs.yml docfx.json _config.yml docusaurus.config.* llms.txt source.lock _requisitos.md -> (vacío)
+$ grep GenerateDocumentationFile -> LG/Directory.Build.props:26 false ; TreatWarningsAsErrors :18 true
+$ grep AddOpenApi/MapOpenApi -> LG/src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:58, :117 (en tiempo de ejecución)
+
+$ registro de IDs: grep 'registro de prefijos|registro de IDs' en LG/SDD/Docs sin _legacy -> (vacío)
+$ familias de ID en uso (grep -oE '\b[A-Z]{2,4}-[0-9]{5}\b' SDD/Docs sin _legacy, por prefijo)
+CU 6593 · ADR 4271 · RN 3360 · BT 3116 · US 3033 · NB 1925 · TC 1789 · SD 535 · QG 450 · EP 426 · RC 225 · SUP 172 · CMP 143 · VER 142 · EST 133 · AG 89 ...
+
+$ barrido de lo privado (archivos con coincidencias; el patrón de IP también atrapa números de versión)
+LG : {host-de-pruebas} 24 · {ruta-de-usuario} 12 · IPv4-like 28 · nombre del PO 7 · /IA/IA. 0
+LGD: {host-de-pruebas} 2  · {ruta-de-usuario} 2  · IPv4-like 10 · nombre del PO 2 · /IA/IA. 4
+
+$ (cd LGD && python3 -I -B .github/scripts/verificar.py)
+Enlaces fuera del repositorio, no comprobables acá: 1
+Resultado: 0 errores, 0 avisos   exit=0
+
+$ medición de enlaces relativos en LG (fuera de _legacy, fuera de cercos de código)
+enlaces relativos: 6587  rotos: 23  archivos con rotos: 15
+
+$ python3 salida/LG/scripts/docs-guard.py repo/LG/SDD/Docs --solo-avisar  -> linea-de-base-SDD-Docs.txt
+Documentos: 560; errores: 585; avisos: 0   (555 sin frontmatter; 15 campos faltantes)

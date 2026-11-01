@@ -1,0 +1,2 @@
+# Excepciones de la compuerta documental: una huella de 16 hex por línea, con su motivo.
+# Agregar una excepción es de clase H: la aprueba una persona, nunca el agente en su propio PR.
