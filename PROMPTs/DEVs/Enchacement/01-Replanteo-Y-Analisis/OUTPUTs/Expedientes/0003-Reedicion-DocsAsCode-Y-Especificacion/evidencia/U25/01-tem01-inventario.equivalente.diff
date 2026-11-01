@@ -1,0 +1,8 @@
+--- historica/01-salida.txt
++++ 01-tem01-inventario.salida-e3841b6.txt
+@@ -1,4 +1,4 @@
+-commit: 080f158
++commit: e3841b6
+ piezas .md con frontmatter, por doc_type:
+   anexo                  7
+   anexo-referencias      1
