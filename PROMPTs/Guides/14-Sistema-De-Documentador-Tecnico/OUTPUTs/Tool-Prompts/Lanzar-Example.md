@@ -157,7 +157,7 @@ devcontainer. Por defecto el devcontainer se conserva: recrearlo cuesta minutos 
 
 ## Procedencia
 
-Expediente 0003, resolución P-06 (SPLIT) y unidad U26. Es el tool-prompt de
+Expediente 0003, resolución P-06 (SPLIT), §5.6 PR 4. Es el tool-prompt de
 `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/Lanzar-Example.md` de Lab-Documentos
 en el commit `0bed863`, con el mismo procedimiento operativo (pasos 1 a 6, variantes y reglas) y saneado de los datos
 del entorno: la ruta absoluta del espacio de trabajo pasa a la variable `$LD`; los nombres de los túneles del usuario,

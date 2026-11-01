@@ -1,7 +1,7 @@
 # P-06 — Corrida del tool-prompt saneado
 
 Condición de revisión de P-06 (resolución del expediente 0003): «si saneado deja de correr, se descarta (RWs) y el PR
-lo dice». Esta carpeta guarda la corrida que la comprueba, en el PR de U25 y U26.
+lo dice». Esta carpeta guarda la corrida que la comprueba, en el PR 4 de §5.6 (U25 y P-06).
 
 - **Tool-prompt corrido:**
   [`Lanzar-Example.md`](../../../../../../../../Guides/14-Sistema-De-Documentador-Tecnico/OUTPUTs/Tool-Prompts/Lanzar-Example.md),

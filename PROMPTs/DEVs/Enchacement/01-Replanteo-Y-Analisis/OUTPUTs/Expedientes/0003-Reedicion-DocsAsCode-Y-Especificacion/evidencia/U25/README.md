@@ -11,6 +11,11 @@ evidencia, contra el Lab-Documentos actual, y se compara cada salida con la hist
   los guiones 01 a 03 se corrieron también sobre `e3841b6` en un clon temporal (borrado al terminar).
 - **Entorno:** Python 3 del host, `bash`, `curl`, `jq` y `git`; sin credenciales (API pública de GitHub, anónima).
 
+Esta carpeta es U25. U26 (P-12: «las marcas pasan a URL y SHA de `LDD`») no se aplica acá: las marcas son las
+remisiones `evidencia/E1-U4b/…` de `TEM-01`, `TEM-02` y `TEM-03`, que viven en Lab-Documentos, y se reescriben con
+AC-17 en el PR 5 de §5.6. La URL con SHA a la que pasan es la de esta carpeta en el commit que la agregó:
+[`09a4518`](https://github.com/hdcm-dev/Lab-Documentos.Documentacion/tree/09a451867a05e7718d064067e4dc84377e042ffe/PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Expedientes/0003-Reedicion-DocsAsCode-Y-Especificacion/evidencia/U25).
+
 ## Índice
 
 | Guion | Lo cita | Salida vigente | Contra el equivalente | `diff` frente a la histórica | Estado |
@@ -100,9 +105,12 @@ Corre (`rc=0`), pero no reproduce una fila:
 
 ## Qué cambia en las citas
 
-| Cita en el cuerpo | Salida vigente | Acción (P-12 a) |
+Las citas están en Lab-Documentos, otro repositorio, así que la condición P-12 (a) («se corrige la cita en el mismo
+PR») se cumple en el PR 5 de §5.6, que aplica AC-16 y AC-17. Esta tabla le dice a ese PR qué cambiar.
+
+| Cita en el cuerpo | Salida vigente | Acción |
 | --- | --- | --- |
-| `TEM-01`, inventario, «sobre el commit `080f158`» | Equivalente `e3841b6` idéntico; en `0bed863` suma `tema 7` y `proceso 2` | P-10: «PR #19, merge `e3841b6`»; si se cita la vigente, actualizar bloque y lectura |
-| `TEM-02`, RRD, «sobre el commit `080f158`» | Idéntico en `e3841b6`; en `0bed863`, contador nuevo en el resumen | P-10; actualizar la línea de resumen si se cita la vigente |
-| `TEM-03`, ancla, «sobre el commit `080f158`» | Idéntico en `e3841b6`; en `0bed863`, caso 3 con `errores=5` e `id-duplicado` | P-10; corregir el bloque si se cita la vigente |
-| `TEM-01` y `TEM-03`, adopciones del 2026-10-27 | 16 de 17 filas reproducen; P6 Docusaurus no, por la mudanza a `meta/docusaurus` | Rotular la fila Docusaurus «no reproducido» hasta que el guion siga redirecciones; la afirmación de la tabla sigue en pie |
+| `TEM-01`, inventario, «sobre el commit `080f158`» | Equivalente `e3841b6` idéntico; en `0bed863` suma `tema 7` y `proceso 2` | AC-16: «PR #19, merge `e3841b6`» con la nota de P-10. AC-17: la remisión pasa a la URL con SHA de esta carpeta; si se cita la vigente, actualizar bloque y lectura |
+| `TEM-02`, RRD, «sobre el commit `080f158`» | Idéntico en `e3841b6`; en `0bed863`, contador nuevo en el resumen | AC-16: equivalencia de P-10. AC-17: remisión a URL con SHA; actualizar la línea de resumen si se cita la vigente |
+| `TEM-03`, ancla, «sobre el commit `080f158`» | Idéntico en `e3841b6`; en `0bed863`, caso 3 con `errores=5` e `id-duplicado` | AC-16: equivalencia de P-10. AC-17: remisión a URL con SHA; corregir el bloque si se cita la vigente |
+| `TEM-01` y `TEM-03`, adopciones del 2026-10-27 | 16 de 17 filas reproducen; P6 Docusaurus no, por la mudanza a `meta/docusaurus` | AC-17: rotular la fila Docusaurus «no reproducido» hasta que el guion siga redirecciones; la afirmación de la tabla sigue en pie |
