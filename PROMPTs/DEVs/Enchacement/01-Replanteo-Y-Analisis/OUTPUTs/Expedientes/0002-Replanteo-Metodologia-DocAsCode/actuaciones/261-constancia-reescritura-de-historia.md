@@ -57,7 +57,7 @@ Respuesta literal:
 > `/LAB/Lab-Documentos/Lab-Documentos/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion`»
 
 En la misma ronda, sobre los cuatro PR de clase H, el PO respondió: «busca el mejor camino que tome como base el
-diseño hecho en i7infra y capture los avances que hiciste aca - evalua, y arma una solución definitiva - cuida lo que
+diseño hecho en {equipo-anterior} y capture los avances que hiciste aca - evalua, y arma una solución definitiva - cuida lo que
 esta hecho en `/LAB/Lab-Documentos/Lab-Documentos/Concepts/Framework-Concept` y
 `/LAB/Lab-Documentos/Lab-Documentos/Guides/IA/Dot-Net-Integration-AI-Layer-Guide` - porque ahi en esas hay otros
 subagentes trabajando ahora». Es la delegación que resuelve el `255` §7.
@@ -156,7 +156,7 @@ en `{dir-de-trabajo}/wt/dac-LD` después de `git fetch --tags`, el 2026-11-01:
 | --- | --- | --- |
 | `258-constancia-rescate-i7infra.md:101` (§4) | «Ningún folio se renumera: el PO decidió no reescribir» | La regla de no renumerar y de citar por nombre completo **sigue**. Su fundamento ya no es «no reescribir»: la reescritura no tocó el contenido de la punta (§4), así que nombres y números de archivo quedaron iguales |
 | `254-corrigenda-patron-s2.md:141` (§8) | «La historia de `main` no se reescribe: las versiones previas siguen en los commits que la columna «Entró» indica» | La historia se reescribió el 2026-10-29. Los SHA de la columna «Entró» son de la historia vieja (§7) y ya no contienen los valores reales |
-| `257-acta-mesa-recuperacion-i7infra.md:120` (D02), `:124` (D06) y `:216` (§10) | «Decisión del PO de hoy: no reescribir historia»; «nunca rebase ni force-push»; «no se reescribe» | Las decisiones siguen, pero su fundamento cambia: D06 se cumplió (los cuatro PR H entraron por merge, sin rebase, antes del force-push, §3); lo fusionado desde hpdev se conserva en la punta con árbol idéntico (§4) |
+| `257-acta-mesa-recuperacion-i7infra.md:120` (D02), `:124` (D06) y `:216` (§10) | «Decisión del PO de hoy: no reescribir historia»; «nunca rebase ni force-push»; «no se reescribe» | Las decisiones siguen, pero su fundamento cambia: D06 se cumplió (los cuatro PR H entraron por merge, sin rebase, antes del force-push, §3); lo fusionado desde {equipo-de-pruebas} se conserva en la punta con árbol idéntico (§4) |
 | `250-acta-mesa-organizacion-y-vuelta-e1.md:343` (ítem 1 del lote) | Default «No reescribir»; si se reescribe, «después de E1-G2» | El PO decidió reescribir antes de E1-G2 (§2 y §3) |
 | `252-corrigenda-n10-y-caratula.md` | — | La memoria de la sesión y `051:13` dicen que la decisión «No reescribir» quedó asentada en `252` y `258`. En `252` no aparece la palabra: `grep -n -i reescrib` sobre el `252` sale vacío. Lo que el `252` sostiene sobre numeración (§4) ya lo corrigió el `259`, y la reescritura no lo cambia. Se deja constancia de la diferencia, sin corrección |
 

@@ -4,7 +4,7 @@ doc_type: bitacora-nucleo
 title: Núcleo N1 — Coherencia del cuerpo SDEI con sus ejemplos y su demo
 status: borrador
 origin: agent
-confidence: alta en lo medido (grep, dg.py, ci-local.sh, verificar.sh, mermaid.sh y API de GitHub, corridos el 2026-11-01 en hpdev); media en las propuestas, que decide la mesa
+confidence: alta en lo medido (grep, dg.py, ci-local.sh, verificar.sh, mermaid.sh y API de GitHub, corridos el 2026-11-01 en el equipo de pruebas); media en las propuestas, que decide la mesa
 owner: presidencia de la reedición DocsAsCode (expediente 0003), relevamiento del núcleo N1
 last_review: 2026-11-01
 traces: [DB-R02-00, EXP0002-F245, EXP0002-F255, EXP0002-F259, EXP0002-F290, DB00]
@@ -36,7 +36,7 @@ traces: [DB-R02-00, EXP0002-F245, EXP0002-F255, EXP0002-F259, EXP0002-F290, DB00
 
 ## 2. Pruebas corridas
 
-Todas en hpdev, el 2026-11-01, sobre `{dir-de-trabajo}/wt/dac-LD`.
+Todas en el equipo de pruebas, el 2026-11-01, sobre `{dir-de-trabajo}/wt/dac-LD`.
 
 | Prueba | Comando | Resultado |
 | --- | --- | --- |
@@ -47,7 +47,7 @@ Todas en hpdev, el 2026-11-01, sobre `{dir-de-trabajo}/wt/dac-LD`.
 | Enlaces y anclas | script propio con slug de GitHub sobre todo `SDEI/**/*.md` | 3 rotos, los tres deliberados y excluidos en `scripts/docs-guard.lychee.toml:5-10`; 0 anclas muertas |
 | Mermaid dibujado | `tools/medios/mermaid.sh` (contenedor `minlag/mermaid-cli:11.4.2`) sobre los 19 archivos con diagramas, sin la guía vieja | **rc=1**: 21 diagramas, 2 «Unsupported markdown: link» (N1-25) |
 | Reproducibilidad de un guion del cuerpo | clon nuevo de LD + `git checkout --quiet 080f158` (el guion de `TEM-07:200`) | **falla**: `error: ruta especificada '080f158' no concordó…`; `fatal: Not a valid object name` (N1-17) |
-| Runner real | `GET /repos/hdcm-dev/Lab-Documentos/actions/runs/41327937941/jobs` | job `docs-guard` en `runner_name: hpdev-runner-dev`, labels `['self-hosted','i7infra-dev']` |
+| Runner real | `GET /repos/hdcm-dev/Lab-Documentos/actions/runs/41327937941/jobs` | job `docs-guard` en `runner_name: {runner-del-cuerpo}`, labels `['self-hosted','{runner-anterior-del-cuerpo}']` |
 
 ## 3. Estado de la guía vieja
 
@@ -110,7 +110,7 @@ ejemplo conductor), **media** (un lector o un agente llega a una respuesta disti
 | N1-32 | `Examples/Lanzar-Example.md:18,33,51,59,92,101` | c, d | Ruta del workspace en lo versionado (aviso `cita-linea`); `@devcontainers/cli@latest` y `cloudflared:latest` sin fijar (contra `TEM-06:288` y PE-11); remite a la «sección 7» de la guía obsoleta; nombra túneles del usuario (`jump-host-tunnel-*`); es un tool-prompt con `doc_type: guia-practica` en LD, cuando el Mapa ubica los prompts (CL-09) en el repositorio hermano | baja | Reescribir como guía práctica con versiones fijas y sin datos del entorno, o moverlo a LDD |
 | N1-33 | `MovilidadUrbana-Mini-Demo/README.md:383-392`; `Ejercicios.md` (pie); `Como-Intervenir-Lab-Documentos.md:1-35` | d | Sin «anterior/siguiente» en el tutorial ni en Ejercicios; la instancia no tiene índice ni navegación. Es la reparación G-g del 245 §10, abierta | media | Pie de navegación uniforme y un índice en la instancia |
 | N1-34 | `00-Marco.md:78`; `TEM-03:61,143`; `Sistema-Documentador-Tecnico-Guide.md:9` | c | Aprobado en el 255 §7 (P-ET-1: una etiqueta por versión, no por compuerta; O-A: `owner` es un rol), sin aplicar: las tres frases siguen diciendo «etiqueta por compuerta» y la guía vieja lleva en `owner` la cuenta pública del PO. T-B sí se aplicó: `git cat-file -t docs-guard-v1.0.0` = `tag` | media | Reparación P de 255 §6, filas 1 y 3 |
-| N1-35 | `00-Marco.md:52,135`; `TEM-06:209`; `Lista-De-Verificacion.md:149`; `Como-Decidir.md` F1 | f | La etiqueta `[self-hosted, i7infra-dev]` es correcta, pero hoy la sirve el runner `hpdev-runner-dev` (§2). El Marco ya dice «no es una dirección»; el nombre igual induce a pensar en un host | baja | Una nota en el Marco: etiqueta histórica, el host lo decide la organización |
+| N1-35 | `00-Marco.md:52,135`; `TEM-06:209`; `Lista-De-Verificacion.md:149`; `Como-Decidir.md` F1 | f | La etiqueta `[self-hosted, {runner-anterior-del-cuerpo}]` es correcta, pero hoy la sirve el runner `{runner-del-cuerpo}` (§2). El Marco ya dice «no es una dirección»; el nombre igual induce a pensar en un host | baja | Una nota en el Marco: etiqueta histórica, el host lo decide la organización |
 | N1-36 | LDD `00-Indice.md` §4 y §6; `EXP/actuaciones/290-compuerta-e1.md:5` | c, d | §4 lista folios hasta el 270 (faltan 240, 245, 249–259 y 290). §6 sigue en «Sigue: E1 onda 8 — compuerta E1-G … Al reanudar, despachar desde aquí (onda 8)», y lista como pendientes `traces: []`, H-1 a H-3 y #28, ya resueltos. El 290 dice `status: vigente` aunque el 259 §5 dice que «el `290` no rige» | media | P7: bitácora 16, índice al día y una corrigenda que pase el 290 a sustituido |
 
 ## 5. Pendientes heredados del expediente 0002 y su estado real

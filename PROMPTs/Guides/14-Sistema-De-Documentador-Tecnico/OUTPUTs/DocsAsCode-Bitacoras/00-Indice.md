@@ -4,7 +4,7 @@ doc_type: bitacora-indice
 title: Índice vivo de la corrida DocAsCode
 status: vigente
 origin: agent
-confidence: alta en fases 1–2 (reconstruidas de B00 y de la carátula del expediente 0002); alta en Asiento (folio 100 leído); alta en fases 10–11 (retornos de verificación); alta en fase 12 (retornos de U3 y U4a, merges comprobados en origin/main); alta en fase 13 (retornos de U4b–U4e, merges #21–#24 comprobados en origin/main); alta en fase 14 (retorno de U4f, merge #25 comprobado en origin/main); alta en fase 15 (retorno de U5, merge Documentacion#22 comprobado en origin/main); alta en fase 16 (merges por API de GitHub y git log de la historia nueva, folios 240–261 leídos, 2026-11-01); media en el estado de §5 donde no se pudo medir sin tocar i7infra (BIT-5)
+confidence: alta en fases 1–2 (reconstruidas de B00 y de la carátula del expediente 0002); alta en Asiento (folio 100 leído); alta en fases 10–11 (retornos de verificación); alta en fase 12 (retornos de U3 y U4a, merges comprobados en origin/main); alta en fase 13 (retornos de U4b–U4e, merges #21–#24 comprobados en origin/main); alta en fase 14 (retorno de U4f, merge #25 comprobado en origin/main); alta en fase 15 (retorno de U5, merge Documentacion#22 comprobado en origin/main); alta en fase 16 (merges por API de GitHub y git log de la historia nueva, folios 240–261 leídos, 2026-11-01); media en el estado de §5 donde no se pudo medir sin tocar {equipo-anterior} (BIT-5)
 owner: bitacorista de la corrida DocAsCode
 last_review: 2026-11-01
 audience: [PO, presidencia, mesa, agentes de implementación]
@@ -54,7 +54,7 @@ Desde el ciclo 2, por pedido del PO (folio 100), el seguimiento por fase vive en
 | 13 | E1 onda 5 (U4b‖U4c‖U4d‖U4e) | E1 | 2026-10-27 | Cerrada | Lab-Documentos#21 (`4fa998e`, U4e), #22 (`6832a75`, U4b), #23 (`2fdf859`, U4d), #24 (`ecb6342`, U4c); folios 218-e1-u4b, 250-e1-u4e, 251-e1-u4d, 252-e1-u4c |
 | 14 | E1 onda 6 (U4f) | E1 | 2026-10-27 | Cerrada | Lab-Documentos#25 (`fe10086`, GUIA obsoleta con tabla de destinos, `dg.py url-fecha`); folio 260-e1-u4f |
 | 15 | E1 onda 7 (U5) | E1 | 2026-10-27 | Cerrada | Lab-Documentos.Documentacion#22 (`e0e520f`, ia-db v4.1, `base_commit` `fe10086`); folio 270-e1-u5 |
-| 16 | E1 onda 8: compuerta E1-G, caída y rescate de i7infra, clase H, ia-db v4.2, reescritura de la historia y repin | E1 (presidencia, mesa de recuperación `257`) | 2026-10-28 a 2026-10-29 | Cerrada: E1-G **INSUFICIENTE**, rige `245`; vuelta E1-R abierta | LDD #27, #29–#31, #36, #37, #39, #32, #33, #41 y LD #26–#28, #30, #32, #31 (SHA en `16` §3); folios 240–259 y 261; mains nuevos LD `bf86669` y LDD `15d8452` |
+| 16 | E1 onda 8: compuerta E1-G, caída y rescate de {equipo-anterior}, clase H, ia-db v4.2, reescritura de la historia y repin | E1 (presidencia, mesa de recuperación `257`) | 2026-10-28 a 2026-10-29 | Cerrada: E1-G **INSUFICIENTE**, rige `245`; vuelta E1-R abierta | LDD #27, #29–#31, #36, #37, #39, #32, #33, #41 y LD #26–#28, #30, #32, #31 (SHA en `16` §3); folios 240–259 y 261; mains nuevos LD `bf86669` y LDD `15d8452` |
 | 17 | Reedición del prompt 02 de la Guía 14 (libro DocsAsCode, conocimiento de especificación, ajustes de coherencia) | Reedición DocsAsCode (expediente 0003) | 2026-11-01 | En curso: ver [`Reedicion-02/`](Reedicion-02/00-Plan.md) | Expediente 0003; bitácoras de `Reedicion-02/` |
 
 Los SHA de las filas 7 a 15 (y los de `03`–`15`) son de la historia anterior a la reescritura del 2026-10-29 y no se
@@ -93,7 +93,7 @@ nombre completo (`258` §4):
 
 | Folio | Qué es |
 |---|---|
-| `240-constancia-caida-i7infra-y-reconciliacion.md` | Constancia de la caída de i7infra |
+| `240-constancia-caida-i7infra-y-reconciliacion.md` | Constancia de la caída de {equipo-anterior} |
 | `245-resolucion-compuerta-e1.md` | Resolución de E1-G: INSUFICIENTE, una sola vuelta (**rige**) |
 | `249-providencia-estado.md` | Estado al 2026-10-28 |
 | `250-acta-mesa-organizacion-y-vuelta-e1.md` | Acta de la mesa de organización y vuelta de E1 |
@@ -107,7 +107,7 @@ nombre completo (`258` §4):
 | `258-constancia-rescate-i7infra.md` | Constancia del rescate y tabla de folios con nombre completo |
 | `259-corrigenda-rescate-i7infra.md` | Corrigenda única por el rescate |
 | `261-constancia-reescritura-de-historia.md` | Constancia de la reescritura de la historia, reversión de «No reescribir» y repin |
-| `290-compuerta-e1.md` | Compuerta E1-G de i7infra: antecedente, **sustituida** (`258` §5) |
+| `290-compuerta-e1.md` | Compuerta E1-G de {equipo-anterior}: antecedente, **sustituida** (`258` §5) |
 
 Reservados o libres: `260-registro-e1r.md` (U32), `262` y `264` libres, `263` y `265` (U43). Fuente: `ls
 EXP/actuaciones/` en `{dir-de-trabajo}/wt/dac-LDD` el 2026-11-01.
@@ -123,7 +123,7 @@ EXP/actuaciones/` en `{dir-de-trabajo}/wt/dac-LDD` el 2026-11-01.
 | 3 | Punto «2.» de la respuesta del PO llegó vacío | Observación O-1 del folio 100 |
 | 5 | Lectura del lote por la presidencia (E-16) no confirmada por el PO | Abierto: avisar al PO |
 | 6 | L11 (forks, permisos, runner group) pendiente como acto del PO | Abierto; guardas en workflows |
-| 7 | E-F1: cola del runner único i7infra-dev (hasta 15m28s) | Asumido. Desde el 2026-10-28 la línea corre en hpdev (`257` D15) |
+| 7 | E-F1: cola del runner único {runner-anterior-del-cuerpo} (hasta 15m28s) | Asumido. Desde el 2026-10-28 la línea corre en el equipo de pruebas (`257` D15) |
 | 7 | LD-23: `ci.yml` de Lab-E2E.WebBlazor en `ubuntu-latest`, actions por etiqueta | Anotado; fuera de alcance de U6 |
 | 8 | Corrida anterior de la onda 2 cortada; U0b y U1 retomadas sin duplicar | Cerrado |
 | 8 | PR de par #18 apilado sobre la rama de #17, cerrado al borrarla; re-runs `startup_failure` | Cerrado: verde por `workflow_dispatch` (LD-05 de U0b) |
@@ -137,7 +137,7 @@ EXP/actuaciones/` en `{dir-de-trabajo}/wt/dac-LDD` el 2026-11-01.
 | 12 | E-F1 repite: en U3, unos 7 de los 11 min de push a última corrida fueron cola | Asumido |
 | 12 | P-LECT sin cero estricto: tutorial de U3 (criterio 6 en parte, LD-17) y README/Marco/Mapa de U4a | Pasa a G-e de E1-G2 (U42; umbral de `257` D13) |
 | 12 | BIT-4: rama remota ajena `cierre/0001-tpr-emulador` en Lab-Documentos, con worktree fuera de `{dir-de-trabajo}` | No es de E1: no tocar; excluir de la limpieza final |
-| 13 | BIT-5: `{dir-de-trabajo}/h.cfg` con una credencial local (PE-10) (aviso de U4c) | Pendiente de verificación del PO: borrar las dos copias y rotar el token son actos suyos (`257` D08, K50-I7). No se comprueba desde esta línea porque i7infra no se toca |
+| 13 | BIT-5: `{dir-de-trabajo}/h.cfg` con una credencial local (PE-10) (aviso de U4c) | Pendiente de verificación del PO: borrar las dos copias y rotar el token son actos suyos (`257` D08, K50-I7). No se comprueba desde esta línea porque {equipo-anterior} no se toca |
 | 13 | U4b/H-1: `dg.py` rechaza `traces: []`, que el anexo del esquema admite | Cerrado por LD #31 (`bf86669`): `traces-vacio` pasa a aviso (`tools/docs-guard/dg.py:15`, `:346`) |
 | 13 | U4d: no hay control de los bloques de CR-5; `dg.py` sin exclusión de carpetas (`_legacy/`) | Pasa a E2 |
 | 13 | Merge vs rebase: U4d y U4c rebasaron, U4b hizo merge; los dos caminos funcionaron | Fijado para los PR H y la vuelta: merge de main, nunca rebase ni force-push de rama (`257` D06; `218:125`) |
@@ -171,11 +171,11 @@ origin/main al 2026-11-01: LD = 0bed863, LDD = 8b96bc6 (lo posterior es de FRAME
 SHA anteriores al 2026-10-29 22:55 −03: historia vieja; no se editan, se leen por 16 §4 y el mapa de 051 (261 §7).
 Pendiente de E1-R: U20-TRZ (README.md:11 y Guides/README.md:11 todavía trazan DOC-SDT-0001; H1 de TEM-04..06),
 U21–U23 (texto), U24 (fase 1b), U25 (corrida nueva de los guiones originales), U26 (marcas a URL+SHA),
-U29 (pares rojo/verde en hpdev), U30 (G-b sobre los equivalentes nuevos de 34bdd44 y 60d94f3: 97e30bc y faaeab1),
+U29 (pares rojo/verde en el equipo de pruebas), U30 (G-b sobre los equivalentes nuevos de 34bdd44 y 60d94f3: 97e30bc y faaeab1),
 U31 (E-F4 y fuentes primarias), U32 (260-registro-e1r.md), U33 (CHANGELOG), U34 (reindexado de cierre; la v4.2 sólo
 tocó el índice 12, base_commit sigue en fe10086 = 6878568 nuevo), U35 (addendum a Reanudar.md), K40 (sitio regenerado).
 Después: E1-G2 (U40 barrido, U41 medidas G-a..G-g, U42 P-LECT con umbral de 257 D13, U43 mesa 263 y resolución 265
-con el Anexo L6 del 290 §14); U44 (cierre de worktrees, ramas y resguardo); K50-I7 (actos del PO en i7infra).
+con el Anexo L6 del 290 §14); U44 (cierre de worktrees, ramas y resguardo); K50-I7 (actos del PO en {equipo-anterior}).
 Después: E2 y E3 (N10 §14); la entrada a E2 la aprueba el PO.
 Para E2: control de bloques CR-5 y exclusión de carpetas y prefijos externos en dg.py (U4d); G3 por corrida de
 workflow, a decir en CPA (U4c); sacar el cuerpo nuevo del paso «avisos» o archivar GUIA (U4f/H-1).

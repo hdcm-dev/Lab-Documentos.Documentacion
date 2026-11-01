@@ -690,7 +690,7 @@ MAUI, porque el cuerpo SDEI tiene el doble de palabras.
 | H-2 | Numeración de secciones dispar: TEM-04 a TEM-06 numeran subsecciones («3.1», «1.1») y TEM-01, 02, 03 y 07 no | Encabezados de §5.1 |
 | H-3 | El prefijo `PE` es «Patrón de ejemplo» en el anexo y «pregunta de evaluación» en el registro de la compuerta; el anexo dice que en un desacuerdo manda el archivo | `Esquema-…md:117`; `tools/docs-guard/prefijos.txt` (línea `PE interno pregunta de evaluación`); `Esquema-…md:199` |
 | H-4 | El registro de prefijos tiene `FC`, que la tabla del anexo no lista | `prefijos.txt` (línea `FC interno documento del Framework Concept…`); `Esquema-…md:102-127` |
-| H-5 | El Marco define el runner por la etiqueta `[self-hosted, i7infra-dev]`, que nombra una máquina en un repositorio público; los workflows siguen usando esa etiqueta | `00-Marco.md:52`; `.github/workflows/docs-guard.yml:60` |
+| H-5 | El Marco define el runner por la etiqueta `[self-hosted, {runner-anterior-del-cuerpo}]`, que nombra una máquina en un repositorio público; los workflows siguen usando esa etiqueta | `00-Marco.md:52`; `.github/workflows/docs-guard.yml:60` |
 | H-6 | El README dice que cada tema tiene seis secciones, pero TEM-01, 02 y 03 suman una séptima, «Fuentes y observaciones» | `README.md:135-136`; `TEM-01…md:334`, `TEM-02…md:333`, `TEM-03…md:309` |
 
 ### 12.3 Pendientes de este núcleo
@@ -703,11 +703,11 @@ MAUI, porque el cuerpo SDEI tiene el doble de palabras.
 
 ## 13. Registro de evidencias
 
-Todas las corridas son del 2026-11-01, en hpdev.
+Todas las corridas son del 2026-11-01, en el equipo de pruebas.
 
 | # | Comando o archivo | Resultado relevante |
 | --- | --- | --- |
-| E1 | `find {dir-de-trabajo}/wt/dac-LDD /home/…/Lab-Documentos.Documentacion/PROMPTs/Guides/14-… -maxdepth 1 -name '02-*'` | Sólo existe en el clon principal |
+| E1 | `find {dir-de-trabajo}/wt/dac-LDD {raíz-del-workspace}/Lab-Documentos.Documentacion/PROMPTs/Guides/14-… -maxdepth 1 -name '02-*'` | Sólo existe en el clon principal |
 | E2 | `git archive HEAD` de `{dir-de-trabajo}/wt/dac-LD` (`0bed863`, rama `dac/0003-base`) al scratchpad; `python3 -I tools/docs-guard/dg.py {trazas,esquema,ai} Guides/…/Sistema-De-Documentacion-E-Integracion` | `trazas` verde, `ids-duplicados=0`; `esquema` verde, 41 con frontmatter; `ai` verde, 28 avisos AI-4 |
 | E3 | Igual, con un libro de prueba (`doc_type: libro`, `doc_id: LIBRO-SDEI`, sin `description`, comentario HTML, `### ESC-SDEI-1 — Corpus de guías`) | `esquema` ROJO 3 errores; `trazas` ROJO `id-duplicado` en `00-Marco.md:73` y en el libro; `ai` ROJO AI-1 |
 | E4 | Igual, con `doc_type: guia-de-estudio`, `doc_id: DOC-SDEI-LIBRO`, `description`, sin comentario, encabezado `` #### 2.2.1 Corpus de guías (`ESC-SDEI-1`) `` | Los tres controles en verde, `ids-duplicados=0` |
@@ -717,5 +717,5 @@ Todas las corridas son del 2026-11-01, en hpdev.
 | E8 | `grep -c '```mermaid'` sobre las fuentes vigentes | 21 diagramas; ninguna etiqueta `["1. …` |
 | E9 | Script que junta la primera columna de las tablas bajo encabezados «Definici…», «Términos», «Siglas» | 98 términos; 21 en dos o más lugares |
 | E10 | `wc -w` del libro MAUI y de `0*.md`, `99-Anexos.md` y `Developer-Guide.md` de `Concepts/Framework-Concept` | 29 644 frente a 27 272 palabras; 27 mermaid |
-| E11 | `grep -n 'runs-on' .github/workflows/*.yml` | Las cuatro definiciones usan `[self-hosted, i7infra-dev]` |
+| E11 | `grep -n 'runs-on' .github/workflows/*.yml` | Las cuatro definiciones usan `[self-hosted, {runner-anterior-del-cuerpo}]` |
 | E12 | `ls {dir-de-trabajo}/nucleos/` | Sólo `00-Plan.md`: N1 y N6 sin entregar |

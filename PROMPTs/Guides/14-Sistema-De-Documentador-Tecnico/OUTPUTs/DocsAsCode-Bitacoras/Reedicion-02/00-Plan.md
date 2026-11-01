@@ -33,7 +33,7 @@ El PO agregó en el chat del 2026-11-01:
 
 - Sumar los ajustes de coherencia pendientes de la corrida anterior: onda 8 sin bitácora y folio del cambio de decisión
   «No reescribir».
-- Correr las pruebas en hpdev o donde haya recursos.
+- Correr las pruebas en el equipo de pruebas o donde haya recursos.
 - Coordinar con la sesión FRAMEWORK MAUI para que los PR no se pisen.
 
 ## 2. Productos
@@ -60,7 +60,7 @@ Esta es la segmentación preliminar. La fase 1 la valida o la corrige, y cada n�
 | N4 | Aplicación a Geometría (público) | N3 |
 | N5 | Aplicación al servicio privado de notificaciones | N3 |
 | N6 | Industria: estándares, tendencias y casos con fuente verificable | — |
-| N7 | Gobierno: mesa, expediente, PR coordinados, pruebas en hpdev | todos |
+| N7 | Gobierno: mesa, expediente, PR coordinados, pruebas en el equipo de pruebas | todos |
 
 La cohesión global vive en `01-Cohesion-Global.md`.
 
@@ -110,7 +110,7 @@ Acordado el 2026-11-01; FRAMEWORK MAUI lo aceptó sin cambios. Lo asienta la con
 
 ## 6. Pruebas
 
-Corren en hpdev:
+Corren en el equipo de pruebas:
 
 - **docs-guard.** `tools/docs-guard/dg.py`, con el layout de la CI.
 - **Mermaid.** `tools/medios/mermaid.sh <md>…` dibuja en un contenedor efímero y sale 1 si algún diagrama no compila o
