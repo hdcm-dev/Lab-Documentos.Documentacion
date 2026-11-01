@@ -1,0 +1,17 @@
+$ curl -sSL https://api.github.com/repositories/94911145 | jq .full_name
+meta/docusaurus
+$ curl -sSL "https://api.github.com/repos/meta/docusaurus/commits?path=website/versioned_docs&per_page=1" | jq -r ...
+c5bc92e92849 2026-10-29
+$ curl -sSL https://api.github.com/repos/meta/docusaurus/contents/website/versioned_docs | jq -r ".[].name"
+version-2.x
+version-3.0.1
+version-3.1.1
+version-3.10.2
+version-3.2.1
+version-3.3.2
+version-3.4.0
+version-3.5.2
+version-3.6.3
+version-3.7.0
+version-3.8.1
+version-3.9.2

@@ -1,0 +1,28 @@
+v1.md:   P["traces: ID#64;1.0"] --> R["x"]
+v2.md:   P["traces: [ID#64;1.0]"] --> R["x"]
+v3.md:   P["Página<br/>traces: ID#64;1.0"] --> R["x"]
+v4.md:   P["Página<br/>traces: [ID#64;1.0]"] --> R["x"]
+v5.md:   P["Página<br/>traces: [ID]"] --> R["x"]
+v6.md:   P["Página<br/>x"] --> R["x"]
+v7.md:   P["traces: [ID #64; 1.0]"] --> R["x"]
+v8.md:   P["Página<br/>traces: ID @ 1.0"] --> R["x"]
+w1.md:   P["Página<br>traces: ID#64;1.0"] --> R["x"]
+w2.md:   P["<b>Página</b> traces: ID#64;1.0"] --> R["x"]
+w3.md:   P["traces: ID#64;1.0"] --> R["a<br/>b"]
+w4.md:   P["Página<br/>traces: ID&#64;1.0"] --> R["x"]
+w5.md:   P["Página<br/>traces: [ID @ 1.0]"] --> R["x"]
+w6.md:   P["Página<br/>RD-01, RN-LOC-01 @ 1.1, RN-LOC-02 @ 1.0"] --> R["x"]
+exp/001-v1.svg: 
+exp/002-v2.svg: 
+exp/003-v3.svg: Unsupported markdown: link 
+exp/004-v4.svg: Unsupported markdown: link 
+exp/005-v5.svg: 
+exp/006-v6.svg: 
+exp/007-v7.svg: 
+exp/008-v8.svg: 
+exp2/001-w1.svg: Unsupported markdown: link 
+exp2/002-w2.svg: Unsupported markdown: link 
+exp2/003-w3.svg: 
+exp2/004-w4.svg: 
+exp2/005-w5.svg: 
+exp2/006-w6.svg: 

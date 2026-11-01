@@ -1,0 +1,34 @@
+## paso 1
+rc=0
+{"outcome":"success","containerId":"567f2abe58f45fd2ec92274ecacb43992829c326cff9e6939dd2155efc98d1f7","remoteUser":"vscode","remoteWorkspaceFolder":"/workspaces/ld-0bed863/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/Prueba-Ayuda-Por-Rol","ociAuthDiagnostics":{"authLookupWouldBeBlocked":false,"registryRedirectWouldPreventCredentialForwarding":false,"authServerRedirect":false}}
+## paso 2
+rc=0
+    0 Warning(s)
+    0 Error(s)
+## paso 3
+GET /ingresar -> 200 (intento 4)
+      Catálogo de ayuda: 9 páginas, validador con 0 fallas
+      Hosting environment: Production
+## paso 4: no se corre (publicaría la app en una URL abierta); se comprueba la imagen fijada
+cloudflared version 2026.10.5 (built 2026-10-27-13:37 UTC)
+## paso 5 (contra U=http://localhost:5190, sin túnel)
+GET /ingresar -> 200
+GET /entrar/Student -> 302
+GET /ayuda/alumno/enviar-un-trabajo -> 200
+GET /ayuda/administrador/gobernar-las-cuentas -> 404
+GET /ayuda/llms.txt -> 200
+# Ayuda de la Fábrica de Geometría — Student
+
+- [Ingresar al laboratorio](/ayuda/comun/ingresar.md): Entrar con tu correo y tu contraseña.
+- [Cambiar la contraseña](/ayuda/comun/cambiar-la-contrasena.md): Cuándo el laboratorio te la pide y cómo se cambia.
+- [Enviar un trabajo](/ayuda/alumno/enviar-un-trabajo.md): Pegar la salida de tu programa y leer las observaciones.
+- [Mis trabajos](/ayuda/alumno/consultar-mis-trabajos.md): Tus envíos, su estado y el desenlace de la revisión.
+entradas (líneas «- [»): 4; con «administrador»: 0
+## --estado
+567f2abe58f4 Up 46 seconds
+app 5190 -> 200
+0
+## paso 6 / --bajar
+pkill rc=0
+app 5190 tras bajar -> 000
+CID=567f2abe58f45fd2ec92274ecacb43992829c326cff9e6939dd2155efc98d1f7

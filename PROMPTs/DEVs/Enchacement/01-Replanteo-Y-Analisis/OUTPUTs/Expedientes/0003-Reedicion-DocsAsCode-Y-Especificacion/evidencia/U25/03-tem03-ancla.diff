@@ -1,0 +1,24 @@
+--- historica/03-salida.txt
++++ 03-tem03-ancla.salida-0bed863.txt
+@@ -1,16 +1,18 @@
+ == caso 1: la página traza a @1.0 y la ficha está en 1.1
+ ayuda.md:1: ERROR traza-version-desfasada: DEMO-TEM03-01@1.0: la declaración está en 1.1
+ anclas: 2 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+-== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=2 resueltas=1 anclas=0 anclas-resueltas=0
++== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=2 resueltas=1 ids-duplicados=0 anclas=0 anclas-resueltas=0
+ rc=1
+ == caso 2: la página traza a @1.1
+ anclas: 2 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+-== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=2 resueltas=2 anclas=0 anclas-resueltas=0
++== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=2 resueltas=2 ids-duplicados=0 anclas=0 anclas-resueltas=0
+ rc=0
+ == caso 3: el ID se declara en dos documentos
+ ayuda.md:1: ERROR traza-ambigua: DEMO-TEM03-01@1.1: declarado 2 veces (fichas.md, otra-guia.md)
++fichas.md:17: ERROR id-duplicado: DEMO-TEM03-01: también declarado en otra-guia.md:17
+ fichas.md:1: ERROR traza-ambigua: DEMO-TEM03-01: declarado 2 veces (fichas.md, otra-guia.md)
++otra-guia.md:17: ERROR id-duplicado: DEMO-TEM03-01: también declarado en fichas.md:17
+ otra-guia.md:1: ERROR traza-ambigua: DEMO-TEM03-01: declarado 2 veces (fichas.md, otra-guia.md)
+ anclas: 3 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+-== PR-5 traces-resolve: ROJO (errores=3 avisos=0) trazas=3 resueltas=0 anclas=0 anclas-resueltas=0
++== PR-5 traces-resolve: ROJO (errores=5 avisos=0) trazas=3 resueltas=0 ids-duplicados=2 anclas=0 anclas-resueltas=0
+ rc=1

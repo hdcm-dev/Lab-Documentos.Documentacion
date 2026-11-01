@@ -1,0 +1,14 @@
+v1: traces: ID@1.0
+v2: traces: [ID@1.0]
+v3: traces: Unsupported markdown: link
+v4: traces: [Unsupported markdown: link]
+v5: traces: [ID]
+v6: 
+v7: traces: [ID @ 1.0]
+v8: traces: ID @ 1.0
+w1: traces: Unsupported markdown: link
+w2: traces: Unsupported markdown: link
+w3: traces: ID@1.0
+w4: traces: ID&@1.0
+w5: traces: [ID @ 1.0]
+w6: RD-01, RN-LOC-01 @ 1.1, RN-LOC-02 @ 1.0
