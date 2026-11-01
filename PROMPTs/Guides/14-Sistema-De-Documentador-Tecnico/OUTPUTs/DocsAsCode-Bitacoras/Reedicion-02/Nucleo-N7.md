@@ -1,7 +1,7 @@
 ---
 doc_id: DAC0003-N7
 doc_type: bitacora-nucleo
-title: Núcleo N7 — Gobierno y pruebas en hpdev (línea base de la reedición DocsAsCode)
+title: Núcleo N7 — Gobierno y pruebas en el equipo de pruebas (línea base de la reedición DocsAsCode)
 status: borrador
 origin: agent
 confidence: alta en las mediciones (todas con comando y salida guardada); media en el procedimiento propuesto (lo valida la mesa)
@@ -10,12 +10,12 @@ last_review: 2026-11-01
 traces: [DB-R02-00, EXP0003-F002]
 ---
 
-# Núcleo N7 — Gobierno y pruebas en hpdev
+# Núcleo N7 — Gobierno y pruebas en el equipo de pruebas
 
 ## Índice
 
 1. [Alcance y fuentes](#1-alcance-y-fuentes)
-2. [Banco de pruebas disponible en hpdev](#2-banco-de-pruebas-disponible-en-hpdev)
+2. [Banco de pruebas disponible en el equipo de pruebas](#2-banco-de-pruebas-disponible-en-el-equipo-de-pruebas)
 3. [Línea base sobre LD](#3-línea-base-sobre-ld)
    1. [docs-guard con el layout de la CI](#31-docs-guard-con-el-layout-de-la-ci)
    2. [Mermaid dibujado (mermaidsh)](#32-mermaid-dibujado-mermaidsh)
@@ -34,7 +34,7 @@ traces: [DB-R02-00, EXP0003-F002]
 
 ## 1. Alcance y fuentes
 
-- **Encargo:** relevar el banco de pruebas de hpdev y correr la línea base sobre `{dir-de-trabajo}/wt/dac-LD` (rama `dac/0003-base`,
+- **Encargo:** relevar el banco de pruebas de {equipo-de-pruebas} y correr la línea base sobre `{dir-de-trabajo}/wt/dac-LD` (rama `dac/0003-base`,
   en `0bed863`, que es `origin/main` de LD al 2026-11-01).
 - **Plan vigente:** `{dir-de-trabajo}/wt/dac-LDD/PROMPTs/Guides/14-Sistema-De-Documentador-Tecnico/OUTPUTs/DocsAsCode-Bitacoras/Reedicion-02/00-Plan.md`
   §6 (pruebas) y §5 (coordinación).
@@ -43,7 +43,7 @@ traces: [DB-R02-00, EXP0003-F002]
 - **Evidencia:** todo en `{dir-de-trabajo}/nucleos/evidencia-N7/`. Ningún archivo versionado se modificó
   (`git -C {dir-de-trabajo}/wt/dac-LD status --short` vacío al cierre).
 
-## 2. Banco de pruebas disponible en hpdev
+## 2. Banco de pruebas disponible en el equipo de pruebas
 
 Medido el 2026-11-01 con `which`, `docker images`, `nproc`, `free -g`, `df -h /vm`.
 
@@ -56,7 +56,7 @@ Medido el 2026-11-01 con `which`, `docker images`, `nproc`, `free -g`, `df -h /v
 | Imagen `python:3.12-slim` | presente | Ensayo MkDocs efímero (pip dentro del contenedor) |
 | Imagen `mcr.microsoft.com/dotnet/sdk:10.0` | presente | Mini demo MovilidadUrbana (`verificar.sh`) |
 | Imágenes `pandoc/core:3.5`, `mcr.microsoft.com/playwright:v1.62.1-noble`, `koalaman/shellcheck:v0.10.0`, `alpine:3` | presentes | Disponibles para diseño editorial/pruebas de PDF si la mesa lo pide; no usadas |
-| Runner de CI | `hpdev-runner-dev` con etiquetas `[self-hosted, i7infra-dev]` | Corrió los últimos jobs de LD y LDD (evidencia `07-api-github.txt`) |
+| Runner de CI | `{runner-del-cuerpo}` con etiquetas `[self-hosted, {runner-anterior-del-cuerpo}]` | Corrió los últimos jobs de LD y LDD (evidencia `07-api-github.txt`) |
 
 Nada se instaló en el host. La caché de docs-guard (lychee 0.18.1, mermaid 11.4.1 por lockfile) quedó en
 `{dir-de-trabajo}/cache-docs-guard`.
@@ -166,7 +166,7 @@ Nada se instaló en el host. La caché de docs-guard (lychee 0.18.1, mermaid 11.
 
 | Repo | Workflow | Disparo | Runner | ¿Obligatorio en main? |
 |---|---|---|---|---|
-| LD | `docs-guard.yml` | todo PR, push a main | `[self-hosted, i7infra-dev]` (`docs-guard.yml:60`) | **No** |
+| LD | `docs-guard.yml` | todo PR, push a main | `[self-hosted, {runner-anterior-del-cuerpo}]` (`docs-guard.yml:60`) | **No** |
 | LD | `framework-concept-demo.yml`, job `fw-ok` (`:166`) | todo PR (sin `paths`); la demo sólo si el PR toca `Concepts/Framework-Concept/Demo/**` o el workflow | idem | **Sí, único** |
 | LD | `mini-demo-movilidad.yml` | PR con `paths` de la demo, `tools/docs-guard/**` o el workflow | idem | No |
 | LD | `docs-enlaces-semanal.yml` | cron `17 6 * * 1` | idem | No |
@@ -177,13 +177,13 @@ Nada se instaló en el host. La caché de docs-guard (lychee 0.18.1, mermaid 11.
   `…/Lab-Documentos.Documentacion/branches/main` → `protected: false`; rulesets vacíos en ambos.
 - Para un PR que sólo toca el cuerpo SDEI, `fw-ok` da verde «por omisión declarada» (`framework-concept-demo.yml:54-77`).
 - Últimas corridas en main: LD docs-guard verde en `0bed863` (2026-11-01 16:45Z); LDD Verificar verde en `8b96bc6`;
-  ambas en `hpdev-runner-dev`.
+  ambas en `{runner-del-cuerpo}`.
 - El pin de LDD (`bf86669`) quedó atrás de LD main (`0bed863`), pero `git diff --stat bf86669 0bed863 -- scripts tools/docs-guard .github`
   sale vacío: **no hay deriva de herramientas**. Subir el pin es clase H (`verificar.yml:72`).
 
 ### 4.2 La guarda de la conformación automática
 
-Fuente: `/IA/IA.Knowledge.Base/Knowledges/Knowledge-Conformacion-Pull-Request-Automatico.md`
+Fuente: `KB-privada/Knowledges/Knowledge-Conformacion-Pull-Request-Automatico.md`
 §3.1–§3.5 (líneas 92–176) y §5.2.
 
 - **G1:** PR abierto y `head.sha` igual al SHA auditado.
@@ -227,7 +227,7 @@ Fuente: `/IA/IA.Knowledge.Base/Knowledges/Knowledge-Conformacion-Pull-Request-Au
 
 ## 6. Procedimiento de pruebas propuesto para cada PR
 
-Se corre en hpdev sobre el worktree de la rama del PR, antes de empujar, y se adjunta el resumen al cuerpo del PR.
+Se corre en el equipo de pruebas sobre el worktree de la rama del PR, antes de empujar, y se adjunta el resumen al cuerpo del PR.
 
 ```mermaid
 flowchart TD
@@ -297,6 +297,6 @@ curl -s https://api.github.com/repos/hdcm-dev/Lab-Documentos.Documentacion/branc
 - No hubo mensajes de otras sesiones a mitad de turno.
 - No se usó credencial: la protección de rama se leyó del endpoint público `branches/main` (el de `protection` da 401
   sin credencial).
-- No se escribió en i7infra ni en los clones principales; no se hicieron commits, push ni PR.
+- No se escribió en {equipo-anterior} ni en los clones principales; no se hicieron commits, push ni PR.
 - Contenedores efímeros usados: `minlag/mermaid-cli:11.4.2`, `python:3.12-slim`, `mcr.microsoft.com/dotnet/sdk:10.0`,
   `alpine:3`; ninguno quedó vivo.
