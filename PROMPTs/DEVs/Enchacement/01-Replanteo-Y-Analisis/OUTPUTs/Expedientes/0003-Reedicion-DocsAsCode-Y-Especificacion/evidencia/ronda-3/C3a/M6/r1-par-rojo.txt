@@ -1,0 +1,5 @@
+$ bash .docs-guard/scripts/ci-local.sh esquema docs
+== PR-2 esquema (docs)
+docs/_gobierno/registro-audiencias.md:1: ERROR esquema-cuerpo: doc_type: «inventado» fuera del vocabulario ['ficha', 'anexo', 'rrd', 'proceso', 'registro-audiencias', 'operativa']
+== PR-2 esquema: ROJO (errores=1 avisos=0) archivos-con-frontmatter=6 sin-frontmatter-fuera-del-cuerpo=0 readme-del-cuerpo-sin-frontmatter=0
+RC=1

@@ -1,0 +1,12 @@
+AGENTS.md:46:publicado. La portada humana es el [README](README.md). Las carpetas que importan a un agente:
+AGENTS.md:64:   frontmatter, identificadores, trazas, enlaces, citación, diagramas, ejemplos, estados, repositorios privados e idioma.
+AGENTS.md:107:| Una decisión consecuente cuando lo aditivo choca con una decisión propia | Etiquetar, publicar o fijar la versión del cuerpo |
+AGENTS.md:110:hosts ni usuarios; y un repositorio privado se nombra sólo por su alias (el servicio push privado es **SDD-B**).
+.github/workflows/docs-enlaces-semanal.yml:4:# públicos de tools/docs-guard/arbol.tsv (clon anónimo, tabla repo → ruta), corre lychee --root-dir con red
+.github/workflows/framework-concept-demo.yml:105:      - name: "0. Base del PR (lo publicado en la rama de destino)"
+.github/workflows/framework-concept-demo.yml:139:          rm -rf "$SALIDA/publicado" "$SALIDA/canal"
+.github/workflows/framework-concept-demo.yml:140:          dotnet publish src/FrameworkConcept.Content -c Release -o "$SALIDA/publicado"
+.github/workflows/framework-concept-demo.yml:143:            --raiz "$SALIDA/canal" --publicado "$SALIDA/publicado" --version "$VERSION" --commit "${SHA::7}"
+.github/workflows/mini-demo-movilidad.yml:3:# Baja por git archive el SHA de source.lock (Lab-E2E.WebBlazor, repositorio público: no hace falta credencial),
+.github/pull_request_template.md:13:<!-- Qué hay que hacer cuando esto llegue a main: nada; publicar un contenido o una definición; etiquetar; una prueba
+rc=0

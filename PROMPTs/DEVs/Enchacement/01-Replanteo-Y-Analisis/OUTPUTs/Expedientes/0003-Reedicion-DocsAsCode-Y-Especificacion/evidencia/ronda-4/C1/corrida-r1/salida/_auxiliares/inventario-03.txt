@@ -1,0 +1,9 @@
+$ command grep -rniE --exclude-dir=.git -e planificad -e previst -e 'a implementar' -e TODO LG/docs/tecnica; echo "rc=$?"
+líneas: 1 (salida completa en inventario-03-salida-LG_docs_tecnica.txt)
+rc=2
+$ command grep -rniE --exclude-dir=.git -e planificad -e previst -e 'a implementar' -e TODO LGD/docs/tecnica; echo "rc=$?"
+líneas: 1 (salida completa en inventario-03-salida-LGD_docs_tecnica.txt)
+rc=2
+$ command grep -rniE --exclude-dir=.git -e planificad -e previst -e 'a implementar' -e TODO LG/SDD/Docs; echo "rc=$?"
+líneas: 4574 (salida completa en inventario-03-salida-LG_SDD_Docs.txt)
+rc=0

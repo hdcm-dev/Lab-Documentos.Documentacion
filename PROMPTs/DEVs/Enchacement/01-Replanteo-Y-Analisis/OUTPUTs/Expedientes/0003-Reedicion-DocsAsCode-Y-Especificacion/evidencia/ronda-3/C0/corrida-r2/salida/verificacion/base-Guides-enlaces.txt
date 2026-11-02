@@ -1,0 +1,537 @@
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (Guides AGENTS.md)
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#1-marco-de-referencia | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#anexo-b--plantillas | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#1-marco-de-referencia | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#8-pull-requests-y-pruebas-automatizadas | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#6-modelo-adoptado | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#7-integraci%C3%B3n-y-versionado | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Anexos/workflows/auditoria-convergencia.yml | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#1-marco-de-referencia | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#5-c%C3%B3mo-elegir-el-modelo | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#5-c%C3%B3mo-elegir-el-modelo | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#1-marco-de-referencia | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#anexo-e--fuentes | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#2-escenario-00--preparaci%C3%B3n | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#5-escenario-03--corte-de-release-e-03-y-e-04 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#8-escenario-06--versi%C3%B3n-de-demostraci%C3%B3n-e-06 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#7-escenario-05--emergencia-en-producci%C3%B3n-e-05 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#5-escenario-03--corte-de-release-e-03-y-e-04 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#3-escenario-01--funcionalidad-nueva-e-01 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#4-escenario-02--defecto-con-release-abierta-e-02 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#2-escenario-00--preparaci%C3%B3n | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#6-escenario-04--pull-request-que-rompe-la-regresi%C3%B3n-e-08 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L8-L16 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Shared/Wizard.razor | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Domain/Rules/EncuestaRules.cs#L6 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor.cs#L66-L70 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests/EncuestaTests.cs#L33 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Shared/Wizard.razor#L1-L2 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests/EncuestaTests.cs#L173-L174 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.UnitTests/EncuestaRulesTests.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests/Infrastructure/E2ETestBase.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Application/Encuestas/EncuestaService.cs#L16 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor.cs#L105-L127 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor.cs#L76 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests/EncuestaTests.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L27 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L3-L4 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L29-L155 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L157-L185 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L75-L95 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Guia-Practica-GitFlow.md#2-escenario-00--preparaci%C3%B3n | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Guia-Practica-GitFlow.md#5-escenario-03--corte-de-release-e-03-y-e-04 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/evidencia/2026-09-03-testigo-de-hidratacion | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L38-L81 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L19-L24 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L107-L108 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L1 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Theme/SurfaceState.cs#L9-L12 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L90 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L87-L110 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L29-L36 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L29 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L107 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L94-L103 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Theme/SurfaceState.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/ci.yml | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.Login/Services/IdentityService.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.Login/Endpoints/IdentityEndpoints.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.Login/Services/SignInResults.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/IA/references/agentes-refinamiento-docs.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/release.yml | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L87-L110 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Theme/SurfaceState.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L33 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L83-L85 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/IA/references/08_calidad_y_pruebas/definition-of-done_v1.0.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Metodologia-Agiles/Scrum-Guide/guia-de-estudio.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Serializacion-Con-System-Text-Json.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Serializacion-Con-System-Text-Json.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-y-Limites.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Clientes-y-Pruebas-de-Contrato.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Comparativa.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Clientes-y-Pruebas-de-Contrato.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/Experiencia-del-Desarrollador.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Clientes-y-Pruebas-de-Contrato.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Clientes-y-Pruebas-de-Contrato.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-y-Limites.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Serializacion.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Consumo-de-APIs.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/auditoria-convergencia.yml | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Serializacion-Con-System-Text-Json.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Resiliencia.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Contextos/Temas.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Contextos/Actividad-1-Deduciendo-Reglas-Negocios.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Diseno-Primero.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Serializacion-Con-System-Text-Json.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/90-Modelos-de-Arquitectura/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/95-Transversales/Spec-Driven-Development.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Comparativa.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/95-Transversales/UX-UI-y-Flujo-de-Usuario.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/40-Diseno/API-Specification.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/60-Desarrollo/Change-Log.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/40-Diseno/Integration-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/90-Modelos-de-Arquitectura/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/90-Modelos-de-Arquitectura/Hexagonal.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/40-Diseno/API-Specification.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/90-Modelos-de-Arquitectura/Modelo-de-Capas.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Errores-y-Problem-Details.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/95-Transversales/UX-UI-y-Flujo-de-Usuario.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/95-Transversales/Spec-Driven-Development.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Listas-de-Verificacion.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Glosario.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Especificacion-OpenAPI.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Resiliencia.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-y-Limites.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Consumo-de-APIs.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-y-Limites.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Deprecacion.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/ADR.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/HLD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/40-Diseno/Modelo-de-Datos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/Arquitectura-de-Seguridad.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/SAD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/Arquitectura-de-Seguridad.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/40-Diseno/Modelo-de-Datos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/00-Marco-de-Referencia/Contextos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Organizacion-Estilo-Rest-API/00-Marco-de-Referencia/Contextos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/40-Diseno/API-Specification.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Installation-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Operations-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/ADR.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/SAD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/00-Marco-de-Referencia/Actores.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/HLD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/IA.Prompts/PromptFramework/Rules/Rule-Dual-Audience.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/SAD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/HLD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/ADR.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Runbook.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Installation-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Operations-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/SAD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/ADR.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/IA.Prompts/PromptFramework/Rules/Rule-Narrative-Voice.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Installation-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/ADR.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/SAD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Runbook.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Operations-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Glosario.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Como-Decidir.md#6-qui%C3%A9n-decide | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Patrones-De-Ejemplos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Esquema-Frontmatter-Y-Prefijos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/00-Marco.md#5-convenciones | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Lista-De-Verificacion.md#8-cara-agente | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/01-Mapa.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Como-Decidir.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Criterios-De-Calidad.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Referencias.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Installation-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/40-Diseno/API-Specification.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/DevOps-Guide/guia-flujo-trabajo-versionado.md#cheat-sheet-resumen-de-una-p%C3%A1gina | Cannot find fragment
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#anexo-e--fuentes | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Estandares-Modelo-Ramas-Guide/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#8-pull-requests-y-pruebas-automatizadas | Cannot find file
+Issues found in 71 inputs. Find details below.
+
+[Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/Guia-Practica-GitHubFlow.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#anexo-e--fuentes | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#5-c%C3%B3mo-elegir-el-modelo | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#1-marco-de-referencia | Cannot find file
+
+[Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#4-escenario-02--defecto-con-release-abierta-e-02 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#3-escenario-01--funcionalidad-nueva-e-01 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#2-escenario-00--preparaci%C3%B3n | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#7-escenario-05--emergencia-en-producci%C3%B3n-e-05 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#6-escenario-04--pull-request-que-rompe-la-regresi%C3%B3n-e-08 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#5-escenario-03--corte-de-release-e-03-y-e-04 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#8-escenario-06--versi%C3%B3n-de-demostraci%C3%B3n-e-06 | Cannot find file
+
+[Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Marco-La-Superficie-Verificable.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L87-L110 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Theme/SurfaceState.cs | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Compatibilidad-y-Cambios-Rompientes.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Clientes-y-Pruebas-de-Contrato.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Consumo-de-APIs.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-y-Limites.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Serializacion.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Pendientes.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/40-Diseno/Modelo-de-Datos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/Arquitectura-de-Seguridad.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Contextos.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/40-Diseno/API-Specification.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Organizacion-Estilo-Rest-API/00-Marco-de-Referencia/Contextos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/00-Marco-de-Referencia/Contextos.md | Cannot find file
+
+[Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitHubFlow.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/README.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/Spec-Driven-Development.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/95-Transversales/Spec-Driven-Development.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Comparativa.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/README.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/00-Marco-de-Referencia/Convenciones.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Glosario.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Metodos.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Deprecacion.md | Cannot find file
+
+[Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Caso-Encuesta-Page.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L157-L185 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Shared/Wizard.razor#L1-L2 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests/EncuestaTests.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.UnitTests/EncuestaRulesTests.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L75-L95 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests/EncuestaTests.cs#L173-L174 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor.cs#L105-L127 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L29-L155 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor.cs#L66-L70 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Application/Encuestas/EncuestaService.cs#L16 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor.cs#L76 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L8-L16 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Domain/Rules/EncuestaRules.cs#L6 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests/EncuestaTests.cs#L33 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L27 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Pages/Encuesta.razor#L3-L4 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/MovilidadUrbana.Web/Components/Shared/Wizard.razor | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests/Infrastructure/E2ETestBase.cs | Cannot find file
+
+[Guides/IA/references/agentes-especialidades/AG-07-gestion-proyectos-agiles.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/IA/references/08_calidad_y_pruebas/definition-of-done_v1.0.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Colecciones-y-Paginacion.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-y-Limites.md | Cannot find file
+
+[Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Contextos/ParaRetomar.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Contextos/Actividad-1-Deduciendo-Reglas-Negocios.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Contextos/Temas.md | Cannot find file
+
+[Guides/Metodologia-Agiles/Scrum-Guide/Caso-De-Estudio-1-Guide.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Metodologia-Agiles/Scrum-Guide/guia-de-estudio.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/SAD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/HLD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/ADR.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/Experiencia-del-Consumidor.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/60-Desarrollo/Change-Log.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/40-Diseno/Integration-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/95-Transversales/UX-UI-y-Flujo-de-Usuario.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/40-Diseno/API-Specification.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/Arquitectura-y-REST.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/90-Modelos-de-Arquitectura/Modelo-de-Capas.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/90-Modelos-de-Arquitectura/Hexagonal.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/40-Diseno/API-Specification.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/90-Modelos-de-Arquitectura/README.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/Errores-Frecuentes.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/40-Diseno/API-Specification.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/00-Marco-de-Referencia/Escenarios.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Listas-de-Verificacion.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Convenciones.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/SAD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/IA.Prompts/PromptFramework/Rules/Rule-Narrative-Voice.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/ADR.md | Cannot find file
+
+[Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Caso-HolaMundo-Page.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L107-L108 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L107 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Theme/SurfaceState.cs#L9-L12 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Theme/SurfaceState.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L29-L36 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L38-L81 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/evidencia/2026-09-03-testigo-de-hidratacion | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L90 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L94-L103 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L1 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L87-L110 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L83-L85 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L29 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L19-L24 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.HolaMundo/Components/Pages/HolaMundo.razor#L33 | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Plantilla-del-Informe.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Installation-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/SAD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/ADR.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Formato-y-Nomenclatura-de-Campos.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Serializacion-Con-System-Text-Json.md | Cannot find file
+
+[Guides/Testing/Lab-E2E.WebBlazor-Guides/workflows/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Guia-Practica-GitFlow.md#2-escenario-00--preparaci%C3%B3n | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Guia-Practica-GitFlow.md#5-escenario-03--corte-de-release-e-03-y-e-04 | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Serializacion-Con-System-Text-Json.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/10-Naturaleza-del-Informe/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/README.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/Vista-de-Componentes.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/40-Diseno/Modelo-de-Datos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/Arquitectura-de-Seguridad.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/HLD.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-y-Limites.md | Cannot find file
+
+[AGENTS.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Como-Decidir.md#6-qui%C3%A9n-decide | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Patrones-De-Ejemplos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/00-Marco.md#5-convenciones | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Como-Decidir.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Criterios-De-Calidad.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Esquema-Frontmatter-Y-Prefijos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Referencias.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Lista-De-Verificacion.md#8-cara-agente | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/01-Mapa.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Glosario.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/10-Naturaleza-del-Informe/Que-es-y-que-no-es.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/SAD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/10-Fundamentos-REST/REST-y-Alternativas.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Errores-y-Problem-Details.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Idempotencia-y-Concurrencia.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Resiliencia.md | Cannot find file
+
+[Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Caso-Login-Page.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.Login/Endpoints/IdentityEndpoints.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.Login/Services/SignInResults.cs | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/src/WebBlazor.Login/Services/IdentityService.cs | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Cache-y-Peticiones-Condicionales.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Consumo-de-APIs.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Actualizaciones-Parciales.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Serializacion-Con-System-Text-Json.md | Cannot find file
+
+[Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-ABM.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Manejo-de-Errores.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Resiliencia.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Codigos-de-Estado.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-y-Limites.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Actores.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/00-Marco-de-Referencia/Actores.md | Cannot find file
+
+[Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#anexo-e--fuentes | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Estandares-Modelo-Ramas-Guide/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#8-pull-requests-y-pruebas-automatizadas | Cannot find file
+
+[Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Anexos/workflows/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#5-escenario-03--corte-de-release-e-03-y-e-04 | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md#2-escenario-00--preparaci%C3%B3n | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/README.md | Cannot find file
+
+[Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor | Cannot find file
+
+[Guides/Testing/E2E-Guide/Beginner-Guide.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor/tests/MovilidadUrbana.E2ETests | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor | Cannot find file
+
+[Guides/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/README.md | Cannot find file
+
+[Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitFlow.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/auditoria-convergencia.yml | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Estrategias-de-Versionado.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Clientes-y-Pruebas-de-Contrato.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Zalando-y-otras.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Serializacion-Con-System-Text-Json.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Diseno-Primero.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/Distribucion-e-Instalacion.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Installation-Guide.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Escenarios.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/README.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/Operacion-y-Resiliencia.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Operations-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Runbook.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/01-Mapa-Conceptual/Mapa-Conceptual.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/ADR.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Installation-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Operations-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/SAD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/95-Transversales/Spec-Driven-Development.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/95-Transversales/UX-UI-y-Flujo-de-Usuario.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Documentacion-Tecnica/90-Modelos-de-Arquitectura/README.md | Cannot find file
+
+[Guides/IA/references/agentes-especialidades/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/IA/references/agentes-refinamiento-docs.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Deprecacion-y-Retiro.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/Experiencia-del-Desarrollador.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Clientes-y-Pruebas-de-Contrato.md | Cannot find file
+
+[Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#1-marco-de-referencia | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#5-c%C3%B3mo-elegir-el-modelo | Cannot find file
+
+[Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/ci.yml | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/release.yml | Cannot find file
+
+[Guides/Testing/E2E-Guide/Quick-Guide-ABM.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Lab-E2E.WebBlazor | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Comparativa.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Clientes-y-Pruebas-de-Contrato.md | Cannot find file
+
+[Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Autenticacion-y-Autorizacion.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Especificacion-OpenAPI.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/10-Naturaleza-del-Informe/Audiencia-y-Proposito.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/40-Requisitos/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/20-Analisis/SRS.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/Vistas-y-Diagramas.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/HLD.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/IA.Prompts/PromptFramework/Rules/Rule-Dual-Audience.md | Cannot find file
+
+[Guides/GitFlow/Git-Flow-Guides/GitFlow-Practice-Guide/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#1-marco-de-referencia | Cannot find file
+
+[Guides/GitFlow/Git-Flow-Guides/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#anexo-b--plantillas | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Anexos/workflows/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#7-integraci%C3%B3n-y-versionado | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#6-modelo-adoptado | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#1-marco-de-referencia | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md#8-pull-requests-y-pruebas-automatizadas | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/Anexos/workflows/auditoria-convergencia.yml | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/GitFlow/Git-Flow-Guides/Estandares-Modelo-Ramas-Guide/README.md | Cannot find file
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/README.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Deployment-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Installation-Guide.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Runbook.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/50-Operativa/Operations-Guide.md | Cannot find file
+
+[Guides/Despliegue/DevOps-Guide/guia-flujo-trabajo-versionado.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/DevOps-Guide/guia-flujo-trabajo-versionado.md#cheat-sheet-resumen-de-una-p%C3%A1gina | Cannot find fragment
+
+[Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/Decisiones-de-Arquitectura.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Despliegue/Documentacion-Tecnica/30-Arquitectura/ADR.md | Cannot find file
+
+[Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Testing/Lab-E2E.WebBlazor-Guides/Anexos/workflows/README.md | Cannot find file
+
+🔍 3484 Total (in 0s) ✅ 2736 OK 🚫 195 Errors 👻 553 Excluded
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)

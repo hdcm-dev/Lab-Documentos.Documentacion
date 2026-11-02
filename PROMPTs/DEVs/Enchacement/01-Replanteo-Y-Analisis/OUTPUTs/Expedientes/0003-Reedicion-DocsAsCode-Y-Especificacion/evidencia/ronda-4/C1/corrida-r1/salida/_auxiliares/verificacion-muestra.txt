@@ -1,0 +1,10 @@
+$ sed -n 65p LG/AGENTS.md
+| Fusionar un PR y borrar su rama | Lo hace el agente, por decisión del Product Owner (2026-08-31, reafirmada el 2026-09-14), con los checks en verde y sin reserva. Con reserva, entrega el enlace y espera |
+$ sed -n 106p LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs
+            if (RoleOf(context.User) != Role.Student)
+$ sed -n 26p LG/Directory.Build.props
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+$ sed -n 70p LG/.github/workflows/e2e.yml
+    # EL RUNNER PROPIO NO EJECUTA CODIGO DE UN FORK. El repositorio es público: un pull request
+$ sed -n 38p LGD/ia-db/README.md
+| Repositorio indexado | `PROG2/Geometria/Lab-Geometria`, rama `main`, revisión `4b114d7` (fusión del PR #233, 2026-09-15), etiquetada `v1.2.0` |

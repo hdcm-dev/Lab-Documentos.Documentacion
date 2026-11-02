@@ -1,0 +1,95 @@
+# Oráculo O3 — caso C1 «Panel con roles»
+
+| Campo | Valor |
+| --- | --- |
+| Caso | C1, escenario «panel con roles» (`F099` §5.5) |
+| Repositorios del caso (sólo lectura, `git archive`) | `LG` = Lab-Geometria en `4b114d74f823b380ca65b5c00aab13d34c0b86d7`; `LGD` = Lab-Geometria.Documentacion en `b47d22b78c153ffe2050b2e91211cbec59d12968` |
+| O-6 | `LGD@b47d22b:ia-db/README.md:38` declara «revisión `4b114d7` … etiquetada `v1.2.0`»: la ia-db indexa el SHA del caso. Cumple |
+| Cuerpo de referencia | `SDEI/` de `LD` en `00171bd433fa7835d7680d981d1dadc1fd532ccb` (Lab-Documentos) |
+| Fecha | 2026-11-01 |
+| Revisión | 2 (antes de sellar): corrige D-05 (comparación por repositorio; LGD con o sin CL-03, que depende de la H de D-12), D-08 (esquema anclado en el anexo del SDEI), anclas de D-01 y D-02, y deja dicho de dónde sale *n*. Reemplaza la versión de huella `790188d5…6f420df1e20`, que no se selló |
+| Autor | Perito autor de oráculo O3 (agente); no escribió el conocimiento ni corre el caso |
+| Fuentes NO leídas | El archivo del conocimiento de especificación, el libro y la carpeta del conocimiento del expediente (regla O3). Los nombres de D-01…D-17 salen de la plantilla A-01 vacía; los de A-01…A-11, de `N3` §5.4, porque la plantilla sólo trae sus IDs |
+| O-3 | El oráculo **no** copia la columna «Panel con roles» de `00-Marco.md:106-115`: cada valor sale del repositorio del caso en su SHA; el cuerpo `SDEI/` se cita sólo como vocabulario y regla |
+
+**Convención de anclas.** `LG@4b114d7:ruta:línea`, `LGD@b47d22b:ruta:línea`, `LD@00171bd:SDEI/ruta:línea` (con
+`SDEI/` = `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/`). Una ausencia se ancla con el
+comando de sólo lectura que la mide sobre el SHA y su resultado.
+
+**Comparación (M2).** Una fila «coincide» si el valor de la ficha cae en el valor o conjunto admitido. En las filas
+de varios valores (D-02, D-05, D-06) coincide sólo si el **conjunto** es igual a uno de los admitidos; las
+diferencias por elemento se listan como diagnóstico. D-05 se compara **por repositorio** (LG, LGD, build): coincide
+si cada clase cae en el repositorio admitido; la carpeta dentro del repositorio es diagnóstico. En una fila de clase H, coincide si la ficha la marca H, la
+lista para una persona con opciones y **no** la da por decidida; el default anotado es diagnóstico.
+
+## 1. Decisiones D-01…D-17
+
+| Fila | Valor o conjunto admitido | Ancla | Nota |
+| --- | --- | --- | --- |
+| D-01 Escenario | `ESC-SDEI-3` panel con roles; contextos: `CTX-SDEI-1` **sin** sitio de documentación; `CTX-SDEI-2` **con** marco de especificación (SDD); `CTX-SDEI-3` mismo repositorio **y** repositorio hermano; `CTX-SDEI-4` **dentro** de la organización del runner. Los cinco tienen que coincidir. Clase P | `LG@4b114d7:src/GeometriaFactory.Domain/Values/Role.cs:12-19` (dos roles, Alumno y Administrador); `LG@4b114d7:AGENTS.md:9,13`; `LGD@b47d22b:README.md:3-5`; `LG@4b114d7:SDD/Docs/Audit/Estado-Del-Destino-2026-09-12.md:33` (`hdcm-dev/Lab-Geometria`) y `LD@00171bd:.github/workflows/docs-guard.yml:75` (`repository: hdcm-dev/Lab-Documentos`): misma organización; vocabulario: `LD@00171bd:SDEI/00-Marco.md:91,121-145` (nombre del escenario y definición de los contextos) | Escenario conocido: no es H. El valor sale sólo de la evidencia de LG, LGD y el remoto de LD; la frase del Marco que atribuye el ejemplo (`00-Marco.md:93`) no se usa como ancla |
+| D-02 Clases activas | Conjunto A = {CL-01, CL-02, CL-03, CL-04, CL-05, CL-06, CL-07, CL-08, CL-09, CL-12, CL-13}; conjunto B = A ∪ {CL-11}. Omitidas con motivo: CL-10 (no es guía de estudio), CL-14 (sin sitio, latente) | CL-01 `LG@4b114d7:AGENTS.md:13`; CL-02 (brecha) `LD@00171bd:SDEI/TEM-07-Marco-SDD.md:140` (el RRD va con la especificación del proyecto destino); CL-03 `LG@4b114d7:AGENTS.md:1`; CL-06 (brecha) `LD@00171bd:SDEI/TEM-07-Marco-SDD.md:263-266` (el SDD deja fuera al usuario final; el hueco lo cubre CL-06); CL-12 (brecha) `LD@00171bd:SDEI/01-Mapa.md:92` (una instancia por proyecto); CL-04 `LG@4b114d7:Directory.Build.props:26`; CL-05 `LG@4b114d7:src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:58,117`; CL-07 `LG@4b114d7:SDD/Docs/Producto/11-Documentacion/README.md:105-113`; CL-08 `LGD@b47d22b:ia-db/README.md:38`; CL-09 `LG@4b114d7:SDD/Docs/README.md:176` (expediente 0001) y `LGD@b47d22b:README.md:5` (`PROMPTs/`); CL-11 `LGD@b47d22b:README.md:13-15`; CL-13 `LG@4b114d7:changelog.md:1`, `LGD@b47d22b:changelog.md:1`; CL-14 `LD@00171bd:SDEI/01-Mapa.md:96` | CL-02, CL-06 y CL-12 se activan sin pieza existente (brecha, no baja). CL-04 sigue activa aunque el XML esté apagado (ver T4). CL-11 admitida en los dos sentidos: el proyecto cita conocimiento compartido por ruta, sin copia con huella |
+| D-03 ¿Sitio publicado? | Clase **H**. Hecho: no hay sitio de documentación; lo publicado es el producto (front y API) y su explorador de API en ejecución. Default: No | `LG@4b114d7:.github/workflows/deploy-front-ftp.yml:1-2` (publica el front); `LG@4b114d7:src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:40,119` (explorador en ejecución); `git ls-tree -r --name-only 4b114d7 \| grep -ci llms.txt` → 0 | Confundir el sitio del producto o el explorador con un sitio de documentación es diagnóstico de D-03 |
+| D-04 ¿Marco con registro de IDs? | Sí: se usa el registro del SDD del proyecto (encabezado `# ID — …` con `**Versión:**`); no fichas propias ni `docs/_requisitos.md` | `LG@4b114d7:AGENTS.md:13`; `LG@4b114d7:SDD/Docs/README.md:176` (procedencia SDD 13.16); `LG@4b114d7:SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/02-Especificacion-Funcional/Casos-De-Uso/CU-10005-Enviar-Un-Trabajo-Y-Ver-El-Resultado-De-La-Interpretacion.md:1,5` | — |
+| D-05 ¿Dónde vive cada pieza? | Comparación por repositorio (ver «Comparación (M2)»). **LG** = {CL-01, CL-02, CL-03, CL-04, CL-06, CL-07, CL-09, CL-13}; **build** = {CL-05}; **LGD** admite dos conjuntos: L1 = {CL-08, CL-09, CL-13} y L2 = L1 ∪ {CL-03} | CL-01 `LG@4b114d7:AGENTS.md:13`; CL-02 `LD@00171bd:SDEI/TEM-07-Marco-SDD.md:140` (con la especificación, contenido del proyecto destino); CL-03 en LG `LG@4b114d7:AGENTS.md:1`; CL-04 `LG@4b114d7:Directory.Build.props:26`; CL-05 `LD@00171bd:SDEI/01-Mapa.md:85` (emitido en el build); CL-06 `LD@00171bd:SDEI/TEM-03-Topologia-Y-Versionado.md:252-253` (el manual del panel por rol va en el repositorio del código) y `LD@00171bd:SDEI/01-Mapa.md:86` (repo de la interfaz); CL-07 `LD@00171bd:SDEI/01-Mapa.md:87` (`docs/tecnica/` del código) y `LG@4b114d7:SDD/Docs/Producto/11-Documentacion/README.md:105-113`; CL-08 `LGD@b47d22b:ia-db/README.md:38`; CL-09 `LG@4b114d7:SDD/Docs/README.md:176` (expediente 0001 en LG) y `LGD@b47d22b:README.md:3-5` (`PROMPTs/` en LGD); CL-13 `LG@4b114d7:changelog.md:1`, `LGD@b47d22b:changelog.md:1`; reparto código/hermano `LD@00171bd:SDEI/TEM-03-Topologia-Y-Versionado.md:252-254` | L2 sólo agrega CL-03 en LGD, que hoy no tiene `AGENTS.md` (`git ls-tree -r --name-only b47d22b \| grep -c '^AGENTS.md$'` → 0): ponerlo depende de la H de D-12, así que con o sin ese elemento coincide. Las carpetas (categoría 11 o `docs/tecnica/` para CL-07; proyecto web para CL-06; carpeta del RRD, que fija el escalón 2 según `TEM-07:140`) son diagnóstico. CL-11 y CL-12 no entran en la comparación: CL-11 vive en la base común, y el lugar de CL-12 no lo fija el repositorio |
+| D-06 ¿Contra qué ancla? | Conjunto: {LG: el commit (la etiqueta `v1.2.0` sólo nombra el SHA); trazas con `@MAYOR.MENOR` del `**Versión:**` del ID, sin las copias de `_legacy/`; LGD `ia-db`: SHA fijado `4b114d7`, declarado en prosa, **sin** `base_commit`} | `LGD@b47d22b:ia-db/README.md:38,115-116`; `LG@4b114d7:SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/02-Especificacion-Funcional/Casos-De-Uso/CU-10005-Enviar-Un-Trabajo-Y-Ver-El-Resultado-De-La-Interpretacion.md:5`; `LD@00171bd:SDEI/TEM-07-Marco-SDD.md:133` | Ver T1 y T7 |
+| D-07 ¿Prefijos e IDs? | Prefijos externos del SDD (`CU-`, `RN-`, `ADR-`), que resuelven contra el propio repositorio; las pantallas trazan a `CU-100NN` de la unidad Web; registro mínimo propio sólo para las piezas nuevas. Clase P | `LG@4b114d7:SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/02-Especificacion-Funcional/Casos-De-Uso/CU-10005-Enviar-Un-Trabajo-Y-Ver-El-Resultado-De-La-Interpretacion.md:1,3`; `LD@00171bd:SDEI/TEM-07-Marco-SDD.md:140,266-267` | Un prefijo nuevo en un registro compartido sería H; no aparece en este caso |
+| D-08 ¿Esquema de frontmatter? | El SDD conserva su encabezado propio y **no** se migra: su frontmatter no se controla y lo que no lo tiene sólo avisa; las piezas nuevas llevan el frontmatter del anexo de esquema del SDEI (el RRD con los diez campos más `description` y `doc_type: rrd`; la página de ayuda, su esquema propio con `title` y `roles`). Coincide si la ficha deja el SDD sin migrar y somete las piezas nuevas al esquema del SDEI; el detalle de campos por pieza es diagnóstico | `LG@4b114d7:SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/02-Especificacion-Funcional/Casos-De-Uso/CU-10005-Enviar-Un-Trabajo-Y-Ver-El-Resultado-De-La-Interpretacion.md:1-8` (encabezado en prosa); sólo 5 de 560 `.md` vigentes de `SDD/Docs` abren con `---` (conteo de primera línea, fuera de `_legacy/`); `LD@00171bd:SDEI/TEM-07-Marco-SDD.md:256-259` (la compuerta recibe sólo las carpetas nuevas; el SDD no se controla); `LD@00171bd:SDEI/TEM-07-Marco-SDD.md:140` (el RRD es un archivo `doc_type: rrd`); `LD@00171bd:SDEI/99-Anexos/Esquema-Frontmatter-Y-Prefijos.md:41-55` (diez campos más `description`, `rrd` en `doc_type`:46) y `:64` (página de ayuda: `title` y `roles`) | Ver T3 (versión doble en uno de los cinco) |
+| D-09 ¿Cómo corre la compuerta? | Clase **H** (configuración de la organización). Hecho: LG no tiene control documental; LGD tiene `Verificar` en `ubuntu-latest`. Default: llamar al workflow reutilizable `docs-guard` de `LD` (misma organización), sólo sobre las carpetas nuevas | `LG@4b114d7:.github/workflows/ci.yml:47`, `e2e.yml:69`, `deploy-front-ftp.yml:50`; `git grep -l docs-guard 4b114d7` → 0; `LGD@b47d22b:.github/workflows/verificar.yml:1-20`; `LD@00171bd:SDEI/00-Marco.md:139-145`; `LD@00171bd:SDEI/TEM-07-Marco-SDD.md:246` | `TEM-07:246` declara dos cambios pendientes de `dg.py` para un SDD en el mismo repositorio: marcarlo «pendiente» no es discrepancia |
+| D-10 ¿Qué bloquea y qué avisa? | Bloquea sólo el control que cumple las cinco condiciones, con línea de base medida antes; hasta que la línea de base sea 0, avisa. La compuerta recibe sólo las carpetas nuevas (ayuda, RRD); los documentos del SDD sirven de registro y no se controlan | `git grep -l docs-guard 4b114d7` → 0 (no hay línea de base previa); `LD@00171bd:SDEI/TEM-06-Compuertas-Y-CI.md:109-120`; `LD@00171bd:SDEI/TEM-07-Marco-SDD.md:256-259` | — |
+| D-11 ¿Quién decide qué? | Clase **H**. Hecho: delegación del merge asentada por escrito en los dos repositorios (LG desde el PO; LGD con techo de 20 min); lo de clase H del producto es del PO | `LG@4b114d7:AGENTS.md:55-65`; `LGD@b47d22b:README.md:11-31`; `LD@00171bd:SDEI/00-Marco.md:151-162` | La ficha no puede «decidir» la delegación: la describe y la deja a la persona |
+| D-12 ¿Canales para agentes? | Clase **H** (`AGENTS.md`). Hecho: `AGENTS.md` en LG (derivado del contrato de agentes, no se edita a mano); LGD sin `AGENTS.md`; índice interno `ia-db/` en LGD; sin `llms.txt` (no hay sitio). Default: `AGENTS.md` puntero en cada repositorio más la ia-db existente | `LG@4b114d7:AGENTS.md:1-5`; `git ls-tree -r --name-only b47d22b \| grep -c '^AGENTS.md$'` → 0; `LGD@b47d22b:ia-db/README.md:38`; `LD@00171bd:SDEI/TEM-04-Doble-Audiencia.md:89` | — |
+| D-13 ¿Ayuda al usuario final? | Por rol (Alumno, Administrador), en un solo idioma (castellano), con la confidencialidad por rol resuelta en el servidor; contextual y mínima, sin manual | `LG@4b114d7:src/GeometriaFactory.Domain/Values/Role.cs:12-19`; `LG@4b114d7:src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:106`; `git grep -c -E 'AddLocalization\|IStringLocalizer' 4b114d7 -- src` → 0 archivos y 0 `.resx`; `LG@4b114d7:SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/03-UX-UI-DX/Experiencia-De-Uso.md:100` | Hoy no hay ayuda construida: «ninguna» como estado es diagnóstico, no el valor de diseño |
+| D-14 ¿Qué es privado y cómo se nombra? | Alias por destino privado más barrido antes de cada PR público. Destinos que el barrido encuentra en el caso: una ruta absoluta a la base de conocimientos de la organización y una etiqueta de runner con nombre de máquina | `LGD@b47d22b:ia-db/README.md:40` (público de consulta); `LGD@b47d22b:README.md:14` (ruta absoluta fuera del repositorio); `LG@4b114d7:.github/workflows/e2e.yml:69` (etiqueta de runner); `LD@00171bd:SDEI/00-Marco.md:177` | La lista concreta de destinos es diagnóstico; coincide si la ficha fija alias más barrido |
+| D-15 ¿Cuerpo formativo? | No | `git ls-tree -r --name-only b47d22b -- PROMPTs/Guides` → sólo `.gitkeep`; `LG@4b114d7:AGENTS.md:9-11` (producto con dos unidades de entrega, no corpus de guías); `LD@00171bd:SDEI/00-Marco.md:76-81` | Los `samples/` son ejemplos ejecutables del producto, no un cuerpo formativo |
+| D-16 ¿Idioma y estilo? | Castellano rioplatense para el texto; identificadores de código en inglés; nombres según la norma de nomenclatura del proyecto | `LG@4b114d7:AGENTS.md:36`; `LG@4b114d7:SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/03-UX-UI-DX/Glosario-UX.md:207` | — |
+| D-17 ¿Carril programado? | Sí: semanal, sólo avisa; vigila el atraso de la revisión indexada de la ia-db (`4b114d7`) frente a la rama principal de LG, enlaces externos y frescura de 365 días | `git grep -n -E 'schedule:\|cron:' 4b114d7 -- .github` y `… b47d22b -- .github` → 0 (no existe); `LGD@b47d22b:ia-db/README.md:38,115-116`; `LD@00171bd:SDEI/00-Marco.md:51`; `LD@00171bd:SDEI/TEM-06-Compuertas-Y-CI.md:44,104` | Coincide si nombra la ia-db como pieza con ancla fijada a vigilar; frecuencia distinta de semanal es discrepancia |
+
+## 2. Trampas de `N4` §7.3 (siete)
+
+«Despliegue del PO intocable» no es fila: pasa a **restricción** (ver §4).
+
+| Fila | Valor admitido (la ficha la nombra con ruta:línea correcta) | Ancla | Nota |
+| --- | --- | --- | --- |
+| T1 `_legacy/` duplica IDs | `_legacy/` repite IDs vigentes: excluirlo del registro o la traza da ambigua | `LG@4b114d7:SDD/Docs/Producto/Contratos-Inter-Unidad/CU-08002-Contrato-De-Administracion-De-Cuentas.md:1,5` (1.11) frente a `…/_legacy/2026-09-13/CU-08002-Contrato-De-Administracion-De-Cuentas-v1.9.md:1,5` y `…/_legacy/2026-09-14/CU-08002-Contrato-De-Administracion-De-Cuentas-v1.10.md:1,5`; 679 archivos bajo `_legacy/` (`git ls-tree`) | Vale cualquier par vigente/congelado con el mismo ID |
+| T2 Pantalla → `CU-100NN` | La ayuda de una pantalla traza al caso de uso de la unidad Web (`CU-100NN`), no al de la Api (`CU-000NN`) ni al inter-unidad (`CU-080NN`) | `LG@4b114d7:SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/02-Especificacion-Funcional/Casos-De-Uso/CU-10005-Enviar-Un-Trabajo-Y-Ver-El-Resultado-De-La-Interpretacion.md:1,3`; `LD@00171bd:SDEI/TEM-07-Marco-SDD.md:266-267` | — |
+| T3 Versión doble (caso R) | Un documento declara la versión dos veces y no coinciden: una sola fuente de versión, o regla de precedencia | `LG@4b114d7:SDD/Docs/Producto/11-Documentacion/README.md:8` (`version: "1.3"`) frente a `:22` (`**Versión:** 1.4`) | — |
+| T4 XML apagado | La referencia .NET (CL-04) no se genera: `GenerateDocumentationFile` en `false` | `LG@4b114d7:Directory.Build.props:26` | — |
+| T5 Categoría 11 planificada | La documentación técnica de entrega es un plan: casi todo en `Planificado`; vigentes sólo los README, la bitácora, el contrato de agentes y `AGENTS.md` | `LG@4b114d7:SDD/Docs/Producto/11-Documentacion/README.md:75,99,108-113` | — |
+| T6 Límite de ADR-10010 | **Sin oráculo** | — | Motivo: el ADR-10010 no existe en `4b114d7` (`git diff --stat 4b114d7 5f07b12` lo muestra como archivo agregado después; `find -name 'ADR-10010*'` sobre el árbol del caso → nada). La trampa no es detectable en el SHA del insumo. Lo más cercano en `4b114d7`, «la ayuda es contextual y mínima, sin manual» (`Experiencia-De-Uso.md:100`), ya cuenta en D-13 |
+| T7 ia-db sin `base_commit` | La ia-db ancla la revisión en prosa y no usa `base_commit` | `LGD@b47d22b:ia-db/README.md:38`; `git grep -c base_commit b47d22b` → 0 | — |
+
+## 3. Artefactos A-01…A-11
+
+**Sin oráculo de valor, fuera de *n*.** Motivo: M2 compara sólo decisiones y trampas (`F099` §5.5, M2); lo que el
+aplicador produce lo miden M6 (compuerta sobre A-02…A-07) y M4 (rutas citadas). Abajo, los hechos del SHA que el
+refutador puede usar.
+
+| Fila | Valor | Hecho verificable en el SHA |
+| --- | --- | --- |
+| A-01 Ficha de diseño | Sin oráculo: es la salida comparada en §1 y §2 | — |
+| A-02 Registro de prefijos | Sin oráculo | No hay registro de prefijos documental en LG ni LGD; los prefijos del SDD están en sus encabezados (`CU-10005…md:1`) |
+| A-03 Esquema de frontmatter | Sin oráculo | 5 de 560 `.md` vigentes de `SDD/Docs` con frontmatter YAML |
+| A-04 RRD inicial | Sin oráculo | No existe; su carpeta la fija el escalón 2 (`LD@00171bd:SDEI/TEM-07-Marco-SDD.md:140`) |
+| A-05 `AGENTS.md` puntero | Sin oráculo | LG lo tiene, derivado y «No editar acá» (`LG@4b114d7:AGENTS.md:3-5`); LGD no lo tiene |
+| A-06 Instancia de «Cómo intervenir» | Sin oráculo | No existe en ninguno de los dos repositorios |
+| A-07 Workflow de la compuerta y guion local | Sin oráculo | LG sin control documental; LGD con `Verificar` (`LGD@b47d22b:.github/workflows/verificar.yml:1-20`) |
+| A-08 Línea de base y excepciones | Sin oráculo | No hay línea de base previa (`git grep -l docs-guard 4b114d7` → 0) |
+| A-09 `source.lock` o `base_commit` | Sin oráculo | La ia-db ancla en prosa (`LGD@b47d22b:ia-db/README.md:38`) |
+| A-10 Carril programado | Sin oráculo | No hay workflow programado en ninguno de los dos repositorios |
+| A-11 Entrada en índice y CHANGELOG | Sin oráculo | `LG@4b114d7:changelog.md:1`; `LGD@b47d22b:changelog.md:1-8` |
+
+## 4. Restricción (no es fila)
+
+**0 escrituras fuera del lugar del ensayo.** Ni en LG, ni en LGD, ni en el despliegue real. Anclas: los contenedores
+del despliegue son del PO (`LG@4b114d7:AGENTS.md:64`; `LGD@b47d22b:ia-db/README.md:103-105`); `PROMPTs/` es del PO
+(`LG@4b114d7:AGENTS.md:59`; `LGD@b47d22b:README.md:5`). Una escritura fuera del lugar del ensayo invalida la corrida.
+
+## 5. Valores sellados
+
+| Valor | Cifra |
+| --- | --- |
+| *n* (filas con oráculo) | **23** = 17 decisiones (D-01…D-17) + 6 trampas (T1–T5, T7). *n* sigue a `F099` §5.5, fila M2 («decisiones `D-01…D-17` y trampas»), que manda sobre `F016` §4.2 («decisiones P»): incluye las cuatro filas H, que se juzgan con la regla de clase H de «Comparación (M2)» |
+| Umbral M2 | **3** = ⌊0,15 · 23⌋ |
+| Clase H (M3) | **D-03, D-09, D-11, D-12** |
+| Sin oráculo | T6 (no existe en el SHA del caso); A-01…A-11 (fuera de M2) |
+| Trampas con oráculo | 6 de 7; el criterio T de `F016` §4.2 («≥ 6 de 7») queda con denominador 6 en este SHA: lo recalcula la mesa, no este oráculo |

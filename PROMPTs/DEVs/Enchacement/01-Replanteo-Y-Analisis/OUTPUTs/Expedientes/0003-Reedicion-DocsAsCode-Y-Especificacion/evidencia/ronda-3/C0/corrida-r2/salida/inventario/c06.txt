@@ -1,0 +1,2 @@
+AGENTS.md:139:Cambiar `AGENTS.md` es clase H. La compuerta lo excluye del aviso AI-3 (frases dirigidas al agente) por una excepción
+rc=0

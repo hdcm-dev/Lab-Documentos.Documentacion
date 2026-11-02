@@ -1,0 +1,2 @@
+$ find . -type f -not -path './.git/*' -print0 | sort -z | xargs -0 sha256sum | sha256sum
+6de588b9c166ec323ece72ad373bc26d4b6cf8664f506c7ef3a5ac9f7ec83409  -

@@ -1,0 +1,13 @@
+$ grep -n ^traces: montaje-rojo/docs/_requisitos.md
+12:traces: [FIC-DISENO-DOCUMENTAL, FIC-NO-EXISTE]
+$ (montaje-rojo) .docs-guard/scripts/ci-local.sh trazas docs
+== PR-5 trazas (docs AGENTS.md README.md)
+docs/_requisitos.md:1: ERROR traza-no-resuelve: FIC-NO-EXISTE: el ID no está declarado en el registro
+anclas: 1 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=6 resueltas=5 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc=1
+$ (montaje) .docs-guard/scripts/ci-local.sh trazas docs
+== PR-5 trazas (docs AGENTS.md README.md)
+anclas: 1 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=5 resueltas=5 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc=0

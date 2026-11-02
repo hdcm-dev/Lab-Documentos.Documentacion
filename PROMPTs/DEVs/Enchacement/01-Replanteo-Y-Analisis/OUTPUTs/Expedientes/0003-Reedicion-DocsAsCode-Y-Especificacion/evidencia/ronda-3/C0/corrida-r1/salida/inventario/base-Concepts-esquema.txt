@@ -1,0 +1,18 @@
+== PR-2 esquema (Concepts)
+Concepts/Framework-Concept/00-Marco.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/02-Cascaron-Puente-Y-Capacidades.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/03-Integracion-Y-Versionado.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/04-Estrategia-De-Pruebas.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/05-La-Demo-Como-Caso-De-Estudio.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/06-Procedimientos-PR-Integracion-Versionado.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/07-Red-Y-Autenticacion.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/08-Cohesion-Global.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/99-Anexos.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/Developer-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:1: ERROR esquema-cuerpo: doc_type: «libro» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Concepts/Framework-Concept/README.md:1: ERROR esquema-cuerpo: falta «description»
+Concepts/Framework-Concept/README.md:1: ERROR esquema-cuerpo: doc_type: «portada» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Concepts/Framework-Concept/README.md:1: ERROR prefijo: «GUIA-» no está en el registro (prefijos.txt)
+== PR-2 esquema: ROJO (errores=16 avisos=0) archivos-con-frontmatter=13 sin-frontmatter-fuera-del-cuerpo=7 readme-del-cuerpo-sin-frontmatter=0

@@ -1,0 +1,80 @@
+./GeometriaFactory.Api/Endpoints/PendingPasswordChangeGuard.cs:34:/// NO AUTORIZA. Verificar que el acceso trae papel `Administrator` no es lo mismo que verificar
+./GeometriaFactory.Api/Endpoints/AuthenticationEndpoints.cs:100:            var accessToken = accessTokens.Issue(identity.Id, identity.Email, identity.Role.ToString(), now);
+./GeometriaFactory.Api/Endpoints/AuthenticationEndpoints.cs:114:                identity.Role.ToString()));
+./GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:106:            if (RoleOf(context.User) != Role.Student)
+./GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:167:            if (RoleOf(context.User) != Role.Student)
+./GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:206:            if (RoleOf(context.User) != Role.Student)
+./GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:358:            if (role == Role.Administrator)
+./GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:411:            var result = role == Role.Administrator
+./GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:497:        var claim = principal.FindFirstValue(AccessTokenIssuer.RoleClaim);
+./GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:501:            : Role.Student;
+./GeometriaFactory.Api/Endpoints/CommissionAccountEndpoints.cs:281:        var claim = principal.FindFirstValue(AccessTokenIssuer.RoleClaim);
+./GeometriaFactory.Api/Endpoints/CommissionAccountEndpoints.cs:285:            : Role.Student;
+./GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:127:            ConfigureAdministratorUseCase configureAdministrator,
+./GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:148:            var result = await configureAdministrator
+./GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:170:                new AccountSetupResponse(identity.Id, identity.Email, identity.Role.ToString()));
+./GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:172:        .WithName("ConfigureAdministrator")
+./GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:196:            ConfigureAdministratorUseCase configureAdministrator,
+./GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:199:            var configured = await configureAdministrator
+./GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:325:                context.User.FindFirstValue(AccessTokenIssuer.RoleClaim),
+./GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:338:                context.User.FindFirstValue(AccessTokenIssuer.RoleClaim) ?? string.Empty));
+./GeometriaFactory.Api/Endpoints/ContractTranslation.cs:402:                        component.Role.ToString(),
+./GeometriaFactory.Application/Accounts/ResetStudentPasswordUseCase.cs:63:        if (requesterRole != Role.Administrator)
+./GeometriaFactory.Application/Accounts/ResetStudentPasswordUseCase.cs:81:        if (account.Role == Role.Administrator)
+./GeometriaFactory.Application/Accounts/RegisterAccountUseCase.cs:84:            requestedRole: Role.Student,
+./GeometriaFactory.Application/Accounts/ConfigureAdministratorUseCase.cs:8:/// CU-10 — Configura la única cuenta con papel `Administrator` de la instancia.
+./GeometriaFactory.Application/Accounts/ConfigureAdministratorUseCase.cs:86:        var constitution = Account.ConfigureAdministrator(
+./GeometriaFactory.Application/Accounts/GovernCommissionAccountsUseCase.cs:12:/// cinco operaciones empiezan comprobando que quien las pide tenga papel `Administrator` (RN-01),
+./GeometriaFactory.Application/Accounts/GovernCommissionAccountsUseCase.cs:61:        if (requesterRole != Role.Administrator)
+./GeometriaFactory.Application/Accounts/GovernCommissionAccountsUseCase.cs:111:        if (requesterRole != Role.Administrator)
+./GeometriaFactory.Application/Accounts/GovernCommissionAccountsUseCase.cs:129:        if (account.Role == Role.Administrator)
+./GeometriaFactory.Application/Accounts/GovernCommissionAccountsUseCase.cs:205:        if (requesterRole != Role.Administrator)
+./GeometriaFactory.Application/Works/ReviewCommissionWorksUseCase.cs:12:/// un solicitante sin papel `Administrator` **no llega a consultar nada** (FA-01, CA-03).
+./GeometriaFactory.Application/Works/ReviewCommissionWorksUseCase.cs:52:        if (requesterRole != Role.Administrator)
+./GeometriaFactory.Application/Works/ReviewCommissionWorksUseCase.cs:90:        if (requesterRole != Role.Administrator)
+./GeometriaFactory.Application/Works/DeleteWorkUseCase.cs:64:            return ApplicationResult<WorkStatus>.Rejected(requesterRole == Role.Administrator
+./GeometriaFactory.Application/Works/DeleteWorkUseCase.cs:69:        var resolution = requesterRole == Role.Administrator
+./GeometriaFactory.Application/Ports/IAccountRepository.cs:11:/// `Administrator`, y materializar el resultado incluida la marca de cambio de contraseña pendiente.
+./GeometriaFactory.Application/Ports/IAccountRepository.cs:36:    /// <summary>Si ya existe una cuenta con papel `Administrator` (RN-01, INV-05).</summary>
+./GeometriaFactory.Web/Components/Layout/WorkShell.razor:99:                    @if (Session.IsAdministrator)
+./GeometriaFactory.Web/Components/Layout/WorkShell.razor:177:    private bool _isAdministrator;
+./GeometriaFactory.Web/Components/Layout/WorkShell.razor:179:    private Destination[] Destinations => _isAdministrator ? AdministratorDestinations : StudentDestinations;
+./GeometriaFactory.Web/Components/Layout/WorkShell.razor:181:    private string RoleLabel => _isAdministrator ? "Administrador" : "Alumno";
+./GeometriaFactory.Web/Components/Layout/WorkShell.razor:225:        _isAdministrator = Session.IsOpen
+./GeometriaFactory.Web/Components/Layout/WorkShell.razor:226:            ? Session.IsAdministrator
+./GeometriaFactory.Web/Components/Pages/ClassSubmissionList.razor:88:else if (!Session.IsAdministrator)
+./GeometriaFactory.Web/Components/Pages/ClassSubmissionList.razor:422:        if (!Session.IsOpen || !Session.IsAdministrator)
+./GeometriaFactory.Web/Components/Pages/SignIn.razor:298:            Navigation.NavigateTo(Session.IsAdministrator ? "/entrega-comision" : "/mis-trabajos");
+./GeometriaFactory.Web/Components/Pages/WorkView.razor:142:    @if (Session.IsAdministrator)
+./GeometriaFactory.Web/Components/Pages/WorkView.razor:279:    @if (!IsAdministrator)
+./GeometriaFactory.Web/Components/Pages/WorkView.razor:474:    private bool IsAdministrator =>
+./GeometriaFactory.Web/Components/Pages/WorkView.razor:476:            ? Session.IsAdministrator
+./GeometriaFactory.Web/Components/Pages/WorkView.razor:480:    private string BackHref => IsAdministrator ? "/entrega-comision" : "/mis-trabajos";
+./GeometriaFactory.Web/Components/Pages/WorkView.razor:483:    private string BackLabel => IsAdministrator ? "Volver a la entrega de la comisión" : "Volver a mis trabajos";
+./GeometriaFactory.Web/Components/Pages/WorkSubmission.razor:120:else if (Session.IsAdministrator)
+./GeometriaFactory.Web/Components/Pages/WorkSubmission.razor:567:        if (!Session.IsOpen || Session.IsAdministrator || !InEdition)
+./GeometriaFactory.Web/Components/Pages/StudentWorkPanel.razor:87:else if (Session.IsAdministrator)
+./GeometriaFactory.Web/Components/Pages/StudentWorkPanel.razor:392:        if (!Session.IsOpen || Session.IsAdministrator)
+./GeometriaFactory.Web/Components/Pages/OwnCredentialChange.razor:204:                return Session.IsAdministrator ? "/entrega-comision" : "/mis-trabajos";
+./GeometriaFactory.Web/Services/SessionState.cs:107:    public string Role => Principal.FindFirst(SessionClaims.Role)?.Value ?? string.Empty;
+./GeometriaFactory.Web/Services/SessionState.cs:110:    public bool IsAdministrator => string.Equals(Role, "Administrator", StringComparison.Ordinal);
+./GeometriaFactory.Web/Services/SessionClaims.cs:24:    public const string Role = "gf:role";
+./GeometriaFactory.Web/Services/ProvisioningStateProbe.cs:22:///     `Administrator`, `A-03` responde `409` a la segunda —probado en las tres capas—, y `A-08`
+./GeometriaFactory.Domain/Entities/Work.cs:431:        if (requesterRole != Role.Administrator)
+./GeometriaFactory.Domain/Entities/Work.cs:497:        if (requesterRole != Role.Administrator)
+./GeometriaFactory.Domain/Entities/Component.cs:32:    public ComponentRole Role { get; private set; }
+./GeometriaFactory.Domain/Entities/Component.cs:68:            Role = role,
+./GeometriaFactory.Domain/Entities/Account.cs:26:/// papel `Administrator` con un solo código (CU-02 §6, CU-13 §6).
+./GeometriaFactory.Domain/Entities/Account.cs:39:    /// caminos de alta del producto son <see cref="ConfigureAdministrator"/> y
+./GeometriaFactory.Domain/Entities/Account.cs:66:    public Role Role { get; private set; }
+./GeometriaFactory.Domain/Entities/Account.cs:101:    /// CU-12 — Constituye la única cuenta con papel `Administrator` de la instancia.
+./GeometriaFactory.Domain/Entities/Account.cs:108:    /// El consumidor declara que no existe ninguna cuenta con papel `Administrator` (RN-01, INV-05).
+./GeometriaFactory.Domain/Entities/Account.cs:117:    public static DomainResult<Account> ConfigureAdministrator(
+./GeometriaFactory.Domain/Entities/Account.cs:162:            Role = Role.Administrator,
+./GeometriaFactory.Domain/Entities/Account.cs:178:    /// ES EL OTRO CAMINO DE ALTA, y tiene las reglas opuestas al de <see cref="ConfigureAdministrator"/>:
+./GeometriaFactory.Domain/Entities/Account.cs:227:        if (requestedRole != Role.Student)
+./GeometriaFactory.Domain/Entities/Account.cs:244:            Role = Role.Student,
+./GeometriaFactory.Domain/Entities/Account.cs:278:        if (Role == Role.Administrator)
+./GeometriaFactory.Domain/Entities/Account.cs:317:        if (Role == Role.Administrator)
+./GeometriaFactory.Domain/Entities/Account.cs:354:        if (Role == Role.Administrator)
+./GeometriaFactory.Domain/Entities/Account.cs:394:        if (Role == Role.Administrator)

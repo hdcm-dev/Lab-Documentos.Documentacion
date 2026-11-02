@@ -1,0 +1,2 @@
+grep: ayuda: No such file or directory
+rc=2

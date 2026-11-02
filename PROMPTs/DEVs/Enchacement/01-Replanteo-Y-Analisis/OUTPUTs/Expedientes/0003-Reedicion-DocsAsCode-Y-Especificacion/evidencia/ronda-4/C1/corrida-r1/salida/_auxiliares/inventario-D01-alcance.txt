@@ -1,0 +1,9 @@
+$ command grep -rnIiE "tenant|inquilino|AplicacionId|ApplicationId|scope" --include=*.cs LG/src | grep -v /obj/; echo rc
+LG/src/GeometriaFactory.Api/Composition/TwoPhaseStartup.cs:29:        using var scope = _services.CreateScope();
+LG/src/GeometriaFactory.Api/Composition/TwoPhaseStartup.cs:30:        var preparation = scope.ServiceProvider.GetRequiredService<StorePreparation>();
+LG/src/GeometriaFactory.Application/Works/ReviewCommissionWorksUseCase.cs:102:        var scope = work.ResolveAdministratorScope(requesterRole, WorkOperation.View);
+LG/src/GeometriaFactory.Application/Works/ReviewCommissionWorksUseCase.cs:103:        if (!scope.Succeeded)
+LG/src/GeometriaFactory.Application/Works/ReviewCommissionWorksUseCase.cs:105:            return ApplicationResult<WorkDetail>.Rejected(scope.ConditionCode!);
+LG/src/GeometriaFactory.Web/Services/ProvisioningStateProbe.cs:92:        using var scope = _scopes.CreateScope();
+LG/src/GeometriaFactory.Web/Services/ProvisioningStateProbe.cs:93:        var dataService = scope.ServiceProvider.GetRequiredService<DataServiceClient>();
+rc=0

@@ -1,0 +1,4 @@
+repo: {repositorio}
+sha: 4b114d7
+comparar: main
+rutas: src visor SDD samples scripts tests deploy

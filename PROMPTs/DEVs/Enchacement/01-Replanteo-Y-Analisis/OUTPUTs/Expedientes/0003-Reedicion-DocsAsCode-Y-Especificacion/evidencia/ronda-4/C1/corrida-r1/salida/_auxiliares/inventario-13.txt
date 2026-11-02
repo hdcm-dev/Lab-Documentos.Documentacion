@@ -1,0 +1,173 @@
+== cd LG
+$ command grep -rniE -e privad -e 'públic' -e private -e public -e visibility README* AGENTS.md .github {indice}
+README.md:3:Fábrica de Geometría: laboratorio de geometría de la cátedra, público de consulta.
+AGENTS.md:11:Dos unidades de entrega —`GeometriaFactory-Api`, el servicio de datos, y `GeometriaFactory-Web`, la pieza pública con su visor— sobre siete proyectos de código. C# sobre .NET 10, EF Core sobre SQLite, TypeScript con webpack en el visor.
+AGENTS.md:71:- El servicio **escucha en 5080**, no en 8080: la configuración de Kestrel gana sobre `ASPNETCORE_URLS`. Publicar `-p <libre>:5080`.
+AGENTS.md:84:| desplegarlo y saber volver atrás | `SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/09-Devops/Guia-Publicacion-Image-Docker.md` y el registro de cambios (`Guia-Despliegue.md` no está emitida) |
+.github/workflows/ci.yml:28:#   PUBLICAR    toca un servidor real, depende de secretos y de un anfitrión que a veces
+.github/workflows/ci.yml:31:# Con un solo flujo, ampliar el filtro para cubrir el `Api` habría significado publicar el
+.github/workflows/ci.yml:35:# ESTE FLUJO NO PUBLICA NADA y no lee ningún secreto. Corre las dos puertas y termina.
+.github/workflows/e2e.yml:4:# QUE PRUEBA, Y CONTRA QUE. No levanta nada: abre un navegador contra la dirección publicada y
+.github/workflows/e2e.yml:15:#      recicla, la dirección pública del laboratorio puede cambiar—. Una compuerta que se pone en
+.github/workflows/e2e.yml:19:# Se dispara A MANO, después de que el Product Owner publica una versión en el servidor propio.
+.github/workflows/e2e.yml:21:# ya no publica lo que corre: esa atadura se quitó (mesa `SDD/Docs/Audit/Mesa-2026-09-14.md`, R-15).
+.github/workflows/e2e.yml:36:# la dirección pública, que es exactamente lo que no se quiere que estas pruebas dependan.
+.github/workflows/e2e.yml:68:    # una máquina que aguante publicar dos piezas y abrir un navegador sin cobrar por minuto.
+.github/workflows/e2e.yml:70:    # EL RUNNER PROPIO NO EJECUTA CODIGO DE UN FORK. El repositorio es público: un pull request
+.github/workflows/e2e.yml:94:      # El bundle del visor lo genera `GeometriaFactory.Web.csproj` cuando el banco local publica
+.github/workflows/e2e.yml:106:      # SIN NINGUNA VARIABLE DE ENTORNO, Y ESO ES EL PUNTO: sin `URL_BASE` la suite publica y
+.github/workflows/e2e.yml:133:    # SOLO A MANO: toca datos del laboratorio desplegado y lo pide quien acaba de publicar.
+.github/workflows/e2e.yml:180:          # LA DIRECCION PUBLICA Y LA DEL SERVICIO DE DATOS SON LAS MISMAS QUE USA LA PUBLICACION.
+.github/workflows/e2e.yml:182:          # que se publicó, que es un modo de falla difícil de ver.
+.github/workflows/e2e.yml:183:          URL_BASE: ${{ secrets.PUBLIC_URL }}
+.github/workflows/deploy-front-ftp.yml:1:# Publicación del front por transferencia al hosting (intake §17.6.P.7 y §17.6.P.8;
+.github/workflows/deploy-front-ftp.yml:5:# sin `GeometriaFactory.Contracts`, un cambio del contrato no dispara la publicación y las dos
+.github/workflows/deploy-front-ftp.yml:8:# Y NO TERMINA EN LA SUBIDA: termina comprobando que la dirección pública responde.
+.github/workflows/deploy-front-ftp.yml:10:# NO EMPIEZA POR PUBLICAR, TAMPOCO. Antes de subir corre las dos puertas que
+.github/workflows/deploy-front-ftp.yml:14:# de compilación frenaba la publicación, pero **una advertencia y la batería entera en rojo
+.github/workflows/deploy-front-ftp.yml:29:# `changelog.md` «Dockerizar el front», 2026-09-06). Este flujo publica al hosting externo
+.github/workflows/deploy-front-ftp.yml:32:# estas rutas —lo hacía, y por eso `main` se publicó dos veces a dos topologías el mismo día,
+.github/workflows/deploy-front-ftp.yml:41:      # los reintentos de FTP se fusionó a `main` y NO DISPARÓ ESTA PUBLICACIÓN, porque el
+.github/workflows/deploy-front-ftp.yml:43:      # si el arreglo servía. UN PUBLICADOR QUE NO SE EJERCITA CUANDO SE LO MODIFICA se
+.github/workflows/deploy-front-ftp.yml:73:      - name: Publicar el front
+.github/workflows/deploy-front-ftp.yml:103:      # la publicacion dejo de funcionar. «Antes andaba» tiene exactamente esa explicacion, y
+.github/workflows/deploy-front-ftp.yml:118:      # pudimos crear la cuenta». UNA PUBLICACION QUE NO REINICIA NO ES UNA PUBLICACION.
+.github/workflows/deploy-front-ftp.yml:137:          PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+.github/workflows/deploy-front-ftp.yml:168:                      --max-time 15 "$PUBLIC_URL" || true)"
+.github/workflows/deploy-front-ftp.yml:232:          PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+.github/workflows/deploy-front-ftp.yml:248:                      --max-time 20 "$PUBLIC_URL" || true)"
+.github/workflows/deploy-front-ftp.yml:257:      - name: Comprobar que la direccion publica responde
+.github/workflows/deploy-front-ftp.yml:259:          PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+.github/workflows/deploy-front-ftp.yml:266:          test -n "$PUBLIC_URL" || { echo "Falta el secreto PUBLIC_URL del repositorio."; exit 1; }
+.github/workflows/deploy-front-ftp.yml:267:          status_code="$(curl --silent --show-error --location --max-time 30 --output /dev/null --write-out '%{http_code}' "$PUBLIC_URL")"
+.github/workflows/deploy-front-ftp.yml:268:          echo "La direccion publica respondio $status_code"
+.github/workflows/deploy-front-ftp.yml:269:          test "$status_code" = "200" || { echo "La direccion publica no respondio 200."; exit 1; }
+.github/workflows/deploy-front-ftp.yml:274:          # el flujo podia declarar `success` con el sitio PUBLICADO Y SIN DATOS: la pagina
+.github/workflows/deploy-front-ftp.yml:279:          # PUBLICADO Y ROTO NO ES UN EXITO. La pagina de estado existe para decir si el dato
+.github/workflows/deploy-front-ftp.yml:280:          # es real; si dice que no, la publicacion no cumplio su proposito.
+.github/workflows/deploy-front-ftp.yml:281:          estado="$(curl --silent --show-error --location --max-time 40 "${PUBLIC_URL%/}/estado" || true)"
+.github/workflows/deploy-front-ftp.yml:283:            echo "::error::El sitio esta publicado y NO alcanza al servicio de datos."
+.github/workflows/deploy-front-ftp.yml:288:          echo "El sitio publicado alcanza al servicio de datos."
+rc=0
+== cd LGD
+$ command grep -rniE -e privad -e 'públic' -e private -e public -e visibility README* AGENTS.md .github {indice}
+README.md:24:| **Qué delega** | El agente que conduce la unidad abre el pull request, publica el informe con el enlace, lo fusiona si la guarda G1–G4 pasa y no hay reserva, borra la rama remota y deja `main` local al día |
+grep: AGENTS.md: No such file or directory
+ia-db/README.md:25:| Cómo se construye, se corre y se publica: los guiones, **las tres imágenes**, `compose.yaml` (que no es el despliegue), la publicación real, la regla de etiquetar y los tres flujos | [`indexes/08_DevOps-Construccion-Y-Despliegue.md`](indexes/08_DevOps-Construccion-Y-Despliegue.md) |
+ia-db/README.md:40:| Tipo | Laboratorio de cátedra, público de consulta: **dos unidades de entrega** (`GeometriaFactory-Api`, `GeometriaFactory-Web`) sobre **siete proyectos de código**; la solución agrupa **31** proyectos |
+ia-db/README.md:42:| Estado | **Ocho etapas comprometidas cerradas (`a`–`h`)**; la **`i`, despliegue real, realizada desde el 2026-09-06 y abierta**: le faltan `PT-05` medida desde la facultad y el circuito presenciado con un alumno; la **`k`, API pública y versionado, cerrada** con OK del PO del 2026-09-13; `j…` sin especificar (00 §4) |
+ia-db/README.md:80:    ├── 08_DevOps-Construccion-Y-Despliegue.md Guiones, las tres imágenes, flujos, publicación
+ia-db/README.md:165:  - 08: tres imágenes, `compose.yaml` como verificación, la publicación real (`R-13`) y etiquetar
+ia-db/indexes/01_Corpus-Documental-SDD.md:126:| `09-Devops` (6) | `Pipeline-CI-CD.md`, `Entornos-Deploy.md`, `Estrategia-Versionado.md`, `Guia-Publicacion-Image-Docker.md` **1.5** —§2.2 describe «la publicación real, tal como corre desde el 2026-09-06», **incluida la imagen del front `deploy/Dockerfile.web`**—, `Supply-Chain-Seguridad.md`, `README.md` |
+ia-db/indexes/01_Corpus-Documental-SDD.md:143:| `09-Devops` (7) | `Guia-Publicacion-Front-Ftp.md`, `Guia-Publicacion-Bundle-Visor.md`, `Pipeline-CI-CD.md`, `Entornos-Deploy.md`, `Estrategia-Versionado.md`, `Supply-Chain-Seguridad.md`, `README.md`. **La imagen del front no tiene guía propia acá**: la describe la guía de la unidad `Api` (§4) |
+ia-db/indexes/01_Corpus-Documental-SDD.md:176:| `Mesa-2026-09-12-ciclo-2.md` | 1.1 | Convocatoria directa: el PO respondió `E-02`/`E-04` y pidió plan | `RT-` (sin hallazgos propios) | **El plan de exposición pública**: los diez ítems de la fase `k` (§4, citado por `Roadmap-Producto.md` §2) |
+ia-db/indexes/01_Corpus-Documental-SDD.md:179:| `Mesa-2026-09-14.md` | 1.4 | Mesa de expertos a pedido: «una evaluación de todo el proyecto», base `5defb47` | `RN9-` | Evaluación integral: **24 ítems `R-01` a `R-24`**, dictamen (§5), plan en lotes (§6), escaladas `E-1` a `E-7` (§8). **Reserva de detalle en `R-07`** por ser repositorio público (cabecera) |
+ia-db/indexes/01_Corpus-Documental-SDD.md:226:| Reemisiones de unidad | `Definicion-Superficie-HTTP` 1.15, `Contratos-REST` 1.11, `Mini-Plan` 3.8, `Guia-Publicacion-Image-Docker` 1.5, devops de las dos unidades y calidad de `Api` |
+ia-db/indexes/01_Corpus-Documental-SDD.md:229:**Magnitudes que la 3.0 publicaba y ya no valen**: 542 vivos → **650**; 1.147 totales → **1.329**;
+ia-db/indexes/03_Dominio-Y-Reglas-De-Negocio.md:21:`Observation.cs` 91). Todas `sealed`, con propiedades de `private set`.
+ia-db/indexes/03_Dominio-Y-Reglas-De-Negocio.md:197:Métodos públicos, todos devolviendo `DomainResult` / `DomainResult<T>` (`Domain/Guards/DomainResult.cs`,
+ia-db/indexes/03_Dominio-Y-Reglas-De-Negocio.md:236:`Domain/Values/ConditionCode.cs` (190 líneas) declara **37 constantes** `public const string`, en
+ia-db/indexes/06_Persistencia-Y-Seguridad.md:162:`Mesa-2026-09-14.md` §6.1, con remisión a `Guia-Publicacion-Image-Docker.md` §2.2.
+ia-db/indexes/06_Persistencia-Y-Seguridad.md:198:| Función | **PBKDF2-SHA256** (constante pública `AnchoredFunction`), vía `Rfc2898DeriveBytes`: la plataforma la provee y Argon2 exigía un paquete de terceros |
+ia-db/indexes/06_Persistencia-Y-Seguridad.md:276:| Visibilidad | `DataProtectionState` publica la ruta en la página de estado |
+ia-db/indexes/06_Persistencia-Y-Seguridad.md:454:| `DD-R9-7` | Detalle público de `R-07` (el de `R-03` y `R-05`/`REF-02` ya se publicó en `Mesa-2026-09-14.md` 1.3) | La composición declara el dominio y se agrega el detalle en una versión 1.x | ídem |
+ia-db/indexes/00_MASTER-INDEX.md:30:la superficie pública se versiona en la ruta, `/v{MAJOR}/` (`Api ADR-00010`). Lo que no cambió: una
+ia-db/indexes/00_MASTER-INDEX.md:40:| Tipo | Laboratorio de cátedra, **público de consulta** (`README.md`): **2 unidades de entrega** sobre **7 proyectos de código** |
+ia-db/indexes/00_MASTER-INDEX.md:44:| Despliegue real | Contenedores `lab-geometria-api` y `lab-geometria-web` del Product Owner, publicados por túnel bajo dominio propio (`AGENTS.md`; `Roadmap-Producto.md` §2.1 fila `i`) |
+ia-db/indexes/00_MASTER-INDEX.md:73:detalle de imágenes, composición y publicación está en
+ia-db/indexes/00_MASTER-INDEX.md:89:| Regla | Enunciado | Qué cambió con la API pública |
+ia-db/indexes/00_MASTER-INDEX.md:91:| `RA-01` | Ningún guion del navegador invoca el servicio de datos | **Sigue vigente para el front** tras `E-02` [DECISIÓN 2026-09-12]; la exposición pública es hacia otras aplicaciones propias. CORS no aplica hoy: ningún cliente propio es JavaScript de navegador desde otro origen (`changelog.md`, «CORS no aplica hoy») |
+ia-db/indexes/00_MASTER-INDEX.md:103:| `b` · Cáscara pública | Las once superficies alcanzables y el sistema visual portado | Cerrada |
+ia-db/indexes/00_MASTER-INDEX.md:112:| `k` · API pública y versionado | Contrato bajo `/v1/`, MinVer, límite de tasa, OpenAPI y Scalar publicados, sample de onboarding, política de deprecación | **Cerrada**, OK explícito del Product Owner del 2026-09-13 («tenés el ok de la fase K») |
+ia-db/indexes/00_MASTER-INDEX.md:123:| 1 | Contenedores desde su composición, imágenes selladas, túnel, dominio; publicación reproducible | Hecho; **constancia de tres corridas** del 2026-09-14 (`cc024c5`, `8d8c857`, `2c34070`), por `Mesa-2026-09-15.md` D-6 | Nada | — |
+ia-db/indexes/00_MASTER-INDEX.md:167:columna «3.0» es el valor que publicaba la base anterior sobre `89f3ab3`, para ver el salto. Donde el
+ia-db/indexes/00_MASTER-INDEX.md:297:| Guiones, imágenes, flujos de CI, MinVer, etiquetas y publicación real | [`08_DevOps-Construccion-Y-Despliegue.md`](08_DevOps-Construccion-Y-Despliegue.md) |
+ia-db/indexes/00_MASTER-INDEX.md:304:historial** (`changelog.md` l.8)—; esta base publica su resultado al 2026-10-26 y no lo replica.
+ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:51:| `ADR-080xx` | `Contracts` (nivel producto) | `Producto/Adrs/` | 8 | Tipos planos · tipo de error único con conjunto cerrado · versionado por compilación compartida · regla de exposición · listado separado del detalle · el visor recibe piezas y no el texto · el aviso de selección va en las opciones · el explorador no se publica solo |
+ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:66:| `ADR-00010` 1.2 | 2026-09-12 | `E-04`, PO | La superficie pública lleva **`/v{MAJOR}/`**, sólo el `MAJOR`, que **es el del producto**. Deroga la regla 1 de `ADR-00008`; las reglas 2 a 5 subsisten (§2.3) |
+ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:151:| `E-02` | La API quedó públicamente alcanzable | **B**: «la API debe ser expuesta públicamente; la idea es ofrecerla para otros clientes» | Intake 4.3; fila `k` del roadmap |
+ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:157:**La fase `k` —exposición pública y versionado del contrato— se abrió el 2026-09-12 y cerró el
+ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:169:se publicaron en la 1.3, `R-07` conserva la reserva operativa (`Mesa-2026-09-14.md` 1.4,
+ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:185:| `R-13`, `R-14` | Publicación real no descrita; front sin versión visible | P1, P2 | PR #225 y #222 |
+ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:216:| `D-5` etiqueta o `main` | **Etiquetar antes de desplegar** (`Estrategia-Versionado.md` §3.c ya lo mandaba); sube MINOR | `Guia-Publicacion-Image-Docker.md` 1.5 §2.2; **etiqueta `v1.2.0` sobre `4b114d7`** (`git tag --points-at`) |
+ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:217:| `D-6` constancia de dos corridas | Las tres publicaciones del 2026-09-14 (`cc024c5`, `8d8c857`, `2c34070`) **son** la constancia | `Mini-Plan.md` 3.8 §9.1 |
+ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:267:| `PRODUCT-INTAKE` §16 describe `deploy/compose.yaml` como «despliegue desde Git en destino» | Sigue en el texto (l.661); la guía de publicación aclara que **la composición real no es esa** | `Guia-Publicacion-Image-Docker.md` l.98 |
+ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:271:| Dos vías de publicación del front | **Resuelto en parte**: el FTP quedó como canal alternativo, sólo por `workflow_dispatch` (`RS-P-06`, `b180b76`); su retiro formal es del PO (§5.1) | `Mesa-2026-09-12.md` §7 |
+ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:301:publicación, en [`08_DevOps-Construccion-Y-Despliegue.md`](08_DevOps-Construccion-Y-Despliegue.md);
+ia-db/indexes/05_Front-Web-Y-Visor-3D.md:48:publicado no ofrece WebSocket —sólo `ServerSentEvents` y `LongPolling`— (`App.razor`, medido el
+ia-db/indexes/05_Front-Web-Y-Visor-3D.md:166:| `wwwroot/interaction/surface-interaction.js` | 723 | **El único guion propio de la pieza pública**: copiar, estado en curso, acción habilitada por coincidencia, diálogos; además invoca a `window.GeometriaFactoryViewer` |
+ia-db/indexes/05_Front-Web-Y-Visor-3D.md:227:| Versión sin `-` | Publicada | `Versión <v>` |
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:1:# 08 · DevOps — cómo se construye, se corre y se publica
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:3:> **Propósito.** Los guiones, las tres imágenes, los tres flujos de canalización, la publicación
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:9:> `SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/09-Devops/Guia-Publicacion-Image-Docker.md` 1.5
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:68:(`Web/09-Devops/Guia-Publicacion-Bundle-Visor.md` l.58). Consecuencia: **construir la solución
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:98:| `scripts/run-web.sh` | Levanta la pieza pública; `ApiBaseUrl` llega por configuración | Rotulado **[PROPUESTA SIN BASE DECLARADA]** (`Plan-Etapa-A.md` §4) |
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:188:  sitio en cada publicación— y la reescritura de `ApiBaseUrl` **dentro del artefacto** (el
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:233:> 3.5 l.92 y en `Guia-Publicacion-Image-Docker.md` 1.5 §2 (l.61), que en su propia §2.2 dice lo
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:238:## 7. La publicación real (`R-13`, `Guia-Publicacion-Image-Docker.md` 1.5 §2.2)
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:242:(commit `03804c7`, «La publicación real queda descrita en el repositorio»). La guía **no transcribe
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:254:**Publicación**: los dos servicios en la red de un túnel del anfitrión, **sin puertos publicados**,
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:263:| `Documentacion__Publicada` | Datos | Opcional: publica OpenAPI y el explorador (`ADR-08008`) |
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:324:  superficie pública lleva `/v{MAJOR}/`** (`ADR-00010`; `ContractRoutePrefix.Value = "/v1"`, commit
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:339:`ubuntu-latest`, **sin secretos y sin publicar**:
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:360:publicó **dos veces a dos topologías** el mismo 2026-09-12 (encabezado l.26–34).
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:367:(hasta 120 s) → exige **200** en la dirección pública **y después lee `/estado`** buscando
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:368:`class="failure"`. **Publicado y roto no es un éxito.**
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:375:`PUBLIC_URL` (**seis**). Sólo `API_BASE_URL` y `PUBLIC_URL` se comprueban no vacíos con `test -n`
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:383:publica. Concurrencia `e2e-laboratorio` con `cancel-in-progress: false`.
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:389:| `pruebas` | `self-hosted, {maquina}-dev`, por navegador, `fail-fast: false` | Tras `matriz` | Modo desplegado: `URL_BASE` = `PUBLIC_URL`, `API_BASE_URL`, `E2E_ADMIN_EMAIL`, `E2E_ADMIN_PASSWORD` |
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:403:| **Publicación real, etiqueta, reversión** | `GeometriaFactory-Api/09-Devops/Guia-Publicacion-Image-Docker.md` | 1.5 |
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:409:| Publicar por FTP (canal alternativo) | `GeometriaFactory-Web/09-Devops/Guia-Publicacion-Front-Ftp.md` | 1.5 |
+ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:410:| Publicar el bundle | `GeometriaFactory-Web/09-Devops/Guia-Publicacion-Bundle-Visor.md` | 1.0 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:34:| Recuentos de identificadores | `grep -c 'public const string'` sobre `ErrorCode.cs` (16) y `ConditionCode.cs` (37) |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:45:ninguna batería, puerta, sample ni construcción de imagen. Las cifras de resultado que publica esta
+ia-db/indexes/12_Observaciones-Del-Indexado.md:132:nombran `Dockerfile.web`, entre ellos `Guia-Publicacion-Image-Docker.md` (fila «Front», l.103).
+ia-db/indexes/12_Observaciones-Del-Indexado.md:148:| O-20 | La fecha de cabecera quedó atrás de la última fila del control de cambios: `Roadmap-Producto.md` 1.16 (cabecera 09-13, fila 09-14); `Api/07-Plan-Sprint/Mini-Plan.md` 3.8 (cabecera 09-13, fila 09-15; filas en orden 3.6, 3.8, 3.7, l.891–893); `Producto/Plan-Etapa-A.md` 1.13 (08-13 / 09-13); `Handoff-Checkout.md` 1.10 (08-12 / 08-31); `Web/09-Devops/README.md` 2.4 (08-16 / 09-12); `Api/09-Devops/Guia-Publicacion-Image-Docker.md` 1.5 (08-11 / 09-15); `Producto/Norma-De-Nomenclatura.md` sin campo de versión, fecha 08-31, última fila 1.31 del 09-14 | los siete documentos, cabecera y control de cambios | 01, 08, 10, 11 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:149:| O-21 | `Contrato-Agentes.md`: el frontmatter dice `version: "1.0"` y `last_review: 2026-08-30`, pero el control de cambios tiene la fila 1.1 del 2026-09-14 (l.141) y la 1.0 está archivada en `_legacy/2026-09-14/`. Su l.121 dice que la publicación real «se describe en un solo lugar en la fase `i` (R-13)», en futuro; `Mesa-2026-09-14.md` l.230 da R-13 por «Hecho» (PR #225) y la guía tiene §2.2 «La publicación real» | `SDD/Docs/Producto/11-Documentacion/Contrato-Agentes.md`; `SDD/Docs/Audit/Mesa-2026-09-14.md` | 01, 08 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:157:| O-14 | El manifiesto 7.1 (l.142, l.154), `SDD/Docs/README.md` (l.55, l.75, l.84) y `Vista-Producto.md` §2 declaran el front «con **MudBlazor**» y/o «en el **hosting público**». Ningún `.csproj` referencia MudBlazor (`git grep -il mudblazor -- '*.csproj'` sólo da el comentario de `GeometriaFactory.Web.csproj` l.9–17, que declara el apartamiento de **no** introducirlo), y el canal vigente son contenedores del servidor propio (`deploy-front-ftp.yml` l.26–31) | manifiesto §2.A, §2.B; `SDD/Docs/README.md` §2.1, §3; `src/GeometriaFactory.Web/GeometriaFactory.Web.csproj` | 00, 02 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:159:| O-25 | `Vista-Producto.md` §5 (l.203), §6 (l.225) y RI-02 (l.235) citan sólo `Api ADR-00008` «sin versionado de rutas»; ADR-00008 está «Superado parcialmente» por `ADR-00010` desde el 2026-09-12 y `ContractRoutePrefix.Value = "/v1"` (l.42, `de0b73b`, PR #195). La guía de publicación 1.5 §5 (l.173) sigue fijando «Rutas con prefijo o sufijo de versión: Exactamente **0**» sobre «los **quince** puntos» | `SDD/Docs/Producto/Vista-Producto.md`; `src/GeometriaFactory.Api/Endpoints/ContractRoutePrefix.cs`; `Api/09-Devops/Guia-Publicacion-Image-Docker.md` | 02, 08 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:177:| O-36 | `Contratos-REST.md` §2.1 (l.46–52): el contrato «no [se declara] en una descripción formal de servicio». El servicio publica `/openapi/v1.json` (`Composition/ApiDocumentation.cs`, ADR-08008), y desde `c392531` (PR #217) declara el esquema Bearer | `Contratos-REST.md` §2.1; `src/GeometriaFactory.Api/Composition/ApiDocumentation.cs` | 04 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:198:| O-15 | Documentos de Web que siguen dando el hosting como canal: `Web/09-Devops/README.md` l.64 «La **única** imagen de contenedor del producto es la del backend» (existe `deploy/Dockerfile.web`) y l.110 «Ambientes 2: contenedor de desarrollo y hosting público»; `Web/09/Entornos-Deploy.md` l.33 «La única unidad desplegable» y l.100 el FTP como «la única pieza de automatización», con **0** apariciones de `Dockerfile.web`; `ADR-10002` l.17 y l.44 fundan la decisión en que «el hosting gratuito… resetea el estado» (registrado como R-22) | los tres documentos de `Unidades-Entrega/GeometriaFactory-Web/` | 01, 08, 11 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:199:| O-16 | `deploy-front-ftp.yml` l.4: «EL FILTRO DE RUTAS LLEVA TRES ENTRADAS», y `on:` sólo tiene `workflow_dispatch` desde `b180b76`; l.34: «Los **cinco** secretos», y el flujo lee **seis** (`API_BASE_URL`, `FTP_PASSWORD`, `FTP_SERVER`, `FTP_SERVER_DIR`, `FTP_USERNAME`, `PUBLIC_URL`); l.113: «`Program.cs` linea 70 lee `ApiBaseUrl`», y la lectura está en l.204. `Pipeline-Producto.md` §4 (l.133) sigue afirmando el filtro | `.github/workflows/deploy-front-ftp.yml`; `src/GeometriaFactory.Web/Program.cs`; `SDD/Docs/Producto/Pipeline-Producto.md` | 08 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:200:| O-17 | `deploy/compose.yaml` sigue descrito como «despliegue desde Git en destino» en `Api/09/Entornos-Deploy.md` l.92 y en la guía de publicación l.61, mientras el archivo se declara «COMPOSICIÓN DE VERIFICACIÓN — no es la de despliegue» (l.1) | `deploy/compose.yaml`; los dos documentos de `Api/09-Devops/` | 08 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:201:| O-47 | La guía de publicación l.37: «El intake **§13** lo declara… en su fila «Despliegue manual del backend»». La fila está en l.336, dentro de **§10** (l.325); §13 empieza en l.392 | `Api/09-Devops/Guia-Publicacion-Image-Docker.md`; intake | 08 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:202:| O-48 | `Mesa-2026-09-14.md` conserva `DD-R9-7` con «R-03, R-05 con REF-02 y R-07» (l.251) y «Detalle reservado: R-03, R-05 con REF-02, R-07» (l.311), aunque su fila 1.3 (l.323) «Publica el detalle de R-03 y de R-05 con REF-02» | `SDD/Docs/Audit/Mesa-2026-09-14.md` | 06 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:203:| O-74 | La guía de publicación 1.5 §5 (l.173) adopta la métrica de `ADR-00008` §8 «Rutas con prefijo o sufijo de versión: exactamente **0**», sobre la «inspección de los **quince** puntos»; la superficie tiene 17 puntos y 16 cuelgan de `/v1` (`ContractRoutePrefix.Value`) desde `ADR-00010` | `Api/09-Devops/Guia-Publicacion-Image-Docker.md`; `src/GeometriaFactory.Api/Endpoints/ContractRoutePrefix.cs` | 08 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:231:| O-67 | `RT-06` con dos sentidos: el intake (l.548) y la norma §5.3 la usan para «las dos se despliegan juntas ante un cambio de contrato»; la única RT-06 declarada (`Web/02/Especificacion-Funcional.md` l.220) dice «La pieza pública no guarda estado propio» | intake; Norma §5.3; `Web/02-Especificacion-Funcional/Especificacion-Funcional.md` | 10 |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:249:| «El changelog declara Application 56 y el fuente da 61» | La entrada es del 2026-09-14 por la mañana (l.1909–1920); `203c4e9` (R-07, 16:14 del mismo día) agregó las pruebas. Antes de ese commit, 48 `[Fact]` + 8 `[InlineData]` = **56**: la cifra era correcta a su fecha. Lo que sí es cierto es que ninguna entrada posterior publica el recuento nuevo (61) |
+ia-db/indexes/12_Observaciones-Del-Indexado.md:279:  la guía de publicación §2.2 y el propio flujo de FTP, que se declara alternativo y manual (O-9).
+ia-db/indexes/07_Pruebas-Y-Puertas-De-Calidad.md:53:**Treinta y cinco clases de prueba y tres andamios** (`DataServiceHarness`, `PublicPieceHarness`,
+ia-db/indexes/07_Pruebas-Y-Puertas-De-Calidad.md:100:  publicar el front (`Web ADR-10008`; `GeometriaFactory.Web.csproj`:55-60 y 77).
+ia-db/indexes/07_Pruebas-Y-Puertas-De-Calidad.md:127:| **Banco local** | `scripts/pruebas-e2e.sh` sin `URL_BASE` | La suite publica y levanta el producto entero, con **almacén de esa corrida y puertos pedidos al sistema**. No hace falta ningún secreto y **no se toca ningún dato ajeno**. Es el modo que se corre antes de empujar un cambio, y **el que corre la CI en cada empujón** (§4) |
+ia-db/indexes/07_Pruebas-Y-Puertas-De-Calidad.md:128:| **Desplegado** | `URL_BASE=… API_BASE_URL=… E2E_ADMIN_EMAIL=… E2E_ADMIN_PASSWORD=… scripts/pruebas-e2e.sh` | El navegador contra el sitio publicado. **Es el único modo que puede decir «el sitio publicado anda»**, y el único que toca datos reales: siembra su alumno y sus trabajos, y los borra al terminar. **Sólo a mano** (§4) |
+ia-db/indexes/07_Pruebas-Y-Puertas-De-Calidad.md:251:| `PT-01` (cuatro partes) | Arranque en la dirección pública, transporte del circuito, estabilidad 20 min, salida hacia el servicio | `Estrategia-Calidad.md` de Web §3.2 |
+ia-db/indexes/07_Pruebas-Y-Puertas-De-Calidad.md:272:| `verify-stage-i.sh` | **6** (`I-1`…`I-6`, reescrita: antes eran siete) | Propia, contra un despliegue real | `PUBLIC_URL`, `API_URL`, `curl`; `I-6` corre las otras |
+ia-db/indexes/07_Pruebas-Y-Puertas-De-Calidad.md:335:| `ci.yml`, trabajo `puertas` | `push` a `main`, todo `pull_request`, a mano | `ubuntu-latest` | `verify-solution-tree.sh` → `build.sh` (**QG-01**) → `test.sh` (**QG-02**) → `coverage.sh` (**QG-03, QG-06, QG-04**) → `verify-stage-d.sh`, `-e.sh` y `-h.sh`. Con .NET 10 y Node 22. No publica ni lee secretos |
+ia-db/indexes/02_Arquitectura-Y-Proyectos.md:139:### 4.1 `Domain` — 17 `.cs`, sin paquetes propios en el `.csproj` (hereda `MinVer` 8.0.0, `PrivateAssets=All`, de `Directory.Build.props`; mismos archivos que en la 3.0, cambió `Account.cs`)
+ia-db/indexes/02_Arquitectura-Y-Proyectos.md:153:### 4.2 `Application` — 28 `.cs`, sin paquetes propios en el `.csproj` (hereda `MinVer` 8.0.0, `PrivateAssets=All`, de `Directory.Build.props`; 27 en la 3.0)
+ia-db/indexes/02_Arquitectura-Y-Proyectos.md:188:(`PrivateAssets=all`), `Microsoft.IdentityModel.JsonWebTokens` 8.22.0. Detalle en
+ia-db/indexes/02_Arquitectura-Y-Proyectos.md:191:### 4.4 `Contracts` — 31 `.cs`, sin paquetes propios en el `.csproj` (hereda `MinVer` 8.0.0, `PrivateAssets=All`, de `Directory.Build.props`; sin cambios de archivos)
+ia-db/indexes/02_Arquitectura-Y-Proyectos.md:218:10.0.11, `Microsoft.EntityFrameworkCore.Design` 10.0.11 (`PrivateAssets=all`, sólo tiempo de
+ia-db/indexes/02_Arquitectura-Y-Proyectos.md:262:| **`PackageReference MinVer`** | **`8.0.0`**, `PrivateAssets="All"` | **Nuevo** (`38f0992`, `BT-00033`, decisión `D-03` de la mesa del 2026-09-12) |
+ia-db/indexes/02_Arquitectura-Y-Proyectos.md:270:dos `Dockerfile` pasan `-p:SourceRevisionId`. Cómo se etiqueta y publica está en
+ia-db/indexes/02_Arquitectura-Y-Proyectos.md:277:privados `_camelCase`— que `TreatWarningsAsErrors` vuelve bloqueantes (`Norma-De-Nomenclatura.md`
+ia-db/indexes/02_Arquitectura-Y-Proyectos.md:293:conserva una etapa `node:22` que corre el guion y publica con `-p:SkipVisorBuild=true`.
+ia-db/indexes/02_Arquitectura-Y-Proyectos.md:303:| `GeometriaFactory-Web` | `web-monolith` | `Web`, `Contracts`, `Visor` | `deploy/Dockerfile.web` (tres etapas: `node:22`, `sdk:10.0`, `aspnet:10.0`; `:8080`) | Hosting público: **único punto de contacto del navegador** |
+ia-db/indexes/02_Arquitectura-Y-Proyectos.md:392:citando sólo `ADR-00008`; la superficie se publica bajo `/v1` (ver
+ia-db/indexes/09_Samples-Ejecutables.md:177:| Hueco del contrato (`H-03`) | `api/03` contó sobre el OpenAPI publicado **diecisiete operaciones contra dieciséis declaradas**; la sobrante era `POST /interpretaciones`, contrapartida de `ADR-08006` que el barrido había llevado a la categoría 02 y no a la 05 ni a la 10. Se adoptó en `Contratos-REST.md` 1.5 | Reporte, línea 104 y fila 6.0 (2026-08-31) |
+ia-db/indexes/04_Superficie-HTTP-Y-Contratos.md:22:| Id | Verbo y ruta pública | Papel exigido | Metadato | Qué hace |
+ia-db/indexes/04_Superficie-HTTP-Y-Contratos.md:136:'public const string'` sobre `ErrorCode.cs`).
+ia-db/indexes/04_Superficie-HTTP-Y-Contratos.md:261:`Composition/ApiDocumentation.cs` genera `GET /openapi/v1.json` con `AddOpenApi` y publica el
+ia-db/indexes/04_Superficie-HTTP-Y-Contratos.md:262:explorador Scalar en `/documentacion`. **No se publican solos** (`ADR-08008`): siempre en
+ia-db/indexes/04_Superficie-HTTP-Y-Contratos.md:263:`Development`; fuera de él, sólo con `Documentacion__Publicada=true`. Se sirven sin acceso.
+ia-db/indexes/04_Superficie-HTTP-Y-Contratos.md:298:| **Una sola versión publicada**, sin convivencia todavía | `ADR-00010` §2.1; ver §2 |
+ia-db/indexes/04_Superficie-HTTP-Y-Contratos.md:303:| **El explorador no se publica solo** | `ADR-08008` |
+ia-db/indexes/04_Superficie-HTTP-Y-Contratos.md:321:| `ApiDocumentationSurfaceTests.cs` | 5 | Publicación del documento y del explorador; esquema `Bearer` |
+ia-db/indexes/10_Glosario-Y-Nomenclatura.md:40:| Propiedades y métodos públicos | `PascalCase` | `PasswordHash`, `OriginalJson` |
+ia-db/indexes/10_Glosario-Y-Nomenclatura.md:41:| Parámetros y variables locales · campos privados | `camelCase` · `_camelCase` | `accountId` · `_clock` |
+ia-db/indexes/10_Glosario-Y-Nomenclatura.md:194:| **Pieza pública / pieza de datos** | Las dos piezas desplegables: el front, único contacto del navegador, y el servicio que sostiene dato y reglas. **Siempre calificadas** | Visión §9.2; Glosario-Funcional Web |
+ia-db/indexes/10_Glosario-Y-Nomenclatura.md:195:| **Estado degradado** · **Cartel de reconexión** | La pieza pública en pie sin datos porque la de datos no responde · el aviso de corte del tramo navegador–pieza pública. **No son lo mismo** | Glosario-Funcional Web |
+ia-db/indexes/10_Glosario-Y-Nomenclatura.md:206:| **Banco local** · **Laboratorio desplegado** | Los dos modos de la batería E2E: sin `URL_BASE` levanta el producto con almacén propio; con `URL_BASE` prueba el sitio publicado | `Web/08-Calidad-Y-Pruebas/Pruebas-Extremo-A-Extremo.md` §2 |
+ia-db/indexes/10_Glosario-Y-Nomenclatura.md:223:| **Pieza** | La figura del dominio (forma desnuda) · cada pieza desplegable (siempre «pieza pública», «pieza de datos») | Visión §9.2 |
+ia-db/indexes/10_Glosario-Y-Nomenclatura.md:282:| `RT-06` | En la especificación de Web: «la pieza pública no guarda estado propio» (`Web/02/Especificacion-Funcional.md`:220) · en el intake (línea 548) y la norma §5.3: «los dos extremos se despliegan juntos ante un cambio de contrato» |
+rc=2

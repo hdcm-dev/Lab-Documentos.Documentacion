@@ -1,0 +1,16 @@
+$ grep -rnoE "\b[A-Z]{2,}-[0-9]+\b" --exclude-dir=.git .
+Colmenar/App.xaml:1:UTF-8
+README.md:67:EX-01
+README.md:67:EX-46
+README.md:68:EX-31
+README.md:68:EX-46
+Colmenar/Resources/Splash/splash.svg:1:UTF-8
+Colmenar/Resources/Styles/Colors.xaml:1:UTF-8
+Colmenar/AppShell.xaml:1:UTF-8
+Colmenar/Resources/AppIcon/appiconfg.svg:1:UTF-8
+Colmenar/Platforms/MacCatalyst/Info.plist:1:UTF-8
+Colmenar/Resources/Styles/Styles.xaml:1:UTF-8
+Colmenar/Platforms/iOS/Info.plist:1:UTF-8
+Colmenar/Platforms/iOS/Resources/PrivacyInfo.xcprivacy:1:UTF-8
+Colmenar/Resources/AppIcon/appicon.svg:1:UTF-8
+Colmenar/Platforms/MacCatalyst/Entitlements.plist:1:UTF-8

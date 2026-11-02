@@ -1,0 +1,650 @@
+=== LG/.github/workflows/ci.yml
+     1	# Integración continua: LAS DOS PUERTAS BLOQUEANTES, EN TODO CAMBIO.
+     2	#
+     3	# EL HUECO QUE ESTE FLUJO TAPA, y está medido, no supuesto. Hasta hoy el repositorio tenía
+     4	# UN SOLO flujo —`deploy-front-ftp`— y ese flujo se dispara por filtro de rutas:
+     5	#
+     6	#     src/GeometriaFactory.Web/**   visor/**   src/GeometriaFactory.Contracts/**
+     7	#
+     8	# De modo que un cambio en `GeometriaFactory.Api`, en `GeometriaFactory.Infrastructure`, en
+     9	# `GeometriaFactory.Domain`, en `scripts/` o en las tres baterías de prueba **no disparaba
+    10	# absolutamente nada**. `QG-01` y `QG-02` —que `Api/09 Pipeline-CI-CD.md` §2.1 declara
+    11	# BLOQUEANTES— sólo corrían cuando el cambio tocaba el front por casualidad.
+    12	#
+    13	# Y NO ES TEÓRICO. Buena parte de las unidades entregadas esta semana —el guion de respaldo,
+    14	# la salud del almacén, el modo WAL, la agrupación de conexiones— viven íntegramente fuera de
+    15	# ese filtro. Se fusionaron sin que ninguna puerta se ejecutara en la máquina de integración.
+    16	# Las dos que resultaron rotas —`U-01` y `U-03`— están en esa lista.
+    17	#
+    18	# EL PROPIO ARCHIVO DEL FLUJO TAMPOCO ESTABA EN EL FILTRO, y eso se acaba de pagar: el cambio
+    19	# que agregó los reintentos de FTP se fusionó y NO DISPARÓ NADA. Hubo que lanzarlo a mano.
+    20	# Acá `.github/workflows/**` está incluido a propósito: un flujo que no se prueba a sí mismo
+    21	# es un flujo que se descubre roto el día que se lo necesita.
+    22	#
+    23	# ============================ POR QUÉ SEPARADO Y NO AMPLIANDO EL FILTRO =====================
+    24	#
+    25	# Porque son dos cosas distintas y ahora estaban pegadas:
+    26	#
+    27	#   VERIFICAR   es barato, no tiene efectos, y debe correr SIEMPRE y en TODA rama.
+    28	#   PUBLICAR    toca un servidor real, depende de secretos y de un anfitrión que a veces
+    29	#               tiene los archivos tomados; NO debe correr en cada empujón.
+    30	#
+    31	# Con un solo flujo, ampliar el filtro para cubrir el `Api` habría significado publicar el
+    32	# front cada vez que alguien toca el dominio. La separación deja que cada uno corra por su
+    33	# propia razón.
+    34	#
+    35	# ESTE FLUJO NO PUBLICA NADA y no lee ningún secreto. Corre las dos puertas y termina.
+    36	
+    37	name: ci
+    38	
+    39	on:
+    40	  push:
+    41	    branches: [main]
+    42	  pull_request:
+    43	  workflow_dispatch:
+    44	
+    45	jobs:
+    46	  puertas:
+    47	    runs-on: ubuntu-latest
+    48	    steps:
+    49	      # CON TODO EL HISTORIAL Y LAS ETIQUETAS, y no es un lujo. `Directory.Build.props` adopta
+    50	      # MinVer, que calcula la versión desde la última etiqueta `v*` alcanzable. El checkout por
+    51	      # omisión trae UN commit y ninguna etiqueta, y sobre eso MinVer calcula `0.0.0-alpha.0` sin
+    52	      # advertir: las puertas pasarían igual, pero verificarían un artefacto que se dice de otra
+    53	      # versión. El historial completo cuesta 8,5 MiB (`git count-objects -vH`, 2026-09-12), y
+    54	      # por eso no se recorta con filtros parciales: no hay nada que ahorrar.
+    55	      - uses: actions/checkout@v4
+    56	        with:
+    57	          fetch-depth: 0
+    58	
+    59	      - name: Anclar el kit de desarrollo
+    60	        uses: actions/setup-dotnet@v4
+    61	        with:
+    62	          dotnet-version: '10.0.x'
+    63	
+    64	      # El visor lo empaqueta `GeometriaFactory.Web.csproj` al construir la solución (target
+    65	      # `BuildVisor`), y por eso Node hace falta también acá.
+    66	      - name: Anclar Node
+    67	        uses: actions/setup-node@v4
+    68	        with:
+    69	          node-version: '22'
+    70	
+    71	      # DC-5 · TODO PROYECTO Y TODA CARPETA DE SAMPLE TIENEN NODO EN LA SOLUCIÓN. Va antes de construir
+    72	      # porque una solución a la que le falta un nodo construye igual: la reestructuración del
+    73	      # 2026-09-12 dejó once carpetas de `samples/` afuera y ninguna puerta lo notó. No necesita .NET.
+    74	      - name: Árbol de solución · todo proyecto y todo sample tienen nodo en GeometriaFactory.sln
+    75	        run: bash scripts/verify-solution-tree.sh
+    76	
+    77	      - name: Puerta QG-01 · construir sin advertencias, con el bundle del visor
+    78	        run: ./scripts/build.sh
+    79	
+    80	      - name: Puerta QG-02 · la batería entera
+    81	        run: ./scripts/test.sh
+    82	
+    83	      # LA COBERTURA Y LAS PUERTAS DE FASE CORREN ACÁ desde la mesa del 2026-09-14 (R-12): hasta
+    84	      # entonces existían y nadie las corría, y una puerta que no corre no frena. `coverage.sh`
+    85	      # mide QG-03 por proyecto, QG-06 sobre el validador de figuras y QG-04 la pirámide.
+    86	      - name: Puertas QG-03, QG-06 y QG-04 · cobertura
+    87	        run: ./scripts/coverage.sh
+    88	
+    89	      # Sólo las puertas que necesitan `dotnet` y nada más. `c` levanta las dos piezas, `f` y `g`
+    90	      # corren un navegador en contenedor, e `i` mira el despliegue: siguen siendo manuales.
+    91	      - name: Puerta de la etapa d
+    92	        run: bash scripts/verify-stage-d.sh
+    93	      - name: Puerta de la etapa e
+    94	        run: bash scripts/verify-stage-e.sh
+    95	      - name: Puerta de la etapa h
+    96	        run: bash scripts/verify-stage-h.sh
+=== LG/.github/workflows/deploy-front-ftp.yml
+     1	# Publicación del front por transferencia al hosting (intake §17.6.P.7 y §17.6.P.8;
+     2	# `Pipeline-Producto.md` §4).
+     3	#
+     4	# EL FILTRO DE RUTAS LLEVA TRES ENTRADAS, y la tercera entró por una corrección declarada:
+     5	# sin `GeometriaFactory.Contracts`, un cambio del contrato no dispara la publicación y las dos
+     6	# unidades quedan desalineadas SIN QUE NADA FALLE.
+     7	#
+     8	# Y NO TERMINA EN LA SUBIDA: termina comprobando que la dirección pública responde.
+     9	#
+    10	# NO EMPIEZA POR PUBLICAR, TAMPOCO. Antes de subir corre las dos puertas que
+    11	# `Api/09 Pipeline-CI-CD.md` §2.1 declara **bloqueantes**: `QG-01` —la construcción termina en 0
+    12	# y **sin advertencias**— y `QG-02` —la batería pasa entera, incluida la del validador—. Hasta el
+    13	# 2026-08-18 este flujo no corría ninguna de las dos: `dotnet publish` compila, así que un error
+    14	# de compilación frenaba la publicación, pero **una advertencia y la batería entera en rojo
+    15	# pasaban igual**. La comprobación final tampoco lo veía: la página carga y responde 200 con el
+    16	# producto roto por dentro.
+    17	#
+    18	# LOS DOS PASOS INVOCAN LOS GUIONES DEL REPOSITORIO y no reescriben sus órdenes: `scripts/build.sh`
+    19	# y `scripts/test.sh` son los mismos que corren en la máquina de quien construye, y son los que esa
+    20	# tabla de stages nombra. Un `dotnet test` escrito acá a mano sería un segundo lugar donde la
+    21	# configuración puede decir otra cosa, que es el defecto que `verify-explicit-configuration.sh`
+    22	# existe para impedir.
+    23	#
+    24	# Ninguna dirección real vive acá: todas llegan como secretos del repositorio.
+    25	#
+    26	# CANAL ALTERNATIVO, NO PRODUCTIVO, DESDE EL 2026-09-06 (séptima reanudación, 2026-09-12).
+    27	# El canal vigente de despliegue es el túnel con dominio propio sobre contenedores del servidor
+    28	# propio de {maquina} (`PRODUCT-INTAKE` §14 F-14 **4.2**, `Roadmap-Producto.md` **1.10** §2.1/§5.2,
+    29	# `changelog.md` «Dockerizar el front», 2026-09-06). Este flujo publica al hosting externo
+    30	# (somee.com), que el Product Owner decidió **conservar como alternativa y antecedente de
+    31	# despliegue, no como canal vigente**. Por eso deja de dispararse solo con cada fusión que toque
+    32	# estas rutas —lo hacía, y por eso `main` se publicó dos veces a dos topologías el mismo día,
+    33	# 2026-09-12— y pasa a ser **manual**: se corre a propósito, con `workflow_dispatch`, cuando haga
+    34	# falta ese antecedente. Los cinco secretos que usa siguen vivos porque el canal no se retira.
+    35	
+    36	name: deploy-front-ftp
+    37	
+    38	on:
+    39	  workflow_dispatch:
+    40	      # LA CUARTA ENTRADA, y entró por un defecto pagado el 2026-09-01: el cambio que agregó
+    41	      # los reintentos de FTP se fusionó a `main` y NO DISPARÓ ESTA PUBLICACIÓN, porque el
+    42	      # archivo del flujo no estaba en su propio filtro. Hubo que lanzarla a mano para saber
+    43	      # si el arreglo servía. UN PUBLICADOR QUE NO SE EJERCITA CUANDO SE LO MODIFICA se
+    44	      # descubre roto el día que se lo necesita, que es exactamente lo que pasó.
+    45	      # Con el disparo automático retirado, esta nota queda como antecedente: si el canal
+    46	      # vuelve a activarse por push, el archivo del flujo tiene que volver a su propio filtro.
+    47	
+    48	jobs:
+    49	  publish-front:
+    50	    runs-on: ubuntu-latest
+    51	    steps:
+    52	      - uses: actions/checkout@v4
+    53	
+    54	      - name: Anclar el kit de desarrollo
+    55	        uses: actions/setup-dotnet@v4
+    56	        with:
+    57	          dotnet-version: '10.0.x'
+    58	
+    59	      - name: Anclar Node
+    60	        uses: actions/setup-node@v4
+    61	        with:
+    62	          node-version: '22'
+    63	
+    64	      # EL VISOR LO EMPAQUETA `GeometriaFactory.Web.csproj` (target `BuildVisor`) al construir
+    65	      # la solución, y por eso no hay un paso suelto acá ni en `build.sh`: un solo lugar desde
+    66	      # donde se genera el mismo artefacto (`Web ADR-10008`).
+    67	      - name: Puerta QG-01 · construir sin advertencias, con el bundle del visor
+    68	        run: ./scripts/build.sh
+    69	
+    70	      - name: Puerta QG-02 · la batería entera
+    71	        run: ./scripts/test.sh
+    72	
+    73	      - name: Publicar el front
+    74	        run: dotnet publish src/GeometriaFactory.Web/GeometriaFactory.Web.csproj -c Release -o ./publish
+    75	
+    76	      - name: Inyectar la direccion del servicio de datos desde secretos
+    77	        env:
+    78	          API_BASE_URL: ${{ secrets.API_BASE_URL }}
+    79	        run: |
+    80	          set -euo pipefail
+    81	          test -n "$API_BASE_URL"
+    82	          python3 - <<'PY'
+    83	          import json, os, pathlib
+    84	          path = pathlib.Path('publish/appsettings.json')
+    85	          settings = json.loads(path.read_text(encoding='utf-8'))
+    86	          settings['ApiBaseUrl'] = os.environ['API_BASE_URL']
+    87	          path.write_text(json.dumps(settings, ensure_ascii=False, indent=2), encoding='utf-8')
+    88	          PY
+    89	
+    90	      # ---- BAJAR LA APLICACION ANTES DE SUBIR, Y LEVANTARLA SIEMPRE -------------------
+    91	      #
+    92	      # EL `550` NO ERA TRANSITORIO, Y POR ESO REINTENTAR NO SERVIA. Medido el 2026-09-01
+    93	      # sobre el anfitrion real, en la corrida #37:
+    94	      #
+    95	      #     Subir por FTP · intento 1   ->  550, en GeometriaFactory.Web.pdb
+    96	      #     Subir por FTP · intento 2   ->  550, el mismo archivo   (tras esperar  90 s)
+    97	      #     Subir por FTP · intento 3   ->  550, el mismo archivo   (tras esperar 180 s)
+    98	      #
+    99	      # IIS tiene los ensamblados abiertos MIENTRAS LA APLICACION CORRE, y no los suelta por
+   100	      # esperar. La unica corrida que subio bien —la #34, de las 11:19— subio porque el sitio
+   101	      # estaba DORMIDO: somee duerme las aplicaciones ociosas, y una aplicacion dormida suelta
+   102	      # sus archivos. Desde que se empezo a mirar el sitio para probarlo, deja de dormirse, y
+   103	      # la publicacion dejo de funcionar. «Antes andaba» tiene exactamente esa explicacion, y
+   104	      # la version anterior de este bloque —tres intentos con esperas— fue una hipotesis
+   105	      # equivocada: trataba como transitorio algo permanente. Se retira entera.
+   106	      #
+   107	      # `app_offline.htm` ES EL MECANISMO DE IIS PARA ESTO, no un truco. Al aparecer ese
+   108	      # archivo en la raiz, el anfitrion detiene la aplicacion —libera los ensamblados— y
+   109	      # sirve su contenido; al borrarlo, la levanta. VERIFICADO A MANO CONTRA EL ANFITRION
+   110	      # REAL antes de escribirlo aca: con el archivo puesto el sitio devuelve 503, y al
+   111	      # sacarlo `/estado` volvio en 200 mostrando la version y el reloj DEL SERVICIO DE DATOS.
+   112	      #
+   113	      # Y RESUELVE UN SEGUNDO DEFECTO QUE ESTABA TAPADO POR EL PRIMERO. `Program.cs` linea 70
+   114	      # lee `ApiBaseUrl` UNA SOLA VEZ, al construir el `HttpClient`. Subir un `appsettings.json`
+   115	      # nuevo NO CAMBIA NADA mientras el proceso siga vivo. El 2026-09-01 la direccion correcta
+   116	      # estuvo en disco durante horas —habia subido bien, porque va antes del archivo que
+   117	      # traba— con la aplicacion todavia llamando al tunel muerto, y el sitio mostrando «no
+   118	      # pudimos crear la cuenta». UNA PUBLICACION QUE NO REINICIA NO ES UNA PUBLICACION.
+   119	      #
+   120	      # EL PASO QUE LA LEVANTA LLEVA `if: always()`, Y ES LO MAS IMPORTANTE DE ESTE BLOQUE:
+   121	      # si la subida falla y nadie borra el archivo, EL SITIO QUEDA CAIDO. El paso corre
+   122	      # aunque la subida haya fallado, y si el borrado mismo falla, la corrida falla y se ve.
+   123	      #
+   124	      # NI LA BARRA FINAL NI EL ESQUEMA SE SUPONEN, y no es celo vacio: el registro del
+   125	      # proveedor anota la direccion como `ftp://aplicada.somee.com`, mientras que el parametro
+   126	      # `server:` de la accion quiere un nombre pelado. El mismo secreto sirve a los dos usos,
+   127	      # asi que el guion le saca el `ftp://` y la barra sobrante. Una ruta mal armada aca no
+   128	      # da un error claro: DEJA EL SITIO ABAJO, porque el borrado del `app_offline.htm` apunta
+   129	      # a un lugar que no existe.
+   130	
+   131	      - name: Bajar la aplicacion del anfitrion
+   132	        env:
+   133	          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+   134	          FTP_DIR: ${{ secrets.FTP_SERVER_DIR }}
+   135	          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+   136	          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+   137	          PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+   138	        run: |
+   139	          set -euo pipefail
+   140	          host="${FTP_SERVER#ftp://}"; host="${host%/}"
+   141	          dir="/${FTP_DIR#/}"; dir="${dir%/}"
+   142	          cat > app_offline.htm <<'HTM'
+   143	          <!doctype html><meta charset="utf-8"><title>Fabrica de Geometria · actualizando</title>
+   144	          <body style="font-family:system-ui;max-width:34rem;margin:6rem auto;padding:0 1rem">
+   145	          <h1 style="font-size:1.25rem">Estamos actualizando el laboratorio</h1>
+   146	          <p>Vuelve en un minuto. Nada de lo guardado se pierde.</p>
+   147	          HTM
+   148	          curl --silent --show-error --fail --max-time 120 \
+   149	            --upload-file app_offline.htm \
+   150	            "ftp://${host}${dir}/app_offline.htm" \
+   151	            --user "${FTP_USERNAME}:${FTP_PASSWORD}"
+   152	          echo "app_offline.htm en su lugar. Ahora hay que ESPERAR A QUE BAJE DE VERDAD."
+   153	
+   154	          # SUBIR EL ARCHIVO NO ES QUE LA APLICACION ESTE ABAJO, y confundir las dos cosas
+   155	          # costo la corrida #39: el paso subia el archivo y arrancaba a copiar en el acto,
+   156	          # IIS todavia no habia terminado de drenar, y la copia murio con 550 en
+   157	          # `GeometriaFactory.Contracts.dll`. Medido a mano contra el anfitrion real:
+   158	          #
+   159	          #     aplicacion arriba   ->  curl: (25) Failed FTP upload: 550
+   160	          #     sitio en HTTP 503   ->  subio
+   161	          #
+   162	          # Asi que no se supone: se espera hasta VER el 503, y si no llega, se falla acá
+   163	          # —con la aplicacion abajo— en vez de fallar a mitad de la copia con el sitio en
+   164	          # un estado mezclado. Es el mismo defecto que la mesa del 2026-09-01 nombro para
+   165	          # todo el producto: VERIFICAR LA CONDICION Y NO EL EFECTO.
+   166	          for intento in $(seq 1 30); do
+   167	            codigo="$(curl --silent --output /dev/null --write-out '%{http_code}' \
+   168	                      --max-time 15 "$PUBLIC_URL" || true)"
+   169	            if [ "$codigo" = "503" ]; then
+   170	              echo "El anfitrion ya sirve la pagina de mantenimiento (HTTP 503) a los $(( (intento - 1) * 5 )) s."
+   171	              # EL 503 NO ES QUE LOS ENSAMBLADOS ESTEN LIBRES. IIS sirve `app_offline.htm` en
+   172	              # el acto, pero el proceso obrero tarda un poco mas en morir y soltar los
+   173	              # handles. La corrida #40 lo dejo al segundo: vio el 503 a las 15:25:25.311 y
+   174	              # el `.dll` fallo con 550 a las 15:25:26.786 —UN SEGUNDO Y MEDIO despues—.
+   175	              #
+   176	              # Medido a mano contra el anfitrion real, reemplazando el mismo `.dll` por una
+   177	              # copia identica en un bucle: SE PUDO REEMPLAZAR 3 s DESPUES DEL 503. Los 20 s
+   178	              # de aca son ese numero con seis veces de margen, no una cifra elegida a ojo.
+   179	              echo "Se le dan 20 s mas para que el proceso obrero suelte los ensamblados."
+   180	              sleep 20
+   181	              exit 0
+   182	            fi
+   183	            sleep 5
+   184	          done
+   185	          echo "::error::app_offline.htm esta puesto pero el sitio sigue respondiendo $codigo despues de 150 s."
+   186	          echo "No se copia nada: una copia sobre la aplicacion viva falla a la mitad y deja el sitio mezclado."
+   187	          exit 1
+   188	
+   189	      # DOS INTENTOS, Y ESTA VEZ EL REINTENTO SI CORRESPONDE. La version del 2026-09-01 de la
+   190	      # manana reintentaba con la aplicacion VIVA, y por eso los tres intentos fallaron: el
+   191	      # candado era permanente. Con `app_offline.htm` puesto el candado es transitorio y dura
+   192	      # segundos, asi que un segundo intento cubre la variacion del anfitrion sin fingir que
+   193	      # esperar arregla algo por si solo. La aplicacion sigue abajo entre los dos intentos.
+   194	      - name: Subir por FTP
+   195	        id: ftp
+   196	        continue-on-error: true
+   197	        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+   198	        with:
+   199	          server: ${{ secrets.FTP_SERVER }}
+   200	          username: ${{ secrets.FTP_USERNAME }}
+   201	          password: ${{ secrets.FTP_PASSWORD }}
+   202	          local-dir: ./publish/
+   203	          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+   204	          exclude: |
+   205	            **/app_offline.htm
+   206	
+   207	      - name: Esperar antes del segundo intento
+   208	        if: steps.ftp.outcome == 'failure'
+   209	        run: |
+   210	          echo "El primer intento no pudo escribir con la aplicacion abajo. Se esperan 30 s."
+   211	          sleep 30
+   212	
+   213	      - name: Subir por FTP · segundo intento
+   214	        if: steps.ftp.outcome == 'failure'
+   215	        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+   216	        with:
+   217	          server: ${{ secrets.FTP_SERVER }}
+   218	          username: ${{ secrets.FTP_USERNAME }}
+   219	          password: ${{ secrets.FTP_PASSWORD }}
+   220	          local-dir: ./publish/
+   221	          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+   222	          exclude: |
+   223	            **/app_offline.htm
+   224	
+   225	      - name: Levantar la aplicacion
+   226	        if: always()
+   227	        env:
+   228	          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+   229	          FTP_DIR: ${{ secrets.FTP_SERVER_DIR }}
+   230	          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+   231	          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+   232	          PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+   233	        run: |
+   234	          set -euo pipefail
+   235	          host="${FTP_SERVER#ftp://}"; host="${host%/}"
+   236	          dir="/${FTP_DIR#/}"; dir="${dir%/}"
+   237	          curl --silent --show-error --fail --max-time 120 \
+   238	            "ftp://${host}${dir}/" \
+   239	            --user "${FTP_USERNAME}:${FTP_PASSWORD}" \
+   240	            --quote "-DELE ${dir}/app_offline.htm" --output /dev/null
+   241	          echo "app_offline.htm retirado. Se espera a que la aplicacion vuelva a atender."
+   242	
+   243	          # Y ACA TAMBIEN SE MIRA EL EFECTO. Un arranque en frio de Blazor sobre este
+   244	          # anfitrion tarda; darle un `sleep` fijo y seguir haria que la comprobacion final
+   245	          # falle por impaciencia y no por un defecto real.
+   246	          for intento in $(seq 1 24); do
+   247	            codigo="$(curl --silent --output /dev/null --write-out '%{http_code}' \
+   248	                      --max-time 20 "$PUBLIC_URL" || true)"
+   249	            case "$codigo" in
+   250	              503|000) sleep 5 ;;
+   251	              *) echo "La aplicacion volvio (HTTP $codigo) a los $(( (intento - 1) * 5 )) s, leyendo el appsettings.json recien subido."; exit 0 ;;
+   252	            esac
+   253	          done
+   254	          echo "::error::La aplicacion no volvio a atender despues de 120 s: sigue en $codigo."
+   255	          exit 1
+   256	
+   257	      - name: Comprobar que la direccion publica responde
+   258	        env:
+   259	          PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+   260	        run: |
+   261	          set -euo pipefail
+   262	          # LA COMPROBACION EXIGE SU SECRETO, igual que la inyeccion de la direccion del
+   263	          # servicio de datos. Sin esta linea, un secreto vacio no falla acá: falla adentro de
+   264	          # curl con «Malformed input to a URL function», que no nombra el secreto que falta y
+   265	          # manda a buscar el problema al lugar equivocado. Ya pasó una vez.
+   266	          test -n "$PUBLIC_URL" || { echo "Falta el secreto PUBLIC_URL del repositorio."; exit 1; }
+   267	          status_code="$(curl --silent --show-error --location --max-time 30 --output /dev/null --write-out '%{http_code}' "$PUBLIC_URL")"
+   268	          echo "La direccion publica respondio $status_code"
+   269	          test "$status_code" = "200" || { echo "La direccion publica no respondio 200."; exit 1; }
+   270	
+   271	          # ---- Y AHORA SE MIRA EL CONTENIDO, PORQUE EL 200 NO ALCANZA -------------------
+   272	          #
+   273	          # Hasta el 2026-09-01 esta comprobacion terminaba en la linea de arriba, y por eso
+   274	          # el flujo podia declarar `success` con el sitio PUBLICADO Y SIN DATOS: la pagina
+   275	          # de estado devuelve 200 aunque adentro diga que el servicio de datos no responde.
+   276	          # La mesa del 2026-09-01 lo levanto, y el Product Owner lo vio antes que nadie:
+   277	          # «hasta ahora no vi resultados funcionando».
+   278	          #
+   279	          # PUBLICADO Y ROTO NO ES UN EXITO. La pagina de estado existe para decir si el dato
+   280	          # es real; si dice que no, la publicacion no cumplio su proposito.
+   281	          estado="$(curl --silent --show-error --location --max-time 40 "${PUBLIC_URL%/}/estado" || true)"
+   282	          if printf '%s' "$estado" | grep -q 'class="failure"'; then
+   283	            echo "::error::El sitio esta publicado y NO alcanza al servicio de datos."
+   284	            printf '%s' "$estado" | grep -oE '<p class="failure"[^>]*>[^<]{0,160}' | head -1
+   285	            echo "Revisar el secreto API_BASE_URL y que esa direccion sea alcanzable DESDE somee."
+   286	            exit 1
+   287	          fi
+   288	          echo "El sitio publicado alcanza al servicio de datos."
+   289	          test "$status_code" = "200"
+=== LG/.github/workflows/e2e.yml
+     1	# Pruebas de extremo a extremo contra el laboratorio DESPLEGADO.
+     2	#
+     3	# ============================================================================================
+     4	# QUE PRUEBA, Y CONTRA QUE. No levanta nada: abre un navegador contra la dirección publicada y
+     5	# hace lo que hace una persona. Es lo que faltaba, y su ausencia costó cuatro reportes del
+     6	# Product Owner —«el botón de aprobar no funciona»— que ninguna de las 372 pruebas de la
+     7	# solución podía ver, porque llegan al punto de acceso del servicio de datos y no a la pantalla.
+     8	#
+     9	# ============================================================================================
+    10	# POR QUE NO SE DISPARA SOLO CON CADA EMPUJON, y es la decisión de diseño de este archivo:
+    11	#
+    12	#   1. TOCA DATOS REALES. Siembra un alumno y trabajos en el laboratorio del docente. Aceptable
+    13	#      cuando alguien lo pide; inaceptable como efecto de fondo de cada cambio de una coma.
+    14	#   2. DEPENDE DE UN SITIO QUE PUEDE ESTAR CAIDO por razones ajenas al cambio —el anfitrión
+    15	#      recicla, la dirección pública del laboratorio puede cambiar—. Una compuerta que se pone en
+    16	#      rojo por el entorno se termina apagando: ya pasó en este repositorio, con `C-3` en rojo
+    17	#      catorce días sin que nadie lo leyera.
+    18	#
+    19	# Se dispara A MANO, después de que el Product Owner publica una versión en el servidor propio.
+    20	# Hasta el 2026-09-14 también se disparaba al terminar `deploy-front-ftp`, un canal retirado que
+    21	# ya no publica lo que corre: esa atadura se quitó (mesa `SDD/Docs/Audit/Mesa-2026-09-14.md`, R-15).
+    22	#
+    23	# ============================================================================================
+    24	# Y HAY UN SEGUNDO RECORRIDO, EL DEL BANCO LOCAL, QUE SI CORRE EN CADA CAMBIO. Las dos razones
+    25	# de arriba —toca datos reales, depende de un sitio ajeno— son razones del modo desplegado y de
+    26	# NINGUN otro: cuando la suite levanta su propio laboratorio no toca ningún dato del docente y no
+    27	# depende de ningún anfitrión. Lo único que hacía falta para poder correrla en cada cambio era
+    28	# que la suite supiera montar el producto, y desde el 2026-09-02 sabe.
+    29	#
+    30	# ES EL RECORRIDO QUE HUBIERA ATRAPADO EL DEFECTO DE LAS 768 px —una pantalla de teléfono sin
+    31	# ninguna fila— catorce días antes de que lo encontrara una persona mirando.
+    32	#
+    33	# ============================================================================================
+    34	# CORRE EN EL RUNNER PROPIO, `{maquina}-dev`, Y NO ES POR VELOCIDAD. El servicio de datos del
+    35	# laboratorio vive en la red del docente; un runner alojado por GitHub tendría que alcanzarlo por
+    36	# la dirección pública, que es exactamente lo que no se quiere que estas pruebas dependan.
+    37	
+    38	name: e2e
+    39	
+    40	on:
+    41	  push:
+    42	    branches: [main]
+    43	  pull_request:
+    44	  workflow_dispatch:
+    45	    inputs:
+    46	      navegadores:
+    47	        description: 'Navegadores a recorrer, separados por coma'
+    48	        required: false
+    49	        default: 'chromium,firefox,webkit'
+    50	
+    51	# UNA CORRIDA A LA VEZ, Y LA NUEVA ESPERA A LA VIEJA. Dos corridas simultáneas sembrarían cuentas
+    52	# en el mismo laboratorio y se pisarían el panel. `cancel-in-progress: false` a propósito: cancelar
+    53	# a mitad de camino dejaría cuentas sembradas sin limpiar.
+    54	#
+    55	# EL GRUPO ES DEL FLUJO ENTERO Y NO SOLO DEL MODO DESPLEGADO, y se deja así a sabiendas de que
+    56	# serializa de más: el banco local no se pisa con nadie —almacén propio, puertos pedidos al
+    57	# sistema— y podría correr en paralelo. Pero los dos trabajos comparten un único runner propio, y
+    58	# dos corridas suyas a la vez compiten por la misma máquina. Serializar es lo honesto acá.
+    59	concurrency:
+    60	  group: e2e-laboratorio
+    61	  cancel-in-progress: false
+    62	
+    63	jobs:
+    64	  banco-local:
+    65	    name: Recorrido sobre el banco local
+    66	    # CORRE EN EL RUNNER PROPIO IGUAL QUE EL OTRO, pero por un motivo distinto: acá no hay ninguna
+    67	    # red que alcanzar —el laboratorio se levanta adentro del propio trabajo—, lo que hace falta es
+    68	    # una máquina que aguante publicar dos piezas y abrir un navegador sin cobrar por minuto.
+    69	    runs-on: [self-hosted, {maquina}-dev]
+    70	    # EL RUNNER PROPIO NO EJECUTA CODIGO DE UN FORK. El repositorio es público: un pull request
+    71	    # desde un fork corre acá sólo si viene de una rama de este mismo repositorio. El de un fork
+    72	    # salta este trabajo, y el Resumen lo acepta como salto y no como rojo (mesa
+    73	    # `SDD/Docs/Audit/Mesa-2026-09-14.md`, R-01).
+    74	    if: >-
+    75	      github.event_name != 'pull_request' ||
+    76	      github.event.pull_request.head.repo.full_name == github.repository
+    77	    steps:
+    78	      - name: Descargar el código
+    79	        uses: actions/checkout@v4
+    80	
+    81	      - name: Anclar el kit de desarrollo
+    82	        uses: actions/setup-dotnet@v4
+    83	        with:
+    84	          dotnet-version: '10.0.x'
+    85	
+    86	      # EL BUNDLE DEL VISOR HACE FALTA Y NO SE VERSIONA: es artefacto, lo genera la canalización.
+    87	      # Sin él la escena 3D no carga y los casos que la miran fallarían por algo que no es del
+    88	      # producto.
+    89	      - name: Anclar Node
+    90	        uses: actions/setup-node@v4
+    91	        with:
+    92	          node-version: '22'
+    93	
+    94	      # El bundle del visor lo genera `GeometriaFactory.Web.csproj` cuando el banco local publica
+    95	      # el front; por eso Node se ancla y no se invoca `build-visor.sh` a mano (`Web ADR-10008`).
+    96	      - name: Compilar las pruebas
+    97	        run: dotnet build tests/GeometriaFactory.E2ETests -c Release --nologo
+    98	
+    99	      - name: Instalar el navegador y sus dependencias
+   100	        run: |
+   101	          set -euo pipefail
+   102	          guion="$(find tests/GeometriaFactory.E2ETests/bin/Release -name playwright.ps1 | head -1)"
+   103	          [ -n "$guion" ] || { echo "::error::No apareció playwright.ps1 en la salida de compilación."; exit 1; }
+   104	          pwsh "$guion" install --with-deps chromium
+   105	
+   106	      # SIN NINGUNA VARIABLE DE ENTORNO, Y ESO ES EL PUNTO: sin `URL_BASE` la suite publica y
+   107	      # levanta el producto entero por su cuenta, con un almacén de esta corrida. No lee ningún
+   108	      # secreto y no toca ningún dato del docente.
+   109	      - name: Ejecutar el recorrido
+   110	        run: |
+   111	          dotnet test tests/GeometriaFactory.E2ETests \
+   112	            -c Release --no-build --nologo \
+   113	            --settings pruebas-e2e.runsettings \
+   114	            --logger "trx;LogFileName=banco-local.trx" \
+   115	            -- Playwright.BrowserName=chromium
+   116	
+   117	      - name: Guardar los resultados
+   118	        if: always()
+   119	        uses: actions/upload-artifact@v4
+   120	        with:
+   121	          name: e2e-banco-local
+   122	          path: |
+   123	            resultados-e2e/**
+   124	            tests/GeometriaFactory.E2ETests/resultados-e2e/**
+   125	          if-no-files-found: warn
+   126	          retention-days: 14
+   127	
+   128	  matriz:
+   129	    name: Preparar la matriz
+   130	    runs-on: ubuntu-latest
+   131	    outputs:
+   132	      navegadores: ${{ steps.armar.outputs.navegadores }}
+   133	    # SOLO A MANO: toca datos del laboratorio desplegado y lo pide quien acaba de publicar.
+   134	    if: github.event_name == 'workflow_dispatch'
+   135	    steps:
+   136	      - id: armar
+   137	        run: |
+   138	          set -euo pipefail
+   139	          entrada="${{ inputs.navegadores }}"
+   140	          [ -n "$entrada" ] || entrada="chromium,firefox,webkit"
+   141	          lista="$(printf '%s' "$entrada" | tr -d ' ' | tr ',' '\n' | grep -E '^(chromium|firefox|webkit)$' | sort -u | paste -sd, -)"
+   142	          [ -n "$lista" ] || { echo "::error::Ningún navegador válido en «$entrada»."; exit 1; }
+   143	          echo "navegadores=$(printf '%s' "$lista" | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read().split(",")))')" >> "$GITHUB_OUTPUT"
+   144	          echo "Se recorren: $lista"
+   145	
+   146	  pruebas:
+   147	    name: Recorrido (${{ matrix.navegador }})
+   148	    needs: matriz
+   149	    runs-on: [self-hosted, {maquina}-dev]
+   150	    # LA MATRIZ NO SE CORTA CON EL PRIMER ROJO. Que falle en un navegador y ande en los otros ES el
+   151	    # dato: dice que el defecto es del navegador y no del producto.
+   152	    strategy:
+   153	      fail-fast: false
+   154	      matrix:
+   155	        navegador: ${{ fromJSON(needs.matriz.outputs.navegadores) }}
+   156	    steps:
+   157	      - name: Descargar el código
+   158	        uses: actions/checkout@v4
+   159	
+   160	      - name: Anclar el kit de desarrollo
+   161	        uses: actions/setup-dotnet@v4
+   162	        with:
+   163	          dotnet-version: '10.0.x'
+   164	
+   165	      - name: Compilar las pruebas
+   166	        run: dotnet build tests/GeometriaFactory.E2ETests -c Release --nologo
+   167	
+   168	      # EL NAVEGADOR SE INSTALA DESDE EL PROPIO PROYECTO, con el guion que el paquete deja en la
+   169	      # salida de compilación. Instalar sólo el de esta celda de la matriz y no los tres ahorra
+   170	      # varios minutos por corrida.
+   171	      - name: Instalar el navegador y sus dependencias
+   172	        run: |
+   173	          set -euo pipefail
+   174	          guion="$(find tests/GeometriaFactory.E2ETests/bin/Release -name playwright.ps1 | head -1)"
+   175	          [ -n "$guion" ] || { echo "::error::No apareció playwright.ps1 en la salida de compilación."; exit 1; }
+   176	          pwsh "$guion" install --with-deps ${{ matrix.navegador }}
+   177	
+   178	      - name: Ejecutar el recorrido
+   179	        env:
+   180	          # LA DIRECCION PUBLICA Y LA DEL SERVICIO DE DATOS SON LAS MISMAS QUE USA LA PUBLICACION.
+   181	          # Reusar los secretos que ya existen evita que la suite pruebe un laboratorio distinto del
+   182	          # que se publicó, que es un modo de falla difícil de ver.
+   183	          URL_BASE: ${{ secrets.PUBLIC_URL }}
+   184	          API_BASE_URL: ${{ secrets.API_BASE_URL }}
+   185	          E2E_ADMIN_EMAIL: ${{ secrets.E2E_ADMIN_EMAIL }}
+   186	          E2E_ADMIN_PASSWORD: ${{ secrets.E2E_ADMIN_PASSWORD }}
+   187	        run: |
+   188	          dotnet test tests/GeometriaFactory.E2ETests \
+   189	            -c Release --no-build --nologo \
+   190	            --settings pruebas-e2e.runsettings \
+   191	            --logger "trx;LogFileName=${{ matrix.navegador }}.trx" \
+   192	            -- Playwright.BrowserName=${{ matrix.navegador }}
+   193	
+   194	      - name: Guardar los resultados
+   195	        if: always()
+   196	        uses: actions/upload-artifact@v4
+   197	        with:
+   198	          name: e2e-${{ matrix.navegador }}
+   199	          path: |
+   200	            resultados-e2e/**
+   201	            tests/GeometriaFactory.E2ETests/resultados-e2e/**
+   202	          if-no-files-found: warn
+   203	          retention-days: 14
+   204	
+   205	  resumen:
+   206	    name: Resumen
+   207	    needs: [banco-local, pruebas]
+   208	    if: always()
+   209	    runs-on: ubuntu-latest
+   210	    steps:
+   211	      - name: Reflejar el resultado
+   212	        run: |
+   213	          set -euo pipefail
+   214	          estado="${{ needs.pruebas.result }}"
+   215	          banco="${{ needs.banco-local.result }}"
+   216	          {
+   217	            echo "## Recorrido de extremo a extremo"
+   218	            echo
+   219	            echo "| Recorrido | Resultado |"
+   220	            echo "|---|---|"
+   221	            echo "| Banco local (chromium) | **$banco** |"
+   222	            echo "| Laboratorio desplegado (matriz de navegadores) | **$estado** |"
+   223	            echo
+   224	            echo "Los resultados de cada uno quedan en los artefactos de esta corrida."
+   225	          } >> "$GITHUB_STEP_SUMMARY"
+   226	
+   227	          # UN SALTO NO ES UN ROJO. El modo desplegado no se dispara en un pull request y llega
+   228	          # como `skipped`; tratarlo como fallo pondría en rojo cada cambio, y una compuerta que
+   229	          # se pone en rojo sola se termina apagando —este repositorio ya lo pagó con `C-3`,
+   230	          # catorce días en rojo sin que nadie lo leyera—.
+   231	          malo=0
+   232	          # El banco local SALTA en un pull request desde un fork (el runner propio no lo corre).
+   233	          case "$banco" in
+   234	            success|skipped) ;;
+   235	            *) echo "::error::El recorrido sobre el banco local falló."; malo=1 ;;
+   236	          esac
+   237	          case "$estado" in
+   238	            success|skipped) ;;
+   239	            *) echo "::error::El recorrido contra el laboratorio desplegado falló."; malo=1 ;;
+   240	          esac
+   241	          exit "$malo"
+=== LGD/.github/workflows/verificar.yml
+     1	name: Verificar
+     2	
+     3	on:
+     4	  pull_request:
+     5	  push:
+     6	    branches: [main]
+     7	
+     8	permissions:
+     9	  contents: read
+    10	
+    11	jobs:
+    12	  documentacion:
+    13	    name: Enlaces y forma de la ia-db
+    14	    runs-on: ubuntu-latest
+    15	    steps:
+    16	      - uses: actions/checkout@v4
+    17	      - uses: actions/setup-python@v5
+    18	        with:
+    19	          python-version: "3.12"
+    20	      - run: python .github/scripts/verificar.py

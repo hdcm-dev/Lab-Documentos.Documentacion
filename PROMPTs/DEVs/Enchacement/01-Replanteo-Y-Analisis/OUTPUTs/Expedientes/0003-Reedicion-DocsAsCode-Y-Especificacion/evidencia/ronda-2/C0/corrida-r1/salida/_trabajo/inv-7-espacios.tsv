@@ -1,0 +1,35 @@
+prefijo	ids	registro	carpetas-de-origen
+ACT	10	interno	Guides/Arquitectura, Guides/Despliegue, Guides/Documentacion-Tecnica
+ADR	1	externo	Guides/Metodologia-Entorno-Desarrollo
+AG	13	FUERA-DEL-REGISTRO	Guides/IA
+AIP	8	FUERA-DEL-REGISTRO	Guides/Arquitectura
+ANALISIS	1	FUERA-DEL-REGISTRO	Guides/Arquitectura
+ANEXO	7	FUERA-DEL-REGISTRO	Guides/Arquitectura, Guides/Despliegue, Guides/Documentacion-Tecnica
+ARQ	7	interno	Guides/Documentacion-Tecnica
+CTX	4	interno	Guides/Arquitectura, Guides/Despliegue, Guides/Documentacion-Tecnica
+CUADERNO	1	FUERA-DEL-REGISTRO	Guides/Otros
+D	6	FUERA-DEL-REGISTRO	Guides/Dot-NET-Arquitectura-Guide
+DOC	30	interno	Guides/Documentacion-Tecnica
+E2E	5	FUERA-DEL-REGISTRO	Guides/Testing
+EP	5	FUERA-DEL-REGISTRO	Guides/Metodologia-Agiles
+ESC	7	interno	Concepts/Framework-Concept, Guides/Arquitectura, Guides/Despliegue, Guides/Documentacion-Tecnica
+F	1	FUERA-DEL-REGISTRO	Guides/Arquitectura
+FAM	27	interno	Guides/Arquitectura, Guides/Despliegue, Guides/Documentacion-Tecnica
+FC	12	interno	Concepts/Framework-Concept
+G	3	FUERA-DEL-REGISTRO	Guides/Arquitectura
+GF	4	FUERA-DEL-REGISTRO	Guides/GitFlow, Guides/Testing
+GHA	1	FUERA-DEL-REGISTRO	Guides/Despliegue, Guides/Testing
+GHF	2	FUERA-DEL-REGISTRO	Guides/GitFlow, Guides/Testing
+GUIA	6	FUERA-DEL-REGISTRO	Concepts/Framework-Concept, Guides/Arquitectura, Guides/Despliegue, Guides/Documentacion-Tecnica, Guides/Dot-NET-Arquitectura-Guide, Guides/Metodologia-Entorno-Desarrollo, Guides/Otros
+GUIAS	1	FUERA-DEL-REGISTRO	Guides/README.md
+IDX	1	interno	AGENTS.md
+LAB	1	FUERA-DEL-REGISTRO	README.md
+MAPA	1	interno	Guides/Arquitectura, Guides/Despliegue, Guides/Documentacion-Tecnica
+MARCO	4	interno	Guides/Arquitectura, Guides/Despliegue, Guides/Documentacion-Tecnica
+MET	6	interno	Guides/Documentacion-Tecnica
+N	5	FUERA-DEL-REGISTRO	Guides/Arquitectura
+RF	1	externo	Guides/Documentacion-Tecnica
+RN	1	externo	Guides/Documentacion-Tecnica
+TEM	75	interno	Guides/Arquitectura, Guides/Despliegue
+US	6	FUERA-DEL-REGISTRO	Guides/Metodologia-Agiles
+total-ids	263	prefijos	33	fuera-del-registro	18

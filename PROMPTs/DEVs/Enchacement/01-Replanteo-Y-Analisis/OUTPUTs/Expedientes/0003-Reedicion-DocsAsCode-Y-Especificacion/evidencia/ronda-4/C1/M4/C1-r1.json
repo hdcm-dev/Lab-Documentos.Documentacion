@@ -1,0 +1,921 @@
+{
+ "corrida": "C1-r1",
+ "citas": 9549,
+ "ok": 9537,
+ "no_resueltas": 0,
+ "fuera_de_repo": 0,
+ "A01": {
+  "citas": 128,
+  "no_resueltas": 0,
+  "contenido": {
+   "contenido-coincide": 40,
+   "sin-literal-contrastable": 88
+  },
+  "detalle": [
+   {
+    "cita": "LG/SDD/Docs/Audit/A-00-01-r3.md:185",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "H-01"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/Audit/B-02-03-GeometriaFactory-Application-r1.md:305",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "H-01"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/Producto/11-Documentacion/README.md:8",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "en",
+     "en"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/Producto/11-Documentacion/README.md:22",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "en",
+     "Versión:"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/Producto/11-Documentacion/README.md:5",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "status: Vigente"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/Producto/11-Documentacion/README.md:23",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/11-Documentacion/README.md:5",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "status: Vigente"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/11-Documentacion/README.md:23",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/11-Documentacion/README.md:5",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "status: Vigente"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/11-Documentacion/README.md:23",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/changelog.md:2052",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "deploy-front-ftp.yml",
+     "deploy-front-ftp.yml"
+    ]
+   },
+   {
+    "cita": "LG/.github/workflows/deploy-front-ftp.yml:26-34",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:43",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "),",
+     "),"
+    ]
+   },
+   {
+    "cita": "LG/SDD/README.md:3",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/changelog.md:20",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "AUD"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Intake/PRODUCT-INTAKE-Fabrica-De-Geometria.md:293",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "),",
+     "),"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Intake/PRODUCT-INTAKE-Fabrica-De-Geometria.md:1852",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "AUD"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/Producto/11-Documentacion/Bitacora-Eventualidades.md:171",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "FIC"
+    ]
+   },
+   {
+    "cita": "LGD/ia-db/indexes/12_Observaciones-Del-Indexado.md:82",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "O-3"
+    ]
+   },
+   {
+    "cita": "LGD/PROMPTs/Fixs/01-Ajuste-UX/OUTPUTs/03_actas-de-sesion/Acta-02-Objetivos-De-Mejora.md:38",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "O-3"
+    ]
+   },
+   {
+    "cita": "LG/Directory.Build.props:11",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "y"
+    ]
+   },
+   {
+    "cita": "LG/.github/workflows/ci.yml:47",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "y"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Application/Works/ConsultOwnWorksUseCase.cs:50",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Domain/Entities/Work.cs:470",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:40",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Audit/Estado-Del-Destino-2026-09-13.md:17",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Domain/Values/Role.cs:12-18",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Student",
+     "Administrator"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:106",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Student"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Application/Accounts/GovernCommissionAccountsUseCase.cs:61",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Administrator"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:52-55",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:40",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:37-40",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:144",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:54-55",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/README.md:3",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:43",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:13",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:3-5",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Audit/Estado-Del-Destino-2026-09-13.md:17",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:8",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Producto/11-Documentacion/README.md:8",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Producto/11-Documentacion/README.md:22",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:15-16",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:3-5",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:38",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "en",
+     "|"
+    ]
+   },
+   {
+    "cita": "LGD/ia-db/README.md:128",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "en",
+     ".git"
+    ]
+   },
+   {
+    "cita": "LG/.github/workflows/ci.yml:49-57",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/01-Necesidades-Negocio/Necesidades-De-Negocio/NB-00001-Control-De-Admision-Al-Laboratorio.md:1",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/02-Especificacion-Funcional/Reglas-De-Negocio/RN-02001-Administrador-Unico-Y-Papeles-Fijos.md:1",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Producto/11-Documentacion/README.md:1-16",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/.github/workflows/ci.yml:47",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "ubuntu-latest",
+     "ubuntu-latest"
+    ]
+   },
+   {
+    "cita": "LGD/.github/workflows/verificar.yml:1-20",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:35-39",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:65",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Producto/11-Documentacion/Contrato-Agentes.md:111",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/changelog.md:1931",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:11-28",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/changelog.md:3-5",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Intake/PRODUCT-INTAKE-Fabrica-De-Geometria.md:131",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:3-5",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "AGENTS.md"
+    ]
+   },
+   {
+    "cita": "LGD/ia-db/README.md:3-9",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:143-145",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Web/Components/Pages/WorkSubmission.razor:306",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "aria-describedby"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Web/Components/Pages/WorkView.razor:329-331",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "aria-describedby"
+    ]
+   },
+   {
+    "cita": "LG/AGENTS.md:36",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/.github/workflows/e2e.yml:70",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Audit/Mesa-2026-09-14.md:13",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/.github/workflows/e2e.yml:69",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/.github/workflows/deploy-front-ftp.yml:26-28",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:19",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/.github/workflows/e2e.yml:183-186",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/README.md:3",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:36-38",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:36-37",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Domain/Values/Role.cs:12-18",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Student",
+     "Administrator"
+    ]
+   },
+   {
+    "cita": "LGD/ia-db/README.md:142",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/README.md:3-8",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Docs/"
+    ]
+   },
+   {
+    "cita": "LG/AGENTS.md:3-5",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/Directory.Build.props:26",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "GenerateDocumentationFile",
+     "false"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Domain/Values/Role.cs:3-11",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:58",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:117",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/.github/workflows/ci.yml:74-96",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Web/Components/Pages/WorkSubmission.razor:306",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:125",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:3",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:38",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "4b114d7"
+    ]
+   },
+   {
+    "cita": "LGD/README.md:3-5",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/README.md:3",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/README.md:3",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:43",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/changelog.md:1-5",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/changelog.md:1-4",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:65",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:19",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:24",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:143-145",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Producto/Adrs/ADR-08008-La-Superficie-HTTP-Se-Describe-Y-El-Explorador-No-Se-Publica-Solo.md:8",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/06-Backlog-Tecnico/tareas-tecnicas/BT-00031-Publicar-Openapi-Scalar-En-El-Ambiente-De-Produccion.md:7",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:59",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "PROMPTs/"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/AuthenticationEndpoints.cs:100",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Infrastructure/Security/AccessTokenIssuer.cs:25",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Composition/CompositionRoot.cs:220-221",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Web/Program.cs:115-116",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:106",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Student"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:146",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Web/Components/Pages/StudentWorkPanel.razor:392",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Domain/Entities/Work.cs:470",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:106",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:167",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:206",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/tests/GeometriaFactory.Integration.Tests/WorkSurfaceTests.cs:338-349",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Administrator"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Application/Accounts/GovernCommissionAccountsUseCase.cs:61",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Administrator"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Application/Works/ReviewCommissionWorksUseCase.cs:52",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Administrator"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Web/Components/Pages/ClassSubmissionList.razor:422",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Administrator"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:101-117",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Intake/PRODUCT-INTAKE-Fabrica-De-Geometria.md:131",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:40",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Web/Components/Layout/WorkShell.razor:181",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Administrator"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:129-134",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Producto/11-Documentacion/README.md:6",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "rol_intervencion",
+     "integrador"
+    ]
+   },
+   {
+    "cita": "LG/AGENTS.md:64",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "lab-geometria-api",
+     "lab-geometria-web"
+    ]
+   },
+   {
+    "cita": "LG/AGENTS.md:65",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:65",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:106",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/Directory.Build.props:26",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/.github/workflows/e2e.yml:70",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:38",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "4b114d7",
+     "v1.2.0"
+    ]
+   }
+  ]
+ },
+ "invenciones": 0,
+ "detalle_invenciones": [],
+ "triados": {
+  "triado:archivo-creado-por-la-corrida": 9,
+  "triado:abreviatura-en-texto-del-repo": 3
+ },
+ "detalle_triados": [
+  [
+   "salida/_auxiliares/inventario-03-salida-LG_SDD_Docs.txt",
+   "Api/05/README.md:101",
+   "triado:abreviatura-en-texto-del-repo"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-salida-LG_SDD_Docs.txt",
+   "Api/09-Devops/Pipeline-CI-CD.md:69",
+   "triado:abreviatura-en-texto-del-repo"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-salida-LG_SDD_Docs.txt",
+   "Maquetas/.../README.md:305",
+   "triado:abreviatura-en-texto-del-repo"
+  ],
+  [
+   "salida/_auxiliares/linea-de-base-docs.txt",
+   "docs/_gobierno/como-intervenir.md:1",
+   "triado:archivo-creado-por-la-corrida"
+  ],
+  [
+   "salida/_auxiliares/linea-de-base-docs.txt",
+   "docs/_gobierno/esquema-frontmatter.md:1",
+   "triado:archivo-creado-por-la-corrida"
+  ],
+  [
+   "salida/_auxiliares/verificacion-barrido.txt",
+   "LG/.docs-guard-origen/tools/docs-guard/dominios.txt:8",
+   "triado:archivo-creado-por-la-corrida"
+  ],
+  [
+   "salida/_auxiliares/verificacion-barrido.txt",
+   "LG/.docs-guard-origen/tools/docs-guard/dominios.txt:9",
+   "triado:archivo-creado-por-la-corrida"
+  ],
+  [
+   "salida/_auxiliares/verificacion-barrido.txt",
+   "LG/.docs-guard/tools/docs-guard/dominios.txt:8",
+   "triado:archivo-creado-por-la-corrida"
+  ],
+  [
+   "salida/_auxiliares/verificacion-barrido.txt",
+   "LG/.docs-guard/tools/docs-guard/dominios.txt:9",
+   "triado:archivo-creado-por-la-corrida"
+  ],
+  [
+   "salida/_auxiliares/verificacion-barrido.txt",
+   "LG/docs/_diseno/ficha-diseno-documental.md:180",
+   "triado:archivo-creado-por-la-corrida"
+  ],
+  [
+   "salida/_auxiliares/verificacion-compuerta.txt",
+   "docs/_diseno/ficha-diseno-documental.md:1",
+   "triado:archivo-creado-por-la-corrida"
+  ],
+  [
+   "salida/_auxiliares/verificacion-par.txt",
+   "docs/_gobierno/como-intervenir.md:1",
+   "triado:archivo-creado-por-la-corrida"
+  ]
+ ],
+ "muestra_salida": [
+  [
+   "salida/_auxiliares/inventario-06-lista.txt",
+   "LGD/ia-db/indexes/10_Glosario-Y-Nomenclatura.md:180",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-salida-LG_SDD_Docs.txt",
+   "LG/SDD/Docs/00-Contexto/_legacy/2026-08-08/Alcance-Producto-v1.0.md:143",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-01.txt",
+   "LG/SDD/Docs/_legacy/2026-08-16-consolidacion-m10/GeometriaFactory-Web/06-Backlog-Tecnico/Product-Backlog-Visor.md:169",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-salida-LG_SDD_Docs.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/09-Devops/_legacy/2026-09-14/Entornos-Deploy-v3.3.md:232",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-salida-LG_SDD_Docs.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/02-Especificacion-Funcional/_legacy/2026-08-09-c/Definicion-Modelo-De-Dominio-v1.2.md:191",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-01.txt",
+   "LG/SDD/Docs/Audit/Coherencia-Corpus-r1.md:68",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-01.txt",
+   "LG/SDD/Docs/_legacy/2026-08-16-consolidacion-m10/GeometriaFactory-Api/08-Calidad-Y-Pruebas/Casos-Prueba-Referenciales-Infrastructure.md:135",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-01.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/06-Backlog-Tecnico/historias-usuario/US-06021-Emitir-El-Acceso-Firmado-Con-Sus-Cuatro-Reclamos.md:1",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-01.txt",
+   "LG/SDD/Docs/Audit/B-02-03-GeometriaFactory-Visor-r1.md:241",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-salida-LG_SDD_Docs.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/06-Backlog-Tecnico/_legacy/2026-08-25/Product-Backlog-v3.4.md:529",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-salida-LG_SDD_Docs.txt",
+   "LG/SDD/Docs/Producto/_legacy/2026-09-14/Norma-De-Nomenclatura-v1.30.md:2362",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-13.txt",
+   "ia-db/indexes/10_Glosario-Y-Nomenclatura.md:41",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-01.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/06-Backlog-Tecnico/historias-usuario/_legacy/2026-08-25/US-02017-Rechazar-Toda-Transicion-Desde-Un-Estado-Terminal-v1.0.md:14",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-estados.txt",
+   "LG/SDD/Docs/_legacy/2026-08-16-consolidacion-8.5/GeometriaFactory-Api/CU-04001-Registrar-El-Alta-De-Una-Cuenta.md:7",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-salida-LG_SDD_Docs.txt",
+   "LG/SDD/Docs/Audit/B-02-03-GeometriaFactory-Visor-r1.md:137",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-salida-LG_SDD_Docs.txt",
+   "LG/SDD/Docs/Audit/Plan-Migracion-10.0-a-13.3.md:292",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-salida-LG_SDD_Docs.txt",
+   "LG/SDD/Docs/_legacy/2026-08-16-consolidacion-8.5/GeometriaFactory-Api/CU-02003-Fijar-Y-Reemplazar-La-Credencial-Derivada.md:69",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/linea-de-base-SDD-markdownlint.txt",
+   "SDD/Intake/_legacy/2026-09-13/PRODUCT-INTAKE-Fabrica-De-Geometria-v4.5.md:1396",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-03-estados.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/02-Especificacion-Funcional/Casos-De-Uso/CU-00025-Configurar-La-Cuenta-De-Administrador-En-El-Primer-Arranque.md:7",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-01.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/06-Backlog-Tecnico/historias-usuario/US-10005-Cerrar-Sesion-Y-Acotar-Las-Rutas-Por-Papel.md:1",
+   "ok"
+  ]
+ ]
+}

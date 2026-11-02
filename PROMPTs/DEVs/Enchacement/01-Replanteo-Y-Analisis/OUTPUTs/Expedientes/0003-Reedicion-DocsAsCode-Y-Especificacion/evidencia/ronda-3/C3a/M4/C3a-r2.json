@@ -1,0 +1,126 @@
+{
+ "corrida": "C3a-r2",
+ "citas": 165,
+ "ok": 156,
+ "creadas_por_la_corrida": 7,
+ "residuos": 2,
+ "A01": {
+  "citas": 71,
+  "ok": 71,
+  "residuos": 0
+ },
+ "detalle_residuos": [
+  [
+   "salida/.docs-guard-origen/tools/docs-guard/dg.py",
+   "Esquema-Frontmatter-Y-Prefijos.md:54",
+   "archivo-inexistente"
+  ],
+  [
+   "salida/.docs-guard/tools/docs-guard/dg.py",
+   "Esquema-Frontmatter-Y-Prefijos.md:54",
+   "archivo-inexistente"
+  ]
+ ],
+ "muestra_verificada": [
+  [
+   "salida/A-01.md",
+   "README.md:21",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "README.md:93",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "README.md:38",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:85-86",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "README.md:16-22",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "Colmenar/Platforms/Windows/Package.appxmanifest:9",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "README.md:72-73",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "README.md:24-25",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:38-39",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "Colmenar/Platforms/Windows/app.manifest:3",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "Colmenar/Colmenar.csproj:5",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "README.md:12",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:93",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "README.md:38-39",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:20",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:72-73",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "README.md:38-41",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "README.md:32-39",
+   "ok"
+  ],
+  [
+   "salida/docs/_diseno/ficha-diseno-documental.md",
+   "README.md:38-39",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:85-89",
+   "ok"
+  ]
+ ]
+}

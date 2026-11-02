@@ -1,0 +1,2 @@
+{"hooks":{"PreToolUse":[{"matcher":".*","hooks":[{"type":"command","command":"python3 -I {area-de-ensayo}/ensayos/insumos/aislado/guardia.py"}]}]},
+ "permissions":{"defaultMode":"bypassPermissions"}, "autoMemoryEnabled": false, "includeCoAuthoredBy": false}

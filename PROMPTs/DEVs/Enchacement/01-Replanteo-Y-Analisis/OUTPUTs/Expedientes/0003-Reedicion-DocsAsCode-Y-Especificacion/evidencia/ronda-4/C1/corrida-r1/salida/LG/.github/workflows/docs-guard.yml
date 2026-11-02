@@ -1,0 +1,66 @@
+# Compuerta documental (A-07 de docs/_diseno/ficha-diseno-documental.md). Propuesta sujeta a D-09, sin probar en la CI.
+# Corre la copia con huella de docs-guard sobre la carpeta nueva docs/. El corpus SDD/ es heredado y no entra.
+#   .docs-guard/          copia del proyecto: prefijos.txt (A-02), esquemas/cuerpo.schema.json (A-03),
+#                         excepciones.txt (A-08). Corre los grupos PR-1 a PR-7.
+#   .docs-guard-origen/   copia intacta de la compuerta de origen. Corre la autoprueba.
+# Huella del guion (igual en las dos copias y en el origen):
+#   dg.py        471936d8f86f2d91a6b9633adc8016bfb9135547053739a7952d3321e689bdbf
+#   ci-local.sh  5d07aed13433fbe55289e0dc1551f0bd06e6ceace7f400152106d8c8369e851d
+# Todos los grupos avisan (continue-on-error) hasta que la tabla de docs/_gobierno/linea-de-base.md diga que bloquean.
+
+name: docs-guard
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docs-guard:
+    runs-on: ubuntu-latest   # la etiqueta Linux que usa el workflow ci del proyecto
+    env:
+      DOCS_GUARD_CACHE: ${{ github.workspace }}/.docs-guard-cache
+      npm_config_cache: ${{ github.workspace }}/.docs-guard-cache/npm
+      npm_config_update_notifier: "false"
+      RUTA: docs
+    steps:
+      - uses: actions/checkout@v4
+      - name: Huella del guion
+        run: |
+          echo "471936d8f86f2d91a6b9633adc8016bfb9135547053739a7952d3321e689bdbf  .docs-guard/tools/docs-guard/dg.py" | sha256sum -c -
+          echo "5d07aed13433fbe55289e0dc1551f0bd06e6ceace7f400152106d8c8369e851d  .docs-guard/scripts/ci-local.sh" | sha256sum -c -
+          echo "471936d8f86f2d91a6b9633adc8016bfb9135547053739a7952d3321e689bdbf  .docs-guard-origen/tools/docs-guard/dg.py" | sha256sum -c -
+          echo "5d07aed13433fbe55289e0dc1551f0bd06e6ceace7f400152106d8c8369e851d  .docs-guard-origen/scripts/ci-local.sh" | sha256sum -c -
+      - name: Herramientas (con red)
+        run: .docs-guard/scripts/ci-local.sh herramientas "$RUTA"
+      - name: Caché de npm para PR-4
+        run: npx --yes markdownlint-cli2@0.17.2 --help | head -1 || true
+      - name: Autoprueba con la copia de origen
+        run: .docs-guard-origen/scripts/ci-local.sh autoprueba "$RUTA"
+      - name: PR-1 enlaces
+        continue-on-error: true
+        run: .docs-guard/scripts/ci-local.sh enlaces "$RUTA"
+      - name: PR-2 esquema
+        continue-on-error: true
+        run: .docs-guard/scripts/ci-local.sh esquema "$RUTA"
+      - name: PR-3 anti-inyección
+        continue-on-error: true
+        run: .docs-guard/scripts/ci-local.sh ai "$RUTA"
+      - name: PR-4 estructura
+        continue-on-error: true
+        run: .docs-guard/scripts/ci-local.sh estructura "$RUTA"
+      - name: PR-5 trazas
+        continue-on-error: true
+        run: .docs-guard/scripts/ci-local.sh trazas "$RUTA"
+      - name: PR-6 contrato
+        continue-on-error: true
+        run: .docs-guard/scripts/ci-local.sh contrato "$RUTA"
+      - name: PR-7 fijadas
+        continue-on-error: true
+        run: .docs-guard/scripts/ci-local.sh fijadas "$RUTA"
+      - name: Avisos sobre lo heredado
+        run: .docs-guard/scripts/ci-local.sh avisos "$RUTA"

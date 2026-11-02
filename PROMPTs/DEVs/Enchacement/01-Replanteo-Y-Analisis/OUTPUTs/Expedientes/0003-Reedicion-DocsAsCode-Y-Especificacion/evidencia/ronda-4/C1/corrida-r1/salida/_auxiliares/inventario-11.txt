@@ -1,0 +1,6 @@
+== cd LG
+$ find . \( -name .git \) -prune -o -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum | sha256sum
+e2ccd06a7e48bf6536b56ae4445f4eb731c0d5583590136a5199d6497c24d01d  -
+== cd LGD
+$ find . \( -name .git \) -prune -o -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum | sha256sum
+92b7eee5b71d6046d2359b9098d2f6a5538240959666438e4207309f9485eb46  -

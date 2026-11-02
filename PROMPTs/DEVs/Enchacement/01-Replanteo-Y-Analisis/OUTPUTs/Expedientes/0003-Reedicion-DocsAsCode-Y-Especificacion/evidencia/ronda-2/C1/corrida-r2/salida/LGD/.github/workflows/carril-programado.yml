@@ -1,0 +1,53 @@
+# Carril programado del sistema documentador (A-10). Propuesta de la adopción.
+# Frecuencia: semanal. Frescura: 365 días. Vigila: el atraso de ia-db/ (base_commit de ia-db/source.lock)
+# frente a la rama principal del repositorio del código, y la frescura de la última verificación.
+# Modo: sólo avisa, con un issue; nunca falla un pull request ni bloquea.
+# Runner: el que ya usa este repo (verificar.yml). El repositorio del código va por alias: {repo-codigo}.
+name: Carril programado
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  atraso-y-frescura:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Leer el ancla
+        id: ancla
+        run: |
+          echo "base=$(awk '/^base_commit:/{print $2}' ia-db/source.lock)" >> "$GITHUB_OUTPUT"
+          echo "fecha=$(awk '/^verificado:/{print $2}' ia-db/source.lock)" >> "$GITHUB_OUTPUT"
+
+      - name: Traer el repositorio del código con historial
+        uses: actions/checkout@v4
+        with:
+          repository: "{repo-codigo}"
+          path: codigo
+          fetch-depth: 0
+
+      - name: Medir atraso y frescura
+        id: medida
+        run: |
+          atraso=$(git -C codigo rev-list --count "${{ steps.ancla.outputs.base }}..HEAD")
+          dias=$(( ( $(date +%s) - $(date -d "${{ steps.ancla.outputs.fecha }}" +%s) ) / 86400 ))
+          echo "atraso=$atraso" >> "$GITHUB_OUTPUT"
+          echo "dias=$dias" >> "$GITHUB_OUTPUT"
+          echo "Atraso: $atraso commits; última verificación hace $dias días (frescura: 365)."
+
+      - name: Avisar con un issue
+        if: steps.medida.outputs.atraso != '0' || fromJSON(steps.medida.outputs.dias) > 365
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "$GITHUB_REPOSITORY" \
+            --title "Carril programado: ia-db atrasa ${{ steps.medida.outputs.atraso }} commits" \
+            --body "base_commit ${{ steps.ancla.outputs.base }}; verificado hace ${{ steps.medida.outputs.dias }} días (frescura 365). Aviso del carril programado: no bloquea."

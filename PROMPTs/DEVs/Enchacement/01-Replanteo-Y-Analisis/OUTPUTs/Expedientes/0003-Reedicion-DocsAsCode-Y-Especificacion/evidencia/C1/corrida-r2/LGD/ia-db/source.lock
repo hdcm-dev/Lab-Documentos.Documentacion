@@ -1,0 +1,6 @@
+# Ancla de la ia-db (A-09). La ia-db vive fuera del repo del código: vale contra esta revisión.
+repositorio: Lab-Geometria
+rama_vigilada: main
+sha: 4b114d7          # corto, tomado de ia-db/README.md:128; el SHA completo queda pendiente
+etiqueta: v1.2.0      # ia-db/README.md:38
+fijado: 2026-10-26    # changelog.md, entrada «ia-db 4.0»

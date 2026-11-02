@@ -1,0 +1,7 @@
+$ verde: copia de LGD sin cambios
+Resultado: 0 errores, 0 avisos
+exit=0
+$ rojo: se agrega a README.md un enlace a no-existe.md
+::error::README.md:41: enlace roto → no-existe.md
+Resultado: 1 errores, 0 avisos
+exit=1

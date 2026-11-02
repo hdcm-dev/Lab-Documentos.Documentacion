@@ -1,0 +1,8 @@
+$ command grep -rIlwE --exclude-dir=.git 'RD-[0-9]+' . | wc -l
+0
+$ command grep -rIlwE --exclude-dir=.git 'FIC-[0-9]+' . | wc -l
+0
+$ command grep -rIlwE --exclude-dir=.git 'PRC-[0-9]+' . | wc -l
+0
+$ command grep -rIlwE --exclude-dir=.git 'AUD-[0-9]+' . | wc -l
+0

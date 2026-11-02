@@ -1,0 +1,11 @@
+$ find . -name .git -prune -o \( -name source.lock -o -name "*.lock" -o -name CODEOWNERS -o -iname "*acta*" \) -print
+rc=0
+$ git tag -l | wc -l
+0
+$ git log --all --oneline | wc -l
+1
+$ grep -n GenerateDocumentationFile Colmenar/Colmenar.csproj
+rc=1
+$ git remote -v (ruta del remoto reemplazada por {dir-de-trabajo})
+origin	{dir-de-trabajo} (fetch)
+origin	{dir-de-trabajo} (push)

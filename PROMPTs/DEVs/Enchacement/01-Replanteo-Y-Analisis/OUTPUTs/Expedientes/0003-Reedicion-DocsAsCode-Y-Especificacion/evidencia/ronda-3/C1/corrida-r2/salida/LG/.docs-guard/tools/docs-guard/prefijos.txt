@@ -1,0 +1,23 @@
+# Registro cerrado de prefijos de ID de Fábrica de Geometría (A-02, traza a FIC-DISENO-DOCUMENTAL).
+# Un prefijo nuevo entra por PR que lo agrega acá. Columnas: prefijo, ámbito y descripción.
+#   interno  el ID se declara en las carpetas que la compuerta recorre (docs/): si no resuelve, bloquea.
+#   externo  el ID se declara fuera de lo que la compuerta recorre (el corpus SDD/ del marco de especificación).
+#
+# Sistema documentador (adopción)
+FIC     interno   ficha o anexo del sistema documentador
+RD      interno   requerimiento documental (RRD)
+PRC     interno   proceso
+AUD     interno   registro de audiencias
+# Marco de especificación SDD (corpus SDD/, fuera de la carpeta verificada)
+NB      externo   necesidad de negocio
+CU      externo   caso de uso
+RN      externo   regla de negocio
+INV     externo   invariante
+ADR     externo   decisión de arquitectura
+US      externo   historia de usuario
+BT      externo   tarea técnica
+TC      externo   caso de prueba
+QG      externo   puerta de calidad
+PT      externo   puerta técnica
+AG      externo   rol de agente del marco
+DOC     externo   documento del marco (doc_id del frontmatter SDD)

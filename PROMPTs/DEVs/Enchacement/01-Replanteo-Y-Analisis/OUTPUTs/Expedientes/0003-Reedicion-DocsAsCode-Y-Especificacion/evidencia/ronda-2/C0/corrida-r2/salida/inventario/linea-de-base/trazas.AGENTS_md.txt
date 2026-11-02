@@ -1,0 +1,7 @@
+AGENTS.md:1: ERROR traza-no-resuelve: IDX-SDEI: el ID no está declarado en el registro
+AGENTS.md:1: ERROR traza-no-resuelve: MARCO-SDEI: el ID no está declarado en el registro
+AGENTS.md:1: ERROR traza-no-resuelve: ANX-SDEI-ESQUEMA: el ID no está declarado en el registro
+AGENTS.md:1: ERROR traza-no-resuelve: ANX-SDEI-GLOSARIO: el ID no está declarado en el registro
+AGENTS.md:1: ERROR traza-no-resuelve: ANX-SDEI-VER: el ID no está declarado en el registro
+AGENTS.md:1: ERROR traza-no-resuelve: ANX-SDEI-DECIDIR: el ID no está declarado en el registro
+== PR-5 traces-resolve: ROJO (errores=6 avisos=0) trazas=6 resueltas=0 ids-duplicados=0 anclas=0 anclas-resueltas=0

@@ -1,0 +1,6 @@
+$ command grep -rhoE --exclude-dir=.git --include='*.csproj' '<TargetFrameworks?>[^<]+' . | sort | uniq -c
+      1 <TargetFramework>net10.0
+rc=0
+$ command grep -rnoE --exclude-dir=.git --include='*.props' '<TargetFrameworks?>[^<]+' .
+./LG/Directory.Build.props:11:<TargetFramework>net10.0
+rc=0

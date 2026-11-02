@@ -1,0 +1,1 @@
+grep: ./Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion: Permission denied

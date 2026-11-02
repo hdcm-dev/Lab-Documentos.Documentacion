@@ -1,0 +1,7 @@
+8a3122671827a4777c112477a1a76603ac294f9b3ce386da857cda1c9543279e  conocimiento.md
+docs/_gobierno/como-intervenir.md:1: ERROR traza-no-resuelve: FIC-NO-EXISTE: el ID no está declarado en el registro
+anclas: 1 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=7 resueltas=6 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc=1
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=6 resueltas=6 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc=0

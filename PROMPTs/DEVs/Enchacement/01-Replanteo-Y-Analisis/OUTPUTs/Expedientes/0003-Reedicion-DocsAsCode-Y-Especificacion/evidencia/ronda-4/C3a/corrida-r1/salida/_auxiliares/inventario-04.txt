@@ -1,0 +1,2 @@
+grep: Colmenar/Resources/Ayuda: No such file or directory
+rc=2

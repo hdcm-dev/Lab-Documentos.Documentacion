@@ -1,0 +1,12 @@
+# Registro cerrado de prefijos de ID del proyecto Colmenar (D-07, A-02).
+# Un prefijo nuevo entra por PR que lo agrega aquí. Columnas: prefijo, ámbito y descripción.
+#   interno  el ID se declara en este repositorio (doc_id o encabezado); si no resuelve, traces-resolve bloquea.
+#   externo  el ID se declara en el sistema que se documenta; resuelve contra el SHA de source.lock.
+#
+FIC     interno   ficha o anexo del sistema documentador (A-01, A-03 nota, A-08)
+RD      interno   requerimiento documental (RRD, A-04)
+PRC     interno   proceso «Cómo intervenir» (A-06)
+AUD     interno   registro de audiencias (A-12)
+# Convenio con el programa provincial (numeración común a las cuatro apps de la federación; a Colmenar: EX-31..EX-46).
+# Sin registro de IDs en el repo: es un prefijo externo, no un marco (D-04). README.md:67-69.
+EX      externo   exigencia del convenio provincial (EX-31..EX-46)

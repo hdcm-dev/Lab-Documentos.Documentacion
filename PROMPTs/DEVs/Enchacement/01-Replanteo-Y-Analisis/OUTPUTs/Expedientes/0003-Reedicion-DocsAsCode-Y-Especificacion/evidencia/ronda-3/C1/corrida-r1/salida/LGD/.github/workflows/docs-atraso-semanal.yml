@@ -1,0 +1,35 @@
+# Carril programado de la ia-db (A-10 del diseño documental de Lab-Geometria, FIC-DISENO-DOCUMENTAL).
+# Sólo avisa, con un issue. Frecuencia: semanal. Frescura: 365 días. Qué vigila: el atraso del sha de
+# ia-db/source.lock contra main del repo del código (A-09) y la frescura de la ia-db. Sin probar.
+name: docs-atraso-semanal
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  atraso:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Atraso del sha fijado
+        id: atraso
+        run: |
+          repo=$(sed -n 's/^repo: *//p' ia-db/source.lock)
+          sha=$(sed -n 's/^sha: *//p' ia-db/source.lock)
+          rama=$(sed -n 's/^comparar: *//p' ia-db/source.lock)
+          git clone --quiet --filter=blob:none "https://github.com/$repo.git" codigo
+          n=$(git -C codigo rev-list --count "$sha..origin/$rama")
+          echo "atraso=$n" >> "$GITHUB_OUTPUT"
+      - name: Aviso con issue
+        if: steps.atraso.outputs.atraso != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --title "ia-db atrasada ${{ steps.atraso.outputs.atraso }} commits" \
+            --body "El sha de ia-db/source.lock está ${{ steps.atraso.outputs.atraso }} commits detrás de main. Sólo avisa."

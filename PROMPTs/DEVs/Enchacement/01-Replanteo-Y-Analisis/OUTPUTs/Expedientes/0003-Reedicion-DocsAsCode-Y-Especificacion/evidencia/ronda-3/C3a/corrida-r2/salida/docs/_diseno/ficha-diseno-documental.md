@@ -1,0 +1,166 @@
+---
+doc_id: FIC-COLMENAR-DISENO
+doc_type: ficha
+title: Ficha de diseño documental de Colmenar
+description: Decisiones, catálogo activo y artefactos del sistema documentador de Colmenar (A-01).
+status: borrador
+origin: ia-generated
+confidence: media
+owner: aplicador
+last_review: 2026-11-02
+audience: [desarrollo, po, agente]
+traces: []
+---
+
+# Ficha de diseño documental — Colmenar
+
+Citas `ruta:línea` relativas a la raíz del repo `repo/proyecto` en el SHA leído. Salida completa del inventario en
+`salida/inventario/inventario.txt`.
+
+| Campo | Valor |
+| --- | --- |
+| Proyecto y repositorios leídos, con SHA | Colmenar, un repo: `repo/proyecto`, SHA `d39dfbd4d113794fc0edca9f6d16739b51a502f3` (`./aislado git -C repo/proyecto rev-parse HEAD`). Huella del árbol (comando 11): `dba3b7dacbfa86751cb88e646769d910f171023885b6b5dcc363e3fe4c3c6cca`. Repos hermanos (API, paquete, guía de estudio): no recibidos (`README.md:46-50`) |
+| Carpetas excluidas o sin lectura (`{excluidas}`) | ninguna (`.git` se excluye siempre por el bloque; no hay `bin/` ni `obj/` en el árbol) |
+| Fecha | 2026-11-02 (comando 10, `date -u +%F`, igual a `montaje.txt`) |
+| Quién aplica | aplicador |
+| Conocimiento aplicado | DocsAsCode-Designing-Specification, versión 1.3 ; huella SHA-256 de `conocimiento.md`: `8a3122671827a4777c112477a1a76603ac294f9b3ce386da857cda1c9543279e` |
+
+## 1. Inventario (paso 1)
+
+Todos los comandos corrieron con `./aislado bash -c 'cd repo/proyecto && …'`, `EXC=()`.
+
+| Patrón de §3.1 | Comando | Cuenta | Salida o ruta a la salida |
+| --- | --- | --- | --- |
+| ID declarado más de una vez | 1: `python3 ../../compuerta/tools/docs-guard/dg.py trazas --raiz . .`; 1b también | 0 | `== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=0 resueltas=0 ids-duplicados=0 anclas=0 anclas-resueltas=0`, rc=0; 1b sin salida, rc=0 |
+| Versión declarada dos veces | 2 | 0 | sin salida, rc=0 |
+| Estado «planificado» o equivalente | 3 con `{carpeta-tecnica}` = `docs/tecnica/` | 0 | `grep: docs/tecnica/: No such file or directory`, rc=2: carpeta ausente. Proporción planificada: 0 de 0 documentos (no hay Markdown con frontmatter; comando 1: `trazas=0`) |
+| Traza de la interfaz a una unidad que no le corresponde | 4 con `{carpeta-ayuda}` = `Colmenar/Resources` (la de la interfaz; adaptado, no hay carpeta de ayuda) | 0 | sin salida, rc=1 |
+| Puntero a un documento obsoleto o ausente | 5 | 0 | `find … \| wc -l` = 0: archivo ausente; segundo comando sin salida, rc=0 |
+| Advertencia del índice del proyecto | 6 | 0 | sin `{indice}`: `ls INDEX.md llms.txt AGENTS.md` da «No such file or directory» para los tres; `find . -iname '*index*' -o -iname '*indice*'` sin salida. Sin reservas |
+| Espacios de IDs en uso (D-07) | 7 | 1 espacio | `4 EX`. Origen: convenio externo con el programa provincial (`README.md:67-69`); no choca con `D-`, `CL-`, `A-`, `DE-`, `I-` |
+| Plataformas que compila cada máquina (D-09) | 8 | 1 | `1 <TargetFrameworks>net10.0-android` (la línea de `Colmenar/Colmenar.csproj:4`); iOS y maccatalyst se suman fuera de Linux (`Colmenar/Colmenar.csproj:5`), Windows sólo en Windows (`Colmenar/Colmenar.csproj:6`). Plataforma → runner: Android en Linux (`README.md:93`); iOS en Mac (`README.md:94`); Windows en Windows (`README.md:95`) |
+| Prefijos nuevos libres (comando 9) | 9 | FIC 0, RD 0, PRC 0, AUD 0 | los cuatro libres |
+
+Otros comandos de sólo lectura: `git tag -l | wc -l` → 0 (sin etiquetas); `git remote -v` → `origin` apunta a un
+bundle local, no a una organización; `grep -rnE "Authorize|Policy|Claim|Role" --include="*.cs" .` → sin salida, rc=1;
+`ls -la .github` → «No such file or directory» (sin workflows).
+
+## 2. Decisiones
+
+| Id | Pregunta | Valor | Evidencia (ruta:línea en el SHA leído, o «pendiente: qué falta») | Clase (P o H) | Si es H: opciones y default para la persona |
+| --- | --- | --- | --- | --- | --- |
+| D-01 | ¿Escenario y contextos? | Panel con roles (incluye la app): cinco perfiles con permisos distintos en la tabla de permisos declarada; superficies: app Android, iOS y Windows, panel de la cooperativa y sitio web público; el código todavía no tiene autorización (proyecto nuevo) | `README.md:11` (panel), `README.md:16-22` (perfiles), `README.md:32-39` (superficies); grep de autorización sin salida, rc=1 | P | — |
+| D-01 · sitio | ¿Hay sitio publicado? | Sí (remite a D-03) | `README.md:38-39` | H (de D-03) | Ver D-03 |
+| D-01 · marco | ¿Hay marco de especificación? | No: EX-nn es numeración de convenio sin registro en el repo, prefijo externo | `README.md:67-69`; comando 1b sin salida | P | — |
+| D-01 · topología | ¿Mismo repo, hermano o dedicado? | Mismo repo para la app; la API en repo privado ajeno, el paquete en repo propio público, la guía de estudio en repo dedicado | `README.md:45-50`, `README.md:72-73` | P | — |
+| D-01 · organización | ¿Dentro o fuera de la organización del runner (medido)? | pendiente: organización (el remoto `origin` es un bundle local y no hay `.github/`). Evidencia secundaria declarada: la organización sólo permite automatismos propios | `README.md:96-97` | P | — |
+| D-02 | ¿Qué clases de pieza se activan? | CL-01, CL-02, CL-03, CL-04, CL-06, CL-07, CL-10, CL-12, CL-13, CL-14 (detalle en §3) | ver §3 | P | — |
+| D-03 | ¿Hay sitio publicado? | Sí | `README.md:38-39` («ya decidido y pagado por el programa provincial») | H, decidida | decidida por el programa provincial (`README.md:38`) |
+| D-04 | ¿Hay marco de especificación con registro de IDs? | No: fichas propias y `docs/_requisitos.md` | comandos 1b y 2 sin salida; comando 1 `trazas=0` | P | — |
+| D-05 | ¿Dónde vive cada pieza? | Mismo repo: CL-01, CL-02, CL-03, CL-06 (texto en la interfaz), CL-07, CL-12, CL-13; build: CL-04, CL-14 (build del sitio); repo dedicado: CL-10 | `README.md:45`, `README.md:38-39`, `README.md:72-73` | P | — |
+| D-06 | ¿Contra qué ancla vale cada pieza? | Commit para lo del mismo repo; SHA fijado (`source.lock`) para CL-10. Líneas de versión vivas: 2 y 3, las dos «sin etiqueta», ancladas por SHA hasta tener etiqueta. Mecanismo actual: ninguno | `README.md:34-35`; `git tag -l \| wc -l` → 0 | P | — |
+| D-07 | ¿Qué prefijos e IDs? | Registro A-02: FIC, RD, PRC, AUD internos; EX externo. Unicidad confirmada por el comando 1 (`ids-duplicados=0`) | comandos 7 y 9 (§1); `README.md:67-69` | P (prefijos del registro propio) | — |
+| D-08 | ¿Qué esquema de frontmatter? | Diez campos más `description`, más `version`, `aprobado_por` y `fecha_aprobacion` opcionales para la norma de calidad (código = `doc_id`; nunca igualados a `owner` ni a `last_review`) | `README.md:70-71` | P | — |
+| D-09 | ¿Cómo corre la compuerta? | Abierta. Propuesta: copia con huella en `.docs-guard/` en el runner Linux; Mac (jueves) sólo si un build de iOS emite pieza D; Windows sin pieza D | `README.md:93-97`; `Colmenar/Colmenar.csproj:4-6` | H | Opciones: copia con huella en runner propio · workflow reutilizable. Default: copia con huella (la organización sólo admite automatismos propios, `README.md:96-97`) |
+| D-10 | ¿Qué controles bloquean y cuáles avisan, en qué carpeta? | Carpeta `docs` (nueva). Bloquean PR-1, PR-2, PR-3 (AI-3 avisa), PR-4, PR-5 y PR-7 con línea de base 0 medida (§8); PR-6 avisa (sin contrato); A-13 avisa entero. La plataforma impide fusionar con verificaciones fallidas, dicho en prosa (evidencia secundaria, sin respuesta de la API); volver obligatorio el check es H | `README.md:98-99`; §8 | P | — |
+| D-11 | ¿Quién decide qué? | Delegaciones: pendiente: acta sin versionar (el acta «guardada en el repositorio» no está en el árbol). Visto bueno obligatorio del técnico sanitario jefe en alertas y tratamientos; quién lo da en su ausencia: pendiente. Sin delegación asentada, fusiona una persona; el PR de adopción lleva reserva | `README.md:61-66`; `git ls-files \| grep -ic acta` → 0; los únicos archivos no de código son `README.md` y `Colmenar/.gitignore` | H | Opciones: versionar el acta y aplicar su alcance · fusiona una persona. Default: fusiona una persona |
+| D-12 | ¿Qué canales hay para agentes? | Abierta. Propuesta: `AGENTS.md` puntero y CL-14 del build del sitio; el asistente del organismo lee sólo lo público del sitio (I-24) | `README.md:40-41`, `README.md:59-60` | H | Opciones: `AGENTS.md` puntero · índice para agentes · canales derivados. Default: `AGENTS.md` puntero más CL-14 |
+| D-13 | ¿Cómo es la ayuda al usuario final? | Por rol y por idioma (es, pt), con audio para peones; en el punto de uso: catálogo de microtexto con traza (instrucciones de una línea). El texto localizado en recursos no se ancla; faltan `traduccion-atrasada` y `anti-inyeccion-en-recursos` | `README.md:26`, `README.md:28`, `README.md:85-86` | P | — |
+| D-14 | ¿Qué es privado y cómo se nombra? | Alias: `{repositorio}` (repo de la API), `{servicio-privado}` (proveedor de la API), `{organizacion}` para el organismo sanitario; ubicaciones de apiarios y nombres de alumnos nunca. Visibilidad: este repo y el del paquete públicos, el de la API privado (comando 13, evidencia secundaria). Lista: pendiente | `README.md:77-81` | P | — |
+| D-15 | ¿Hay un cuerpo formativo? | Sí: la escuela usa la app para enseñar; ejercicios con enunciado y solución, en portugués | `README.md:12`, `README.md:72-73`, `README.md:89` | P | — |
+| D-16 | ¿Idioma y estilo? | Español en este repo; la ayuda en español y portugués; el curso en portugués. No se traducen: claves del frontmatter, IDs (`FIC-`, `RD-`, `PRC-`, `AUD-`, `EX-`); términos del contrato y del paquete: pendiente (repos no recibidos) | `README.md:85-89` | P | — |
+| D-17 | ¿Cómo es el carril programado? | Diario de octubre a marzo y mensual el resto; frescura 90 días; vigila `source.lock` de CL-10, `last_review` y la copia de la tabla de productos veterinarios; sólo avisa, con issue | `README.md:51-52`, `README.md:71`, `README.md:100-101` | P | — |
+| D-18 | ¿Audiencias y entrega? | Perfil mínimo más extensión superficie; seis audiencias (§5) | `README.md:16-24`, `README.md:32-39` | P; H por jerarquía y por exponer API | Jerarquía (`incluye`): ninguna declarada; default: cada rol se incluye a sí mismo |
+
+## 3. Catálogo activo
+
+Fila de partida: «Panel con roles» (CL-01 a CL-08, CL-12).
+
+| Clase | Activa (sí o no) | Alta o baja frente al escenario, con motivo | Dónde vive (todas las ubicaciones) | Ancla | Evidencia |
+| --- | --- | --- | --- | --- | --- |
+| CL-01 | sí | de la fila; A-01 | `docs/_diseno/` | commit | esta ficha |
+| CL-02 | sí | de la fila | `docs/_requisitos.md` | commit | D-04 |
+| CL-03 | sí | de la fila; cinco asistentes en el repo | raíz del repo | commit | `README.md:59-60` |
+| CL-04 | sí | de la fila; fuente presente (C#), generación apagada: control pendiente, línea de base sin medir | build | commit | `Colmenar/MauiProgram.cs:1` |
+| CL-05 | no | baja: el contrato vive en un repo ajeno y la app consume la versión publicada (el ancla es esa versión) | — | — | `README.md:46-47` |
+| CL-06 | sí | de la fila; ayuda por perfil e idioma | repo de la interfaz y sitio público | commit | `README.md:28`, `README.md:38-39` |
+| CL-07 | sí | de la fila; `docs/tecnica/` ausente, se crea | `docs/tecnica/` | commit | comando 3, rc=2 |
+| CL-08 | no | baja: sólo si D-12 elige índice; default sin índice (propuesta sujeta a D-12) | — | — | D-12 |
+| CL-09 | no | sin expedientes ni bitácoras en el árbol | — | — | comando 1, `trazas=0`; listado del árbol (§1) |
+| CL-10 | sí | alta: D-15 = Sí | repo dedicado (no recibido; regla de I-20 «sin verificar en el hermano») | SHA fijado (`source.lock`) | `README.md:72-73` |
+| CL-11 | no | la copia de la tabla veterinaria es dato del producto, no conocimiento compartido | — | — | `README.md:51-52` |
+| CL-12 | sí | de la fila | `docs/_gobierno/como-intervenir.md` | versión de la plantilla | A-06 |
+| CL-13 | sí | alta: README existe y el CHANGELOG lleva qué exigencias cumple cada entrega | raíz del repo | fecha o versión | `README.md:1`, `README.md:68-69` |
+| CL-14 | sí | alta: D-03 = Sí | build del sitio | versión del build | `README.md:38-41` |
+
+## 4. Decisiones de clase H para una persona
+
+| Id | Estado | Opciones | Default propuesto | Quién decide |
+| --- | --- | --- | --- | --- |
+| D-03 | decidida por el programa provincial (`README.md:38`) | — | — | — |
+| D-09 | abierta | copia con huella · reutilizable | copia con huella en runner Linux | responsable técnica |
+| D-11 | abierta | versionar el acta · fusiona una persona | fusiona una persona | dueño del producto |
+| D-12 | abierta | puntero · índice · canales derivados | `AGENTS.md` puntero más CL-14 | responsable técnica |
+| D-18 · jerarquía | abierta | declarar `incluye:` · roles disjuntos | roles disjuntos | dueño del producto |
+| D-18 · exponer API | abierta | documentar la API ajena en el sitio · no | no | dueño del producto |
+| Check obligatorio (D-10) | abierta | volver obligatorio `docs-guard` · sólo avisa | obligatorio | administración del alojamiento |
+| A-05 `AGENTS.md` | abierta | aceptar el puntero · modificarlo | aceptar | responsable técnica |
+
+## 5. Audiencias y entrega (D-18)
+
+Perfil mínimo más la extensión superficie, registrada en D-01 (`README.md:32-39`). Registro: `docs/_gobierno/registro-audiencias.md`.
+
+| Audiencia (fila de A-12) | Incluye | Nivel de acceso | Punto de aplicación | Par de entrega | Evidencia |
+| --- | --- | --- | --- | --- | --- |
+| publico-general | — | publico | build del sitio | pendiente | `README.md:38-39` |
+| productor | — | producto | servidor | pendiente | `README.md:18` |
+| peon-de-campo | — | producto | servidor | pendiente | `README.md:19` |
+| tecnico-sanitario | — | producto | servidor | pendiente | `README.md:20` |
+| administracion | — | producto | servidor | pendiente | `README.md:21` |
+| inspector-sanitario | — | restringido | servidor | pendiente: acceso no decidido | `README.md:22`, `README.md:105` |
+
+Kilos y precios: nivel `restringido`, se hacen cumplir en la API (`README.md:24-25`), repo ajeno: fuera de este repo público (I-22).
+
+## 6. Artefactos A-02 a A-13
+
+| Id | Producido (sí o no) | Ruta | Motivo si no se produce | Propuesta sujeta a (D-nn) | «Sin probar» |
+| --- | --- | --- | --- | --- | --- |
+| A-02 | sí | `salida/.docs-guard/tools/docs-guard/prefijos.txt` | — | D-09 | probado (§8) |
+| A-03 | sí | `salida/.docs-guard/tools/docs-guard/esquemas/cuerpo.schema.json` | — | D-09 | probado (§8) |
+| A-04 | sí | `salida/docs/_requisitos.md` | — | — | probado |
+| A-05 | sí | `salida/AGENTS.md` | — | D-12 | probado |
+| A-06 | sí | `salida/docs/_gobierno/como-intervenir.md` | — | D-09, D-11 | probado |
+| A-07 | sí | `salida/.github/workflows/docs-guard.yml` más copias `salida/.docs-guard/` y `salida/.docs-guard-origen/` | — | D-09 | el workflow no corrió en una CI |
+| A-08 | sí | `salida/pr-adopcion.md` y `salida/.docs-guard/tools/docs-guard/excepciones.txt` | — | — | — |
+| A-09 | sí | `salida/docs/_estudio/source.lock` | — | — | `sha: pendiente` (repo dedicado no recibido) |
+| A-10 | sí | `salida/.github/workflows/docs-guard-programado.yml` | — | — | sin probar |
+| A-11 | sí | `salida/CHANGELOG.md` (archivo nuevo, entrada en la línea 5); índice: no aplica (CL-08 baja) | — | D-12 | — |
+| A-12 | sí | `salida/docs/_gobierno/registro-audiencias.md` | — | D-18 | probado |
+| A-13 | sí | `salida/pr-adopcion.md`, sección A-13 | — | — | pares pendientes |
+
+A-01 va al repo en `docs/_diseno/ficha-diseno-documental.md` (copia idéntica en `salida/docs/_diseno/`).
+
+## 7. Lo que el conocimiento no resolvió
+
+| Sección o decisión | Cita textual de lo que no resuelve | Qué quedó sin hacer |
+| --- | --- | --- |
+| D-11 | «`DocsAsCode-Designing-Specification §3.2`, D-11, no resuelve: quién da el visto bueno del técnico sanitario jefe en su ausencia» | queda pendiente |
+| D-17 | «`DocsAsCode-Designing-Specification §3.2`, D-17, no resuelve: con qué comando se compara la copia de la tabla veterinaria con la publicada» | el paso queda sin comando en A-10 |
+| D-16 | «`DocsAsCode-Designing-Specification §3.2`, D-16, no resuelve: los términos del contrato y del paquete sin sus repos» | lista de términos incompleta |
+
+## 8. Verificación (§6)
+
+| Comprobación | Comando | Resultado (salida textual) |
+| --- | --- | --- |
+| Compuerta sobre los artefactos, con A-02 y A-03 | `./aislado bash -c 'cd salida && bash .docs-guard/scripts/ci-local.sh {grupo} docs'`, un grupo por vez; copia con huella: `dg.py` 471936d8f86f2d91a6b9633adc8016bfb9135547053739a7952d3321e689bdbf, `ci-local.sh` 5d07aed13433fbe55289e0dc1551f0bd06e6ceace7f400152106d8c8369e851d, iguales a `compuerta/` | PR-1 `verde (errores=0 avisos=0)`; PR-2 `verde (errores=0 avisos=1)` (traces-vacio en la ficha); PR-3 `verde … AI-1=0 … AI-5=0`; PR-4 `Summary: 0 error(s)`, mermaid verde; PR-5 `verde (errores=0 avisos=0) trazas=3 resueltas=3 ids-duplicados=0`; PR-6 `no aplica`; PR-7 verde. En `salida/inventario/compuerta-verde.txt`, PR-5 sale rojo: es la primera corrida, cuando esta ficha también tenía `doc_id` en la raíz de `salida/` (duplicado); se le quitó el frontmatter (lo lleva sólo la copia del repo) y PR-5 quedó verde |
+| Par rojo/verde plantado | traza `FIC-NO-EXISTE` plantada en `docs/_gobierno/como-intervenir.md`, `ci-local.sh trazas docs`, y retirada | rojo: `ERROR traza-no-resuelve: FIC-NO-EXISTE`, `ROJO (errores=1 avisos=0)`, rc=1; verde: `verde (errores=0 avisos=0) trazas=3 resueltas=3`, rc=0. Salida en `salida/inventario/par-rojo-verde.txt` |
+| Autoprueba de la compuerta de origen | `./aislado bash -c 'cd salida && bash .docs-guard-origen/scripts/ci-local.sh autoprueba docs'` (cachés de la imagen, `npm_config_offline=true`) | `== autoprueba: verde` |
+| Chequeo de citas ruta:línea | bloque de §3.5, desde `repo/proyecto`, sobre `../../salida/A-01.md` | salida vacía |
+| Muestra de cinco citas releídas | `sed -n` de cada línea | `README.md:16` tabla de perfiles; `Colmenar/Colmenar.csproj:4` `net10.0-android`; `README.md:93` máquina Linux que compila Android; `README.md:38` sitio «ya decidido y pagado por el programa provincial»; `README.md:61` acta «guardada en el repositorio». Las cinco sostienen lo afirmado |
+| Barrido por `{lista-privada}` | sin lista: comando 12b sobre `salida/` (sin las copias de la compuerta ni `inventario/`), con `hostname -s` | sin salida, rc=1. Lista: pendiente. En `repo/proyecto`, el 12b dio dos falsos positivos de número de versión (`Colmenar/Platforms/Windows/Package.appxmanifest:9`, `Colmenar/Platforms/Windows/app.manifest:3`) |
+
+## 9. Suposiciones
+
+| Qué se supuso | Por qué |
+| --- | --- |
+| Ninguna | Lo no medido quedó «pendiente» |

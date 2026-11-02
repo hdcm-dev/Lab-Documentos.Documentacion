@@ -1,0 +1,12 @@
+# A-11, destino CHANGELOG.md: insertar después de la línea 4 (antes de la primera entrada «## 2026-11-01»).
+
+## 2026-11-02 (sistema documentador del repositorio: adopción)
+
+### docs/ y tools/docs-guard/prefijos.txt — ficha FIC-DISENO-DOCUMENTAL
+
+#### Agregado
+
+- **`docs/_diseno/ficha-diseno-documental.md`** (`FIC-DISENO-DOCUMENTAL`): ficha de diseño documental, en borrador.
+- **`docs/_requisitos.md`** (`FIC-RRD-ADOPCION`), **`docs/_gobierno/como-intervenir.md`** (`PRC-COMO-INTERVENIR`) y **`docs/_diseno/linea-de-base.md`** (`FIC-LINEA-DE-BASE`).
+- **`prefijos.txt`**: prefijos internos `FIC` y `PRC`.
+- **`docs-guard.yml`**: la carpeta `docs` entra a la RUTA de la compuerta.

@@ -1,0 +1,4 @@
+$ grep -rniE "Authorize|Policy|Claim|Role" --exclude-dir=.git .
+Colmenar/Platforms/MacCatalyst/Info.plist:43:			<key>UIWindowSceneSessionRoleApplication</key>
+Colmenar/Platforms/iOS/Info.plist:35:			<key>UIWindowSceneSessionRoleApplication</key>
+(exit 0)

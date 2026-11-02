@@ -1,0 +1,23 @@
+# Registro cerrado de prefijos de ID de Lab-Geometria (A-02 del diseño documental, FIC-DISENO-DOCUMENTAL).
+# Columnas: prefijo, ámbito y descripción. Un prefijo nuevo entra por pull request que lo agrega acá (D-07).
+#   interno  el ID se declara en las carpetas que verifica la compuerta (docs/): si no resuelve, trazas da rojo.
+#   externo  el ID se declara en el corpus SDD/ del mismo repositorio, fuera de las carpetas verificadas.
+#
+# Sistema documentador (prefijos nuevos, libres en todo el árbol leído: comando 9 en 0)
+RD      interno   requerimiento documental (RRD)
+FIC     interno   ficha o anexo del sistema documentador
+PRC     interno   proceso «Cómo intervenir»
+AUD     interno   registro de audiencias y entrega
+# Marco SDD del proyecto (heredados; se cuentan en A-08 y su saneamiento va aparte)
+CU      externo   caso de uso
+RN      externo   regla de negocio
+US      externo   historia de usuario
+ADR     externo   decisión de arquitectura
+NB      externo   necesidad de negocio
+BT      externo   tarea técnica del backlog
+EP      externo   épica
+PT      externo   puerta técnica
+QG      externo   puerta de calidad
+RA      externo   regla de arquitectura
+SD      externo   estado de pantalla o de diseño
+AG      externo   agente o rol del marco SDD

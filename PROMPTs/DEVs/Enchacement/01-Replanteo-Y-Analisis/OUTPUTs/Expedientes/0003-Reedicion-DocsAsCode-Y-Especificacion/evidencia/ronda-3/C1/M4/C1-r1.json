@@ -1,0 +1,120 @@
+{
+ "corrida": "C1-r1",
+ "citas": 5236,
+ "ok": 5231,
+ "invenciones": 1,
+ "fuera_de_repo": 4,
+ "A01": {
+  "citas": 69,
+  "invenciones": 0
+ },
+ "detalle_invenciones": [
+  [
+   "salida/_inventario/gate-esquema.txt",
+   "docs/_diseno/ficha-diseno-documental.md:1",
+   "archivo-inexistente"
+  ]
+ ],
+ "muestra_verificada": [
+  [
+   "salida/_inventario/c01.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/06-Backlog-Tecnico/historias-usuario/US-10021-Sincronizar-El-Arbol-Y-La-Escena-Por-Indice-De-Pieza.md:1",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/02-Especificacion-Funcional/Casos-De-Uso/CU-00028-Consultar-El-Listado-Y-El-Detalle-De-Los-Trabajos.md:36",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/03-UX-UI-DX/_legacy/2026-08-09/Guia-Onboarding-Developer-v1.0.md:167",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c01.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/06-Backlog-Tecnico/historias-usuario/US-02011-Reconstruir-El-Conjunto-De-Piezas-Con-Identidad-Posicional.md:1",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/05-Arquitectura-Tecnica/_legacy/2026-09-13/Arquitectura-Unidad-Entrega-v3.8.md:573",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/09-Devops/_legacy/2026-09-13/Supply-Chain-Seguridad-v3.2.md:44",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/06-Backlog-Tecnico/historias-usuario/US-04031-Conservar-La-Cuenta-Su-Estado-Y-Todos-Sus-Trabajos-Tras-El-Reseteo.md:21",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/07-Plan-Sprint/_legacy/2026-09-13/Mini-Plan-v3.5.md:428",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/02-Especificacion-Funcional/Modelo-Datos/reglas-conceptuales-de-modelo/_legacy/2026-08-10/RC-05-Retiro-Fisico-Con-Arrastre-v1.0.md:1",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c01.txt",
+   "LG/SDD/Docs/Audit/B-02-03-GeometriaFactory-Infrastructure-r2.md:128",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/09-Devops/_legacy/2026-09-13/Pipeline-CI-CD-v3.10.md:187",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c12b.txt",
+   "./LG/SDD/Docs/00-Contexto/_legacy/2026-09-12/Roadmap-Producto-v1.10.md:64",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/06-Backlog-Tecnico/historias-usuario/US-06013-Arrastrar-Todos-Los-Trabajos-De-Una-Cuenta-Dada-De-Baja.md:25",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c01.txt",
+   "LG/SDD/Docs/_legacy/2026-08-16-consolidacion-m10/GeometriaFactory-Api/08-Calidad-Y-Pruebas/Casos-Prueba-Referenciales-Application.md:419",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/03-UX-UI-DX/DX-Error-Messages.md:1183",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c01.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/06-Backlog-Tecnico/historias-usuario/US-10006-Cambiar-La-Contrasena-Propia-Presentando-La-Vigente.md:1",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c01.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/08-Calidad-Y-Pruebas/Casos-Prueba-Referenciales.md:1297",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/06-Backlog-Tecnico/historias-usuario/US-02026-Resetear-La-Contrasena-Conservando-Cuenta-Y-Trabajos.md:38",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/03-UX-UI-DX/_legacy/2026-08-09/DX-Error-Messages-v1.2.md:133",
+   "ok"
+  ],
+  [
+   "salida/_inventario/c03.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/03-UX-UI-DX/DX-Error-Messages.md:624",
+   "ok"
+  ]
+ ]
+}

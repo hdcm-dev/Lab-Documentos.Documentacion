@@ -1,0 +1,7 @@
+== PR-4 estructura: markdownlint-cli2, mermaid y mermaid-arroba (docs )
+markdownlint-cli2 v0.17.2 (markdownlint v0.37.4)
+Finding: docs/**/*.md
+Linting: 4 file(s)
+Summary: 0 error(s)
+== PR-4 mermaid: verde (bloques=0 invalidos=0)
+== PR-4 mermaid-arroba: verde (errores=0 avisos=0) bloques=0

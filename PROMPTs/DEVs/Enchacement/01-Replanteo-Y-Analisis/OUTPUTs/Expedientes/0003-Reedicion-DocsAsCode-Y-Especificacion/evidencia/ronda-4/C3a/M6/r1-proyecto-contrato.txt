@@ -1,0 +1,5 @@
+$ bash .docs-guard/scripts/ci-local.sh contrato docs
+== PR-6 contrato (docs)
+no aplica: la ruta no tiene contracts/openapi.json
+== PR-6 contratos: verde (errores=0 avisos=0) contratos=0
+RC=0

@@ -1,0 +1,4 @@
+$ find . -name "*.md" -not -path "./.git/*"
+./README.md
+$ grep -l "^---" (frontmatter en línea 1)
+sin frontmatter: ./README.md

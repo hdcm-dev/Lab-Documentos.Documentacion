@@ -1,0 +1,22 @@
+== LG
+1
+261:  se reedita; el alumno elimina **sólo sus borradores**; el que pide el trabajo de otro recibe «no
+264:  identificador y estado, reedición, eliminación, y el listado de la comisión agrupado por alumno.
+622:  desaparición del trabajo eliminado.
+652:- **Y el recuento se compara contra lo pedido.** Una prueba que se renombra deja de existir para el
+740:**No se renombra el archivo**, aunque el nombre sea lo que más confunde: `deploy/compose.yaml` está
+1191:  renombra ningún uso. Descarta tres alternativas con fundamento (API key por cliente,
+1528:  `rest-api`, agregado como carpeta extra y no como renombre.
+1752:### Retirado
+1767:- `scripts/verify-stage-i.sh` sigue midiendo el flujo de FTP retirado y exigiendo producción = `main` (`DD-R8-1`). Es la **quinta** vez que este registro llega tarde a una fusión propia (`DD-R8-2`).
+1776:- `.github/workflows/e2e.yml`: el recorrido contra el laboratorio desplegado deja de dispararse al terminar `deploy-front-ftp`, un canal retirado; queda a mano.
+1796:## Un acceso deja de servir en cuanto la cuenta se bloquea o se elimina — 2026-09-14
+1802:- `GeometriaFactory.Api`: la guarda que corre en cada petición con acceso firmado evalúa la **admisión completa de la cuenta** (`Account.EvaluateAdmission`) y no sólo la marca de cambio de contraseña. Un acceso obtenido antes de que el administrador bloquee la cuenta responde `403` con `AccountNotEnabled`; si la eliminó, `401` genérico. La cuenta marcada y habilitada sigue recibiendo el mismo código que antes.
+2001:  - **Preliminar:** la versión con el distintivo textual `preliminar` (`gf-badge--warning`). Es el caso de `main`, que MinVer calcula como `-alpha.0.N`.
+2015:- **`dotnet test` con un filtro que no coincide con nada sale con código 0** («No test matches the given testcase filter»), y así lo corrían `verify-stage-g.sh` y `verify-stage-h.sh`. Con una prueba renombrada, la puerta quedaba en verde sin haberla corrido.
+2024:  - Con el renombrado, lo lista.
+2052:  - `I-1` daba OK sobre `deploy-front-ftp.yml`, un flujo retirado;
+rc=0
+== LGD
+1
+rc=1

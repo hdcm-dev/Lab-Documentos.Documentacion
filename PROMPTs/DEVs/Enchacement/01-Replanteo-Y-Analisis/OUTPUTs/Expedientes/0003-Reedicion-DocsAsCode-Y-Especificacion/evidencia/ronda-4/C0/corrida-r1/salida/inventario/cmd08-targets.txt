@@ -1,0 +1,4 @@
+      1 <TargetFramework>$(TF)
+     29 <TargetFramework>net10.0
+      1 <TargetFramework>net10.0-android
+     13 <TargetFramework>net8.0

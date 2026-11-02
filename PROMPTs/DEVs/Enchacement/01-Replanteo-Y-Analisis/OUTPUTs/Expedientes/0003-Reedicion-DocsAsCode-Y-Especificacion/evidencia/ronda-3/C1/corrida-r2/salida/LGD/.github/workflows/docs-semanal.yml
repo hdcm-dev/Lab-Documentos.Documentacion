@@ -1,0 +1,34 @@
+# Carril programado (A-10). Sólo avisa: abre o actualiza un issue con el informe; ningún hallazgo bloquea.
+# Frecuencia: semanal. Frescura: 365 días sobre last_review. Qué vigila: el atraso del sha de ia-db/source.lock
+# contra la rama main de Lab-Geometria, la deriva de piezas fijadas y los enlaces con red.
+name: docs-semanal
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  semanal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # La compuerta vive en el repositorio del código; arbol.tsv de esa copia tiene que listar los dos repositorios
+      # del proyecto (pendiente: hoy es el del origen).
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/Lab-Geometria
+          path: codigo
+      - name: Informe del carril programado (sólo avisa)
+        run: bash codigo/.docs-guard/tools/docs-guard/semanal.sh "${{ runner.temp }}/arbol" informe.md ia-db || true
+      - name: Abrir o actualizar el issue con el informe
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n="$(gh issue list --label docs-semanal --state open --json number -q '.[0].number')"
+          if [ -n "$n" ]; then gh issue comment "$n" --body-file informe.md
+          else gh issue create --label docs-semanal --title "Carril programado de docs" --body-file informe.md; fi

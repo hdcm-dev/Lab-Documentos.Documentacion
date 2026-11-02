@@ -1,0 +1,5 @@
+$ ../compuerta/scripts/ci-local.sh trazas docs  (LG-rojo: docs/plantado.md con traces: [FIC-NO-EXISTE])
+== PR-5 trazas (docs AGENTS.md README.md)
+docs/plantado.md:1: ERROR traza-no-resuelve: FIC-NO-EXISTE: el ID no está declarado en el registro
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=1 resueltas=0 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc=1

@@ -1,0 +1,12 @@
+<!-- A-11 · destino: CHANGELOG.md · insertar después de la línea 4 (antes de «## 2026-11-01 (SDEI: ajustes de coherencia del cuerpo)») -->
+
+## {fecha del merge} (sistema documentador: ficha de diseño documental del repositorio)
+
+### docs/ y tools/docs-guard/prefijos.txt — adopción del conocimiento DocsAsCode-Designing-Specification 1.2
+
+#### Agregado
+
+- **`docs/_diseno/ficha-diseno-documental.md` (`FIC-LD-DISENO`):** la ficha de diseño documental del repositorio, en `borrador`, con las decisiones de clase H abiertas para una persona.
+- **`docs/_requisitos.md` (`RD-LD-RRD`):** RRD inicial de la adopción, filas `RD-50` a `RD-55`.
+- **`docs/_gobierno/linea-de-base.md` (`FIC-LD-LINEA-BASE`):** línea de base de cada grupo de la compuerta sobre `Guides/` y `Concepts/`.
+- **`tools/docs-guard/prefijos.txt`:** prefijo `FIC` (interno), ficha o anexo del sistema documentador.

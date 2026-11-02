@@ -1,0 +1,16 @@
+# Carril programado de Colmenar (A-10, D-17). Sólo avisa, con un issue. Propuesta.
+# La frecuencia que fija el proyecto manda sobre el default: en cosecha (oct-mar) todos los días; fuera, mensual
+# (README.md:100-101). Vigila la deriva de la copia de la tabla de productos veterinarios (CL-11) y el atraso de
+# los SHA fijados (A-09). Frescura de 90 días para procedimientos (norma de calidad, README.md:71).
+name: docs-guard-programado
+on:
+  schedule:
+    - cron: "0 6 * * *"      # diario, para la temporada de cosecha (octubre a marzo)
+    - cron: "0 6 1 * *"      # mensual (día 1), para fuera de temporada
+  workflow_dispatch: {}
+jobs:
+  programado:
+    runs-on: [self-hosted, linux, colmenar]
+    steps:
+      - uses: actions/checkout@<sha-de-checkout>
+      - run: ./.docs-guard/tools/docs-guard/semanal.sh     # compara huellas, atraso y frescura; abre issue, no bloquea

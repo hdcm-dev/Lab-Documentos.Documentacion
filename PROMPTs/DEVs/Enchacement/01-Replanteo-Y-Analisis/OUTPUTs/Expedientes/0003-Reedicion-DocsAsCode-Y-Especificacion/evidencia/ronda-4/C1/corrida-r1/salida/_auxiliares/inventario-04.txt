@@ -1,0 +1,5 @@
+$ command grep -rn --exclude-dir=.git '^traces:' LG/src/GeometriaFactory.Web/ayuda; echo "rc=$?"
+grep: LG/src/GeometriaFactory.Web/ayuda: No such file or directory
+rc=2
+$ command grep -rn --exclude-dir=.git '^traces:' LG/src/GeometriaFactory.Web; echo "rc=$?"
+rc=1

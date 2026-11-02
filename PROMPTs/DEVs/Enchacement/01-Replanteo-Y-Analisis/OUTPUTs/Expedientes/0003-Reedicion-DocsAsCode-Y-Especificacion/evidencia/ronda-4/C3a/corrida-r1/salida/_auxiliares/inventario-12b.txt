@@ -1,0 +1,4 @@
+./Colmenar/Platforms/Windows/Package.appxmanifest:9:  <Identity Name="maui-package-name-placeholder" Publisher="CN=User Name" Version="0.0.0.0" />
+./Colmenar/Platforms/Windows/app.manifest:3:  <assemblyIdentity version="1.0.0.0" name="Colmenar.WinUI.app"/>
+rc=0
+maquina-o-etiqueta=c35e0f68a477

@@ -1,0 +1,327 @@
+[
+ {
+  "src": "salida/A-01.md:15",
+  "cita": "conocimiento.md:13",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:15",
+  "cita": "conocimiento.md:27",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:18",
+  "cita": "repo/LD/tools/docs-guard/arbol.tsv:7",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:18",
+  "cita": "repo/LD/.github/workflows/docs-guard.yml:75",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:19",
+  "cita": "repo/LD/.github/workflows/docs-guard.yml:60",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:20",
+  "cita": "repo/LD/AGENTS.md:110",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:21",
+  "cita": "repo/LD/CHANGELOG.md:34",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:35",
+  "cita": "repo/LD/CHANGELOG.md:160",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:37",
+  "cita": "repo/LD/tools/docs-guard/prefijos.txt:8-40",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:39",
+  "cita": "repo/LD/tools/docs-guard/prefijos.txt:30",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:48",
+  "cita": "repo/LD/README.md:16-17",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:48",
+  "cita": "repo/LD/AGENTS.md:45",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:49",
+  "cita": "repo/LD/AGENTS.md:45-46",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:50",
+  "cita": "repo/LD/tools/docs-guard/prefijos.txt:1-40",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:51",
+  "cita": "repo/LD/tools/docs-guard/arbol.tsv:7-10",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:52",
+  "cita": "repo/LD/.github/workflows/docs-guard.yml:75",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:52",
+  "cita": "repo/LD/tools/docs-guard/arbol.tsv:7",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:53",
+  "cita": "repo/LD/README.md:16-17",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:54",
+  "cita": "repo/LD/AGENTS.md:45-46",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:55",
+  "cita": "repo/LD/tools/docs-guard/prefijos.txt:1-5",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:56",
+  "cita": "repo/LD/tools/docs-guard/arbol.tsv:7-10",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:56",
+  "cita": "repo/LD/AGENTS.md:50-56",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:57",
+  "cita": "repo/LD/CHANGELOG.md:36",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:57",
+  "cita": "repo/LD/.github/workflows/docs-enlaces-semanal.yml:5-6",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:58",
+  "cita": "repo/LD/tools/docs-guard/prefijos.txt:1-40",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:59",
+  "cita": "repo/LD/AGENTS.md:53",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:60",
+  "cita": "repo/LD/.github/workflows/docs-guard.yml:60",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:61",
+  "cita": "repo/LD/.github/workflows/docs-guard.yml:5-16",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:61",
+  "cita": "repo/LD/AGENTS.md:60-64",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:62",
+  "cita": "repo/LD/CHANGELOG.md:32-39",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:62",
+  "cita": "repo/LD/CHANGELOG.md:32-39",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:62",
+  "cita": "repo/LD/AGENTS.md:56",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:63",
+  "cita": "repo/LD/AGENTS.md:1-56",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:64",
+  "cita": "repo/LD/README.md:16-17",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:64",
+  "cita": "repo/LD/AGENTS.md:45",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:65",
+  "cita": "repo/LD/AGENTS.md:108-110",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:65",
+  "cita": "repo/LD/tools/docs-guard/arbol.tsv:3-4",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:66",
+  "cita": "repo/LD/README.md:16",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:66",
+  "cita": "repo/LD/AGENTS.md:45",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:67",
+  "cita": "repo/LD/README.md:16-17",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:67",
+  "cita": "repo/LD/AGENTS.md:64",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:68",
+  "cita": "repo/LD/.github/workflows/docs-enlaces-semanal.yml:1-12",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:77",
+  "cita": "repo/LD/README.md:3",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:78",
+  "cita": "repo/LD/tools/docs-guard/prefijos.txt:30",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:79",
+  "cita": "repo/LD/AGENTS.md:1-12",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:80",
+  "cita": "repo/LD/README.md:16-17",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:82",
+  "cita": "repo/LD/README.md:16-17",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:84",
+  "cita": "repo/LD/tools/docs-guard/arbol.tsv:8",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:84",
+  "cita": "repo/LD/AGENTS.md:1-12",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:85",
+  "cita": "repo/LD/tools/docs-guard/arbol.tsv:8",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:85",
+  "cita": "repo/LD/CHANGELOG.md:34",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:86",
+  "cita": "repo/LD/README.md:16-17",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:89",
+  "cita": "repo/LD/README.md:1-3",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:89",
+  "cita": "repo/LD/CHANGELOG.md:1",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:90",
+  "cita": "repo/LD/AGENTS.md:45-46",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:98",
+  "cita": "repo/LD/CHANGELOG.md:34-39",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:99",
+  "cita": "repo/LD/CHANGELOG.md:320-325",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:100",
+  "cita": "repo/LD/CHANGELOG.md:340-343",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:103",
+  "cita": "repo/LD/tools/docs-guard/excepciones.txt:7",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:119",
+  "cita": "repo/LD/.github/workflows/docs-enlaces-semanal.yml:5-6",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:141",
+  "cita": "repo/LD/AGENTS.md:45-46",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:141",
+  "cita": "repo/LD/AGENTS.md:110",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:141",
+  "cita": "repo/LD/.github/workflows/docs-guard.yml:60",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:141",
+  "cita": "repo/LD/tools/docs-guard/prefijos.txt:30",
+  "estado": "OK"
+ },
+ {
+  "src": "salida/A-01.md:141",
+  "cita": "repo/LD/CHANGELOG.md:34",
+  "estado": "OK"
+ }
+]

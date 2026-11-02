@@ -1,0 +1,2 @@
+== PR-2 esquema (docs/_diseno)
+== PR-2 esquema: verde (errores=0 avisos=0) archivos-con-frontmatter=1 sin-frontmatter-fuera-del-cuerpo=0 readme-del-cuerpo-sin-frontmatter=0

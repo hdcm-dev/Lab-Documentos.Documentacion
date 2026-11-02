@@ -1,0 +1,7 @@
+# Ancla de la ia-db contra el repositorio indexado (A-09).
+# Fuente del valor: ia-db/README.md:38 («rama main, revisión 4b114d7 ..., etiquetada v1.2.0»).
+repo: Lab-Geometria
+etiqueta: v1.2.0
+sha_abreviado: 4b114d7
+sha: pendiente   # el SHA completo no está en lo leído; se completa con git rev-parse v1.2.0 en el repo indexado
+fecha_fijado: 2026-10-26   # changelog.md:12

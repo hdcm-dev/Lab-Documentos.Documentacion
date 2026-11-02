@@ -1,0 +1,9 @@
+140:- **`fixtures/url-fecha/obsoleto/a.md`**: `description` entre comillas.
+150:- **`README.md`** raíz y **`Guides/README.md`**: la ruta de lectura apunta al README del cuerpo `SDEI` en lugar de la guía de un solo archivo, que está `obsoleta`. El README raíz nombra `AGENTS.md` como entrada para agentes.
+154:## 2026-10-27 (la guía de un solo archivo pasa a obsoleta; `url-fecha` ampliado)
+160:- **`Sistema-Documentador-Tecnico-Guide.md`** (`DOC-SDT-0001`): `status: obsoleto`. Suma un aviso con su reemplazo (el cuerpo `SDEI`) y una tabla de destinos «sección vieja → `doc_id` nuevo» con las 47 secciones, el ancla de destino y la cobertura (completa o parcial, con lo que no se trasladó). El texto original no cambia; se archiva en la versión siguiente del cuerpo.
+161:- **`README.md`** del cuerpo y **`01-Mapa.md`**: la ruta «aprender» ya no pasa por la guía de un solo archivo; su fila de la tabla de contenido dice `obsoleto` y enlaza la tabla de destinos.
+169:- **`dg.py url-fecha`** (grupo `PR-7`): toda URL y toda cita por dominio en un code span lleva, en su párrafo o fila, la fecha de consulta o la cita enlazada al anexo de referencias. Bloquea en el cuerpo nuevo salvo en documentos `obsoleto`; avisa en lo heredado. Fixtures `url-fecha/rojo`, `verde` y `obsoleto` en la autoprueba.
+411:- **§3.1**, viñeta *Factory Method*: la procedencia queda completa —catalogada desde la 1.ª edición de *Refactoring* (1999) como *Replace Constructor with Factory Method* y renombrada en la 2.ª (2018)— y Bloch entra como convergencia posterior e independiente («Consider static factory methods instead of constructors»), no como origen.
+533:#### Eliminado
+rc=0

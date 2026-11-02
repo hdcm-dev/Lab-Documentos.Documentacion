@@ -1,0 +1,3 @@
+$ grep -rnIiE --exclude-dir=.git -e Authorize -e Policy -e RequireRole -e Claim -e AuthenticationScheme -e IsInRole -e Roles -e token -e login .
+./Colmenar/Platforms/Windows/Package.appxmanifest:29:    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="$targetentrypoint$">
+rc=0

@@ -1,0 +1,4 @@
+repo: Lab-Geometria
+sha: 4b114d7
+comparar: main
+rutas: README.md AGENTS.md changelog.md SDD src tests visor samples scripts tools deploy .github/workflows

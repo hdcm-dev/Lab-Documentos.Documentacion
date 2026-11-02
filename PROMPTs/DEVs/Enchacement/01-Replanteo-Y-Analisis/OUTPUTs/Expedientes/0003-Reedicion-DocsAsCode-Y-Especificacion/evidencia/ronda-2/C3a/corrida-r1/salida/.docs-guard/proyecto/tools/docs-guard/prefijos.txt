@@ -1,0 +1,7 @@
+# prefijo   ámbito    descripción
+# Registro de prefijos de Colmenar (A-02). Propuesta sujeta a D-09 (copia con huella de la compuerta).
+# Comprobación pendiente: que FIC y PRC no estén en el registro de la compuerta de origen (no recibida).
+RD          interno   requerimiento documental (docs/_requisitos.md)
+FIC         interno   ficha o anexo de diseño documental
+PRC         interno   proceso escrito (encabezado de la norma de calidad)
+EX          externo   exigencia del convenio con el programa provincial; segmento de Colmenar EX-31 a EX-46

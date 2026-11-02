@@ -1,0 +1,3 @@
+== PR-6 contrato (Concepts)
+no aplica: la ruta no tiene contracts/openapi.json
+== PR-6 contratos: verde (errores=0 avisos=0) contratos=0

@@ -1,0 +1,36 @@
+fuera Guides rc=0 :: == PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+fuera Concepts rc=0 :: == PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+fuera AGENTS.md rc=0 :: == PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+fuera README.md rc=0 :: == PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+esquema Guides rc=1 :: == PR-2 esquema: ROJO (errores=309 avisos=30) archivos-con-frontmatter=207 sin-frontmatter-fuera-del-cuerpo=71 readme-del-cuerpo-sin-frontmatter=0
+esquema Concepts rc=1 :: == PR-2 esquema: ROJO (errores=16 avisos=0) archivos-con-frontmatter=13 sin-frontmatter-fuera-del-cuerpo=7 readme-del-cuerpo-sin-frontmatter=0
+esquema AGENTS.md rc=0 :: == PR-2 esquema: verde (errores=0 avisos=0) archivos-con-frontmatter=1 sin-frontmatter-fuera-del-cuerpo=0 readme-del-cuerpo-sin-frontmatter=0
+esquema README.md rc=1 :: == PR-2 esquema: ROJO (errores=2 avisos=0) archivos-con-frontmatter=1 sin-frontmatter-fuera-del-cuerpo=0 readme-del-cuerpo-sin-frontmatter=0
+ai Guides rc=1 :: == PR-3 anti-inyeccion: ROJO (errores=824 avisos=100) AI-1=354 AI-2=3 AI-3=13 AI-4=552 AI-5=2
+ai Concepts rc=1 :: == PR-3 anti-inyeccion: ROJO (errores=108 avisos=0) AI-1=38 AI-2=0 AI-3=0 AI-4=70 AI-5=0
+ai AGENTS.md rc=0 :: == PR-3 anti-inyeccion: verde (errores=0 avisos=1) AI-1=0 AI-2=0 AI-3=1 AI-4=0 AI-5=0
+ai README.md rc=0 :: == PR-3 anti-inyeccion: verde (errores=0 avisos=0) AI-1=0 AI-2=0 AI-3=0 AI-4=0 AI-5=0
+mermaid-arroba Guides rc=0 :: == PR-4 mermaid-arroba: verde (errores=0 avisos=0) bloques=273
+mermaid-arroba Concepts rc=0 :: == PR-4 mermaid-arroba: verde (errores=0 avisos=0) bloques=50
+mermaid-arroba AGENTS.md rc=0 :: == PR-4 mermaid-arroba: verde (errores=0 avisos=0) bloques=1
+mermaid-arroba README.md rc=0 :: == PR-4 mermaid-arroba: verde (errores=0 avisos=0) bloques=0
+trazas Guides rc=1 :: == PR-5 traces-resolve: ROJO (errores=1404 avisos=0) trazas=1783 resueltas=981 ids-duplicados=602 anclas=0 anclas-resueltas=0
+trazas Concepts rc=1 :: == PR-5 traces-resolve: ROJO (errores=4 avisos=0) trazas=99 resueltas=99 ids-duplicados=4 anclas=0 anclas-resueltas=0
+trazas AGENTS.md rc=1 :: == PR-5 traces-resolve: ROJO (errores=6 avisos=0) trazas=6 resueltas=0 ids-duplicados=0 anclas=0 anclas-resueltas=0
+trazas README.md rc=1 :: == PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=2 resueltas=1 ids-duplicados=0 anclas=0 anclas-resueltas=0
+contratos Guides rc=0 :: == PR-6 contratos: verde (errores=0 avisos=0) contratos=0
+contratos Concepts rc=0 :: == PR-6 contratos: verde (errores=0 avisos=0) contratos=0
+contratos AGENTS.md rc=0 :: == PR-6 contratos: verde (errores=0 avisos=0) contratos=0
+contratos README.md rc=0 :: == PR-6 contratos: verde (errores=0 avisos=0) contratos=0
+fijadas Guides rc=0 :: == PR-7 fijadas: verde (errores=0 avisos=0) piezas=0
+fijadas Concepts rc=0 :: == PR-7 fijadas: verde (errores=0 avisos=0) piezas=0
+fijadas AGENTS.md rc=0 :: == PR-7 fijadas: verde (errores=0 avisos=0) piezas=0
+fijadas README.md rc=0 :: == PR-7 fijadas: verde (errores=0 avisos=0) piezas=0
+reflint Guides rc=0 :: == PR-7 reflint: verde (errores=0 avisos=0) referencias=51
+reflint Concepts rc=0 :: == PR-7 reflint: verde (errores=0 avisos=0) referencias=0
+reflint AGENTS.md rc=0 :: == PR-7 reflint: verde (errores=0 avisos=0) referencias=0
+reflint README.md rc=0 :: == PR-7 reflint: verde (errores=0 avisos=0) referencias=0
+url-fecha Guides rc=0 :: == PR-7 url-fecha: verde (errores=0 avisos=854) documentos-que-bloquean=0
+url-fecha Concepts rc=0 :: == PR-7 url-fecha: verde (errores=0 avisos=93) documentos-que-bloquean=0
+url-fecha AGENTS.md rc=0 :: == PR-7 url-fecha: verde (errores=0 avisos=0) documentos-que-bloquean=0
+url-fecha README.md rc=0 :: == PR-7 url-fecha: verde (errores=0 avisos=0) documentos-que-bloquean=0

@@ -1,0 +1,5 @@
+$ grep -rn '^traces:' docs/ayuda
+ugrep: warning: docs/ayuda: No such file or directory
+(exit 2)
+$ grep -rn '^traces:' .
+(exit 1)

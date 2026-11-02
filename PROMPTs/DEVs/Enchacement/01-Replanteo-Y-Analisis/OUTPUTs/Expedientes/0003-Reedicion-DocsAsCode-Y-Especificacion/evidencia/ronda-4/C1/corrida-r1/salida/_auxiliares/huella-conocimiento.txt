@@ -1,0 +1,4 @@
+$ sha256sum conocimiento.md
+cc489f3e84f53b869af4eb597c60f35fb801b383c3923d7856785e8cda51aede  conocimiento.md
+$ hostname -s
+a3bc031861aa

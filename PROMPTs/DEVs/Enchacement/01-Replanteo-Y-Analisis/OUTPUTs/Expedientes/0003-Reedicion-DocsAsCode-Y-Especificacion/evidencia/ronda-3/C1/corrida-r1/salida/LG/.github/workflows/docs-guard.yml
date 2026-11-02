@@ -1,0 +1,48 @@
+# docs-guard de Lab-Geometria (A-07 del diseño documental, FIC-DISENO-DOCUMENTAL).
+# Propuesta sujeta a D-09 (decisión H abierta). Copia con huella de la compuerta de origen en .docs-guard/ (A-02, A-03 y
+# A-08 son su configuración) y copia intacta en .docs-guard-origen/ para la autoprueba. Huella del guion de origen:
+#   dg.py        471936d8f86f2d91a6b9633adc8016bfb9135547053739a7952d3321e689bdbf
+#   ci-local.sh  5d07aed13433fbe55289e0dc1551f0bd06e6ceace7f400152106d8c8369e851d
+# Todos los pasos avisan (continue-on-error) hasta que cada control tenga línea de base 0 y par rojo/verde (D-10).
+name: docs-guard
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docs-guard:
+    runs-on: ubuntu-latest   # el runner Linux que ya usa el proyecto en ci.yml; D-09 puede cambiarlo por {etiqueta-runner}
+    env:
+      DOCS_GUARD_CACHE: ${{ runner.temp }}/docs-guard-cache
+      npm_config_cache: ${{ runner.temp }}/docs-guard-cache/npm
+      npm_config_update_notifier: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Huella del guion
+        run: |
+          echo "471936d8f86f2d91a6b9633adc8016bfb9135547053739a7952d3321e689bdbf  .docs-guard/tools/docs-guard/dg.py" | sha256sum -c -
+          echo "5d07aed13433fbe55289e0dc1551f0bd06e6ceace7f400152106d8c8369e851d  .docs-guard/scripts/ci-local.sh" | sha256sum -c -
+      - run: bash .docs-guard/scripts/ci-local.sh herramientas docs
+      - run: npx --yes markdownlint-cli2@0.17.2 --help | head -1 || true
+      - run: bash .docs-guard-origen/scripts/ci-local.sh autoprueba docs
+      - run: bash .docs-guard/scripts/ci-local.sh enlaces docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh esquema docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh ai docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh estructura docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh trazas docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh contrato docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh fijadas docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh avisos docs

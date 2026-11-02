@@ -1,0 +1,18 @@
+LG fuera rc=0 :: == PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+LG esquema rc=1 :: == PR-2 esquema: ROJO (errores=107 avisos=0) archivos-con-frontmatter=12 sin-frontmatter-fuera-del-cuerpo=1276 readme-del-cuerpo-sin-frontmatter=0
+LG ai rc=1 :: == PR-3 anti-inyeccion: ROJO (errores=95 avisos=0) AI-1=0 AI-2=6 AI-3=0 AI-4=89 AI-5=0
+LG mermaid-arroba rc=0 :: == PR-4 mermaid-arroba: verde (errores=0 avisos=0) bloques=172
+LG trazas rc=1 :: == PR-5 traces-resolve: ROJO (errores=932 avisos=0) trazas=35 resueltas=0 ids-duplicados=897 anclas=0 anclas-resueltas=0
+LG contratos rc=0 :: == PR-6 contratos: verde (errores=0 avisos=0) contratos=0
+LG fijadas rc=0 :: == PR-7 fijadas: verde (errores=0 avisos=0) piezas=0
+LG reflint rc=0 :: == PR-7 reflint: verde (errores=0 avisos=0) referencias=0
+LG url-fecha rc=0 :: == PR-7 url-fecha: verde (errores=0 avisos=79) documentos-que-bloquean=0
+LGD fuera rc=0 :: == PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+LGD esquema rc=0 :: == PR-2 esquema: verde (errores=0 avisos=0) archivos-con-frontmatter=0 sin-frontmatter-fuera-del-cuerpo=57 readme-del-cuerpo-sin-frontmatter=0
+LGD ai rc=1 :: == PR-3 anti-inyeccion: ROJO (errores=26 avisos=0) AI-1=1 AI-2=1 AI-3=0 AI-4=24 AI-5=0
+LGD mermaid-arroba rc=0 :: == PR-4 mermaid-arroba: verde (errores=0 avisos=0) bloques=23
+LGD trazas rc=1 :: == PR-5 traces-resolve: ROJO (errores=21 avisos=0) trazas=0 resueltas=0 ids-duplicados=21 anclas=0 anclas-resueltas=0
+LGD contratos rc=0 :: == PR-6 contratos: verde (errores=0 avisos=0) contratos=0
+LGD fijadas rc=0 :: == PR-7 fijadas: verde (errores=0 avisos=0) piezas=0
+LGD reflint rc=0 :: == PR-7 reflint: verde (errores=0 avisos=0) referencias=0
+LGD url-fecha rc=0 :: == PR-7 url-fecha: verde (errores=0 avisos=34) documentos-que-bloquean=0

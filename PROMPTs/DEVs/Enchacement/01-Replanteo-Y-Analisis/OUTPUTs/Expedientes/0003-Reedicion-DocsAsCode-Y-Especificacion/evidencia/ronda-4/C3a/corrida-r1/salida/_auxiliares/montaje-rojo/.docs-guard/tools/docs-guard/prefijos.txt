@@ -1,0 +1,10 @@
+# Registro cerrado de prefijos de ID de Colmenar (A-02; D-07 de la ficha FIC-DISENO-DOCUMENTAL). Un prefijo nuevo
+# entra por PR que lo agrega acá. Columnas: prefijo, ámbito y descripción.
+#   interno  el ID se declara en este repositorio (doc_id o encabezado): si no resuelve, traces-resolve bloquea.
+#   externo  el ID se declara fuera de este repositorio: resuelve contra el SHA de source.lock; sin source.lock avisa.
+#
+RD      interno   requerimiento documental (RRD, docs/_requisitos.md)
+FIC     interno   ficha o anexo del sistema documentador
+PRC     interno   proceso («Cómo intervenir» y procedimientos de la norma de calidad)
+AUD     interno   registro de audiencias y sus filas
+EX      externo   exigencia numerada del convenio con el programa provincial (a Colmenar le tocan EX-31 a EX-46)

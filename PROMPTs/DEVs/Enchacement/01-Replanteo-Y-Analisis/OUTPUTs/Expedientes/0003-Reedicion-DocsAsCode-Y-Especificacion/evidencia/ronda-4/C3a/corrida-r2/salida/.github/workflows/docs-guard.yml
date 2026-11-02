@@ -1,0 +1,23 @@
+# Compuerta documental de Colmenar (A-07, D-09). Propuesta sujeta a D-09 (H).
+# Copia con huella del guion local de la compuerta de origen, en el runner propio del proyecto.
+# No se usa el workflow reutilizable: la organización sólo admite automatismos definidos en ella (README.md:96-97)
+# y el proyecto declara prefijos y vocabulario propios (A-02, A-03). Runner por plataforma (README.md:93-95).
+name: docs-guard
+on:
+  pull_request:
+    paths: ["docs/**", "AGENTS.md", ".docs-guard/**", "README.md"]
+jobs:
+  docs-guard:
+    runs-on: [self-hosted, linux, colmenar]   # etiqueta de Linux del proyecto (Android y paquete)
+    env:
+      DOCS_GUARD_CACHE: .docs-guard-cache       # caché de herramientas, en el lugar de trabajo; nunca /tmp
+      npm_config_cache: .docs-guard-cache/npm   # caché de npm dentro de la de herramientas
+      npm_config_update_notifier: "false"
+    steps:
+      - uses: actions/checkout@<sha-de-checkout>   # el repo, con .docs-guard/ y .docs-guard-origen/ dentro
+      - run: ./.docs-guard/scripts/ci-local.sh herramientas docs            # primero; con red (se cachea antes)
+      - run: npx --yes markdownlint-cli2@0.17.2 --help | head -1 || true    # caché de npm para PR-4
+      - run: ./.docs-guard-origen/scripts/ci-local.sh autoprueba docs       # autoprueba con la copia de origen
+      - run: ./.docs-guard/scripts/ci-local.sh todo docs                    # grupos, con A-02 y A-03 del proyecto
+  # contrato-ios: sólo si un build de iOS emite una pieza D (runner Mac, disponible los jueves; README.md:94).
+  # Aquí no aplica: el contrato REST vive en la API externa (CL-05 de baja).
