@@ -1,0 +1,6 @@
+flowchart LR
+    T["texto de la persona"] --> E["extraer: modelo, salida estructurada"]
+    E --> R["revisar: código, LocalidadRules y catálogo"]
+    R -->|rechazada| X["rechazo: no se guarda nada"]
+    R -->|aceptada| C["confirmar-alta: RequestPort, persona"]
+    C --> G["registrar: LocalidadService.SaveAsync"]

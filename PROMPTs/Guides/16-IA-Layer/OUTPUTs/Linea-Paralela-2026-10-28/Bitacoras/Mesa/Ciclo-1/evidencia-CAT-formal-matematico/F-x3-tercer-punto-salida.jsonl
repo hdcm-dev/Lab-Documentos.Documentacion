@@ -1,0 +1,4 @@
+CONCEDIDO <recurso-compartido> a CAT-formal hasta 2026-10-28T10:49:07-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> CAT-formal)
+{"caso": "num_ctx-6144", "modelo": "qwen2.5:0.5b", "opciones": {"temperature": 0, "num_predict": 8, "num_ctx": 6144}, "prediccion_ctx/2+2": 3074, "prompt_eval_count": 3074, "eval_count": 4, "done_reason": "stop", "respuesta": "colectivo", "ps": [{"modelo": "qwen3.5:4b", "context_length": 4096}, {"modelo": "qwen2.5:0.5b", "context_length": 6144}], "pared_s": 34.78}
+{"caso": "num_ctx-4096-num_predict-64", "modelo": "qwen2.5:0.5b", "opciones": {"temperature": 0, "num_predict": 64, "num_ctx": 4096}, "prediccion_ctx/2+2": 2050, "prompt_eval_count": 2050, "eval_count": 4, "done_reason": "stop", "respuesta": "colectivo", "ps": [{"modelo": "qwen3.5:4b", "context_length": 4096}, {"modelo": "qwen2.5:0.5b", "context_length": 4096}], "pared_s": 25.9}
+{"ollama_version": "0.40.11"}

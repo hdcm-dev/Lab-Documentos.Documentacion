@@ -1,0 +1,28 @@
+@* Adaptado de Components/Routes.razor de MovilidadUrbana.Web (desvío declarado en PROCEDENCIA.md): sin
+   layout ni página de «no encontrado» propios. Usa el SessionContext de la ApiWeb copiada. *@
+@using MovilidadUrbana.ApiWeb.Infrastructure.Sessions
+
+<Router AppAssembly="typeof(Program).Assembly">
+    <Found Context="datosDeRuta">
+        <RouteView RouteData="datosDeRuta" />
+        <FocusOnNavigate RouteData="datosDeRuta" Selector="h1" />
+    </Found>
+</Router>
+
+@code {
+    /// <summary>
+    /// Identificador de sesión que App.razor leyó de la cookie. Un circuito de Blazor Server no tiene la
+    /// petición HTTP original, así que este parámetro es el puente entre el render estático y el interactivo.
+    /// </summary>
+    [Parameter]
+    public string? SessionId { get; set; }
+
+    [Inject]
+    private SessionContext Contexto { get; set; } = default!;
+
+    // Antes de que se renderice cualquier página: los servicios del circuito ya ven la sesión correcta.
+    protected override void OnParametersSet()
+    {
+        if (SessionId is not null) Contexto.Set(SessionId);
+    }
+}

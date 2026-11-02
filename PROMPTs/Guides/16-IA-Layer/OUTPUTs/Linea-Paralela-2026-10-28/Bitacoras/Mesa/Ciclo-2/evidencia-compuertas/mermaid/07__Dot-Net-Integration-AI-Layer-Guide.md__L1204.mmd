@@ -1,0 +1,9 @@
+flowchart TB
+  APP["Adaptador de la aplicación"] --> MAF["Agent Framework: AIAgent, sesiones, workflows"]
+  APP --> SK["Semantic Kernel: en mantenimiento"]
+  APP --> MEAI["MEAI: IChatClient y middleware"]
+  MAF --> MEAI
+  SK --> MEAI
+  MEAI --> PROV["Proveedor: OllamaSharp o MEAI.OpenAI"]
+  PROV --> SDK["SDK del proveedor"]
+  APP -.->|"GetService, sólo lo exclusivo"| SDK

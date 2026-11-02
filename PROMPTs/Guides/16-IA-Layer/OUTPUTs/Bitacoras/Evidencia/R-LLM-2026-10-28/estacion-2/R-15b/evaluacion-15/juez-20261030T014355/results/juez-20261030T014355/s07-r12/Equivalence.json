@@ -1,0 +1,79 @@
+{
+  "scenarioName": "s07-r12",
+  "iterationName": "Equivalence",
+  "executionName": "juez-20261030T014355",
+  "creationTime": "2026-10-30T02:33:47.5354103Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "\u00BFQu\u00E9 hay que contestar sobre para qu\u00E9 se hace el viaje?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Para responder a esta pregunta, debes indicar el motivo principal del viaje seg\u00FAn los datos recopilados en la encuesta [Fuente: EncuestaPolicy.RequisitoDelMotivo]."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Equivalence": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Equivalence",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Equivalence)": {
+            "name": "Ground Truth (Equivalence)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Encuesta \u00B7 requisito del motivo: El motivo principal del viaje."
+              }
+            ]
+          }
+        },
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "qwen3.5:4b",
+          "eval-input-tokens": "917",
+          "eval-output-tokens": "2",
+          "eval-total-tokens": "919",
+          "eval-duration-ms": "10079.97"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 10.079837,
+        "model": "qwen3.5:4b",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 917,
+          "outputTokenCount": 2,
+          "totalTokenCount": 919
+        },
+        "cacheKey": "89FC1DAA8F92BADEB34E1624E2A8184BD7A5A3176B6F4E1EA34D422017FFFA852FA62F26B199A3130F9D7F30AF7FCEF2",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

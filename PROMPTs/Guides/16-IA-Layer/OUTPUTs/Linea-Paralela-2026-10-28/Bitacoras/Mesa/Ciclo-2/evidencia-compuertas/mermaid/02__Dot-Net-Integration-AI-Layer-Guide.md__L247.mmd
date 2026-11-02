@@ -1,0 +1,22 @@
+flowchart TD
+  Q["Pedido o tarea"] --> D1{"¿La resuelve una función determinista?<br/>(validar un CP, contar respuestas)"}
+  D1 -- "sí" --> C["Código, sin modelo (§3.6)"]
+  D1 -- "no" --> D0{"¿Un cliente externo usa<br/>las capacidades de la app?"}
+  D0 -- "sí" --> MCP["Servidor MCP de sólo lectura (ESC-05, §7.8)"]
+  D0 -- "no" --> D2{"¿Es un dato exacto que<br/>calcula un caso de uso?"}
+  D2 -- "sí" --> T["Herramienta de lectura sobre el caso de uso (ESC-01, §7.3)"]
+  D2 -- "no" --> DX{"¿Hay que convertir texto libre<br/>en un objeto tipado?"}
+  DX -- "sí" --> SE["Salida estructurada + reglas del dominio + confirmación (ESC-03, §5.6)"]
+  DX -- "no" --> D3{"¿Es texto propio y entra holgado<br/>en la ventana configurada?"}
+  D3 -- "sí, y cambia con el código" --> K0["Contexto fijo (§6.3)"]
+  D3 -- "sí, cambia poco y se consulta seguido" --> K1["Prefijo estable y caché del servidor (§6.4)"]
+  D3 -- "no entra, cambia, tiene permisos o hay que citar" --> K2["RAG (§6.6)"]
+  K2 --> D4{"¿Toda pregunta necesita el corpus?"}
+  D4 -- "sí" --> VA["Vía A: la aplicación busca siempre (§6.7)"]
+  D4 -- "no" --> VB["Vía B: búsqueda como herramienta (§6.7)"]
+  D4 -- "ya hay un agente por otra razón" --> VC["Vía C: la misma búsqueda dentro del agente (§7.9)"]
+  T --> D5{"¿Hace falta sesión de varios turnos,<br/>aprobación integrada o componerlo?"}
+  D5 -- "no" --> F1["Agente mínimo: IChatClient con UseFunctionInvocation (§7.3)"]
+  D5 -- "sí" --> F2["Agente de MAF (§7.4, §7.5)"]
+  F2 --> D6{"¿Pasos conocidos de antemano,<br/>pausas largas, varios agentes?"}
+  D6 -- "sí" --> F3["Workflow de MAF (§7.6, §7.7)"]

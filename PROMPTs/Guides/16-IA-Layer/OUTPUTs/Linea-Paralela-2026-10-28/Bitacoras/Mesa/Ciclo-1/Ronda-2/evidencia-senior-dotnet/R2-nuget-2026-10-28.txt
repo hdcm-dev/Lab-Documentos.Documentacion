@@ -1,0 +1,8 @@
+# NuGet flatcontainer (https://api.nuget.org/v3-flatcontainer/<id>/index.json), consulta: 2026-10-28T12:22:00-03:00 (primera consulta idéntica a las 12:04:27-03:00) — últimas cinco versiones publicadas
+modelcontextprotocol.aspnetcore ['2.0.0-rc.2', '2.0.0', '2.1.0', '2.2.0', '2.3.0']
+modelcontextprotocol ['2.0.0-rc.2', '2.0.0', '2.1.0', '2.2.0', '2.3.0']
+ollamasharp ['5.4.27', '5.4.28', '5.4.29', '5.4.30', '5.5.0']
+microsoft.extensions.ai ['10.8.1', '10.8.3', '10.9.0', '10.10.0', '10.11.0']
+microsoft.extensions.ai.openai ['10.8.3', '10.9.0', '10.10.0', '10.10.1', '10.11.0']
+microsoft.agents.ai ['1.22.0', '1.23.0', '1.24.0', '1.25.0', '1.26.0']
+openai ['2.11.0-oidc.test1', '2.11.0', '2.12.0', '2.13.0', '2.14.0']

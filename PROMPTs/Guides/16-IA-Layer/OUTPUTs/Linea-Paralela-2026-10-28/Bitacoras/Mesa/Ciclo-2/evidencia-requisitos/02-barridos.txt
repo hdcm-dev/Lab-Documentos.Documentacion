@@ -1,0 +1,119 @@
+# Barridos de Requisitos — relectura integral, ciclo 2 (2026-10-28)
+guia_sha256: dcba317763c72d66686264f9e0189c387a84139f96592377a01d9089bb730325  lineas: 4116
+
+## B1. Bloques «Escenario y contexto» por sección (grep '^> \*\*Escenario y contexto')
+237:> **Escenario y contexto.** Sección de entrada: no define, nombra y remite. Los términos se definen en la sección
+314:> **Escenario y contexto.** Sección transversal: explica por qué existen ESC-01…ESC-05. Las mediciones son de CT
+440:> **Escenario y contexto.** ESC-01…ESC-05, que se definen acá. El contexto de la guía es CTX-LOCAL × CTX-PROTO,
+575:> **Escenario y contexto.** La regla vale para ESC-01…ESC-05 y para todo contexto; los ejemplos corren en CTX-LOCA
+904:> **Escenario y contexto.** Los ejemplos corren en **CTX-LOCAL × CTX-PROTO**: un modelo local en el servidor Ollama
+1324:> **Escenario y contexto.** El escenario central es ESC-01 (asistente sobre datos propios), con ESC-02 (búsqueda p
+1835:> **Escenario y contexto.** El escenario principal es ESC-04 (acción con aprobación). ESC-01 (consulta de datos) 
+2622:> **Escenario y contexto.** Los controles valen para ESC-01…ESC-05; cada subsección dice cuáles cambian por esc
+3211:> **Escenario y contexto.** La demo cubre ESC-01 (asistente sobre datos propios), ESC-03 (extracción estructurada)
+
+## B2. Bloques «Aplicación por escenario» (RV-04)
+856:### 4.8 Aplicación por escenario
+930:### 5.2 Aplicación por escenario
+1749:### 6.10 Aplicación por escenario
+2567:### 7.12 Aplicación por escenario
+2678:### 8.2 Aplicación por escenario
+
+## B3. Preguntas guía con rótulo (ESC; CTX) en la línea de la pregunta, por sección
+§1.5: preguntas=1 con_rotulo=1
+§2.6: preguntas=7 con_rotulo=7
+§3.9: preguntas=3 con_rotulo=3
+§4.9: preguntas=5 con_rotulo=0
+§5.9: preguntas=10 con_rotulo=10
+§6.11: preguntas=16 con_rotulo=16
+§7.13: preguntas=12 con_rotulo=0
+§8.13: preguntas=13 con_rotulo=13
+§9.9: preguntas=6 con_rotulo=0
+
+## B4. Preguntas sin rótulo (§4.9, §7.13, §9.9)
+868:#### 4.9.1 ¿Dónde pongo la llamada al modelo en una solución Domain/Application/Infrastructure?
+872:#### 4.9.2 `IChatClient` ya es una abstracción: ¿hace falta otra interfaz encima?
+876:#### 4.9.3 ¿Cómo reduzco la alucinación en una funcionalidad concreta?
+880:#### 4.9.4 ¿Por qué no llamar al modelo desde el componente Blazor?
+884:#### 4.9.5 ¿La regla de negocio puede vivir en el mensaje de sistema?
+2579:**7.13.1 ¿Cuándo alcanza con la llamada a herramientas y cuándo necesito un agente de MAF?**
+2582:**7.13.2 ¿Cuándo no uso un agente?**
+2585:**7.13.3 ¿Agente o workflow?**
+2588:**7.13.4 ¿Un agente o varios?**
+2591:**7.13.5 ¿Uso un marco o lo escribo yo?**
+2594:**7.13.6 ¿Cómo convierto un caso de uso en herramienta sin saltear sus reglas?**
+2597:**7.13.7 ¿Necesito checkpoints?**
+2600:**7.13.8 ¿Qué patrón de *Building effective agents* corresponde a qué en MAF?**
+2603:**7.13.9 ¿Qué es MCP y cuándo expongo la aplicación por MCP en lugar de la API REST?**
+2606:**7.13.10 Se escuchó hablar de LangGraph en .NET. ¿Existe?**
+2609:**7.13.11 Mi equipo de datos tiene un grafo LangGraph en Python. ¿Lo reescribo en C#?**
+2612:**7.13.12 ¿Y AutoGen?**
+3470:**9.9.1 ¿Qué aporta una capa de IA a una app de ABM y encuesta tan estructurada como Movilidad Urbana?**
+3473:**9.9.2 ¿Uso recuperación por similitud para responder «cuántas localidades hay en Corrientes»?**
+3476:**9.9.3 El modelo devolvió un JSON perfecto. ¿Lo guardo?**
+3479:**9.9.4 ¿Cuándo pido aprobación humana y cuándo no?**
+3482:**9.9.5 ¿Necesito un agente o alcanza con `UseFunctionInvocation`?**
+3485:**9.9.6 ¿Qué cambia si mañana el modelo no es local sino uno en la nube?**
+
+## B5. Encabezados de criterios de calidad y si nombran ESC/CTX en las 3 líneas siguientes
+### 4.10 (l. 888): menciones ESC/CTX en l. 889–892 = 0
+### 5.10 (l. 1296): menciones ESC/CTX en l. 1297–1300 = 0
+### 6.12 (l. 1811): menciones ESC/CTX en l. 1812–1815 = 0
+### 7.11 (l. 2539): menciones ESC/CTX en l. 2540–2543 = 0
+### 8.14 (l. 3184): menciones ESC/CTX en l. 3185–3188 = 0
+
+## B6. Nombres de escenario no canónicos (canon §3.2: Asistente sobre datos propios; Búsqueda semántica; Extracción estructurada; Agentes y herramientas; Exposición por MCP)
+863:ESC-04 acción con herramientas
+904:ESC-03** (extracción a estructura
+1324:ESC-02 (búsqueda por significado
+1754:ESC-02 búsqueda por significado
+1755:ESC-03 extracción a estructura
+1756:ESC-04 acción con aprobación
+1835:ESC-04 (acción con aprobación
+1835:ESC-01 (consulta de datos
+1835:ESC-05 (integración con terceros
+2571:ESC-01 consulta de datos
+2572:ESC-02 búsqueda por significado
+2573:ESC-03 extracción a estructura
+2574:ESC-04 acción con aprobación
+2575:ESC-05 integración con terceros
+3211:ESC-04 (acciones con confirmación
+
+## B7. Preguntas guía en §0 y en el Anexo F (plan de preguntas: §0 = 2, Anexo F = 1)
+§0 subsecciones:
+### 0.1 Índice
+### 0.2 Qué presupone la guía y qué no cubre
+### 0.3 Objetivos de aprendizaje por actor
+### 0.4 Ruta de lectura por actor
+### 0.5 Cómo leer las cifras y los rótulos
+Anexo F con '¿':
+1
+Búsqueda de PG-1/PG-6/PG-7 en la guía:
+0 coincidencias
+
+## B8. Cajas de AI-Layer.png tratadas en §4.2.2 (líneas 604–612)
+Third-Party: 0
+Auth: 0
+API Gateway: 0
+Microservices: 0
+Mobile: 0
+Admin: 0
+NoSQL: 0
+Redis: 0
+Object Storage: 0
+File Storage: 0
+Kubernetes: 0
+Docker: 0
+Cloud: 0
+Monitoring: 1
+Vector DB: 1
+RAG: 1
+Agents: 0
+
+## B9. Capturas de la demo enlazadas desde la guía
+png en Demos/.../docs/capturas: 5
+menciones de 'docs/capturas' o '.png' en la guía: 0
+
+## B10. Caché distribuida usada (para la caja «Cache (Redis)»)
+Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/ComposicionDeIA.cs:59:        builder.Services.AddDistributedMemoryCache();   // en producción, un IDistributedCache compartido
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Infrastructure/AI/ComposicionDeIA.cs:68:        services.AddDistributedMemoryCache();

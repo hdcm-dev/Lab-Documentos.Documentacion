@@ -1,0 +1,8 @@
+## Simulación: un servicio en 127.0.0.1:18080 del anfitrión (lo que haría «docker run -p 11434:11434 ollama/ollama» del lector, con otro puerto)
+## anfitrión:
+{"version":"servidor-de-prueba"}
+## contenedor mcr.microsoft.com/dotnet/sdk:10.0, red por defecto:
+(sin respuesta rc=7)
+## mismo contenedor con --network host:
+{"version":"servidor-de-prueba"}
+2026-10-28T09:50:24-03:00

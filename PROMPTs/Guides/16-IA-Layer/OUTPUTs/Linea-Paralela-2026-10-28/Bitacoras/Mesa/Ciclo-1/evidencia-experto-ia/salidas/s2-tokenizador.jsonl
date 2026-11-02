@@ -1,0 +1,2 @@
+{"sonda": "s2", "modelo": "qwen2.5:0.5b", "caracteres": 1132, "prompt_eval_count": 270, "chars_por_token": 4.19, "pared_s": 2.25}
+{"sonda": "s2", "modelo": "qwen3.5:4b", "caracteres": 1132, "prompt_eval_count": 226, "chars_por_token": 5.01, "pared_s": 19.98}

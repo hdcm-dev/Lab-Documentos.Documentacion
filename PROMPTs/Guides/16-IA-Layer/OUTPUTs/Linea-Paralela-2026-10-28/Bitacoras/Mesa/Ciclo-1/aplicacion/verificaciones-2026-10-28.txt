@@ -1,0 +1,50 @@
+# verificación del ciclo 1 — 2026-10-28T11:53:14-03:00
+## P-01 compuerta R-PRIV sobre OUTPUTs/
+2026-10-28T11:53:14-03:00 raiz=. patrones=0 identificadores=356
+## P-01 caso rojo fuera del repo (debe salir 1)
+rc=1
+## P-02 «falso aceptado» por archivo (apariciones; las posteriores a la nota están dentro de notas de Parche P-02)
+N0b-Producto-Datos-Y-Perfil.md: total=8 primera-nota-P-02=l.107 apariciones-fuera-de-notas-tras-la-primera-nota(texto previo, citas anteriores a la nota)=1
+04-Integracion.md: total=8 primera-nota-P-02=l.144 apariciones-fuera-de-notas-tras-la-primera-nota(texto previo, citas anteriores a la nota)=1
+## P-04 ESC-0 y «Aplicación por escenario» por registro (N1–N5)
+N1-Capa-IA-En-El-Stack.md: ESC-0=5 aplicacion_por_escenario=1
+N2-Abstracciones-Y-Proveedores-NET.md: ESC-0=5 aplicacion_por_escenario=1
+N3-RAG-En-NET.md: ESC-0=7 aplicacion_por_escenario=1
+N4-Agentes-Y-Orquestacion.md: ESC-0=5 aplicacion_por_escenario=1
+N5-Operacion-Calidad-Seguridad.md: ESC-0=5 aplicacion_por_escenario=1
+## P-05 ESC-0 en N6 Anexo A
+8
+## P-06 PR distintas en la nota de Parche P-06
+PR-1 PR-2 PR-3 PR-4 PR-5 PR-6 PR-7 PR-8 PR-9 PR-10 PR-11 PR-12 PR-13 PR-14 PR-15 PR-16 PR-17 PR-18 PR-19 PR-20 PR-21 PR-22 
+22
+## P-06 filas que citan «§n» sin título (debe ser 0)
+0
+## P-09 conteo de preguntas guía
+total 80
+## P-12 «mezcla sesiones» fuera de notas en BIT-16-04
+0
+## P-21 cifras.py reproduce la tabla (diff = 0)
+diff=0
+## P-28 marcas [C:] en 00, 01 y 03 (13 − 2 explicaciones = 11)
+13
+(fuera de las notas; las notas de Parche P-28 nombran la notación)
+## P-31 doc_id agregados
+6
+## P-34 encabezado «## Validación del núcleo (ciclo 1)» por registro
+N0b-Producto-Datos-Y-Perfil.md 1
+N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md 1
+N1-Capa-IA-En-El-Stack.md 1
+N2-Abstracciones-Y-Proveedores-NET.md 1
+N3b-CAG-Y-Estrategias-De-Conocimiento.md 1
+N3-RAG-En-NET.md 1
+N4-Agentes-Y-Orquestacion.md 1
+N5-Operacion-Calidad-Seguridad.md 1
+N6-Caso-Movilidad-Urbana.md 1
+## P-37 «no corre en estación 1» con nota a la vista
+04-Integracion.md: menciones=3 notas_P-37=2
+N3b-CAG-Y-Estrategias-De-Conocimiento.md: menciones=2 notas_P-37=1
+Sondeo-Entorno.md: menciones=1 notas_P-37=1
+## P-27 tensión 6: «pruebas adversariales extendidas»
+1
+## Enlaces relativos (G2-enlaces.py) sobre todos los .md de OUTPUTs/
+enlaces relativos: 319; rotos: 0

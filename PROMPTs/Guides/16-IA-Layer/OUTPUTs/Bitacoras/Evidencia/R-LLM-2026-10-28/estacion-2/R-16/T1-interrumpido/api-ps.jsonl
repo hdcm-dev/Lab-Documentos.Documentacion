@@ -1,0 +1,2 @@
+{"tipo":"api_ps_inicio","turno":"T1","fecha":"2026-10-29T22:28:55Z","servidor":"estacion-2","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps","turno":"T1","fecha":"2026-10-29T22:28:55Z","servidor":"estacion-2","modelos":[{"name":"qwen3.5:4b","digest":"d8b0f5e9760c","context_length":8192,"expires_at":"2026-10-29T23:28:55.909053287Z"}]}

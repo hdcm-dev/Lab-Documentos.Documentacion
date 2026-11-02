@@ -1,0 +1,39 @@
+EN COLA <recurso-compartido> (posición 1); esperando hasta 90 min...
+CONCEDIDO <recurso-compartido> a A-arquitectura hasta 2026-10-28T09:57:47-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> A-arquitectura)
+# Experimento A-arquitectura — modo real — 2026-10-28 12:12:48 +00:00
+MEAI 10.11.0.0 · MAF 1.26.0.0 · OllamaSharp 5.5.0.0
+[1] Corpus leído de LocalidadPolicy y EncuestaPolicy por reflexión: 12 enunciados
+    LocalidadPolicy.RequisitoDelNombre → «Localidad, nombre: Entre 3 y 60 caracteres, único por provincia.»
+    LocalidadPolicy.RequisitoDeLaProvincia → «Localidad, provincia: Una de las provincias del catálogo.»
+    LocalidadPolicy.RequisitoDelCodigoPostal → «Localidad, codigo postal: 4 dígitos.»
+    LocalidadPolicy.RequisitoDeLosHabitantes → «Localidad, habitantes: Un número entero de 1 en adelante.»
+    EncuestaPolicy.RequisitoDelNombre → «Encuesta, nombre: Al menos 3 caracteres.»
+    EncuestaPolicy.RequisitoDeLaEdad → «Encuesta, edad: Entre 16 y 110 años.»
+    EncuestaPolicy.RequisitoDeLaLocalidad → «Encuesta, localidad: Una de las localidades cargadas en el ABM.»
+    EncuestaPolicy.RequisitoDeLosMedios → «Encuesta, medios: Al menos uno.»
+    EncuestaPolicy.RequisitoDeLaFrecuencia → «Encuesta, frecuencia: Con qué asiduidad usa esos medios.»
+    EncuestaPolicy.RequisitoDeLaDistancia → «Encuesta, distancia: Entre 0 y 500 km por día.»
+    EncuestaPolicy.RequisitoDeLosMinutos → «Encuesta, minutos: Entre 1 y 600 minutos.»
+    EncuestaPolicy.RequisitoDelMotivo → «Encuesta, motivo: El motivo principal del viaje.»
+[R1] Embeddings qwen3-embedding:0.6b vía IEmbeddingGenerator (OllamaSharp): dimensión 1024; indexar 12 enunciados 17129 ms
+      top-3 «¿Cuántos dígitos lleva el código postal de una localidad?» → LocalidadPolicy.RequisitoDelCodigoPostal, LocalidadPolicy.RequisitoDeLosHabitantes, LocalidadPolicy.RequisitoDelNombre
+      top-3 «¿Qué edad tiene que tener quien responde la encuesta?» → EncuestaPolicy.RequisitoDeLaEdad, EncuestaPolicy.RequisitoDeLosMinutos, EncuestaPolicy.RequisitoDelNombre
+      top-3 «¿Cuántos medios de transporte hay que elegir?» → EncuestaPolicy.RequisitoDeLosMedios, EncuestaPolicy.RequisitoDeLaFrecuencia, EncuestaPolicy.RequisitoDelMotivo
+[R2] Chat qwen3.5:4b; Temperature 0.7, Seed=i, MaxOutputTokens 300, think=false (RawRepresentationFactory)
+[R3] Vía A (RAG fijo) 96547 ms; fuentes=LocalidadPolicy.RequisitoDelCodigoPostal,LocalidadPolicy.RequisitoDeLosHabitantes,LocalidadPolicy.RequisitoDelNombre
+      respuesta: Según la política [LocalidadPolicy.RequisitoDelCodigoPostal], el código postal tiene 4 dígitos.
+      [R4] corrida 1 «¿Cuántos dígitos lleva el códi…» → [] finish=stop 74587 ms FALLA
+      [R4] corrida 2 «¿Cuántos dígitos lleva el códi…» → [buscar_requisitos{"pregunta":"\u00BFCu\u00E1ntos d\u00EDgitos lleva el c\u00F3digo postal de una localidad?"}] finish=stop 6873 ms OK
+      [R4] corrida 3 «¿Cuántos dígitos lleva el códi…» → [buscar_requisitos{"pregunta":"Cu\u00E1ntos d\u00EDgitos lleva el c\u00F3digo postal de una localidad?"}] finish=stop 6005 ms OK
+      [R4] corrida 4 «¿Cuántos dígitos lleva el códi…» → [] finish=stop 21895 ms FALLA
+      [R4] corrida 5 «¿Cuántos dígitos lleva el códi…» → [buscar_requisitos{"pregunta":"\u00BFCu\u00E1ntos d\u00EDgitos lleva el c\u00F3digo postal de una localidad?"}] finish=stop 6698 ms OK
+[R4] Vía B, elección de herramienta para «¿Cuántos dígitos lleva el código postal de una localidad?»: 3/5 piden sólo buscar_requisitos
+      [R4] corrida 1 «¿Cuántas localidades hay carga…» → [contar_localidades_por_provincia{"provincia":"Corrientes"}] finish=stop 25330 ms OK
+      [R4] corrida 2 «¿Cuántas localidades hay carga…» → [contar_localidades_por_provincia{"provincia":"Corrientes"}] finish=stop 5526 ms OK
+      [R4] corrida 3 «¿Cuántas localidades hay carga…» → [contar_localidades_por_provincia{"provincia":"Corrientes"}] finish=stop 4989 ms OK
+      [R4] corrida 4 «¿Cuántas localidades hay carga…» → [contar_localidades_por_provincia{"provincia":"Corrientes"}] finish=stop 5286 ms OK
+      [R4] corrida 5 «¿Cuántas localidades hay carga…» → [contar_localidades_por_provincia{"provincia":"Corrientes"}] finish=stop 5495 ms OK
+[R4] Vía B, elección de herramienta para «¿Cuántas localidades hay cargadas en la provincia de Corrientes?»: 5/5 piden sólo contar_localidades_por_provincia
+[R5] Vía B completa (UseFunctionInvocation) «¿Cuántos dígitos lleva el código postal de una localidad?» 44413 ms → Como soy un modelo de lenguaje y no tengo acceso directo a la base de datos interna del sistema para consultar códigos postales específicos en tiempo real, no puedo darte el número exacto de dígitos con certeza absoluta sin más contexto (por ejemplo, qué tipo de localidad o provincia estamos hablando).  Sin embargo, por lo general: *   Los **códigos postales** suelen tener **5 dígitos** (en muchos sistemas internacionales) o **4 dígitos**. *   En algunos contextos específicos de este sistema, podría ser diferente.  Para obtener la información precisa sobre los requisitos del sistema, te sugiero usar la herramienta de búsqueda de requisitos con una pregunta específica relacionada al código postal.  ¿Te gustaría que busque los requisitos sobre el formato del código postal usando la herramienta?
+[R5] Vía B completa (UseFunctionInvocation) «¿Cuántas localidades hay cargadas en la provincia de Corrientes?» 27910 ms → Se cargaron **2** localidades en la provincia de Corrientes.
+LIBERADO <recurso-compartido> por A-arquitectura

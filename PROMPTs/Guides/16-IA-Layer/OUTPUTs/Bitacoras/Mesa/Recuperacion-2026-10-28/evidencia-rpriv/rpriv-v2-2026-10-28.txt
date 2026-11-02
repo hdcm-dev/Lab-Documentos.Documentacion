@@ -1,0 +1,19 @@
+2026-10-28T20:37:19-03:00 raiz=Dot-Net-Integration-AI-Layer-Guide patrones=0 identificadores=75 cabeceras=0
+2026-10-28T20:37:19-03:00 raiz=Bitacoras patrones=0 identificadores=651 cabeceras=0
+-- casos v2 (lista de prueba sin coincidencias)
+a-diseno-una-linea.jsonl           esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+b-escapado.jsonl                   esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+c-con-espacios.json                esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+d-indentado.json                   esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+e-camelcase.json                   esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+f-vacios.json                      esperado=cabeceras=0  patrones=0 identificadores=0 cabeceras=0 rc=0
+g-sintetico.txt                    esperado=cabeceras=0  patrones=0 identificadores=0 cabeceras=0 rc=0
+h-ruta-home.md                     esperado=patrones=1  patrones=1 identificadores=0 cabeceras=0 rc=1
+-- listas de la base (DEP-16), grep -rniF
+Dot-Net-Integration-AI-Layer-Guide: r-priv=0 rd-po=0
+Bitacoras: r-priv=0 rd-po=1
+autoprueba r-priv.positivos=17/17
+-- 2026-10-28T20:37:36-03:00 identificadores (lista fusionada, 41 términos) sobre Bitacoras SIN Mesa/Recuperacion-2026-10-28: lineas=548 archivos=126
+-- identificadores sobre Mesa/Recuperacion-2026-10-28 (salidas de esta mesa, por archivo):
+Inventario-entorno.md:44
+Inventario-decisiones.md:59

@@ -1,0 +1,2 @@
+pypi langgraph 1.2.18 2026-10-26T20:04:29
+npm @langchain/langgraph 1.5.3 2026-10-26T19:41:49.181Z

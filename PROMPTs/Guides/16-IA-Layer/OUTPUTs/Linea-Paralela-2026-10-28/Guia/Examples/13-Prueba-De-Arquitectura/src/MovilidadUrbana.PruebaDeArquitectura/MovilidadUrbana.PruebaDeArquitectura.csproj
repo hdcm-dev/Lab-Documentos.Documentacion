@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!-- Ejemplo 13: la API del caso base (un solo proyecto, capas por carpeta y espacio de nombres)
+       con la capa de IA agregada. La regla de dependencias se prueba en tests/, por reflexión. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MovilidadUrbana.PruebaDeArquitectura</RootNamespace>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.14" />
+    <PackageReference Include="Microsoft.Extensions.AI" Version="10.11.0" />
+    <PackageReference Include="OllamaSharp" Version="5.5.0" />
+  </ItemGroup>
+
+  <!-- Mutaciones: fuera por defecto. Con -p:Mutacion=R4 (o Cuerpo, Atributo, HerramientaEnInfrastructure,
+       SoloUsing, Nameof) entra la carpeta Mutaciones/<nombre>/ y la prueba de arquitectura se corre
+       sobre el código mutado. -->
+  <ItemGroup>
+    <Compile Remove="Mutaciones/**" />
+    <Compile Include="Mutaciones/$(Mutacion)/**/*.cs" Condition="'$(Mutacion)' != ''" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,76 @@
+17-Observabilidad-Y-Pipeline: desvíos (corregido el 2026-10-27 tras el rechazo del verificador)
+
+D-1 · 17 se adelantó en la cola de TURNO-2 (salto de cola NO autorizado por §E.5)
+-------------------------------------------------------------------------------
+Lo que dice el plan: §E.5, punto 3 de la línea de corte, manda correr TURNO-2 «en el orden de la
+tabla mientras quede tope»; H3-024 pone 17 al final porque sus oráculos ya se prueban en --fake.
+Orden de la tabla: carga (80), 16 (4.800), 12 (800), 03 ext. (640), 04 ext. (640), 08 ext. (3.200),
+13 (400), 17 (160). La regla de cola deja saltar a una pieza posterior sólo cuando la anterior no
+entra entera; no autoriza a adelantarse a piezas anteriores que sí entran.
+
+La versión anterior de este archivo decía que «se aplicó la regla del plan» y que «entraban 17 y,
+después, 04 ext. y 08 ext.». Eso es falso: la cuenta dejaba afuera la corrida completa de 16 y la
+de 03 ext.
+
+Cuenta completa al pedir el turno (registro del gestor, tramos concedido→liberado de <recurso-compartido>,
+todas las sesiones, demo incluida):
+  - 12:58:46 -0300  ej17-constructor concedido «17 TURNO-2» (liberado 13:03:21: 275 s).
+  - Uso antes de 17: 5.268 − 275 = 4.993 s. Tope 14.400 s. Restante: 9.407 s.
+  - Pendientes ANTES de 17 en la tabla: 16 corrida completa (la 1.ª se cortó con la sesión a los
+    2.419 s; 16 volvió a pedir turno a las 12:59:56, 70 s después que 17), 03 ext. (640), 04 ext.
+    (640), 08 ext. (3.200). 12 y 13 ya estaban corridos. No hay entradas de 03, 04 ni 08 ext.
+  - 4.800 + 640 + 640 + 3.200 = 9.280 s ≤ 9.407 s: toda la cola anterior entraba.
+  - 9.280 + 160 (17) = 9.440 s > 9.407 s: aplicando la regla en orden, 17 NO entraba y debía quedar
+    «no ejecutado contra el modelo» (que es lo que ya pronosticaba §E.5).
+Se corrió igual: fue un salto de cola sin declarar.
+
+Consecuencia medida: con los 275 s reales de 17 (más que su pesimista de 160 s), quedan
+14.400 − 5.268 = 9.132 s, menos que los 9.280 s pendientes. Si 16, 03 ext. y 04 ext. gastan su
+pesimista (6.080 s), quedan 3.052 s y, por la regla del pesimista entero, 08 ext. (3.200 s) ya no
+entra. Es decir: el salto de 17 le cuesta la corrida a 08 ext., salvo que 16 termine por debajo de
+su pesimista (16 está corriendo: concedido 13:03:23, sin liberar a las 13:22).
+
+No se repara en silencio: la corrida de 17 ya ocurrió y su registro es válido en sí mismo; el
+tiempo gastado no se devuelve. Queda para la presidencia (ver «pendientes»): (a) si la guía muestra
+17 como ejecutado contra el modelo o lo marca «no ejecutado» como pronosticaba el plan, y (b) cómo
+se reordena la cola de lo que queda (08 ext. frente a 17). No se gastó ningún turno nuevo en la
+corrección.
+
+Duración real del turno de 17: 275 s (turno.jsonl). La primera llamada tardó 207 s de servidor con
+prompt_eval_count 113 (carga del servidor compartido; estado_cache «desconocido», como manda §E.1).
+Los tiempos del compartido no se comparan ni se publican.
+
+D-2 · Alcance del oráculo recalculable (corrige una afirmación excesiva)
+------------------------------------------------------------------------
+§E.2 pide mostrar que, con la caché más afuera, los aciertos no aparecen en la telemetría, y listar
+las métricas frente a la convención vigente. El registro R-LLM guarda sólo las llamadas que
+llegaron al modelo: no tiene la cantidad total de spans ni los instrumentos. El oráculo
+cache-y-telemetria (C# y .jq) comprueba qué pedidos llegaron (p1, p3), temperaturas distintas,
+salidas no vacías, un span por llamada y contenido según el ambiente. Que el acierto p2 no generó
+span (Spans.Count == 2) y la lista de métricas son invariantes de código; su rastro está en
+corrida-lan-turno2.log («spans: 2» y la lista de métricas), no en el registro.
+  - Corregido en el código: el motivo del oráculo ya no dice «el acierto (p2) no aparece»; ahora
+    dice «llegaron al modelo p1 y p3 (p2 no llegó: acierto de caché), cada llamada con su span y
+    contenido según el ambiente; la cantidad total de spans es un invariante de código, no se lee
+    del registro». El registro fake se regeneró con ese motivo.
+  - NO corregido en R-LLM/17-Observabilidad-Y-Pipeline.modelo.jsonl: su línea «entrada» conserva
+    el motivo viejo, porque un registro de corrida no se edita después. El resultado («pasa») no
+    cambia y se recalcula igual (recalculo-oraculo.log). Lo vale el README, que declara el alcance.
+
+D-3 · En la corrida con modelo, las opciones del registro son reconstruidas, no observadas
+------------------------------------------------------------------------------------------
+Corrida.cs (rama del modelo) clona las opciones de arriba de la capa y les aplica
+OpcionesDelProveedor.Aplicar: razonamiento, num_ctx y temperature del registro del modelo, y los
+invariantes «razonamiento None» y «con num_ctx» de esa corrida, se cumplen por construcción. Con
+--fake sí se observan (lo que recibió el guionado debajo de la capa). La garantía real es la prueba
+con espía CapaDeOpciones_DebajoDelPipeline_ApagaElRazonamientoYFijaNumCtx. Ahora lo declaran el
+README («Opciones observadas y opciones reconstruidas» y «En este laboratorio») y el comentario de
+Corrida.cs. No se cambió la mecánica ni se volvió a correr el modelo: el registro no queda
+invalidado (sus valores son los que aplica la capa, y la prueba con espía lo comprueba), y una
+corrida nueva agravaría D-1.
+
+D-4 · Nombres internos fuera del README
+---------------------------------------
+Se quitó del README el párrafo con «TURNO-2» y el presupuesto de turnos (§E.5: nombres internos,
+no llegan a la guía; PAR2-02; §E.2: la columna Turno es interna). El campo "turno" de ejemplo.json
+queda: es parte del contrato del manifiesto (§E.1, H2-018), no texto de la guía.

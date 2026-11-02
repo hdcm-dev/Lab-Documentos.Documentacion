@@ -1,0 +1,35 @@
+# Ex05 corrida-2: resúmenes y pareadas (unidad del par = consulta, sobre aciertos/m)
+RESUMEN todas contexto-fijo: consultas que pasan en 3/3: 10/16; Wilson 95 % [0.39; 0.82]; media de las tasas por consulta 0.771 (la tarea, K = 16 × m = 3; sin Wilson sobre K·m)
+RESUMEN todas rag: consultas que pasan en 3/3: 11/16; Wilson 95 % [0.44; 0.86]; media de las tasas por consulta 0.771 (la tarea, K = 16 × m = 3; sin Wilson sobre K·m)
+PAREADA todas: pares 16; discordantes 5 (contexto-fijo mejor en 3, rag mejor en 2); no separado con este N
+RESUMEN respondibles contexto-fijo: consultas que pasan en 3/3: 10/12; Wilson 95 % [0.55; 0.95]; media de las tasas por consulta 0.917 (la tarea, K = 12 × m = 3; sin Wilson sobre K·m)
+RESUMEN respondibles rag: consultas que pasan en 3/3: 10/12; Wilson 95 % [0.55; 0.95]; media de las tasas por consulta 0.889 (la tarea, K = 12 × m = 3; sin Wilson sobre K·m)
+PAREADA respondibles: pares 12; discordantes 3 (contexto-fijo mejor en 2, rag mejor en 1); no separado con este N
+RESUMEN no respondibles contexto-fijo: consultas que pasan en 3/3: 0/4; Wilson 95 % [0.00; 0.49]; media de las tasas por consulta 0.333 (la tarea, K = 4 × m = 3; sin Wilson sobre K·m)
+RESUMEN no respondibles rag: consultas que pasan en 3/3: 1/4; Wilson 95 % [0.05; 0.70]; media de las tasas por consulta 0.417 (la tarea, K = 4 × m = 3; sin Wilson sobre K·m)
+PAREADA no respondibles: pares 4; discordantes 2 (contexto-fijo mejor en 1, rag mejor en 1); no separado con este N
+
+# Oro.cs l. 76-90 (Estadistica.Pareada)
+    }
+
+    /// <summary>
+    /// Comparación pareada por pedido: «difiere» sólo con 6 o más pares discordantes, todos en el
+    /// mismo sentido (prueba del signo bilateral, p = 2·0,5^n &lt; 0,05). Si no, «no separado con este N».
+    /// </summary>
+    public static string Pareada(string a, string b, IReadOnlyList<(double TasaA, double TasaB)> pares)
+    {
+        int aMejor = pares.Count(p => p.TasaA > p.TasaB), bMejor = pares.Count(p => p.TasaB > p.TasaA);
+        int discordantes = aMejor + bMejor;
+        var veredicto = discordantes >= 6 && (aMejor == 0 || bMejor == 0)
+            ? $"difiere (p = {2 * Math.Pow(0.5, discordantes):0.000})"
+            : "no separado con este N";
+        return $"pares {pares.Count}; discordantes {discordantes} ({a} mejor en {aMejor}, {b} mejor en {bMejor}); {veredicto}";
+    }
+
+# Guía l. 1726-1734
+`Examples/05` corre las dos estrategias con el mismo oro, instrucción, semillas y formato; cambia sólo cuántos requisitos llegan (los 12, o k = 3 por la vía A). El oro: 12 respondibles y 4 no respondibles, cada una con una clave y un relevante a citar. El criterio se escribió antes de correr, y la comparación es pareada por consulta: «difiere» sólo con 6 o más pares discordantes en un mismo sentido (`Examples/05-RAG-En-Memoria/tests/MovilidadUrbana.RagEnMemoria.Tests/Evaluacion/Oro.cs`, l. 82–91).
+| Medida | Contexto fijo | RAG, vía A (k = 3) | Comparación pareada |
+|---|---|---|---|
+| Respondibles que pasan en 3 de 3 (K = 12) | 10/12, [0,55; 0,95] | 10/12, [0,55; 0,95] | 3 discordantes (2 y 1): no separado con este N |
+| No respondibles que pasan en 3 de 3 (K = 4: menos de 10 pedidos, sólo existencia) | 0 de 4 | 1 de 4 | 2 discordantes: no separado con este N |
+| Todas (K = 16): media de las tasas por consulta | 0,771 | 0,771 | 5 discordantes (3 y 2): no separado con este N |

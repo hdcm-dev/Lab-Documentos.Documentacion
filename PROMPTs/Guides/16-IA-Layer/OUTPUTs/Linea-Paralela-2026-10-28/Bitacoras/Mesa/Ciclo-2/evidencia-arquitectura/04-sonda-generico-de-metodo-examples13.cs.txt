@@ -1,0 +1,26 @@
+using Microsoft.Extensions.AI;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace SondaRojo.Application
+{
+    public static class RegistroConMensaje
+    {
+        public static IServiceCollection Registrar(IServiceCollection s) => s.AddSingleton<ChatMessage>();
+    }
+}
+
+namespace MovilidadUrbana.PruebaDeArquitectura.Tests.Cableado
+{
+    [TestFixture, Category("Sonda")]
+    public sealed class SondaGenericoDeMetodo
+    {
+        [Test]
+        public void Argumento_generico_de_metodo()
+        {
+            var v = ReglaDeCapas.Violaciones([typeof(SondaRojo.Application.RegistroConMensaje)], t => Capas.En(t, Capas.IA));
+            TestContext.Out.WriteLine($"## Genérico de método (Examples/13): {v.Count} hallazgos");
+            foreach (var x in v) TestContext.Out.WriteLine("   " + x);
+            Assert.Pass();
+        }
+    }
+}

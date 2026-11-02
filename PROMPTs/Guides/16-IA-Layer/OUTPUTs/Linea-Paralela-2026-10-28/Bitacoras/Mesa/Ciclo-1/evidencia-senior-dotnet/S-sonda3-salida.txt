@@ -1,0 +1,6 @@
+CONCEDIDO build a senior-dotnet hasta 2026-10-28T10:04:15-0300 (renová con: <gestor-de-turnos> renovar build senior-dotnet)
+ChatRequest.Options : OllamaSharp.Models.RequestOptions
+RequestOptions.NumCtx : System.Nullable`1[System.Int32]
+mapper: OllamaSharp.MicrosoftAi.AbstractionMapper; métodos: ToChatResponse, ToOllamaSharpChatRequest, TryAddOllamaOption, TryAddOption, ToChatResponseUpdate, ToChatMessage, ParseOllamaChatResponseProps, ParseOllamaChatResponseUsage
+OllamaOption.NumCtx: OllamaSharp.Models.OllamaOption
+LIBERADO build por senior-dotnet

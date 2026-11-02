@@ -1,0 +1,47 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MovilidadUrbana.PruebaDeArquitectura -> /ex/src/MovilidadUrbana.PruebaDeArquitectura/bin/Debug/net10.0/MovilidadUrbana.PruebaDeArquitectura.dll
+  MovilidadUrbana.PruebaDeArquitectura.Tests -> /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/bin/Debug/net10.0/MovilidadUrbana.PruebaDeArquitectura.Tests.dll
+Test run for /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/bin/Debug/net10.0/MovilidadUrbana.PruebaDeArquitectura.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/bin/Debug/net10.0/MovilidadUrbana.PruebaDeArquitectura.Tests.dll
+   NUnit3TestExecutor discovered 7 of 7 NUnit test cases using Current Discovery mode, Non-Explicit run
+Núcleo: 35 tipos inspeccionados.
+
+  Passed Cada_excepcion_declarada_sigue_existiendo [161 ms]
+  Passed El_adaptador_de_IA_no_conoce_el_acceso_a_datos [66 ms]
+  Passed El_dominio_no_conoce_Application [7 ms]
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (cuerpo de InvokeAsync)
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (parámetro de InvokeAsync)
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<>c__DisplayClass3_0 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (campo session)
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<>c__DisplayClass3_0 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (cuerpo de <InvokeAsync>b__0)
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<InvokeAsync>d__3 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (campo session)
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<InvokeAsync>d__3 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (cuerpo de MoveNext)
+
+  Failed El_nucleo_no_conoce_IA_ni_acceso_a_datos_ni_HTTP_ni_las_capas_de_afuera [151 ms]
+  Error Message:
+     Assert.That(SinExcepciones(violaciones), Is.Empty)
+  Expected: <empty>
+  But was:  < "MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (campo <MensajeOriginal>k__BackingField)", "MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (campo <UltimoMensaje>k__BackingField)", "MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de get_MensajeOriginal)", "MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de get_UltimoMensaje)", "MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de set_MensajeOriginal)", "MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de set_UltimoMensaje)", "MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (parámetro de set_MensajeOriginal)", "MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (parámetro de set_UltimoMensaje)", "MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (propiedad MensajeOriginal)", "MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (propiedad UltimoMensaje)"... >
+
+  Stack Trace:
+     at MovilidadUrbana.PruebaDeArquitectura.Tests.Cableado.ReglaDeDependenciasTests.El_nucleo_no_conoce_IA_ni_acceso_a_datos_ni_HTTP_ni_las_capas_de_afuera() in /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/Cableado/ReglaDeDependenciasTests.cs:line 49
+
+1)    at MovilidadUrbana.PruebaDeArquitectura.Tests.Cableado.ReglaDeDependenciasTests.El_nucleo_no_conoce_IA_ni_acceso_a_datos_ni_HTTP_ni_las_capas_de_afuera() in /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/Cableado/ReglaDeDependenciasTests.cs:line 49
+
+
+  Standard Output Messages:
+ Núcleo: 35 tipos inspeccionados.
+
+
+  Passed Infrastructure_no_usa_casos_de_uso_ni_Presentacion [124 ms]
+  Passed La_persistencia_no_conoce_IA [31 ms]
+  Passed Presentacion_no_conoce_acceso_a_datos_ni_proveedor_de_IA_ni_Infrastructure [37 ms]
+
+Test Run Failed.
+Total tests: 7
+     Passed: 6
+     Failed: 1
+ Total time: 3.0165 Seconds
+mutacion R4 rc=1

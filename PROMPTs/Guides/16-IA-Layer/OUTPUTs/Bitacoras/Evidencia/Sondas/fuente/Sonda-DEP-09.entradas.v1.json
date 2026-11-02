@@ -1,0 +1,9 @@
+{
+  "rotulo": "escrito para el ejemplo",
+  "version": "dep09-v1",
+  "tipo": "sonda DEP-09 (plan §G.3, §E.5 TURNO-1): una entrada en dos peticiones; sin tasa",
+  "procedencia": "e02 de 09-Caso-De-Uso-Como-Herramienta/entradas.v1.json; Goya, Corrientes, 3450, 90000: LocalidadesTests.cs l. 50 @ 8fb4c3a",
+  "entradas": [
+    { "id": "e02", "texto": "Agregá Goya, Corrientes, CP 3450, 90000 habitantes.", "esperado": "alta" }
+  ]
+}

@@ -1,0 +1,7 @@
+# Verificación de los intervalos de Wilson de la guía (z = 1,959964), 2026-10-28
+# comando: python3 -I 01-wilson-check.py Dot-Net-Integration-AI-Layer-Guide.md
+L1713: 10/12 dice [0.17;0.69] Wilson [0.552;0.953] :: 10/12 | 0,833 | 0,833 | 4/10, [0,17; 0,69]
+L1732: 3/3 dice [0.55;0.95] Wilson [0.439;1.000] :: 3 de 3 (K = 12) | 10/12, [0,55; 0,95]
+L3324: 3/3 dice [0.39;0.86] Wilson [0.439;1.000] :: 3/3, 8/12 [0,39; 0,86]
+revisados 93, discrepancias 3
+# Las tres «discrepancias» son falsos positivos de la expresión regular: toma otra fracción de la misma línea (L1713: 4/10 → [0,17; 0,69] correcto; L1732 y L3324: 10/12 y 8/12, correctos).

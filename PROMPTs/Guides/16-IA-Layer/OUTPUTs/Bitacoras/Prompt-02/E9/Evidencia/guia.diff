@@ -1,0 +1,78 @@
+--- guia.antes.md	2026-11-01 21:15:27.222191818 -0300
++++ Dot-Net-Integration-AI-Layer-Guide.md	2026-11-01 21:17:02.715234679 -0300
+@@ -1756,6 +1756,8 @@
+ 
+ **Cliente: lo que anuncia el servidor no decide.** `McpClient.ListToolsAsync` devuelve `McpClientTool`, que hereda de `AIFunction` y entra tal cual en `ChatOptions.Tools` [REF-132]. 13 no lo monta tal cual: toma sólo lo que está en su lista permitida por nombre, con la descripción que escribe el cliente, y descarta el resto. La descripción propia vale para lecturas y escrituras; una escritura permitida, además, se monta aprobable. En los dos casos, el esquema de los parámetros sigue siendo el que anunció el servidor, y sus descripciones llegan al modelo: es texto no confiable por procedencia ([§12.3](#s11-3)), como las anotaciones que la especificación pide tratar como no confiables [REF-198]. Un servidor guionado que anuncia `borrar_todo` marcada `ReadOnly = true` no se monta, y una escritura permitida se montaría aprobable. Qué exige la especificación sobre `Origin` y sobre autorización está en [§12.5](#s11-5).
+ 
++**Versión del protocolo.** La vigente es 2026-07-28: cada pedido la declara, en Streamable HTTP también en la cabecera `MCP-Protocol-Version`; hasta 2025-11-25 se acordaba en un saludo inicial [REF-208]. En 13 la negocia el SDK ([Anexo F](#anexo-f)).
++
+ <a id="c9-escenarios"></a><a id="s8-practica"></a><a id="s8-escenarios"></a>
+ ### 9.10 Aplicación por escenario
+ 
+@@ -2369,7 +2371,7 @@
+ 
+ **Definición.** Exponer por MCP es dejar que el modelo de **otro** proceso use herramientas de la aplicación (ESC-05); consumir es montar herramientas ajenas. La demo no expone `/mcp`; 13 sí, **sin control de acceso**, y por eso sólo en loopback y con una lectura ([§9.9](#c9-9)). Escuchar en loopback, filtrar `Host` con `AllowedHosts` y validar `Origin` son tres cosas distintas, y ninguna es control de acceso.
+ 
+-**Lado servidor.** La especificación exige validar `Origin` en toda conexión para prevenir el *rebinding* de DNS, recomienda escuchar sólo en localhost cuando el servidor corre local y recomienda autenticar toda conexión [REF-196]; la revisión 2026-07-28 agrega que un `Origin` presente e inválido recibe 403 [REF-197]. 13 hace las dos primeras, con tres líneas de defensa (loopback, `Host`, `Origin`) y ninguna que pregunte quién llama ([README de 13](Examples/13-Servidor-Y-Cliente-MCP/README.md#el-código-paso-a-paso)). 13 no ejerce la regla 2 de la política de origen ([§12.3](#c12-3)), porque `DelEjemplo` no monta escrituras; la regla la muestra 16; `AllowedHosts`, que pide el SDK contra el rebinding [REF-132], no identifica a quien llama. Fuera de loopback hace falta autorización, opcional en la especificación y basada en OAuth 2.1 sobre HTTP [REF-199]; esta guía no la implementa.
++**Lado servidor.** La especificación exige validar `Origin` en toda conexión para prevenir el *rebinding* de DNS, recomienda escuchar sólo en localhost cuando el servidor corre local y recomienda autenticar toda conexión [REF-196]; un `Origin` presente e inválido recibe 403 [REF-197]. 13 hace las dos primeras, con tres líneas de defensa (loopback, `Host`, `Origin`) y ninguna que pregunte quién llama ([README de 13](Examples/13-Servidor-Y-Cliente-MCP/README.md#el-código-paso-a-paso)). 13 no ejerce la regla 2 de la política de origen ([§12.3](#c12-3)), porque `DelEjemplo` no monta escrituras; la regla la muestra 16; `AllowedHosts`, que pide el SDK contra el rebinding [REF-132], no identifica a quien llama. Fuera de loopback hace falta autorización, opcional en la especificación y basada en OAuth 2.1 sobre HTTP [REF-199]; esta guía no la implementa.
+ 
+ **Lado cliente.** La especificación exige tratar como no confiables las anotaciones de una herramienta salvo que vengan de un servidor confiable, y recomienda validar los resultados antes de pasarlos al modelo y que una persona pueda negar cada invocación [REF-198]. En el SDK de C#, las anotaciones se declaran en `[McpServerTool]` (`ReadOnly`, `Destructive`; `Examples/13-Servidor-Y-Cliente-MCP/Infrastructure/Mcp/LecturasMcp.cs`). Cómo las trata 13 (lista permitida por nombre, descripción propia en lecturas y escrituras, esquema del servidor, `borrar_todo` descartada, escritura permitida aprobable) está en [§9.9](#c9-9); el esquema y las descripciones que conserva del servidor se revisan antes de permitir la herramienta, y sus resultados son no confiables por procedencia ([§12.3](#c12-3)).
+ 
+@@ -2684,6 +2686,16 @@
+ 
+ Los campos los comenta la plantilla del [Anexo A](#anexo-a-13). Las trece están vigentes y ninguna reemplaza a otra. Criterio de la guía: confianza alta cuando la sostienen una fuente y una prueba sin servidor; media cuando depende de una conducta del modelo observada pocas veces. Las rutas de «Demo» parten de `Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/`; las de pruebas, de `Demos/MovilidadUrbana.Asistente/tests/MovilidadUrbana.Asistente.Tests/`, y las de `Examples/` y `tools/`, de la carpeta de la guía.
+ 
++**Las mismas decisiones en casos públicos.** Cinco casos, leídos en su fuente, tomaron decisiones que este registro también toma; las cifras son de sus autores.
++
++| Caso | Qué hizo | Decisión del libro |
++|---|---|---|
++| LinkedIn [REF-209] | La salida con forma inválida, cerca del 10 % de las veces, bajó a cerca del 0,01 % con un analizador defensivo y pistas en el prompt | la salida es una propuesta que se valida (ADR-08, [§6.3](#c6-3)) |
++| Shopify Sidekick [REF-210] | Calibró su juez contra personas: el kappa de Cohen pasó de 0,02 a 0,61, con 0,69 entre personas | juez calibrado (ADR-10, [§11.6](#c11-6)) |
++| Anthropic [REF-211] | Juez de una sola llamada con puntaje y aprobado; evaluación humana igual; trazas sin leer el contenido | ADR-10; contenido fuera de la telemetría ([§13.2](#c13-2)) |
++| GitHub Copilot, histórico [REF-212] | Con unos 6.000 caracteres de ventana, elegir y ordenar el contexto era el problema central | el contexto tiene presupuesto (ADR-04, [§7.3](#c7-3)) |
++| eShopSupport [REF-213] | Aplicación .NET con clasificación, resumen, chatbot y evaluación con preguntas y respuestas fundamentadas | caso comparable a la demo ([capítulo 15](#c15)) |
++
+ <a id="c14-2"></a><a id="s13-2"></a>
+ ### 14.2 ADR-01 Dónde vive la llamada al modelo
+ 
+@@ -3984,10 +3996,11 @@
+ - [REF-130] modelcontextprotocol, «csharp-sdk» (README del SDK C# oficial), https://github.com/modelcontextprotocol/csharp-sdk, rama main, consultado 2026-10-25
+ - [REF-132] modelcontextprotocol/csharp-sdk, «docs/concepts/getting-started.md» (McpClientTool : AIFunction; AllowedHosts y CORS), https://github.com/modelcontextprotocol/csharp-sdk/blob/main/docs/concepts/getting-started.md, rama main, consultado 2026-10-25
+ - [REF-133] modelcontextprotocol/csharp-sdk, «docs/concepts/tools/tools.md» (WithTools<T>(); parámetros resueltos por DI), https://github.com/modelcontextprotocol/csharp-sdk/blob/main/docs/concepts/tools/tools.md, rama main, consultado 2026-10-25
+-- [REF-196] Model Context Protocol, «Transports» (especificación, «Security Warning» de Streamable HTTP), https://modelcontextprotocol.io/specification/2025-06-18/basic/transports, versión 2025-06-18, consultado 2026-10-28
+-- [REF-197] Model Context Protocol, «Streamable HTTP» (especificación, «Security & Endpoint»), https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http, versión 2026-07-28, consultado 2026-10-28. En la 2026-07-28 la ruta `basic/transports` sirve la página «Overview»; el texto está en esta subpágina
+-- [REF-198] Model Context Protocol, «Tools» (especificación: anotaciones no confiables, humano que puede negar la invocación, «Security Considerations»), https://modelcontextprotocol.io/specification/2025-06-18/server/tools, versión 2025-06-18, consultado 2026-10-28; sin cambios en esos puntos en la 2026-07-28
+-- [REF-199] Model Context Protocol, «Authorization» (especificación: carácter opcional, transportes HTTP, base en OAuth 2.1), https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization, versión 2025-06-18, consultado 2026-10-28
++- [REF-196] Model Context Protocol, «Streamable HTTP» (especificación, «Security & Endpoint», puntos 1 a 3), https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http, versión 2026-07-28, consultado 2026-11-01
++- [REF-197] Model Context Protocol, «Streamable HTTP» (especificación, «Security & Endpoint»), https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http, versión 2026-07-28, consultado 2026-11-01
++- [REF-198] Model Context Protocol, «Tools» (anotaciones no confiables, humano que niega, «Security Considerations»), https://modelcontextprotocol.io/specification/2026-07-28/server/tools, versión 2026-07-28, consultado 2026-11-01
++- [REF-199] Model Context Protocol, «Authorization» (opcional, HTTP, OAuth 2.1), https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization, versión 2026-07-28, consultado 2026-11-01
++- [REF-208] Model Context Protocol, «Versioning» (versión vigente y negociación por pedido), https://modelcontextprotocol.io/specification/versioning, versión vigente 2026-07-28, consultado 2026-11-01
+ 
+ <a id="anexo-d-7"></a>
+ ### D.7 Marcos comparados: Semantic Kernel, AutoGen, LangGraph
+@@ -4070,6 +4083,15 @@
+ - [REF-201] Microsoft Learn (NuGet), «Central Package Management» (`ManagePackageVersionsCentrally`, `PackageReference` sin versión, *transitive pinning* y el error NU1109), https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management, ms.date 2025-08-22, act. 2026-03-03, consultado 2026-10-28
+ - [REF-207] hdcm-dev, «Lab-Geometria» (Fábrica de Geometría: validador de figuras, contrato, intake y ADR de la Web), https://github.com/hdcm-dev/Lab-Geometria, commit 5f07b12, consultado 2026-11-01
+ 
++<a id="anexo-d-13"></a>
++### D.13 Casos de industria
++
++- [REF-209] Juan Pablo Bottaro y Karthik R. (LinkedIn Engineering), «Musings on Building a Generative AI Product», https://www.linkedin.com/blog/engineering/generative-ai/musings-on-building-a-generative-ai-product, publicado 2024-04-25, consultado 2026-11-01
++- [REF-210] Andrew McNamara (Shopify Engineering), «Building production-ready agentic systems: Lessons from Shopify Sidekick», https://shopify.engineering/building-production-ready-agentic-systems, publicado 2025-08-26, consultado 2026-11-01
++- [REF-211] Anthropic Engineering, «How we built our multi-agent research system», https://www.anthropic.com/engineering/multi-agent-research-system, publicado 2025-06-13, consultado 2026-11-01
++- [REF-212] Johan Rosenkilde (GitHub Blog), «How GitHub Copilot is getting better at understanding your code», https://github.blog/ai-and-ml/github-copilot/how-github-copilot-is-getting-better-at-understanding-your-code/, publicado 2023-05-17, act. 2024-02-07, consultado 2026-11-01
++- [REF-213] dotnet, «eShopSupport» (aplicación .NET de referencia para soporte con IA), https://github.com/dotnet/eShopSupport, rama main, consultado 2026-11-01
++
+ <a id="anexo-e"></a>
+ ## Anexo E · Laboratorio
+ 
+@@ -4308,7 +4330,7 @@
+ | `Microsoft.Graph` | 6.9.0 | **no es IA**: cliente de las API de Microsoft 365, según su `.nuspec` ([§10.5](#c10-5)) | 2026-10-26 | [REF-187] (`.nuspec`) |
+ | Convención `gen_ai.*` de OpenTelemetry | repositorio `semantic-conventions-genai`, rama main | estado Development; se mudó de repositorio en 2026; M.E.AI 10.11.0 emite los nombres de métricas de la v1.41.0 de `semantic-conventions`, que el repositorio nuevo ya cambió | 2026-10-25 | [REF-168], [REF-169], [REF-171] |
+ | `CommunityToolkit.Aspire.Hosting.Ollama` · `CommunityToolkit.Aspire.OllamaSharp` | 13.6.1 | GA, Community Toolkit. `Aspire.Hosting.Ollama` **no existe** en nuget.org (404) | 2026-10-26 | [REF-175], [REF-176], [REF-188] |
+-| Especificación MCP | última publicada: 2026-07-28 (`specification/latest` redirige ahí) | la DLL de `ModelContextProtocol.Core` 2.3.0 trae las cadenas de versión 2024-11-05 a 2026-07-28; la versión que negocia el SDK la **registra** 13 en una línea `mcp-negociacion` de su registro: `2026-07-28` (Observado: corrida de 13, `qwen3.5:4b`, estación 2, 2026-10-29; el modelo no interviene en la negociación) | 2026-10-26 | [REF-38] |
++| Especificación MCP | última publicada y vigente: 2026-07-28 (`specification/latest` redirige ahí) [REF-208] | la DLL de `ModelContextProtocol.Core` 2.3.0 trae las cadenas de versión 2024-11-05 a 2026-07-28; la versión que negocia el SDK la **registra** 13 en una línea `mcp-negociacion` de su registro: `2026-07-28` (Observado: corrida de 13, `qwen3.5:4b`, estación 2, 2026-10-29; el modelo no interviene en la negociación) | 2026-10-26 | [REF-38] |
+ 
+ <a id="anexo-f-3"></a>
+ ### F.3 Invariante de versiones y su excepción

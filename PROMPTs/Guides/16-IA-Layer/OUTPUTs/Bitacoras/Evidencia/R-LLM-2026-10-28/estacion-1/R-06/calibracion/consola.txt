@@ -1,0 +1,49 @@
+Corpus: 12 fragmentos (plantilla.v1), p. ej. «Localidad · requisito del nombre: Entre 3 y 60 caracteres, único por provincia.»
+Observado en el laboratorio: qwen3-embedding:0.6b (ac6da0dfba84), Ollama 0.40.11, Ollama propio, 2026-10-29. Estímulo del mismo autor.
+
+pregunta  variante          rango  top-1                                    puntaje  oráculo
+c01       sin-instruccion       1  LocalidadPolicy.RequisitoDelCodigoPostal   0.691  pasa
+c02       sin-instruccion       1  EncuestaPolicy.RequisitoDeLaEdad           0.541  pasa
+c03       sin-instruccion       1  LocalidadPolicy.RequisitoDeLosHabitantes   0.531  pasa
+c04       sin-instruccion       1  EncuestaPolicy.RequisitoDeLosMedios        0.524  pasa
+c05       sin-instruccion       1  EncuestaPolicy.RequisitoDelMotivo          0.781  pasa
+c06       sin-instruccion       -  EncuestaPolicy.RequisitoDeLaLocalidad      0.526  excluida
+c07       sin-instruccion       -  EncuestaPolicy.RequisitoDeLosMedios        0.470  excluida
+c08       sin-instruccion       -  EncuestaPolicy.RequisitoDeLaEdad           0.540  excluida
+c09       sin-instruccion       -  EncuestaPolicy.RequisitoDeLaDistancia      0.279  excluida
+c10       sin-instruccion       -  EncuestaPolicy.RequisitoDeLaFrecuencia     0.227  excluida
+c01       con-instruccion       1  LocalidadPolicy.RequisitoDelCodigoPostal   0.698  pasa
+c02       con-instruccion       1  EncuestaPolicy.RequisitoDeLaEdad           0.624  pasa
+c03       con-instruccion       1  LocalidadPolicy.RequisitoDeLosHabitantes   0.552  pasa
+c04       con-instruccion       1  EncuestaPolicy.RequisitoDeLosMedios        0.522  pasa
+c05       con-instruccion       1  EncuestaPolicy.RequisitoDelMotivo          0.795  pasa
+c06       con-instruccion       -  EncuestaPolicy.RequisitoDeLaLocalidad      0.535  excluida
+c07       con-instruccion       -  EncuestaPolicy.RequisitoDeLosMedios        0.427  excluida
+c08       con-instruccion       -  EncuestaPolicy.RequisitoDeLaEdad           0.568  excluida
+c09       con-instruccion       -  EncuestaPolicy.RequisitoDeLaDistancia      0.297  excluida
+c10       con-instruccion       -  EncuestaPolicy.RequisitoDeLosMedios        0.231  excluida
+
+Métricas sobre las respondibles medidas por las dos variantes (M = 5; descriptivas, guía §10.4):
+  modelo sin-instruccion           hit@1  5/5 = 1.000   hit@3  5/5 = 1.000   MRR 1.000
+  modelo con-instruccion           hit@1  5/5 = 1.000   hit@3  5/5 = 1.000   MRR 1.000
+  léxica                           hit@1  4/5 = 0.800   hit@3  4/5 = 0.800   MRR 0.850
+  azar (permutación con semilla)   hit@1  0/5 = 0.000   hit@3  3/5 = 0.600   MRR 0.310
+  azar (esperanza analítica)       hit@1 0.083         hit@3 0.250         MRR 0.259
+
+Comparaciones pareadas (b = acierta sólo A, c = acierta sólo B; binomial exacta bilateral):
+  hit@1 modelo sin-instruccion vs léxica: b = 1, c = 0, p = 1.000 → no se afirma diferencia
+  hit@1 modelo sin-instruccion vs azar (permutación con semilla): b = 5, c = 0, p = 0.063 → no se afirma diferencia
+  hit@1 modelo con-instruccion vs léxica: b = 1, c = 0, p = 1.000 → no se afirma diferencia
+  hit@1 modelo con-instruccion vs azar (permutación con semilla): b = 5, c = 0, p = 0.063 → no se afirma diferencia
+  hit@1 modelo con-instruccion vs modelo sin-instruccion: b = 0, c = 0, p = 1.000 → no se afirma diferencia
+  hit@3 modelo sin-instruccion vs léxica: b = 1, c = 0, p = 1.000 → no se afirma diferencia
+  hit@3 modelo sin-instruccion vs azar (permutación con semilla): b = 2, c = 0, p = 0.500 → no se afirma diferencia
+  hit@3 modelo con-instruccion vs léxica: b = 1, c = 0, p = 1.000 → no se afirma diferencia
+  hit@3 modelo con-instruccion vs azar (permutación con semilla): b = 2, c = 0, p = 0.500 → no se afirma diferencia
+  hit@3 modelo con-instruccion vs modelo sin-instruccion: b = 0, c = 0, p = 1.000 → no se afirma diferencia
+
+  sin-instruccion: mejor puntaje de una no respondible 0.540 · peor top-1 de una respondible 0.524 (observación para el «no sé» de 07, no un umbral)
+  con-instruccion: mejor puntaje de una no respondible 0.568 · peor top-1 de una respondible 0.522 (observación para el «no sé» de 07, no un umbral)
+
+32 llamadas de embedding · registro en 06-Embeddings-Y-Busqueda-Semantica.jsonl · oráculo recuperacion-top3
+invariantes de código: cumplidos

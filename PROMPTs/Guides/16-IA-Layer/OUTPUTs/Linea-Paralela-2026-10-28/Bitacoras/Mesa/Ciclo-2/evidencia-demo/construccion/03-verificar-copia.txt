@@ -1,0 +1,18 @@
+commit de origen: 59399ba6678c56c3219988a5f9666fc4e0047160
+diff -r Domain: 0 diferencias
+diff -r Application: 0 diferencias
+diff -r Contracts: 0 diferencias
+diff -r Controllers: 0 diferencias
+diff -r Sessions: 0 diferencias
+diff -r Infrastructure: 0 diferencias
+archivos de ApiWeb que NO se copian: MovilidadUrbana.ApiWeb.csproj Program.cs Properties appsettings.Development.json appsettings.json 
+  Determining projects to restore...
+  Restored /work/verificacion/CopiaSola/CopiaSola.csproj (in 2.36 sec).
+  CopiaSola -> <temporal>/bin/Release/net10.0/CopiaSola.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:16.29
+rc=0

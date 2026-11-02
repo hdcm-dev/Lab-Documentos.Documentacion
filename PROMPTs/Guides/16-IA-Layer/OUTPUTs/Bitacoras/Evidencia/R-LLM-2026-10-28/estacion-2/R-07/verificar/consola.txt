@@ -1,0 +1,93 @@
+07 · qwen3.5:4b@d8b0f5e9760c, Ollama 0.40.11, servidor compartido, num_ctx 8192 (arnes)
+embeddings: emb=qwen3-embedding:0.6b@ac6da0dfba84;ollama=0.40.11 · oro sha256 8a9468452395 · top-3
+r01: «¿Qué largo puede tener el nombre de una localidad y se puede repetir dentro de la misma provincia?»
+  recuperados: LocalidadPolicy.RequisitoDelNombre (0.688), LocalidadPolicy.RequisitoDeLaProvincia (0.398), EncuestaPolicy.RequisitoDelNombre (0.390)
+  modelo: El nombre de una localidad debe tener entre 3 y 60 caracteres y no puede repetirse dentro de la misma provincia. [Fuente: LocalidadPolicy.RequisitoDelNombre]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r02: «¿Puedo cargar una localidad en cualquier provincia que se me ocurra?»
+  recuperados: LocalidadPolicy.RequisitoDeLaProvincia (0.556), EncuestaPolicy.RequisitoDeLaLocalidad (0.454), LocalidadPolicy.RequisitoDelNombre (0.449)
+  modelo: No, no puedes cargar una localidad en cualquier provincia porque el sistema exige que la provincia sea parte del catálogo oficial y la localidad esté cargada en el ABM. [Fuente: LocalidadPolicy.RequisitoDeLaProvincia][Fuente: EncuestaPolicy.RequisitoDeLaLocalidad]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r03: «¿Cuántos números lleva el código postal de una localidad?»
+  recuperados: LocalidadPolicy.RequisitoDelCodigoPostal (0.686), LocalidadPolicy.RequisitoDeLosHabitantes (0.441), LocalidadPolicy.RequisitoDeLaProvincia (0.396)
+  modelo: El código postal de una localidad debe llevar 4 dígitos. [Fuente: LocalidadPolicy.RequisitoDelCodigoPostal]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r04: «¿Cuál es la población más chica que se puede cargar para una localidad?»
+  recuperados: LocalidadPolicy.RequisitoDeLosHabitantes (0.518), EncuestaPolicy.RequisitoDeLaLocalidad (0.439), LocalidadPolicy.RequisitoDelNombre (0.399)
+  modelo: La población mínima que se puede cargar para una localidad es un número entero de 1 en adelante. [Fuente: LocalidadPolicy.RequisitoDeLosHabitantes]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r05: «¿Cuántas letras tiene que tener como mínimo un nombre?»
+  recuperados: EncuestaPolicy.RequisitoDelNombre (0.641), LocalidadPolicy.RequisitoDelNombre (0.560), EncuestaPolicy.RequisitoDeLosMinutos (0.408)
+  modelo: Un nombre debe tener al menos 3 caracteres, ya sea para una encuesta o para una localidad. [Fuente: EncuestaPolicy.RequisitoDelNombre][Fuente: LocalidadPolicy.RequisitoDelNombre]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r06: «¿Qué edad tiene que tener quien contesta la encuesta?»
+  recuperados: EncuestaPolicy.RequisitoDeLaEdad (0.727), EncuestaPolicy.RequisitoDeLaFrecuencia (0.550), EncuestaPolicy.RequisitoDeLosMinutos (0.536)
+  modelo: Quien contesta la encuesta debe tener entre 16 y 110 años [Fuente: EncuestaPolicy.RequisitoDeLaEdad].
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r07: «En la encuesta, ¿puedo escribir una localidad que todavía no se dio de alta?»
+  recuperados: EncuestaPolicy.RequisitoDeLaLocalidad (0.586), EncuestaPolicy.RequisitoDelNombre (0.494), EncuestaPolicy.RequisitoDeLosMedios (0.459)
+  modelo: Sí, puedes escribir una localidad que aún no esté cargada en el ABM, ya que el contexto solo exige que sea una de las localidades registradas en ese sistema. [Fuente: EncuestaPolicy.RequisitoDeLaLocalidad]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r08: «¿Cuántos medios de transporte hay que marcar en la encuesta?»
+  recuperados: EncuestaPolicy.RequisitoDeLosMedios (0.647), EncuestaPolicy.RequisitoDeLaFrecuencia (0.609), EncuestaPolicy.RequisitoDeLaDistancia (0.544)
+  modelo: Hay que marcar al menos un medio de transporte en la encuesta. [Fuente: EncuestaPolicy.RequisitoDeLosMedios]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r09: «¿Qué se pregunta sobre cada cuánto viaja la persona?»
+  recuperados: EncuestaPolicy.RequisitoDelMotivo (0.508), EncuestaPolicy.RequisitoDeLaDistancia (0.475), EncuestaPolicy.RequisitoDeLaFrecuencia (0.429)
+  modelo: Se pregunta sobre la distancia que viaja la persona, específicamente si es entre 0 y 500 km por día. [Fuente: EncuestaPolicy.RequisitoDeLaDistancia]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r10: «¿Cuántos kilómetros diarios se pueden declarar en la encuesta?»
+  recuperados: EncuestaPolicy.RequisitoDeLaDistancia (0.701), EncuestaPolicy.RequisitoDeLosMinutos (0.570), EncuestaPolicy.RequisitoDeLaFrecuencia (0.515)
+  modelo: Se pueden declarar entre 0 y 500 kilómetros por día. [Fuente: EncuestaPolicy.RequisitoDeLaDistancia]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r11: «¿Cuánto puede durar el viaje que se declara en la encuesta?»
+  recuperados: EncuestaPolicy.RequisitoDeLaDistancia (0.601), EncuestaPolicy.RequisitoDelMotivo (0.587), EncuestaPolicy.RequisitoDeLosMinutos (0.547)
+  modelo: El viaje declarado en la encuesta puede durar entre 1 y 600 minutos. [Fuente: EncuestaPolicy.RequisitoDeLosMinutos]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r12: «¿Qué hay que contestar sobre para qué se hace el viaje?»
+  recuperados: EncuestaPolicy.RequisitoDelMotivo (0.667), EncuestaPolicy.RequisitoDeLaDistancia (0.423), EncuestaPolicy.RequisitoDeLaFrecuencia (0.377)
+  modelo: Para contestar a esta pregunta, debes indicar el motivo principal del viaje según lo establecido en la encuesta. [Fuente: EncuestaPolicy.RequisitoDelMotivo]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+n01: «¿Cuántos habitantes tiene Goya, en Corrientes?»
+  recuperados: LocalidadPolicy.RequisitoDeLosHabitantes (0.402), LocalidadPolicy.RequisitoDelCodigoPostal (0.236), EncuestaPolicy.RequisitoDeLaDistancia (0.221)
+  modelo: El contexto no proporciona información sobre el número de habitantes de la ciudad de Goya ni de la localidad de Corrientes. [Fuente: No sé]
+  código: RechazadaCitaNoRecuperada → se muestra el aviso de rechazo
+  oráculo rag-con-citas: falla (no dijo «No sé»)
+n02: «¿Se puede corregir una respuesta de la encuesta después de enviarla?»
+  recuperados: EncuestaPolicy.RequisitoDeLosMedios (0.383), EncuestaPolicy.RequisitoDelNombre (0.369), EncuestaPolicy.RequisitoDeLaEdad (0.363)
+  modelo: No tengo información en el contexto sobre si es posible corregir una respuesta de la encuesta después de enviarla. [Fuente: No sé]
+  código: RechazadaCitaNoRecuperada → se muestra el aviso de rechazo
+  oráculo rag-con-citas: falla (no dijo «No sé»)
+n03: «¿Cuál es la capital de Mendoza?»
+  recuperados: LocalidadPolicy.RequisitoDeLaProvincia (0.261), LocalidadPolicy.RequisitoDelCodigoPostal (0.220), EncuestaPolicy.RequisitoDeLaLocalidad (0.210)
+  modelo: No tengo información sobre la capital de Mendoza en el contexto proporcionado. [Fuente: No sé]
+  código: RechazadaCitaNoRecuperada → se muestra el aviso de rechazo
+  oráculo rag-con-citas: falla (no dijo «No sé»)
+n04: «¿Cuánto cuesta el boleto del tren?»
+  recuperados: EncuestaPolicy.RequisitoDelMotivo (0.308), EncuestaPolicy.RequisitoDeLaDistancia (0.279), EncuestaPolicy.RequisitoDeLosMinutos (0.225)
+  modelo: No sé. [Fuente: No disponible en el contexto].
+  código: RechazadaCitaNoRecuperada → se muestra el aviso de rechazo
+  oráculo rag-con-citas: falla (no dijo «No sé»)
+n05: «¿Cuántos medios de transporte se pueden marcar como máximo en la encuesta?»
+  recuperados: EncuestaPolicy.RequisitoDeLosMedios (0.611), EncuestaPolicy.RequisitoDeLaFrecuencia (0.564), EncuestaPolicy.RequisitoDeLaDistancia (0.539)
+  modelo: El contexto no especifica el número máximo de medios que se pueden marcar, solo indica que se requiere al menos uno. [Fuente: EncuestaPolicy.RequisitoDeLosMedios]
+  código: Aceptada
+  oráculo rag-con-citas: falla (no dijo «No sé»)
+afirmación correcta (con valor verificable): 7/7 (excluidas 0)
+cita válida (sin valor verificable):        5/5 (excluidas 0)
+«No sé» (no respondibles):                  0/5 (excluidas 0)
+cita y contradice (respondibles):           0/12 (excluidas 0)
+registro: 34 renglones en 07-RAG-Con-Citas.jsonl
+invariantes de código: se cumplen

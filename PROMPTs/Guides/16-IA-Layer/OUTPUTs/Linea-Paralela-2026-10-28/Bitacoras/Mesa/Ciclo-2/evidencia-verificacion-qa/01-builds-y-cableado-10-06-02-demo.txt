@@ -1,0 +1,51 @@
+CONCEDIDO build a verificacion-qa-c2 hasta 2026-10-28T18:48:22-0300 (renová con: <gestor-de-turnos> renovar build verificacion-qa-c2)
+=== 10-Workflow 2026-10-28T17:48:22-03:00
+10.0.403
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MovilidadUrbana.Ejemplos.Orquestacion -> /ex/src/MovilidadUrbana.Ejemplos.Orquestacion/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.dll
+  MovilidadUrbana.Ejemplos.Orquestacion.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    27, Skipped:     0, Total:    27, Duration: 1 s - MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll (net10.0)
+rc=0
+=== 06-Tool-Calling 2026-10-28T17:48:48-03:00
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MovilidadUrbana.Ejemplos.ToolCalling -> /ex/src/MovilidadUrbana.Ejemplos.ToolCalling/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.ToolCalling.dll
+  MovilidadUrbana.Ejemplos.ToolCalling.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.ToolCalling.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.ToolCalling.Tests.dll
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.ToolCalling.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.ToolCalling.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    23, Skipped:     0, Total:    23, Duration: 2 s - MovilidadUrbana.Ejemplos.ToolCalling.Tests.dll (net10.0)
+rc=0
+=== 02-Streaming 2026-10-28T17:49:22-03:00
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+Test run for /ex/tests/MovilidadUrbana.Streaming.Tests/bin/Release/net10.0/MovilidadUrbana.Streaming.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     9, Skipped:     0, Total:     9, Duration: 774 ms - MovilidadUrbana.Streaming.Tests.dll (net10.0)
+rc=0
+=== MovilidadUrbana.Asistente 2026-10-28T17:49:43-03:00
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MovilidadUrbana.Asistente -> /ex/src/MovilidadUrbana.Asistente/bin/Debug/net10.0/MovilidadUrbana.Asistente.dll
+  MovilidadUrbana.Asistente.Tests -> /ex/tests/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll
+Test run for /ex/tests/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    69, Skipped:     0, Total:    69, Duration: 23 s - MovilidadUrbana.Asistente.Tests.dll (net10.0)
+rc=0
+LIBERADO build por verificacion-qa-c2

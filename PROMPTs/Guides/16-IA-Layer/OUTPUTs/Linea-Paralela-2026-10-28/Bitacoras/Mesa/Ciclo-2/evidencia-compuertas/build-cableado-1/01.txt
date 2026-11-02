@@ -1,0 +1,16 @@
+10.0.403
+  Determining projects to restore...
+  Restored /ex/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests.csproj (in 3.21 sec).
+  Restored /ex/src/MovilidadUrbana.Ejemplos.ChatBasico/MovilidadUrbana.Ejemplos.ChatBasico.csproj (in 3.2 sec).
+  MovilidadUrbana.Ejemplos.ChatBasico -> /ex/src/MovilidadUrbana.Ejemplos.ChatBasico/bin/Release/net10.0/MovilidadUrbana.Ejemplos.ChatBasico.dll
+  MovilidadUrbana.Ejemplos.ChatBasico.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.ChatBasico.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:08.40
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.ChatBasico.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    18, Skipped:     0, Total:    18, Duration: 557 ms - MovilidadUrbana.Ejemplos.ChatBasico.Tests.dll (net10.0)

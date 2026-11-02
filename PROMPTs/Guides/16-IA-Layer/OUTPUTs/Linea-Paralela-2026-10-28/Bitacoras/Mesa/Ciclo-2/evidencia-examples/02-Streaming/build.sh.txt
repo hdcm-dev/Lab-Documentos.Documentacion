@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Copia el ejemplo fuera del workspace y corre el comando dado en sdk:10.0 (por defecto build + Cableado)
+set -euo pipefail
+E=<workspace>/LAB/Lab-Documentos/Lab-Documentos/Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Examples/02-Streaming
+B={dir-de-trabajo}/ex02-streaming
+docker run --rm -v "$B":/b mcr.microsoft.com/dotnet/sdk:10.0 rm -rf /b/copia
+mkdir -p "$B/copia"; cp -a "$E"/. "$B/copia"/
+CMD="${1:-dotnet --version && dotnet build tests/MovilidadUrbana.Streaming.Tests -c Release 2>&1 | tail -6 && dotnet test tests/MovilidadUrbana.Streaming.Tests -c Release --no-build --filter TestCategory=Cableado --logger 'console;verbosity=normal' 2>&1 | tail -30}"
+docker run --rm ${DOCKER_EXTRA:-} -v "$B/copia":/src -v <volumen-nuget>:/root/.nuget/packages -w /src mcr.microsoft.com/dotnet/sdk:10.0 bash -c "$CMD"

@@ -1,0 +1,122 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+Project 'MovilidadUrbana.Ejemplos.ChatBasico' has the following package references
+   [net10.0]: 
+   Top-level Package                                   Requested   Resolved
+   > Microsoft.Extensions.AI                           10.11.0     10.11.0 
+   > Microsoft.Extensions.AI.OpenAI                    10.11.0     10.11.0 
+   > Microsoft.Extensions.Hosting                      10.0.14     10.0.14 
+   > Microsoft.Extensions.Http                         10.0.14     10.0.14 
+   > Microsoft.Extensions.Options.DataAnnotations      10.0.14     10.0.14 
+   > OllamaSharp                                       5.5.0       5.5.0   
+
+   Transitive Package                                             Resolved
+   > Microsoft.Extensions.AI.Abstractions                         10.11.0 
+   > Microsoft.Extensions.Caching.Abstractions                    10.0.13 
+   > Microsoft.Extensions.Configuration                           10.0.14 
+   > Microsoft.Extensions.Configuration.Abstractions              10.0.14 
+   > Microsoft.Extensions.Configuration.Binder                    10.0.14 
+   > Microsoft.Extensions.Configuration.CommandLine               10.0.14 
+   > Microsoft.Extensions.Configuration.EnvironmentVariables      10.0.14 
+   > Microsoft.Extensions.Configuration.FileExtensions            10.0.14 
+   > Microsoft.Extensions.Configuration.Json                      10.0.14 
+   > Microsoft.Extensions.Configuration.UserSecrets               10.0.14 
+   > Microsoft.Extensions.DependencyInjection                     10.0.14 
+   > Microsoft.Extensions.DependencyInjection.Abstractions        10.0.14 
+   > Microsoft.Extensions.Diagnostics                             10.0.14 
+   > Microsoft.Extensions.Diagnostics.Abstractions                10.0.14 
+   > Microsoft.Extensions.FileProviders.Abstractions              10.0.14 
+   > Microsoft.Extensions.FileProviders.Physical                  10.0.14 
+   > Microsoft.Extensions.FileSystemGlobbing                      10.0.14 
+   > Microsoft.Extensions.Hosting.Abstractions                    10.0.14 
+   > Microsoft.Extensions.Logging                                 10.0.14 
+   > Microsoft.Extensions.Logging.Abstractions                    10.0.14 
+   > Microsoft.Extensions.Logging.Configuration                   10.0.14 
+   > Microsoft.Extensions.Logging.Console                         10.0.14 
+   > Microsoft.Extensions.Logging.Debug                           10.0.14 
+   > Microsoft.Extensions.Logging.EventLog                        10.0.14 
+   > Microsoft.Extensions.Logging.EventSource                     10.0.14 
+   > Microsoft.Extensions.Options                                 10.0.14 
+   > Microsoft.Extensions.Options.ConfigurationExtensions         10.0.14 
+   > Microsoft.Extensions.Primitives                              10.0.14 
+   > OpenAI                                                       2.14.0  
+   > System.ClientModel                                           1.15.0  
+   > System.Diagnostics.EventLog                                  10.0.14 
+   > System.Memory.Data                                           10.0.9  
+   > System.Numerics.Tensors                                      10.0.13 
+
+Project 'MovilidadUrbana.Ejemplos.ChatBasico.Tests' has the following package references
+   [net10.0]: 
+   Top-level Package             Requested   Resolved
+   > Microsoft.NET.Test.Sdk      18.11.0     18.11.0 
+   > NUnit                       5.0.0       5.0.0   
+   > NUnit3TestAdapter           6.3.1       6.3.1   
+
+   Transitive Package                                             Resolved
+   > Microsoft.ApplicationInsights                                2.23.0  
+   > Microsoft.CodeCoverage                                       18.11.0 
+   > Microsoft.Extensions.AI                                      10.11.0 
+   > Microsoft.Extensions.AI.Abstractions                         10.11.0 
+   > Microsoft.Extensions.AI.OpenAI                               10.11.0 
+   > Microsoft.Extensions.Caching.Abstractions                    10.0.13 
+   > Microsoft.Extensions.Configuration                           10.0.14 
+   > Microsoft.Extensions.Configuration.Abstractions              10.0.14 
+   > Microsoft.Extensions.Configuration.Binder                    10.0.14 
+   > Microsoft.Extensions.Configuration.CommandLine               10.0.14 
+   > Microsoft.Extensions.Configuration.EnvironmentVariables      10.0.14 
+   > Microsoft.Extensions.Configuration.FileExtensions            10.0.14 
+   > Microsoft.Extensions.Configuration.Json                      10.0.14 
+   > Microsoft.Extensions.Configuration.UserSecrets               10.0.14 
+   > Microsoft.Extensions.DependencyInjection                     10.0.14 
+   > Microsoft.Extensions.DependencyInjection.Abstractions        10.0.14 
+   > Microsoft.Extensions.DependencyModel                         8.0.2   
+   > Microsoft.Extensions.Diagnostics                             10.0.14 
+   > Microsoft.Extensions.Diagnostics.Abstractions                10.0.14 
+   > Microsoft.Extensions.FileProviders.Abstractions              10.0.14 
+   > Microsoft.Extensions.FileProviders.Physical                  10.0.14 
+   > Microsoft.Extensions.FileSystemGlobbing                      10.0.14 
+   > Microsoft.Extensions.Hosting                                 10.0.14 
+   > Microsoft.Extensions.Hosting.Abstractions                    10.0.14 
+   > Microsoft.Extensions.Http                                    10.0.14 
+   > Microsoft.Extensions.Logging                                 10.0.14 
+   > Microsoft.Extensions.Logging.Abstractions                    10.0.14 
+   > Microsoft.Extensions.Logging.Configuration                   10.0.14 
+   > Microsoft.Extensions.Logging.Console                         10.0.14 
+   > Microsoft.Extensions.Logging.Debug                           10.0.14 
+   > Microsoft.Extensions.Logging.EventLog                        10.0.14 
+   > Microsoft.Extensions.Logging.EventSource                     10.0.14 
+   > Microsoft.Extensions.Options                                 10.0.14 
+   > Microsoft.Extensions.Options.ConfigurationExtensions         10.0.14 
+   > Microsoft.Extensions.Options.DataAnnotations                 10.0.14 
+   > Microsoft.Extensions.Primitives                              10.0.14 
+   > Microsoft.Testing.Extensions.Telemetry                       2.4.1   
+   > Microsoft.Testing.Extensions.TrxReport.Abstractions          2.4.1   
+   > Microsoft.Testing.Extensions.VSTestBridge                    2.4.1   
+   > Microsoft.Testing.Platform                                   2.4.1   
+   > Microsoft.Testing.Platform.MSBuild                           2.4.1   
+   > Microsoft.TestPlatform.AdapterUtilities                      18.10.1 
+   > Microsoft.TestPlatform.ObjectModel                           18.11.0 
+   > Microsoft.TestPlatform.TestHost                              18.11.0 
+   > OllamaSharp                                                  5.5.0   
+   > OpenAI                                                       2.14.0  
+   > System.ClientModel                                           1.15.0  
+   > System.Diagnostics.EventLog                                  10.0.14 
+   > System.Memory.Data                                           10.0.9  
+   > System.Numerics.Tensors                                      10.0.13 
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+The following sources were used:
+   https://api.nuget.org/v3/index.json
+
+The given project `MovilidadUrbana.Ejemplos.ChatBasico` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.ChatBasico.Tests` has no vulnerable packages given the current sources.
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+The following sources were used:
+   https://api.nuget.org/v3/index.json
+
+The given project `MovilidadUrbana.Ejemplos.ChatBasico` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.ChatBasico.Tests` has no deprecated packages given the current sources.

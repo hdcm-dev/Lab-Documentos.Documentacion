@@ -1,0 +1,20 @@
+# E-OP-02 — URL del servidor de modelos en la consola de la demo (2026-10-28)
+# Development, OLLAMA_ENDPOINT con un host ficticio (servidor-de-prueba), red none; un POST a /api/v1/asistente.
+## (a) appsettings tal como vienen (Default Information)
+35:info: System.Net.Http.HttpClient.servidor-ollama.LogicalHandler[100]
+36:      Start processing HTTP request POST http://servidor-de-prueba:11434/api/chat
+37:info: System.Net.Http.HttpClient.servidor-ollama.ClientHandler[100]
+38:      Sending HTTP request POST http://servidor-de-prueba:11434/api/chat
+39:info: System.Net.Http.HttpClient.servidor-ollama.ClientHandler[104]
+41:      System.Net.Http.HttpRequestException: Resource temporarily unavailable (servidor-de-prueba:11434)
+57:info: System.Net.Http.HttpClient.servidor-ollama.LogicalHandler[104]
+59:      System.Net.Http.HttpRequestException: Resource temporarily unavailable (servidor-de-prueba:11434)
+76:warn: Microsoft.Extensions.AI.OpenTelemetryChatClient[2096506843]
+78:      System.Net.Http.HttpRequestException: Resource temporarily unavailable (servidor-de-prueba:11434)
+líneas con el host: 5
+## (b) con -e Logging__LogLevel__System.Net.Http.HttpClient=Warning
+35:warn: Microsoft.Extensions.AI.OpenTelemetryChatClient[2096506843]
+37:      System.Net.Http.HttpRequestException: Resource temporarily unavailable (servidor-de-prueba:11434)
+líneas con el host: 1
+## respuesta de la API (b)
+[{"tipo":"etapa","etapa":"interpretar","texto":null,"accion":null,"fuentes":null},{"tipo":"error","etapa":null,"texto":"No se pudo completar el pedido: el servidor del modelo no respondió.","accion":null,"fuentes":null}]

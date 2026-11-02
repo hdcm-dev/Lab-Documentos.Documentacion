@@ -1,0 +1,4 @@
+# §8.2 dice 'límite de concurrencia' para ESC-05 en Examples/08
+2686:| ESC-05 MCP | Perímetro del servidor (CTRL-13), sesión fija declarada, límite de concurrencia | CTX-PROD: autenticación obligatoria en el servidor MCP | `Examples/08` (no está en la demo) |
+# grep RateLimit|ConcurrencyLimiter en Examples/08 (*.cs):
+(sin coincidencias)

@@ -1,0 +1,7 @@
+# X4 — variables OLLAMA_* del contenedor <ollama>, sin OLLAMA_HOST (R-PRIV); 2026-10-28T09:15:56-03:00
+# docker inspect <ollama> --format '{{range .Config.Env}}{{println .}}{{end}}' | grep '^OLLAMA' | grep -v '^OLLAMA_HOST'
+OLLAMA_NUM_PARALLEL=1
+OLLAMA_MAX_LOADED_MODELS=2
+OLLAMA_KEEP_ALIVE=10m
+# Límites: NanoCpus=4000000000 Memory=5368709120
+# OLLAMA_CONTEXT_LENGTH no está definida.

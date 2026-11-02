@@ -1,0 +1,7 @@
+flowchart LR
+  E["entrada HTTP<br/>(limitador: 503 + Retry-After)"] --> C["caché<br/>clave: mensajes, opciones,<br/>SessionId, VersionDeDatos"]
+  C -- "fallo" --> F["UseFunctionInvocation<br/>(iteraciones y errores por configuración)"]
+  C -- "acierto: 0 spans,<br/>contador +1" --> E
+  F --> O["UseOpenTelemetry<br/>(fuente MovilidadUrbana.AI)"]
+  O --> P["cliente del proveedor<br/>(OllamaApiClient, Singleton con clave)"]
+  F -. "execute_tool" .-> H["herramientas de lectura<br/>→ casos de uso de la sesión"]

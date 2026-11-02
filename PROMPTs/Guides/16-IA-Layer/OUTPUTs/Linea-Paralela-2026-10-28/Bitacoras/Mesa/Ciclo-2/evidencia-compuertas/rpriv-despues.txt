@@ -1,0 +1,3 @@
+2026-10-28T17:40:30-03:00 raiz=Dot-Net-Integration-AI-Layer-Guide patrones=0 identificadores=0 cabeceras=0
+-- patrones por archivo
+-- cabeceras por archivo (antes de excluir sintéticos)

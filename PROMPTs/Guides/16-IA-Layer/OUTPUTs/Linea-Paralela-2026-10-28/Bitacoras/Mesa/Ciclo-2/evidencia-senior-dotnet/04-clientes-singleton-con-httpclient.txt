@@ -1,0 +1,27 @@
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Infrastructure/AI/ComposicionDeIA.cs:59:        services.AddKeyedSingleton<IChatClient>(ClaveDelClienteDelServidor, (sp, _) =>
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Infrastructure/AI/ComposicionDeIA.cs:62:            var http = sp.GetRequiredService<IHttpClientFactory>().CreateClient(ClienteHttpDelModelo);
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Infrastructure/AI/ComposicionDeIA.cs:63:            return new OllamaApiClient(http, o.Modelo);
+Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/ComposicionDeIA.cs:71:        builder.Services.AddKeyedSingleton<IChatClient>(ClaveDelProveedor, (sp, _) =>
+Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/ComposicionDeIA.cs:74:            var http = sp.GetRequiredService<IHttpClientFactory>().CreateClient(NombreDelHttpClient);
+Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/ComposicionDeIA.cs:75:            return new DetectorDeContextoTruncado(new OllamaApiClient(http, ia.Modelo));
+Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/ComposicionDeIA.cs:52:        builder.Services.AddSingleton<IChatClient>(sp =>
+Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/ComposicionDeIA.cs:55:            var http = sp.GetRequiredService<IHttpClientFactory>().CreateClient(NombreDelHttpClient);
+Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/ComposicionDeIA.cs:59:                Proveedores.Ollama => new OllamaApiClient(http, ia.Modelo),
+Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Agregado/Infrastructure/AI/DependencyInjection.cs:24:        services.AddSingleton<IChatClient>(sp =>
+Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Agregado/Infrastructure/AI/DependencyInjection.cs:27:            return new OllamaApiClient(new Uri(ia.Endpoint), ia.Modelo);
+Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/ComposicionDeIA.cs:88:        var http = sp.GetRequiredService<IHttpClientFactory>().CreateClient(NombreDelHttpClient);
+Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/ComposicionDeIA.cs:89:        return new OllamaApiClient(http, ia.Modelo);
+Examples/06-Tool-Calling/src/MovilidadUrbana.Ejemplos.ToolCalling/Infrastructure/AI/ComposicionDeIA.cs:91:        var http = sp.GetRequiredService<IHttpClientFactory>().CreateClient(NombreDelHttpClient);
+Examples/06-Tool-Calling/src/MovilidadUrbana.Ejemplos.ToolCalling/Infrastructure/AI/ComposicionDeIA.cs:95:            Proveedores.Ollama => new OllamaApiClient(http, ia.Modelo),
+Examples/02-Streaming/src/MovilidadUrbana.Streaming/ComposicionDeIA.cs:44:            var http = sp.GetRequiredService<IHttpClientFactory>().CreateClient(NombreDelHttpClient);
+Examples/02-Streaming/src/MovilidadUrbana.Streaming/ComposicionDeIA.cs:45:            return new OllamaApiClient(http, ia.Modelo);
+Examples/03-Salida-Estructurada/src/MovilidadUrbana.SalidaEstructurada/Program.cs:47:    var http = sp.GetRequiredService<IHttpClientFactory>().CreateClient("ollama");
+Examples/03-Salida-Estructurada/src/MovilidadUrbana.SalidaEstructurada/Program.cs:48:    return new OllamaApiClient(http, ia.Modelo);
+Examples/08-Servidor-Y-Cliente-MCP/src/MovilidadUrbana.Ejemplos.Mcp.Cliente/Infrastructure/AI/ComposicionDeIA.cs:64:        var http = sp.GetRequiredService<IHttpClientFactory>().CreateClient(NombreDelHttpClient);
+Examples/08-Servidor-Y-Cliente-MCP/src/MovilidadUrbana.Ejemplos.Mcp.Cliente/Infrastructure/AI/ComposicionDeIA.cs:65:        return new OllamaApiClient(http, ia.Modelo);
+Examples/04-Embeddings-Y-Busqueda/src/MovilidadUrbana.Busqueda/Configuracion/ComposicionDeIA.cs:58:                : new OllamaApiClient(sp.GetRequiredService<IHttpClientFactory>().CreateClient(NombreDelHttpClient), ia.ModeloDeEmbeddings);
+Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/ComposicionDeIA.cs:56:        builder.Services.AddSingleton<IChatClient>(sp =>
+Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/ComposicionDeIA.cs:59:            return new OllamaApiClient(sp.GetRequiredService<IHttpClientFactory>().CreateClient(NombreDelHttpClient), ia.Modelo);
+Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/ComposicionDeIA.cs:64:            return new OllamaApiClient(sp.GetRequiredService<IHttpClientFactory>().CreateClient(NombreDelHttpClient), ia.ModeloDeEmbeddings);
+Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Infrastructure/AI/ComposicionDeIA.cs:62:            var http = sp.GetRequiredService<IHttpClientFactory>().CreateClient(NombreDelHttpClient);
+Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Infrastructure/AI/ComposicionDeIA.cs:63:            return new OllamaApiClient(http, ia.Modelo);

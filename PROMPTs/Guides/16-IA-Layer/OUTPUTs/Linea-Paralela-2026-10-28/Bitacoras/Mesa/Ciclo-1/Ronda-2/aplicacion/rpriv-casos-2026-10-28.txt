@@ -1,0 +1,8 @@
+a-diseno-una-linea.jsonl           esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+b-escapado.jsonl                   esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+c-con-espacios.json                esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+d-indentado.json                   esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+e-camelcase.json                   esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+f-vacios.json                      esperado=cabeceras=0  patrones=0 identificadores=0 cabeceras=0 rc=0
+g-sintetico.txt                    esperado=cabeceras=0  patrones=0 identificadores=0 cabeceras=0 rc=0
+h-ruta-home.md                     esperado=patrones=1  patrones=1 identificadores=0 cabeceras=0 rc=1

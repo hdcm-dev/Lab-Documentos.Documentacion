@@ -1,0 +1,13 @@
+e01: «Borrá Resistencia.»
+  pedido de aprobación [ficc_6d901a80]: Borrar "Resistencia" (Chaco), id 2, de tu sesión.
+  la persona aprueba
+  ejecutó eliminar_localidad → éxito: Se eliminó la localidad Resistencia.
+  asistente (modelo): La localidad de Resistencia ha sido eliminada correctamente.
+  peticiones: 2 · AgentSession serializada entre peticiones: 2 vez/veces · base: 2 → 1 localidades
+  llamadas al modelo: 2 · oráculo agente-con-aprobacion (esperado baja): pasa
+garantía guionada: con «no», cero bajas y la base no cambia
+garantía guionada: desajuste de texto e id: el pedido muestra Corrientes, lo avisa, y se borra lo mostrado
+garantía guionada: aprobación con argumentos alterados: se rechaza
+garantía guionada: localidad de otra sesión: se rechaza sin preguntar y ninguna base cambia
+registro: 3 renglones en 11-Agente-Con-Aprobacion.jsonl
+invariantes de código: se cumplen

@@ -1,0 +1,9 @@
+encabezados: 241
+anclas: 517
+enlaces-internos: 1610
+enlaces-relativos: 35
+REF-definidas: 187
+REF-citadas: 187
+sin-titulo-registrado: 4
+rutas: 82
+rutas-exceptuadas: 4

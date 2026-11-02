@@ -1,0 +1,35 @@
+# Sonda 2 (2026-10-28, mcr.microsoft.com/dotnet/sdk:10.0, recurso build, copia de trabajo de la demo)
+# Comando: dotnet test tests/MovilidadUrbana.Asistente.Tests/... --filter TestCategory=Sonda
+
+## R2 dominio no conoce Application: 9 tipos, 0 hallazgos
+## R3 Infrastructure no usa casos de uso ni Presentation: 64 tipos, 87 hallazgos
+## R4 persistencia no conoce IA: 25 tipos, 0 hallazgos
+## R5 adaptador de IA no conoce acceso a datos ni persistencia: 39 tipos, 0 hallazgos
+## R6 Presentation no conoce acceso a datos, proveedor ni Infrastructure: 62 tipos, 45 hallazgos
+
+## R3 con la definición exacta de caso de uso de Examples/13 (EsCasoDeUso: *Service de ApiWeb.Application + Proponer*; acá también ResultadosDeEncuestaService)
+MovilidadUrbana.Asistente.Infrastructure.AI.HerramientasDeLectura → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (campo <localidades>P)
+MovilidadUrbana.Asistente.Infrastructure.AI.HerramientasDeLectura → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (cuerpo de .ctor)
+MovilidadUrbana.Asistente.Infrastructure.AI.HerramientasDeLectura → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (parámetro de .ctor)
+MovilidadUrbana.Asistente.Infrastructure.AI.HerramientasDeLectura → MovilidadUrbana.Asistente.Application.Encuestas.ResultadosDeEncuestaService (campo <resultados>P)
+MovilidadUrbana.Asistente.Infrastructure.AI.HerramientasDeLectura → MovilidadUrbana.Asistente.Application.Encuestas.ResultadosDeEncuestaService (cuerpo de .ctor)
+MovilidadUrbana.Asistente.Infrastructure.AI.HerramientasDeLectura → MovilidadUrbana.Asistente.Application.Encuestas.ResultadosDeEncuestaService (parámetro de .ctor)
+MovilidadUrbana.Asistente.Infrastructure.AI.HerramientasDeLectura+<ContarLocalidadesAsync>d__7 → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (cuerpo de MoveNext)
+MovilidadUrbana.Asistente.Infrastructure.AI.HerramientasDeLectura+<ListarLocalidadesAsync>d__6 → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (cuerpo de MoveNext)
+MovilidadUrbana.Asistente.Infrastructure.AI.HerramientasDeLectura+<ResultadosDeEncuestaAsync>d__8 → MovilidadUrbana.Asistente.Application.Encuestas.ResultadosDeEncuestaService (cuerpo de MoveNext)
+
+## R6: orígenes en Presentation y su destino (tipo de origen, sin miembros generados)
+MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext
+MovilidadUrbana.Asistente.Presentation.Componentes.App → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext
+MovilidadUrbana.Asistente.Presentation.Componentes.Paginas.ChatDelAsistente → MovilidadUrbana.Asistente.Infrastructure.AI.OpcionesDeIA
+MovilidadUrbana.Asistente.Presentation.Componentes.Routes → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext
+MovilidadUrbana.Asistente.Presentation.Controllers.AsistenteController → MovilidadUrbana.Asistente.Infrastructure.AI.OpcionesDeIA
+MovilidadUrbana.Asistente.Presentation.LimitadorDelModelo → MovilidadUrbana.Asistente.Infrastructure.AI.OpcionesDeConcurrencia
+MovilidadUrbana.Asistente.Presentation.LimitadorDelModelo → MovilidadUrbana.Asistente.Infrastructure.AI.OpcionesDeIA
+MovilidadUrbana.Asistente.Presentation.LimitadorDelModeloExtensions → MovilidadUrbana.Asistente.Infrastructure.AI.OpcionesDeConcurrencia
+MovilidadUrbana.Asistente.Presentation.LimitadorDelModeloExtensions → MovilidadUrbana.Asistente.Infrastructure.AI.OpcionesDeIA
+MovilidadUrbana.Asistente.Presentation.Sesion.CookieDeSesionMiddleware → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext
+
+## Resumen de la corrida
+Total tests: 1
+Passed: 1

@@ -1,0 +1,70 @@
+B646: OK 4/4 en rango 7-10 (en archivo 4) Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Agregado/Application/Propuestas/IExtractorDeLocalidad.cs
+B657: OK 15/15 en rango 11-26 (en archivo 15) Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Agregado/Application/Propuestas/ProponerLocalidadDesdeTexto.cs
+B680: OK 16/16 en rango 12-28 (en archivo 16) Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Agregado/Infrastructure/AI/ExtractorDeLocalidadLlm.cs
+B704: OK 2/2 en rango 14-15 (en archivo 2) Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Agregado/Presentation/Herramientas/HerramientasDeLectura.cs
+B789: OK 10/10 en rango 39-50 (en archivo 10) Examples/13-Prueba-De-Arquitectura/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/Cableado/ReglaDeDependenciasTests.cs
+B808: SIN «Compila en» (using propio: False)
+B812: SIN «Compila en» (using propio: False)
+B959: OK 9/9 en rango 28-40 (en archivo 9) Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/OpcionesDeIA.cs
+B983: SIN «Compila en» (using propio: False)
+B996: OK 9/9 en rango 11-19 (en archivo 9) Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/ManejadorDeCredenciales.cs
+B1014: OK 10/10 en rango 26-36 (en archivo 10) Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Conversacion/AsistenteDeMovilidad.cs
+B1032: OK 21/21 en rango 9-31 (en archivo 21) Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Conversacion/FabricaDeOpcionesDeChat.cs
+B1073: OK 25/25 en rango 52-79 (en archivo 25) Examples/02-Streaming/src/MovilidadUrbana.Streaming/AsistenteDeLaEncuesta.cs
+B1118: OK 7/7 en rango 15-21 (en archivo 7) Examples/03-Salida-Estructurada/src/MovilidadUrbana.SalidaEstructurada/Application/Propuestas/LocalidadPropuesta.cs
+B1130: OK 4/4 en rango 31-35 (en archivo 4) Examples/03-Salida-Estructurada/src/MovilidadUrbana.SalidaEstructurada/Infrastructure/AI/ExtractorDeLocalidadLlm.cs
+B1156: OK 17/17 en rango 56-74 (en archivo 17) Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/ComposicionDeIA.cs
+B1227: SIN «Compila en» (using propio: False)
+B1241: SIN «Compila en» (using propio: False)
+B1402: OK 12/12 en rango 24-36 (en archivo 12) Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Application/Ayuda/RequisitosDelDominio.cs
+B1422: OK 13/13 en rango 12-24 (en archivo 13) Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/AI/AdaptadoresDeAyuda.cs
+B1473: OK 14/14 en rango 29-43 (en archivo 14) Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/LectorDePrefijoCacheado.cs
+B1513: DIFIERE 10/13 en rango 25-32 (en archivo 13) Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/DetectorDeContextoTruncado.cs
+      falta: private static void Verificar(long? esperado, long? recibido)
+      falta: if (esperado is { } e && recibido is { } r && r < e)
+      falta: throw new ContextoTruncadoException(e, r);
+B1564: OK 5/5 en rango 78-83 (en archivo 5) Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/Persistence/AlmacenDeRequisitos.cs
+B1581: OK 14/14 en rango 35-48 (en archivo 14) Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/Persistence/AlmacenDeRequisitos.cs
+B1604: OK 6/6 en rango 57-62 (en archivo 6) Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/Persistence/AlmacenDeRequisitos.cs
+B1621: OK 5/5 en rango 23-27 (en archivo 5) Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/AI/ContenidoExterno.cs
+B1637: OK 8/8 en rango 34-42 (en archivo 8) Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/AI/AdaptadoresDeAyuda.cs
+B1655: OK 7/7 en rango 57-64 (en archivo 7) Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/AI/AdaptadoresDeAyuda.cs
+B1680: OK 10/10 en rango 38-50 (en archivo 10) Examples/04-Embeddings-Y-Busqueda/src/MovilidadUrbana.Busqueda/Evaluacion/MetricasDeRecuperacion.cs
+B1700: OK 3/3 en rango 20-22 (en archivo 3) Examples/04-Embeddings-Y-Busqueda/src/MovilidadUrbana.Busqueda/Evaluacion/EvaluacionDeRecuperacion.cs
+B1925: OK 16/16 en rango 12-30 (en archivo 16) Examples/06-Tool-Calling/src/MovilidadUrbana.Ejemplos.ToolCalling/Infrastructure/AI/HerramientasDeLocalidades.cs
+B1949: SIN «Compila en» (using propio: False)
+B1967: OK 11/11 en rango 70-80 (en archivo 11) Examples/06-Tool-Calling/src/MovilidadUrbana.Ejemplos.ToolCalling/Infrastructure/AI/ComposicionDeIA.cs
+B2030: OK 9/9 en rango 8-16 (en archivo 9) Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/DelChatAlAgente/LlamadaUnica.cs
+B2044: OK 14/14 en rango 9-23 (en archivo 14) Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/DelChatAlAgente/AgenteDeMaf.cs
+B2078: OK 10/10 en rango 75-85 (en archivo 10) Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/HerramientasDeLocalidades.cs
+B2098: OK 14/14 en rango 15-28 (en archivo 14) Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Application/Asistente/IAprobador.cs
+B2129: OK 10/10 en rango 48-59 (en archivo 10) Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/AsistenteConAprobacion.cs
+B2171: OK 8/8 en rango 42-50 (en archivo 8) Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/Aprobaciones/AutorizacionDeEscritura.cs
+B2199: OK 10/10 en rango 23-33 (en archivo 10) Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Application/Encuesta/EncuestaComoProceso.cs
+B2215: OK 21/21 en rango 36-59 (en archivo 21) Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Infrastructure/Workflows/EncuestaComoWorkflowDeMaf.cs
+B2259: OK 7/7 en rango 84-90 (en archivo 7) Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Infrastructure/Workflows/WorkflowDeAlta.cs
+B2285: OK 33/33 en rango 126-158 (en archivo 33) Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Infrastructure/Workflows/WorkflowDeAlta.cs
+B2331: OK 17/17 en rango 26-44 (en archivo 17) Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Infrastructure/Workflows/AltaAsistidaSecuencial.cs
+B2376: OK 10/10 en rango 67-76 (en archivo 10) Examples/08-Servidor-Y-Cliente-MCP/src/MovilidadUrbana.Ejemplos.Mcp.Servidor/Mcp/ServidorMcp.cs
+B2397: ruta no resuelta …/Mcp.Servidor/Mcp/PerimetroDelServidorMcp.cs
+B2415: SIN «Compila en» (using propio: False)
+B2446: ruta no resuelta …/Mcp.Cliente/Mcp/ConexionMcp.cs
+B2484: OK 7/7 en rango 20-26 (en archivo 7) Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/AI/AyudaRagEnAgente.cs
+B2752: OK 23/23 en rango 32-56 (en archivo 23) Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/Cableado/ClienteGuionado.cs
+B2788: OK 4/4 en rango 19-22 (en archivo 4) Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/ConModelo/ServidorDePrueba.cs
+B2805: OK 5/5 en rango 15-19 (en archivo 5) Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/ConModelo/PipelineConModeloTests.cs
+B2843: OK 16/16 en rango 80-95 (en archivo 16) Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/ComposicionDeIA.cs
+B2872: OK 9/9 en rango 9-20 (en archivo 9) Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/TelemetriaDeIA.cs
+B2891: OK 18/18 en rango 18-37 (en archivo 18) Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/CacheConContador.cs
+B2924: OK 2/2 en rango 21-22 (en archivo 2) Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Infrastructure/AI/CacheConContador.cs
+B2943: OK 20/20 en rango 22-41 (en archivo 20) Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/Http/EndpointsDelAsistente.cs
+B2976: SIN «Compila en» (using propio: False)
+B3025: OK 22/22 en rango 19-41 (en archivo 22) Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/Evaluacion/MedioEnCatalogoEvaluator.cs
+B3057: OK 6/6 en rango 36-41 (en archivo 6) Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/ConModelo/EvaluacionConJuezTests.cs
+B3333: OK 9/9 en rango 48-59 (en archivo 9) Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Application/Localidades/PropuestasDeLocalidad.cs
+B3366: OK 16/16 en rango 94-111 (en archivo 16) Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Application/Localidades/PropuestasDeLocalidad.cs
+B3395: OK 22/22 en rango 134-156 (en archivo 22) Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Presentation/Componentes/Paginas/ChatDelAsistente.razor
+B3498: OK 9/9 en rango 13-26 (en archivo 9) Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/OpcionesDeIA.cs
+B3515: SIN «Compila en» (using propio: False)
+B3592: OK 15/15 en rango 25-40 (en archivo 15) Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/ComposicionDeIA.cs
+bloques csharp: 66; coinciden: 54; sin referencia: 9

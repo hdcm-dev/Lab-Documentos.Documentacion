@@ -1,0 +1,15 @@
+CONCEDIDO build a aprobacion-evidencia-v2 hasta 2026-10-28T14:37:47-0300 (renová con: <gestor-de-turnos> renovar build aprobacion-evidencia-v2)
+10.0.403
+# runtime 10.0.14; MEAI 10.11.0.0
+[1] CoalesceStreamingUpdates=True (por defecto) → se fija en True
+  streaming fría: llamadas=2; fragmentos=3; texto=«2»; ReadCacheAsync=1/0 acierto; ReadCacheStreamingAsync=0/0 acierto; WriteCacheAsync=1; WriteCacheStreamingAsync=0
+  streaming caliente: llamadas=0; fragmentos=3; texto=«2»; ReadCacheAsync=1/1 acierto; ReadCacheStreamingAsync=0/0 acierto; WriteCacheAsync=0; WriteCacheStreamingAsync=0
+[1] CoalesceStreamingUpdates=True (por defecto) → se fija en False
+  streaming fría: llamadas=2; fragmentos=3; texto=«2»; ReadCacheAsync=0/0 acierto; ReadCacheStreamingAsync=1/0 acierto; WriteCacheAsync=0; WriteCacheStreamingAsync=1
+  streaming caliente: llamadas=0; fragmentos=3; texto=«2»; ReadCacheAsync=0/0 acierto; ReadCacheStreamingAsync=1/1 acierto; WriteCacheAsync=0; WriteCacheStreamingAsync=0
+[2] Sólo ReadCacheAsync sobrescrito, 2 pedidos por streaming (por defecto): llamadas=2; aciertos contados=1
+[2c] Sólo ReadCacheAsync sobrescrito, CoalesceStreamingUpdates=false, 2 pedidos por streaming: llamadas=2; aciertos contados=0
+[3] EnableCaching sobrescrito (false si hay Tools): 2 pedidos con herramientas → llamadas=4; 2 pedidos sin herramientas → llamadas=1
+[4] clave [SessionId, VersionDeDatos]: lectura (v0): llamadas=2 → fallo; lectura tras escritura (v1): llamadas=2 → fallo
+[4] clave [SessionId] (caso rojo): lectura (v0): llamadas=2 → fallo; lectura tras escritura (v1): llamadas=0 → ACIERTO
+LIBERADO build por aprobacion-evidencia-v2

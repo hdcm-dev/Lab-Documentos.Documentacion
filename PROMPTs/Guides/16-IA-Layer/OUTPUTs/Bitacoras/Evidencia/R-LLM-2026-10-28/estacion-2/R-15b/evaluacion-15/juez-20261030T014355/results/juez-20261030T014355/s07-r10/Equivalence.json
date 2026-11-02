@@ -1,0 +1,79 @@
+{
+  "scenarioName": "s07-r10",
+  "iterationName": "Equivalence",
+  "executionName": "juez-20261030T014355",
+  "creationTime": "2026-10-30T02:33:26.2620956Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "\u00BFCu\u00E1ntos kil\u00F3metros diarios se pueden declarar en la encuesta?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Se pueden declarar entre 0 y 500 km por d\u00EDa seg\u00FAn los requisitos establecidos para el uso del medio [Fuente: EncuestaPolicy.RequisitoDeLaDistancia]."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Equivalence": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Equivalence",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Equivalence)": {
+            "name": "Ground Truth (Equivalence)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Encuesta \u00B7 requisito de la distancia: Entre 0 y 500 km por d\u00EDa."
+              }
+            ]
+          }
+        },
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "qwen3.5:4b",
+          "eval-input-tokens": "926",
+          "eval-output-tokens": "2",
+          "eval-total-tokens": "928",
+          "eval-duration-ms": "10979.29"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 10.9791513,
+        "model": "qwen3.5:4b",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 926,
+          "outputTokenCount": 2,
+          "totalTokenCount": 928
+        },
+        "cacheKey": "35D8EC09D3616A008773343B2C6B691C21A78A35AFA447D8505068D2FF3AC87D2EB99F82C0F0585986AC81E29FC603E4",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

@@ -1,0 +1,5 @@
+2026-10-28T10:20:34-03:00
+Memory=5368709120 NanoCpus=4000000000
+               total       usado       libre  compartido   búf/caché   disponible
+Mem:              30          21           0           0           9           9
+Inter:            32           1          30

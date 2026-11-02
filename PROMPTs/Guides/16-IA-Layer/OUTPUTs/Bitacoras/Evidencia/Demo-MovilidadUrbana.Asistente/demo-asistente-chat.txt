@@ -1,0 +1,64 @@
+url: http://127.0.0.1:8087/
+status: 200
+url final: http://127.0.0.1:8087/
+titulo: Movilidad Urbana — Asistente
+
+--- texto visible ---
+Ir al contenido
+Movilidad Urbana
+Asistente · demo de la guía de la capa de IA
+Asistente
+
+Consultá tus localidades y la encuesta. Las altas y las bajas se hacen sólo con tu aprobación.
+
+Modo guion: sin modelo. Ayuda: EMB-C: no ejecutado contra un modelo de embeddings.
+
+Vos
+
+¿Cuántas localidades tengo en Corrientes?
+
+Asistente
+
+Resultado de la herramienta: { "provincia": "Corrientes", "cantidad": 1 }
+
+Vos
+
+¿Qué medio usa más la gente?
+
+Asistente
+
+Resultado de la herramienta: { "total": 20, "medios": [ { "clave": "colectivo", "etiqueta": "Colectivo", "cantidad": 4, "porcentaje": 20 }, { "clave": "auto", "etiqueta": "Auto particular", "cantidad": 4, "porcentaje": 20 }, { "clave": "bicicleta", "etiqueta": "Bicicleta", "cantidad": 7, "porcentaje": 35 }, { "clave": "moto", "etiqueta": "Moto", "cantidad": 3, "porcentaje": 15 }, { "clave": "caminata", "etiqueta": "A pie", "cantidad": 3, "porcentaje": 15 }, { "clave": "tren", "etiqueta": "Tren", "cantidad": 6, "porcentaje": 30 } ], "frecuencias": [ { "clave": "diaria", "etiqueta": "Todos los días", "cantidad": 7, "porcentaje": 35 }, { "clave": "semanal", "etiqueta": "Algunos días por semana", "cantidad": 7, "porcentaje": 35 }, { "clave": "ocasional", "etiqueta": "Ocasionalmente", "cantidad": 6, "porcentaje": 30 } ], "motivos": [ { "clave": "trabajo", "etiqueta": "Trabajo", "cantidad": 5, "porcentaje": 25 }, { "clave": "estudio", "etiqueta": "Estudio", "cantidad": 5, "porcentaje": 25 }, { "clave": "salud", "etiqueta": "Salud", "cantidad": 5, "porcentaje": 25 }, { "clave": "otros", "etiqueta": "Otros", "cantidad": 5, "porcentaje": 25 } ] }
+
+Vos
+
+Borrá Resistencia
+
+Decisión
+
+Rechazado: Eliminar la localidad «Resistencia» (Chaco), id 2, de tu sesión.
+
+Asistente
+
+Resultado de la herramienta: Tool call invocation was rejected by the approver and must not be retried. La persona no lo aprobó.
+
+Mensaje
+Enviar
+
+--- pasos ---
+ok   wait 1500
+ok   shot demo-asistente-inicio
+ok   fill #chat-entrada = ¿Cuántas localidades tengo en Corrientes?
+ok   click [data-testid="enviar"]
+ok   wait 2500
+ok   fill #chat-entrada = ¿Qué medio usa más la gente?
+ok   click [data-testid="enviar"]
+ok   wait 2500
+ok   fill #chat-entrada = Borrá Resistencia
+ok   click [data-testid="enviar"]
+ok   wait 2500
+ok   shot demo-asistente-aprobacion
+ok   click [data-testid="rechazar"]
+ok   wait 2500
+
+--- errores ---
+(ninguno)

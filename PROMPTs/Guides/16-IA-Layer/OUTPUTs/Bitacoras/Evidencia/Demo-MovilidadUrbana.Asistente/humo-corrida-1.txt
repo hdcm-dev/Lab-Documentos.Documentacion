@@ -1,0 +1,44 @@
+EN COLA <recurso-compartido> (posición 3); esperando hasta 90 min...
+CONCEDIDO <recurso-compartido> a demo-asistente hasta 2026-10-27T11:52:42-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> demo-asistente)
+[demo] num_ctx = 65536 (arnes)
+An issue was encountered verifying workloads. For more information, run "dotnet workload update".
+Test run for /artefactos/demo/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 5.0.0.0: Test execution started
+Running selected tests in /artefactos/demo/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 3 of 3 NUnit test cases using Current Discovery mode, Non-Explicit run
+pd2-01 (demo-pd2-cita): pasa fuente LocalidadPolicy.RequisitoDelCodigoPostal; plan EMB-B: vectores persistidos de qwen3-embedding:0.6b
+
+  Passed Pd2_AyudaConCita [45 s]
+pd3-01 (demo-pd3-habitantes): pasa habitantes propuesto por el modelo: null
+
+  Passed Pd3_SinHabitantes [43 s]
+  Failed Pd6_BajaConAprobacion [2 m 22 s]
+  Error Message:
+     Assert.That(pedido.Descripcion, Does.Not.Contain(chat.Mensajes.LastOrDefault(m => m.Rol == "asistente")?.Texto ?? "\u0000"))
+  Expected: not String containing "\u0000"
+  But was:  "Eliminar la localidad «Resistencia» (Chaco), id 2, de tu sesión."
+
+  Stack Trace:
+     at MovilidadUrbana.Asistente.Tests.ConModelo.Humo.Pd6_BajaConAprobacion() in /guia/Demos/MovilidadUrbana.Asistente/tests/MovilidadUrbana.Asistente.Tests/ConModelo/Humo.cs:line 168
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)
+   at NUnit.Framework.Internal.Execution.SimpleWorkItem.<>c__DisplayClass3_0.<PerformWork>b__0()
+   at NUnit.Framework.Internal.ContextUtils.<>c__DisplayClass1_0`1.<DoIsolated>b__0(Object _)
+
+1)    at MovilidadUrbana.Asistente.Tests.ConModelo.Humo.Pd6_BajaConAprobacion() in /guia/Demos/MovilidadUrbana.Asistente/tests/MovilidadUrbana.Asistente.Tests/ConModelo/Humo.cs:line 168
+
+
+NUnit Adapter 5.0.0.0: Test execution complete
+
+Test Run Failed.
+Total tests: 3
+     Passed: 2
+     Failed: 1
+ Total time: 3.9327 Minutes
+LIBERADO <recurso-compartido> por demo-asistente
+rc=1

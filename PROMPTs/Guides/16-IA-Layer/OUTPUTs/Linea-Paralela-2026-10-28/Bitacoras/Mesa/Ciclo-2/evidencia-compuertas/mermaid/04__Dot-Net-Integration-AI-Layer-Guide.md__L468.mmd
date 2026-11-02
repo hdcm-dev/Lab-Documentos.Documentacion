@@ -1,0 +1,9 @@
+flowchart TD
+  N["Necesidad de la aplicación"] --> Q0{"¿Un cliente externo usa<br/>las capacidades de la app?"}
+  Q0 -- "sí" --> E5["ESC-05: exposición por MCP"]
+  Q0 -- "no" --> Q1{"¿Hace falta generar texto?"}
+  Q1 -- "no, sólo ordenar por significado" --> E2["ESC-02: búsqueda semántica"]
+  Q1 -- "sí" --> Q2{"¿Quién decide la acción?"}
+  Q2 -- "la aplicación, sobre un objeto tipado" --> E3["ESC-03: extracción estructurada"]
+  Q2 -- "el modelo elige herramientas" --> E4["ESC-04: agentes y herramientas"]
+  Q2 -- "nadie: sólo se responde" --> E1["ESC-01: asistente sobre datos propios"]

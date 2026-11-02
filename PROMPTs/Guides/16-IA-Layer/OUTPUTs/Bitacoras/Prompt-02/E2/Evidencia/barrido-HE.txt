@@ -1,0 +1,8 @@
+HE-01 comillas rectas en prosa	3	[259, 2559, 3688]
+HE-04 fechas dd/mm/aaaa	0	[]
+HE-05 miles con coma	17	[1034, 1263, 1308, 1589, 1706, 1727]
+HE-07 e.g./i.e.	0	[]
+HE-08 guion suelto como inciso	5	[4829, 4844, 4845, 4878, 4879]
+HE-11 marcas delta	63	[163, 661, 712, 972, 1031, 1032]
+HE-06 encabezados con >=3 palabras capitalizadas	2	[875, 4856]
+HE-10 líneas con [REF-n] (informativo)	569

@@ -1,0 +1,98 @@
+# R-LLM — estimando: este pedido, 2 pedidos × 10 semillas (s = 1..10) cada uno, qwen3.5:4b@d8b0f5e9760c, T 0.7, top_p 0.8, top_k 20, presence 1.5, think false, num_ctx 8192, ruta API /api/chat (OllamaSharp 5.5.0), bucle 3 iteraciones / 2 errores, Ollama 0.40.11, fecha 2026-10-28T18:24:46.7858052+00:00
+# rótulo: medido en una estación de laboratorio con más núcleos (CPU sin GPU; contenedor limitado a 14 CPU / 34 GiB; Ollama 0.40.11), 2026-10-28
+# criterio previo: invariantes m/m (0 escrituras; herramientas en la lista cerrada; ejecuciones ≤ máximo; sin excepción); tasas de este pedido informadas, sin umbral
+# sistema: «Sos el asistente de la encuesta de Movilidad Urbana. Respondé en español, en una o dos oraciones. Para cualquier dato sobre las localidades cargadas usá las herramientas; no inventes cantidades. Si una herramienta devuelve errores, explicáselos a la persona con tus palabras.»
+s=1 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=12.2s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «Hay una localidad cargada en la provincia de Chaco.»
+s=1 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False pared=6.6s herramientas=[] «El sistema no incluye la provincia de Misiones en su catálogo actual, por lo que no puedo contar las localidades para esa región con las herramientas disponibles.»
+s=2 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=9.4s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco están cargadas 1 localidad.»
+s=2 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False pared=7.8s herramientas=[] «No hay datos disponibles para la provincia de Misiones en el catálogo actual, ya que solo se han cargado localidades para Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe.»
+s=3 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.6s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco hay cargada una sola localidad.»
+s=3 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False pared=7.4s herramientas=[] «No hay localidades cargadas para la provincia de Misiones en el catálogo actual, ya que solo se incluyen datos para Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe.»
+s=4 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=9.0s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «Hay 1 localidad cargada en la provincia de Chaco.»
+s=4 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False pared=6.4s herramientas=[] «Actualmente no se cargan localidades de la provincia de Misiones en el catálogo, por lo que el número total es cero.»
+s=5 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.8s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco hay 1 localidad cargada en el catálogo.»
+s=5 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False pared=7.3s herramientas=[] «No hay localidades cargadas para la provincia de Misiones, ya que el catálogo solo incluye datos para Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe.»
+s=6 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.8s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «Hay 1 localidad cargada en la provincia de Chaco.»
+s=6 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False pared=8.7s herramientas=[] «Actualmente no puedo acceder al catálogo de localidades porque Misiones no está entre las provincias disponibles (Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe). Por lo tanto, es imposible contar cuántas localidades hay cargadas para esa provincia.»
+s=7 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.1s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco hay cargada una localidad.»
+s=7 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False pared=8.1s herramientas=[] «No puedo darte esa cantidad porque "Misiones" no está en la lista de provincias disponibles para consultar el catálogo; las provincias que tengo son Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe.»
+s=8 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.9s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco están cargadas una sola localidad.»
+s=8 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False pared=8.6s herramientas=[] «No puedo responder esta pregunta porque **Misiones no está entre las provincias** para las que se cuenta el número de localidades en este catálogo (que incluye: Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe). Si te interesa alguna de esas provincias, puedo ayudarte con esa información.»
+s=9 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=9.0s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco hay cargada una sola localidad.»
+s=9 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=False afirma_conteo=False pared=8.0s herramientas=[] «No se pueden cargar localidades en la provincia de Misiones porque solo existen datos para Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe. Por lo tanto, el número total de localidades en Misiones es cero.»
+s=10 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.3s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco están cargadas 1 localidad.»
+s=10 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False pared=8.5s herramientas=[] «No se pueden obtener los datos para Misiones porque el catálogo de provincias utilizado por este sistema solo incluye: Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe. Por lo tanto, no está disponible la cantidad de localidades cargadas para esa provincia.»
+# resultado (estimando: este pedido, cada fila por separado; no se comparan entre sí):
+#  Chaco — pidió la herramienta con Chaco: 10/10; Wilson 95 % [0.72; 1.00]; nombra la cantidad 1: 10/10; Wilson 95 % [0.72; 1.00]
+#  Misiones — pidió alguna herramienta: 0/10; Wilson 95 % [0.00; 0.28]; dice que no está en el catálogo: 9/10; Wilson 95 % [0.60; 0.98]; afirma un conteo: 0/10; Wilson 95 % [0.00; 0.28]
+#  invariantes violadas: 0; pared por pedido: mediana 8.6 s (mín 6.4, máx 12.2, N = 20)

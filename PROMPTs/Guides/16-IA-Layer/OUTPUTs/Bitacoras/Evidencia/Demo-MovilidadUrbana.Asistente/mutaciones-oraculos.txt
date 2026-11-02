@@ -1,0 +1,35 @@
+# Mutaciones del registro (copias en un directorio temporal; el registro no se toca). 2026-10-27.
+# Cada mutación cambia una sola cosa; «falla» recalculado frente a «pasa» registrado = el oráculo la detecta.
+# Las que siguen en «pasa» son correctas por la regla del hermano (anotado al lado).
+== pd2-5digitos 
+pd2-5digitos.jsonl: pd2-01 (demo-pd2-cita): registro «pasa», recalculado «falla»
+recalcular-oraculos: 2 de 3 entradas coinciden
+== pd2-4y5 
+pd2-4y5.jsonl: pd2-01 (demo-pd2-cita): registro «pasa», recalculado «falla»
+recalcular-oraculos: 2 de 3 entradas coinciden
+== pd2-cuatro (correcto: «cuatro» = 4)
+recalcular-oraculos: 3 de 3 entradas coinciden
+== pd2-otrafuente 
+pd2-otrafuente.jsonl: pd2-01 (demo-pd2-cita): registro «pasa», recalculado «falla»
+recalcular-oraculos: 2 de 3 entradas coinciden
+== pd2-norecup 
+pd2-norecup.jsonl: pd2-01 (demo-pd2-cita): registro «pasa», recalculado «falla»
+recalcular-oraculos: 2 de 3 entradas coinciden
+== pd3-habinventado (correcto: la garantía de 03 descarta 30000, que no está en el texto)
+recalcular-oraculos: 3 de 3 entradas coinciden
+== pd3-habigualcp (correcto: 03 no reusa el token del CP)
+recalcular-oraculos: 3 de 3 entradas coinciden
+== pd3-cpinventado 
+pd3-cpinventado.jsonl: pd3-01 (demo-pd3-habitantes): registro «pasa», recalculado «falla»
+recalcular-oraculos: 2 de 3 entradas coinciden
+== pd3-provmin (correcto: provincia normalizada)
+recalcular-oraculos: 3 de 3 entradas coinciden
+== pd6-corrientes 
+pd6-corrientes.jsonl: pd6-01 (demo-pd6-pedido): registro «pasa», recalculado «falla»
+recalcular-oraculos: 2 de 3 entradas coinciden
+== pd6-sinpedido 
+pd6-sinpedido.jsonl: pd6-01 (demo-pd6-pedido): registro «pasa», recalculado «falla»
+recalcular-oraculos: 2 de 3 entradas coinciden
+== pd6-otraherr 
+pd6-otraherr.jsonl: pd6-01 (demo-pd6-pedido): registro «pasa», recalculado «falla»
+recalcular-oraculos: 2 de 3 entradas coinciden

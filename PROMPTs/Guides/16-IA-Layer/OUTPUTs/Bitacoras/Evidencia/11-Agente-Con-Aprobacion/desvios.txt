@@ -1,0 +1,12 @@
+Ejemplo 11-Agente-Con-Aprobacion — desvíos y observaciones (2026-10-27)
+
+1. Clase de llamada: §E.5 la presupuesta como L (3 llamadas, 1.425 s pesimistas). Medido: 2 llamadas,
+   prompt_eval_count 500 y 591 (servidor), dos herramientas montadas → clase H. Uso real del turno <recurso-compartido>: 91 s.
+   El modelo no listó antes de borrar; la tercera llamada del guion (listar) no ocurrió. No cambia el oráculo.
+2. La corrida no se lanzó con tools/verificar.sh sino con guiones fuera del repo (build-11.sh, lan-11.sh en el
+   directorio de trabajo del laboratorio) que replican sus fases: copia privada de Examples/ (para no chocar con
+   builds de otros constructores), turno build y <recurso-compartido> por <gestor-de-turnos>, y la misma lógica de num_ctx del
+   compartido (/api/ps; otro modelo → aborta; vacío → precalentamiento). Mismo patrón que los ejemplos 12 y 13.
+   El turno.jsonl de esta carpeta se armó desde registro.log del gestor (pedido/concedido/liberado).
+3. Prueba Category("LLM") (ConElModelo_YLaPersonaQueRechaza_CeroBajas) no se corrió: el presupuesto de §E.5
+   sólo cubre la entrada de demostración; correrla serían llamadas extra contra el compartido.

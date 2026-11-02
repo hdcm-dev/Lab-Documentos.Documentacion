@@ -1,0 +1,12 @@
+Test run for /work/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.ChatBasico.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.ChatBasico.Tests.dll
+   NUnit3TestExecutor discovered 3 of 3 NUnit test cases using Current Discovery mode, Non-Explicit run
+RespondeLosDigitosDelCodigoPostal: ConModelo: no medido (falta OLLAMA_ENDPOINT).
+MaxOutputTokensAcotaPorLaViaNativaYNoPorV1: ConModelo: no medido (falta OLLAMA_ENDPOINT).
+NumCtxLlegaAlServidor: ConModelo: no medido (falta OLLAMA_ENDPOINT).
+  Skipped RespondeLosDigitosDelCodigoPostal [101 ms]
+  Skipped MaxOutputTokensAcotaPorLaViaNativaYNoPorV1 [4 ms]
+  Skipped NumCtxLlegaAlServidor [33 ms]
+

@@ -1,0 +1,12 @@
+v1 rc=0 37s
+ext rc=0 146s
+cp34-01 rc=0 18s
+cp34-02 rc=0 9s
+cp34-03 rc=0 12s
+cp34-04 rc=0 11s
+cp34-05 rc=0 11s
+cp34-06 rc=0 12s
+cp34-07 rc=0 12s
+cp34-08 rc=0 11s
+cp34-09 rc=0 9s
+cp34-10 rc=0 12s

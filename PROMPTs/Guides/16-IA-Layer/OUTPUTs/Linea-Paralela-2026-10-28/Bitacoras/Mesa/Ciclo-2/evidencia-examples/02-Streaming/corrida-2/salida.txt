@@ -1,0 +1,43 @@
+EN COLA <recurso-compartido> (posición 1); esperando hasta 90 min...
+CONCEDIDO <recurso-compartido> a ex02-streaming hasta 2026-10-28T15:47:49-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> ex02-streaming)
+CONCEDIDO build a ex02-streaming hasta 2026-10-28T15:47:49-0300 (renová con: <gestor-de-turnos> renovar build ex02-streaming)
+10.0.403
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:08.62
+=== Cableado
+  Passed Cancelar a mitad (el proveedor lanza OperationCanceledException) [50 ms]
+  Passed Cancelar a mitad (el proveedor termina la enumeración sin lanzar) [2 ms]
+  Passed El_intervalo_de_Wilson_del_informe_reproduce_los_valores_publicados(0,10,"[0.00; 0.28]") [< 1 ms]
+  Passed El_intervalo_de_Wilson_del_informe_reproduce_los_valores_publicados(12,16,"[0.51; 0.90]") [< 1 ms]
+  Passed El_intervalo_de_Wilson_del_informe_reproduce_los_valores_publicados(10,10,"[0.72; 1.00]") [< 1 ms]
+  Passed Las_opciones_del_pedido_salen_de_OpcionesDeIA [39 ms]
+  Passed Los_fragmentos_llegan_en_orden_y_recomponen_la_respuesta [57 ms]
+  Passed Sin_TimeoutSegundos_el_host_no_arranca [190 ms]
+  Passed Una_pregunta_mas_larga_que_el_maximo_no_llama_al_modelo [1 ms]
+Test Run Successful.
+Total tests: 9
+     Passed: 9
+ Total time: 1.5309 Seconds
+=== corrida completa
+> ¿Qué datos pide la encuesta de movilidad?
+La encuesta solicita tu nombre y edad, así como la localidad donde resides. También pregunta por los medios de transporte que utilizas, tu frecuencia de viaje, la distancia y duración del trayecto en kilómetros y minutos, respectivamente. Además, requiere especificar el motivo principal de tu desplazamiento, que puede ser trabajo, estudio, salud u otros. Si alguna de estas respuestas fuera incorrecta o inexistente, podría afectar la validez del análisis sobre movilidad urbana.
+[completa: motivo de fin stop; tokens de entrada 206, de salida 95]
+[fragmentos 95; primer texto a los 34.6 s; total 61.5 s; mensajes en el historial 3]
+=== corrida cortada a los 20 s
+> Explicá con detalle, campo por campo, todo lo que pide la encuesta y para qué sirve cada dato.
+
+[cancelada: 0 caracteres parciales; el historial no la guarda]
+[fragmentos 0; primer texto a los  s; total 20.0 s; mensajes en el historial 1]
+=== ConModelo
+10/10 sin violar los invariantes; 0/10 con la pregunta siguiente en menos de 15 s — estimando: este pedido, 1 pedido × 10 semillas (s = 1..10), qwen3.5:4b@d8b0f5e9760c, T 0.7, think false, ruta /api/chat (OllamaSharp), num_ctx 8192, Ollama 0.40.11, fecha 2026-10-28; criterio previo: (2) del encabezado; Wilson 95 % invariantes [0.72; 1.00], servidor libre [0.00; 0.28]
+  Passed Cancelar_al_primer_texto_corta_y_libera_el_servidor [8 m 8 s]
+10/10 sin violar los invariantes — estimando: este pedido, 1 pedido × 10 semillas (s = 1..10), qwen3.5:4b@d8b0f5e9760c, T 0.7, think false, ruta /api/chat (OllamaSharp), num_ctx 8192, Ollama 0.40.11, fecha 2026-10-28; criterio previo: invariantes (1) del encabezado; Wilson 95 % [0.72; 1.00]
+  Passed Respuesta_completa_en_streaming [4 m 29 s]
+Test Run Successful.
+Total tests: 2
+     Passed: 2
+ Total time: 12.6668 Minutes
+LIBERADO build por ex02-streaming
+LIBERADO <recurso-compartido> por ex02-streaming

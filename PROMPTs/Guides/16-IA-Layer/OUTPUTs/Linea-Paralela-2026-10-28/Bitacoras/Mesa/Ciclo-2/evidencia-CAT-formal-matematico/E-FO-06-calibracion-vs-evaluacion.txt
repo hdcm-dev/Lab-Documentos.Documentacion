@@ -1,0 +1,10 @@
+# Ex04 02-oro-con-y-sin-instruccion.txt: e01 (CP, respondible) y e13 (no respondible) son de la EVALUACIÓN, no de la calibración
+## Formato: con instrucción; k = 3; umbral calibrado = 0.4756 (calibración NO separable)
+e01	sí	1	1	1	1.00	1.00	0.3730	sí	LocalidadPolicy.RequisitoDelCodigoPostal 0.3730 | LocalidadPolicy.RequisitoDeLosHabitantes 0.3468 | EncuestaPolicy.RequisitoDeLosMedios 0.3122
+e13	no	-	-	-	-	-	0.4630	sí	EncuestaPolicy.RequisitoDeLaLocalidad 0.4630 | EncuestaPolicy.RequisitoDelNombre 0.3862 | EncuestaPolicy.RequisitoDelMotivo 0.3827
+## Formato: sin instrucción; k = 3; umbral calibrado = 0.4407 (calibración NO separable)
+e01	sí	-	0	0	0.00	0.00	0.3495	sí	EncuestaPolicy.RequisitoDelNombre 0.3495 | LocalidadPolicy.RequisitoDeLosHabitantes 0.3435 | EncuestaPolicy.RequisitoDeLosMedios 0.3294
+e13	no	-	-	-	-	-	0.4725	no	EncuestaPolicy.RequisitoDeLaLocalidad 0.4725 | EncuestaPolicy.RequisitoDelNombre 0.3867 | EncuestaPolicy.RequisitoDelMotivo 0.3853
+
+# Guía l. 1719
+2. **La abstención por umbral de similitud no funcionó.** La calibración no fue separable: «¿Si elimino una ciudad se pierden las encuestas?» trajo «Una de las localidades cargadas en el ABM.» con 0,463, más que el acierto del código postal (0,373). El umbral se calibra por modelo y formato; acá no separó, y la consola de `Examples/04` deja los umbrales sin configurar y lo avisa.

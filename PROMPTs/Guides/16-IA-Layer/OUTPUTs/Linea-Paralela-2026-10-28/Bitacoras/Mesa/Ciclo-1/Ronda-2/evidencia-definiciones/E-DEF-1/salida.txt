@@ -1,0 +1,20 @@
+# Comando (2026-10-28, recurso build):
+docker run --rm -v <volumen-nuget>:/root/.nuget/packages -v <trabajo>/src:/src -w /src mcr.microsoft.com/dotnet/sdk:10.0 bash -c 'dotnet --version && dotnet run -c Release; dotnet list package'
+# Salida:
+CONCEDIDO build a experto-ia-definiciones hasta 2026-10-28T12:27:09-0300 (renová con: <gestor-de-turnos> renovar build experto-ia-definiciones)
+10.0.403
+PARTE 1 - agente (AsAIAgent sobre IChatClient), mismo código:
+  guion A: herramienta:contar_encuestas > herramienta:listar_localidades  | respuesta: listo (modelo)
+  guion B: herramienta:listar_localidades > herramienta:contar_encuestas  | respuesta: listo (modelo)
+  guion C:   | respuesta: listo (modelo)
+PARTE 2 - workflow de MAF (BuildSequential) expuesto con AsAIAgent():
+  tipo expuesto: WorkflowHostAgent es AIAgent = True
+  codigo (paso1, paso2), corrida 1: modelo-llamado:paso-1 > modelo-llamado:paso-2
+  tipo expuesto: WorkflowHostAgent es AIAgent = True
+  codigo (paso1, paso2), corrida 2: modelo-llamado:paso-1 > modelo-llamado:paso-2
+  tipo expuesto: WorkflowHostAgent es AIAgent = True
+  codigo (paso2, paso1):            modelo-llamado:paso-2 > modelo-llamado:paso-1
+   > Microsoft.Agents.AI                1.26.0      1.26.0  
+   > Microsoft.Agents.AI.Workflows      1.26.0      1.26.0  
+   > Microsoft.Extensions.AI            10.11.0     10.11.0 
+LIBERADO build por experto-ia-definiciones

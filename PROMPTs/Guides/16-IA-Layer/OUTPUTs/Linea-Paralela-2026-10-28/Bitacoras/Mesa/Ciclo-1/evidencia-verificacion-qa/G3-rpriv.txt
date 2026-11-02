@@ -1,0 +1,90 @@
+# G3 R-PRIV (2026-10-28) sobre OUTPUTs/ excepto Mesa/Ciclo-1
+# Nota: las coincidencias reales se registran REDACTADAS (<ip-100.64/10-redactada>, <usuario>@); el informe da archivo:línea, no el valor.
+## IPv4 cualquiera
+Reanudar.md:60:<ip-100.64/10-redactada>
+Bitacoras/Nucleos/N6-Caso-Movilidad-Urbana.md:510:07.27.09.48
+Bitacoras/Nucleos/N6-Caso-Movilidad-Urbana.md:546:07.27.09.48
+## :11434 con host
+Bitacoras/Nucleos/N5-Operacion-Calidad-Seguridad.md:117:- **Ollama**: un servidor local que escucha en `127.0.0.1:11434` por defecto, cambiable con `OLLAMA_HOST`. Procesa una petición por modelo a la vez por defecto (`O
+Bitacoras/Nucleos/N5-Operacion-Calidad-Seguridad.md:646:| Ollama: 4096 por defecto (FAQ), `OLLAMA_CONTEXT_LENGTH`, `num_ctx`, `127.0.0.1:11434`, `OLLAMA_HOST`, 5 min de keep-alive, `OLLAMA_NUM_PARALLEL`=1, la RAM escala 
+Bitacoras/Nucleos/N5-Operacion-Calidad-Seguridad.md:705:| Ollama: 4096 por defecto (FAQ), 127.0.0.1:11434, `OLLAMA_HOST`, 5 minutos, `OLLAMA_NUM_PARALLEL`=1 y RAM ∝ paralelo × contexto; «Context length» por VRAM 4k/
+## hostnames/usuarios
+156
+## credenciales
+Bitacoras/Integracion-Evidencia/A-arquitectura/exp-capas/Nuevo/Infrastructure/AI/Adaptadores.cs:51:    protected override async ValueTask<AIContext> ProvideAIContextAsync(InvokingContext context, Canc
+Bitacoras/Integracion-Evidencia/A-arquitectura/exp-capas/Nuevo/Infrastructure/AI/BuscadorDeRequisitos.cs:15:        var vectores = await embeddings.GenerateAsync(lista.Select(r => r.Texto), cancellati
+Bitacoras/Integracion-Evidencia/A-arquitectura/exp-capas/Nuevo/Infrastructure/AI/BuscadorDeRequisitos.cs:30:        var qv = await embeddings.GenerateVectorAsync(pregunta, cancellationToken: ct);
+Bitacoras/Integracion-Evidencia/A-arquitectura/exp-capas/Nuevo/Infrastructure/AI/BuscadorDeRequisitos.cs:32:        await foreach (var r in coleccion!.SearchAsync(qv, top, cancellationToken: ct)) res.
+Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md:306:            new ChatOptions { Temperature = 0f }, cancellationToken: ct);
+Bitacoras/Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:289:No por sí sola. Más ventana consume más memoria (`OLLAMA_NUM_PARALLEL` × contexto [G13]) y no garantiza que el modelo use bien lo que
+Bitacoras/Nucleos/N5-Operacion-Calidad-Seguridad.md:347:        CancellationToken cancellationToken = default)
+## RFC1918 y CGNAT/tailnet 100.64/10
+Reanudar.md:60:<ip-100.64/10-redactada>
+Bitacoras/Integracion-Evidencia/B-abstracciones-agentes/sonda/salidas/01-b1-b2.jsonl:2:10.11.0.0
+Bitacoras/Integracion-Evidencia/B-abstracciones-agentes/sonda/salidas/02-b3-b4.jsonl:1:10.11.0.0
+Bitacoras/Integracion-Evidencia/A-arquitectura/exp-capas/salida-fake.txt:2:10.11.0.0
+Bitacoras/Integracion-Evidencia/A-arquitectura/exp-capas/salida-real.txt:4:10.11.0.0
+Bitacoras/Nucleos/N5-Operacion-Calidad-Seguridad.md:186:10.11.0.0
+Bitacoras/Nucleos/N5-Operacion-Calidad-Seguridad.md:186:10.11.0.0
+## <usuario>@ y $HOME
+Reanudar.md:6:> Escrito el 2026-10-28 desde estación 1. Rutas desde la raíz del workspace (`$WORKSPACE`).
+Reanudar.md:14:- **Lo que siguió en equipo anterior el 26 y el 27 se perdió.** Rastro en estación 1: el contenedor `<ollama>` (creado el 2026-10-27 16:03 por una sesión de equipo anterior que usaba estación 1 
+Reanudar.md:36:| `{dir-de-trabajo}/` (sondeos, `SondeoIChatClient`, caché NuGet en el volumen `<volumen-nuget>`) | No existe. Recrear el trabajo intermedio **fuera del workspace** (p. e
+Reanudar.md:60:- **Respaldo:** estación 1 es la única máquina principal. Al cerrar cada fase, copiar la carpeta `16-IA-Layer` y la guía a estación 2 (`rsync -a … <usuario>@<ip-100.64/10-redactada>:rescate-{estación-1}-2026
+Bitacoras/Sondeo-Entorno.md:5:> Trabajo intermedio en `{dir-de-trabajo}/sondeo/` (scripts `py/probe.py`, `py/nothink.py`, `py/json_nothink.py`, proyecto `dotnet/SondeoIChatClient`, logs
+Bitacoras/Sondeo-Entorno.md:195:- Los archivos generados en `bin/` y `obj/` quedan a nombre de `1000:1000` porque los contenedores corren con `-u 1000:1000`. Hay carpetas de root en otros directorios 
+Bitacoras/Integracion-Evidencia/A-arquitectura/exp-capas/verificar-capas.sh:9:SRC=$WORKSPACE/LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor/src/MovilidadUrbana.ApiWeb
+Bitacoras/Nucleos/N0b-Producto-Datos-Y-Perfil.md:428:Intermedios en `{dir-de-trabajo}/n0b/`.
+Bitacoras/Nucleos/N0b-Producto-Datos-Y-Perfil.md:464:Verificador adversarial, 2026-10-26. Se volvieron a descargar todas las fuentes primarias, sin reusar los intermedios del investigador. Los nuevos 
+Bitacoras/Nucleos/N0b-Producto-Datos-Y-Perfil.md:513:**Qué se perdió.** equipo anterior murió el 2026-10-28 a las 00:50. Lo que se trabajó ahí el 26 y el 27 se perdió. Para este dossier eso incluye los 
+Bitacoras/Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:378:Intermedios en `{dir-de-trabajo}/n3b/` (fuera del repo). El endpoint real no se escribe: en los comandos figura `$OLLAMA_E
+Bitacoras/Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:504:Hecha el 2026-10-26 por el verificador adversarial de N3b. Cada fuente se volvió a bajar de forma independiente: el PDF de arXiv v2, los
+Bitacoras/Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:554:**Qué se perdió.** equipo anterior murió el 2026-10-28 a las 00:50 (-03). Lo que se trabajó ahí el 26 y el 27 se perdió y **no se reconstru
+Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md:433:| E01 | `docker run … mcr.microsoft.com/dotnet/sdk:11.0.100-rc.1 dotnet build` sobre proyecto `net10.0` con `Microsoft.Extensions.AI` 10.11.0, `Ollama
+Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md:434:| E03 | (verificación adversarial) `docker run … mcr.microsoft.com/dotnet/sdk:10.0` (SDK 10.0.403) `dotnet build` + ejecución de sondas por reflexi�
+Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md:514:`E04`: `docker run … mcr.microsoft.com/dotnet/sdk:10.0` (SDK 10.0.403) `dotnet build` de un proyecto `net10.0` con `Microsoft.Extensions.AI` 10.11.0, 
+Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md:522:**Qué se perdió.** equipo anterior murió el 2026-10-28 a las 00:50. El trabajo que siguió en esa máquina el 26 y el 27 se perdió y **no se reconstruye de 
+Crear-IA-Layer-Guide-Reedicion.md:116:- **R-HOST — Dónde se ejecuta.** No hay SDK de .NET en el host: toda compilación y prueba corre en contenedor (`mcr.microsoft.com/dotnet/sdk:10.0`, con el dir
+Bitacoras/00-Contrato-De-Entrada.md:70:  - R-HOST  Sin SDK .NET en el host: build y pruebas en mcr.microsoft.com/dotnet/sdk:10.0; intermedios y caché NuGet en {dir-de-trabajo}/ o volú
+Bitacoras/Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:284:Archivos en [`N1b-Evidencia/`](N1b-Evidencia/). Los intermedios de las descargas quedaron en `{dir-de-trabajo}/n1b/`.
+Bitacoras/Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:351:Verificador adversarial, 2026-10-26. Todo se contrastó de forma independiente contra la fuente primaria. Las mediciones `E1`–`E3` se 
+## nombres de host por archivo
+Reanudar.md
+Bitacoras/Sondeo-Entorno.md
+Bitacoras/02-Cohesion-Global.md
+Bitacoras/Integracion-Evidencia/A-arquitectura/README.md
+Bitacoras/04-Integracion.md
+Bitacoras/Integracion-Evidencia/C-operacion-demo/X3-ventana.py
+Bitacoras/README.md
+Bitacoras/Integracion-Evidencia/B-abstracciones-agentes/README.md
+Bitacoras/Sondeo-Evidencia/2026-10-28/sondeo.py
+Bitacoras/Nucleos/N0b-Producto-Datos-Y-Perfil.md
+Bitacoras/Nucleos/N2-Abstracciones-Y-Proveedores-NET.md
+Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md
+Bitacoras/Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md
+Bitacoras/Nucleos/N6-Caso-Movilidad-Urbana.md
+Bitacoras/Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md
+Bitacoras/Nucleos/N5-Operacion-Calidad-Seguridad.md
+Bitacoras/Nucleos/N3-RAG-En-NET.md
+Bitacoras/Nucleos/N4-Agentes-Y-Orquestacion.md
+## identificadores de memoria (serie teléfono de pruebas, adb -H)
+Reanudar.md:6
+Reanudar.md:14
+Reanudar.md:36
+Bitacoras/Sondeo-Entorno.md:5
+Bitacoras/Sondeo-Entorno.md:195
+Crear-IA-Layer-Guide-Reedicion.md:116
+Bitacoras/Integracion-Evidencia/A-arquitectura/exp-capas/verificar-capas.sh:9
+Bitacoras/00-Contrato-De-Entrada.md:70
+Bitacoras/Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:284
+Bitacoras/Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:351
+Bitacoras/Nucleos/N0b-Producto-Datos-Y-Perfil.md:428
+Bitacoras/Nucleos/N0b-Producto-Datos-Y-Perfil.md:464
+Bitacoras/Nucleos/N0b-Producto-Datos-Y-Perfil.md:513
+Bitacoras/Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:378
+Bitacoras/Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:504
+Bitacoras/Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:554
+Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md:433
+Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md:434
+Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md:514
+Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md:522

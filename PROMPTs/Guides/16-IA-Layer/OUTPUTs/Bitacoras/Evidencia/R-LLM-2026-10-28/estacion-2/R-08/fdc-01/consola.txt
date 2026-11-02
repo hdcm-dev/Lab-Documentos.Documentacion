@@ -1,0 +1,9 @@
+fc01 (negativa: provincia fuera de catálogo): «¿Cuántas localidades hay cargadas en Misiones?»
+  herramienta contar_localidades({"provincia":"Misiones"}) → {"provincia":"Misiones","error":"La provincia «Misiones» no está en el catálogo (Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza, Santa Fe)."}
+  respuesta del modelo: No hay localidades cargadas en Misiones porque esta provincia no figura en el catálogo disponible.
+  llamadas al modelo: 2 · herramientas ejecutadas: 1
+  oráculo afirma-sin-herramienta: pasa
+corte del bucle (guion que pide listar_localidades sin parar): 3 herramientas ejecutadas y 4 llamadas al «modelo», con MaximumIterationsPerRequest = 3
+provincia fuera del catálogo (estímulo del mismo autor; sin tasa en --fake): 1 de 1 entradas pasan el oráculo afirma-sin-herramienta
+registro: 3 líneas en 08-Primera-Herramienta-Solo-Lectura.jsonl
+invariantes de código: se cumplen

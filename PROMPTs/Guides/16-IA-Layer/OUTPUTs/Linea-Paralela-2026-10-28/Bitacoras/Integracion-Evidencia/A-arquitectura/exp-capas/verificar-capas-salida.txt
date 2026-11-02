@@ -1,0 +1,7 @@
+== using de IA por carpeta (Microsoft.Extensions.AI | Microsoft.Agents | OllamaSharp | VectorData)
+  Copia/Domain: 0 archivo(s)
+  Copia/Application: 0 archivo(s)
+  Nuevo/Application: 0 archivo(s)
+  Nuevo/Infrastructure/AI: 2 archivo(s)
+== fidelidad de la copia: diff -r contra el caso base
+  idénticas (0 diferencias)

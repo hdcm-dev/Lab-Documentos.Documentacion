@@ -1,0 +1,14 @@
+[c01] Agregá Goya, Corrientes, CP 34, 89959 habitantes
+  modelo devolvió: {
+  "nombre": "Goya",
+  "provincia": "Corrientes",
+  "codigoPostal": "34",
+  "habitantes": 89959
+}
+  TryGetResult: true
+  decisión de las reglas: faltan:codigoPostal → El código postal debe tener 4 dígitos.
+  oráculo: pasa
+altas guardadas: 0
+conducta del modelo (descriptiva, sin umbral): JSON válido 1/1; propuso habitantes sin el dato 0/0; código postal que no está en el texto 0/1
+registro: 2 líneas en 03-Salida-Estructurada.jsonl
+invariantes de código: se cumplen

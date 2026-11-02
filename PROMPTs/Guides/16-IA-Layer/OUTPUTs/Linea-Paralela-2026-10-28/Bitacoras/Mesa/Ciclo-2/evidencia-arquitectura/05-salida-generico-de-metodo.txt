@@ -1,0 +1,9 @@
+# Sondas 3 y 4 (2026-10-28): un tipo de prueba en un espacio 'SondaRojo.Application' cuyo método hace s.AddSingleton<ChatMessage>()
+## Motor de la demo (tests/.../Comun/ReglaDeCapas.cs):
+## Genérico de método: 0 hallazgos
+
+Passed Argumento_generico_de_metodo [87 ms]
+## Motor de Examples/13 (tests/.../Cableado/ReglaDeCapas.cs):
+## Genérico de método (Examples/13): 1 hallazgos
+SondaRojo.Application.RegistroConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de Registrar)
+

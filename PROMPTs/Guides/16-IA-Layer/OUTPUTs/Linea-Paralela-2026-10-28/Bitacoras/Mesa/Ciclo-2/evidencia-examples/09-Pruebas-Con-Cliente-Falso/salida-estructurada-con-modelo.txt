@@ -1,0 +1,17 @@
+# R-LLM — estimando: este pedido, 1 pedido × 10 semillas (s = 1..10), qwen3.5:4b@d8b0f5e9760c, T 0.7, top_p 0.8, top_k 20, presence 1.5, think false, num_ctx 8192, ruta API /api/chat (OllamaSharp 5.5.0, format = esquema JSON de EncuestaPaso2Propuesta), Ollama 0.40.11, criterio previo: comentario de esta clase, fecha 2026-10-28T19:22:44.4511375+00:00
+# rótulo: medido en una estación de laboratorio con más núcleos (15 vCPU, CPU sin GPU; contenedor limitado a 14 CPU / 34 GiB; Ollama 0.40.11), 2026-10-28
+# pedido: «Extraé los medios de transporte y la frecuencia. Medios válidos: colectivo, auto, bicicleta, moto, caminata, tren. Frecuencias válidas: diaria, semanal, ocasional. Texto: Voy en bondi y a veces en bici, casi todos los días»
+s=1: crudo «{   "medios": [     "colectivo",     "bicicleta"   ],   "frecuencia": "diaria" }» deserializó True en catálogo True exacto True
+s=2: crudo «{   "medios": ["bondi", "bici"],   "frecuencia": "diaria" }» deserializó True en catálogo False exacto False
+s=3: crudo «{   "medios": ["bondi", "bici"],   "frecuencia": "diaria" }» deserializó True en catálogo False exacto False
+s=4: crudo «{   "medios": [     "colectivo",     "bicicleta"   ],   "frecuencia": "diaria" }» deserializó True en catálogo True exacto True
+s=5: crudo «{   "medios": [     "colectivo",     "bicicleta"   ],   "frecuencia": "diaria" }» deserializó True en catálogo True exacto True
+s=6: crudo «{   "medios": ["colectivo", "bicicleta"],   "frecuencia": "diaria" }» deserializó True en catálogo True exacto True
+s=7: crudo «{   "medios": ["bondi", "bici"],   "frecuencia": "diaria" }» deserializó True en catálogo False exacto False
+s=8: crudo «{   "medios": [     "colectivo",     "bicicleta"   ],   "frecuencia": "diaria" }» deserializó True en catálogo True exacto True
+s=9: crudo «{   "medios": ["bondi", "bicicleta"],   "frecuencia": "diaria" }» deserializó True en catálogo False exacto False
+s=10: crudo «{   "medios": ["bondi", "bicicleta"],   "frecuencia": "diaria" }» deserializó True en catálogo False exacto False
+invariantes: 0 violaciones en 10 semillas
+deserializó: 10/10; Wilson 95 % [0.72; 1.00]
+todos los medios en el catálogo: 5/10; Wilson 95 % [0.24; 0.76]
+exactamente {colectivo, bicicleta} y «diaria»: 5/10; Wilson 95 % [0.24; 0.76]

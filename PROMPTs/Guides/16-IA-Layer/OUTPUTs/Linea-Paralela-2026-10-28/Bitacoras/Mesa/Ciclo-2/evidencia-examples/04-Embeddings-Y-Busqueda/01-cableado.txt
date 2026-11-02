@@ -1,0 +1,152 @@
+EN COLA build (posición 2); esperando hasta 90 min...
+CONCEDIDO build a ej04-embeddings hasta 2026-10-28T15:48:29-0300 (renová con: <gestor-de-turnos> renovar build ej04-embeddings)
+10.0.403
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:07.30
+Test run for /work/tests/MovilidadUrbana.Busqueda.Tests/bin/Release/net10.0/MovilidadUrbana.Busqueda.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+/work/tests/MovilidadUrbana.Busqueda.Tests/bin/Release/net10.0/MovilidadUrbana.Busqueda.Tests.dll
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Busqueda.Tests/bin/Release/net10.0/MovilidadUrbana.Busqueda.Tests.dll
+   NUnit3TestExecutor discovered 13 of 13 NUnit test cases using Current Discovery mode, Non-Explicit run
+El modelo de embeddings «modelo-de-prueba» devolvió vectores de 512 dimensiones y el almacén declara 1024. Vectores de dimensiones distintas no se pueden comparar: corregí AI:DimensionDeEmbeddings o el modelo.
+
+  Passed LaSegundaGeneracionDelMismoTexto_NoLlamaAlGenerador [621 ms]
+  Passed Generador1024_ConDimensionDeclarada1024_Arranca [264 ms]
+  Passed Generador512_ConDimensionDeclarada1024_NoArranca [71 ms]
+  Standard Output Messages:
+ El modelo de embeddings «modelo-de-prueba» devolvió vectores de 512 dimensiones y el almacén declara 1024. Vectores de dimensiones distintas no se pueden comparar: corregí AI:DimensionDeEmbeddings o el modelo.
+
+
+  Passed SinDimensionDeclarada_AdoptaLaDelPrimerEmbedding [9 ms]
+  Passed UnVectorDeOtroLargoALaMitadDeLaIngesta_NoArranca [8 ms]
+  Passed ElPatronDetectaLoQueTieneQueDetectar [11 ms]
+  Passed NingunLiteralDeConfiguracionFueraDeOpciones [25 ms]
+  Passed LineaDeAzar_YWilson [4 ms]
+  Passed TresConsultas_ReproducenLasCuentasAMano [49 ms]
+LocalidadPolicy.RequisitoDelNombre	Localidad — nombre de la localidad: Entre 3 y 60 caracteres, único por provincia.
+LocalidadPolicy.RequisitoDeLaProvincia	Localidad — provincia: Una de las provincias del catálogo.
+LocalidadPolicy.RequisitoDelCodigoPostal	Localidad — código postal: 4 dígitos.
+LocalidadPolicy.RequisitoDeLosHabitantes	Localidad — habitantes: Un número entero de 1 en adelante.
+EncuestaPolicy.RequisitoDelNombre	Encuesta — nombre de quien responde: Al menos 3 caracteres.
+EncuestaPolicy.RequisitoDeLaEdad	Encuesta — edad de quien responde: Entre 16 y 110 años.
+EncuestaPolicy.RequisitoDeLaLocalidad	Encuesta — localidad donde vive: Una de las localidades cargadas en el ABM.
+EncuestaPolicy.RequisitoDeLosMedios	Encuesta — medios de transporte que usa: Al menos uno.
+EncuestaPolicy.RequisitoDeLaFrecuencia	Encuesta — frecuencia de uso: Con qué asiduidad usa esos medios.
+EncuestaPolicy.RequisitoDeLaDistancia	Encuesta — distancia recorrida: Entre 0 y 500 km por día.
+EncuestaPolicy.RequisitoDeLosMinutos	Encuesta — duración del viaje: Entre 1 y 600 minutos.
+EncuestaPolicy.RequisitoDelMotivo	Encuesta — motivo del viaje: El motivo principal del viaje.
+
+Generador léxico falso (no es un modelo), sin instrucción:
+## Formato: sin instrucción; k = 3; umbral calibrado = 0.2388 (calibración NO separable)
+id	resp	rango	hit@1	hit@3	recall@3	RR@3	mejor	abst	top-3
+e01	sí	-	0	0	0.00	0.00	0.2182	sí	EncuestaPolicy.RequisitoDeLosMinutos 0.2182 | EncuestaPolicy.RequisitoDeLosMedios 0.0000 | LocalidadPolicy.RequisitoDeLosHabitantes 0.0000
+e02	sí	1	1	1	1.00	1.00	0.3162	no	LocalidadPolicy.RequisitoDeLosHabitantes 0.3162 | LocalidadPolicy.RequisitoDeLaProvincia 0.1336 | EncuestaPolicy.RequisitoDeLaLocalidad 0.1179
+e03	sí	1	1	1	1.00	1.00	0.2857	no	LocalidadPolicy.RequisitoDeLaProvincia 0.2857 | LocalidadPolicy.RequisitoDeLosHabitantes 0.1690 | EncuestaPolicy.RequisitoDeLosMedios 0.1429
+e04	sí	-	0	0	0.00	0.00	0.1260	sí	EncuestaPolicy.RequisitoDeLosMedios 0.1260 | LocalidadPolicy.RequisitoDeLaProvincia 0.1260 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.1111
+e05	sí	2	0	1	1.00	0.50	0.3086	no	EncuestaPolicy.RequisitoDeLosMedios 0.3086 | EncuestaPolicy.RequisitoDeLaEdad 0.3086 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.2722
+e06	sí	1	1	1	1.00	1.00	0.2673	no	EncuestaPolicy.RequisitoDeLaDistancia 0.2673 | EncuestaPolicy.RequisitoDeLosMinutos 0.1336 | LocalidadPolicy.RequisitoDelNombre 0.1118
+e07	sí	3	0	1	1.00	0.33	0.2020	sí	EncuestaPolicy.RequisitoDelMotivo 0.2020 | EncuestaPolicy.RequisitoDeLosMedios 0.1429 | EncuestaPolicy.RequisitoDeLosMinutos 0.1429
+e08	sí	1	1	1	1.00	1.00	0.4286	no	EncuestaPolicy.RequisitoDeLosMedios 0.4286 | EncuestaPolicy.RequisitoDelNombre 0.1543 | EncuestaPolicy.RequisitoDeLaDistancia 0.1429
+e09	sí	-	0	0	0.00	0.00	0.2520	no	EncuestaPolicy.RequisitoDeLosMedios 0.2520 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.2222 | EncuestaPolicy.RequisitoDeLaDistancia 0.1260
+e10	sí	-	0	0	0.00	0.00	0.0000	sí	EncuestaPolicy.RequisitoDeLosMedios 0.0000 | LocalidadPolicy.RequisitoDeLosHabitantes 0.0000 | EncuestaPolicy.RequisitoDeLosMinutos 0.0000
+e11	sí	-	0	0	0.00	0.00	0.1491	sí	LocalidadPolicy.RequisitoDeLosHabitantes 0.1491 | EncuestaPolicy.RequisitoDeLosMedios 0.1260 | LocalidadPolicy.RequisitoDeLaProvincia 0.1260
+e12	sí	1	1	1	0.50	1.00	0.1443	sí	EncuestaPolicy.RequisitoDelNombre 0.1443 | EncuestaPolicy.RequisitoDeLosMedios 0.1336 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.1179
+e13	no	-	-	-	-	-	0.3086	no	LocalidadPolicy.RequisitoDeLaProvincia 0.3086 | EncuestaPolicy.RequisitoDeLaLocalidad 0.2722 | LocalidadPolicy.RequisitoDeLosHabitantes 0.1826
+e14	no	-	-	-	-	-	0.1543	sí	EncuestaPolicy.RequisitoDelNombre 0.1543 | EncuestaPolicy.RequisitoDeLosMedios 0.1429 | EncuestaPolicy.RequisitoDeLaEdad 0.1429
+e15	no	-	-	-	-	-	0.3086	no	EncuestaPolicy.RequisitoDeLosMinutos 0.3086 | EncuestaPolicy.RequisitoDelNombre 0.1667 | EncuestaPolicy.RequisitoDeLosMedios 0.1543
+e16	no	-	-	-	-	-	0.1543	sí	LocalidadPolicy.RequisitoDeLaProvincia 0.1543 | EncuestaPolicy.RequisitoDeLaLocalidad 0.1361 | EncuestaPolicy.RequisitoDeLosMedios 0.0000
+e17	no	-	-	-	-	-	0.2857	no	LocalidadPolicy.RequisitoDeLaProvincia 0.2857 | EncuestaPolicy.RequisitoDeLaLocalidad 0.2520 | LocalidadPolicy.RequisitoDelNombre 0.2390
+e18	no	-	-	-	-	-	0.3086	no	LocalidadPolicy.RequisitoDeLaProvincia 0.3086 | EncuestaPolicy.RequisitoDeLaLocalidad 0.1361 | LocalidadPolicy.RequisitoDelNombre 0.1291
+e19	no	-	-	-	-	-	0.3849	no	EncuestaPolicy.RequisitoDeLaLocalidad 0.3849 | EncuestaPolicy.RequisitoDelNombre 0.2357 | EncuestaPolicy.RequisitoDeLosMedios 0.2182
+e20	no	-	-	-	-	-	0.3381	no	EncuestaPolicy.RequisitoDeLosMedios 0.3381 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.2981 | EncuestaPolicy.RequisitoDelNombre 0.1826
+e21	no	-	-	-	-	-	0.2041	sí	EncuestaPolicy.RequisitoDelNombre 0.2041 | EncuestaPolicy.RequisitoDeLaEdad 0.1890 | EncuestaPolicy.RequisitoDeLaLocalidad 0.1667
+e22	no	-	-	-	-	-	0.0000	sí	EncuestaPolicy.RequisitoDeLosMedios 0.0000 | LocalidadPolicy.RequisitoDeLosHabitantes 0.0000 | EncuestaPolicy.RequisitoDeLosMinutos 0.0000
+hit@1 = 5/12; Wilson 95 % [0.19; 0.68] (azar 0.08)
+hit@3 = 7/12; Wilson 95 % [0.32; 0.81] (azar 0.25)
+recall@3 = 0.542 (promedio sobre 12 respondibles)
+MRR@3 = 0.486 (promedio sobre 12 respondibles)
+abstención correcta = 4/10; Wilson 95 % [0.17; 0.69]; abstenciones indebidas en respondibles = 6/12
+
+
+  Passed ElCorpusSonLosDoceEnunciadosDeLasPoliticas [3 ms]
+  Standard Output Messages:
+ LocalidadPolicy.RequisitoDelNombre	Localidad — nombre de la localidad: Entre 3 y 60 caracteres, único por provincia.
+ LocalidadPolicy.RequisitoDeLaProvincia	Localidad — provincia: Una de las provincias del catálogo.
+ LocalidadPolicy.RequisitoDelCodigoPostal	Localidad — código postal: 4 dígitos.
+ LocalidadPolicy.RequisitoDeLosHabitantes	Localidad — habitantes: Un número entero de 1 en adelante.
+ EncuestaPolicy.RequisitoDelNombre	Encuesta — nombre de quien responde: Al menos 3 caracteres.
+ EncuestaPolicy.RequisitoDeLaEdad	Encuesta — edad de quien responde: Entre 16 y 110 años.
+ EncuestaPolicy.RequisitoDeLaLocalidad	Encuesta — localidad donde vive: Una de las localidades cargadas en el ABM.
+ EncuestaPolicy.RequisitoDeLosMedios	Encuesta — medios de transporte que usa: Al menos uno.
+ EncuestaPolicy.RequisitoDeLaFrecuencia	Encuesta — frecuencia de uso: Con qué asiduidad usa esos medios.
+ EncuestaPolicy.RequisitoDeLaDistancia	Encuesta — distancia recorrida: Entre 0 y 500 km por día.
+ EncuestaPolicy.RequisitoDeLosMinutos	Encuesta — duración del viaje: Entre 1 y 600 minutos.
+ EncuestaPolicy.RequisitoDelMotivo	Encuesta — motivo del viaje: El motivo principal del viaje.
+
+
+  Passed ElOroTieneLosTamanosDeUnaTasaDeLaTarea_YRelevantesQueExisten [61 ms]
+  Passed ElOroVersionadoEsLaSalidaDeSuGenerador [16 ms]
+  Passed ElOroCorreSinServidor_YDaLoMismoDosVeces [222 ms]
+  Standard Output Messages:
+ Generador léxico falso (no es un modelo), sin instrucción:
+ ## Formato: sin instrucción; k = 3; umbral calibrado = 0.2388 (calibración NO separable)
+ id	resp	rango	hit@1	hit@3	recall@3	RR@3	mejor	abst	top-3
+ e01	sí	-	0	0	0.00	0.00	0.2182	sí	EncuestaPolicy.RequisitoDeLosMinutos 0.2182 | EncuestaPolicy.RequisitoDeLosMedios 0.0000 | LocalidadPolicy.RequisitoDeLosHabitantes 0.0000
+ e02	sí	1	1	1	1.00	1.00	0.3162	no	LocalidadPolicy.RequisitoDeLosHabitantes 0.3162 | LocalidadPolicy.RequisitoDeLaProvincia 0.1336 | EncuestaPolicy.RequisitoDeLaLocalidad 0.1179
+ e03	sí	1	1	1	1.00	1.00	0.2857	no	LocalidadPolicy.RequisitoDeLaProvincia 0.2857 | LocalidadPolicy.RequisitoDeLosHabitantes 0.1690 | EncuestaPolicy.RequisitoDeLosMedios 0.1429
+ e04	sí	-	0	0	0.00	0.00	0.1260	sí	EncuestaPolicy.RequisitoDeLosMedios 0.1260 | LocalidadPolicy.RequisitoDeLaProvincia 0.1260 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.1111
+ e05	sí	2	0	1	1.00	0.50	0.3086	no	EncuestaPolicy.RequisitoDeLosMedios 0.3086 | EncuestaPolicy.RequisitoDeLaEdad 0.3086 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.2722
+ e06	sí	1	1	1	1.00	1.00	0.2673	no	EncuestaPolicy.RequisitoDeLaDistancia 0.2673 | EncuestaPolicy.RequisitoDeLosMinutos 0.1336 | LocalidadPolicy.RequisitoDelNombre 0.1118
+ e07	sí	3	0	1	1.00	0.33	0.2020	sí	EncuestaPolicy.RequisitoDelMotivo 0.2020 | EncuestaPolicy.RequisitoDeLosMedios 0.1429 | EncuestaPolicy.RequisitoDeLosMinutos 0.1429
+ e08	sí	1	1	1	1.00	1.00	0.4286	no	EncuestaPolicy.RequisitoDeLosMedios 0.4286 | EncuestaPolicy.RequisitoDelNombre 0.1543 | EncuestaPolicy.RequisitoDeLaDistancia 0.1429
+ e09	sí	-	0	0	0.00	0.00	0.2520	no	EncuestaPolicy.RequisitoDeLosMedios 0.2520 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.2222 | EncuestaPolicy.RequisitoDeLaDistancia 0.1260
+ e10	sí	-	0	0	0.00	0.00	0.0000	sí	EncuestaPolicy.RequisitoDeLosMedios 0.0000 | LocalidadPolicy.RequisitoDeLosHabitantes 0.0000 | EncuestaPolicy.RequisitoDeLosMinutos 0.0000
+ e11	sí	-	0	0	0.00	0.00	0.1491	sí	LocalidadPolicy.RequisitoDeLosHabitantes 0.1491 | EncuestaPolicy.RequisitoDeLosMedios 0.1260 | LocalidadPolicy.RequisitoDeLaProvincia 0.1260
+ e12	sí	1	1	1	0.50	1.00	0.1443	sí	EncuestaPolicy.RequisitoDelNombre 0.1443 | EncuestaPolicy.RequisitoDeLosMedios 0.1336 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.1179
+ e13	no	-	-	-	-	-	0.3086	no	LocalidadPolicy.RequisitoDeLaProvincia 0.3086 | EncuestaPolicy.RequisitoDeLaLocalidad 0.2722 | LocalidadPolicy.RequisitoDeLosHabitantes 0.1826
+ e14	no	-	-	-	-	-	0.1543	sí	EncuestaPolicy.RequisitoDelNombre 0.1543 | EncuestaPolicy.RequisitoDeLosMedios 0.1429 | EncuestaPolicy.RequisitoDeLaEdad 0.1429
+ e15	no	-	-	-	-	-	0.3086	no	EncuestaPolicy.RequisitoDeLosMinutos 0.3086 | EncuestaPolicy.RequisitoDelNombre 0.1667 | EncuestaPolicy.RequisitoDeLosMedios 0.1543
+ e16	no	-	-	-	-	-	0.1543	sí	LocalidadPolicy.RequisitoDeLaProvincia 0.1543 | EncuestaPolicy.RequisitoDeLaLocalidad 0.1361 | EncuestaPolicy.RequisitoDeLosMedios 0.0000
+ e17	no	-	-	-	-	-	0.2857	no	LocalidadPolicy.RequisitoDeLaProvincia 0.2857 | EncuestaPolicy.RequisitoDeLaLocalidad 0.2520 | LocalidadPolicy.RequisitoDelNombre 0.2390
+ e18	no	-	-	-	-	-	0.3086	no	LocalidadPolicy.RequisitoDeLaProvincia 0.3086 | EncuestaPolicy.RequisitoDeLaLocalidad 0.1361 | LocalidadPolicy.RequisitoDelNombre 0.1291
+ e19	no	-	-	-	-	-	0.3849	no	EncuestaPolicy.RequisitoDeLaLocalidad 0.3849 | EncuestaPolicy.RequisitoDelNombre 0.2357 | EncuestaPolicy.RequisitoDeLosMedios 0.2182
+ e20	no	-	-	-	-	-	0.3381	no	EncuestaPolicy.RequisitoDeLosMedios 0.3381 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.2981 | EncuestaPolicy.RequisitoDelNombre 0.1826
+ e21	no	-	-	-	-	-	0.2041	sí	EncuestaPolicy.RequisitoDelNombre 0.2041 | EncuestaPolicy.RequisitoDeLaEdad 0.1890 | EncuestaPolicy.RequisitoDeLaLocalidad 0.1667
+ e22	no	-	-	-	-	-	0.0000	sí	EncuestaPolicy.RequisitoDeLosMedios 0.0000 | LocalidadPolicy.RequisitoDeLosHabitantes 0.0000 | EncuestaPolicy.RequisitoDeLosMinutos 0.0000
+ hit@1 = 5/12; Wilson 95 % [0.19; 0.68] (azar 0.08)
+ hit@3 = 7/12; Wilson 95 % [0.32; 0.81] (azar 0.25)
+ recall@3 = 0.542 (promedio sobre 12 respondibles)
+ MRR@3 = 0.486 (promedio sobre 12 respondibles)
+ abstención correcta = 4/10; Wilson 95 % [0.17; 0.69]; abstenciones indebidas en respondibles = 6/12
+ 
+
+
+
+Test Run Successful.
+Total tests: 13
+     Passed: 13
+ Total time: 4.4551 Seconds
+--- ConModelo sin OLLAMA_ENDPOINT:
+A total of 1 test files matched the specified pattern.
+  Skipped Existencia_SimilitudEntreMedios [60 ms]
+  Skipped Invariante_DimensionDelModelo_1024Arranca_512NoArranca [4 ms]
+  Skipped TasaDeLaTarea_OroConYSinInstruccion [7 ms]
+
+None     - Failed:     0, Passed:     0, Skipped:     0, Total:     0, Duration: 76 ms - MovilidadUrbana.Busqueda.Tests.dll (net10.0)
+--- paquetes:
+   > CommunityToolkit.VectorData.InMemory              1.0.1       1.0.1   
+   > Microsoft.Extensions.AI                           10.11.0     10.11.0 
+   > Microsoft.Extensions.Caching.Memory               10.0.14     10.0.14 
+   > Microsoft.Extensions.Hosting                      10.0.14     10.0.14 
+   > Microsoft.Extensions.Http                         10.0.14     10.0.14 
+   > Microsoft.Extensions.Options.DataAnnotations      10.0.14     10.0.14 
+   > Microsoft.Extensions.VectorData.Abstractions      10.11.0     10.11.0 
+   > OllamaSharp                                       5.5.0       5.5.0   
+   > System.Numerics.Tensors                           10.0.14     10.0.14 
+   > Microsoft.NET.Test.Sdk      18.11.0     18.11.0 
+   > NUnit                       5.0.0       5.0.0   
+   > NUnit3TestAdapter           6.3.1       6.3.1   
+LIBERADO build por ej04-embeddings

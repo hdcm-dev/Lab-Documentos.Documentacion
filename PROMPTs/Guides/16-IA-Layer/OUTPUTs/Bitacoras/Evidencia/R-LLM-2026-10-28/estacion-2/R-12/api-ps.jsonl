@@ -1,0 +1,4 @@
+{"tipo":"api_ps_inicio","fecha":"2026-10-29T21:58:08Z","servidor":"estacion-2","modelos":[]}
+{"tipo":"api_ps","fecha":"2026-10-29T21:58:10Z","servidor":"estacion-2","modelos":[{"name":"qwen3.5:4b","digest":"d8b0f5e9760c","context_length":8192,"size_vram":0,"expires_at":"2026-10-29T22:28:10.736854199Z"}]}
+{"tipo":"api_ps_tras","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_despues_keepalive0","fecha":"2026-10-29T21:58:34Z","modelos":[]}

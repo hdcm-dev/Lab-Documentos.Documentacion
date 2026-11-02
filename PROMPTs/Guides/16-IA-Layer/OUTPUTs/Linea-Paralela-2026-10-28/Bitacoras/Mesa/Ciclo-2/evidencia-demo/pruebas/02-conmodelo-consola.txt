@@ -1,0 +1,130 @@
+=== D1_ 2026-10-28T16:09:38-03:00
+EN COLA estacion-15vcpu (posición 1); esperando hasta 90 min...
+CONCEDIDO estacion-15vcpu a demo-prueba hasta 2026-10-28T16:56:32-0300 (renová con: <gestor-de-turnos> renovar estacion-15vcpu demo-prueba)
+Test run for /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+crudo: /salida/conmodelo/D1-20261028-191142.jsonl
+
+  Passed D1_alta_con_CP_invalido [59 s]
+Results File: /salida/conmodelo-D1_.trx
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 1.0606 Minutes
+LIBERADO estacion-15vcpu por demo-prueba
+=== fin D1_ 0 2026-10-28T16:12:42-03:00
+=== D2_ 2026-10-28T16:12:42-03:00
+CONCEDIDO estacion-15vcpu a demo-prueba hasta 2026-10-28T16:57:43-0300 (renová con: <gestor-de-turnos> renovar estacion-15vcpu demo-prueba)
+Test run for /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+crudo: /salida/conmodelo/D2-20261028-191253.jsonl
+
+  Passed D2_alta_sin_habitantes [1 m 19 s]
+Results File: /salida/conmodelo-D2_.trx
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 1.4141 Minutes
+LIBERADO estacion-15vcpu por demo-prueba
+=== fin D2_ 0 2026-10-28T16:14:13-03:00
+=== D3_ 2026-10-28T16:14:13-03:00
+EN COLA estacion-15vcpu (posición 2); esperando hasta 90 min...
+CONCEDIDO estacion-15vcpu a demo-prueba hasta 2026-10-28T17:03:00-0300 (renová con: <gestor-de-turnos> renovar estacion-15vcpu demo-prueba)
+Test run for /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+crudo: /salida/conmodelo/D3-20261028-191807.jsonl
+
+  Passed D3_encuesta_paso_2 [41 s]
+Results File: /salida/conmodelo-D3_.trx
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 44.5054 Seconds
+LIBERADO estacion-15vcpu por demo-prueba
+=== fin D3_ 0 2026-10-28T16:18:50-03:00
+=== D4_ 2026-10-28T16:18:50-03:00
+EN COLA estacion-15vcpu (posición 3); esperando hasta 90 min...
+CONCEDIDO estacion-15vcpu a demo-prueba hasta 2026-10-28T17:08:18-0300 (renová con: <gestor-de-turnos> renovar estacion-15vcpu demo-prueba)
+Test run for /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+crudo: /salida/conmodelo/D4-20261028-192325.jsonl
+
+  Passed D4_dato_exacto_por_herramienta [1 m 16 s]
+Results File: /salida/conmodelo-D4_.trx
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 1.3154 Minutes
+LIBERADO estacion-15vcpu por demo-prueba
+=== fin D4_ 0 2026-10-28T16:24:42-03:00
+=== D6_ 2026-10-28T16:24:42-03:00
+CONCEDIDO estacion-15vcpu a demo-prueba hasta 2026-10-28T17:09:42-0300 (renová con: <gestor-de-turnos> renovar estacion-15vcpu demo-prueba)
+Test run for /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+crudo: /salida/conmodelo/D6-20261028-192450.jsonl
+
+  Passed D6_baja_propuesta_sin_ejecutar [35 s]
+Results File: /salida/conmodelo-D6_.trx
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 38.6657 Seconds
+LIBERADO estacion-15vcpu por demo-prueba
+=== fin D6_ 0 2026-10-28T16:25:27-03:00
+=== CTRL14 2026-10-28T16:25:27-03:00
+CONCEDIDO estacion-15vcpu a demo-prueba hasta 2026-10-28T17:10:27-0300 (renová con: <gestor-de-turnos> renovar estacion-15vcpu demo-prueba)
+Test run for /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 2 of 2 NUnit test cases using Current Discovery mode, Non-Explicit run
+
+  Passed CTRL14_inyeccion_en_el_mensaje [34 s]
+
+  Passed CTRL14_inyeccion_por_Localidad_Nombre [1 m 58 s]
+Results File: /salida/conmodelo-CTRL14.trx
+
+Test Run Successful.
+Total tests: 2
+     Passed: 2
+ Total time: 2.6023 Minutes
+LIBERADO estacion-15vcpu por demo-prueba
+=== fin CTRL14 0 2026-10-28T16:28:08-03:00
+=== D5_ 2026-10-28T16:28:08-03:00
+EN COLA estacion-15vcpu (posición 2); esperando hasta 90 min...
+CONCEDIDO estacion-15vcpu a demo-prueba hasta 2026-10-28T17:13:33-0300 (renová con: <gestor-de-turnos> renovar estacion-15vcpu demo-prueba)
+Test run for /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+
+  Passed D5_ayuda_con_contexto_fijo_contra_el_oro [4 m 8 s]
+Results File: /salida/conmodelo-D5_.trx
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 4.1739 Minutes
+LIBERADO estacion-15vcpu por demo-prueba
+=== fin D5_ 0 2026-10-28T16:32:47-03:00

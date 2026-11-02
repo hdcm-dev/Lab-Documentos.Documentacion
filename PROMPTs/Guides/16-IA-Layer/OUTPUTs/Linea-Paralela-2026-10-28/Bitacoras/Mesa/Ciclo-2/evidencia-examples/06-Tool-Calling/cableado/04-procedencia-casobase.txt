@@ -1,0 +1,10 @@
+# Procedencia de CasoBase/ (2026-10-28T15:34:51-03:00); origen MovilidadUrbana.ApiWeb @ 59399ba 2026-10-27
+igual  ./Application/Abstractions/ILocalidadRepository.cs
+igual  ./Application/Abstractions/ISessionContext.cs
+igual  ./Application/Localidades/LocalidadModel.cs
+igual  ./Application/Localidades/LocalidadService.cs
+igual  ./Application/Result.cs
+igual  ./Domain/Catalogos.cs
+igual  ./Domain/Entities/Localidad.cs
+igual  ./Domain/Rules/LocalidadRules.cs
+igual  ./Infrastructure/Sessions/SessionContext.cs

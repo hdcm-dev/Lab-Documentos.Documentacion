@@ -1,0 +1,9 @@
+AddChatClient: IServiceCollection serviceCollection, IChatClient innerClient, ServiceLifetime lifetime=Singleton
+AddChatClient: IServiceCollection serviceCollection, Func`2 innerClientFactory, ServiceLifetime lifetime=Singleton
+AddChatClient: IServiceCollection serviceCollection, Object serviceKey, IChatClient innerClient, ServiceLifetime lifetime=Singleton
+AddChatClient: IServiceCollection serviceCollection, Object serviceKey, Func`2 innerClientFactory, ServiceLifetime lifetime=Singleton
+AIFunctionArguments props: Services, Context, Item, Keys, Values, Count
+FunctionInvokingChatClient props: CurrentContext, IncludeDetailedErrors, AllowConcurrentInvocation, MaximumIterationsPerRequest, MaximumConsecutiveErrorsPerRequest, AdditionalTools, TerminateOnUnknownCalls, FunctionInvoker
+AIFunctionFactoryOptions props: SerializerOptions, JsonSchemaCreateOptions, Name, Description, AdditionalProperties, ConfigureParameterBinding, MarshalResult, ExcludeResultSchema
+ApprovalRequiredAIFunction experimental: 
+Approval types: ToolApprovalRequestContent, ToolApprovalResponseContent, ApprovalRequiredAIFunction, HostedMcpServerToolAlwaysRequireApprovalMode, HostedMcpServerToolApprovalMode, HostedMcpServerToolNeverRequireApprovalMode, HostedMcpServerToolRequireSpecificApprovalMode

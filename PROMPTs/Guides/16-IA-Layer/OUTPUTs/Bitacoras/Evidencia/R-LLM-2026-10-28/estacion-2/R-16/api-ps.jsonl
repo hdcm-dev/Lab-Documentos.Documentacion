@@ -1,0 +1,4 @@
+{"tipo":"api_ps_inicio","turno":"T1b","fecha":"2026-10-30T01:33:36Z","servidor":"estacion-2","modelos":[]}
+{"tipo":"api_ps","turno":"T1b","fecha":"2026-10-30T01:33:38Z","servidor":"estacion-2","modelos":[{"name":"qwen3.5:4b","digest":"d8b0f5e9760c","context_length":8192,"expires_at":"2026-10-30T02:33:38.692301195Z"}]}
+{"tipo":"api_ps_fin_antes","turno":"T1b","fecha":"2026-10-30T01:43:42Z","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_despues_keepalive0","turno":"T1b","fecha":"2026-10-30T01:43:45Z","modelos":[]}

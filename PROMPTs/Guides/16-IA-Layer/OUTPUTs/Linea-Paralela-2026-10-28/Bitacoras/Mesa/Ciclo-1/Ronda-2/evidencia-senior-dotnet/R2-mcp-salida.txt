@@ -1,0 +1,41 @@
+CONCEDIDO build a senior-dotnet-r2 hasta 2026-10-28T12:41:10-0300 (renová con: <gestor-de-turnos> renovar build senior-dotnet-r2)
+10.0.403
+# MCP.AspNetCore 2.3.0.0; MCP 2.3.0.0; MEAI 10.11.0.0; MAF 1.26.0.0; runtime 10.0.14
+
+## PC-01
+[A] AllowedHosts="localhost;127.0.0.1" + MapMcp("/mcp").RequireAuthorization()
+    Host 127.0.0.1, sin token          → 401 «»
+    Host 127.0.0.1, token incorrecto   → 401 «»
+    Host 127.0.0.1, token correcto     → 200 «event: message
+data: {"result":{"protocolVersion":"2025-06-18","capabilities":{"logging":{…»
+    Host «atacante.example», token ok  → 400 «<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">…»
+    Host localhost, token ok           → 200 «event: message
+data: {"result":{"protocolVersion":"2025-06-18","capabilities":{"logging":{…»
+    endpoint /mcp/ [MCP Streamable HTTP | HTTP: POST /mcp/] IAuthorizeData=1
+[B] Control: AllowedHosts="*" y sin RequireAuthorization (lo que hace N6 §4.5 hoy)
+    Host «atacante.example», sin token → 200 «event: message
+data: {"result":{"protocolVersion":"2025-06-18","capabilities":{"logging":{…»
+    + Origin «http://atacante.example» → 200 «event: message
+data: {"result":{"protocolVersion":"2025-06-18","capabilities":{"logging":{…»
+[C] AllowedHosts restringido, sin auth: Origin ajeno con Host válido
+    Host 127.0.0.1 + Origin «http://atacante.example» → 200 «event: message
+data: {"result":{"protocolVersion":"2025-06-18","capabilities":{"logging":{…»
+[G] AllowedHosts restringido + middleware de Origin + RequireAuthorization
+    Host 127.0.0.1 + Origin ajeno + token ok        → 403 «»
+    Host 127.0.0.1 + Origin permitido + token ok    → 200 «event: message
+data: {"result":{"protocolVersion":"2025-06-18","capabilities":{"logging":{…»
+    Host 127.0.0.1 sin Origin (cliente no navegador) + token ok → 200 «event: message
+data: {"result":{"protocolVersion":"2025-06-18","capabilities":{"logging":{…»
+[D] HttpMcpServerBuilderExtensions: WithHttpTransport, AddAuthorizationFilters, WithDistributedCacheEventStreamStore
+[E] McpAuthenticationExtensions: AddMcp(AuthenticationBuilder,Action`1), AddMcp(AuthenticationBuilder,String,String,Action`1)
+[F] métodos públicos con «Authoriz» en los ensamblados MCP: HttpMcpServerBuilderExtensions.AddAuthorizationFilters
+
+## PC-09
+[A] MCP tools/list: name=contar_por_medio description=«Cuenta cuántas respuestas de la encuesta de la sesión declaran un medio de transporte.» readOnlyHint=True
+      inputSchema={"type":"object","properties":{"medio":{"description":"Medio de transporte, por ejemplo \u00ABcaminata\u00BB o \u00ABcolectivo\u00BB.","type":"string"}},"required":["medio"]}
+[B] MCP tools/call contar_por_medio(caminata) → "18 respuestas con «caminata» (vista desde la sesión sesion-MCP)"
+[C] AIFunction: name=contar_por_medio description=«Cuenta cuántas respuestas de la encuesta de la sesión declaran un medio de transporte.»
+      JsonSchema={"type":"object","properties":{"medio":{"description":"Medio de transporte, por ejemplo \u00ABcaminata\u00BB o \u00ABcolectivo\u00BB.","type":"string"}},"required":["medio"]}
+[D] IChatClient + UseFunctionInvocation → «Herramienta: 18 respuestas con «caminata» (vista desde la sesión sesion-BUCLE)»
+[E] ChatClientAgent (MAF) con la misma lista → «Herramienta: 18 respuestas con «caminata» (vista desde la sesión sesion-BUCLE)»
+LIBERADO build por senior-dotnet-r2

@@ -1,0 +1,20 @@
+EN COLA [recurso-modelo-propio] (posición 2); esperando hasta 90 min...
+CONCEDIDO [recurso-modelo-propio] a demo-asistente hasta 2026-10-27T11:57:00-0300 (renová con: <gestor-de-turnos> renovar [recurso-modelo-propio] demo-asistente)
+[demo] Ollama propio 0.40.11
+An issue was encountered verifying workloads. For more information, run "dotnet workload update".
+Test run for /artefactos/demo/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 5.0.0.0: Test execution started
+Running selected tests in /artefactos/demo/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+embeddings: 13 textos, qwen3-embedding:0.6b@ac6da0dfba84, Ollama 0.40.11, entradas 302285bad38c
+
+NUnit Adapter 5.0.0.0: Test execution complete
+  Passed Persistir [2 s]
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 6.7967 Seconds
+LIBERADO [recurso-modelo-propio] por demo-asistente
+rc=0

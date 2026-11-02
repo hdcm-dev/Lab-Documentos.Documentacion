@@ -1,0 +1,12 @@
+flowchart LR
+  subgraph C["Cableado/ (cada build, sin red)"]
+    F["IChatClient falso con guion"] --> P["composición real:<br/>caché, herramientas, telemetría"]
+    P --> A1["aserciones deterministas:<br/>spans, llamadas, escrituras, códigos HTTP"]
+  end
+  subgraph M["ConModelo/ (por turno)"]
+    S["servidor Ollama de prueba<br/>(OLLAMA_ENDPOINT)"] --> P2["la misma composición"]
+    P2 --> I["invariantes: fallan ante 1 violación"]
+    P2 --> T["tasas k/n con Wilson: se informan"]
+    P2 --> R["registro con cabecera"]
+  end
+  X["sin OLLAMA_ENDPOINT"] -.-> N["Inconclusive: «no medido»"]

@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MovilidadUrbana.Ejemplos.Mcp.Servidor/MovilidadUrbana.Ejemplos.Mcp.Servidor.csproj" />
+    <Project Path="src/MovilidadUrbana.Ejemplos.Mcp.Cliente/MovilidadUrbana.Ejemplos.Mcp.Cliente.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MovilidadUrbana.Ejemplos.Mcp.Tests/MovilidadUrbana.Ejemplos.Mcp.Tests.csproj" />
+  </Folder>
+</Solution>

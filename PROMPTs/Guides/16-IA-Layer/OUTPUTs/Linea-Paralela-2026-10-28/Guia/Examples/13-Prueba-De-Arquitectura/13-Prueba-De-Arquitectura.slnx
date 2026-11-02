@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MovilidadUrbana.PruebaDeArquitectura/MovilidadUrbana.PruebaDeArquitectura.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MovilidadUrbana.PruebaDeArquitectura.Tests/MovilidadUrbana.PruebaDeArquitectura.Tests.csproj" />
+  </Folder>
+</Solution>

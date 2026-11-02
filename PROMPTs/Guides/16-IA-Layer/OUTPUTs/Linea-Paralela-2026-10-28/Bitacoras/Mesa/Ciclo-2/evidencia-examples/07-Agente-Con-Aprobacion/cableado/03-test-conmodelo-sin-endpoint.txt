@@ -1,0 +1,10 @@
+Test run for /work/tests/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests.dll
+   NUnit3TestExecutor discovered 2 of 2 NUnit test cases using Current Discovery mode, Non-Explicit run
+LaBajaEsperaLaAprobacion: ConModelo: no medido (falta OLLAMA_ENDPOINT).
+LlamadaUnicaYAgenteDeMaf: ConModelo: no medido (falta OLLAMA_ENDPOINT).
+  Skipped LaBajaEsperaLaAprobacion [291 ms]
+  Skipped LlamadaUnicaYAgenteDeMaf [10 ms]
+

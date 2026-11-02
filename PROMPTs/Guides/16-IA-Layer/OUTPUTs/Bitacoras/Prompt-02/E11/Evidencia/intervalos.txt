@@ -1,0 +1,22 @@
+I08	L1459	1/12	calculo	clase sin cálculo	-
+I09	L1459	3/12	calculo	clase sin cálculo	-
+I20	L2143	4/4	calculo	clase sin cálculo	-
+I21	L2172	8/10	umbral	IC95	-
+I25	L3386	2/2	criterio	clase sin cálculo	-
+I26	L3400	8/10	umbral	clase sin cálculo	-
+I27	L3550	4/16	estimulo	clase sin cálculo	-
+I31	L1129	5/5	medicion-parcial	clase sin cálculo	-
+B12-05a	L1132	5/6	medicion-parcial	IC95	-
+B12-05b	L1132	0/6	medicion	IC95+M+k	../R-LLM-2026-10-28/estacion-1/R-05/05-Contexto-Completo-Con-Prefijo.jsonl
+B12-08	L1480	10/10	medicion-parcial	IC95	-
+B12-03	L1658	10/10	medicion-parcial	IC95	-
+B12-16a	L2327	10/10	medicion-parcial	IC95	-
+B12-16b	L2327	0/10	medicion-parcial	IC95	-
+PV01-01	L926	80/81	calculo	clase sin cálculo	-
+PV01-02	L1153	2/2	medicion	M+k	../R-LLM-2026-10-28/estacion-1/R-01/01-Chat-Y-Streaming.jsonl
+PV01-04a	L2174	41/52	medicion	M+k	../R-LLM-2026-10-28/estacion-2/R-15b/15-Pruebas-Y-Evaluacion.jsonl
+PV01-04b	L2174	45/52	umbral	clase sin cálculo	-
+PV01-05b	L2241	41/52	medicion	M+k	../R-LLM-2026-10-28/estacion-2/R-15b/15-Pruebas-Y-Evaluacion.jsonl
+PV01-05c	L2241	45/52	umbral	clase sin cálculo	-
+PV01-08	L2327	4/10	medicion-parcial	clase sin cálculo	-
+compuerta-intervalos: 28 figuras reconocidas, 28 en el mapa; 21 de 21 filas coinciden

@@ -1,0 +1,12 @@
+# R7 — Ollama propio en contenedor (estación 1), sin generación; endpoint por OLLAMA_ENDPOINT (no se registra, R-PRIV); recurso <recurso-compartido>
+EN COLA <recurso-compartido> (posición 1); esperando hasta 90 min...
+CONCEDIDO <recurso-compartido> a verificacion-qa hasta 2026-10-28T09:58:39-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> verificacion-qa)
+2026-10-28T09:48:39-03:00
+{"version":"0.40.11"}
+qwen3.5:4b d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04
+qwen2.5:0.5b a8b0c51577010a279d933d14c2a8ab4b268079d44c5c8830c0a93900f1827c67
+qwen3-embedding:0.6b ac6da0dfba84a81fdbfbaf330198c33cd77c4cdfc53e8bc50eb581914a15621d
+qwen3.5:4b capabilities= ['completion', 'vision', 'tools', 'thinking'] ctx_nativo= [262144]
+qwen2.5:0.5b capabilities= ['completion', 'tools'] ctx_nativo= [32768]
+qwen3-embedding:0.6b capabilities= ['tools', 'thinking', 'embedding'] ctx_nativo= [32768]
+LIBERADO <recurso-compartido> por verificacion-qa

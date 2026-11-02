@@ -1,0 +1,20 @@
+07 · qwen3.5:4b@d8b0f5e9760c, Ollama 0.40.11, servidor compartido, num_ctx 8192 (arnes)
+embeddings: emb=qwen3-embedding:0.6b@ac6da0dfba84;ollama=0.40.11 · oro sha256 8a9468452395 · top-3
+r03#1: «¿Cuántos números lleva el código postal de una localidad?»
+  recuperados: LocalidadPolicy.RequisitoDelCodigoPostal (0.686), LocalidadPolicy.RequisitoDeLosHabitantes (0.441), LocalidadPolicy.RequisitoDeLaProvincia (0.396)
+  modelo: El código postal de una localidad debe llevar 4 dígitos. [Fuente: LocalidadPolicy.RequisitoDelCodigoPostal]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r03#2: «¿Cuántos números lleva el código postal de una localidad?»
+  recuperados: LocalidadPolicy.RequisitoDelCodigoPostal (0.686), LocalidadPolicy.RequisitoDeLosHabitantes (0.441), LocalidadPolicy.RequisitoDeLaProvincia (0.396)
+  modelo: El código postal de una localidad debe llevar 4 dígitos. [Fuente: LocalidadPolicy.RequisitoDelCodigoPostal]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+r03#3: «¿Cuántos números lleva el código postal de una localidad?»
+  recuperados: LocalidadPolicy.RequisitoDelCodigoPostal (0.686), LocalidadPolicy.RequisitoDeLosHabitantes (0.441), LocalidadPolicy.RequisitoDeLaProvincia (0.396)
+  modelo: El código postal de una localidad debe llevar 4 dígitos. [Fuente: LocalidadPolicy.RequisitoDelCodigoPostal]
+  código: Aceptada
+  oráculo rag-con-citas: pasa
+estabilidad: 3 repeticiones, 1 texto(s) distinto(s) (no cuenta para la tasa)
+registro: 6 renglones en 07-RAG-Con-Citas.estabilidad.jsonl
+invariantes de código: se cumplen

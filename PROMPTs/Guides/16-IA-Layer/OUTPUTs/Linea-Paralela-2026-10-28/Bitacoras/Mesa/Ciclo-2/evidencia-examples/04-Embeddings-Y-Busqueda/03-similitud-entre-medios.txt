@@ -1,0 +1,5 @@
+# existencia, n = 1 por par (los embeddings no muestrean); medido en la estación de laboratorio
+coseno(«colectivo», «ómnibus») = 0.6082
+coseno(«colectivo», «bicicleta») = 0.5962
+coseno(«en avión», «Moto») = 0.7010
+coseno(«en avión», «Tren») = 0.6371

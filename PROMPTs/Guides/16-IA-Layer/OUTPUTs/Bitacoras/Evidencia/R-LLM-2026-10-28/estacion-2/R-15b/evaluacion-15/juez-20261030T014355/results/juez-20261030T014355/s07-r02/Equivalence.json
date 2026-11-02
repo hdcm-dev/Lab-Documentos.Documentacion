@@ -1,0 +1,79 @@
+{
+  "scenarioName": "s07-r02",
+  "iterationName": "Equivalence",
+  "executionName": "juez-20261030T014355",
+  "creationTime": "2026-10-30T02:32:06.331414Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "\u00BFPuedo cargar una localidad en cualquier provincia que se me ocurra?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "No puedes cargar una localidad en cualquier provincia; el sistema exige que la provincia sea parte de las provincias del cat\u00E1logo oficial [Fuente: LocalidadPolicy.RequisitoDeLaProvincia]. Adem\u00E1s, recuerda que cada nombre de localidad debe ser \u00FAnico dentro de su respectiva provincia y cumplir con los requisitos de longitud entre 3 y 60 caracteres [Fuente: LocalidadPolicy.RequisitoDelNombre], mientras que la localidad en s\u00ED misma debe estar cargada en el ABM [Fuente: EncuestaPolicy.RequisitoDeLaLocalidad]."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Equivalence": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Equivalence",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Equivalence)": {
+            "name": "Ground Truth (Equivalence)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Localidad \u00B7 requisito de la provincia: Una de las provincias del cat\u00E1logo."
+              }
+            ]
+          }
+        },
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "qwen3.5:4b",
+          "eval-input-tokens": "999",
+          "eval-output-tokens": "2",
+          "eval-total-tokens": "1001",
+          "eval-duration-ms": "11132.94"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 11.132774,
+        "model": "qwen3.5:4b",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 999,
+          "outputTokenCount": 2,
+          "totalTokenCount": 1001
+        },
+        "cacheKey": "9AF6C9AE5467EC50B482FEDCA53D13C5E1562CB45327AD1D82C008AD8A0C792651601CD60E49FA6A20DDFCCAE6D04845",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

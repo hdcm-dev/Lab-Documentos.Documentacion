@@ -1,0 +1,455 @@
+== 2026-10-28T20:37:17-03:00 raiz=Dot-Net-Integration-AI-Layer-Guide
+ip-parcial lineas=0 archivos=0
+home lineas=0 archivos=0
+usuario-mascara lineas=0 archivos=0
+cabeceras lineas=0 archivos=0
+contenedores lineas=11 archivos=2
+turnos lineas=52 archivos=25
+identificadores lineas=75 archivos=26
+-- ip-parcial por archivo
+-- home por archivo
+-- usuario-mascara por archivo
+-- cabeceras por archivo
+-- contenedores por archivo
+Demos/MovilidadUrbana.Asistente/tools/demo.sh:6
+tools/verificar.sh:5
+-- turnos por archivo
+Demos/MovilidadUrbana.Asistente/ejemplo.json:2
+Demos/MovilidadUrbana.Asistente/tools/demo.sh:3
+tools/verificar.sh:19
+Examples/README.md:4
+Examples/17-Observabilidad-Y-Pipeline/ejemplo.json:1
+Examples/11-Agente-Con-Aprobacion/README.md:1
+Examples/11-Agente-Con-Aprobacion/ejemplo.json:1
+Examples/04-Normalizacion-Contra-Catalogo/ejemplo.json:1
+Examples/01-Chat-Y-Streaming/ejemplo.json:1
+Examples/03-Salida-Estructurada/README.md:2
+Examples/03-Salida-Estructurada/ejemplo.json:1
+Examples/12-Uno-O-Varios-Agentes/README.md:1
+Examples/12-Uno-O-Varios-Agentes/ejemplo.json:1
+Examples/15-Pruebas-Y-Evaluacion/entradas/salidas-07.v1.json:1
+Examples/08-Primera-Herramienta-Solo-Lectura/README.md:2
+Examples/08-Primera-Herramienta-Solo-Lectura/ejemplo.json:1
+Examples/07-RAG-Con-Citas/README.md:1
+Examples/07-RAG-Con-Citas/Program.cs:1
+Examples/07-RAG-Con-Citas/ejemplo.json:1
+Examples/07-RAG-Con-Citas/Infrastructure/TablaDeEmbeddings.cs:1
+Examples/13-Servidor-Y-Cliente-MCP/README.md:2
+Examples/13-Servidor-Y-Cliente-MCP/ejemplo.json:1
+Examples/16-Inyeccion-Indirecta/ejemplo.json:1
+Examples/09-Caso-De-Uso-Como-Herramienta/README.md:1
+Examples/09-Caso-De-Uso-Como-Herramienta/ejemplo.json:1
+-- identificadores por archivo
+Demos/MovilidadUrbana.Asistente/ejemplo.json:2
+Demos/MovilidadUrbana.Asistente/tools/demo.sh:13
+Demos/MovilidadUrbana.Asistente/compose.yaml:6
+tools/verificar.sh:26
+Examples/README.md:4
+Examples/17-Observabilidad-Y-Pipeline/ejemplo.json:1
+Examples/11-Agente-Con-Aprobacion/README.md:1
+Examples/11-Agente-Con-Aprobacion/ejemplo.json:1
+Examples/04-Normalizacion-Contra-Catalogo/ejemplo.json:1
+Examples/01-Chat-Y-Streaming/ejemplo.json:1
+Examples/03-Salida-Estructurada/README.md:2
+Examples/03-Salida-Estructurada/ejemplo.json:1
+Examples/12-Uno-O-Varios-Agentes/README.md:1
+Examples/12-Uno-O-Varios-Agentes/ejemplo.json:1
+Examples/15-Pruebas-Y-Evaluacion/entradas/salidas-07.v1.json:1
+Examples/08-Primera-Herramienta-Solo-Lectura/README.md:2
+Examples/08-Primera-Herramienta-Solo-Lectura/ejemplo.json:1
+Examples/07-RAG-Con-Citas/README.md:1
+Examples/07-RAG-Con-Citas/Program.cs:1
+Examples/07-RAG-Con-Citas/ejemplo.json:1
+Examples/07-RAG-Con-Citas/Infrastructure/TablaDeEmbeddings.cs:1
+Examples/13-Servidor-Y-Cliente-MCP/README.md:2
+Examples/13-Servidor-Y-Cliente-MCP/ejemplo.json:1
+Examples/16-Inyeccion-Indirecta/ejemplo.json:1
+Examples/09-Caso-De-Uso-Como-Herramienta/README.md:1
+Examples/09-Caso-De-Uso-Como-Herramienta/ejemplo.json:1
+== 2026-10-28T20:37:18-03:00 raiz=Bitacoras
+ip-parcial lineas=0 archivos=0
+home lineas=0 archivos=0
+usuario-mascara lineas=2 archivos=2
+cabeceras lineas=4 archivos=1
+contenedores lineas=84 archivos=31
+turnos lineas=592 archivos=166
+identificadores lineas=651 archivos=128
+-- ip-parcial por archivo
+-- home por archivo
+-- usuario-mascara por archivo
+Nucleos/N2-Abstracciones-Y-Proveedores-NET.md:1
+Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:1
+-- cabeceras por archivo
+Mesa/Recuperacion-2026-10-28/Inventario-decisiones.md:4
+-- contenedores por archivo
+04-Plan-De-Integracion.v0.md:1
+04-Plan-De-Integracion.v1.md:1
+07-Redaccion.md:1
+Mesa/Ciclo-3/07-Aplicacion-Y-Verificacion.md:2
+Mesa/Ciclo-3/05-Parches.md:4
+Mesa/Ciclo-3/02-Informes/AH-02.md:1
+Mesa/Ciclo-3/02-Informes/requisitos.md:2
+Mesa/Ciclo-3/02-Informes/operacion.md:3
+Mesa/Ciclo-3/02-Informes/desarrollo.md:1
+Mesa/Ciclo-1/05-Parches.md:1
+Mesa/Ciclo-2/03-Consolidacion.md:1
+Mesa/Ciclo-2/04-Veredictos.md:1
+Mesa/Ciclo-2/07-Aplicacion-Y-Verificacion.md:1
+Mesa/Ciclo-2/05-Parches.md:7
+Mesa/Ciclo-2/02-Informes/operacion.md:4
+Sondeo-Entorno.md:3
+Evidencia/Cierre-Redaccion/limpieza.redac.log:6
+Evidencia/Cierre-Redaccion/demo-pruebas.redac.log:2
+Evidencia/Cierre-Redaccion/verificar-build.redac.log:2
+Evidencia/Cierre-Construccion/limpieza.saneo.log:4
+Evidencia/08-Primera-Herramienta-Solo-Lectura/pruebas-reanudacion.log:2
+Evidencia/Arnes/09-Caso-De-Uso-Como-Herramienta.fake.log:1
+Evidencia/Arnes/04-Normalizacion-Contra-Catalogo.reverificacion.log:1
+Nucleos/N3-Evidencia/salidas.md:3
+Nucleos/N2-Abstracciones-Y-Proveedores-NET.md:1
+Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:6
+Nucleos/N6-Caso-Movilidad-Urbana.md:2
+Nucleos/N3-RAG-En-NET.md:1
+04-Plan-De-Integracion.v2.md:8
+06-Construccion.md:7
+04-Plan-De-Integracion.md:4
+-- turnos por archivo
+04-Plan-De-Integracion.v0.md:5
+README.md:1
+04-Plan-De-Integracion.v1.md:13
+Mesa/I-06-Directiva-Del-PO-Caso-Unico-Y-Medios.md:1
+Mesa/Ciclo-3/03-Consolidacion.md:2
+Mesa/Ciclo-3/08-Cierre.md:5
+Mesa/Ciclo-3/04-Veredictos.md:1
+Mesa/Ciclo-3/05-Parches.md:18
+Mesa/Ciclo-3/02-Informes/abogado-del-diablo.md:3
+Mesa/Ciclo-3/02-Informes/AH-02.md:6
+Mesa/Ciclo-3/02-Informes/didactica.md:4
+Mesa/Ciclo-3/02-Informes/requisitos.md:6
+Mesa/Ciclo-3/02-Informes/qa.md:2
+Mesa/Ciclo-3/02-Informes/operacion.md:8
+Mesa/Ciclo-3/02-Informes/desarrollo.md:6
+Mesa/Ciclo-3/02-Informes/arquitectura.md:5
+Mesa/Recuperacion-2026-10-28/Inventario-entorno.md:19
+Mesa/Recuperacion-2026-10-28/Inventario-decisiones.md:2
+Mesa/Ciclo-1/06-Aprobacion.md:1
+Mesa/Ciclo-1/03-Consolidacion.md:2
+Mesa/Ciclo-1/08-Cierre.md:1
+Mesa/Ciclo-1/04-Veredictos.md:1
+Mesa/Ciclo-1/07-Aplicacion-Y-Verificacion.md:1
+Mesa/Ciclo-1/05-Parches.md:13
+Mesa/Ciclo-1/02-Informes/abogado-del-diablo.md:2
+Mesa/Ciclo-1/02-Informes/AH-02.md:1
+Mesa/Ciclo-1/02-Informes/senior-net.md:1
+Mesa/Ciclo-1/02-Informes/qa.md:1
+Mesa/Ciclo-1/02-Informes/desarrollo.md:3
+Mesa/Ciclo-2/00-Auditoria-Homogeneidad.md:2
+Mesa/Ciclo-2/00-Revision-Abogado-NO-PROCEDE.md:2
+Mesa/Ciclo-2/09-Respuestas-De-La-Presidencia.md:1
+Mesa/Ciclo-2/06-Aprobacion.md:1
+Mesa/Ciclo-2/03-Consolidacion.md:7
+Mesa/Ciclo-2/08-Cierre.md:1
+Mesa/Ciclo-2/04-Veredictos.md:7
+Mesa/Ciclo-2/01-Convocatoria.md:3
+Mesa/Ciclo-2/05-Parches.md:20
+Mesa/Ciclo-2/02-Informes/abogado-del-diablo.md:3
+Mesa/Ciclo-2/02-Informes/requisitos.md:2
+Mesa/Ciclo-2/02-Informes/qa.md:5
+Mesa/Ciclo-2/02-Informes/operacion.md:13
+Mesa/Ciclo-2/02-Informes/desarrollo.md:8
+Evidencia/Cierre-Redaccion/demo-pruebas.redac.log:1
+Evidencia/Cierre-Redaccion/verificar-build.redac.log:1
+Evidencia/P4-Corridas-Modelo/medidor-antes-08.log:2
+Evidencia/P4-Corridas-Modelo/medidor-despues-08.log:2
+Evidencia/P4-Corridas-Modelo/turnos-gestor.p4.tsv:15
+Evidencia/P4-Corridas-Modelo/reverificacion-p4.log:2
+Evidencia/P4-Corridas-Modelo/ext-08.log:2
+Evidencia/P4-Corridas-Modelo/turnos.p4-ext.jsonl:3
+Evidencia/P4-Corridas-Modelo/ext-04.log:2
+Evidencia/P4-Corridas-Modelo/resumen.md:8
+Evidencia/P4-Corridas-Modelo/medidor-antes-03.log:2
+Evidencia/P4-Corridas-Modelo/ext-seco.log:1
+Evidencia/P4-Corridas-Modelo/ext-03.log:2
+Evidencia/P4-Corridas-Modelo/medidor-antes-04.log:2
+Evidencia/06-Embeddings-Y-Busqueda-Semantica/reverificacion-redespacho.log:1
+Evidencia/06-Embeddings-Y-Busqueda-Semantica/build-pruebas-y-fake.log:1
+Evidencia/06-Embeddings-Y-Busqueda-Semantica/corrida-propio-fase3a.log:1
+Evidencia/Cierre-Construccion/verificar-build.saneo.log:1
+Evidencia/Cierre-Construccion/verificar-build.ac6.cierre.log:1
+Evidencia/Cierre-Construccion/medidor.saneo.log:2
+Evidencia/Cierre-Construccion/demo-pruebas.saneo.log:1
+Evidencia/Cierre-Construccion/arnes-vias-seco.p5.log:3
+Evidencia/Cierre-Construccion/demo-pruebas.cierre.log:1
+Evidencia/Cierre-Construccion/medidor-gestor.cierre.tsv:19
+Evidencia/Cierre-Construccion/verificar-build.cierre.log:1
+Evidencia/Cierre-Construccion/medidor-arnes.p5.log:6
+Evidencia/10-Workflow-Y-Contraejemplo/pruebas-y-variantes.redespacho.log:1
+Evidencia/10-Workflow-Y-Contraejemplo/correr-fake-verificar.log:1
+Evidencia/10-Workflow-Y-Contraejemplo/pruebas.log:1
+Evidencia/10-Workflow-Y-Contraejemplo/correr.redespacho.log:1
+Evidencia/10-Workflow-Y-Contraejemplo/variantes-rotas.redespacho.log:1
+Evidencia/10-Workflow-Y-Contraejemplo/variantes-rotas.log:1
+Evidencia/17-Observabilidad-Y-Pipeline/desvios.txt:1
+Evidencia/17-Observabilidad-Y-Pipeline/turno.jsonl:1
+Evidencia/17-Observabilidad-Y-Pipeline/build-pruebas-y-fake.log:1
+Evidencia/17-Observabilidad-Y-Pipeline/corrida-lan-turno2.log:2
+Evidencia/11-Agente-Con-Aprobacion/desvios.txt:2
+Evidencia/11-Agente-Con-Aprobacion/corrida-lan-turno1.log:2
+Evidencia/11-Agente-Con-Aprobacion/turno.jsonl:1
+Evidencia/11-Agente-Con-Aprobacion/build-pruebas-y-fake.log:1
+Evidencia/R-LLM/04-Normalizacion-Contra-Catalogo.modelo.jsonl:2
+Evidencia/R-LLM/07-RAG-Con-Citas.modelo.jsonl:16
+Evidencia/R-LLM/09-Caso-De-Uso-Como-Herramienta.modelo.jsonl:4
+Evidencia/R-LLM/04-Normalizacion-Contra-Catalogo.modelo-ext.jsonl:8
+Evidencia/R-LLM/07-RAG-Con-Citas.interrumpida-1.jsonl:4
+Evidencia/R-LLM/17-Observabilidad-Y-Pipeline.modelo.jsonl:2
+Evidencia/R-LLM/Demo-MovilidadUrbana.Asistente.modelo.jsonl:4
+Evidencia/R-LLM/07-RAG-Con-Citas.estabilidad.jsonl:3
+Evidencia/R-LLM/12-Uno-O-Varios-Agentes.modelo.jsonl:4
+Evidencia/R-LLM/13-Servidor-Y-Cliente-MCP.modelo.jsonl:2
+Evidencia/R-LLM/03-Salida-Estructurada.jsonl:2
+Evidencia/R-LLM/16-Inyeccion-Indirecta.interrumpida-1.jsonl:16
+Evidencia/R-LLM/01-Chat-Y-Streaming.modelo.jsonl:2
+Evidencia/R-LLM/11-Agente-Con-Aprobacion.modelo.jsonl:2
+Evidencia/R-LLM/08-Primera-Herramienta-Solo-Lectura.modelo-ext.jsonl:14
+Evidencia/R-LLM/03-Salida-Estructurada.modelo-ext.jsonl:8
+Evidencia/R-LLM/08-Primera-Herramienta-Solo-Lectura.modelo.jsonl:3
+Evidencia/R-LLM/16-Inyeccion-Indirecta.modelo.jsonl:24
+Evidencia/01-Chat-Y-Streaming/estado.txt:1
+Evidencia/01-Chat-Y-Streaming/registro-de-recursos.tsv:3
+Evidencia/03-Salida-Estructurada/reverificacion-redespacho.log:1
+Evidencia/03-Salida-Estructurada/fake-demostracion.log:1
+Evidencia/03-Salida-Estructurada/turno.jsonl:1
+Evidencia/03-Salida-Estructurada/pruebas-y-fake-extension.log:1
+Evidencia/03-Salida-Estructurada/reverificacion-tras-caida.log:1
+Evidencia/14-Anotaciones-SK-vs-MEAI/correr-fake-verificar.log:1
+Evidencia/14-Anotaciones-SK-vs-MEAI/pruebas-y-variante.log:1
+Evidencia/Demo-MovilidadUrbana.Asistente/Demo-MovilidadUrbana.Asistente.descartada-corrida-2.jsonl:2
+Evidencia/Demo-MovilidadUrbana.Asistente/humo-corrida-3-pd6.txt:2
+Evidencia/Demo-MovilidadUrbana.Asistente/humo-corrida-1.txt:3
+Evidencia/Demo-MovilidadUrbana.Asistente/turnos-demo.tsv:9
+Evidencia/Demo-MovilidadUrbana.Asistente/pruebas-sin-servidor.txt:1
+Evidencia/Demo-MovilidadUrbana.Asistente/humo-corrida-2-pd6.txt:2
+Evidencia/Demo-MovilidadUrbana.Asistente/embeddings-fase-3a.txt:1
+Evidencia/Sondas/dep13.log:2
+Evidencia/Sondas/dep03.log:1
+Evidencia/Sondas/dep09.log:2
+Evidencia/15-Pruebas-Y-Evaluacion/correr-fake-verificar.log:1
+Evidencia/15-Pruebas-Y-Evaluacion/desvios.txt:1
+Evidencia/15-Pruebas-Y-Evaluacion/corrida-propio-fase3b.log:1
+Evidencia/15-Pruebas-Y-Evaluacion/reverificacion-redespacho.log:1
+Evidencia/15-Pruebas-Y-Evaluacion/prueba-llm.log:1
+Evidencia/15-Pruebas-Y-Evaluacion/build-pruebas-y-fake.log:1
+Evidencia/08-Primera-Herramienta-Solo-Lectura/correr-fake-reanudacion.log:1
+Evidencia/08-Primera-Herramienta-Solo-Lectura/turno.jsonl:1
+Evidencia/08-Primera-Herramienta-Solo-Lectura/pruebas-reanudacion.log:1
+Evidencia/08-Primera-Herramienta-Solo-Lectura/build-correccion-ids.log:1
+Evidencia/08-Primera-Herramienta-Solo-Lectura/reverificacion-tras-caida.log:1
+Evidencia/07-RAG-Con-Citas/reverificacion-tras-corte.log:2
+Evidencia/07-RAG-Con-Citas/desvios.txt:3
+Evidencia/07-RAG-Con-Citas/corrida-lan-turno1.log:2
+Evidencia/07-RAG-Con-Citas/estabilidad-turno1.log:4
+Evidencia/07-RAG-Con-Citas/build-pruebas-y-fake.log:1
+Evidencia/07-RAG-Con-Citas/registro-de-recursos.tsv:9
+Evidencia/07-RAG-Con-Citas/turnos.jsonl:2
+Evidencia/07-RAG-Con-Citas/reverificacion-3.log:2
+Evidencia/Arnes/06-Embeddings-Y-Busqueda-Semantica.modelo.log:1
+Evidencia/Arnes/05-Contexto-Completo-Con-Prefijo.fake.log:1
+Evidencia/Arnes/09-Caso-De-Uso-Como-Herramienta.turnos.jsonl:1
+Evidencia/Arnes/06-Embeddings-Y-Busqueda-Semantica.pruebas.log:1
+Evidencia/Arnes/12-Uno-O-Varios-Agentes.modelo.log:3
+Evidencia/Arnes/04-Normalizacion-Contra-Catalogo.turnos.jsonl:2
+Evidencia/Arnes/09-Caso-De-Uso-Como-Herramienta.fake.log:1
+Evidencia/Arnes/01-Chat-Y-Streaming.turnos.jsonl:1
+Evidencia/Arnes/04-Normalizacion-Contra-Catalogo.reverificacion.log:3
+Evidencia/Arnes/05-Contexto-Completo-Con-Prefijo.pruebas.log:1
+Evidencia/Arnes/verificar-build.log:1
+Evidencia/Arnes/09-Caso-De-Uso-Como-Herramienta.modelo.log:3
+Evidencia/Arnes/12-Uno-O-Varios-Agentes.turnos.jsonl:1
+Evidencia/Arnes/05-Contexto-Completo-Con-Prefijo.calentamiento.corrida-3.log:1
+Evidencia/13-Servidor-Y-Cliente-MCP/reverificacion-build-pruebas-fake.log:1
+Evidencia/13-Servidor-Y-Cliente-MCP/build-y-fake.log:1
+Evidencia/13-Servidor-Y-Cliente-MCP/turno.jsonl:1
+Evidencia/13-Servidor-Y-Cliente-MCP/corrida-lan-turno2.log:2
+Evidencia/16-Inyeccion-Indirecta/desvios.txt:3
+Evidencia/16-Inyeccion-Indirecta/build-pruebas-y-fake.log:1
+Evidencia/16-Inyeccion-Indirecta/registro-de-recursos.tsv:8
+Evidencia/16-Inyeccion-Indirecta/turnos.jsonl:1
+Evidencia/16-Inyeccion-Indirecta/corrida-lan-turno2.log:3
+Evidencia/02-Cambio-De-Adaptador/build-pruebas-y-fake.log:1
+04-Plan-De-Integracion.v2.md:18
+06-Construccion.md:8
+04-Plan-De-Integracion.md:22
+-- identificadores por archivo
+04-Plan-De-Integracion.v0.md:5
+README.md:1
+04-Plan-De-Integracion.v1.md:13
+07-Redaccion.md:2
+Mesa/I-06-Directiva-Del-PO-Caso-Unico-Y-Medios.md:4
+Mesa/Ciclo-3/03-Consolidacion.md:1
+Mesa/Ciclo-3/07-Aplicacion-Y-Verificacion.md:2
+Mesa/Ciclo-3/05-Parches.md:17
+Mesa/Ciclo-3/02-Informes/abogado-del-diablo.md:2
+Mesa/Ciclo-3/02-Informes/AH-02.md:4
+Mesa/Ciclo-3/02-Informes/didactica.md:2
+Mesa/Ciclo-3/02-Informes/requisitos.md:2
+Mesa/Ciclo-3/02-Informes/qa.md:1
+Mesa/Ciclo-3/02-Informes/operacion.md:5
+Mesa/Ciclo-3/02-Informes/desarrollo.md:4
+Mesa/Ciclo-3/02-Informes/arquitectura.md:2
+Mesa/Recuperacion-2026-10-28/Inventario-entorno.md:44
+Mesa/Recuperacion-2026-10-28/Inventario-decisiones.md:59
+Mesa/Ciclo-1/06-Aprobacion.md:1
+Mesa/Ciclo-1/03-Consolidacion.md:2
+Mesa/Ciclo-1/08-Cierre.md:1
+Mesa/Ciclo-1/04-Veredictos.md:1
+Mesa/Ciclo-1/07-Aplicacion-Y-Verificacion.md:1
+Mesa/Ciclo-1/05-Parches.md:14
+Mesa/Ciclo-1/02-Informes/ingenuo.md:1
+Mesa/Ciclo-1/02-Informes/abogado-del-diablo.md:2
+Mesa/Ciclo-1/02-Informes/AH-02.md:1
+Mesa/Ciclo-1/02-Informes/senior-net.md:1
+Mesa/Ciclo-1/02-Informes/qa.md:1
+Mesa/Ciclo-1/02-Informes/desarrollo.md:3
+Mesa/Ciclo-2/00-Auditoria-Homogeneidad.md:2
+Mesa/Ciclo-2/00-Revision-Abogado-NO-PROCEDE.md:2
+Mesa/Ciclo-2/06-Aprobacion.md:1
+Mesa/Ciclo-2/03-Consolidacion.md:6
+Mesa/Ciclo-2/04-Veredictos.md:6
+Mesa/Ciclo-2/01-Convocatoria.md:2
+Mesa/Ciclo-2/05-Parches.md:24
+Mesa/Ciclo-2/02-Informes/abogado-del-diablo.md:3
+Mesa/Ciclo-2/02-Informes/requisitos.md:2
+Mesa/Ciclo-2/02-Informes/qa.md:3
+Mesa/Ciclo-2/02-Informes/operacion.md:10
+Mesa/Ciclo-2/02-Informes/desarrollo.md:6
+Sondeo-Entorno.md:4
+Evidencia/Cierre-Redaccion/limpieza.redac.log:8
+Evidencia/Cierre-Redaccion/demo-pruebas.redac.log:2
+Evidencia/Cierre-Redaccion/verificar-build.redac.log:2
+Evidencia/P4-Corridas-Modelo/medidor-antes-08.log:2
+Evidencia/P4-Corridas-Modelo/medidor-despues-08.log:2
+Evidencia/P4-Corridas-Modelo/turnos-gestor.p4.tsv:15
+Evidencia/P4-Corridas-Modelo/reverificacion-p4.log:2
+Evidencia/P4-Corridas-Modelo/ext-08.log:2
+Evidencia/P4-Corridas-Modelo/turnos.p4-ext.jsonl:3
+Evidencia/P4-Corridas-Modelo/ext-04.log:2
+Evidencia/P4-Corridas-Modelo/resumen.md:8
+Evidencia/P4-Corridas-Modelo/medidor-antes-03.log:2
+Evidencia/P4-Corridas-Modelo/ext-03.log:2
+Evidencia/P4-Corridas-Modelo/medidor-antes-04.log:2
+Evidencia/Cierre-Construccion/limpieza.saneo.log:6
+Evidencia/Cierre-Construccion/medidor.saneo.log:2
+Evidencia/Cierre-Construccion/medidor-gestor.cierre.tsv:19
+Evidencia/Cierre-Construccion/medidor-arnes.p5.log:6
+Evidencia/17-Observabilidad-Y-Pipeline/desvios.txt:1
+Evidencia/17-Observabilidad-Y-Pipeline/turno.jsonl:1
+Evidencia/17-Observabilidad-Y-Pipeline/corrida-lan-turno2.log:2
+Evidencia/11-Agente-Con-Aprobacion/desvios.txt:2
+Evidencia/11-Agente-Con-Aprobacion/corrida-lan-turno1.log:2
+Evidencia/11-Agente-Con-Aprobacion/turno.jsonl:1
+Evidencia/saneamiento-R-PRIV.md:1
+Evidencia/R-LLM/04-Normalizacion-Contra-Catalogo.modelo.jsonl:2
+Evidencia/R-LLM/07-RAG-Con-Citas.modelo.jsonl:16
+Evidencia/R-LLM/09-Caso-De-Uso-Como-Herramienta.modelo.jsonl:4
+Evidencia/R-LLM/04-Normalizacion-Contra-Catalogo.modelo-ext.jsonl:8
+Evidencia/R-LLM/07-RAG-Con-Citas.interrumpida-1.jsonl:4
+Evidencia/R-LLM/17-Observabilidad-Y-Pipeline.modelo.jsonl:2
+Evidencia/R-LLM/Demo-MovilidadUrbana.Asistente.modelo.jsonl:4
+Evidencia/R-LLM/07-RAG-Con-Citas.estabilidad.jsonl:3
+Evidencia/R-LLM/12-Uno-O-Varios-Agentes.modelo.jsonl:4
+Evidencia/R-LLM/13-Servidor-Y-Cliente-MCP.modelo.jsonl:2
+Evidencia/R-LLM/03-Salida-Estructurada.jsonl:2
+Evidencia/R-LLM/16-Inyeccion-Indirecta.interrumpida-1.jsonl:16
+Evidencia/R-LLM/01-Chat-Y-Streaming.modelo.jsonl:2
+Evidencia/R-LLM/11-Agente-Con-Aprobacion.modelo.jsonl:2
+Evidencia/R-LLM/08-Primera-Herramienta-Solo-Lectura.modelo-ext.jsonl:14
+Evidencia/R-LLM/03-Salida-Estructurada.modelo-ext.jsonl:8
+Evidencia/R-LLM/08-Primera-Herramienta-Solo-Lectura.modelo.jsonl:3
+Evidencia/R-LLM/16-Inyeccion-Indirecta.modelo.jsonl:24
+Evidencia/01-Chat-Y-Streaming/estado.txt:1
+Evidencia/01-Chat-Y-Streaming/registro-de-recursos.tsv:3
+Evidencia/03-Salida-Estructurada/turno.jsonl:1
+Evidencia/Demo-MovilidadUrbana.Asistente/Demo-MovilidadUrbana.Asistente.descartada-corrida-2.jsonl:2
+Evidencia/Demo-MovilidadUrbana.Asistente/humo-corrida-3-pd6.txt:2
+Evidencia/Demo-MovilidadUrbana.Asistente/humo-corrida-1.txt:3
+Evidencia/Demo-MovilidadUrbana.Asistente/turnos-demo.tsv:9
+Evidencia/Demo-MovilidadUrbana.Asistente/humo-corrida-2-pd6.txt:2
+Evidencia/Sondas/dep13.log:2
+Evidencia/Sondas/dep09.log:2
+Evidencia/15-Pruebas-Y-Evaluacion/desvios.txt:1
+Evidencia/08-Primera-Herramienta-Solo-Lectura/turno.jsonl:1
+Evidencia/08-Primera-Herramienta-Solo-Lectura/pruebas-reanudacion.log:2
+Evidencia/07-RAG-Con-Citas/desvios.txt:3
+Evidencia/07-RAG-Con-Citas/corrida-lan-turno1.log:2
+Evidencia/07-RAG-Con-Citas/estabilidad-turno1.log:4
+Evidencia/07-RAG-Con-Citas/registro-de-recursos.tsv:9
+Evidencia/07-RAG-Con-Citas/turnos.jsonl:2
+Evidencia/Arnes/09-Caso-De-Uso-Como-Herramienta.turnos.jsonl:1
+Evidencia/Arnes/12-Uno-O-Varios-Agentes.modelo.log:3
+Evidencia/Arnes/04-Normalizacion-Contra-Catalogo.turnos.jsonl:2
+Evidencia/Arnes/09-Caso-De-Uso-Como-Herramienta.fake.log:2
+Evidencia/Arnes/01-Chat-Y-Streaming.turnos.jsonl:1
+Evidencia/Arnes/04-Normalizacion-Contra-Catalogo.reverificacion.log:3
+Evidencia/Arnes/09-Caso-De-Uso-Como-Herramienta.modelo.log:3
+Evidencia/Arnes/12-Uno-O-Varios-Agentes.turnos.jsonl:1
+Evidencia/13-Servidor-Y-Cliente-MCP/turno.jsonl:1
+Evidencia/13-Servidor-Y-Cliente-MCP/corrida-lan-turno2.log:2
+Evidencia/16-Inyeccion-Indirecta/desvios.txt:3
+Evidencia/16-Inyeccion-Indirecta/registro-de-recursos.tsv:8
+Evidencia/16-Inyeccion-Indirecta/turnos.jsonl:1
+Evidencia/16-Inyeccion-Indirecta/corrida-lan-turno2.log:3
+00-Contrato-De-Entrada.md:1
+Nucleos/N0b-Producto-Datos-Y-Perfil.md:2
+Nucleos/N2-Abstracciones-Y-Proveedores-NET.md:1
+Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:3
+Nucleos/N6-Caso-Movilidad-Urbana.md:2
+Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:2
+Nucleos/N1-Capa-IA-En-El-Stack.md:3
+04-Plan-De-Integracion.v2.md:25
+06-Construccion.md:18
+04-Plan-De-Integracion.md:22
+== 2026-10-28T20:37:19-03:00 raiz=Reanudar.md
+ip-parcial lineas=0 archivos=0
+home lineas=1 archivos=1
+usuario-mascara lineas=0 archivos=0
+cabeceras lineas=0 archivos=0
+contenedores lineas=5 archivos=1
+turnos lineas=0 archivos=0
+identificadores lineas=16 archivos=1
+-- ip-parcial por archivo
+0
+-- home por archivo
+1
+-- usuario-mascara por archivo
+0
+-- cabeceras por archivo
+0
+-- contenedores por archivo
+5
+-- turnos por archivo
+0
+-- identificadores por archivo
+16
+== 2026-10-28T20:37:19-03:00 raiz=Crear-IA-Layer-Guide-Reedicion.md
+ip-parcial lineas=0 archivos=0
+home lineas=0 archivos=0
+usuario-mascara lineas=0 archivos=0
+cabeceras lineas=0 archivos=0
+contenedores lineas=0 archivos=0
+turnos lineas=0 archivos=0
+identificadores lineas=1 archivos=1
+-- ip-parcial por archivo
+0
+-- home por archivo
+0
+-- usuario-mascara por archivo
+0
+-- cabeceras por archivo
+0
+-- contenedores por archivo
+0
+-- turnos por archivo
+0
+-- identificadores por archivo
+1

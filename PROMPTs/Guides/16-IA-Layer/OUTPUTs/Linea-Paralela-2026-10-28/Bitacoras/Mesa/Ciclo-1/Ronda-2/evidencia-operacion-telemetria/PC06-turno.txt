@@ -1,0 +1,3 @@
+EN COLA <recurso-compartido> (posición 4); esperando hasta 90 min...
+CONCEDIDO <recurso-compartido> a operacion-telemetria hasta 2026-10-28T13:47:29-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> operacion-telemetria)
+LIBERADO <recurso-compartido> por operacion-telemetria

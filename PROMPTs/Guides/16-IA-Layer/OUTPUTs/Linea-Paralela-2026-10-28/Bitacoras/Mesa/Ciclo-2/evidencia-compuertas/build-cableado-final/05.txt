@@ -1,0 +1,15 @@
+  Determining projects to restore...
+  Restored /ex/src/MovilidadUrbana.RagEnMemoria/MovilidadUrbana.RagEnMemoria.csproj (in 5.56 sec).
+  Restored /ex/tests/MovilidadUrbana.RagEnMemoria.Tests/MovilidadUrbana.RagEnMemoria.Tests.csproj (in 5.56 sec).
+  MovilidadUrbana.RagEnMemoria -> /ex/src/MovilidadUrbana.RagEnMemoria/bin/Release/net10.0/MovilidadUrbana.RagEnMemoria.dll
+  MovilidadUrbana.RagEnMemoria.Tests -> /ex/tests/MovilidadUrbana.RagEnMemoria.Tests/bin/Release/net10.0/MovilidadUrbana.RagEnMemoria.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:12.21
+Test run for /ex/tests/MovilidadUrbana.RagEnMemoria.Tests/bin/Release/net10.0/MovilidadUrbana.RagEnMemoria.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    27, Skipped:     0, Total:    27, Duration: 486 ms - MovilidadUrbana.RagEnMemoria.Tests.dll (net10.0)

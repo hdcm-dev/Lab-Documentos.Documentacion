@@ -1,0 +1,24 @@
+2026-10-27T14:40:45-0300	build	pedido	compila sondas DEP-03/09/13 (P4) (ttl 20m)
+2026-10-27T14:40:45-0300	build	concedido	compila sondas DEP-03/09/13 (P4) (ttl 20m)
+2026-10-27T14:41:08-0300	build	liberado	-
+2026-10-27T14:41:25-0300	[recurso-modelo-propio]	pedido	sonda DEP-03 num_ctx (3 llamadas, mide tiempos) (ttl 30m)
+2026-10-27T14:41:25-0300	[recurso-modelo-propio]	concedido	sonda DEP-03 num_ctx (3 llamadas, mide tiempos) (ttl 30m)
+2026-10-27T14:43:12-0300	[recurso-modelo-propio]	liberado	-
+2026-10-27T14:43:41-0300	[recurso-modelo]	pedido	sonda DEP-09 aprobación en dos peticiones (1 entrada, H) (ttl 30m)
+2026-10-27T14:43:41-0300	[recurso-modelo]	concedido	sonda DEP-09 aprobación en dos peticiones (1 entrada, H) (ttl 30m)
+2026-10-27T14:44:40-0300	[recurso-modelo]	liberado	-
+2026-10-27T14:44:46-0300	[recurso-modelo]	pedido	sonda DEP-13 calibración clase K (2 llamadas) (ttl 30m)
+2026-10-27T14:44:46-0300	[recurso-modelo]	concedido	sonda DEP-13 calibración clase K (2 llamadas) (ttl 30m)
+2026-10-27T14:48:23-0300	[recurso-modelo]	liberado	-
+2026-10-27T14:48:57-0300	build	pedido	P4: recompila 03/04/08 en seco antes de las extensiones (ttl 20m)
+2026-10-27T14:48:57-0300	build	concedido	P4: recompila 03/04/08 en seco antes de las extensiones (ttl 20m)
+2026-10-27T14:49:17-0300	build	liberado	-
+2026-10-27T14:49:25-0300	[recurso-modelo]	pedido	P4: extensión TURNO-2 de 03 (M=8) (ttl 45m)
+2026-10-27T14:49:25-0300	[recurso-modelo]	concedido	P4: extensión TURNO-2 de 03 (M=8) (ttl 45m)
+2026-10-27T14:52:55-0300	[recurso-modelo]	liberado	-
+2026-10-27T14:53:04-0300	[recurso-modelo]	pedido	P4: extensión TURNO-2 de 04 (M=8) (ttl 45m)
+2026-10-27T14:53:04-0300	[recurso-modelo]	concedido	P4: extensión TURNO-2 de 04 (M=8) (ttl 45m)
+2026-10-27T14:55:36-0300	[recurso-modelo]	liberado	-
+2026-10-27T14:55:51-0300	[recurso-modelo]	pedido	P4: extensión TURNO-2 de 08 (M=8, H) (ttl 45m)
+2026-10-27T14:55:51-0300	[recurso-modelo]	concedido	P4: extensión TURNO-2 de 08 (M=8, H) (ttl 45m)
+2026-10-27T15:07:51-0300	[recurso-modelo]	liberado	-

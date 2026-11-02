@@ -1,0 +1,40 @@
+CONCEDIDO build a ex02-streaming hasta 2026-10-28T15:09:09-0300 (renová con: <gestor-de-turnos> renovar build ex02-streaming)
+10.0.403
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:06.66
+  Passed Cancelar_a_mitad_corta_en_menos_de_un_segundo_y_no_toca_el_historial [26 ms]
+  Passed El_intervalo_de_Wilson_del_informe_reproduce_los_valores_publicados(0,10,"[0.00; 0.28]") [< 1 ms]
+  Passed El_intervalo_de_Wilson_del_informe_reproduce_los_valores_publicados(12,16,"[0.51; 0.90]") [< 1 ms]
+  Passed El_intervalo_de_Wilson_del_informe_reproduce_los_valores_publicados(10,10,"[0.72; 1.00]") [< 1 ms]
+  Passed Las_opciones_del_pedido_salen_de_OpcionesDeIA [27 ms]
+  Passed Los_fragmentos_llegan_en_orden_y_recomponen_la_respuesta [48 ms]
+  Passed Sin_TimeoutSegundos_el_host_no_arranca [169 ms]
+  Passed Una_pregunta_mas_larga_que_el_maximo_no_llama_al_modelo [2 ms]
+Test Run Successful.
+Total tests: 8
+     Passed: 8
+ Total time: 1.1907 Seconds
+--- ConModelo sin OLLAMA_ENDPOINT
+Cancelar_al_primer_texto_corta_y_libera_el_servidor: OneTimeSetUp: SetUp : Sin OLLAMA_ENDPOINT: no medido.
+Respuesta_completa_en_streaming: OneTimeSetUp: SetUp : Sin OLLAMA_ENDPOINT: no medido.
+  Skipped Cancelar_al_primer_texto_corta_y_libera_el_servidor [29 ms]
+  Skipped Respuesta_completa_en_streaming [30 ms]
+--- paquetes
+The following sources were used:
+   https://api.nuget.org/v3/index.json
+
+The given project `MovilidadUrbana.Streaming` has no vulnerable packages given the current sources.
+   https://api.nuget.org/v3/index.json
+
+The given project `MovilidadUrbana.Streaming` has no deprecated packages given the current sources.
+The following sources were used:
+   https://api.nuget.org/v3/index.json
+
+The given project `MovilidadUrbana.Streaming.Tests` has no vulnerable packages given the current sources.
+   https://api.nuget.org/v3/index.json
+
+The given project `MovilidadUrbana.Streaming.Tests` has no deprecated packages given the current sources.
+LIBERADO build por ex02-streaming

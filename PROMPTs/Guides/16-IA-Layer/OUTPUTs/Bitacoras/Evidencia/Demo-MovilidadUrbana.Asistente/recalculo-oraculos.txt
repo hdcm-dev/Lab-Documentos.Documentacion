@@ -1,0 +1,7 @@
+# tools/recalcular-oraculos.sh con los oráculos corregidos (reglas de 07, 03 y 11), 2026-10-27
+$ tools/recalcular-oraculos.sh Evidencia/R-LLM/Demo-MovilidadUrbana.Asistente.modelo.jsonl
+recalcular-oraculos: 3 de 3 entradas coinciden
+rc=0
+$ tools/recalcular-oraculos.sh Evidencia/Demo-MovilidadUrbana.Asistente/Demo-MovilidadUrbana.Asistente.descartada-corrida-2.jsonl
+recalcular-oraculos: 1 de 1 entradas coinciden
+rc=0

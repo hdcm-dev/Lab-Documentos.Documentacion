@@ -1,0 +1,15 @@
+  Determining projects to restore...
+  Restored /ex/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.csproj (in 1.89 sec).
+  Restored /ex/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests.csproj (in 1.91 sec).
+  MovilidadUrbana.Ejemplos.PruebasConClienteFalso -> /ex/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/bin/Release/net10.0/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.dll
+  MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:09.79
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    37, Skipped:     0, Total:    37, Duration: 7 s - MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests.dll (net10.0)

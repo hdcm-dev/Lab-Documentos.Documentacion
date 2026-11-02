@@ -1,0 +1,5 @@
+{"tipo":"salud","fecha":"2026-10-29T18:29:16-03:00","servidor":"estacion-1","ollama_version":"0.40.11","modelo_4b":"qwen3.5:4b","digest_4b_ok":true,"digest_emb":"ac6da0dfba84"}
+{"tipo":"api_ps","fecha":"2026-10-29T18:29:36-03:00","servidor":"estacion-1","cargados":[{"name":"qwen3.5:4b","digest":"d8b0f5e9760c","context_length":8192,"size_vram":0}]}
+{"tipo":"max-tokens","fecha":"2026-10-29T18:45:49-03:00","servidor":"estacion-1","semilla":1,"no_medido":true,"motivo":"sin respuesta en 600 s (18:29:36 a 18:39); fila agregada a mano porque el guion no la registro"}
+{"tipo":"corte","fecha":"2026-10-29T18:45:49-03:00","servidor":"estacion-1","motivo":"falla del entorno (timeout semilla 1); corrida no medida, sin reintento; semilla 2 interrumpida; v1 no corrio por ruta de dll errada del guion"}
+{"tipo":"api_ps_cierre","fecha":"2026-10-29T18:45:49-03:00","servidor":"estacion-1","cargados":["qwen3-embedding:0.6b","qwen3.5:4b"]}

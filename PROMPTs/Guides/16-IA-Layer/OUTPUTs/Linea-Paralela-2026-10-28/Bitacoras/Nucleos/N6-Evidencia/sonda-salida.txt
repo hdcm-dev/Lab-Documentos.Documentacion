@@ -1,0 +1,19 @@
+# 2026-10-26T01:51:18Z SDK 10.0.403
+/work/Program.cs(19,10): warning ASP0000: Calling 'BuildServiceProvider' from application code results in an additional copy of singleton services being created. Consider alternatives such as dependency injecting services as parameters to 'Configure'. (https://aka.ms/AA5k895) [/work/N6Probe.csproj]
+[1] EF Core SQLite: 2 localidades
+[1] SQLitePCLRaw.batteries_v2 3.0.3.3048
+[1] SQLitePCLRaw.core 3.0.3.3048
+[1] SQLitePCLRaw.provider.e_sqlite3 3.0.3.3048
+[1] SqliteVec top1 = pol-cp (LocalidadPolicy.RequisitoDelCodigoPostal)
+[1] EF Core sigue operativo tras sqlite-vec: 2 localidades
+[2] resultado de herramienta visto por el modelo: c1=INVALIDO: codigoPostal: El código postal debe tener 4 dígitos.
+[2] resultado de herramienta visto por el modelo: c2=Se agregó la localidad Goya.
+[2] respuesta final: Listo.
+[2] localidades en base: 3
+[2] ApprovalRequiredAIFunction existe: True
+[3] propuesta tipada: LocalidadPropuesta { Nombre = Bella Vista, Provincia = Corrientes, CodigoPostal = 3432, Habitantes = 0 }
+[3] errores de dominio: habitantes: Ingrese una cantidad de habitantes mayor a cero.
+[4] agente AsistenteMovilidad: Hay 3 localidades.
+[5] herramientas MCP: listar_localidades
+[5] listar_localidades → ["[\u0022Corrientes (Corrientes)\u0022,\u0022Resistencia (Chaco)\u0022,\u0022Goya (Corrientes)\u0022]"]
+[5] McpClientTool es AIFunction: True

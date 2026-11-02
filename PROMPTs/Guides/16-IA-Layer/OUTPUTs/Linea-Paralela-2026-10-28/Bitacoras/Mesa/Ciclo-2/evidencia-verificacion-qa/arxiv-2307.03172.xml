@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/JB0PT1a5lO4DzcvZwsowZbpScsc</id>
+  <title>arXiv Query: search_query=&amp;id_list=2307.03172&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-28T20:38:27Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2307.03172" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2307.03172v3</id>
+    <title>Lost in the Middle: How Language Models Use Long Contexts</title>
+    <updated>2023-11-20T23:09:34Z</updated>
+    <link href="https://arxiv.org/abs/2307.03172v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.03172v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While recent language models have the ability to take long contexts as input, relatively little is known about how well they use longer context. We analyze the performance of language models on two tasks that require identifying relevant information in their input contexts: multi-document question answering and key-value retrieval. We find that performance can degrade significantly when changing the position of relevant information, indicating that current language models do not robustly make use of information in long input contexts. In particular, we observe that performance is often highest when relevant information occurs at the beginning or end of the input context, and significantly degrades when models must access relevant information in the middle of long contexts, even for explicitly long-context models. Our analysis provides a better understanding of how language models use their input context and provides new evaluation protocols for future long-context language models.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-06T17:54:11Z</published>
+    <arxiv:comment>18 pages, 16 figures. Accepted for publication in Transactions of the Association for Computational Linguistics (TACL), 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Nelson F. Liu</name>
+    </author>
+    <author>
+      <name>Kevin Lin</name>
+    </author>
+    <author>
+      <name>John Hewitt</name>
+    </author>
+    <author>
+      <name>Ashwin Paranjape</name>
+    </author>
+    <author>
+      <name>Michele Bevilacqua</name>
+    </author>
+    <author>
+      <name>Fabio Petroni</name>
+    </author>
+    <author>
+      <name>Percy Liang</name>
+    </author>
+  </entry>
+</feed>

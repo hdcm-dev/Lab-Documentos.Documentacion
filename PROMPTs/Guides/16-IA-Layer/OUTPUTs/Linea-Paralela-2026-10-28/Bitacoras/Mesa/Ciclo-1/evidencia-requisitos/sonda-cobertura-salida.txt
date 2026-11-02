@@ -1,0 +1,62 @@
+## [1] ESC-/CTX- y 'escenario' por registro de núcleo
+N0b-Producto-Datos-Y-Perfil.md | ESC=6 | CTX=9 | escenario=14 | "Aplicación por escenario"=0
+N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md | ESC=8 | CTX=6 | escenario=3 | "Aplicación por escenario"=0
+N1-Capa-IA-En-El-Stack.md | ESC=0 | CTX=0 | escenario=0 | "Aplicación por escenario"=0
+N2-Abstracciones-Y-Proveedores-NET.md | ESC=0 | CTX=0 | escenario=0 | "Aplicación por escenario"=0
+N3b-CAG-Y-Estrategias-De-Conocimiento.md | ESC=2 | CTX=7 | escenario=2 | "Aplicación por escenario"=2
+N3-RAG-En-NET.md | ESC=0 | CTX=0 | escenario=0 | "Aplicación por escenario"=0
+N4-Agentes-Y-Orquestacion.md | ESC=0 | CTX=0 | escenario=2 | "Aplicación por escenario"=0
+N5-Operacion-Calidad-Seguridad.md | ESC=0 | CTX=1 | escenario=4 | "Aplicación por escenario"=0
+N6-Caso-Movilidad-Urbana.md | ESC=5 | CTX=0 | escenario=9 | "Aplicación por escenario"=0
+
+## [2] Propuestas del PO PR-n: menciones en 04-Integracion y en la convocatoria del ciclo 1
+PR-1 | 04=1 | 00-Convocatoria=0
+PR-2 | 04=2 | 00-Convocatoria=0
+PR-3 | 04=0 | 00-Convocatoria=0
+PR-4 | 04=0 | 00-Convocatoria=0
+PR-5 | 04=0 | 00-Convocatoria=0
+PR-6 | 04=0 | 00-Convocatoria=0
+PR-7 | 04=0 | 00-Convocatoria=0
+PR-8 | 04=1 | 00-Convocatoria=0
+PR-9 | 04=3 | 00-Convocatoria=0
+PR-10 | 04=2 | 00-Convocatoria=0
+PR-11 | 04=1 | 00-Convocatoria=0
+PR-12 | 04=1 | 00-Convocatoria=0
+PR-13 | 04=5 | 00-Convocatoria=0
+PR-14 | 04=4 | 00-Convocatoria=0
+PR-15 | 04=1 | 00-Convocatoria=0
+PR-16 | 04=2 | 00-Convocatoria=0
+PR-17 | 04=4 | 00-Convocatoria=0
+PR-18 | 04=0 | 00-Convocatoria=0
+PR-19 | 04=0 | 00-Convocatoria=0
+PR-20 | 04=0 | 00-Convocatoria=0
+PR-21 | 04=0 | 00-Convocatoria=0
+PR-22 | 04=0 | 00-Convocatoria=0
+
+## [3] I-06 / RD-PO en el contrato de entrada
+menciones RD-PO|I-06 en 00-Contrato-De-Entrada.md = 0
+
+## [4] Trazabilidad 02 §6: filas para núcleos agregados y para preguntas de REED-16 §7
+N0b en 02 §6 = 0
+N1b en 02 §6 = 0
+N3b en 02 §6 = 0
+Anexo F en 02 §6 = 0
+pregunta en 02 §6 = 0
+Pregunta en 02 §6 = 1
+
+## [5] Pendientes de 04 §7 que nombran N1 / N3 / N6 snippets
+P-14: P-14 | Snippets de N2, N4 y N5 reilustrados (RD-PO-3) y con el modelo por variable, compilados y corridos 
+menciones de N1 en 04 §7 = 0
+N1, nota de reanudación, fila 3:
+532:| 3 | Snippets no ejecutados contra un modelo (§4 encabezado, §8.3) | (a) | Nunca se corrieron, tampoco contra la LAN. Correr 4.1, 4.3, 4.4 y 4.6 contra estación 1 con `OLLAMA_ENDPOINT` y el modelo p
+
+## [6] Fila N6 de 03 §4.1 y delegación de N6 §8.8
+84:| N6 Caso Movilidad Urbana | candidato | candidato | candidato | candidato | candidato |
+573:| §8.8 — fuentes de N0 (IDs de escenario, contexto y actor) | (b) | Es de proceso | Sigue abierto, pero **desbloqueado**: `03-Marco-De-Referencia.md` ya define ESC-01…05, CTX-* y ACT-*. El mapeo de §1.5 a esos IDs queda para la integración |
+ESC-0n en N6 Anexo A (recorrido D1–D7) = 0
+
+## [7] Ranura de Examples para MI-04 y PR-22
+arquitectura en N6 Anexo B = 0
+KernelFunction en N6 Anexo B = 0
+negativ en N6 Anexo B = 0
+MovilidadUrbana.Web: SUP-05 = 'SUP-05 | La demo cubre la web (Blazor Interactive Server) y la API REST del caso base; la app MAUI queda fuera. '

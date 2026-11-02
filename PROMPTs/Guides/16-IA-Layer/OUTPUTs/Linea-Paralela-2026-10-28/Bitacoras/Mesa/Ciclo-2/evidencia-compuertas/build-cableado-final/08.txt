@@ -1,0 +1,17 @@
+  Determining projects to restore...
+  Restored /ex/src/MovilidadUrbana.Ejemplos.Mcp.Servidor/MovilidadUrbana.Ejemplos.Mcp.Servidor.csproj (in 3.66 sec).
+  Restored /ex/tests/MovilidadUrbana.Ejemplos.Mcp.Tests/MovilidadUrbana.Ejemplos.Mcp.Tests.csproj (in 3.68 sec).
+  Restored /ex/src/MovilidadUrbana.Ejemplos.Mcp.Cliente/MovilidadUrbana.Ejemplos.Mcp.Cliente.csproj (in 3.66 sec).
+  MovilidadUrbana.Ejemplos.Mcp.Servidor -> /ex/src/MovilidadUrbana.Ejemplos.Mcp.Servidor/bin/Release/net10.0/MovilidadUrbana.Ejemplos.Mcp.Servidor.dll
+  MovilidadUrbana.Ejemplos.Mcp.Cliente -> /ex/src/MovilidadUrbana.Ejemplos.Mcp.Cliente/bin/Release/net10.0/MovilidadUrbana.Ejemplos.Mcp.Cliente.dll
+  MovilidadUrbana.Ejemplos.Mcp.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.Mcp.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.Mcp.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:12.37
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.Mcp.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.Mcp.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    44, Skipped:     0, Total:    44, Duration: 1 s - MovilidadUrbana.Ejemplos.Mcp.Tests.dll (net10.0)

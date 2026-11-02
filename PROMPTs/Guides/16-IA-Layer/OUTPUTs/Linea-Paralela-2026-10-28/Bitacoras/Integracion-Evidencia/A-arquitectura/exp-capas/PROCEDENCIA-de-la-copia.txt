@@ -1,0 +1,1 @@
+Copia literal de src/MovilidadUrbana.ApiWeb/{Domain,Application} de hdcm-dev/Lab-E2E.WebBlazor, HEAD 59399ba (2026-10-27 09:59:17 -0300); sin cambios en esas carpetas desde 8fb4c3a (git diff --stat 8fb4c3a HEAD vacío).

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/MovilidadUrbana.Ejemplos.AnotacionesPareadas/MovilidadUrbana.Ejemplos.AnotacionesPareadas.csproj" />
+  <Project Path="tests/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests.csproj" />
+</Solution>

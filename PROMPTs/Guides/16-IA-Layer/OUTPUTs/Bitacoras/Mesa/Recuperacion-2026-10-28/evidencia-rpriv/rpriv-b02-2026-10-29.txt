@@ -1,0 +1,62 @@
+# B-02, paso 2.12 — barrido R-PRIV sobre Bitacoras/ (incluye Mesa/Recuperacion-2026-10-28/). Sólo recuentos; nunca el texto.
+## 1. Barrido ampliado de la mesa (evidencia-rpriv/rpriv-ampliado.sh, lista de 41 términos fuera del repo), Bitacoras/ entera
+== 2026-10-29T12:59:39-03:00 raiz=Bitacoras
+ip-parcial lineas=0 archivos=0
+home lineas=0 archivos=0
+usuario-mascara lineas=2 archivos=2
+cabeceras lineas=0 archivos=0
+contenedores lineas=0 archivos=0
+turnos lineas=201 archivos=37
+identificadores lineas=201 archivos=37
+rc=1
+## 2. Ídem, Bitacoras/ sin las capturas .jsonl y .tsv (valor histórico declarado); los 2 «usuario-mascara» son paquete@versión (RPRI-19)
+== 2026-10-29T12:59:40-03:00 raiz=Bitacoras
+ip-parcial lineas=0 archivos=0
+home lineas=0 archivos=0
+usuario-mascara lineas=2 archivos=2
+cabeceras lineas=0 archivos=0
+contenedores lineas=0 archivos=0
+turnos lineas=0 archivos=0
+identificadores lineas=0 archivos=0
+-- ip-parcial por archivo
+-- home por archivo
+-- usuario-mascara por archivo
+Nucleos/N2-Abstracciones-Y-Proveedores-NET.md:1
+Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:1
+-- cabeceras por archivo
+-- contenedores por archivo
+-- turnos por archivo
+-- identificadores por archivo
+rc=1
+## 3. Ídem, sólo Mesa/Recuperacion-2026-10-28/
+== 2026-10-29T12:59:40-03:00 raiz=Recuperacion-2026-10-28
+ip-parcial lineas=0 archivos=0
+home lineas=0 archivos=0
+usuario-mascara lineas=0 archivos=0
+cabeceras lineas=0 archivos=0
+contenedores lineas=0 archivos=0
+turnos lineas=0 archivos=0
+identificadores lineas=0 archivos=0
+rc=0
+## 4. Compuerta R-PRIV del repo (tools/compuerta-rpriv.sh, COMPUERTAS_DIR fuera del repo), Bitacoras/ sin capturas
+ip-privada: 0
+home: 0
+usuario-mascara: 0
+cabeceras: 0
+contenedores: 0
+turnos: 0
+etiqueta: 0
+identificadores: 0
+R-PRIV: 0 hallazgo(s); clases privadas: patrones=4 lista=40 historicos=1
+## 5. Ídem, Bitacoras/ entera: archivos con hallazgos, por extensión
+     30 jsonl
+      6 tsv
+ip-privada: 0
+home: 0
+usuario-mascara: 0
+cabeceras: 0
+contenedores: 0
+turnos: 185
+etiqueta: 0
+identificadores: 185
+R-PRIV: 370 hallazgo(s); clases privadas: patrones=4 lista=40 historicos=1

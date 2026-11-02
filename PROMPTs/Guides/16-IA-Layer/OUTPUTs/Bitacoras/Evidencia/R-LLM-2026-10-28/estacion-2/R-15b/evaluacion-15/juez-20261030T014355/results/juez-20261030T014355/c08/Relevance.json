@@ -1,0 +1,69 @@
+{
+  "scenarioName": "c08",
+  "iterationName": "Relevance",
+  "executionName": "juez-20261030T014355",
+  "creationTime": "2026-10-30T02:27:11.6952198Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "\u00BFCu\u00E1nto puede durar el viaje que se declara en la encuesta?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "El viaje declarado en la encuesta debe tener una duraci\u00F3n entre 1 y 600 minutos."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Relevance": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Relevance",
+        "reason": "The response directly and accurately answers the specific question about the duration limit of the trip mentioned in the survey, providing the complete range (1 to 600 minutes) without missing key details or adding extraneous information.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "qwen3.5:4b",
+          "eval-input-tokens": "998",
+          "eval-output-tokens": "704",
+          "eval-total-tokens": "1702",
+          "eval-duration-ms": "78677.59"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 78.6773854,
+        "model": "qwen3.5:4b",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 998,
+          "outputTokenCount": 704,
+          "totalTokenCount": 1702
+        },
+        "cacheKey": "1CD79DAEF2544425447F20D2095C01EBC3C6A74657A3CA2D314074260150C2E2E60370C9B7871F6D1D2EEA125885B305",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

@@ -1,0 +1,101 @@
+Test run for /work/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.ChatBasico.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+/work/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.ChatBasico.Tests.dll
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.ChatBasico.Tests.dll
+   NUnit3TestExecutor discovered 18 of 18 NUnit test cases using Current Discovery mode, Non-Explicit run
+Concurrencia:Permisos = 0 → OptionsValidationException: DataAnnotation validation failed for 'OpcionesDeIA.Concurrencia' members: 'Permisos' with the error: 'The field Permisos must be between 1 and 64.'.
+
+sin TimeoutSegundos → OptionsValidationException: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.
+
+ollama: Authorization=Bearer <credencial>; credencial en el cuerpo: False
+
+  Passed ConConfiguracionCompleta_Arranca [288 ms]
+  Passed ConPermisosCero_NoArranca [33 ms]
+  Standard Output Messages:
+ Concurrencia:Permisos = 0 → OptionsValidationException: DataAnnotation validation failed for 'OpcionesDeIA.Concurrencia' members: 'Permisos' with the error: 'The field Permisos must be between 1 and 64.'.
+
+
+  Passed ConProveedorDesconocido_NoArranca [8 ms]
+  Passed SinTimeoutSegundos_NoArranca [3 ms]
+  Standard Output Messages:
+ sin TimeoutSegundos → OptionsValidationException: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.
+
+
+  Passed Credencial_ViajaComoEncabezado_YNoEnElCuerpo("ollama") [224 ms]
+  Standard Output Messages:
+ ollama: Authorization=Bearer <credencial>; credencial en el cuerpo: False
+
+
+openai-compatible: Authorization=Bearer <credencial>; credencial en el cuerpo: False
+
+POST /api/chat  options={"num_ctx":8192,"presence_penalty":1.5,"temperature":0.7,"num_predict":3,"top_k":20,"top_p":0.8}  think=false
+
+POST /v1/chat/completions  cuerpo sin mensajes={"temperature":0.7,"top_p":0.8,"model":"modelo-de-prueba","reasoning_effort":"none","max_completion_tokens":3,"presence_penalty":1.5}
+
+2001 caracteres → La entrada tiene 2001 caracteres; el máximo es 2000.; llamadas al modelo: 0
+
+roles del segundo pedido: system, user, assistant, user
+
+  Passed Credencial_ViajaComoEncabezado_YNoEnElCuerpo("openai-compatible") [256 ms]
+  Standard Output Messages:
+ openai-compatible: Authorization=Bearer <credencial>; credencial en el cuerpo: False
+
+
+  Passed ViaNativa_LlevaNumCtxTopKYNumPredict [11 ms]
+  Standard Output Messages:
+ POST /api/chat  options={"num_ctx":8192,"presence_penalty":1.5,"temperature":0.7,"num_predict":3,"top_k":20,"top_p":0.8}  think=false
+
+
+  Passed ViaV1_DescartaTopKYNumCtx_YTraduceMaxOutputTokens [7 ms]
+  Standard Output Messages:
+ POST /v1/chat/completions  cuerpo sin mensajes={"temperature":0.7,"top_p":0.8,"model":"modelo-de-prueba","reasoning_effort":"none","max_completion_tokens":3,"presence_penalty":1.5}
+
+
+  Passed EntradaDe2000Caracteres_LlamaUnaVez [6 ms]
+  Passed EntradaDe2001Caracteres_SeRechazaSinLlamarAlModelo [8 ms]
+  Standard Output Messages:
+ 2001 caracteres → La entrada tiene 2001 caracteres; el máximo es 2000.; llamadas al modelo: 0
+
+
+  Passed SegundaPregunta_ViajaConElHistorial [26 ms]
+  Standard Output Messages:
+ roles del segundo pedido: system, user, assistant, user
+
+
+  Passed ElPatronDetectaUnLiteral("IChatClient c = new OllamaApiClient(new Uri(\"http://localhost:11434\"), \"qwen3.5:4b\");") [6 ms]
+  Passed ElPatronDetectaUnLiteral("opciones.AdditionalProperties[\"num_ctx\"] = 8192;") [< 1 ms]
+  Passed ElPatronDetectaUnLiteral("http.Timeout = TimeSpan.FromSeconds(300);") [< 1 ms]
+archivos .cs revisados: 5; literales fuera de opciones: 0
+
+ollama → OllamaSharp.OllamaApiClient; proveedor según metadatos: ollama
+
+openai-compatible → Microsoft.Extensions.AI.OpenAIChatClient; proveedor según metadatos: openai
+
+sin [ValidateObjectMembers], Permisos = 0 y el anfitrión arrancó
+
+  Passed NingunLiteralDeConfiguracionFueraDeOpciones [56 ms]
+  Standard Output Messages:
+ archivos .cs revisados: 5; literales fuera de opciones: 0
+
+
+  Passed Ollama_DaElClienteNativo [6 ms]
+  Standard Output Messages:
+ ollama → OllamaSharp.OllamaApiClient; proveedor según metadatos: ollama
+
+
+  Passed OpenAICompatible_DaElAdaptadorDeOpenAI [4 ms]
+  Standard Output Messages:
+ openai-compatible → Microsoft.Extensions.AI.OpenAIChatClient; proveedor según metadatos: openai
+
+
+  Passed SinElAtributo_PermisosCeroArranca [7 ms]
+  Standard Output Messages:
+ sin [ValidateObjectMembers], Permisos = 0 y el anfitrión arrancó
+
+
+
+Test Run Successful.
+Total tests: 18
+     Passed: 18
+ Total time: 2.7004 Seconds

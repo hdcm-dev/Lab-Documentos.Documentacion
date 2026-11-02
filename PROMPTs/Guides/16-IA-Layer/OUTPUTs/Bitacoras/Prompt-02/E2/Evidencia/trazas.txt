@@ -1,0 +1,12 @@
+P-1 anclas 3 / 3 refs 2 / 2 faltan []
+P-2 anclas 2 / 2 refs 2 / 2 faltan []
+P-3 anclas 2 / 2 refs 1 / 1 faltan []
+P-4 anclas 3 / 3 refs 2 / 2 faltan []
+P-5 anclas 3 / 3 refs 2 / 2 faltan []
+P-6 anclas 4 / 4 refs 3 / 3 faltan []
+P-7 anclas 3 / 3 refs 2 / 2 faltan []
+P-8 anclas 3 / 3 refs 2 / 2 faltan []
+P-9 anclas 4 / 4 refs 2 / 2 faltan []
+P-10 anclas 3 / 3 refs 2 / 2 faltan []
+fallas 0
+rc=0

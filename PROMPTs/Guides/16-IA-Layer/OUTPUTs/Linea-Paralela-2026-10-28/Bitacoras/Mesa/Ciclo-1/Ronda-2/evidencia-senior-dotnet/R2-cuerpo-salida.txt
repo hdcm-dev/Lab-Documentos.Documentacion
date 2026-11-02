@@ -1,0 +1,65 @@
+CONCEDIDO build a senior-dotnet-r2 hasta 2026-10-28T12:27:56-0300 (renová con: <gestor-de-turnos> renovar build senior-dotnet-r2)
+10.0.403
+# MEAI 10.11.0.0; MEAI.OpenAI 10.11.0.0; OpenAI 2.14.0.0; OllamaSharp 5.5.0.0; runtime 10.0.14
+# servidor falso: Kestrel en loopback, puerto efímero (no se registra)
+
+## PC-03 <clave-de-cabeceras>
+[A] cliente sin encabezados → POST /api/chat
+      encabezados HTTP: Content-Type: application/json; charset=utf-8
+      cuerpo: {"model":"modelo-x","messages":[{"role":"user","content":"hola"}],"options":{},"stream":false,"<clave-de-cabeceras>":{}}
+[B] OllamaApiClient.DefaultRequestHeaders["X-Prueba-Clave"] → POST /api/chat
+      encabezados HTTP: Content-Type: application/json; charset=utf-8 | X-Prueba-Clave: VALOR-SENSIBLE-DE-PRUEBA
+      cuerpo: {"model":"modelo-x","messages":[{"role":"user","content":"hola"}],"options":{},"stream":false,"<clave-de-cabeceras>":{}}
+[C] ChatRequest.<clave-de-cabeceras> por RawRepresentationFactory → POST /api/chat
+      encabezados HTTP: Content-Type: application/json; charset=utf-8 | X-Prueba-Clave: VALOR-SENSIBLE-DE-PRUEBA | X-Por-Pedido: VALOR-POR-PEDIDO
+      cuerpo: {"model":"modelo-x","messages":[{"role":"user","content":"hola"}],"options":{},"stream":false,"<clave-de-cabeceras>":{"X-Por-Pedido":"VALOR-POR-PEDIDO"}}
+[D] embeddings con DefaultRequestHeaders → POST /api/embed
+      encabezados HTTP: Content-Type: application/json; charset=utf-8 | X-Prueba-Clave: VALOR-SENSIBLE-DE-PRUEBA
+      cuerpo: {"model":"emb-x","input":["texto"],"options":null,"<clave-de-cabeceras>":{}}
+[E] encabezado puesto en HttpClient.DefaultRequestHeaders → POST /api/chat
+      encabezados HTTP: Content-Type: application/json; charset=utf-8 | X-Prueba-Clave: VALOR-EN-HTTPCLIENT
+      cuerpo: {"model":"modelo-x","messages":[{"role":"user","content":"hola"}],"options":{},"stream":false,"<clave-de-cabeceras>":{}}
+[F] JsonSerializer.Serialize(ChatRequest) con opciones por defecto → {"model":"m","messages":null,"stream":true,"<clave-de-cabeceras>":{"X-K":"v"}}
+[G] con oc.OutgoingJsonSerializerOptions → {"model":"m","messages":null,"stream":true,"<clave-de-cabeceras>":{"X-K":"v"}}
+[H] OllamaRequest.<clave-de-cabeceras> atributos: []
+
+## PC-04 prompt_eval_cached_count (el falso devuelve prompt_eval_count 1467 y prompt_eval_cached_count 954)
+[A] Usage: Input=1467 Output=3 Total=1470 CachedInput=null Reasoning=null AdditionalCounts=null
+[B] ChatResponse.AdditionalProperties=load_duration=00:00:00,total_duration=00:00:00.0000010,prompt_eval_duration=00:00:00.0000005,eval_duration=00:00:00.0000001
+[C] RawRepresentation=OllamaSharp.Models.Chat.ChatDoneResponseStream
+      ChatDoneResponseStream.TotalDuration (Int64) [JsonPropertyNameAttribute] = 1000
+      ChatDoneResponseStream.LoadDuration (Int64) [JsonPropertyNameAttribute] = 0
+      ChatDoneResponseStream.PromptEvalCount (Int32) [JsonPropertyNameAttribute] = 1467
+      ChatDoneResponseStream.PromptEvalDuration (Int64) [JsonPropertyNameAttribute] = 500
+      ChatDoneResponseStream.EvalCount (Int32) [JsonPropertyNameAttribute] = 3
+      ChatDoneResponseStream.EvalDuration (Int64) [JsonPropertyNameAttribute] = 100
+      ChatDoneResponseStream.DoneReason (String) [JsonPropertyNameAttribute] = "stop"
+      ChatResponseStream.Model (String) [JsonPropertyNameAttribute] = "modelo-x"
+      ChatResponseStream.CreatedAtString (String) [NullableAttribute,JsonPropertyNameAttribute] = "2026-10-28T00:00:00Z"
+      ChatResponseStream.CreatedAt (Nullable`1) [JsonIgnoreAttribute] = 10/28/2026 00:00:00 +00:00
+      ChatResponseStream.Message (Message) [JsonPropertyNameAttribute] = OllamaSharp.Models.Chat.Message
+      ChatResponseStream.Done (Boolean) [JsonPropertyNameAttribute] = True
+[D] Messages[^1].RawRepresentation=OllamaSharp.Models.Chat.Message
+[E] propiedades con «Cache» en todo OllamaSharp: []
+[F] propiedades [JsonExtensionData] en OllamaSharp: [ModelInfo.ExtraInfo, ProjectorInfo.ExtraInfo]
+[G] streaming UsageContent: Input=1467 CachedInput=null AdditionalCounts=null
+[H] remedio DelegatingHandler: prompt_eval_count=1467 prompt_eval_cached_count=954; respuesta del IChatClient intacta: «ok»
+[I] vía /v1 (MEAI.OpenAI) con usage.prompt_tokens_details.cached_tokens=954 en la respuesta: Input=1467 CachedInput=954 AdditionalCounts=InputTokenDetails.AudioTokenCount=0
+
+## PC-05 muestreo
+[A] OllamaSharp /api/chat con Temperature 0.7, TopP 0.8, TopK 20, PresencePenalty 1.5, FrequencyPenalty 0.1, Seed 7, MaxOutputTokens 64 → POST /api/chat
+      encabezados HTTP: Content-Type: application/json; charset=utf-8 | X-Prueba-Clave: VALOR-SENSIBLE-DE-PRUEBA
+      cuerpo: {"model":"modelo-x","messages":[{"role":"user","content":"hola"}],"options":{"presence_penalty":1.5,"frequency_penalty":0.1,"temperature":0.7,"seed":7,"num_predict":64,"top_k":20,"top_p":0.8},"stream":false,"<clave-de-cabeceras>":{}}
+[B] MEAI.OpenAI /v1/chat/completions con las mismas ChatOptions → POST /v1/chat/completions
+      encabezados HTTP: Accept: application/json | User-Agent: OpenAI/2.14.0 (.NET 10.0.14; Ubuntu 24.04.5 LTS) MEAI/10.11.0 | Authorization: Bearer no-se-usa | Content-Type: application/json | X-Stainless-Lang: csharp | X-Stainless-Package-Version: 2.14.0 | X-Stainless-Runtime: dotnet | X-Stainless-Runtime-Version: 10.0.14 | X-Stainless-OS: Linux | X-Stainless-Arch: x64
+      cuerpo: {"temperature":0.7,"top_p":0.8,"messages":[{"role":"user","content":"hola"}],"model":"modelo-x","max_completion_tokens":64,"frequency_penalty":0.1,"presence_penalty":1.5,"seed":7}
+[C] /v1 con AdditionalProperties["top_k"]=20 → POST /v1/chat/completions
+      encabezados HTTP: Accept: application/json | User-Agent: OpenAI/2.14.0 (.NET 10.0.14; Ubuntu 24.04.5 LTS) MEAI/10.11.0 | Authorization: Bearer no-se-usa | Content-Type: application/json | X-Stainless-Lang: csharp | X-Stainless-Package-Version: 2.14.0 | X-Stainless-Runtime: dotnet | X-Stainless-Runtime-Version: 10.0.14 | X-Stainless-OS: Linux | X-Stainless-Arch: x64
+      cuerpo: {"temperature":0.7,"top_p":0.8,"messages":[{"role":"user","content":"hola"}],"model":"modelo-x","max_completion_tokens":64,"frequency_penalty":0.1,"presence_penalty":1.5,"seed":7}
+[D] /v1 con RawRepresentationFactory → ChatCompletionOptions.Patch.Set("$.top_k", 20) → POST /v1/chat/completions
+      encabezados HTTP: Accept: application/json | User-Agent: OpenAI/2.14.0 (.NET 10.0.14; Ubuntu 24.04.5 LTS) MEAI/10.11.0 | Authorization: Bearer no-se-usa | Content-Type: application/json | X-Stainless-Lang: csharp | X-Stainless-Package-Version: 2.14.0 | X-Stainless-Runtime: dotnet | X-Stainless-Runtime-Version: 10.0.14 | X-Stainless-OS: Linux | X-Stainless-Arch: x64
+      cuerpo: {"temperature":0.7,"top_p":0.8,"messages":[{"role":"user","content":"hola"}],"model":"modelo-x","max_completion_tokens":64,"frequency_penalty":0.1,"presence_penalty":1.5,"seed":7,"top_k":20}
+[E] OllamaSharp con AdditionalProperties top_k/min_p/repeat_penalty → POST /api/chat
+      encabezados HTTP: Content-Type: application/json; charset=utf-8 | X-Prueba-Clave: VALOR-SENSIBLE-DE-PRUEBA
+      cuerpo: {"model":"modelo-x","messages":[{"role":"user","content":"hola"}],"options":{"repeat_penalty":1,"top_k":20,"min_p":0},"stream":false,"<clave-de-cabeceras>":{}}
+LIBERADO build por senior-dotnet-r2

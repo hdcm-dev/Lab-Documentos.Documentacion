@@ -1,0 +1,43 @@
+EN COLA build (posición 1); esperando hasta 90 min...
+CONCEDIDO build a ej08-mcp hasta 2026-10-28T16:12:12-0300 (renová con: <gestor-de-turnos> renovar build ej08-mcp)
+    0 Error(s)
+    0 Warning(s)
+=== consola sin modelo
+Servidor MCP: MovilidadUrbana.Ejemplos.Mcp.Cliente 1.0.0.0, protocolo 2026-07-28
+Herramientas aceptadas: contar_localidades_por_provincia, listar_localidades
+Descartadas por la lista blanca: ninguna
+Modelo: ninguno (cliente guionado)
+
+> ¿Cuántas localidades hay cargadas en Chaco?
+  [mcp] contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}
+  (sin modelo) La herramienta devolvió: {"$type":"text","Text":"{\n  \u0022ok\u0022: true,\n  \u0022datos\u0022: {\n    \u0022provincia\u0022: \u0022Chaco\u0022,\n    \u0022cantidad\u0022: 1\n  },\n  \u0022errores\u0022: {}\n}","Annotations":null,"AdditionalProperties":null}
+
+> ¿Qué localidades hay cargadas en Corrientes?
+  [mcp] listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}
+  (sin modelo) La herramienta devolvió: {"$type":"text","Text":"{\n  \u0022ok\u0022: true,\n  \u0022datos\u0022: [\n    {\n      \u0022nombre\u0022: \u0022Corrientes\u0022,\n      \u0022provincia\u0022: \u0022Corrientes\u0022,\n      \u0022codigoPostal\u0022: \u00223400\u0022,\n      \u0022habitantes\u0022: 346334\n    }\n  ],\n  \u0022errores\u0022: {}\n}","Annotations":null,"AdditionalProperties":null}
+
+Escrituras en el servidor: 0
+rc consola=0
+=== consola sin DOTNET_ENVIRONMENT
+Configuración inválida: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'. | DataAnnotation validation failed for 'OpcionesDelClienteMcp' members: 'Token' with the error: 'The Token field is required.'.
+rc consola=3
+LIBERADO build por ej08-mcp
+rc=0

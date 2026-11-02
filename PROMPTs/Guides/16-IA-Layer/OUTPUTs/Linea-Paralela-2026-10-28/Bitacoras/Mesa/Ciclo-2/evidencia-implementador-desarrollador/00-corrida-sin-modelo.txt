@@ -1,0 +1,35 @@
+CONCEDIDO build a <agente> hasta 2026-10-28T18:48:52-0300 (renová con: <gestor-de-turnos> renovar build <agente>)
+### 06-build :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -v <copia-limpia>/Examples/06-Tool-Calling:/ex -w /ex mcr.microsoft.com/dotnet/sdk:10.0 dotnet build 06-Tool-Calling.slnx
+rc=0
+### 06-cableado :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -v <copia-limpia>/Examples/06-Tool-Calling:/ex -w /ex mcr.microsoft.com/dotnet/sdk:10.0 dotnet test 06-Tool-Calling.slnx --filter TestCategory=Cableado
+rc=0
+### 06-consola-sinmodelo :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -e DOTNET_ENVIRONMENT=Development -v <copia-limpia>/Examples/06-Tool-Calling:/ex -w /ex mcr.microsoft.com/dotnet/sdk:10.0 dotnet run --project src/MovilidadUrbana.Ejemplos.ToolCalling -- --sin-modelo
+rc=0
+### 06-consola-sinenv :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -v <copia-limpia>/Examples/06-Tool-Calling:/ex -w /ex mcr.microsoft.com/dotnet/sdk:10.0 dotnet run --project src/MovilidadUrbana.Ejemplos.ToolCalling -- --sin-modelo
+rc=3
+### 06-suite-completa :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -v <copia-limpia>/Examples/06-Tool-Calling:/ex -w /ex mcr.microsoft.com/dotnet/sdk:10.0 dotnet test 06-Tool-Calling.slnx
+rc=0
+### 07-build :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -v <copia-limpia>/Examples/07-Agente-Con-Aprobacion:/work -w /work mcr.microsoft.com/dotnet/sdk:10.0 dotnet build 07-Agente-Con-Aprobacion.slnx -c Release
+rc=0
+### 07-cableado :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -v <copia-limpia>/Examples/07-Agente-Con-Aprobacion:/work -w /work mcr.microsoft.com/dotnet/sdk:10.0 dotnet test 07-Agente-Con-Aprobacion.slnx -c Release --filter TestCategory=Cableado
+rc=0
+### 07-consola-s :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -e DOTNET_ENVIRONMENT=Development -v <copia-limpia>/Examples/07-Agente-Con-Aprobacion:/work -w /work mcr.microsoft.com/dotnet/sdk:10.0 dotnet run --project src/MovilidadUrbana.Ejemplos.AgenteConAprobacion -c Release -- --sin-modelo --aprobar s
+rc=0
+### 07-consola-n :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -e DOTNET_ENVIRONMENT=Development -v <copia-limpia>/Examples/07-Agente-Con-Aprobacion:/work -w /work mcr.microsoft.com/dotnet/sdk:10.0 dotnet run --project src/MovilidadUrbana.Ejemplos.AgenteConAprobacion -c Release -- --sin-modelo --aprobar n
+rc=0
+### 10-build :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -v <copia-limpia>/Examples/10-Workflow:/ex -w /ex mcr.microsoft.com/dotnet/sdk:10.0 dotnet build 10-Workflow.slnx
+rc=0
+### 10-cableado :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -v <copia-limpia>/Examples/10-Workflow:/ex -w /ex mcr.microsoft.com/dotnet/sdk:10.0 dotnet test 10-Workflow.slnx --filter TestCategory=Cableado
+rc=0
+### 10-encuesta :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -e DOTNET_ENVIRONMENT=Development -v <copia-limpia>/Examples/10-Workflow:/ex -w /ex mcr.microsoft.com/dotnet/sdk:10.0 dotnet run --project src/MovilidadUrbana.Ejemplos.Orquestacion -- encuesta
+rc=0
+### 10-alta-nadie :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -e DOTNET_ENVIRONMENT=Development -v <copia-limpia>/Examples/10-Workflow:/ex -w /ex mcr.microsoft.com/dotnet/sdk:10.0 dotnet run --project src/MovilidadUrbana.Ejemplos.Orquestacion -- alta --sin-modelo --confirmar nadie
+rc=0
+### 10-alta-si :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -e DOTNET_ENVIRONMENT=Development -v <copia-limpia>/Examples/10-Workflow:/ex -w /ex mcr.microsoft.com/dotnet/sdk:10.0 dotnet run --project src/MovilidadUrbana.Ejemplos.Orquestacion -- alta --sin-modelo
+rc=0
+### 10-secuencial :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -e DOTNET_ENVIRONMENT=Development -v <copia-limpia>/Examples/10-Workflow:/ex -w /ex mcr.microsoft.com/dotnet/sdk:10.0 dotnet run --project src/MovilidadUrbana.Ejemplos.Orquestacion -- secuencial --sin-modelo
+rc=0
+### demo-cableado :: docker run --rm -v <volumen-nuget>:/root/.nuget/packages -v <copia-limpia>/Demos/MovilidadUrbana.Asistente:/work -w /work mcr.microsoft.com/dotnet/sdk:10.0 dotnet test MovilidadUrbana.Asistente.slnx --filter FullyQualifiedName~Cableado
+rc=0
+FIN
+LIBERADO build por <agente>

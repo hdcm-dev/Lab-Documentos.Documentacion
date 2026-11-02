@@ -1,0 +1,31 @@
+{
+  "messages": [
+    {
+      "createdAt": "2026-10-30T02:32:44.1948887+00:00",
+      "role": "assistant",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "5"
+        }
+      ],
+      "messageId": "2026-10-30T02:32:44.19488871Z"
+    }
+  ],
+  "responseId": "2026-10-30T02:32:44.19488871Z",
+  "modelId": "qwen3.5:4b",
+  "createdAt": "2026-10-30T02:32:44.1948887+00:00",
+  "finishReason": "stop",
+  "usage": {
+    "inputTokenCount": 918,
+    "outputTokenCount": 2,
+    "totalTokenCount": 920
+  },
+  "additionalProperties": {
+    "load_duration": "00:00:00.0006652",
+    "total_duration": "00:00:08.0168655",
+    "prompt_eval_duration": "00:00:07.9313300",
+    "eval_duration": "00:00:00.0785690",
+    "prompt_eval_cached_count": 0
+  }
+}

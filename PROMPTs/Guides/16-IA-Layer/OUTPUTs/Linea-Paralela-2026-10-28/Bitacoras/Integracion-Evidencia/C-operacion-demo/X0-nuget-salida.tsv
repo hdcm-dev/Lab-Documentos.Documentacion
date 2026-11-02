@@ -1,0 +1,25 @@
+2026-10-28T08:56:01-03:00
+Microsoft.Extensions.AI	10.11.0	9.5.0-preview.1.25262.9
+Microsoft.Extensions.AI.Abstractions	10.11.0	9.5.0-preview.1.25262.9
+Microsoft.Extensions.AI.OpenAI	10.11.0	10.2.0-preview.1.26063.2
+OllamaSharp	5.5.0	4.0.0-preview.10
+Microsoft.Extensions.VectorData.Abstractions	10.11.0	9.0.0-preview.1.25229.1
+CommunityToolkit.VectorData.InMemory	1.0.1	1.0.0-preview.3
+CommunityToolkit.VectorData.SqliteVec	—	1.0.3-preview
+Microsoft.Extensions.DataIngestion	—	10.11.0-preview.1.26513.7
+Microsoft.Agents.AI	1.26.0	1.0.0-rc5
+Microsoft.Agents.AI.Workflows	1.26.0	1.0.0-rc5
+Microsoft.Agents.AI.Hosting	—	1.26.0-preview.261023.1
+ModelContextProtocol.AspNetCore	2.3.0	2.0.0-rc.2
+Microsoft.Extensions.AI.Evaluation	10.11.0	9.5.0-preview.1.25262.9
+Microsoft.Extensions.AI.Evaluation.Quality	10.11.0	9.5.0-preview.1.25262.9
+Microsoft.Extensions.AI.Evaluation.Reporting	10.11.0	9.5.0-preview.1.25262.9
+Microsoft.Extensions.AI.Evaluation.Safety	—	10.11.0-preview.1.26513.7
+Microsoft.Extensions.AI.Evaluation.NLP	—	10.11.0-preview.1.26513.7
+Aspire.OpenAI	—	13.6.4-preview.1.26523.11
+CommunityToolkit.Aspire.Hosting.Ollama	13.6.1	13.6.2-beta.959
+Microsoft.ML.OnnxRuntimeGenAI	0.18.0	0.7.0-rc2
+OpenTelemetry.Extensions.Hosting	1.20.1	1.20.1-rc.1
+OpenTelemetry.Exporter.OpenTelemetryProtocol	1.20.1	1.20.1-rc.1
+Microsoft.EntityFrameworkCore.Sqlite	10.0.14	11.0.0-rc.3.26522.148
+Microsoft.Extensions.Compliance.Redaction	10.11.0	9.0.0-preview.9.24507.7

@@ -1,0 +1,2 @@
+"<clave-de-cabeceras>":{"X-K":"v"}
+"<clave-de-cabeceras>":{"X-Por-Pedido":"VALOR-POR-PEDIDO"}

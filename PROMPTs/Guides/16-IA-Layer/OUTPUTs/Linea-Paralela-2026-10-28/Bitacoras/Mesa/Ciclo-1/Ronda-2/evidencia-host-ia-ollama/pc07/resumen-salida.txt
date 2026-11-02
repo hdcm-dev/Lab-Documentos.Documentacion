@@ -1,0 +1,13 @@
+| Operación | Modelo | Fuente | N | Éxitos | 1.ª llamada s | Siguientes s (mediana; rango) | Suma s |
+|---|---|---|---|---|---|---|---|
+| herramienta «bicicleta» | qwen3.5:4b | sondeo/salidas/04-tools.jsonl | 10 | 10 | 9.25 | 3.20; 2.83–5.09 | 39.7 |
+| herramienta «bicicleta» | qwen3.5:35b-a3b | pc07/05-tools-35b.jsonl | 10 | 10 | 18.49 | 13.32; 13.21–13.56 | 138.7 |
+| herramienta «a pie» | qwen3.5:4b | sondeo/salidas/05-tools-apie.jsonl | 10 | 10 | 11.64 | 3.07; 2.83–3.35 | 39.0 |
+| herramienta «a pie» | qwen3.5:35b-a3b | pc07/06-tools-apie-35b.jsonl | 10 | 10 | 19.35 | 13.92; 12.77–14.67 | 142.9 |
+| prompt largo 3503 tok | qwen3.5:4b | pc07/01-largo-4b.jsonl | 3 | — | 36.35 | 33.69; 33.58–33.80 | 103.7 |
+| prompt largo 3503 tok | qwen3.5:35b-a3b | pc07/07-largo-35b.jsonl | 3 | — | 72.35 | 51.23; 50.20–52.25 | 174.8 |
+
+qwen3.5:4b: lectura tok/s [110.3, 107.5, 108.8], generación tok/s [11.0, 13.2, 12.1], carga s [3.17, 0.0, 0.0]
+qwen3.5:35b-a3b: lectura tok/s [76.6, 72.8, 76.0], generación tok/s [3.7, 3.6, 3.7], carga s [22.76, 0.01, 0.01]
+chat corto en frío qwen3.5:4b: pared 9.46 s, carga 3.86 s, generación 11.43 tok/s (52 tok)
+chat corto en frío qwen3.5:35b-a3b: pared 48.78 s, carga 23.96 s, generación 3.35 tok/s (77 tok)

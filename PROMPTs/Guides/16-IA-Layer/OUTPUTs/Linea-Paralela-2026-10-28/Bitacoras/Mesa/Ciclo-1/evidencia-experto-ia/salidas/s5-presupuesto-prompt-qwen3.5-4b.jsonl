@@ -1,0 +1,1 @@
+{"sonda": "s5", "modelo": "qwen3.5:4b", "opciones": "num_ctx 4096; think false; temperature 0; num_predict 8", "caracteres_prompt": 9252, "prompt_eval_count": 2943, "prompt_eval_s": 167.36, "done_reason": "stop", "respuesta": "TREN", "pared_s": 168.2, "fecha": "2026-10-28T10:08:01-0300"}

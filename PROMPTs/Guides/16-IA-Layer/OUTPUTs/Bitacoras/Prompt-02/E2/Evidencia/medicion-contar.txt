@@ -1,0 +1,171 @@
+== variante 0
+parte       palabras    tope      %
+Encabezado      192       -
+Parte 0        2178    1400   156%
+Parte I        3670    3500   105%
+Parte II       6693    5000   134%
+Parte III      6409    5500   117%
+Parte IV       8716    7500   116%
+Parte V        8895    6500   137%
+Parte VI       5475    4500   122%
+Cierre         3076    3000   103%
+Anexos        12641    7430   170%
+  Anexo A      2689
+  Anexo B      1713
+  Anexo C       452
+  Anexo D      3706
+  Anexo E      2454
+  Anexo F       533
+  Anexo G      1094
+Total         57753   44330   130%
+control: wc -w del archivo = 72364
+== variante h
+parte       palabras    tope      %
+Encabezado      192       -
+Parte 0        2178    1400   156%
+Parte I        3670    3500   105%
+Parte II       6487    5000   130%
+Parte III      6298    5500   115%
+Parte IV       8457    7500   113%
+Parte V        8714    6500   134%
+Parte VI       5401    4500   120%
+Cierre         3076    3000   103%
+Anexos        12545    7430   169%
+  Anexo A      2650
+  Anexo B      1713
+  Anexo C       452
+  Anexo D      3706
+  Anexo E      2397
+  Anexo F       533
+  Anexo G      1094
+Total         56826   44330   128%
+control: wc -w del archivo = 71435
+== variante H
+parte       palabras    tope      %
+Encabezado      192       -
+Parte 0        2156    1400   154%
+Parte I        3670    3500   105%
+Parte II       5954    5000   119%
+Parte III      5736    5500   104%
+Parte IV       8274    7500   110%
+Parte V        8236    6500   127%
+Parte VI       5277    4500   117%
+Cierre         3076    3000   103%
+Anexos        12411    7430   167%
+  Anexo A      2650
+  Anexo B      1713
+  Anexo C       452
+  Anexo D      3706
+  Anexo E      2263
+  Anexo F       533
+  Anexo G      1094
+Total         54790   44330   124%
+control: wc -w del archivo = 69397
+== variante D
+parte       palabras    tope      %
+Encabezado      192       -
+Parte 0        2178    1400   156%
+Parte I        3463    3500    99%
+Parte II       6490    5000   130%
+Parte III      6409    5500   117%
+Parte IV       8716    7500   116%
+Parte V        8895    6500   137%
+Parte VI       5475    4500   122%
+Cierre         3076    3000   103%
+Anexos        12641    7430   170%
+  Anexo A      2689
+  Anexo B      1713
+  Anexo C       452
+  Anexo D      3706
+  Anexo E      2454
+  Anexo F       533
+  Anexo G      1094
+Total         57343   44330   129%
+control: wc -w del archivo = 71850
+== variante P
+parte       palabras    tope      %
+Encabezado      192       -
+Parte 0        2178    1400   156%
+Parte I        3670    3500   105%
+Parte II       6383    5000   128%
+Parte III      5965    5500   108%
+Parte IV       8383    7500   112%
+Parte V        8928    6500   137%
+Parte VI       5475    4500   122%
+Cierre         3076    3000   103%
+Anexos        12641    7430   170%
+  Anexo A      2689
+  Anexo B      1713
+  Anexo C       452
+  Anexo D      3706
+  Anexo E      2454
+  Anexo F       533
+  Anexo G      1094
+Total         56699   44330   128%
+control: wc -w del archivo = 68472
+== variante A
+parte       palabras    tope      %
+Encabezado      192       -
+Parte 0        2178    1400   156%
+Parte I        3670    3500   105%
+Parte II       6693    5000   134%
+Parte III      6409    5500   117%
+Parte IV       8716    7500   116%
+Parte V        8895    6500   137%
+Parte VI       5475    4500   122%
+Cierre         3076    3000   103%
+Anexos        12794    7430   172%
+  Anexo A      2689
+  Anexo B      1713
+  Anexo C       452
+  Anexo D      3706
+  Anexo E      2454
+  Anexo F       533
+  Anexo G      1094
+  Anexo H       153
+Total         57906   44330   131%
+control: wc -w del archivo = 72519
+== variante hDPA
+parte       palabras    tope      %
+Encabezado      192       -
+Parte 0        2178    1400   156%
+Parte I        3463    3500    99%
+Parte II       6157    5000   123%
+Parte III      5930    5500   108%
+Parte IV       8237    7500   110%
+Parte V        8747    6500   135%
+Parte VI       5401    4500   120%
+Cierre         3076    3000   103%
+Anexos        12698    7430   171%
+  Anexo A      2650
+  Anexo B      1713
+  Anexo C       452
+  Anexo D      3706
+  Anexo E      2397
+  Anexo F       533
+  Anexo G      1094
+  Anexo H       153
+Total         55887   44330   126%
+control: wc -w del archivo = 67556
+== variante HDPA
+parte       palabras    tope      %
+Encabezado      192       -
+Parte 0        2156    1400   154%
+Parte I        3463    3500    99%
+Parte II       5624    5000   112%
+Parte III      5368    5500    98%
+Parte IV       8054    7500   107%
+Parte V        8269    6500   127%
+Parte VI       5277    4500   117%
+Cierre         3076    3000   103%
+Anexos        12564    7430   169%
+  Anexo A      2650
+  Anexo B      1713
+  Anexo C       452
+  Anexo D      3706
+  Anexo E      2263
+  Anexo F       533
+  Anexo G      1094
+  Anexo H       153
+Total         53851   44330   121%
+control: wc -w del archivo = 65518

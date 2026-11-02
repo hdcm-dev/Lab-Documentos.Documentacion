@@ -1,0 +1,104 @@
+# Base: Bitacoras/ ; fecha: 2026-10-28
+
+## S1. Uso del marco N0 (ocurrencias de IDs) por registro de núcleo
+N0b-Producto-Datos-Y-Perfil.md                   ESC=6   CTX=9   ACT=26 
+N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md        ESC=8   CTX=6   ACT=2  
+N1-Capa-IA-En-El-Stack.md                        ESC=0   CTX=0   ACT=0  
+N2-Abstracciones-Y-Proveedores-NET.md            ESC=0   CTX=0   ACT=0  
+N3b-CAG-Y-Estrategias-De-Conocimiento.md         ESC=2   CTX=7   ACT=0  
+N3-RAG-En-NET.md                                 ESC=0   CTX=0   ACT=0  
+N4-Agentes-Y-Orquestacion.md                     ESC=0   CTX=0   ACT=0  
+N5-Operacion-Calidad-Seguridad.md                ESC=0   CTX=1   ACT=0  
+N6-Caso-Movilidad-Urbana.md                      ESC=5   CTX=0   ACT=0  
+
+## S2. Subsección «Aplicación por escenario» como encabezado en los núcleos
+(ninguna)
+
+## S3. Mapa conceptual «estoy acá → qué aplico» redactado en núcleos o integración
+(ninguno)
+
+## S4. Preguntas guía por núcleo (encabezados **P<n>. / **PG-<n>.)
+N0b-Producto-Datos-Y-Perfil.md                   7
+N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md        7
+N1-Capa-IA-En-El-Stack.md                        9
+N2-Abstracciones-Y-Proveedores-NET.md            10
+N3b-CAG-Y-Estrategias-De-Conocimiento.md         7
+N3-RAG-En-NET.md                                 9
+N4-Agentes-Y-Orquestacion.md                     11
+N5-Operacion-Calidad-Seguridad.md                11
+N6-Caso-Movilidad-Urbana.md                      9
+TOTAL 80
+
+## S5. Preguntas guía sobre «¿RAG o no?» (texto de la pregunta)
+Nucleos/N0b-Producto-Datos-Y-Perfil.md:330:**PG-3. ¿«Datos para la IA» significa vectorizar toda la base?**
+Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:166:**P3. Con ventanas de 128K a 1M tokens, ¿sigue haciendo falta RAG?**
+Nucleos/N1-Capa-IA-En-El-Stack.md:347:**P4. ¿Cuándo uso RAG y cuándo meto los datos directo en el prompt?**
+Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:270:**P1. Si mi corpus entra en la ventana, ¿tengo que hacer RAG igual?**
+Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:285:**P6. Los 12 requisitos de Movilidad Urbana, ¿van por CAG o por RAG?**
+Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:288:**P7. ¿Más ventana es mejor para hacer CAG?**
+Nucleos/N3-RAG-En-NET.md:341:**P1. ¿Cuándo conviene RAG y cuándo no?**
+Nucleos/N3-RAG-En-NET.md:344:**P2. ¿Necesito una base vectorial dedicada o me alcanza la que ya tengo?**
+Nucleos/N3-RAG-En-NET.md:347:**P3. ¿Puedo usar el modelo de chat (Qwen) para generar embeddings?**
+Nucleos/N3-RAG-En-NET.md:350:**P4. ¿Qué modelo de embeddings elijo para un corpus en castellano?**
+Nucleos/N3-RAG-En-NET.md:353:**P5. ¿Cómo sé si la recuperación anda bien antes de culpar al LLM?**
+Nucleos/N3-RAG-En-NET.md:356:**P6. ¿Qué tamaño de fragmento uso?**
+Nucleos/N3-RAG-En-NET.md:359:**P7. ¿Cuándo uso búsqueda híbrida?**
+Nucleos/N3-RAG-En-NET.md:362:**P8. ¿Cuántos fragmentos paso al prompt (top-k)?**
+Nucleos/N3-RAG-En-NET.md:365:**P9. ¿Quién puede ver qué fragmento?**
+Nucleos/N5-Operacion-Calidad-Seguridad.md:466:**P7. Hago RAG sobre reclamos que escriben los ciudadanos. ¿Qué riesgo nuevo agrego?**
+Nucleos/N5-Operacion-Calidad-Seguridad.md:475:**P10. ¿Subo la ventana de contexto al máximo para «que entre todo»?**
+Nucleos/N6-Caso-Movilidad-Urbana.md:331:**P2. ¿Uso RAG para que el asistente responda «cuántas localidades hay en Corrientes»?**
+Nucleos/N6-Caso-Movilidad-Urbana.md:334:**P3. Entonces, ¿para qué sirve RAG en este caso?**
+
+## S6. Preguntas guía sobre «¿herramienta, agente o workflow?»
+Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:175:**P6. Semantic Kernel llegó a 1.0 en 2023. ¿Por qué la guía parte de Microsoft.Extensions.AI y de Agent Framework?**
+Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:178:**P7. ¿ReAct es lo mismo que el agente que se arma con Agent Framework?**
+Nucleos/N1-Capa-IA-En-El-Stack.md:353:**P6. ¿Es un agente o un workflow lo que necesito?**
+Nucleos/N2-Abstracciones-Y-Proveedores-NET.md:357:**P7. ¿Cuándo MEAI no alcanza y hace falta Microsoft Agent Framework?**
+Nucleos/N4-Agentes-Y-Orquestacion.md:451:**P1. ¿Cuándo alcanza con tool calling y cuándo necesito un agente?**
+Nucleos/N4-Agentes-Y-Orquestacion.md:454:**P2. ¿Cuándo NO uso un agente?**
+Nucleos/N4-Agentes-Y-Orquestacion.md:457:**P3. ¿Agente o workflow?**
+Nucleos/N4-Agentes-Y-Orquestacion.md:460:**P4. Se escuchó hablar de LangGraph en .NET. ¿Existe?**
+Nucleos/N4-Agentes-Y-Orquestacion.md:463:**P5. Mi equipo de datos tiene un grafo LangGraph en Python. ¿Lo reescribo en C#?**
+Nucleos/N4-Agentes-Y-Orquestacion.md:466:**P6. ¿Uso Semantic Kernel o Agent Framework en un proyecto nuevo?**
+Nucleos/N4-Agentes-Y-Orquestacion.md:469:**P7. ¿Y AutoGen?**
+Nucleos/N4-Agentes-Y-Orquestacion.md:472:**P8. ¿Qué es MCP y cuándo expongo mi aplicación como servidor MCP?**
+Nucleos/N4-Agentes-Y-Orquestacion.md:475:**P9. ¿Cómo convierto un caso de uso existente en herramienta sin saltear sus reglas?**
+Nucleos/N4-Agentes-Y-Orquestacion.md:478:**P10. ¿Qué patrón de Anthropic corresponde a qué en MAF?**
+Nucleos/N4-Agentes-Y-Orquestacion.md:481:**P11. ¿Necesito checkpoints?**
+Nucleos/N6-Caso-Movilidad-Urbana.md:346:**P7. ¿Necesito un agente o alcanza con `UseFunctionInvocation`?**
+
+## S7. Cita «If you can write a function» en respuestas
+Nucleos/N0b-Producto-Datos-Y-Perfil.md:1
+Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:0
+Nucleos/N1-Capa-IA-En-El-Stack.md:3
+Nucleos/N2-Abstracciones-Y-Proveedores-NET.md:0
+Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:0
+Nucleos/N3-RAG-En-NET.md:0
+Nucleos/N4-Agentes-Y-Orquestacion.md:2
+Nucleos/N5-Operacion-Calidad-Seguridad.md:0
+Nucleos/N6-Caso-Movilidad-Urbana.md:6
+
+## S8. Propuestas didácticas del PO trazadas (ocurrencias)
+PR-1   04=1 Nucleos=6 02=1
+PR-3   04=0 Nucleos=0 02=0
+PR-4   04=0 Nucleos=0 02=0
+PR-5   04=0 Nucleos=0 02=0
+PR-6   04=0 Nucleos=0 02=0
+PR-7   04=0 Nucleos=0 02=1
+PR-12  04=1 Nucleos=0 02=1
+PR-14  04=4 Nucleos=8 02=1
+PR-18  04=0 Nucleos=0 02=1
+PR-20  04=0 Nucleos=0 02=1
+
+## S9. Respuestas atadas al servidor dado de baja (frase «servidor … LAN»/«red de laboratorio» en §Preguntas)
+N2-Abstracciones-Y-Proveedores-NET.md:340: Las dos dan un `IChatClient`. OllamaSharp es el nativo y el reemplazo oficial del paquete deprecado [E2], y expone la API completa de Ollama
+N3b-CAG-Y-Estrategias-De-Conocimiento.md:280: Porque el paper guarda la caché KV en disco y la vuelve a cargar [G1 §2], y para eso hay que tener el modelo en proceso, como hace el código
+N3b-CAG-Y-Estrategias-De-Conocimiento.md:289: No por sí sola. Más ventana consume más memoria (`OLLAMA_NUM_PARALLEL` × contexto [G13]) y no garantiza que el modelo use bien lo que está e
+N3-RAG-En-NET.md:348: En el servidor de la LAN del laboratorio, no: rechaza `/api/embed` [E2]. En general, Ollama separa los modelos «sólo embeddings», como nomic
+N5-Operacion-Calidad-Seguridad.md:473: Ollama es un servidor local fácil de compartir en una red de laboratorio. Atiende una petición por modelo por defecto (`F17`), así que para 
+
+## S10. Mapeo de capacidades C1–C8 de N6 a ESC (pendiente declarado y su cierre)
+573:| §8.8 — fuentes de N0 (IDs de escenario, contexto y actor) | (b) | Es de proceso | Sigue abierto, pero **desbloqueado**: `03-Marco-De-Referencia.md` ya define ESC-01…05, CTX-* y ACT-*. El mapeo de §1.5 a esos IDs queda para la integración |
+97:| R-C16 = C-7 | ESC-02 de `03-Marco-De-Referencia.md` («buscar localidades o respuestas por descripción») frente a N6 P2 | Candidato nuevo: **buscar el requisito por significado** sobre los enunciados de `*Policy`, sin generación, medido con recall@k/MRR. Las localidades se buscan por campo exacto (herramienta) | N6 P2, §1.1.2; N3 P5; E-B5 |
+86:Ninguna fila ni columna queda vacía. La fila N6 se completa en la fase de plan con los escenarios que la demo efectivamente cubre.

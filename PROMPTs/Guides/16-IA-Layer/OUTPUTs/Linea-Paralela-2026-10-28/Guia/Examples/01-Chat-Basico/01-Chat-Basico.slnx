@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/MovilidadUrbana.Ejemplos.ChatBasico/MovilidadUrbana.Ejemplos.ChatBasico.csproj" />
+  <Project Path="tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests.csproj" />
+</Solution>

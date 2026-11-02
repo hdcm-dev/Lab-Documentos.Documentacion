@@ -1,0 +1,115 @@
+META [('ms.topic', 'overview'), ('ms.date', '2026-08-07T00:00:00Z'), ('updated_at', '2026-08-27T06:04:00Z')]
+ 
+ Agent capabilities | Microsoft Learn 
+ Skip to main content
+ Skip to Ask Learn chat experience
+ This browser is no longer supported. 
+ Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+ Download Microsoft Edge
+ More info about Internet Explorer and Microsoft Edge
+ Table of contents 
+ Exit editor mode 
+ Ask Learn 
+ Ask Learn 
+ Reading mode 
+ Table of contents 
+ Read in English 
+ Add 
+ Add to Plans 
+ Edit 
+ Copy Markdown 
+ Print 
+ Note 
+ Access to this page requires authorization. You can try signing in or changing directories .
+ Access to this page requires authorization. You can try changing directories .
+ Agent capabilities 
+ Feedback 
+ Summarize this article for me
+ In this article
+ Agent capabilities are opt-in features that extend what an agent can understand, produce, retrieve, execute, observe, or secure. For the runtime, type, conversation, and middleware foundations behind these features, see Agents . 
+ Agent types and model connections 
+ Looking for the agent-type and SDK-selection guidance previously hosted on this page? 
+ Agent concepts explains application-owned chat-client agents, custom agents, and remote agent types. 
+ Model providers compares inference providers, conversation-history support, and .NET SDK and endpoint options. 
+ Agent services covers managed and protocol-backed remote agent runtimes. 
+ Input and output 
+ Capability 
+ Purpose 
+ Multimodal 
+ Send images and other supported content to an agent. 
+ Structured outputs 
+ Return values that conform to a schema or application type. 
+ Background responses 
+ Continue, poll, and reconnect to long-running responses. 
+ Context and knowledge 
+ Capability 
+ Purpose 
+ RAG 
+ Ground responses with retrieved application knowledge. 
+ Declarative agents 
+ Define supported agents through YAML or JSON. 
+ Agent Skills 
+ Discover and progressively load reusable instructions, resources, and scripts. 
+ Execution and autonomy 
+ Capability 
+ Purpose 
+ Tools 
+ Let agents call functions and provider-hosted capabilities. 
+ CodeAct 
+ Let the model write programs that coordinate tools through a managed execution provider. 
+ Looping 
+ Re-run an agent until a bounded completion condition is met. 
+ Background agents 
+ Delegate work to background agents and retrieve task results. 
+ Planning and todos 
+ Track plans, operational todos, dependencies, and completion. 
+ Operations and trust 
+ Capability 
+ Purpose 
+ Observability 
+ Export traces, metrics, and logs. 
+ Evaluation 
+ Measure agent quality, safety, and correctness. 
+ Agent Hooks 
+ Apply fail-closed governance controls through a shared interception contract. 
+ Agent Security with FIDES 
+ Enforce information-flow controls across agent data and tools. 
+ The Harness Agent assembles many of these capabilities into an opinionated operational agent. 
+ Next steps 
+ Add tools to an agent 
+ Feedback 
+ Was this page helpful?
+ Yes 
+ No 
+ No 
+ Need help with this topic?
+ Want to try using Ask Learn to clarify or guide you through this topic?
+ Ask Learn 
+ Ask Learn 
+ Suggest a fix? 
+ Additional resources
+ Last updated on 
+ 2026-08-25
+ In this article 
+ Was this page helpful?
+ Need help with this topic?
+ Want to try using Ask Learn to clarify or guide you through this topic?
+ Ask Learn 
+ Ask Learn 
+ Suggest a fix? 
+ en-us 
+ Your Privacy Choices 
+ Theme 
+ Light 
+ Dark 
+ High contrast 
+ AI Disclaimer 
+ Previous Versions 
+ Blog 
+ Contribute 
+ Privacy 
+ Consumer Health Privacy 
+ Terms of Use 
+ Trademarks 
+ © Microsoft 2026 
+ 

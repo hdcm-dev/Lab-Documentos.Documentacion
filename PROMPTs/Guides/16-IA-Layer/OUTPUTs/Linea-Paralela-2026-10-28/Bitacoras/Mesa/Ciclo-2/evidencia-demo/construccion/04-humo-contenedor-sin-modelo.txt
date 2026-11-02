@@ -1,0 +1,22 @@
+EN COLA build (posición 2); esperando hasta 90 min...
+--- GET /
+HTTP/1.1 200 OK
+Set-Cookie: sesion-movilidad=<id>; max-age=86400; path=/; samesite=lax; httponly
+Set-Cookie: .AspNetCore.Antiforgery.2JjA58vSe6U=<antiforgery>; path=/; samesite=strict; httponly
+aviso presente: 1
+MarkupString en la página: 0
+--- GET /api/v1/localidades
+[{"id":1,"nombre":"Corrientes","provincia":"Corrientes","codigoPostal":"3400","habitantes":346334},{"id":2,"nombre":"Resistencia","provincia":"Chaco","codigoPostal":"3500","habitantes":291720}]
+--- POST /api/v1/asistente (sin servidor de modelo)
+[{"tipo":"etapa","etapa":"interpretar","texto":null,"accion":null,"fuentes":null},{"tipo":"error","etapa":null,"texto":"No se pudo completar el pedido: el servidor del modelo no respondió.","accion":null,"fuentes":null}]
+HTTP/1.1 200 OK
+X-Conversacion-Id: <id>
+--- POST con 2001 caracteres
+400
+--- log (sin texto de la persona)
+      Now listening on: http://[::]:8080
+info: Microsoft.Hosting.Lifetime[0]
+--
+warn: MovilidadUrbana.Asistente.Presentation.Controllers.AsistenteController[0]
+      El asistente no pudo completar el pedido: HttpRequestException
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]

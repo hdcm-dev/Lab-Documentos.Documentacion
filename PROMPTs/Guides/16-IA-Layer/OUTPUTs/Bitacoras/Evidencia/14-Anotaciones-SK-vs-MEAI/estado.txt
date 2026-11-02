@@ -1,0 +1,8 @@
+Ejemplo 14-Anotaciones-SK-vs-MEAI · 2026-10-27 · sin modelo (recurso «ninguno»; plan §E.2: «todo sin servidor»)
+- correr-fake-verificar.log: tools/verificar.sh correr (turno build), build -warnaserror 0/0, --fake --verificar rc 0, 4/4 pasa.
+- pruebas-y-variante.log: dotnet test 13/13 (Category!=LLM); variante rota con FunctionCallContent sin calificar: 3 × CS0104 (N4 V01 reproducido).
+- recalculo-oraculo.log: anotaciones-coinciden.jq sobre ../R-LLM/14-Anotaciones-SK-vs-MEAI.jsonl: 4 de 4, rc 0.
+  Prueba negativa: 14-Anotaciones-SK-vs-MEAI.negativo-oraculo.jsonl es una copia ALTERADA a propósito (e02 con cantidad
+  esperada 2): el recálculo da «falla» y sale con 1. No es un registro de corrida.
+- compuertas.log: AC-7 y AC-8 rc 0 sobre estos archivos, el ejemplo y su oráculo.
+- Contra el modelo: no aplica (0 llamadas por diseño).

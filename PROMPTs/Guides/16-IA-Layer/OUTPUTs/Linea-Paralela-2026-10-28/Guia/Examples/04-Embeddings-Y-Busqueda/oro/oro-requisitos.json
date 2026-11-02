@@ -1,0 +1,266 @@
+{
+  "version": "1",
+  "casoBase": "MovilidadUrbana.ApiWeb @ 59399ba (LocalidadPolicy, EncuestaPolicy)",
+  "generador": "src/MovilidadUrbana.Busqueda/Evaluacion/GeneradorDeOro.cs",
+  "consultas": [
+    {
+      "id": "e01",
+      "conjunto": "evaluacion",
+      "consulta": "¿Cuántos números lleva el CP?",
+      "respondible": true,
+      "relevantes": [
+        "LocalidadPolicy.RequisitoDelCodigoPostal"
+      ]
+    },
+    {
+      "id": "e02",
+      "conjunto": "evaluacion",
+      "consulta": "¿Puedo dar de alta una ciudad con cero habitantes?",
+      "respondible": true,
+      "relevantes": [
+        "LocalidadPolicy.RequisitoDeLosHabitantes"
+      ]
+    },
+    {
+      "id": "e03",
+      "conjunto": "evaluacion",
+      "consulta": "¿En qué provincias puedo cargar una ciudad nueva?",
+      "respondible": true,
+      "relevantes": [
+        "LocalidadPolicy.RequisitoDeLaProvincia"
+      ]
+    },
+    {
+      "id": "e04",
+      "conjunto": "evaluacion",
+      "consulta": "¿Puede haber dos ciudades que se llamen igual en la misma provincia?",
+      "respondible": true,
+      "relevantes": [
+        "LocalidadPolicy.RequisitoDelNombre"
+      ]
+    },
+    {
+      "id": "e05",
+      "conjunto": "evaluacion",
+      "consulta": "¿Desde qué edad se puede contestar la encuesta?",
+      "respondible": true,
+      "relevantes": [
+        "EncuestaPolicy.RequisitoDeLaEdad"
+      ]
+    },
+    {
+      "id": "e06",
+      "conjunto": "evaluacion",
+      "consulta": "¿Cuántos kilómetros por día puedo declarar como máximo?",
+      "respondible": true,
+      "relevantes": [
+        "EncuestaPolicy.RequisitoDeLaDistancia"
+      ]
+    },
+    {
+      "id": "e07",
+      "conjunto": "evaluacion",
+      "consulta": "¿Cuánto tiempo puede durar el viaje que informo?",
+      "respondible": true,
+      "relevantes": [
+        "EncuestaPolicy.RequisitoDeLosMinutos"
+      ]
+    },
+    {
+      "id": "e08",
+      "conjunto": "evaluacion",
+      "consulta": "¿Tengo que marcar por lo menos un medio de transporte?",
+      "respondible": true,
+      "relevantes": [
+        "EncuestaPolicy.RequisitoDeLosMedios"
+      ]
+    },
+    {
+      "id": "e09",
+      "conjunto": "evaluacion",
+      "consulta": "¿Qué pongo como razón por la que viajo?",
+      "respondible": true,
+      "relevantes": [
+        "EncuestaPolicy.RequisitoDelMotivo"
+      ]
+    },
+    {
+      "id": "e10",
+      "conjunto": "evaluacion",
+      "consulta": "¿Me preguntan cada cuánto viajo en colectivo?",
+      "respondible": true,
+      "relevantes": [
+        "EncuestaPolicy.RequisitoDeLaFrecuencia"
+      ]
+    },
+    {
+      "id": "e11",
+      "conjunto": "evaluacion",
+      "consulta": "¿Puedo elegir una ciudad que todavía no está dada de alta?",
+      "respondible": true,
+      "relevantes": [
+        "EncuestaPolicy.RequisitoDeLaLocalidad"
+      ]
+    },
+    {
+      "id": "e12",
+      "conjunto": "evaluacion",
+      "consulta": "¿Cuántas letras como mínimo tiene que tener un nombre?",
+      "respondible": true,
+      "relevantes": [
+        "LocalidadPolicy.RequisitoDelNombre",
+        "EncuestaPolicy.RequisitoDelNombre"
+      ]
+    },
+    {
+      "id": "e13",
+      "conjunto": "evaluacion",
+      "consulta": "¿Si elimino una ciudad se pierden las encuestas?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "e14",
+      "conjunto": "evaluacion",
+      "consulta": "¿Quién puede ver las respuestas que cargué?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "e15",
+      "conjunto": "evaluacion",
+      "consulta": "¿Puedo responder la encuesta sin conexión a internet?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "e16",
+      "conjunto": "evaluacion",
+      "consulta": "¿Cómo exporto los resultados a una planilla?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "e17",
+      "conjunto": "evaluacion",
+      "consulta": "¿Cuánto tarda en aparecer una localidad nueva en el listado?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "e18",
+      "conjunto": "evaluacion",
+      "consulta": "¿Puedo cambiar una respuesta después de enviarla?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "e19",
+      "conjunto": "evaluacion",
+      "consulta": "¿La encuesta pide el DNI?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "e20",
+      "conjunto": "evaluacion",
+      "consulta": "¿En qué idiomas está disponible la encuesta?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "e21",
+      "conjunto": "evaluacion",
+      "consulta": "¿Quién administra el padrón de localidades?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "e22",
+      "conjunto": "evaluacion",
+      "consulta": "¿Cuántas encuestas se respondieron hasta hoy?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "c01",
+      "conjunto": "calibracion",
+      "consulta": "¿El código postal lleva letras o sólo cifras?",
+      "respondible": true,
+      "relevantes": [
+        "LocalidadPolicy.RequisitoDelCodigoPostal"
+      ]
+    },
+    {
+      "id": "c02",
+      "conjunto": "calibracion",
+      "consulta": "¿Hasta qué edad me dejan responder?",
+      "respondible": true,
+      "relevantes": [
+        "EncuestaPolicy.RequisitoDeLaEdad"
+      ]
+    },
+    {
+      "id": "c03",
+      "conjunto": "calibracion",
+      "consulta": "¿Cuántos minutos de viaje como mínimo?",
+      "respondible": true,
+      "relevantes": [
+        "EncuestaPolicy.RequisitoDeLosMinutos"
+      ]
+    },
+    {
+      "id": "c04",
+      "conjunto": "calibracion",
+      "consulta": "¿La población de la ciudad puede ser negativa?",
+      "respondible": true,
+      "relevantes": [
+        "LocalidadPolicy.RequisitoDeLosHabitantes"
+      ]
+    },
+    {
+      "id": "c05",
+      "conjunto": "calibracion",
+      "consulta": "¿Qué distancia diaria acepta el formulario?",
+      "respondible": true,
+      "relevantes": [
+        "EncuestaPolicy.RequisitoDeLaDistancia"
+      ]
+    },
+    {
+      "id": "c06",
+      "conjunto": "calibracion",
+      "consulta": "¿Dónde se guardan los datos de la encuesta?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "c07",
+      "conjunto": "calibracion",
+      "consulta": "¿Hay una aplicación para el teléfono?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "c08",
+      "conjunto": "calibracion",
+      "consulta": "¿Quién hizo este sistema?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "c09",
+      "conjunto": "calibracion",
+      "consulta": "¿Se puede borrar una encuesta respondida?",
+      "respondible": false,
+      "relevantes": []
+    },
+    {
+      "id": "c10",
+      "conjunto": "calibracion",
+      "consulta": "¿Qué pasa si cierro el navegador a mitad de la encuesta?",
+      "respondible": false,
+      "relevantes": []
+    }
+  ]
+}

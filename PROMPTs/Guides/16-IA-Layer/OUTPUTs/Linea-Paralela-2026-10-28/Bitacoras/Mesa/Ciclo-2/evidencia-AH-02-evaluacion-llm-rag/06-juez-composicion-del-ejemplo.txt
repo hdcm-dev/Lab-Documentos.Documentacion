@@ -1,0 +1,47 @@
+# Cómo arma Examples/09 el cliente que usa el juez (sin Reasoning ni num_ctx propios), 2026-10-28
+== src/.../Infrastructure/AI/ComposicionDeIA.cs l. 60-80
+
+        // El cliente del proveedor es Singleton y usa el HttpClient de IHttpClientFactory, con el timeout de las opciones
+        // y el handler que lee prompt_eval_cached_count. El detector de contexto truncado lo envuelve.
+        builder.Services.AddTransient<LectorDePrefijoCacheado>();
+        builder.Services.AddHttpClient(NombreDelHttpClient, (sp, http) =>
+            {
+                var ia = sp.GetRequiredService<IOptions<OpcionesDeIA>>().Value;
+                http.BaseAddress = new Uri(ia.Endpoint);
+                http.Timeout = TimeSpan.FromSeconds(ia.TimeoutSegundos);
+            })
+            .AddHttpMessageHandler<LectorDePrefijoCacheado>();
+        builder.Services.AddKeyedSingleton<IChatClient>(ClaveDelProveedor, (sp, _) =>
+        {
+            var ia = sp.GetRequiredService<IOptions<OpcionesDeIA>>().Value;
+            var http = sp.GetRequiredService<IHttpClientFactory>().CreateClient(NombreDelHttpClient);
+            return new DetectorDeContextoTruncado(new OllamaApiClient(http, ia.Modelo));
+        });
+
+        // El pipeline: caché → UseFunctionInvocation → UseOpenTelemetry → cliente. Scoped: cada pedido HTTP
+        // tiene el suyo, con el SessionContext de su ámbito.
+        bool esDesarrollo = builder.Environment.IsDevelopment();
+== tests/.../ConModelo/EvaluacionConJuezTests.cs l. 31-51
+        var juez = host.Services.GetRequiredKeyedService<IChatClient>(ComposicionDeIA.ClaveDelProveedor);
+        var ia = host.Services.GetRequiredService<IOptions<OpcionesDeIA>>().Value;
+        var almacen = Environment.GetEnvironmentVariable("EVAL_ALMACEN") is { Length: > 0 } a
+            ? a : Path.Combine(AppContext.BaseDirectory, "almacen-evaluacion");
+
+        ReportingConfiguration config = DiskBasedReportingConfiguration.Create(
+            storageRootPath: almacen,
+            evaluators: [new RelevanceEvaluator(), new CoherenceEvaluator(), new GroundednessEvaluator(), new MedioEnCatalogoEvaluator()],
+            chatConfiguration: new ChatConfiguration(juez),
+            enableResponseCaching: true,
+            executionName: Environment.GetEnvironmentVariable("BUILD_NUMBER") ?? $"{DateTime.Now:yyyyMMddTHHmmss}");
+
+        await using ScenarioRun corrida = await config.CreateScenarioRunAsync("MovilidadUrbana.Encuesta.Paso2");
+        var mensajes = new List<ChatMessage> { new(ChatRole.User, SalidaEstructuradaConModeloTests.Pedido) };
+        ChatResponse respuesta = await corrida.ChatConfiguration!.ChatClient.GetResponseAsync(mensajes, Asistente.CrearOpciones(ia));
+        EvaluationResult resultado = await corrida.EvaluateAsync(mensajes, respuesta,
+            additionalContext: [new GroundednessEvaluatorContext("Medios válidos: colectivo, auto, bicicleta, moto, caminata, tren.")]);
+
+        foreach (var m in resultado.Metrics.Values) TestContext.Out.WriteLine($"{m.Name}: {m.Interpretation?.Rating} {m.Reason}");
+        Assert.That(resultado.Metrics, Has.Count.EqualTo(4));
+    }
+== Guía §8.9.2, condiciones que el ejemplo no implementa
+3073:- **Condiciones para que el juez responda:** razonamiento apagado (con el razonamiento por defecto, los evaluadores se cortaban sin veredicto); `num_ctx` de al menos 8192 fijado en el cliente si entra `RetrievalEvaluator`, porque ningún evaluador lo fija; y Retrieval fuera del conjunto mínimo.
