@@ -23,7 +23,7 @@ traces: [TP:18, TP:20, TP:70, EXP0003-F010, EXP0003-F013, EXP0003-F016, EXP0003-
 | Rol | Producto: qué tiene un proyecto en el día cero, qué ficha de producto es realista, y con qué instrumento se mide que el libro y el conocimiento alcanzan para arrancarlo |
 | Pregunta a cargo | P-29 (única del ciclo 2, `F099` §4, fila R-02) |
 | No-competencia | Forma editorial del libro, umbrales de la métrica e (P-25, cerrados), redacción del conocimiento |
-| Norma | `KB-privada/Knowledges/Knowledge-Mesa-De-Expertos-A-Pedido.md` 3.1 (`MEP`) |
+| Norma | `{servicio-privado}/Knowledges/Knowledge-Mesa-De-Expertos-A-Pedido.md` 3.1 (`MEP`) |
 | Secciones de Mesa-De-Expertos-A-Pedido 3.1 leídas | Mapa de carga (fila «Sos una comisión»); §2.2; §3.2; §3.3; §4; §5.2 |
 | Otros documentos cargados | `Cadena-De-Consecuencias` 2.0 §2 (`CDC`); `Escalas-De-Juicio` 1.2 §3.3 (clase de ancla) |
 | Insumos leídos | Pedido (`TP`, huella `da388e9d…74b37` verificada hoy), líneas 18, 20 y 70; `F099` §2, §3, §4, §5.1, §5.2.2, §5.4, §5.5, §5.6; `F085` R-02, R-02a, C-1; `F095` §5 y filas J1–J3 de su §8; `F010` H12; `F018` O-4 y H-10; `F016` §4.2 y §4.3; `F013` §2, H06–H08, H11 y P-26; `N3` §5.2 (tabla D-01…D-17 y A-01…A-07) y §5.6; cuerpo `SDEI/` en `00171bd` (worktree de sólo lectura) |

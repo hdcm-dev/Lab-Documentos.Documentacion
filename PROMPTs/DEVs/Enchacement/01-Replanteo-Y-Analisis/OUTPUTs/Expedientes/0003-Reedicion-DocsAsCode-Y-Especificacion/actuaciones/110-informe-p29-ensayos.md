@@ -24,7 +24,7 @@ traces: [TP:18, TP:20, TP:70, EXP0003-F010, EXP0003-F016, EXP0003-F018, EXP0003-
 | Pregunta única | P-29: «¿con qué instrumento se prueba que el libro y el conocimiento alcanzan para un proyecto nuevo?» (`F099:141`) |
 | Clase de objeto | Diseño de una norma o decisión (`MEP` §2.2): se responde la pregunta sin «depende» |
 | No-competencia | La redacción del libro y del conocimiento; la elección final entre alternativas (es del análisis de decisiones y del jurado). Esta comisión recomienda por su criterio y puntúa |
-| Norma | `KB-privada` · `Mesa-De-Expertos-A-Pedido` 3.1 |
+| Norma | `{servicio-privado}` · `Mesa-De-Expertos-A-Pedido` 3.1 |
 | Secciones de Mesa-De-Expertos-A-Pedido 3.1 leídas | Cabecera y §0 (mapa de carga, fila «Sos una comisión»); §2.2; §3.2; §3.3; §4; §5.2 |
 | Otros documentos cargados | `Cadena-De-Consecuencias` 2.0 §2 (antes de recomendar); `Rule-Escalas-De-Juicio` 1.2 §3.3 (clase de ancla) |
 | Insumos leídos | `TP` líneas 14-24, 66-80; `F099` §2, §4 (fila R-02), §5.1, §5.4 (tabla de forma), §5.5; `F085` R-02 y R-02a; `F095` §5, §6 y votos de P-25 a P-28; `F010:86-110`; `F018:71`, `:243`; `F016` §4.2; `N3` §4.2, §5.3-§5.6; cuerpo `SDEI/` en `00171bd` (`00-Marco.md` §2.5; `TEM-06:49`, `:143-147`; `99-Anexos/Criterios-De-Calidad.md:34`, `:83`; `Examples/MovilidadUrbana-Mini-Demo/`) |

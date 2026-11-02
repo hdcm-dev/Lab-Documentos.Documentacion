@@ -64,7 +64,7 @@ propone para C3 es su **adaptación** a un caso sin repositorio, y la marca como
 | `F0nn`, `F1nn` | Folios de la mesa del 0003 |
 | `LD`, `LDD`, `LG`, `LGD` | Lab-Documentos, Lab-Documentos.Documentacion, Lab-Geometria, Lab-Geometria.Documentacion (públicos) |
 | `SDEI/` | `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/` de `LD` |
-| `MEP`, `CDC` | `KB-privada/` Mesa-De-Expertos-A-Pedido 3.1; Cadena-De-Consecuencias 2.0 (R-16) |
+| `MEP`, `CDC` | `{servicio-privado}/` Mesa-De-Expertos-A-Pedido 3.1; Cadena-De-Consecuencias 2.0 (R-16) |
 | `N3` | Núcleo 3, forma del conocimiento |
 | Ficha | Ficha de producto: qué hace la aplicación, para quién, en qué plataformas, con qué equipo; en lenguaje de producto, sin vocabulario del cuerpo |
 | `{dir-de-trabajo}`, `{host-de-pruebas}`, `{servicio-privado}` | Alias de lo privado (`F099` §2) |
@@ -284,4 +284,4 @@ flowchart LR
 
 Comprobado sobre el texto antes de entregarlo: sin rutas absolutas del equipo (se usa `{dir-de-trabajo}`), sin IPs,
 sin nombres de máquina (`{host-de-pruebas}`), sin el nombre de `{servicio-privado}` ni de su organización, sin
-etiqueta de runner literal. La base de conocimientos va como `KB-privada/` (R-16).
+etiqueta de runner literal. La base de conocimientos va como `{servicio-privado}/` (R-16).
