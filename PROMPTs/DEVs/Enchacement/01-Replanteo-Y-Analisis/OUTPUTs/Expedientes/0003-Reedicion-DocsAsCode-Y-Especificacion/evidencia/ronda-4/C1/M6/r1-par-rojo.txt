@@ -1,0 +1,6 @@
+$ .docs-guard/scripts/ci-local.sh esquema docs  (LG-rojo: doc_type: inventado en docs/_gobierno/audiencias.md)
+== PR-2 esquema (docs)
+docs/_diseno/ficha-diseno-documental.md:1: aviso traces-vacio: traces: [] es válido, pero conviene trazar al menos al doc_id del README de su cuerpo (D-17)
+docs/_gobierno/audiencias.md:1: ERROR esquema-cuerpo: doc_type: «inventado» fuera del vocabulario ['ficha', 'anexo', 'rrd', 'proceso', 'registro-audiencias']
+== PR-2 esquema: ROJO (errores=1 avisos=1) archivos-con-frontmatter=7 sin-frontmatter-fuera-del-cuerpo=0 readme-del-cuerpo-sin-frontmatter=0
+rc=1

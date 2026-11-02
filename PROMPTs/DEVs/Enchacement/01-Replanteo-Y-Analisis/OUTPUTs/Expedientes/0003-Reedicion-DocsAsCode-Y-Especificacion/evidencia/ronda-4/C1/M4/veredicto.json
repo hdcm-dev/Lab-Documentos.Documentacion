@@ -1,0 +1,5 @@
+{"criterio":"cita ruta:línea[-línea] de salida/ resuelta contra repo/{,LG,LGD,LG/src} con rango válido; en A-01, literal de la misma línea buscado en la línea citada (±2); coordinacion/ sin permiso de lectura (no evaluada)",
+ "C1-r1":{"citas":9549,"ok":9537,"invenciones":0,"triados":{"archivo_creado_por_la_corrida(salida/LG/docs/_gobierno,_diseno,.docs-guard)":9,"abreviatura_en_texto_del_repo(Audit: Api/05/..., Maquetas/...)":3},"nota_triado":"79 rutas './GeometriaFactory.*' de un grep relativo a LG/src: resueltas y en rango","A01":{"citas":128,"invenciones":0,"contenido_coincide":40,"sin_literal_contrastable":88}},
+ "C1-r2":{"citas":290,"ok":290,"invenciones":0,"A01":{"citas":81,"invenciones":0,"contenido_coincide":35,"sin_literal_contrastable":46}},
+ "muestra_manual":"muestra-manual.json: 20/20 coinciden",
+ "reproducir":"desde la carpeta de corridas: python3 -I verificar-citas.py C1-r1 > C1-r1.json (idem C1-r2)"}

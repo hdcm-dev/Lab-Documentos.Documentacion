@@ -1,0 +1,4 @@
+$ ../compuerta/scripts/ci-local.sh trazas docs  (LG, sin plantar)
+== PR-5 trazas (docs AGENTS.md README.md)
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=0 resueltas=0 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc=0

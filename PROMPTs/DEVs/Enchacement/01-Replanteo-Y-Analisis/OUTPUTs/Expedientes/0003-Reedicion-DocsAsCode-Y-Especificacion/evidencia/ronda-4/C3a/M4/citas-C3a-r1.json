@@ -1,0 +1,902 @@
+[
+ {
+  "origen": "salida/A-01.md:45",
+  "cita": "README.md:67-69",
+  "estado": "OK",
+  "contenido": "- El convenio con el programa provincial enumera 46 exigencias numeradas (EX-01 a EX-46). La numeración es común a |   las cuatro apps de la federación: a Colmenar le tocan de EX-31 a EX-46. Cada entr"
+ },
+ {
+  "origen": "salida/A-01.md:46",
+  "cita": "Colmenar/Colmenar.csproj:4-6",
+  "estado": "OK",
+  "contenido": "\t\t<TargetFrameworks>net10.0-android</TargetFrameworks> | \t\t<TargetFrameworks Condition=\"!$([MSBuild]::IsOSPlatform('linux'))\">$(TargetFrameworks);net10.0-ios;net10.0-maccatalyst</TargetFrameworks> | \t"
+ },
+ {
+  "origen": "salida/A-01.md:46",
+  "cita": "README.md:93",
+  "estado": "OK",
+  "contenido": "- Hay una sola máquina Linux de la cooperativa que compila Android y el paquete .NET."
+ },
+ {
+  "origen": "salida/A-01.md:46",
+  "cita": "README.md:94",
+  "estado": "OK",
+  "contenido": "- Para iOS se usa una Mac prestada, disponible sólo los jueves."
+ },
+ {
+  "origen": "salida/A-01.md:46",
+  "cita": "README.md:95",
+  "estado": "OK",
+  "contenido": "- La administración compró una máquina Windows que compila el instalador de Windows; ya no se arma a mano."
+ },
+ {
+  "origen": "salida/A-01.md:48",
+  "cita": "README.md:18",
+  "estado": "OK",
+  "contenido": "| Productor | Da de alta sus apiarios, ve sus colmenas, sus traslados y sus tambores | Ver apiarios de otros productores |"
+ },
+ {
+  "origen": "salida/A-01.md:48",
+  "cita": "README.md:24-25",
+  "estado": "OK",
+  "contenido": "- Los kilos y los precios de cada productor son confidenciales: la API no se los entrega a quien no debe verlos; |   la app no los oculta, directamente no le llegan."
+ },
+ {
+  "origen": "salida/A-01.md:48",
+  "cita": "README.md:46-47",
+  "estado": "OK",
+  "contenido": "- La API que guarda los datos vive en otro repositorio, privado, y la mantiene un proveedor externo de la |   cooperativa. La app la consume por versión publicada; el equipo de la app no puede cambiar"
+ },
+ {
+  "origen": "salida/A-01.md:49",
+  "cita": "README.md:96-97",
+  "estado": "OK",
+  "contenido": "- La organización donde se aloja el código sólo permite ejecutar automatismos definidos dentro de ella misma; no |   deja usar los de otras organizaciones."
+ },
+ {
+  "origen": "salida/A-01.md:49",
+  "cita": "README.md:53-54",
+  "estado": "OK",
+  "contenido": "- La federación de cooperativas tiene otras tres apps en otros repositorios de la misma organización (acopio, |   cosecha, ventas)."
+ },
+ {
+  "origen": "salida/A-01.md:55",
+  "cita": "Colmenar/Platforms/Windows/Package.appxmanifest:29",
+  "estado": "OK",
+  "contenido": "    <Application Id=\"App\" Executable=\"$targetnametoken$.exe\" EntryPoint=\"$targetentrypoint$\">"
+ },
+ {
+  "origen": "salida/A-01.md:58",
+  "cita": "Colmenar/Platforms/Windows/Package.appxmanifest:9",
+  "estado": "OK",
+  "contenido": "  <Identity Name=\"maui-package-name-placeholder\" Publisher=\"CN=User Name\" Version=\"0.0.0.0\" />"
+ },
+ {
+  "origen": "salida/A-01.md:58",
+  "cita": "Colmenar/Platforms/Windows/app.manifest:3",
+  "estado": "OK",
+  "contenido": "  <assemblyIdentity version=\"1.0.0.0\" name=\"Colmenar.WinUI.app\"/>"
+ },
+ {
+  "origen": "salida/A-01.md:59",
+  "cita": "README.md:77",
+  "estado": "OK",
+  "contenido": "- Este repositorio es público. El repositorio de la API es privado. El del paquete es público."
+ },
+ {
+  "origen": "salida/A-01.md:65",
+  "cita": "README.md:16-22",
+  "estado": "OK",
+  "contenido": "| Perfil | Qué hace en la app | Qué no puede hacer | | | --- | --- | --- | | | Productor | Da de alta sus apiarios, ve sus colmenas, sus traslados y sus tambores | Ver apiarios de otros productores | "
+ },
+ {
+  "origen": "salida/A-01.md:65",
+  "cita": "README.md:9-11",
+  "estado": "OK",
+  "contenido": "tambores de miel que llegan a la planta sin saber de qué apiario salieron. Colmenar es una app .NET MAUI para | registrar cada visita a un apiario, cada traslado de colmenas (trashumancia) y cada tamb"
+ },
+ {
+  "origen": "salida/A-01.md:65",
+  "cita": "README.md:32-37",
+  "estado": "OK",
+  "contenido": "- Android: productores y peones. Los productores la bajan de la tienda oficial; los peones usan teléfonos de la |   cooperativa sin cuenta de tienda y reciben el instalador directo. | - Los teléfonos "
+ },
+ {
+  "origen": "salida/A-01.md:65",
+  "cita": "Colmenar/Colmenar.csproj:4-6",
+  "estado": "OK",
+  "contenido": "\t\t<TargetFrameworks>net10.0-android</TargetFrameworks> | \t\t<TargetFrameworks Condition=\"!$([MSBuild]::IsOSPlatform('linux'))\">$(TargetFrameworks);net10.0-ios;net10.0-maccatalyst</TargetFrameworks> | \t"
+ },
+ {
+  "origen": "salida/A-01.md:65",
+  "cita": "README.md:38-39",
+  "estado": "OK",
+  "contenido": "- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar |   la app paso a paso, en los dos idiomas."
+ },
+ {
+  "origen": "salida/A-01.md:65",
+  "cita": "README.md:46-47",
+  "estado": "OK",
+  "contenido": "- La API que guarda los datos vive en otro repositorio, privado, y la mantiene un proveedor externo de la |   cooperativa. La app la consume por versión publicada; el equipo de la app no puede cambiar"
+ },
+ {
+  "origen": "salida/A-01.md:65",
+  "cita": "README.md:48-50",
+  "estado": "OK",
+  "contenido": "- El modelo de datos compartido (apiario, colmena, visita, tambor) se publica como paquete .NET público. Vive en su |   propio repositorio, lo escriben a medias el equipo de la app y el proveedor de l"
+ },
+ {
+  "origen": "salida/A-01.md:65",
+  "cita": "README.md:12",
+  "estado": "OK",
+  "contenido": "desarrollo apícola, y una escuela agrotécnica la usa para enseñar programación."
+ },
+ {
+  "origen": "salida/A-01.md:65",
+  "cita": "README.md:72-73",
+  "estado": "OK",
+  "contenido": "- La escuela agrotécnica dicta un curso anual en el que los alumnos resuelven ejercicios sobre una copia de este |   repositorio; el docente pide que cada ejercicio tenga su enunciado y su solución."
+ },
+ {
+  "origen": "salida/A-01.md:66",
+  "cita": "README.md:38-39",
+  "estado": "OK",
+  "contenido": "- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar |   la app paso a paso, en los dos idiomas."
+ },
+ {
+  "origen": "salida/A-01.md:67",
+  "cita": "README.md:67-69",
+  "estado": "OK",
+  "contenido": "- El convenio con el programa provincial enumera 46 exigencias numeradas (EX-01 a EX-46). La numeración es común a |   las cuatro apps de la federación: a Colmenar le tocan de EX-31 a EX-46. Cada entr"
+ },
+ {
+  "origen": "salida/A-01.md:68",
+  "cita": "README.md:45",
+  "estado": "OK",
+  "contenido": "- La app (este repositorio): un solo proyecto MAUI para las tres plataformas."
+ },
+ {
+  "origen": "salida/A-01.md:68",
+  "cita": "README.md:46-47",
+  "estado": "OK",
+  "contenido": "- La API que guarda los datos vive en otro repositorio, privado, y la mantiene un proveedor externo de la |   cooperativa. La app la consume por versión publicada; el equipo de la app no puede cambiar"
+ },
+ {
+  "origen": "salida/A-01.md:68",
+  "cita": "README.md:48-50",
+  "estado": "OK",
+  "contenido": "- El modelo de datos compartido (apiario, colmena, visita, tambor) se publica como paquete .NET público. Vive en su |   propio repositorio, lo escriben a medias el equipo de la app y el proveedor de l"
+ },
+ {
+  "origen": "salida/A-01.md:69",
+  "cita": "README.md:96-97",
+  "estado": "OK",
+  "contenido": "- La organización donde se aloja el código sólo permite ejecutar automatismos definidos dentro de ella misma; no |   deja usar los de otras organizaciones."
+ },
+ {
+  "origen": "salida/A-01.md:71",
+  "cita": "README.md:38-39",
+  "estado": "OK",
+  "contenido": "- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar |   la app paso a paso, en los dos idiomas."
+ },
+ {
+  "origen": "salida/A-01.md:71",
+  "cita": "README.md:38-39",
+  "estado": "OK",
+  "contenido": "- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar |   la app paso a paso, en los dos idiomas."
+ },
+ {
+  "origen": "salida/A-01.md:72",
+  "cita": "README.md:67-69",
+  "estado": "OK",
+  "contenido": "- El convenio con el programa provincial enumera 46 exigencias numeradas (EX-01 a EX-46). La numeración es común a |   las cuatro apps de la federación: a Colmenar le tocan de EX-31 a EX-46. Cada entr"
+ },
+ {
+  "origen": "salida/A-01.md:73",
+  "cita": "README.md:45",
+  "estado": "OK",
+  "contenido": "- La app (este repositorio): un solo proyecto MAUI para las tres plataformas."
+ },
+ {
+  "origen": "salida/A-01.md:73",
+  "cita": "README.md:48-50",
+  "estado": "OK",
+  "contenido": "- El modelo de datos compartido (apiario, colmena, visita, tambor) se publica como paquete .NET público. Vive en su |   propio repositorio, lo escriben a medias el equipo de la app y el proveedor de l"
+ },
+ {
+  "origen": "salida/A-01.md:73",
+  "cita": "README.md:72-73",
+  "estado": "OK",
+  "contenido": "- La escuela agrotécnica dicta un curso anual en el que los alumnos resuelven ejercicios sobre una copia de este |   repositorio; el docente pide que cada ejercicio tenga su enunciado y su solución."
+ },
+ {
+  "origen": "salida/A-01.md:74",
+  "cita": "README.md:34-35",
+  "estado": "OK",
+  "contenido": "- Los teléfonos de los peones son viejos y no reciben la versión 3 de la app: la versión 2 se sigue corrigiendo |   durante toda la temporada 2027, en paralelo con la 3."
+ },
+ {
+  "origen": "salida/A-01.md:74",
+  "cita": "README.md:47",
+  "estado": "OK",
+  "contenido": "  cooperativa. La app la consume por versión publicada; el equipo de la app no puede cambiarla."
+ },
+ {
+  "origen": "salida/A-01.md:74",
+  "cita": "README.md:50",
+  "estado": "OK",
+  "contenido": "  numeración de versiones, que no sigue a la de la app. La app usa siempre una versión exacta del paquete."
+ },
+ {
+  "origen": "salida/A-01.md:74",
+  "cita": "Colmenar/Colmenar.csproj:37",
+  "estado": "OK",
+  "contenido": "\t\t<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>"
+ },
+ {
+  "origen": "salida/A-01.md:75",
+  "cita": "README.md:67-69",
+  "estado": "OK",
+  "contenido": "- El convenio con el programa provincial enumera 46 exigencias numeradas (EX-01 a EX-46). La numeración es común a |   las cuatro apps de la federación: a Colmenar le tocan de EX-31 a EX-46. Cada entr"
+ },
+ {
+  "origen": "salida/A-01.md:76",
+  "cita": "README.md:70-71",
+  "estado": "OK",
+  "contenido": "- La cooperativa está certificada en una norma de calidad: todo procedimiento escrito lleva un encabezado con |   código, versión, quién lo aprobó y fecha de aprobación, y ninguno puede pasar más de 9"
+ },
+ {
+  "origen": "salida/A-01.md:77",
+  "cita": "README.md:93-97",
+  "estado": "OK",
+  "contenido": "- Hay una sola máquina Linux de la cooperativa que compila Android y el paquete .NET. | - Para iOS se usa una Mac prestada, disponible sólo los jueves. | - La administración compró una máquina Windows"
+ },
+ {
+  "origen": "salida/A-01.md:77",
+  "cita": "Colmenar/Colmenar.csproj:4-6",
+  "estado": "OK",
+  "contenido": "\t\t<TargetFrameworks>net10.0-android</TargetFrameworks> | \t\t<TargetFrameworks Condition=\"!$([MSBuild]::IsOSPlatform('linux'))\">$(TargetFrameworks);net10.0-ios;net10.0-maccatalyst</TargetFrameworks> | \t"
+ },
+ {
+  "origen": "salida/A-01.md:78",
+  "cita": "README.md:98-99",
+  "estado": "OK",
+  "contenido": "- La cooperativa paga el plan del alojamiento del código que impide fusionar una rama con las verificaciones |   fallidas, y la certificación de calidad exige que nada salga publicado con una verifica"
+ },
+ {
+  "origen": "salida/A-01.md:79",
+  "cita": "README.md:61-66",
+  "estado": "OK",
+  "contenido": "- El dueño del producto es el presidente de la cooperativa; no es técnico. Firmó un acta, guardada en el |   repositorio, que autoriza a la programadora a fusionar sin él cualquier cambio cuyas verifi"
+ },
+ {
+  "origen": "salida/A-01.md:80",
+  "cita": "README.md:59-60",
+  "estado": "OK",
+  "contenido": "- Cinco asistentes automáticos de programación que proponen cambios en ramas propias, varios a la vez, en el |   repositorio de la app y en el del paquete."
+ },
+ {
+  "origen": "salida/A-01.md:80",
+  "cita": "README.md:40-41",
+  "estado": "OK",
+  "contenido": "- El organismo sanitario tiene un asistente conversacional que responde preguntas de los productores; quiere que lea |   ese sitio para contestar sobre la app."
+ },
+ {
+  "origen": "salida/A-01.md:81",
+  "cita": "README.md:26",
+  "estado": "OK",
+  "contenido": "- Los peones casi no leen pantallas largas: necesitan instrucciones de una línea, con dibujos y con audio."
+ },
+ {
+  "origen": "salida/A-01.md:81",
+  "cita": "README.md:28",
+  "estado": "OK",
+  "contenido": "- Cada perfil necesita su propia ayuda: lo que hace un peón y lo que hace la administración no se parecen."
+ },
+ {
+  "origen": "salida/A-01.md:81",
+  "cita": "README.md:85-86",
+  "estado": "OK",
+  "contenido": "- La app sale en español y en portugués: parte de los productores son de la zona de frontera y no leen español. | - Los textos de la app para los peones se graban además como audio en los dos idiomas."
+ },
+ {
+  "origen": "salida/A-01.md:81",
+  "cita": "Colmenar/MainPage.xaml.cs:1-23",
+  "estado": "OK",
+  "contenido": "﻿namespace Colmenar; |  | public partial class MainPage : ContentPage | { | \tint count = 0; |  | \tpublic MainPage() | \t{ | \t\tInitializeComponent(); | \t} |  | \tprivate void OnCounterClicked(object? sen"
+ },
+ {
+  "origen": "salida/A-01.md:82",
+  "cita": "README.md:77-81",
+  "estado": "OK",
+  "contenido": "- Este repositorio es público. El repositorio de la API es privado. El del paquete es público. | - El nombre del proveedor de la API y el del organismo sanitario no se publican en ningún lado. | - Las"
+ },
+ {
+  "origen": "salida/A-01.md:83",
+  "cita": "README.md:12",
+  "estado": "OK",
+  "contenido": "desarrollo apícola, y una escuela agrotécnica la usa para enseñar programación."
+ },
+ {
+  "origen": "salida/A-01.md:83",
+  "cita": "README.md:72-73",
+  "estado": "OK",
+  "contenido": "- La escuela agrotécnica dicta un curso anual en el que los alumnos resuelven ejercicios sobre una copia de este |   repositorio; el docente pide que cada ejercicio tenga su enunciado y su solución."
+ },
+ {
+  "origen": "salida/A-01.md:83",
+  "cita": "README.md:89",
+  "estado": "OK",
+  "contenido": "- La escuela agrotécnica está del lado brasileño de la frontera: el curso se dicta en portugués."
+ },
+ {
+  "origen": "salida/A-01.md:83",
+  "cita": "README.md:107",
+  "estado": "OK",
+  "contenido": "- Si la escuela agrotécnica seguirá con el curso después de 2027: no decidido."
+ },
+ {
+  "origen": "salida/A-01.md:84",
+  "cita": "README.md:85",
+  "estado": "OK",
+  "contenido": "- La app sale en español y en portugués: parte de los productores son de la zona de frontera y no leen español."
+ },
+ {
+  "origen": "salida/A-01.md:84",
+  "cita": "README.md:87-89",
+  "estado": "OK",
+  "contenido": "- El equipo escribe y habla en español. El proveedor de la API, que escribe la mitad del paquete, sólo lee |   portugués: todo lo que se escribe en el repositorio del paquete va en los dos idiomas. | "
+ },
+ {
+  "origen": "salida/A-01.md:84",
+  "cita": "README.md:48",
+  "estado": "OK",
+  "contenido": "- El modelo de datos compartido (apiario, colmena, visita, tambor) se publica como paquete .NET público. Vive en su"
+ },
+ {
+  "origen": "salida/A-01.md:85",
+  "cita": "README.md:100-101",
+  "estado": "OK",
+  "contenido": "- Durante la temporada de cosecha (octubre a marzo) hay que comprobar todos los días que la copia de la tabla de |   productos autorizados coincide con la publicada por el organismo; fuera de temporad"
+ },
+ {
+  "origen": "salida/A-01.md:85",
+  "cita": "README.md:70-71",
+  "estado": "OK",
+  "contenido": "- La cooperativa está certificada en una norma de calidad: todo procedimiento escrito lleva un encabezado con |   código, versión, quién lo aprobó y fecha de aprobación, y ninguno puede pasar más de 9"
+ },
+ {
+  "origen": "salida/A-01.md:85",
+  "cita": "README.md:51-52",
+  "estado": "OK",
+  "contenido": "- La app trae adentro una copia de la tabla oficial de productos veterinarios autorizados para colmenas. La publica |   el organismo sanitario y cambia sin aviso, a veces dos veces en un mes."
+ },
+ {
+  "origen": "salida/A-01.md:86",
+  "cita": "README.md:16-22",
+  "estado": "OK",
+  "contenido": "| Perfil | Qué hace en la app | Qué no puede hacer | | | --- | --- | --- | | | Productor | Da de alta sus apiarios, ve sus colmenas, sus traslados y sus tambores | Ver apiarios de otros productores | "
+ },
+ {
+  "origen": "salida/A-01.md:86",
+  "cita": "README.md:105",
+  "estado": "OK",
+  "contenido": "- Si el inspector del organismo sanitario tendrá acceso a la app o recibirá un reporte mensual: no decidido."
+ },
+ {
+  "origen": "salida/A-01.md:92",
+  "cita": "README.md:45",
+  "estado": "OK",
+  "contenido": "- La app (este repositorio): un solo proyecto MAUI para las tres plataformas."
+ },
+ {
+  "origen": "salida/A-01.md:94",
+  "cita": "README.md:59-60",
+  "estado": "OK",
+  "contenido": "- Cinco asistentes automáticos de programación que proponen cambios en ramas propias, varios a la vez, en el |   repositorio de la app y en el del paquete."
+ },
+ {
+  "origen": "salida/A-01.md:95",
+  "cita": "Colmenar/MauiProgram.cs:1-24",
+  "estado": "OK",
+  "contenido": "﻿using Microsoft.Extensions.Logging; |  | namespace Colmenar; |  | public static class MauiProgram | { | \tpublic static MauiApp CreateMauiApp() | \t{ | \t\tvar builder = MauiApp.CreateBuilder(); | \t\tbuil"
+ },
+ {
+  "origen": "salida/A-01.md:95",
+  "cita": "README.md:48-50",
+  "estado": "OK",
+  "contenido": "- El modelo de datos compartido (apiario, colmena, visita, tambor) se publica como paquete .NET público. Vive en su |   propio repositorio, lo escriben a medias el equipo de la app y el proveedor de l"
+ },
+ {
+  "origen": "salida/A-01.md:96",
+  "cita": "README.md:46-47",
+  "estado": "OK",
+  "contenido": "- La API que guarda los datos vive en otro repositorio, privado, y la mantiene un proveedor externo de la |   cooperativa. La app la consume por versión publicada; el equipo de la app no puede cambiar"
+ },
+ {
+  "origen": "salida/A-01.md:97",
+  "cita": "README.md:26-28",
+  "estado": "OK",
+  "contenido": "- Los peones casi no leen pantallas largas: necesitan instrucciones de una línea, con dibujos y con audio. | - La administración usa la app todo el día y pide atajos de teclado. | - Cada perfil necesi"
+ },
+ {
+  "origen": "salida/A-01.md:97",
+  "cita": "README.md:38-39",
+  "estado": "OK",
+  "contenido": "- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar |   la app paso a paso, en los dos idiomas."
+ },
+ {
+  "origen": "salida/A-01.md:99",
+  "cita": "README.md:59-60",
+  "estado": "OK",
+  "contenido": "- Cinco asistentes automáticos de programación que proponen cambios en ramas propias, varios a la vez, en el |   repositorio de la app y en el del paquete."
+ },
+ {
+  "origen": "salida/A-01.md:101",
+  "cita": "README.md:72-73",
+  "estado": "OK",
+  "contenido": "- La escuela agrotécnica dicta un curso anual en el que los alumnos resuelven ejercicios sobre una copia de este |   repositorio; el docente pide que cada ejercicio tenga su enunciado y su solución."
+ },
+ {
+  "origen": "salida/A-01.md:101",
+  "cita": "README.md:89",
+  "estado": "OK",
+  "contenido": "- La escuela agrotécnica está del lado brasileño de la frontera: el curso se dicta en portugués."
+ },
+ {
+  "origen": "salida/A-01.md:102",
+  "cita": "README.md:51-52",
+  "estado": "OK",
+  "contenido": "- La app trae adentro una copia de la tabla oficial de productos veterinarios autorizados para colmenas. La publica |   el organismo sanitario y cambia sin aviso, a veces dos veces en un mes."
+ },
+ {
+  "origen": "salida/A-01.md:104",
+  "cita": "README.md:1",
+  "estado": "OK",
+  "contenido": "# Colmenar"
+ },
+ {
+  "origen": "salida/A-01.md:105",
+  "cita": "README.md:38-41",
+  "estado": "OK",
+  "contenido": "- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar |   la app paso a paso, en los dos idiomas. | - El organismo sanitario tiene un asi"
+ },
+ {
+  "origen": "salida/A-01.md:111",
+  "cita": "README.md:38-39",
+  "estado": "OK",
+  "contenido": "- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar |   la app paso a paso, en los dos idiomas."
+ },
+ {
+  "origen": "salida/A-01.md:114",
+  "cita": "README.md:61-66",
+  "estado": "OK",
+  "contenido": "- El dueño del producto es el presidente de la cooperativa; no es técnico. Firmó un acta, guardada en el |   repositorio, que autoriza a la programadora a fusionar sin él cualquier cambio cuyas verifi"
+ },
+ {
+  "origen": "salida/A-01.md:116",
+  "cita": "README.md:46-47",
+  "estado": "OK",
+  "contenido": "- La API que guarda los datos vive en otro repositorio, privado, y la mantiene un proveedor externo de la |   cooperativa. La app la consume por versión publicada; el equipo de la app no puede cambiar"
+ },
+ {
+  "origen": "salida/A-01.md:117",
+  "cita": "README.md:18",
+  "estado": "OK",
+  "contenido": "| Productor | Da de alta sus apiarios, ve sus colmenas, sus traslados y sus tambores | Ver apiarios de otros productores |"
+ },
+ {
+  "origen": "salida/A-01.md:118",
+  "cita": "README.md:19",
+  "estado": "OK",
+  "contenido": "| Peón de campo | Carga visitas (estado de cada colmena, fotos, alimentación) sin conexión; sincroniza al volver | Dar de alta o borrar apiarios; ver tambores |"
+ },
+ {
+  "origen": "salida/A-01.md:119",
+  "cita": "README.md:20",
+  "estado": "OK",
+  "contenido": "| Técnico sanitario de la cooperativa | Registra tratamientos y alertas sanitarias de cualquier apiario; cierra alertas | Modificar tambores |"
+ },
+ {
+  "origen": "salida/A-01.md:120",
+  "cita": "README.md:21",
+  "estado": "OK",
+  "contenido": "| Administración de la cooperativa | Recibe tambores, los pesa y los asocia a un apiario; ve el panel completo | Cargar visitas |"
+ },
+ {
+  "origen": "salida/A-01.md:121",
+  "cita": "README.md:105",
+  "estado": "OK",
+  "contenido": "- Si el inspector del organismo sanitario tendrá acceso a la app o recibirá un reporte mensual: no decidido."
+ },
+ {
+  "origen": "salida/A-01.md:121",
+  "cita": "README.md:22",
+  "estado": "OK",
+  "contenido": "| Inspector del organismo sanitario | Consulta tratamientos y alertas de los últimos 24 meses | Escribir nada; ver kilos producidos ni precios |"
+ },
+ {
+  "origen": "salida/A-01.md:132",
+  "cita": "README.md:18",
+  "estado": "OK",
+  "contenido": "| Productor | Da de alta sus apiarios, ve sus colmenas, sus traslados y sus tambores | Ver apiarios de otros productores |"
+ },
+ {
+  "origen": "salida/A-01.md:132",
+  "cita": "README.md:24-25",
+  "estado": "OK",
+  "contenido": "- Los kilos y los precios de cada productor son confidenciales: la API no se los entrega a quien no debe verlos; |   la app no los oculta, directamente no le llegan."
+ },
+ {
+  "origen": "salida/A-01.md:132",
+  "cita": "README.md:18",
+  "estado": "OK",
+  "contenido": "| Productor | Da de alta sus apiarios, ve sus colmenas, sus traslados y sus tambores | Ver apiarios de otros productores |"
+ },
+ {
+  "origen": "salida/A-01.md:133",
+  "cita": "README.md:19",
+  "estado": "OK",
+  "contenido": "| Peón de campo | Carga visitas (estado de cada colmena, fotos, alimentación) sin conexión; sincroniza al volver | Dar de alta o borrar apiarios; ver tambores |"
+ },
+ {
+  "origen": "salida/A-01.md:134",
+  "cita": "README.md:20",
+  "estado": "OK",
+  "contenido": "| Técnico sanitario de la cooperativa | Registra tratamientos y alertas sanitarias de cualquier apiario; cierra alertas | Modificar tambores |"
+ },
+ {
+  "origen": "salida/A-01.md:135",
+  "cita": "README.md:21",
+  "estado": "OK",
+  "contenido": "| Administración de la cooperativa | Recibe tambores, los pesa y los asocia a un apiario; ve el panel completo | Cargar visitas |"
+ },
+ {
+  "origen": "salida/A-01.md:136",
+  "cita": "README.md:22",
+  "estado": "OK",
+  "contenido": "| Inspector del organismo sanitario | Consulta tratamientos y alertas de los últimos 24 meses | Escribir nada; ver kilos producidos ni precios |"
+ },
+ {
+  "origen": "salida/A-01.md:136",
+  "cita": "README.md:105",
+  "estado": "OK",
+  "contenido": "- Si el inspector del organismo sanitario tendrá acceso a la app o recibirá un reporte mensual: no decidido."
+ },
+ {
+  "origen": "salida/A-01.md:139",
+  "cita": "README.md:40-41",
+  "estado": "OK",
+  "contenido": "- El organismo sanitario tiene un asistente conversacional que responde preguntas de los productores; quiere que lea |   ese sitio para contestar sobre la app."
+ },
+ {
+  "origen": "salida/A-01.md:140",
+  "cita": "README.md:59-60",
+  "estado": "OK",
+  "contenido": "- Cinco asistentes automáticos de programación que proponen cambios en ramas propias, varios a la vez, en el |   repositorio de la app y en el del paquete."
+ },
+ {
+  "origen": "salida/A-01.md:141",
+  "cita": "README.md:72-73",
+  "estado": "OK",
+  "contenido": "- La escuela agrotécnica dicta un curso anual en el que los alumnos resuelven ejercicios sobre una copia de este |   repositorio; el docente pide que cada ejercicio tenga su enunciado y su solución."
+ },
+ {
+  "origen": "salida/A-01.md:142",
+  "cita": "README.md:38-39",
+  "estado": "OK",
+  "contenido": "- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar |   la app paso a paso, en los dos idiomas."
+ },
+ {
+  "origen": "salida/A-01.md:143",
+  "cita": "Colmenar/Platforms/Windows/Package.appxmanifest:29",
+  "estado": "OK",
+  "contenido": "    <Application Id=\"App\" Executable=\"$targetnametoken$.exe\" EntryPoint=\"$targetentrypoint$\">"
+ },
+ {
+  "origen": "salida/A-01.md:171",
+  "cita": "README.md:61-64",
+  "estado": "CITA_TEXTUAL_NO_COINCIDE:citada, no versionada",
+  "contenido": "- El dueño del producto es el presidente de la cooperativa; no es técnico. Firmó un acta, guardada en el |   repositorio, que autoriza a la programadora a fusionar sin él cualquier cambio cuyas verifi"
+ },
+ {
+  "origen": "salida/A-01.md:172",
+  "cita": "README.md:51-52",
+  "estado": "OK",
+  "contenido": "- La app trae adentro una copia de la tabla oficial de productos veterinarios autorizados para colmenas. La publica |   el organismo sanitario y cambia sin aviso, a veces dos veces en un mes."
+ },
+ {
+  "origen": "salida/A-01.md:175",
+  "cita": "Colmenar/Colmenar.csproj:37",
+  "estado": "OK",
+  "contenido": "\t\t<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>"
+ },
+ {
+  "origen": "salida/A-01.md:175",
+  "cita": "README.md:34-35",
+  "estado": "OK",
+  "contenido": "- Los teléfonos de los peones son viejos y no reciben la versión 3 de la app: la versión 2 se sigue corrigiendo |   durante toda la temporada 2027, en paralelo con la 3."
+ },
+ {
+  "origen": "salida/A-01.md:176",
+  "cita": "Colmenar/Colmenar.csproj:5",
+  "estado": "OK",
+  "contenido": "\t\t<TargetFrameworks Condition=\"!$([MSBuild]::IsOSPlatform('linux'))\">$(TargetFrameworks);net10.0-ios;net10.0-maccatalyst</TargetFrameworks>"
+ },
+ {
+  "origen": "salida/A-01.md:176",
+  "cita": "README.md:30-37",
+  "estado": "OK",
+  "contenido": "## 3. Plataformas y distribución |  | - Android: productores y peones. Los productores la bajan de la tienda oficial; los peones usan teléfonos de la |   cooperativa sin cuenta de tienda y reciben el "
+ },
+ {
+  "origen": "salida/A-01.md:177",
+  "cita": "README.md:65-66",
+  "estado": "OK",
+  "contenido": "- El técnico sanitario jefe tiene que dar su visto bueno a todo cambio que toque alertas o tratamientos; eso no se |   fusiona sin él."
+ },
+ {
+  "origen": "salida/A-01.md:189",
+  "cita": "README.md:38-39",
+  "estado": "OK",
+  "contenido": "- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar |   la app paso a paso, en los dos idiomas."
+ },
+ {
+  "origen": "salida/A-01.md:189",
+  "cita": "README.md:61-66",
+  "estado": "OK",
+  "contenido": "- El dueño del producto es el presidente de la cooperativa; no es técnico. Firmó un acta, guardada en el |   repositorio, que autoriza a la programadora a fusionar sin él cualquier cambio cuyas verifi"
+ },
+ {
+  "origen": "salida/A-01.md:189",
+  "cita": "README.md:77",
+  "estado": "OK",
+  "contenido": "- Este repositorio es público. El repositorio de la API es privado. El del paquete es público."
+ },
+ {
+  "origen": "salida/A-01.md:189",
+  "cita": "Colmenar/Colmenar.csproj:4-6",
+  "estado": "OK",
+  "contenido": "\t\t<TargetFrameworks>net10.0-android</TargetFrameworks> | \t\t<TargetFrameworks Condition=\"!$([MSBuild]::IsOSPlatform('linux'))\">$(TargetFrameworks);net10.0-ios;net10.0-maccatalyst</TargetFrameworks> | \t"
+ },
+ {
+  "origen": "salida/A-01.md:189",
+  "cita": "README.md:100-101",
+  "estado": "OK",
+  "contenido": "- Durante la temporada de cosecha (octubre a marzo) hay que comprobar todos los días que la copia de la tabla de |   productos autorizados coincide con la publicada por el organismo; fuera de temporad"
+ },
+ {
+  "origen": "salida/A-01.md:189",
+  "cita": "README.md:38-39",
+  "estado": "OK",
+  "contenido": "- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar |   la app paso a paso, en los dos idiomas."
+ },
+ {
+  "origen": "salida/A-01.md:189",
+  "cita": "README.md:61-66",
+  "estado": "OK",
+  "contenido": "- El dueño del producto es el presidente de la cooperativa; no es técnico. Firmó un acta, guardada en el |   repositorio, que autoriza a la programadora a fusionar sin él cualquier cambio cuyas verifi"
+ },
+ {
+  "origen": "salida/A-01.md:189",
+  "cita": "README.md:77",
+  "estado": "OK",
+  "contenido": "- Este repositorio es público. El repositorio de la API es privado. El del paquete es público."
+ },
+ {
+  "origen": "salida/A-01.md:189",
+  "cita": "Colmenar/Colmenar.csproj:4-6",
+  "estado": "OK",
+  "contenido": "\t\t<TargetFrameworks>net10.0-android</TargetFrameworks> | \t\t<TargetFrameworks Condition=\"!$([MSBuild]::IsOSPlatform('linux'))\">$(TargetFrameworks);net10.0-ios;net10.0-maccatalyst</TargetFrameworks> | \t"
+ },
+ {
+  "origen": "salida/A-01.md:189",
+  "cita": "README.md:100-101",
+  "estado": "OK",
+  "contenido": "- Durante la temporada de cosecha (octubre a marzo) hay que comprobar todos los días que la copia de la tabla de |   productos autorizados coincide con la publicada por el organismo; fuera de temporad"
+ },
+ {
+  "origen": "salida/_auxiliares/par-rojo-verde.txt:5",
+  "cita": "docs/_requisitos.md:1",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ },
+ {
+  "origen": "salida/_auxiliares/barrido-12b-salida.txt:2",
+  "cita": "./.docs-guard/tools/docs-guard/dominios.txt:8",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ },
+ {
+  "origen": "salida/_auxiliares/barrido-12b-salida.txt:2",
+  "cita": "./.docs-guard/tools/docs-guard/dominios.txt:0",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ },
+ {
+  "origen": "salida/_auxiliares/barrido-12b-salida.txt:3",
+  "cita": "./.docs-guard/tools/docs-guard/dominios.txt:9",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ },
+ {
+  "origen": "salida/_auxiliares/barrido-12b-salida.txt:3",
+  "cita": "./.docs-guard/tools/docs-guard/dominios.txt:127",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ },
+ {
+  "origen": "salida/_auxiliares/barrido-12b-salida.txt:4",
+  "cita": "./.docs-guard-origen/tools/docs-guard/dominios.txt:8",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ },
+ {
+  "origen": "salida/_auxiliares/barrido-12b-salida.txt:4",
+  "cita": "./.docs-guard-origen/tools/docs-guard/dominios.txt:0",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ },
+ {
+  "origen": "salida/_auxiliares/barrido-12b-salida.txt:5",
+  "cita": "./.docs-guard-origen/tools/docs-guard/dominios.txt:9",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ },
+ {
+  "origen": "salida/_auxiliares/barrido-12b-salida.txt:5",
+  "cita": "./.docs-guard-origen/tools/docs-guard/dominios.txt:127",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-12b.txt:1",
+  "cita": "./Colmenar/Platforms/Windows/Package.appxmanifest:9",
+  "estado": "OK",
+  "contenido": "  <Identity Name=\"maui-package-name-placeholder\" Publisher=\"CN=User Name\" Version=\"0.0.0.0\" />"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-12b.txt:2",
+  "cita": "./Colmenar/Platforms/Windows/app.manifest:3",
+  "estado": "OK",
+  "contenido": "  <assemblyIdentity version=\"1.0.0.0\" name=\"Colmenar.WinUI.app\"/>"
+ },
+ {
+  "origen": "salida/_auxiliares/compuerta-grupos.txt:6",
+  "cita": "docs/_diseno/ficha-diseno-documental.md:1",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-autorizacion.txt:2",
+  "cita": "./Colmenar/Platforms/Windows/Package.appxmanifest:29",
+  "estado": "OK",
+  "contenido": "    <Application Id=\"App\" Executable=\"$targetnametoken$.exe\" EntryPoint=\"$targetentrypoint$\">"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-08.txt:3",
+  "cita": "./Colmenar/Colmenar.csproj:4",
+  "estado": "OK",
+  "contenido": "\t\t<TargetFrameworks>net10.0-android</TargetFrameworks>"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-08.txt:4",
+  "cita": "./Colmenar/Colmenar.csproj:5",
+  "estado": "OK",
+  "contenido": "\t\t<TargetFrameworks Condition=\"!$([MSBuild]::IsOSPlatform('linux'))\">$(TargetFrameworks);net10.0-ios;net10.0-maccatalyst</TargetFrameworks>"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-08.txt:5",
+  "cita": "./Colmenar/Colmenar.csproj:6",
+  "estado": "OK",
+  "contenido": "\t\t<TargetFrameworks Condition=\"$([MSBuild]::IsOSPlatform('windows'))\">$(TargetFrameworks);net10.0-windows10.0.19041.0</TargetFrameworks>"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:1",
+  "cita": "README.md:38",
+  "estado": "OK",
+  "contenido": "- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:2",
+  "cita": "README.md:46",
+  "estado": "OK",
+  "contenido": "- La API que guarda los datos vive en otro repositorio, privado, y la mantiene un proveedor externo de la"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:3",
+  "cita": "README.md:47",
+  "estado": "OK",
+  "contenido": "  cooperativa. La app la consume por versión publicada; el equipo de la app no puede cambiarla."
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:4",
+  "cita": "README.md:48",
+  "estado": "OK",
+  "contenido": "- El modelo de datos compartido (apiario, colmena, visita, tambor) se publica como paquete .NET público. Vive en su"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:5",
+  "cita": "README.md:51",
+  "estado": "OK",
+  "contenido": "- La app trae adentro una copia de la tabla oficial de productos veterinarios autorizados para colmenas. La publica"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:6",
+  "cita": "README.md:75",
+  "estado": "OK",
+  "contenido": "## 6. Público y privado"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:7",
+  "cita": "README.md:77",
+  "estado": "OK",
+  "contenido": "- Este repositorio es público. El repositorio de la API es privado. El del paquete es público."
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:8",
+  "cita": "README.md:78",
+  "estado": "OK",
+  "contenido": "- El nombre del proveedor de la API y el del organismo sanitario no se publican en ningún lado."
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:9",
+  "cita": "README.md:80",
+  "estado": "OK",
+  "contenido": "  capturas, ejemplos ni datos de prueba publicados."
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:10",
+  "cita": "README.md:81",
+  "estado": "OK",
+  "contenido": "- Los nombres de los alumnos de la escuela no se publican."
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:11",
+  "cita": "README.md:99",
+  "estado": "OK",
+  "contenido": "  fallidas, y la certificación de calidad exige que nada salga publicado con una verificación fallida."
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-13.txt:12",
+  "cita": "README.md:101",
+  "estado": "OK",
+  "contenido": "  productos autorizados coincide con la publicada por el organismo; fuera de temporada, una vez al mes."
+ },
+ {
+  "origen": "salida/_auxiliares/compuerta-grupos-final.txt:6",
+  "cita": "docs/_diseno/ficha-diseno-documental.md:1",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-07.txt:3",
+  "cita": "./README.md:67",
+  "estado": "OK",
+  "contenido": "- El convenio con el programa provincial enumera 46 exigencias numeradas (EX-01 a EX-46). La numeración es común a"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-07.txt:4",
+  "cita": "./README.md:67",
+  "estado": "OK",
+  "contenido": "- El convenio con el programa provincial enumera 46 exigencias numeradas (EX-01 a EX-46). La numeración es común a"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-07.txt:5",
+  "cita": "./README.md:68",
+  "estado": "OK",
+  "contenido": "  las cuatro apps de la federación: a Colmenar le tocan de EX-31 a EX-46. Cada entrega tiene que decir qué"
+ },
+ {
+  "origen": "salida/_auxiliares/inventario-07.txt:6",
+  "cita": "./README.md:68",
+  "estado": "OK",
+  "contenido": "  las cuatro apps de la federación: a Colmenar le tocan de EX-31 a EX-46. Cada entrega tiene que decir qué"
+ },
+ {
+  "origen": "salida/.docs-guard/tools/docs-guard/dg.py:346",
+  "cita": "Esquema-Frontmatter-Y-Prefijos.md:54",
+  "estado": "ARCHIVO_INEXISTENTE",
+  "contenido": ""
+ }
+]

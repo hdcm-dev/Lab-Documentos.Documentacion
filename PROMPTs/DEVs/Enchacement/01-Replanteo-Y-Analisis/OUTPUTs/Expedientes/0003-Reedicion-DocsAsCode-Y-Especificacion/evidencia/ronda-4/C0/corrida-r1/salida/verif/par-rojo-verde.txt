@@ -1,0 +1,10 @@
+# Par rojo/verde — control de trazas (PR-5), compuerta de origen (huella dg.py 471936d8...)
+## VERDE (salida/verif/verde)
+anclas: 2 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=2 resueltas=2 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc_verde=0
+## ROJO (salida/verif/rojo, traza a FIC-999 inexistente)
+pagina-rota.md:1: ERROR traza-no-resuelve: FIC-999: el ID no está declarado en el registro
+anclas: 3 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=3 resueltas=2 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc_rojo=1

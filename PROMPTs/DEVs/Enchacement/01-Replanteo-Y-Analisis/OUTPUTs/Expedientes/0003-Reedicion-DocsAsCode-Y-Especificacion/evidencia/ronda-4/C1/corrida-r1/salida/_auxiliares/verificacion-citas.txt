@@ -1,0 +1,5 @@
+$ cd /corrida/repo && command grep -oE '[A-Za-z0-9_./-]+\.[A-Za-z]+:[0-9]+(-[0-9]+)?' /corrida/salida/A-01.md | sort -u | while IFS=: read -r f r; do …; done
+fin del chequeo (salida vacía arriba = sin defectos)
+citas distintas: 97
+$ command grep -noE '(^|[ (`])`?:[0-9]+' /corrida/salida/A-01.md   # «:n» sueltas
+rc=1

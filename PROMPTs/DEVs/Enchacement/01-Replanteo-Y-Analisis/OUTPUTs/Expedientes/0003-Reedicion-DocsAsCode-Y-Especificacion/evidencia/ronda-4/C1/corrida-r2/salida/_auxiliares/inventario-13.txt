@@ -1,0 +1,5 @@
+LG/README.md:3:Fábrica de Geometría: laboratorio de geometría de la cátedra, público de consulta.
+LGD/README.md:24:| **Qué delega** | El agente que conduce la unidad abre el pull request, publica el informe con el enlace, lo fusiona si la guarda G1–G4 pasa y no hay reserva, borra la rama remota y deja `main` local al día |
+LG/AGENTS.md:11:Dos unidades de entrega —`GeometriaFactory-Api`, el servicio de datos, y `GeometriaFactory-Web`, la pieza pública con su visor— sobre siete proyectos de código. C# sobre .NET 10, EF Core sobre SQLite, TypeScript con webpack en el visor.
+LG/AGENTS.md:71:- El servicio **escucha en 5080**, no en 8080: la configuración de Kestrel gana sobre `ASPNETCORE_URLS`. Publicar `-p <libre>:5080`.
+LG/AGENTS.md:84:| desplegarlo y saber volver atrás | `SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/09-Devops/Guia-Publicacion-Image-Docker.md` y el registro de cambios (`Guia-Despliegue.md` no está emitida) |

@@ -1,0 +1,4 @@
+grep: AGENTS.md: No such file or directory
+rc=2
+grep: AGENTS.md: No such file or directory
+rc=2

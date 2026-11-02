@@ -1,0 +1,34 @@
+LG/src/GeometriaFactory.Api/Endpoints/AuthenticationEndpoints.cs:117:        .AllowAnonymous()
+LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:146:        .RequireAuthorization();
+LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:191:        .RequireAuthorization();
+LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:249:        .RequireAuthorization();
+LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:286:        .RequireAuthorization();
+LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:342:        .RequireAuthorization();
+LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:396:        .RequireAuthorization();
+LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:457:        .RequireAuthorization();
+LG/src/GeometriaFactory.Api/Endpoints/CommissionAccountEndpoints.cs:100:        .RequireAuthorization();
+LG/src/GeometriaFactory.Api/Endpoints/CommissionAccountEndpoints.cs:167:        .RequireAuthorization();
+LG/src/GeometriaFactory.Api/Endpoints/CommissionAccountEndpoints.cs:209:        .RequireAuthorization();
+LG/src/GeometriaFactory.Api/Endpoints/CommissionAccountEndpoints.cs:267:        .RequireAuthorization();
+LG/src/GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:123:        .AllowAnonymous();
+LG/src/GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:173:        .AllowAnonymous();
+LG/src/GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:206:        .AllowAnonymous();
+LG/src/GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:341:        // NO lleva `RequireAuthorization`, y es la decisión del intake 1.34: exigir acceso firmado
+LG/src/GeometriaFactory.Api/Endpoints/AccountEndpoints.cs:344:        .AllowAnonymous();
+LG/src/GeometriaFactory.Api/Endpoints/HealthEndpoint.cs:85:        .AllowAnonymous();
+LG/src/GeometriaFactory.Api/Composition/ContractRateLimiting.cs:73:    public const string ContractPolicy = "contrato";
+LG/src/GeometriaFactory.Api/Composition/ContractRateLimiting.cs:83:    public const string CredentialExchangePolicy = "canje";
+LG/src/GeometriaFactory.Api/Composition/ContractRateLimiting.cs:138:            limiter.AddPolicy(ContractPolicy, context =>
+LG/src/GeometriaFactory.Api/Composition/ContractRateLimiting.cs:147:            limiter.AddPolicy(CredentialExchangePolicy, context =>
+LG/src/GeometriaFactory.Api/Composition/SecurityHeaders.cs:22:    public const string ContentSecurityPolicy = "frame-ancestors 'none'";
+LG/src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:56:        // requisito se DERIVA de los metadatos de cada punto —`RequireAuthorization` sin
+LG/src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:57:        // `AllowAnonymous`—, de modo que un punto nuevo queda bien descripto sin tocar este archivo.
+LG/src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:79:                    && !metadata.OfType<IAllowAnonymous>().Any();
+LG/src/GeometriaFactory.Api/Composition/CompositionRoot.cs:220:        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+LG/src/GeometriaFactory.Api/Composition/CompositionRoot.cs:221:            .AddJwtBearer(options =>
+LG/src/GeometriaFactory.Web/Program.cs:115:builder.Services.AddAuthentication(SessionCookieDefaults.Scheme)
+LG/src/GeometriaFactory.Web/Program.cs:116:    .AddCookie(SessionCookieDefaults.Scheme, options =>
+LG/src/GeometriaFactory.Web/Program.cs:125:        options.Cookie.SecurePolicy = builder.Environment.IsDevelopment()
+LG/src/GeometriaFactory.Web/Integration/SecurityHeaders.cs:24:    public const string ContentSecurityPolicy = "frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'";
+LG/src/GeometriaFactory.Infrastructure/Security/AccessTokenIssuer.cs:25:    public const string RoleClaim = ClaimTypes.Role;
+rc=0

@@ -1,0 +1,12 @@
+== cd LG
+$ find . -maxdepth 1 -iname 'changelog*' | wc -l
+1
+$ find . -maxdepth 1 -iname 'changelog*' -exec grep -niE -e obsolet -e retirad -e elimin -e renombr {} + </dev/null; echo "rc=$?"
+rc=0
+líneas: 16 (salida completa en inventario-05-salida-LG.txt)
+== cd LGD
+$ find . -maxdepth 1 -iname 'changelog*' | wc -l
+1
+$ find . -maxdepth 1 -iname 'changelog*' -exec grep -niE -e obsolet -e retirad -e elimin -e renombr {} + </dev/null; echo "rc=$?"
+rc=1
+líneas: 0 (salida completa en inventario-05-salida-LGD.txt)

@@ -1,0 +1,5 @@
+$ bash .docs-guard/scripts/ci-local.sh trazas docs
+== PR-5 trazas (docs AGENTS.md README.md)
+anclas: 1 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=5 resueltas=5 ids-duplicados=0 anclas=0 anclas-resueltas=0
+RC=0

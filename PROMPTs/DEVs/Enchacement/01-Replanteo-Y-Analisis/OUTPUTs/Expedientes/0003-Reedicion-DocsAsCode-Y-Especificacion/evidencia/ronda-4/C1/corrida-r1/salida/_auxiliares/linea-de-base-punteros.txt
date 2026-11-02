@@ -1,0 +1,14 @@
+$ python3 -I .docs-guard/tools/docs-guard/dg.py ai AGENTS.md README.md
+== PR-3 anti-inyeccion: verde (errores=0 avisos=0) AI-1=0 AI-2=0 AI-3=0 AI-4=0 AI-5=0
+rc=0
+
+$ python3 -I .docs-guard/tools/docs-guard/dg.py trazas AGENTS.md README.md
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=0 resueltas=0 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc=0
+
+$ npx --yes markdownlint-cli2@0.17.2 --config .docs-guard/scripts/docs-guard.markdownlint-cli2.jsonc AGENTS.md
+markdownlint-cli2 v0.17.2 (markdownlint v0.37.4)
+Finding: AGENTS.md
+Linting: 1 file(s)
+Summary: 0 error(s)
+rc=0

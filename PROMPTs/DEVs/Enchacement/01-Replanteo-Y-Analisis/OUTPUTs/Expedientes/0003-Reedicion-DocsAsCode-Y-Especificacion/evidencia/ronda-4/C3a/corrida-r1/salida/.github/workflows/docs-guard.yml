@@ -1,0 +1,25 @@
+# A-07: compuerta documental de Colmenar (propuesta sujeta a D-09). Copia con huella de la compuerta de origen en
+# .docs-guard/ (configuración del proyecto) y .docs-guard-origen/ (intacta, para la autoprueba). Mismo guion que en local.
+name: docs-guard
+on:
+  pull_request:
+    paths: ["docs/**", "AGENTS.md", "README.md", "CHANGELOG.md", ".docs-guard/**", ".docs-guard-origen/**"]
+jobs:
+  docs-guard:
+    runs-on: [self-hosted, "{etiqueta-runner-linux}"]   # la máquina Linux de la cooperativa
+    env:
+      DOCS_GUARD_CACHE: "{cache}"
+      npm_config_cache: "{cache}/npm"
+      npm_config_update_notifier: "false"
+    steps:
+      - uses: actions/checkout@{sha-de-checkout}
+      - run: .docs-guard/scripts/ci-local.sh herramientas docs
+      - run: npx --yes markdownlint-cli2@0.17.2 --help | head -1 || true
+      - run: .docs-guard-origen/scripts/ci-local.sh autoprueba docs
+      - run: .docs-guard/scripts/ci-local.sh enlaces docs
+      - run: .docs-guard/scripts/ci-local.sh esquema docs
+      - run: .docs-guard/scripts/ci-local.sh ai docs
+      - run: .docs-guard/scripts/ci-local.sh estructura docs
+      - run: .docs-guard/scripts/ci-local.sh trazas docs
+      - run: .docs-guard/scripts/ci-local.sh contrato docs
+      - run: .docs-guard/scripts/ci-local.sh fijadas docs

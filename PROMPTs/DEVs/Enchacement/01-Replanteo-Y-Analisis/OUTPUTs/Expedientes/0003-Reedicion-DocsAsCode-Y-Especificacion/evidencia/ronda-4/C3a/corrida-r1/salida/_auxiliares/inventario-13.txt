@@ -1,0 +1,15 @@
+README.md:38:- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar
+README.md:46:- La API que guarda los datos vive en otro repositorio, privado, y la mantiene un proveedor externo de la
+README.md:47:  cooperativa. La app la consume por versión publicada; el equipo de la app no puede cambiarla.
+README.md:48:- El modelo de datos compartido (apiario, colmena, visita, tambor) se publica como paquete .NET público. Vive en su
+README.md:51:- La app trae adentro una copia de la tabla oficial de productos veterinarios autorizados para colmenas. La publica
+README.md:75:## 6. Público y privado
+README.md:77:- Este repositorio es público. El repositorio de la API es privado. El del paquete es público.
+README.md:78:- El nombre del proveedor de la API y el del organismo sanitario no se publican en ningún lado.
+README.md:80:  capturas, ejemplos ni datos de prueba publicados.
+README.md:81:- Los nombres de los alumnos de la escuela no se publican.
+README.md:99:  fallidas, y la certificación de calidad exige que nada salga publicado con una verificación fallida.
+README.md:101:  productos autorizados coincide con la publicada por el organismo; fuera de temporada, una vez al mes.
+grep: AGENTS.md: No such file or directory
+grep: .github: No such file or directory
+rc=2

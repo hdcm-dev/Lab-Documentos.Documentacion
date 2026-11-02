@@ -1,0 +1,3 @@
+# Excepciones con huella (una línea por excepción: SHA-256, ruta desde la raíz y control).
+# Agregar o renovar una excepción es clase H: la aprueba una persona en el PR.
+# Vacío en la adopción: la línea de base de cada control es 0 (proyecto nuevo, §3.4).

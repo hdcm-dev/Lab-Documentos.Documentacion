@@ -1,0 +1,5 @@
+      1 <TargetFrameworks>net10.0-android
+rc=0
+./Colmenar/Colmenar.csproj:4:		<TargetFrameworks>net10.0-android</TargetFrameworks>
+./Colmenar/Colmenar.csproj:5:		<TargetFrameworks Condition="!$([MSBuild]::IsOSPlatform('linux'))">$(TargetFrameworks);net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
+./Colmenar/Colmenar.csproj:6:		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net10.0-windows10.0.19041.0</TargetFrameworks>

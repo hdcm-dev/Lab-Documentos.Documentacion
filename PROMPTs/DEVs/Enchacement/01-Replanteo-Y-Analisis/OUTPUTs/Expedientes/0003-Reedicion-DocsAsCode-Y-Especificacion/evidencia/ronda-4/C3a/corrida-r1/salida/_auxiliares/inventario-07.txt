@@ -1,0 +1,6 @@
+      4 EX
+rc=0
+./README.md:67:EX-01
+./README.md:67:EX-46
+./README.md:68:EX-31
+./README.md:68:EX-46

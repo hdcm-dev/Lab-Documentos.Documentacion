@@ -1,0 +1,6 @@
+9 FIC archivos=0
+9 RD archivos=3
+./tools/docs-guard/fixtures/esquema/rojo/_requisitos.md
+./tools/docs-guard/fixtures/esquema/verde/_requisitos.md
+./CHANGELOG.md
+9 PRC archivos=0

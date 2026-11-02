@@ -1,0 +1,62 @@
+# Carril programado (A-10 de la ficha de diseño documental de Lab-Geometria). Sin probar: necesita red y GitHub.
+# Sólo avisa: nunca bloquea un pull request. Abre o actualiza un único issue con el informe.
+# Qué vigila:
+#   - atraso del índice ia-db: commits de Lab-Geometria entre el SHA de ia-db/source.lock y la rama que nombra
+#     «comparar:» (entero ≥ 0);
+#   - frescura: documentos del índice cuya fecha de generación supera los 365 días.
+# Frecuencia: semanal (default del conocimiento; el proyecto no fija otra).
+
+name: docs-atraso-semanal
+
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  atraso:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Leer source.lock
+        id: lock
+        run: |
+          set -euo pipefail
+          echo "repo=$(sed -n 's/^repo: *//p' ia-db/source.lock)" >> "$GITHUB_OUTPUT"
+          echo "sha=$(sed -n 's/^sha: *//p' ia-db/source.lock)" >> "$GITHUB_OUTPUT"
+          echo "comparar=$(sed -n 's/^comparar: *//p' ia-db/source.lock)" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/${{ steps.lock.outputs.repo }}
+          path: fuente
+          fetch-depth: 0
+      - name: Medir atraso y frescura
+        id: medir
+        run: |
+          set -euo pipefail
+          atraso="$(git -C fuente rev-list --count "${{ steps.lock.outputs.sha }}..origin/${{ steps.lock.outputs.comparar }}")"
+          generado="$(sed -n 's/^- Generado *: *\([0-9-]*\).*/\1/p' ia-db/README.md)"
+          edad=$(( ( $(date -u +%s) - $(date -u -d "$generado" +%s) ) / 86400 ))
+          {
+            echo "## Atraso del índice ia-db"
+            echo
+            echo "| Medida | Valor |"
+            echo "| --- | --- |"
+            echo "| SHA fijado | ${{ steps.lock.outputs.sha }} |"
+            echo "| Atraso frente a ${{ steps.lock.outputs.comparar }} | $atraso commits |"
+            echo "| Días desde la generación | $edad (frescura: 365) |"
+          } > informe.md
+          echo "atraso=$atraso" >> "$GITHUB_OUTPUT"
+      - name: Abrir o actualizar el issue
+        if: steps.medir.outputs.atraso != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          n="$(gh issue list --label docs-atraso --state open --json number --jq '.[0].number // empty')"
+          if [ -n "$n" ]; then gh issue edit "$n" --body-file informe.md
+          else gh issue create --title "Atraso del índice ia-db" --label docs-atraso --body-file informe.md; fi

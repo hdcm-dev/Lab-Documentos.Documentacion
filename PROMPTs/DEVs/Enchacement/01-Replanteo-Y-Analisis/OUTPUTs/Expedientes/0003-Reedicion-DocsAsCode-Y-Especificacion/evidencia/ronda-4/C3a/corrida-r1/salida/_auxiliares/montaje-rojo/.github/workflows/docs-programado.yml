@@ -1,0 +1,31 @@
+# A-10: carril programado de Colmenar. Sólo avisa, con un issue; nunca bloquea.
+# Frecuencia: diaria de octubre a marzo (temporada de cosecha) y mensual de abril a septiembre, como fija el README
+# para la copia de la tabla de productos veterinarios autorizados.
+# Frescura: 90 días para los procedimientos escritos (norma de calidad); 365 para el resto.
+# Qué vigila: frescura de last_review; atraso de los source.lock (curso, sitio); coincidencia de la copia de la tabla
+# de productos autorizados con la publicada (pendiente: la ruta de la copia y la dirección de la publicación no están
+# en el árbol).
+name: docs-programado
+on:
+  schedule:
+    - cron: "0 6 * 1-3,10-12 *"
+    - cron: "0 6 1 4-9 *"
+  workflow_dispatch: {}
+jobs:
+  avisos:
+    runs-on: [self-hosted, "{etiqueta-runner-linux}"]
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/checkout@{sha-de-checkout}
+      - id: frescura
+        run: |
+          set +e
+          { python3 .docs-guard/tools/docs-guard/dg.py frescura --dias 90 docs/_gobierno
+            python3 .docs-guard/tools/docs-guard/dg.py frescura --dias 365 docs; } > frescura.txt 2>&1
+          echo "hallazgos=$(grep -c 'aviso' frescura.txt)" >> "$GITHUB_OUTPUT"
+      - if: steps.frescura.outputs.hallazgos != '0'
+        run: gh issue create --title "docs-programado: avisos de frescura" --body-file frescura.txt
+        env:
+          GH_TOKEN: ${{ github.token }}
+      # Atraso de source.lock y copia de la tabla de productos autorizados: pendiente (ver ficha, D-17).

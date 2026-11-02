@@ -1,0 +1,31 @@
+# source.lock de Colmenar (A-09, D-05/D-06). Propuesta: una pieza por bloque, para lo que vive fuera del repo del
+# código. Los repos hermanos y dedicados no se recibieron: sus SHA quedan «pendiente» (clase repartida, DK-15).
+# Formato: repo / sha (7..40) / comparar (rama principal) / rutas.
+
+# Modelo de datos compartido, paquete .NET público (CL-11 consumido por versión exacta; README.md:48-50).
+repo: {repositorio-paquete}
+sha: pendiente
+comparar: main
+rutas:
+  - (versión exacta del paquete que consume la app; numeración propia, no sigue a la app)
+
+# Copia de la tabla oficial de productos veterinarios autorizados (CL-11; README.md:51-52).
+repo: {organismo-sanitario}
+sha: pendiente
+comparar: main
+rutas:
+  - (copia con huella SHA-256 declarada; cambia sin aviso, se vigila a diario en cosecha, A-10)
+
+# Índice para agentes y expedientes, repo hermano .Documentacion (CL-08/CL-09, sujeto a D-12; README.md:53-54).
+repo: {repositorio-documentacion}
+sha: pendiente
+comparar: main
+rutas:
+  - (sin verificar en el hermano: repo no recibido)
+
+# Guía de estudio del curso, repo dedicado (CL-10, D-15; README.md:72-73).
+repo: {repositorio-curso}
+sha: pendiente
+comparar: main
+rutas:
+  - (versión del cuerpo y etiqueta; repo no recibido)

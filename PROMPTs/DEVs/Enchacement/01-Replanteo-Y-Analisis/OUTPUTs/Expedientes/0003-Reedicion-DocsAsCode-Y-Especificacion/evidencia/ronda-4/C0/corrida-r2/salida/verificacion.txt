@@ -1,0 +1,13 @@
+=== Chequeo de citas (§3.5) sobre salida/A-01.md: salida vacia = OK ===
+(fin del chequeo: vacio arriba = sin citas rotas)
+
+=== Barrido 12b sobre salida/A-01.md (sin {lista-privada} -> lista: pendiente) ===
+Patrones: IPv4, /home|/Users, hostname del inventario, etiqueta de runner, organizacion
+rc_barrido=1 (rc=1 = 0 coincidencias; DE-19 OK)
+
+=== Par rojo/verde (control de trazas, compuerta del arbol recibido, offline) ===
+VERDE:
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=1 resueltas=1 ids-duplicados=0 anclas=0 anclas-resueltas=0
+ROJO:
+anclas: 2 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=1 resueltas=0 ids-duplicados=0 anclas=0 anclas-resueltas=0

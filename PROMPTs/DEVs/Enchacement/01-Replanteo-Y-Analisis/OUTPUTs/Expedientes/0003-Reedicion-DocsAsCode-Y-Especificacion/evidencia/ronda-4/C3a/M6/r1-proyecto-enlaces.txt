@@ -1,0 +1,5 @@
+$ bash .docs-guard/scripts/ci-local.sh enlaces docs
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (docs AGENTS.md)
+🔍 4 Total (in 0s) ✅ 4 OK 🚫 0 Errors
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+RC=0

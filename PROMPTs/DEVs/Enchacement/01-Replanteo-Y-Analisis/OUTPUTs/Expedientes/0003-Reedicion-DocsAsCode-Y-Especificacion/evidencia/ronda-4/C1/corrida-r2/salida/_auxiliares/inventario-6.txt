@@ -1,0 +1,4 @@
+22:| Las quince rutas del front, su tubería y sus guardianes, la sesión, el sistema visual, el sello de versión, el aviso de datos personales y el bundle del visor | [`indexes/05_Front-Web-Y-Visor-3D.md`](indexes/05_Front-Web-Y-Visor-3D.md) |
+28:| Las 59 ADR, las auditorías de fase, las migraciones normativas, las mesas y lo que queda abierto | [`indexes/11_Decisiones-Auditorias-Y-Pendientes.md`](indexes/11_Decisiones-Auditorias-Y-Pendientes.md) |
+83:    ├── 11_Decisiones-Auditorias-Y-Pendientes.md ADR, auditorías, mesas, abiertos
+173:    como `R-22`; O-52 como `RE-04`, pendiente).

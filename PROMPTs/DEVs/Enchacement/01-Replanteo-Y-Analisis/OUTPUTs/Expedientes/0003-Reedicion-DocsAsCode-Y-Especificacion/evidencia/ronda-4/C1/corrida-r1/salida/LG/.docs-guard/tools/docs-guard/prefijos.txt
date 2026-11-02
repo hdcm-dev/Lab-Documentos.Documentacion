@@ -1,0 +1,19 @@
+# Registro cerrado de prefijos de ID de Lab-Geometria (A-02, propuesta de la ficha FIC-FICHA). Un prefijo nuevo
+# entra por PR que lo agrega acá. Columnas: prefijo, ámbito y descripción.
+#   interno  el ID se declara en las carpetas que verifica la compuerta (docs/): si no resuelve, traces-resolve bloquea.
+#   externo  el ID se declara en el corpus SDD (SDD/), fuera de las carpetas verificadas: resuelve contra el SHA de
+#            source.lock; sin source.lock avisa («no verificable»), con source.lock bloquea.
+#
+# Sistema documentador (docs/)
+FIC     interno   ficha o anexo del sistema documentador
+PRC     interno   proceso
+RD      interno   requerimiento documental (RRD)
+AUD     interno   audiencia del registro de audiencias
+# Familias del marco SDD que usa el corpus SDD/ (registro del marco, no de este directorio)
+NB      externo   necesidad de negocio
+CU      externo   caso de uso
+RN      externo   regla de negocio
+ADR     externo   decisión de arquitectura
+BT      externo   tarea técnica del backlog
+US      externo   historia de usuario
+TC      externo   caso de prueba

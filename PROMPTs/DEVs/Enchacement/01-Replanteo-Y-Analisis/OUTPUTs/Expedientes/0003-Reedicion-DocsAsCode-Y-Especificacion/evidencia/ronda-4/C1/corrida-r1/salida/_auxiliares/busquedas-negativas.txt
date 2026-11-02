@@ -1,0 +1,11 @@
+$ command grep -rn -e "schedule:" -e "cron:" LG/.github; echo rc
+rc=1
+$ command grep -rn -e "schedule:" -e "cron:" LGD/.github; echo rc
+rc=1
+$ find . \( -name .git \) -prune -o \( -iname "llms*.txt" -o -iname "*mcp*" -o -name mkdocs.yml -o -name docfx.json -o -name docusaurus.config.js -o -name _config.yml -o -name hugo.toml \) -print -not -path "*/node_modules/*" | wc -l
+0
+$ find LG/src -name "*.resx" | wc -l
+0
+$ ls LGD/AGENTS.md
+ls: cannot access 'LGD/AGENTS.md': No such file or directory
+rc=2

@@ -1,0 +1,2 @@
+$ grep -rnIE --exclude-dir=.git -e "\.Where\(" -e ProductorId -e AplicacionId -e TenantId -e scope -e openapi -e swagger --include=*.cs --include=*.xaml --include=*.json --include=*.csproj .
+rc=1

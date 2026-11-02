@@ -1,0 +1,603 @@
+{
+ "corrida": "C1-r2",
+ "citas": 290,
+ "ok": 290,
+ "no_resueltas": 0,
+ "fuera_de_repo": 0,
+ "A01": {
+  "citas": 81,
+  "no_resueltas": 0,
+  "contenido": {
+   "contenido-coincide": 35,
+   "sin-literal-contrastable": 46
+  },
+  "detalle": [
+   {
+    "cita": "LG/README.md:1",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Fábrica de Geometría"
+    ]
+   },
+   {
+    "cita": "LGD/README.md:1",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Fábrica de Geometría"
+    ]
+   },
+   {
+    "cita": "LGD/ia-db/README.md:173",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:40",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:40",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:267",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "AccountIdOf"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:358",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/.github/workflows/ci.yml:47",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "y"
+    ]
+   },
+   {
+    "cita": "LGD/.github/workflows/verificar.yml:14",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "y"
+    ]
+   },
+   {
+    "cita": "LG/.github/workflows/e2e.yml:69",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "y"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Domain/Values/Role.cs:15",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Student = 1"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Domain/Values/Role.cs:18",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Administrator = 2"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Composition/CompositionRoot.cs:220",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Web/Program.cs:115",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Program.cs:84",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "app.UseAuthentication()"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Program.cs:94",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "app.UseAuthorization()"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:146",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "RequireAuthorization()"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/CommissionAccountEndpoints.cs:100",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "RequireAuthorization()"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:495",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:106",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "RoleOf(context.User)"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:358",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "if (role == Role.Administrator)"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Contratos-REST.md:126",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "/openapi/v1.json",
+     "/documentacion"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Contratos-REST.md:331",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "/openapi/v1.json",
+     "/documentacion"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Domain/Values/Role.cs:15",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:11",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:40",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Contratos-REST.md:331",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "/v1/"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:1",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:3",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:13",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/.github/workflows/ci.yml:47",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "ubuntu-latest"
+    ]
+   },
+   {
+    "cita": "LG/.github/workflows/e2e.yml:69",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/.github/workflows/verificar.yml:14",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "ubuntu-latest"
+    ]
+   },
+   {
+    "cita": "LG/.github/workflows/deploy-front-ftp.yml:197",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:13",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "SDD/Docs/"
+    ]
+   },
+   {
+    "cita": "LGD/README.md:3",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Contratos-REST.md:331",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "/v{MAJOR}/"
+    ]
+   },
+   {
+    "cita": "LGD/README.md:33",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Verificar"
+    ]
+   },
+   {
+    "cita": "LGD/README.md:19",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:20",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:23",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:27",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:65",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:1",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:1",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/indexes/00_MASTER-INDEX.md:1",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/README.md:3",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "público"
+    ]
+   },
+   {
+    "cita": "LG/.github/workflows/e2e.yml:69",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "público"
+    ]
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:36",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:36",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Norma-De-Nomenclatura.md"
+    ]
+   },
+   {
+    "cita": "LG/AGENTS.md:39",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:28",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:1",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "AGENTS.md",
+     "AGENTS.md"
+    ]
+   },
+   {
+    "cita": "LG/AGENTS.md:22",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "TreatWarningsAsErrors"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Application/Accounts/AccountSnapshot.cs:27",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Contratos-REST.md:126",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "/openapi/v1.json"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Composition/ApiDocumentation.cs:56",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:11",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/ia-db/README.md:1",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:15",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:19",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:27",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/AGENTS.md:65",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:106",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Domain/Values/Role.cs:15",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "alumno"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Composition/CompositionRoot.cs:220",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:106",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:146",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "RequireAuthorization()"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:106",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:40",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "alumno",
+     "producto"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Domain/Values/Role.cs:18",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "administrador"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:358",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:342",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "RequireAuthorization()"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:358",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/SDD/Docs/README.md:40",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/ContractTranslation.cs:103",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "OperationAdminOnly",
+     "AdministratorRoleRequired"
+    ]
+   },
+   {
+    "cita": "LG/README.md:3",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Domain/Values/Role.cs:15",
+    "contenido": "contenido-coincide",
+    "literal": [
+     "Student = 1"
+    ]
+   },
+   {
+    "cita": "LG/src/GeometriaFactory.Api/Endpoints/WorkEndpoints.cs:106",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LGD/README.md:19",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   },
+   {
+    "cita": "LG/.github/workflows/e2e.yml:69",
+    "contenido": "sin-literal-contrastable",
+    "literal": []
+   }
+  ]
+ },
+ "invenciones": 0,
+ "detalle_invenciones": [],
+ "triados": {},
+ "detalle_triados": [],
+ "muestra_salida": [
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Adrs/ADR-06005-Contrasena-Provisoria-No-Adivinable-Y-Sin-Repetirse.md:17",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Adrs/ADR-04003-Versionado-Y-Estabilidad-De-La-Superficie.md:30",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "LG/AGENTS.md:1",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Operaciones-Internas/README.md:28",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/05-Arquitectura-Tecnica/Contratos-Abstractions.md:155",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "LGD/README.md:19",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "LG/README.md:3",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "LG/AGENTS.md:13",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "LG/src/GeometriaFactory.Domain/Values/Role.cs:15",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Operaciones-Internas/CU-06002-Verificar-Los-Valores-Declarados-Contra-Los-Derivados.md:116",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/05-Arquitectura-Tecnica/Arquitectura-Unidad-Entrega.md:571",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Adrs/ADR-06004-Derivacion-De-Clave-Anclada-Con-Parametros-Versionados.md:29",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "LG/.github/workflows/ci.yml:47",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Adrs/ADR-00005-Sin-Paginacion-Con-Condicion-De-Reingreso-Declarada.md:32",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/05-Arquitectura-Tecnica/Adrs/ADR-10008-El-Bundle-Del-Visor-Lo-Genera-El-Proyecto-Del-Front.md:57",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/05-Arquitectura-Tecnica/Extensibilidad.md:123",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Arquitectura-Unidad-Entrega.md:924",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Adrs/ADR-06002-Un-Archivo-Escritor-Unico-Y-Una-Unidad-De-Trabajo-Por-Operacion.md:40",
+   "ok"
+  ],
+  [
+   "salida/_auxiliares/inventario-3.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/05-Arquitectura-Tecnica/Contratos-REST.md:226",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "LG/src/GeometriaFactory.Application/Accounts/AccountSnapshot.cs:27",
+   "ok"
+  ]
+ ]
+}
