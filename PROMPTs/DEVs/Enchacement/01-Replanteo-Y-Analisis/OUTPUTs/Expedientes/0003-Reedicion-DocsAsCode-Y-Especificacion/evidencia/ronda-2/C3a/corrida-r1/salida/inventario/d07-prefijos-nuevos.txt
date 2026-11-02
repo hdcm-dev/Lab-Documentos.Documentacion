@@ -1,0 +1,6 @@
+$ grep -rnoE '\b(RD|FIC|PRC|EX)-[A-Z0-9]+' --exclude-dir=.git .
+README.md:67:EX-01
+README.md:67:EX-46
+README.md:68:EX-31
+README.md:68:EX-46
+(exit 0)

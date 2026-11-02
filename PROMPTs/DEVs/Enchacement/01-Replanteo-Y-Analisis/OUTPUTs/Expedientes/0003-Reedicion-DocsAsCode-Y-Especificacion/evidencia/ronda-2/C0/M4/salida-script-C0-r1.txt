@@ -1,0 +1,15 @@
+[aplicador] citas: 198 (distintas: 72); en A-01: 101; en otros artefactos: 97; fallan: 0
+[cruda] citas: 10 (distintas: 4); en A-01: 0; en otros artefactos: 10; fallan: 9
+  ARCHIVO_INEXISTENTE	salida/_trabajo/base/ai.Guides.txt:650	Development-SDD.md:79	
+  ARCHIVO_INEXISTENTE	salida/_trabajo/base/ai.Guides.txt:664	Metodologias-Agiles-Jira-Guide.md:199	
+  ARCHIVO_INEXISTENTE	salida/_trabajo/base/ai.Guides.txt:665	Metodologias-Agiles-Jira-Guide.md:260	
+  ARCHIVO_INEXISTENTE	salida/_trabajo/base/avisos.Guides.txt:375	Development-SDD.md:79	
+  ARCHIVO_INEXISTENTE	salida/_trabajo/base/avisos.Guides.txt:376	Metodologias-Agiles-Jira-Guide.md:199	
+  ARCHIVO_INEXISTENTE	salida/_trabajo/base/avisos.Guides.txt:377	Metodologias-Agiles-Jira-Guide.md:260	
+  ARCHIVO_INEXISTENTE	salida/_trabajo/base/url-fecha.Guides.txt:408	Development-SDD.md:79	
+  ARCHIVO_INEXISTENTE	salida/_trabajo/base/url-fecha.Guides.txt:409	Metodologias-Agiles-Jira-Guide.md:199	
+  ARCHIVO_INEXISTENTE	salida/_trabajo/base/url-fecha.Guides.txt:410	Metodologias-Agiles-Jira-Guide.md:260	
+copias montadas del repo: 584 archivos; líneas propias del aplicador en ellas: 136
+procedencia de líneas `ruta:n:` en salidas crudas: 5998 coinciden con repo/, 1 no
+  PROCEDENCIA_NO	salida/_trabajo/ver-trazas-rojo.txt:2	docs/_diseno/ficha-diseno-documental.md:1
+respuestas del coordinador: 6; con fuente en el directorio: 0

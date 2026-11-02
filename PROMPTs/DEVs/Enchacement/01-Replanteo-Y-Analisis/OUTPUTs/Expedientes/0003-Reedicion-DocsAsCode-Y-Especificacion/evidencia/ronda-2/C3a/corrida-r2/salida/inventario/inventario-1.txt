@@ -1,0 +1,34 @@
+## 2
+rc=0
+## 3
+ugrep: warning: docs/tecnica: No such file or directory
+rc=2
+## 3b (raiz)
+README.md:11:cooperativa vea el estado de todos los apiarios en un panel. La app se financia con un programa provincial de
+README.md:27:- La administración usa la app todo el día y pide atajos de teclado.
+README.md:65:- El técnico sanitario jefe tiene que dar su visto bueno a todo cambio que toque alertas o tratamientos; eso no se
+README.md:70:- La cooperativa está certificada en una norma de calidad: todo procedimiento escrito lleva un encabezado con
+README.md:88:  portugués: todo lo que se escribe en el repositorio del paquete va en los dos idiomas.
+README.md:100:- Durante la temporada de cosecha (octubre a marzo) hay que comprobar todos los días que la copia de la tabla de
+rc=0
+## 4
+ugrep: warning: docs/ayuda: No such file or directory
+rc=2
+## 4b
+rc=1
+## 5
+ugrep: warning: CHANGELOG.md: No such file or directory
+rc=2
+## arbol-md-frontmatter
+sin ./README.md
+## ids
+README.md:67:EX-01
+README.md:67:EX-46
+README.md:68:EX-31
+README.md:68:EX-46
+## auth
+rc=1
+## index/changelog/agents
+ls: no se puede acceder a 'CHANGELOG.md': No existe el fichero o el directorio
+ls: no se puede acceder a 'AGENTS.md': No existe el fichero o el directorio
+ls: no se puede acceder a 'docs': No existe el fichero o el directorio

@@ -1,0 +1,168 @@
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (docs AGENTS.md)
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/.github/workflows/docs-enlaces-semanal.yml | Cannot find file
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/.github/workflows/docs-guard.yml | Cannot find file
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/MovilidadUrbana-Mini-Demo/README.md | Cannot find file
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/rojo/Referencias.md#ref-otro | Cannot find fragment
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/tools/docs-guard/fixtures/enlaces/rojo/no-existe.md | Cannot find file
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/fuera-del-repo.md | Cannot find file
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/tools/docs-guard/fixtures/enlaces/rojo/a.md#no-hay-ancla | Cannot find fragment
+Issues found in 4 inputs. Find details below.
+
+[docs/_gobierno/compuerta/tools/docs-guard/fixtures/enlaces/rojo/a.md]:
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/tools/docs-guard/fixtures/enlaces/rojo/no-existe.md | Cannot find file
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/tools/docs-guard/fixtures/enlaces/rojo/a.md#no-hay-ancla | Cannot find fragment
+
+[docs/_gobierno/compuerta/tools/docs-guard/fixtures/fuera/rojo/a.md]:
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/fuera-del-repo.md | Cannot find file
+
+[docs/_gobierno/compuerta/tools/docs-guard/README.md]:
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/.github/workflows/docs-guard.yml | Cannot find file
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/.github/workflows/docs-enlaces-semanal.yml | Cannot find file
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/MovilidadUrbana-Mini-Demo/README.md | Cannot find file
+
+[docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/rojo/Referencias.md]:
+[ERROR] file://{arbol-temporal}/r1/LG-D/docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/rojo/Referencias.md#ref-otro | Cannot find fragment
+
+🔍 49 Total (in 0s) ✅ 33 OK 🚫 7 Errors 👻 9 Excluded
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+rc[enlaces]=1
+== PR-2 esquema (docs)
+docs/_requisitos.md:1: aviso traces-vacio: traces: [] es válido, pero conviene trazar al menos al doc_id del README de su cuerpo (D-17)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/anclas/real-rn-loc-01/RN-LOC-01.md:1: ERROR prefijo: «DEMO-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/anclas/rojo/ficha.md:1: ERROR prefijo: «ANX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/anclas/verde/ficha.md:1: ERROR prefijo: «ANX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema/rojo/_requisitos.md:19: ERROR rrd-id: ID «R1» no es RD-nn
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema/rojo/_requisitos.md:19: ERROR rrd-decision: «quizás» fuera de ['aceptado', 'diferido', 'pendiente', 'rechazado']
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema/rojo/_requisitos.md:19: ERROR rrd-criterio: el criterio no tiene la forma Dado/Cuando/Entonces
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema/rojo/doc.md:1: ERROR esquema-cuerpo: status: «draft» fuera del vocabulario ['vigente', 'borrador', 'obsoleto']
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema/rojo/doc.md:1: ERROR esquema-cuerpo: falta «confidence»
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema/rojo/doc.md:1: ERROR prefijo: «ZZZ-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema/verde/doc.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema-ayuda/rojo/ingresar.md:1: ERROR esquema-ayuda: falta «description»
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema-readme-cuerpo/rojo/README.md:1: ERROR esquema-readme-cuerpo: version: «2.0» no cumple ^\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?$
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema-yaml/rojo/doc.md:5: ERROR frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema-yaml/rojo/doc.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema-yaml/verde/doc.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/rojo/dos.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/rojo/registro.md:1: ERROR prefijo: «ANX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/rojo/uno.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/verde/dos.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/verde/registro.md:1: ERROR prefijo: «ANX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/verde/uno.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/rojo/Referencias.md:1: ERROR sin-frontmatter: todo documento del cuerpo abre con frontmatter (N09 §7)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/verde/Referencias.md:1: ERROR sin-frontmatter: todo documento del cuerpo abre con frontmatter (N09 §7)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traces-vacio/aviso/pagina.md:1: aviso traces-vacio: traces: [] es válido, pero conviene trazar al menos al doc_id del README de su cuerpo (D-17)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traces-vacio/aviso/pagina.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traces-vacio/verde/indice.md:1: ERROR prefijo: «IDX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traces-vacio/verde/pagina.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-ambigua/rojo/pagina.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-ambigua/rojo/registro-a.md:1: ERROR prefijo: «ANX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-ambigua/rojo/registro-b.md:1: ERROR prefijo: «ANX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-mal-formada/rojo/pagina.md:1: ERROR esquema-cuerpo: traces[0]: «TEM-911@1» no cumple ^[A-Z][A-Z0-9]*(-[A-Z0-9]+)+(@\d+\.\d+)?$
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-mal-formada/rojo/pagina.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-sin-version/rojo/pagina.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-sin-version/rojo/registro.md:1: ERROR prefijo: «ANX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-version-desfasada/rojo/pagina.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-version-desfasada/rojo/registro.md:1: ERROR prefijo: «ANX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/trazas/rojo/pagina.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/trazas/rojo/registro.md:1: ERROR prefijo: «ANX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/trazas/verde/pagina.md:1: ERROR prefijo: «TEM-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/trazas/verde/registro.md:1: ERROR prefijo: «ANX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/obsoleto/a.md:1: aviso traces-vacio: traces: [] es válido, pero conviene trazar al menos al doc_id del README de su cuerpo (D-17)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/obsoleto/a.md:1: ERROR prefijo: «FIX-» no está en el registro (prefijos.txt)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/rojo/a.md:1: ERROR sin-frontmatter: todo documento del cuerpo abre con frontmatter (N09 §7)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/verde/a.md:1: ERROR sin-frontmatter: todo documento del cuerpo abre con frontmatter (N09 §7)
+== PR-2 esquema: ROJO (errores=42 avisos=3) archivos-con-frontmatter=44 sin-frontmatter-fuera-del-cuerpo=25 readme-del-cuerpo-sin-frontmatter=0
+rc[esquema]=1
+== PR-3 anti-inyección (docs AGENTS.md)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ai-1/rojo/a.md:5: ERROR AI-1 comentario-html: <!-- comentario que el lector no ve -->
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ai-2/rojo/a.md:3: ERROR AI-2 caracter-invisible: U+200B
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ai-3/aviso/a.md:3: aviso AI-3 frase-dirigida-al-agente: system prompt
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ai-4/rojo/a.md:3: ERROR AI-4 dominio-no-permitido: ejemplo-no-permitido.invalid
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ai-4-anexo/aviso/Referencias.md:3: aviso AI-4 dominio-no-permitido: ejemplo-no-permitido.invalid
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ai-5/rojo/a.md:3: ERROR AI-5 html-oculto: <div hidden>
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ak7/inyeccion.md:5: ERROR AI-1 comentario-html: <!-- AI-1: instrucción escondida en un comentario -->
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ak7/inyeccion.md:7: ERROR AI-2 caracter-invisible: U+202E
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ak7/inyeccion.md:9: aviso AI-3 frase-dirigida-al-agente: ignore previous instructions
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ak7/inyeccion.md:11: ERROR AI-4 dominio-no-permitido: exfiltracion.invalid
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ak7/inyeccion.md:13: ERROR AI-5 html-oculto: <span style="display:none">
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/verde/a.md:11: ERROR AI-4 dominio-no-permitido: example.com
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/verde/a.md:12: ERROR AI-4 dominio-no-permitido: doi.org
+== PR-3 anti-inyeccion: ROJO (errores=10 avisos=3) AI-1=2 AI-2=2 AI-3=2 AI-4=5 AI-5=2
+rc[ai]=1
+== PR-4 estructura: markdownlint-cli2, mermaid y mermaid-arroba (docs AGENTS.md)
+markdownlint-cli2 v0.17.2 (markdownlint v0.37.4)
+Finding: docs/**/*.md AGENTS.md
+Linting: 74 file(s)
+Summary: 1 error(s)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/estructura/rojo/a.md:3 MD001/heading-increment Heading levels should only increment by one level at a time [Expected: h2; Actual: h3]
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/mermaid/rojo/a.md:3: ERROR mermaid inválido: Parse error on line 3:
+== PR-4 mermaid: ROJO (bloques=6 invalidos=1)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/mermaid-arroba/rojo/a.md:5: ERROR mermaid-arroba: «ID@1.0»: la arroba se dibuja como autoenlace de correo; escribí «ID#64;1.0» en una etiqueta sin HTML
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/mermaid-arroba/rojo/b.md:5: ERROR mermaid-arroba: «ID#64;1.0»: «#64;» en una etiqueta con HTML se dibuja como autoenlace de correo; escribí «ID#64;1.0» en una etiqueta sin HTML
+== PR-4 mermaid-arroba: ROJO (errores=2 avisos=0) bloques=6
+rc[estructura]=1
+== PR-5 trazas (docs AGENTS.md README.md)
+docs/_requisitos.md:1: ERROR id-duplicado: RD-00: también declarado en docs/_requisitos.md:15
+docs/_requisitos.md:15: ERROR id-duplicado: RD-00: también declarado en docs/_requisitos.md:1
+docs/_gobierno/como-intervenir.md:1: ERROR id-duplicado: PRC-01: también declarado en docs/_gobierno/como-intervenir.md:15
+docs/_gobierno/como-intervenir.md:15: ERROR id-duplicado: PRC-01: también declarado en docs/_gobierno/como-intervenir.md:1
+docs/_gobierno/como-intervenir.md:1: ERROR traza-no-resuelve: FDD-01: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/anclas/real-rn-loc-01/RN-LOC-01.md:1: ERROR traza-no-resuelve: DEMO-MU-911: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/anclas/rojo/ficha.md:1: ERROR traza-no-resuelve: ANX-905: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/anclas/verde/ficha.md:1: ERROR traza-no-resuelve: ANX-905: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema/rojo/_requisitos.md:1: ERROR traza-no-resuelve: TEM-901: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema/rojo/doc.md:1: ERROR traza-no-resuelve: TEM-901: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema/verde/_requisitos.md:1: ERROR traza-no-resuelve: TEM-901: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema/verde/doc.md:1: ERROR traza-no-resuelve: TEM-901: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema-yaml/rojo/doc.md:1: ERROR traza-no-resuelve: TEM-901: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/esquema-yaml/verde/doc.md:1: ERROR traza-no-resuelve: TEM-901: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/rojo/dos.md:1: ERROR traza-no-resuelve: ANX-916: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/rojo/registro.md:1: ERROR traza-no-resuelve: ANX-916: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/rojo/uno.md:1: ERROR traza-no-resuelve: ANX-916: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/verde/dos.md:1: ERROR traza-no-resuelve: ANX-916: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/verde/registro.md:1: ERROR traza-no-resuelve: ANX-916: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/id-duplicado/verde/uno.md:1: ERROR traza-no-resuelve: ANX-916: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traces-vacio/verde/indice.md:1: ERROR traza-no-resuelve: IDX-918: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traces-vacio/verde/pagina.md:1: ERROR traza-no-resuelve: IDX-918: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-ambigua/rojo/pagina.md:1: ERROR traza-no-resuelve: OBJ-912: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-ambigua/rojo/registro-a.md:1: ERROR traza-no-resuelve: ANX-912: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-ambigua/rojo/registro-b.md:1: ERROR traza-no-resuelve: ANX-913: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-mal-formada/rojo/pagina.md:1: ERROR traza-mal-formada: «TEM-911@1» no es ID o ID@MAYOR.MENOR
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-sin-version/rojo/pagina.md:1: ERROR traza-no-resuelve: OBJ-914@1.0: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-sin-version/rojo/registro.md:1: ERROR traza-no-resuelve: ANX-914: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-version-desfasada/rojo/pagina.md:1: ERROR traza-no-resuelve: OBJ-915@2.0: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/traza-version-desfasada/rojo/registro.md:1: ERROR traza-no-resuelve: ANX-915: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/trazas/rojo/pagina.md:1: ERROR traza-no-resuelve: OBJ-901@1.3: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/trazas/rojo/pagina.md:1: ERROR traza-no-resuelve: OBJ-999: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/trazas/rojo/registro.md:1: ERROR traza-no-resuelve: ANX-901: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/trazas/verde/pagina.md:1: ERROR traza-no-resuelve: OBJ-901@1.2: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/trazas/verde/pagina.md:1: ERROR traza-no-resuelve: ANX-901: el ID no está declarado en el registro
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/trazas/verde/registro.md:1: ERROR traza-no-resuelve: ANX-901: el ID no está declarado en el registro
+anclas: 3 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: ROJO (errores=36 avisos=0) trazas=32 resueltas=0 ids-duplicados=4 anclas=0 anclas-resueltas=0
+rc[trazas]=1
+== PR-6 contrato (docs)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/contrato-sin-extraccion/rojo/contracts/openapi.json:1: ERROR contrato-sin-extraccion: hay contrato versionado pero el build no dejó contracts/.generado/openapi.json
+== PR-6 contrato: verde (errores=0 avisos=0) operaciones=1
+== PR-6 contratos: ROJO (errores=1 avisos=0) contratos=2
+rc[contrato]=1
+== PR-7 fijadas y reflint (docs)
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/fijadas/rojo/Knowledges/BASE-FIJADA.md:5: ERROR huella-distinta: Knowledges/Knowledge-Pieza.md cambió respecto de lo fijado
+== PR-7 fijadas: ROJO (errores=1 avisos=0) piezas=2
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/rojo/Referencias.md:5: ERROR ref-sin-anio: ref-autor
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/rojo/Referencias.md:5: ERROR ref-sin-titulo-en-cursiva: ref-autor
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/rojo/Referencias.md:5: ERROR ref-url-sin-fecha-de-consulta: ref-autor
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/rojo/Referencias.md:1: ERROR ref-citada-sin-entrada: ref-otro
+== PR-7 reflint: ROJO (errores=4 avisos=0) referencias=3
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/ai/verde/a.md:3: aviso url-sin-fecha: https://docs.github.com/actions
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/rojo/Referencias.md:5: ERROR url-sin-fecha: https://github.com/ejemplo
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/obsoleto/a.md:16: aviso dominio-sin-referencia: mintlify.com/docs/quickstart
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/obsoleto/a.md:17: aviso url-sin-fecha: https://documentation.onesignal.com/reference/create-user
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/rojo/a.md:3: ERROR dominio-sin-referencia: mintlify.com/docs/quickstart
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/rojo/a.md:5: ERROR url-sin-fecha: https://documentation.onesignal.com/reference/create-user
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/rojo/a.md:9: ERROR dominio-sin-referencia: diataxis.fr
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/rojo/a.md:10: ERROR dominio-sin-referencia: writethedocs.org/guide/docs-as-code/
+== PR-7 url-fecha: ROJO (errores=5 avisos=3) documentos-que-bloquean=15
+rc[fijadas]=1
+== agregado: ROJO

@@ -1,0 +1,2 @@
+embebidas en salidas crudas (texto del repo, no cuentan): 0
+citas del aplicador: 113 (distintas: 74); fallan: 0; ambiguas resueltas: 0

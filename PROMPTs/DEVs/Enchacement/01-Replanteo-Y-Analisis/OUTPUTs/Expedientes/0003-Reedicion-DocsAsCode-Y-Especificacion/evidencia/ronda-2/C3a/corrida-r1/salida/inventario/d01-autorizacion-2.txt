@@ -1,0 +1,13 @@
+$ grep -rnE 'Authorize|Policy|Claim|IsInRole|FlyoutItem|IsVisible|Permission' --exclude-dir=.git --include='*.cs' --include='*.xaml' .
+(exit 1)
+$ grep -c 'GenerateDocumentationFile' Colmenar/Colmenar.csproj
+0
+$ grep -rn 'PackageReference' Colmenar/Colmenar.csproj
+Colmenar/Colmenar.csproj:69:		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+Colmenar/Colmenar.csproj:70:		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
+$ ls -a
+.
+..
+Colmenar
+.git
+README.md

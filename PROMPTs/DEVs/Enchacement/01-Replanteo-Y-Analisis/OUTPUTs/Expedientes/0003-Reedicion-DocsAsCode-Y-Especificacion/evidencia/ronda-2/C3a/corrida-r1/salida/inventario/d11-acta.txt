@@ -1,0 +1,4 @@
+$ grep -rniE "acta|AGENTS|CODEOWNERS|delegaci" --exclude-dir=.git -l .
+README.md
+$ find . -iname "*acta*" -o -iname AGENTS.md -o -iname CODEOWNERS -o -iname CHANGELOG.md -not -path "./.git/*"
+(exit 0)

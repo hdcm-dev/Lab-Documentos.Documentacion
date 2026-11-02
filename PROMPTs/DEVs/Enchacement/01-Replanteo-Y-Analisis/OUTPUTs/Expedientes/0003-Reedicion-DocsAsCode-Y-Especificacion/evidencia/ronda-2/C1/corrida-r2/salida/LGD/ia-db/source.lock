@@ -1,0 +1,8 @@
+# source.lock — ancla del índice ia-db/ contra el repositorio del código (A-09)
+# Propuesta de la adopción; los valores salen de ia-db/README.md:38 (revisión y etiqueta) y de
+# ia-db/indexes/00_MASTER-INDEX.md:10 (fecha de verificación).
+# El SHA completo y el remoto están pendientes: la copia leída no trae .git (ficha A-01, cabecera y D-06).
+repositorio: "{repo-codigo}"
+base_commit: 4b114d7
+etiqueta: v1.2.0
+verificado: 2026-10-26

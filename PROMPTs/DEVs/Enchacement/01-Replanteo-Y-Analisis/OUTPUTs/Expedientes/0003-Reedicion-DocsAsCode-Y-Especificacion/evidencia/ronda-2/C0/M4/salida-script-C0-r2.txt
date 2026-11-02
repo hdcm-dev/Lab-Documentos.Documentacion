@@ -1,0 +1,13 @@
+[aplicador] citas: 293 (distintas: 61); en A-01: 92; en otros artefactos: 201; fallan: 1
+  LINEA_INEXISTENTE	salida/notas-ronda-1.md:12	tools/docs-guard/arbol.tsv:55	repo/LD/tools/docs-guard/arbol.tsv
+  AMBIGUA(2)	salida/A-01.md:119	ficha.md:1	-> repo/LD/tools/docs-guard/fixtures/anclas/rojo/ficha.md
+[cruda] citas: 6 (distintas: 3); en A-01: 0; en otros artefactos: 6; fallan: 6
+  ARCHIVO_INEXISTENTE	salida/inventario/linea-de-base/ai.Guides.txt:650	Development-SDD.md:79	
+  ARCHIVO_INEXISTENTE	salida/inventario/linea-de-base/ai.Guides.txt:664	Metodologias-Agiles-Jira-Guide.md:199	
+  ARCHIVO_INEXISTENTE	salida/inventario/linea-de-base/ai.Guides.txt:665	Metodologias-Agiles-Jira-Guide.md:260	
+  ARCHIVO_INEXISTENTE	salida/inventario/linea-de-base/url-fecha.Guides.txt:408	Development-SDD.md:79	
+  ARCHIVO_INEXISTENTE	salida/inventario/linea-de-base/url-fecha.Guides.txt:409	Metodologias-Agiles-Jira-Guide.md:199	
+  ARCHIVO_INEXISTENTE	salida/inventario/linea-de-base/url-fecha.Guides.txt:410	Metodologias-Agiles-Jira-Guide.md:260	
+copias montadas del repo: 2 archivos; líneas propias del aplicador en ellas: 272
+procedencia de líneas `ruta:n:` en salidas crudas: 5203 coinciden con repo/, 0 no
+respuestas del coordinador: 6; con fuente en el directorio: 0

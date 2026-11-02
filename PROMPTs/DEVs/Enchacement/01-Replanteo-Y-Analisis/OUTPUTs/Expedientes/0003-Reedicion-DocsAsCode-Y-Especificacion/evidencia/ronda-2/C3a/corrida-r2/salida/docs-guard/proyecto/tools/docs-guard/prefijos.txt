@@ -1,0 +1,5 @@
+# prefijo   ámbito    descripción
+RD          interno   requerimiento documental (A-04)
+FDD         interno   ficha o anexo del diseño documental (A-01, nota de A-03, A-08)
+PROC        interno   proceso escrito del proyecto (A-06)
+EX          externo   exigencia del convenio con el programa provincial (EX-31 a EX-46 para esta app)

@@ -1,0 +1,42 @@
+$ find . -name "*.md" -not -path "./.git/*" | wc -l  (con y sin frontmatter)
+head: error al leer './Guides/IA/Claude-Guide.md': Es un directorio
+md=374 con_frontmatter=264 sin_frontmatter=110
+
+$ find . -name "*.md" | cut -d/ -f2-3 | sort | uniq -c
+      1 AGENTS.md
+      1 CHANGELOG.md
+     20 Concepts/Framework-Concept
+      1 .github/pull_request_template.md
+     94 Guides/Arquitectura
+     35 Guides/Despliegue
+     59 Guides/Documentacion-Tecnica
+     15 Guides/Dot-NET-Arquitectura-Guide
+      6 Guides/GitFlow
+     24 Guides/IA
+      4 Guides/Metodologia-Agiles
+     14 Guides/Metodologia-Entorno-Desarrollo
+      2 Guides/Otros
+      1 Guides/README.md
+     23 Guides/Testing
+      2 Guides/UX-UI-Design
+      1 README.md
+     71 tools/docs-guard
+
+$ ls .github/workflows; grep -n runs-on .github/workflows/*.yml
+docs-enlaces-semanal.yml
+docs-guard.yml
+framework-concept-demo.yml
+mini-demo-movilidad.yml
+.github/workflows/docs-enlaces-semanal.yml:43:    runs-on: [self-hosted, {etiqueta-runner}]
+.github/workflows/docs-guard.yml:60:    runs-on: [self-hosted, {etiqueta-runner}]
+.github/workflows/framework-concept-demo.yml:7:#   P6.4  runs-on [self-hosted, {etiqueta-runner}] con guarda de mismo repositorio (un PR desde un fork no corre en
+.github/workflows/framework-concept-demo.yml:43:    runs-on: [self-hosted, {etiqueta-runner}]
+.github/workflows/framework-concept-demo.yml:88:    runs-on: [self-hosted, {etiqueta-runner}]
+.github/workflows/framework-concept-demo.yml:149:    runs-on: [self-hosted, {etiqueta-runner}]
+.github/workflows/framework-concept-demo.yml:169:    runs-on: [self-hosted, {etiqueta-runner}]
+.github/workflows/mini-demo-movilidad.yml:35:    runs-on: [self-hosted, {etiqueta-runner}]
+
+$ find . -type d -name docs (y _requisitos.md, _gobierno)
+./Guides/Metodologia-Entorno-Desarrollo/Examples/A-plantillas/repo/docs
+./tools/docs-guard/fixtures/esquema/rojo/_requisitos.md
+./tools/docs-guard/fixtures/esquema/verde/_requisitos.md

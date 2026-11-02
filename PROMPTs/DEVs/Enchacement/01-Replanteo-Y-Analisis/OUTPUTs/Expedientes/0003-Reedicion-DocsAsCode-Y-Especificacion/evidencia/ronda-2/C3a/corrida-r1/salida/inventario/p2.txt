@@ -1,0 +1,2 @@
+$ grep -rlE '^version:' --include='*.md' . | xargs -r grep -l 'Versión:\*\*'
+(exit 0; cuenta 0)

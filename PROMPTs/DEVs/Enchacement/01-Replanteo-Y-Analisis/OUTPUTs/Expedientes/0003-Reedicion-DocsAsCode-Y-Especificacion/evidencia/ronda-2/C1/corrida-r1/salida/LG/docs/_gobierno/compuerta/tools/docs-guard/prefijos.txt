@@ -1,0 +1,13 @@
+# prefijo   ámbito    descripción
+# PROPUESTA sujeta a D-09 (copia de la compuerta no disponible). Formato de conocimiento.md §5.6.
+RD          interno   requerimiento documental (A-04)
+PRC         interno   proceso «Cómo intervenir» (A-06)
+FDD         interno   ficha o anexo de diseño documental (A-01, nota de A-03, A-08)
+US          interno   historia de usuario del marco SDD, declarada en SDD/Docs
+CU          interno   caso de uso del marco SDD, declarado en SDD/Docs
+RN          interno   regla de negocio del marco SDD, declarada en SDD/Docs
+ADR         interno   decisión de arquitectura del marco SDD, declarada en SDD/Docs
+BT          interno   tarea técnica del backlog SDD, declarada en SDD/Docs
+NB          interno   necesidad de negocio del marco SDD, declarada en SDD/Docs
+RC          interno   regla conceptual de modelo del marco SDD, declarada en SDD/Docs
+EXP         interno   expediente de caso, declarado en SDD/Expedientes

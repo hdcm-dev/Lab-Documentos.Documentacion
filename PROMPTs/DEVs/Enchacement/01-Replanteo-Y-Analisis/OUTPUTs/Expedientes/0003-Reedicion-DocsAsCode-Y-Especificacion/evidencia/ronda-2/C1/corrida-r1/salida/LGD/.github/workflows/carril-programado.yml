@@ -1,0 +1,40 @@
+# A-10 · Carril programado — PROPUESTA sujeta a D-17 y a A-09 (source.lock pendiente: SHA completo no disponible).
+# Frecuencia: semanal. Frescura: 365 días. Vigila: atraso de ia-db/ frente a la rama principal de LG
+# (commits entre el SHA fijado y main) y la edad del ancla. Modo: sólo avisa, con un issue; nunca falla un PR.
+name: carril-programado
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  atraso:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Medir atraso y frescura del ancla de ia-db
+        id: medir
+        env:
+          REPO_CODIGO: "{organizacion}/{repo-del-codigo}"   # pendiente: remoto origin de LG (D-01 · organización)
+          FRESCURA_DIAS: "365"
+        run: |
+          sha=$(sed -n 's/^sha: *//p' ia-db/source.lock)
+          fecha=$(sed -n 's/^fecha: *//p' ia-db/source.lock)
+          git clone --filter=blob:none --no-checkout "https://github.com/${REPO_CODIGO}.git" codigo
+          atraso=$(git -C codigo rev-list --count "${sha}..origin/main")
+          edad=$(( ( $(date +%s) - $(date -d "${fecha}" +%s) ) / 86400 ))
+          echo "atraso=${atraso}" >> "$GITHUB_OUTPUT"
+          echo "edad=${edad}" >> "$GITHUB_OUTPUT"
+      - name: Avisar con un issue
+        if: steps.medir.outputs.atraso != '0' || steps.medir.outputs.edad > 365
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "ia-db: atraso ${{ steps.medir.outputs.atraso }} commits, ancla de ${{ steps.medir.outputs.edad }} días" \
+            --body "Aviso del carril programado (sólo avisa). Regenerar ia-db y actualizar ia-db/source.lock."

@@ -1,0 +1,11 @@
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (_vacio AGENTS.md)
+[ERROR] file://{arbol-temporal}/r2/LGD-R/no-existe.md | Cannot find file
+Issues found in 1 input. Find details below.
+
+[AGENTS.md]:
+[ERROR] file://{arbol-temporal}/r2/LGD-R/no-existe.md | Cannot find file
+
+🔍 5 Total (in 0s) ✅ 4 OK 🚫 1 Error
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+rc[enlaces]=1
+== agregado: ROJO

@@ -1,0 +1,10 @@
+embebidas en salidas crudas (texto del repo, no cuentan): 4890
+  EXTERNA_DECLARADA	salida/demandas.md:12	TEM-03-Topologia-Y-Versionado.md:109-123
+procedencia salida/inventario/arbol-dirs.txt: 385 líneas coinciden con repo/, 0 no
+procedencia salida/inventario/p2-LG.txt: 9 líneas coinciden con repo/, 0 no
+procedencia salida/inventario/p2-LGD.txt: 0 líneas coinciden con repo/, 0 no
+procedencia salida/inventario/p3-LG-SDD-Docs.txt: 4574 líneas coinciden con repo/, 0 no
+procedencia salida/inventario/p3-LG-tecnica-viva.txt: 268 líneas coinciden con repo/, 0 no
+procedencia salida/inventario/p5-LG-changelog.txt: 16 líneas coinciden con repo/, 0 no
+procedencia salida/inventario/p5-LGD-changelog.txt: 0 líneas coinciden con repo/, 0 no
+citas del aplicador: 725 (distintas: 699); fallan: 0; ambiguas resueltas: 0

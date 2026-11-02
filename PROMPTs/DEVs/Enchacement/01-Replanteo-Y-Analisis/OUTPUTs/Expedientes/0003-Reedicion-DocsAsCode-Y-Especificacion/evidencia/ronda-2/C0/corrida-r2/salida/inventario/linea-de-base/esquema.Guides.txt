@@ -1,0 +1,340 @@
+Guides/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/README.md:1: ERROR prefijo: «GUIAS-» no está en el registro (prefijos.txt)
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/README.md:1: ERROR prefijo: «GUIA-» no está en el registro (prefijos.txt)
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/00-Marco-de-Referencia/Actores.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/00-Marco-de-Referencia/Contextos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/00-Marco-de-Referencia/Convenciones.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/00-Marco-de-Referencia/Escenarios.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/01-Mapa-Conceptual/Mapa-Conceptual.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/10-Arquitectura-de-Servicios/Criterios-de-Particion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/10-Arquitectura-de-Servicios/Microservicios.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/10-Arquitectura-de-Servicios/Monolito-Modular.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/10-Arquitectura-de-Servicios/Monolito.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/10-Arquitectura-de-Servicios/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Build-Compartido.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Estructura-de-Solucion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Tipos-de-Proyecto.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Topologias-de-Solucion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/30-Organizacion-Interna/Carpetas-o-Proyectos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/30-Organizacion-Interna/Espacios-de-Nombres.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/30-Organizacion-Interna/Modelos-de-Capas.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/30-Organizacion-Interna/Modelos-y-Contratos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/30-Organizacion-Interna/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/30-Organizacion-Interna/Vertical-Slice.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/40-Nomenclatura/Antipatrones-de-Nombrado.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/40-Nomenclatura/Capitalizacion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/40-Nomenclatura/Nombrado-de-Tipos-y-Miembros.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/40-Nomenclatura/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/50-Estilo-de-Codificacion/Automatizacion-del-Estilo.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/50-Estilo-de-Codificacion/Convenciones-de-Lenguaje.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/50-Estilo-de-Codificacion/Formato-y-Llaves.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/50-Estilo-de-Codificacion/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/60-Patrones-de-Codigo/Patrones-de-Acceso-a-Datos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/60-Patrones-de-Codigo/Patrones-de-Endpoint.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/60-Patrones-de-Codigo/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/61-Analisis-Integral/Analisis-Integral.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/61-Analisis-Integral/Analisis-Integral.md:1: ERROR esquema-cuerpo: doc_type: «analisis» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/61-Analisis-Integral/Analisis-Integral.md:1: ERROR prefijo: «ANALISIS-» no está en el registro (prefijos.txt)
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Glosario.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Glosario.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Listas-de-Verificacion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Listas-de-Verificacion.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Referencias.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Referencias.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/00-Marco-de-Referencia/Actores.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/00-Marco-de-Referencia/Contextos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/00-Marco-de-Referencia/Convenciones.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/00-Marco-de-Referencia/Escenarios.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/10-Fundamentos-REST/Hipermedia.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/10-Fundamentos-REST/Modelo-de-Madurez.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/10-Fundamentos-REST/Que-es-REST.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/10-Fundamentos-REST/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/10-Fundamentos-REST/REST-y-Alternativas.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/20-Diseno-de-Recursos/Jerarquias-y-Relaciones.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/20-Diseno-de-Recursos/Modelado-de-Recursos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/20-Diseno-de-Recursos/Nomenclatura-de-URIs.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/20-Diseno-de-Recursos/Operaciones-No-CRUD.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/20-Diseno-de-Recursos/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Cabeceras-y-Negociacion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Cache-y-Peticiones-Condicionales.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Codigos-de-Estado.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Idempotencia-y-Concurrencia.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Metodos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Actualizaciones-Parciales.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Colecciones-y-Paginacion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Filtrado-Orden-y-Seleccion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Formato-y-Nomenclatura-de-Campos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Manejo-de-Errores.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Compatibilidad-y-Cambios-Rompientes.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Deprecacion-y-Retiro.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Estrategias-de-Versionado.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Design-First-y-Code-First.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Generacion-de-Clientes-y-Pruebas-de-Contrato.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/OpenAPI.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Autenticacion-y-Autorizacion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-de-la-Superficie.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Resiliencia-y-Reintentos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Consumo-desde-Blazor-y-MAUI.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Minimal-APIs-y-Controllers.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Organizacion-del-Proyecto-API.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Pruebas-de-API.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Serializacion-y-Modelos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Validacion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Comparativa-y-Criterios.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Google-AIP.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Microsoft-y-Azure.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Zalando-y-otras.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/Arquitectura-y-REST.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/Experiencia-del-Consumidor.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/Spec-Driven-Development.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Despliegue/Documentacion-Informe-Despliegue/README.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/README.md:1: ERROR prefijo: «GUIA-» no está en el registro (prefijos.txt)
+Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Actores.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Actores.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Contextos.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Contextos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Convenciones.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Convenciones.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Escenarios.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Escenarios.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/01-Mapa-Conceptual/Mapa-Conceptual.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/01-Mapa-Conceptual/Mapa-Conceptual.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/10-Naturaleza-del-Informe/Audiencia-y-Proposito.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/10-Naturaleza-del-Informe/Audiencia-y-Proposito.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/10-Naturaleza-del-Informe/Estandares-y-Marcos.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/10-Naturaleza-del-Informe/Estandares-y-Marcos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/10-Naturaleza-del-Informe/Que-es-y-que-no-es.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/10-Naturaleza-del-Informe/Que-es-y-que-no-es.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/10-Naturaleza-del-Informe/README.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/10-Naturaleza-del-Informe/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/Decisiones-de-Arquitectura.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/Decisiones-de-Arquitectura.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/README.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/Vista-de-Componentes.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/Vista-de-Componentes.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/Vistas-y-Diagramas.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/20-Arquitectura/Vistas-y-Diagramas.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/Distribucion-e-Instalacion.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/Distribucion-e-Instalacion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/Operacion-y-Resiliencia.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/Operacion-y-Resiliencia.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/README.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/Topologia-y-Entornos.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/Topologia-y-Entornos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/40-Requisitos/README.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/40-Requisitos/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/40-Requisitos/Requisitos-Funcionales.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/40-Requisitos/Requisitos-Funcionales.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/40-Requisitos/Requisitos-No-Funcionales.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/40-Requisitos/Requisitos-No-Funcionales.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/Criterio-de-Redaccion.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/Criterio-de-Redaccion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/Errores-Frecuentes.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/Errores-Frecuentes.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/Estructura-del-Documento.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/Estructura-del-Documento.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/README.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Glosario.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Glosario.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Glosario.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Lista-de-Verificacion.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Lista-de-Verificacion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Lista-de-Verificacion.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Pendientes.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Pendientes.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Pendientes.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Plantilla-del-Informe.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Plantilla-del-Informe.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Plantilla-del-Informe.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:8: aviso frontmatter-no-yaml: valor sin comillas que contiene «: »; un lector YAML no lo acepta: entrecomillarlo
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:1: ERROR esquema-cuerpo: audience[4]: «seguridad» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:1: ERROR prefijo: «GHA-» no está en el registro (prefijos.txt)
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/README.md:1: ERROR prefijo: «GUIA-» no está en el registro (prefijos.txt)
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/00-Marco-de-Referencia/Actores.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/00-Marco-de-Referencia/Contextos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/00-Marco-de-Referencia/Convenciones.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/00-Marco-de-Referencia/Escenarios.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/01-Mapa-Conceptual/Mapa-Conceptual.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/10-Vision/BRD.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/10-Vision/PRD.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/10-Vision/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/10-Vision/Roadmap.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/10-Vision/Vision-Document.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/ADR.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/RFC.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/SAD.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Threat-Model.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Integration-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Administrator-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Postmortem.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Runbook.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Release-Notes.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Cases.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/80-Metodos-Agiles/Canvas.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/80-Metodos-Agiles/Comparativa-y-Criterios.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/80-Metodos-Agiles/Kanban.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/80-Metodos-Agiles/Manifiesto-y-Documentacion.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/80-Metodos-Agiles/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/80-Metodos-Agiles/Scrum.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/90-Modelos-de-Arquitectura/Cliente-Servidor.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/90-Modelos-de-Arquitectura/Comparativa-y-Criterios.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/90-Modelos-de-Arquitectura/Hexagonal.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/90-Modelos-de-Arquitectura/Microservicios.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/90-Modelos-de-Arquitectura/Modelo-de-Capas.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/90-Modelos-de-Arquitectura/Monolitico.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/90-Modelos-de-Arquitectura/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/95-Transversales/Spec-Driven-Development.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/95-Transversales/UX-UI-y-Flujo-de-Usuario.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/99-Anexos/Glosario.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/99-Anexos/Glosario.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/99-Anexos/Pendientes.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/99-Anexos/Pendientes.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/99-Anexos/Revision-de-Consistencia.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/99-Anexos/Revision-de-Consistencia.md:1: ERROR prefijo: «ANEXO-» no está en el registro (prefijos.txt)
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquiectura-Interactive-Guide.md:1: ERROR esquema-cuerpo: falta «traces»
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquiectura-Interactive-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquiectura-Interactive-Guide.md:1: ERROR esquema-cuerpo: doc_type: «study-guide-activity» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquiectura-Interactive-Guide.md:1: ERROR esquema-cuerpo: status: «en construcción» fuera del vocabulario ['vigente', 'borrador', 'obsoleto']
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquiectura-Interactive-Guide.md:1: ERROR esquema-cuerpo: origin: «ai-assisted» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquiectura-Interactive-Guide.md:1: ERROR esquema-cuerpo: confidence: «alta en lo verificado en máquina y rotulado como tal; el resto está marcado como pendiente» fuera del vocabulario ['alta', 'media', 'baja']
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquiectura-Interactive-Guide.md:1: ERROR esquema-cuerpo: audience[0]: «quien ya resolvió una aplicación de escritorio con jerarquías y quiere llevarla a una solución en capas con API» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquiectura-Interactive-Guide.md:1: ERROR prefijo: «GUIA-» no está en el registro (prefijos.txt)
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:1: ERROR esquema-cuerpo: doc_type: «study-guide» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:1: ERROR esquema-cuerpo: origin: «ai-assisted» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:1: ERROR esquema-cuerpo: confidence: «alta en lo capturado en laboratorio; media en lo rotulado como criterio de esta guía» fuera del vocabulario ['alta', 'media', 'baja']
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:1: ERROR esquema-cuerpo: audience[0]: «personas que se inician en arquitectura .NET» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:1: ERROR esquema-cuerpo: audience[1]: «quien diseña una solución .NET desde cero» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:1: ERROR prefijo: «GUIA-» no está en el registro (prefijos.txt)
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: falta «traces»
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: doc_type: «documento-tematico» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: audience[4]: «seguridad» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: audience[5]: «autoridad-de-cambio» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1: ERROR prefijo: «GF-» no está en el registro (prefijos.txt)
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Anexos/workflows/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Anexos/workflows/README.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Anexos/workflows/README.md:1: ERROR prefijo: «GF-» no está en el registro (prefijos.txt)
+Guides/GitFlow/Git-Flow-Guides/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/GitFlow/Git-Flow-Guides/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/GitFlow/Git-Flow-Guides/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md:1: ERROR esquema-cuerpo: audience[4]: «autoridad-de-cambio» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/GitFlow/Git-Flow-Guides/GitFlow-Practice-Guide/Guia-Practica-GitFlow.md:1: ERROR prefijo: «GF-» no está en el registro (prefijos.txt)
+Guides/GitFlow/Git-Flow-Guides/GitFlow-Practice-Guide/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/GitFlow/Git-Flow-Guides/GitFlow-Practice-Guide/README.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/GitFlow/Git-Flow-Guides/GitFlow-Practice-Guide/README.md:1: ERROR prefijo: «GF-» no está en el registro (prefijos.txt)
+Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/Guia-Practica-GitHubFlow.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/Guia-Practica-GitHubFlow.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/Guia-Practica-GitHubFlow.md:1: ERROR prefijo: «GHF-» no está en el registro (prefijos.txt)
+Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/README.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/README.md:1: ERROR prefijo: «GHF-» no está en el registro (prefijos.txt)
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1: ERROR esquema-cuerpo: doc_type: «study-guide» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1: ERROR esquema-cuerpo: origin: «ai-assisted» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1: ERROR esquema-cuerpo: confidence: «alta en lo respaldado por experimento o fuente primaria; media en lo rotulado como criterio de esta guía; baja en lo rotulado como no verificado en Windows» fuera del vocabulario ['alta', 'media', 'baja']
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1: ERROR esquema-cuerpo: audience[0]: «desarrolladores que trabajan en Windows y en Linux sobre el mismo repositorio» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1: ERROR esquema-cuerpo: audience[1]: «líderes técnicos y arquitectos que definen la política de entorno» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1: ERROR esquema-cuerpo: audience[2]: «DevOps e ingeniería de plataforma» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1: ERROR esquema-cuerpo: audience[3]: «revisores de PR» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1: ERROR prefijo: «GUIA-» no está en el registro (prefijos.txt)
+Guides/Otros/Seguridad-Red-Windows-Guide/Beginning-Security-Windows-Network-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Otros/Seguridad-Red-Windows-Guide/Beginning-Security-Windows-Network-Guide.md:1: ERROR esquema-cuerpo: doc_type: «guia-estudio» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Otros/Seguridad-Red-Windows-Guide/Beginning-Security-Windows-Network-Guide.md:1: ERROR esquema-cuerpo: traces[2]: «CUADERNO» no cumple ^[A-Z][A-Z0-9]*(-[A-Z0-9]+)+(@\d+\.\d+)?$
+Guides/Otros/Seguridad-Red-Windows-Guide/Beginning-Security-Windows-Network-Guide.md:1: ERROR prefijo: «GUIA-» no está en el registro (prefijos.txt)
+Guides/Otros/Seguridad-Red-Windows-Guide/Cuaderno-Ejercicios-Seguridad-Windows.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Otros/Seguridad-Red-Windows-Guide/Cuaderno-Ejercicios-Seguridad-Windows.md:1: ERROR esquema-cuerpo: doc_id: «CUADERNO» no cumple ^[A-Z][A-Z0-9]*(-[A-Z0-9]+)+$
+Guides/Otros/Seguridad-Red-Windows-Guide/Cuaderno-Ejercicios-Seguridad-Windows.md:1: ERROR esquema-cuerpo: doc_type: «cuaderno-ejercicios» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Otros/Seguridad-Red-Windows-Guide/Cuaderno-Ejercicios-Seguridad-Windows.md:1: ERROR prefijo: «CUADERNO-» no está en el registro (prefijos.txt)
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1: ERROR prefijo: «E2E-» no está en el registro (prefijos.txt)
+Guides/Testing/E2E-Guide/Quick-Guide-ABM.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/E2E-Guide/Quick-Guide-ABM.md:1: ERROR esquema-cuerpo: doc_type: «guia-rapida» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Testing/E2E-Guide/Quick-Guide-ABM.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/E2E-Guide/Quick-Guide-ABM.md:1: ERROR prefijo: «E2E-» no está en el registro (prefijos.txt)
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: falta «traces»
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: doc_type: «documento-tematico» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: audience[4]: «seguridad» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1: ERROR esquema-cuerpo: audience[5]: «autoridad-de-cambio» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1: ERROR prefijo: «GF-» no está en el registro (prefijos.txt)
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:1: ERROR esquema-cuerpo: audience[4]: «seguridad» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:1: ERROR prefijo: «GHA-» no está en el registro (prefijos.txt)
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitFlow.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitFlow.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitFlow.md:1: ERROR esquema-cuerpo: audience[4]: «autoridad-de-cambio» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitFlow.md:1: ERROR prefijo: «GF-» no está en el registro (prefijos.txt)
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitHubFlow.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitHubFlow.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitHubFlow.md:1: ERROR prefijo: «GHF-» no está en el registro (prefijos.txt)
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1: ERROR prefijo: «E2E-» no está en el registro (prefijos.txt)
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Caso-Encuesta-Page.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Caso-Encuesta-Page.md:1: ERROR esquema-cuerpo: doc_type: «caso-de-diseño» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Caso-Encuesta-Page.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Caso-Encuesta-Page.md:1: ERROR prefijo: «E2E-» no está en el registro (prefijos.txt)
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Del-Requerimiento-Al-Caso.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Del-Requerimiento-Al-Caso.md:1: ERROR esquema-cuerpo: doc_type: «metodo-propuesto» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Del-Requerimiento-Al-Caso.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Del-Requerimiento-Al-Caso.md:1: ERROR esquema-cuerpo: audience[3]: «analisis» fuera del vocabulario ['humano', 'agente', 'estudiante', 'docente', 'desarrollo', 'qa', 'devops', 'po', 'analista', 'persona-usuaria']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Del-Requerimiento-Al-Caso.md:1: ERROR prefijo: «E2E-» no está en el registro (prefijos.txt)
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Mapa-Del-Conjunto.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Mapa-Del-Conjunto.md:1: ERROR esquema-cuerpo: doc_type: «documento-integrador» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Mapa-Del-Conjunto.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Mapa-Del-Conjunto.md:1: ERROR prefijo: «E2E-» no está en el registro (prefijos.txt)
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-ABM.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-ABM.md:1: ERROR esquema-cuerpo: doc_type: «guia-rapida» fuera del vocabulario ['tema', 'marco-de-referencia', 'familia', 'mapa', 'anexo', 'anexo-referencias', 'indice', 'guia-practica', 'guia-de-estudio', 'operativa', 'study-note', 'rrd', 'proceso', 'ficha']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-ABM.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-ABM.md:1: ERROR prefijo: «E2E-» no está en el registro (prefijos.txt)
+Guides/Testing/Lab-E2E.WebBlazor-Guides/workflows/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/Testing/Lab-E2E.WebBlazor-Guides/workflows/README.md:1: ERROR esquema-cuerpo: origin: «agente» fuera del vocabulario ['human', 'ia-assisted', 'ia-generated']
+Guides/Testing/Lab-E2E.WebBlazor-Guides/workflows/README.md:1: ERROR prefijo: «GF-» no está en el registro (prefijos.txt)
+== PR-2 esquema: ROJO (errores=309 avisos=30) archivos-con-frontmatter=207 sin-frontmatter-fuera-del-cuerpo=71 readme-del-cuerpo-sin-frontmatter=0

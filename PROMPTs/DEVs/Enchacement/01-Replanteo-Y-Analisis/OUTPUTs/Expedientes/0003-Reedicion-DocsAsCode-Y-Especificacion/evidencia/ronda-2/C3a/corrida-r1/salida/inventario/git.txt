@@ -1,0 +1,12 @@
+$ git rev-parse HEAD
+d39dfbd4d113794fc0edca9f6d16739b51a502f3
+$ git remote -v
+origin	{dir-de-trabajo}/sellado/C3/ficha2/semilla.bundle (fetch)
+origin	{dir-de-trabajo}/sellado/C3/ficha2/semilla.bundle (push)
+$ git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+$ git tag
+$ git log --oneline
+d39dfbd Semilla del caso C3, descripción 2

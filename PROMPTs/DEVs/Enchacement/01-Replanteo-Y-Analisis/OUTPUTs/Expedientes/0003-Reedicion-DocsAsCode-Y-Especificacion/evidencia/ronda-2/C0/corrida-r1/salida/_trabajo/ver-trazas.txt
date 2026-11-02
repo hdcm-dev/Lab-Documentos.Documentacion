@@ -1,0 +1,11 @@
+== PR-5 trazas (docs/_diseno AGENTS.md README.md Guides/README.md)
+AGENTS.md:1: ERROR traza-no-resuelve: IDX-SDEI: el ID no está declarado en el registro
+AGENTS.md:1: ERROR traza-no-resuelve: MARCO-SDEI: el ID no está declarado en el registro
+AGENTS.md:1: ERROR traza-no-resuelve: ANX-SDEI-ESQUEMA: el ID no está declarado en el registro
+AGENTS.md:1: ERROR traza-no-resuelve: ANX-SDEI-GLOSARIO: el ID no está declarado en el registro
+AGENTS.md:1: ERROR traza-no-resuelve: ANX-SDEI-VER: el ID no está declarado en el registro
+AGENTS.md:1: ERROR traza-no-resuelve: ANX-SDEI-DECIDIR: el ID no está declarado en el registro
+README.md:1: ERROR traza-no-resuelve: DOC-SDT-0001: el ID no está declarado en el registro
+Guides/README.md:1: ERROR traza-no-resuelve: DOC-SDT-0001: el ID no está declarado en el registro
+anclas: 1 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: ROJO (errores=8 avisos=0) trazas=11 resueltas=3 ids-duplicados=0 anclas=0 anclas-resueltas=0

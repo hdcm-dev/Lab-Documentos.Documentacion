@@ -1,0 +1,2 @@
+$ find . -path "*/.github/*" -o -name "*.yml" -o -name "*.yaml" -not -path "./.git/*"
+(exit 0)

@@ -1,0 +1,12 @@
+# A-07 — compuerta documental de Colmenar. Propuesta sujeta a D-09 (copia con huella en runner propio).
+# Los valores entre llaves son parámetros del proyecto. La copia de la compuerta de origen está pendiente.
+name: docs-guard
+on:
+  pull_request:
+jobs:
+  docs-guard:
+    runs-on: [self-hosted, "{etiqueta-runner}"]   # etiqueta de Linux del proyecto
+    steps:
+      - uses: actions/checkout@{sha}              # sujeto a lo que admita la organización (D-09)
+      - run: .docs-guard/origen/scripts/ci-local.sh autoprueba
+      - run: .docs-guard/proyecto/scripts/ci-local.sh {grupo} docs   # un paso por grupo, con A-02 y A-03

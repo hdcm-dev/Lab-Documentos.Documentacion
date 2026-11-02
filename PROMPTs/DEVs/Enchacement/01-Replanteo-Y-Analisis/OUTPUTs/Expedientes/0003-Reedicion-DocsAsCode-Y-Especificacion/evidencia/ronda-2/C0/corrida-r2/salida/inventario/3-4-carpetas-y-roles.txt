@@ -1,0 +1,8 @@
+$ find . \( -path "*docs/tecnica*" -o -iname "*ayuda*" -o -iname "help" \) -not -path "./tools/docs-guard/fixtures/*"
+./tools/docs-guard/esquemas/ayuda.schema.json
+(fin; vacío = sin carpeta técnica CL-07 ni carpeta de ayuda CL-06)
+
+$ grep -rnE "\[Authorize|AddAuthorization|RequireRole|IsInRole|AddPolicy|RequireClaim" --include=*.cs --include=*.razor .
+./Concepts/Framework-Concept/Demo/tools/FrameworkConcept.Receptor/AutenticacionDelReceptor.cs:69:        builder.Services.AddAuthorizationBuilder()
+./Concepts/Framework-Concept/Demo/tools/FrameworkConcept.Receptor/AutenticacionDelReceptor.cs:70:            .AddPolicy(Politica, p => p.RequireAuthenticatedUser().RequireClaim("sub"));
+exit=2

@@ -1,0 +1,2 @@
+no aplica: la ruta no tiene piezas fijadas (BASE-FIJADA.md)
+== PR-7 fijadas: verde (errores=0 avisos=0) piezas=0

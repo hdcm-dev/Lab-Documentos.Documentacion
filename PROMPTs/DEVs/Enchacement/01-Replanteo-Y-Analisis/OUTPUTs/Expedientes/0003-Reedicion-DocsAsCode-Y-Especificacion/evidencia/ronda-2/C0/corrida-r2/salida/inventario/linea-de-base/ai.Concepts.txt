@@ -1,0 +1,109 @@
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:94: ERROR AI-1 comentario-html: <!-- P1 — SIN AOT. Con AOT el código descargado deja de ser 
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:231: ERROR AI-1 comentario-html: <!-- ¿Es SemVer sin pre-release y mayor que la vigente en el
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:232: ERROR AI-1 comentario-html: <!-- ¿Se promueve el MISMO artefacto o se reconstruyó? -->
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:233: ERROR AI-1 comentario-html: <!-- ¿Es alcanzable desde main (P6.7)? -->
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:234: ERROR AI-1 comentario-html: <!-- ¿Tiene techo? ¿Lo revalidó alguna prueba? -->
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:235: ERROR AI-1 comentario-html: <!-- ¿Cada requires existe en el catálogo del cascarón publi
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:236: ERROR AI-1 comentario-html: <!-- Si es Sí, también sale por tienda -->
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:237: ERROR AI-1 comentario-html: <!-- ¿Hay alguna versión mala que retirar con esta firma? --
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:238: ERROR AI-1 comentario-html: <!-- Comprobación como lo haría el teléfono -->
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:259: ERROR AI-4 dominio-no-permitido: developer.apple.com
+Concepts/Framework-Concept/01-Actualizacion-Sin-Tienda.md:260: ERROR AI-4 dominio-no-permitido: support.google.com
+Concepts/Framework-Concept/02-Cascaron-Puente-Y-Capacidades.md:262: ERROR AI-1 comentario-html: <!-- ¿El área sigue la convención en inglés (network, outbox
+Concepts/Framework-Concept/02-Cascaron-Puente-Y-Capacidades.md:263: ERROR AI-1 comentario-html: <!-- ¿Alguno es obligatorio nuevo? Entonces es MAYOR -->
+Concepts/Framework-Concept/02-Cascaron-Puente-Y-Capacidades.md:264: ERROR AI-1 comentario-html: <!-- ¿Sólo agrega campos opcionales? Entonces es MENOR -->
+Concepts/Framework-Concept/02-Cascaron-Puente-Y-Capacidades.md:265: ERROR AI-1 comentario-html: <!-- ¿Existe la entrada? ¿Con qué versión y qué permiso decl
+Concepts/Framework-Concept/02-Cascaron-Puente-Y-Capacidades.md:266: ERROR AI-1 comentario-html: <!-- ¿Qué pasa sin red? (FC-TEM-07) -->
+Concepts/Framework-Concept/02-Cascaron-Puente-Y-Capacidades.md:267: ERROR AI-1 comentario-html: <!-- ¿Coincide con versionado/puente.json y contrato.json? -
+Concepts/Framework-Concept/02-Cascaron-Puente-Y-Capacidades.md:268: ERROR AI-1 comentario-html: <!-- ¿La instantánea quedó en rojo antes de regenerarla? -->
+Concepts/Framework-Concept/03-Integracion-Y-Versionado.md:211: ERROR AI-1 comentario-html: <!-- ¿Cambió un permiso, el SDK, MauiVersion o el XAML? Sale
+Concepts/Framework-Concept/03-Integracion-Y-Versionado.md:212: ERROR AI-1 comentario-html: <!-- Usar la tabla de FC-TEM-02 §2.6 -->
+Concepts/Framework-Concept/03-Integracion-Y-Versionado.md:213: ERROR AI-1 comentario-html: <!-- ¿Es estrictamente mayor que lo publicado en el canal? -
+Concepts/Framework-Concept/03-Integracion-Y-Versionado.md:214: ERROR AI-1 comentario-html: <!-- ¿Conserva nombre y tipo de cada campo publicado? -->
+Concepts/Framework-Concept/03-Integracion-Y-Versionado.md:215: ERROR AI-1 comentario-html: <!-- Si cambia, el PR trae su decisión sobre el sobre C-1 --
+Concepts/Framework-Concept/03-Integracion-Y-Versionado.md:216: ERROR AI-1 comentario-html: <!-- ¿Este PR declara otra fase? -->
+Concepts/Framework-Concept/03-Integracion-Y-Versionado.md:232: ERROR AI-4 dominio-no-permitido: trunkbaseddevelopment.com
+Concepts/Framework-Concept/04-Estrategia-De-Pruebas.md:168: ERROR AI-1 comentario-html: <!-- ¿La prueba pertenece a fw-ok? -->
+Concepts/Framework-Concept/04-Estrategia-De-Pruebas.md:169: ERROR AI-1 comentario-html: <!-- ¿Es el cambio mínimo que debe fallar? ¿No es un M-12? -
+Concepts/Framework-Concept/04-Estrategia-De-Pruebas.md:170: ERROR AI-1 comentario-html: <!-- ¿Se puede repetir desde un clon limpio? -->
+Concepts/Framework-Concept/04-Estrategia-De-Pruebas.md:171: ERROR AI-1 comentario-html: <!-- ¿Copiada tal cual, con fecha e imagen? -->
+Concepts/Framework-Concept/04-Estrategia-De-Pruebas.md:172: ERROR AI-1 comentario-html: <!-- ¿Quedó el árbol limpio después? -->
+Concepts/Framework-Concept/04-Estrategia-De-Pruebas.md:186: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Concepts/Framework-Concept/04-Estrategia-De-Pruebas.md:187: ERROR AI-4 dominio-no-permitido: doi.org
+Concepts/Framework-Concept/05-La-Demo-Como-Caso-De-Estudio.md:184: ERROR AI-1 comentario-html: <!-- Archivo: ruta relativa bajo src/FrameworkConcept.Core/ 
+Concepts/Framework-Concept/05-La-Demo-Como-Caso-De-Estudio.md:185: ERROR AI-1 comentario-html: <!-- Blob: git rev-parse --short=8 <commit>:<ruta> del caso 
+Concepts/Framework-Concept/05-La-Demo-Como-Caso-De-Estudio.md:186: ERROR AI-1 comentario-html: <!-- Cómo: «Tal cual» si sólo cambió el espacio de nombres -
+Concepts/Framework-Concept/05-La-Demo-Como-Caso-De-Estudio.md:187: ERROR AI-1 comentario-html: <!-- Por qué: la decisión (P13.2, R1 §14.x) que justifica la
+Concepts/Framework-Concept/06-Procedimientos-PR-Integracion-Versionado.md:160: ERROR AI-1 comentario-html: <!-- ¿Qué cambia, en una o dos frases, y qué parte del repos
+Concepts/Framework-Concept/06-Procedimientos-PR-Integracion-Versionado.md:163: ERROR AI-1 comentario-html: <!-- ¿Nada, publicar contenido o definición, etiquetar, o pr
+Concepts/Framework-Concept/06-Procedimientos-PR-Integracion-Versionado.md:167: ERROR AI-1 comentario-html: <!-- Si un contenido o una definición agrega un módulo visib
+Concepts/Framework-Concept/06-Procedimientos-PR-Integracion-Versionado.md:173: ERROR AI-1 comentario-html: <!-- Una pregunta nueva, un campo nuevo al receptor, una cap
+Concepts/Framework-Concept/07-Red-Y-Autenticacion.md:323: ERROR AI-4 dominio-no-permitido: www.rfc-editor.org
+Concepts/Framework-Concept/07-Red-Y-Autenticacion.md:324: ERROR AI-4 dominio-no-permitido: www.rfc-editor.org
+Concepts/Framework-Concept/99-Anexos.md:97: ERROR AI-4 dominio-no-permitido: developer.apple.com
+Concepts/Framework-Concept/99-Anexos.md:98: ERROR AI-4 dominio-no-permitido: developer.apple.com
+Concepts/Framework-Concept/99-Anexos.md:99: ERROR AI-4 dominio-no-permitido: support.google.com
+Concepts/Framework-Concept/99-Anexos.md:102: ERROR AI-4 dominio-no-permitido: www.rfc-editor.org
+Concepts/Framework-Concept/99-Anexos.md:103: ERROR AI-4 dominio-no-permitido: www.rfc-editor.org
+Concepts/Framework-Concept/99-Anexos.md:105: ERROR AI-4 dominio-no-permitido: trunkbaseddevelopment.com
+Concepts/Framework-Concept/99-Anexos.md:110: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Concepts/Framework-Concept/99-Anexos.md:111: ERROR AI-4 dominio-no-permitido: doi.org
+Concepts/Framework-Concept/Developer-Guide.md:540: ERROR AI-4 dominio-no-permitido: support.google.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:237: ERROR AI-1 comentario-html: <!-- Demo/src/FrameworkConcept.Content/FrameworkConcept.Cont
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:238: ERROR AI-1 comentario-html: <!-- P1 — SIN AOT. Con AOT el código descargado deja de ser 
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:1601: ERROR AI-1 comentario-html: <!-- Demo/Directory.Build.props:18 -->
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:169: ERROR AI-4 dominio-no-permitido: 0.0.0.1
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2583: ERROR AI-4 dominio-no-permitido: developer.apple.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2584: ERROR AI-4 dominio-no-permitido: developer.apple.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2585: ERROR AI-4 dominio-no-permitido: support.google.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2588: ERROR AI-4 dominio-no-permitido: www.rfc-editor.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2589: ERROR AI-4 dominio-no-permitido: www.rfc-editor.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2591: ERROR AI-4 dominio-no-permitido: trunkbaseddevelopment.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2596: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2597: ERROR AI-4 dominio-no-permitido: doi.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2598: ERROR AI-4 dominio-no-permitido: capacitorjs.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2599: ERROR AI-4 dominio-no-permitido: cordova.apache.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2600: ERROR AI-4 dominio-no-permitido: docs.expo.dev
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2600: ERROR AI-4 dominio-no-permitido: docs.expo.dev
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2601: ERROR AI-4 dominio-no-permitido: ionic.io
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2602: ERROR AI-4 dominio-no-permitido: capawesome.io
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2602: ERROR AI-4 dominio-no-permitido: capawesome.io
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2603: ERROR AI-4 dominio-no-permitido: capgo.app
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2606: ERROR AI-4 dominio-no-permitido: shorebird.dev
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2608: ERROR AI-4 dominio-no-permitido: web.dev
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2608: ERROR AI-4 dominio-no-permitido: www.w3.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2609: ERROR AI-4 dominio-no-permitido: theupdateframework.io
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2610: ERROR AI-4 dominio-no-permitido: www.jsonrpc.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2611: ERROR AI-4 dominio-no-permitido: microservices.io
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2612: ERROR AI-4 dominio-no-permitido: mas.owasp.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2613: ERROR AI-4 dominio-no-permitido: mas.owasp.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2614: ERROR AI-4 dominio-no-permitido: developer.android.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2615: ERROR AI-4 dominio-no-permitido: developer.android.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2615: ERROR AI-4 dominio-no-permitido: developer.android.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2616: ERROR AI-4 dominio-no-permitido: developer.android.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2617: ERROR AI-4 dominio-no-permitido: developer.android.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2618: ERROR AI-4 dominio-no-permitido: developer.android.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2619: ERROR AI-4 dominio-no-permitido: developer.android.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2620: ERROR AI-4 dominio-no-permitido: developer.android.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2621: ERROR AI-4 dominio-no-permitido: www.rfc-editor.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2622: ERROR AI-4 dominio-no-permitido: www.writethedocs.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2627: ERROR AI-4 dominio-no-permitido: source.android.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2628: ERROR AI-4 dominio-no-permitido: bna.com.ar
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2629: ERROR AI-4 dominio-no-permitido: developers.google.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2630: ERROR AI-4 dominio-no-permitido: fidoalliance.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2631: ERROR AI-4 dominio-no-permitido: www.zetetic.net
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2633: ERROR AI-4 dominio-no-permitido: docs.pact.io
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2634: ERROR AI-4 dominio-no-permitido: abseil.io
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2638: ERROR AI-4 dominio-no-permitido: datatracker.ietf.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2639: ERROR AI-4 dominio-no-permitido: developer.android.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2640: ERROR AI-4 dominio-no-permitido: developer.android.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2641: ERROR AI-4 dominio-no-permitido: doc.rust-lang.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2643: ERROR AI-4 dominio-no-permitido: cordova.apache.org
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2644: ERROR AI-4 dominio-no-permitido: capacitorjs.com
+Concepts/Framework-Concept/MAUI-Framework-Developer-Guide.md:2645: ERROR AI-4 dominio-no-permitido: developer.android.com
+Concepts/Framework-Concept/Demo/DISENO-RED-Y-AUTENTICACION.md:255: ERROR AI-4 dominio-no-permitido: 203.0.113.10
+Concepts/Framework-Concept/Demo/DISENO-RED-Y-AUTENTICACION.md:439: ERROR AI-4 dominio-no-permitido: 203.0.113.10
+Concepts/Framework-Concept/Demo/DISENO-RED-Y-AUTENTICACION.md:587: ERROR AI-4 dominio-no-permitido: 203.0.113.10
+Concepts/Framework-Concept/Demo/DISENO-RED-Y-AUTENTICACION.md:609: ERROR AI-4 dominio-no-permitido: 203.0.113.10
+Concepts/Framework-Concept/Demo/DISENO-RED-Y-AUTENTICACION.md:610: ERROR AI-4 dominio-no-permitido: 203.0.113.10
+== PR-3 anti-inyeccion: ROJO (errores=108 avisos=0) AI-1=38 AI-2=0 AI-3=0 AI-4=70 AI-5=0

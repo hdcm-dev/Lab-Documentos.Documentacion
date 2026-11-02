@@ -1,0 +1,15 @@
+$ python3 -I tools/docs-guard/dg.py trazas --raiz {montaje}/verde {montaje}/verde
+anclas: 1 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=1 resueltas=1 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc=0
+$ python3 -I tools/docs-guard/dg.py esquema --raiz {montaje}/verde {montaje}/verde
+== PR-2 esquema: verde (errores=0 avisos=0) archivos-con-frontmatter=1 sin-frontmatter-fuera-del-cuerpo=0 readme-del-cuerpo-sin-frontmatter=0
+rc=0
+$ python3 -I tools/docs-guard/dg.py trazas --raiz {montaje}/rojo {montaje}/rojo
+ficha.md:1: ERROR traza-no-resuelve: ANX-LD-NO-EXISTE: el ID no está declarado en el registro
+anclas: 1 fichas sin --fuente; sus anclas las verifica el workflow de su source.lock
+== PR-5 traces-resolve: ROJO (errores=1 avisos=0) trazas=2 resueltas=1 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc=1
+$ python3 -I tools/docs-guard/dg.py esquema --raiz {montaje}/rojo {montaje}/rojo
+== PR-2 esquema: verde (errores=0 avisos=0) archivos-con-frontmatter=1 sin-frontmatter-fuera-del-cuerpo=0 readme-del-cuerpo-sin-frontmatter=0
+rc=0

@@ -1,0 +1,5 @@
+README.md:1: ERROR esquema-cuerpo: falta «description»
+README.md:1: ERROR prefijo: «LAB-» no está en el registro (prefijos.txt)
+Guides/README.md:1: ERROR esquema-cuerpo: falta «description»
+Guides/README.md:1: ERROR prefijo: «GUIAS-» no está en el registro (prefijos.txt)
+== PR-2 esquema: ROJO (errores=4 avisos=0) archivos-con-frontmatter=3 sin-frontmatter-fuera-del-cuerpo=0 readme-del-cuerpo-sin-frontmatter=0

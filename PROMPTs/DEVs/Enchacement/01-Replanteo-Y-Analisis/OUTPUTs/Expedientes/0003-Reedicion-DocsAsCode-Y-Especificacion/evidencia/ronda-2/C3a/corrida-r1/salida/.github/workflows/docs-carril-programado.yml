@@ -1,0 +1,17 @@
+# A-10 — carril programado de Colmenar. Sólo avisa, con un issue. Propuesta sujeta a D-09.
+# Frecuencia: semanal. Frescura: 365 días; 90 días para doc_type proceso (norma de calidad).
+# Vigila: atraso de las anclas fijadas (índice para agentes, guía del curso), versión exacta del paquete del modelo
+# de datos y versión publicada de la API consumida, y frescura de last_review.
+name: docs-carril-programado
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+jobs:
+  carril:
+    runs-on: [self-hosted, "{etiqueta-runner}"]   # etiqueta de Linux del proyecto
+    continue-on-error: true                       # sólo avisa
+    steps:
+      - uses: actions/checkout@{sha}
+      - run: .docs-guard/proyecto/scripts/ci-local.sh {grupo-programado} docs
+      - if: failure()
+        run: echo "abrir issue con el informe del carril"   # mecanismo de issue pendiente (D-09)

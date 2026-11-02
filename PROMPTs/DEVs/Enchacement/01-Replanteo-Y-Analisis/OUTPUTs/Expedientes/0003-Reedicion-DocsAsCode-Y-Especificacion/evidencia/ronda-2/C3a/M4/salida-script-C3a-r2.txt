@@ -1,0 +1,2 @@
+citas: 91 (distintas: 48); en A-01: 75; en artefactos: 16; fallan: 0
+respuestas del coordinador: 5; con fuente en el directorio: 0

@@ -1,0 +1,925 @@
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/10-Arquitectura-de-Servicios/Monolito-Modular.md:83: ERROR AI-1 comentario-html: <!-- src/Modulos/Facturacion/MiEmpresa.Reservas.Facturacion/
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/10-Arquitectura-de-Servicios/Monolito-Modular.md:87: ERROR AI-1 comentario-html: <!-- Solo el contrato público de Reservas, no su implementac
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Build-Compartido.md:65: ERROR AI-1 comentario-html: <!-- Importa el Directory.Build.props del ancestro más cerca
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Build-Compartido.md:252: ERROR AI-1 comentario-html: <!-- Directory.Build.props (raíz) -->
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Build-Compartido.md:267: ERROR AI-1 comentario-html: <!-- Los avisos rompen el build solo en la canalización, que
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Build-Compartido.md:276: ERROR AI-1 comentario-html: <!-- Calcula la versión semántica desde el historial de Git 
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Build-Compartido.md:296: ERROR AI-1 comentario-html: <!-- tests/Directory.Build.props -->
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Build-Compartido.md:304: ERROR AI-1 comentario-html: <!-- El código de prueba no se documenta con XML; el aviso C
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Tipos-de-Proyecto.md:249: ERROR AI-1 comentario-html: <!-- PackageReadmeFile nombra el archivo; este ItemGroup es 
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Tipos-de-Proyecto.md:243: ERROR AI-4 dominio-no-permitido: ejemplo.invalid
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Topologias-de-Solucion.md:303: ERROR AI-1 comentario-html: <!-- net10.0 alcanza para consumo desde WebAssembly. netstan
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Topologias-de-Solucion.md:307: ERROR AI-1 comentario-html: <!-- Se comporta como CTX-3 aunque no se publique: hay consu
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Topologias-de-Solucion.md:313: ERROR AI-1 comentario-html: <!-- Sin ItemGroup. La ausencia de referencias es la caracte
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/30-Organizacion-Interna/Carpetas-o-Proyectos.md:59: ERROR AI-1 comentario-html: <!-- src/Reservas.Dominio/Reservas.Dominio.csproj -->
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/30-Organizacion-Interna/Carpetas-o-Proyectos.md:65: ERROR AI-1 comentario-html: <!-- Sin ProjectReference ni PackageReference: el dominio no
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/30-Organizacion-Interna/Carpetas-o-Proyectos.md:103: ERROR AI-1 comentario-html: <!-- En el .csproj del proyecto de dominio -->
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/50-Estilo-de-Codificacion/Automatizacion-del-Estilo.md:299: ERROR AI-1 comentario-html: <!-- Activa los analizadores de calidad CAxxxx del SDK. -->
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/50-Estilo-de-Codificacion/Automatizacion-del-Estilo.md:302: ERROR AI-1 comentario-html: <!-- Versión del conjunto de reglas. `latest` toma las del S
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/50-Estilo-de-Codificacion/Automatizacion-del-Estilo.md:305: ERROR AI-1 comentario-html: <!-- Qué subconjunto de reglas se activa. -->
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/50-Estilo-de-Codificacion/Automatizacion-del-Estilo.md:308: ERROR AI-1 comentario-html: <!-- Hace valer las reglas IDExxxx en compilación. -->
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/50-Estilo-de-Codificacion/Automatizacion-del-Estilo.md:342: ERROR AI-1 comentario-html: <!--     Modo Default: conserva la línea base de cero avisos
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:67: ERROR AI-1 comentario-html: <!--     Propiedades comunes a toda la solución. MSBuild bus
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:73: ERROR AI-1 comentario-html: <!-- Un solo marco de destino para toda la solución evita di
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:76: ERROR AI-1 comentario-html: <!-- Anulabilidad: no es estilo, es corrección. Activar desd
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:81: ERROR AI-1 comentario-html: <!-- Análisis estático del runtime. AnalysisMode Default con
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:89: ERROR AI-1 comentario-html: <!-- Verifica en compilación las reglas IDExxxx declaradas e
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:93: ERROR AI-1 comentario-html: <!-- Los avisos NO rompen el build local: la fricción al ite
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:115: ERROR AI-1 comentario-html: <!-- Habilita el modo centralizado. Con esto activo, los .cs
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:119: ERROR AI-1 comentario-html: <!-- Ancla también las dependencias transitivas a la versión
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:130: ERROR AI-1 comentario-html: <!-- Paquetes de prueba: agrupados aparte por legibilidad. L
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:256: ERROR AI-1 comentario-html: <!--     TargetFramework, Nullable e ImplicitUsings vienen d
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:265: ERROR AI-1 comentario-html: <!-- Sin Version: la fija Directory.Packages.props -->
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:268: ERROR AI-1 comentario-html: <!-- PrivateAssets=all: paquete de tiempo de diseño; no fluy
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:285: ERROR AI-1 comentario-html: <!-- Un proyecto de prueba nunca se empaqueta. -->
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:296: ERROR AI-1 comentario-html: <!-- Using global para no repetir la directiva en cada archi
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:318: ERROR AI-1 comentario-html: <!-- Multi-target: amplía el alcance de consumidores, a cost
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:327: ERROR AI-1 comentario-html: <!-- Documentación XML: en una biblioteca los comentarios de
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Plantillas.md:331: ERROR AI-1 comentario-html: <!-- En una biblioteca los avisos SÍ rompen el build: un avi
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Referencias.md:45: aviso AI-4 dominio-no-permitido: microsoft.github.io
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Referencias.md:146: aviso AI-4 dominio-no-permitido: alistair.cockburn.us
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Referencias.md:147: aviso AI-4 dominio-no-permitido: jeffreypalermo.com
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Referencias.md:148: aviso AI-4 dominio-no-permitido: www.jimmybogard.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/10-Fundamentos-REST/Hipermedia.md:208: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/10-Fundamentos-REST/Modelo-de-Madurez.md:258: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/10-Fundamentos-REST/Que-es-REST.md:268: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/20-Diseno-de-Recursos/Jerarquias-y-Relaciones.md:333: ERROR AI-4 dominio-no-permitido: api.reservas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/20-Diseno-de-Recursos/Nomenclatura-de-URIs.md:397: ERROR AI-4 dominio-no-permitido: api.reservas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/20-Diseno-de-Recursos/Operaciones-No-CRUD.md:354: ERROR AI-4 dominio-no-permitido: api.reservas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/20-Diseno-de-Recursos/Operaciones-No-CRUD.md:459: ERROR AI-4 dominio-no-permitido: api.reservas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Cabeceras-y-Negociacion.md:86: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Codigos-de-Estado.md:265: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Codigos-de-Estado.md:332: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Codigos-de-Estado.md:362: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Codigos-de-Estado.md:401: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Codigos-de-Estado.md:429: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Codigos-de-Estado.md:445: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Codigos-de-Estado.md:493: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Idempotencia-y-Concurrencia.md:284: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Idempotencia-y-Concurrencia.md:319: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Idempotencia-y-Concurrencia.md:340: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/30-Semantica-HTTP/Metodos.md:273: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Actualizaciones-Parciales.md:260: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Actualizaciones-Parciales.md:283: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Actualizaciones-Parciales.md:338: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Colecciones-y-Paginacion.md:268: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Colecciones-y-Paginacion.md:281: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Colecciones-y-Paginacion.md:282: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Colecciones-y-Paginacion.md:283: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Filtrado-Orden-y-Seleccion.md:203: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Filtrado-Orden-y-Seleccion.md:230: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Filtrado-Orden-y-Seleccion.md:275: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Manejo-de-Errores.md:60: ERROR AI-4 dominio-no-permitido: api.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Manejo-de-Errores.md:268: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Manejo-de-Errores.md:315: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Manejo-de-Errores.md:339: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Manejo-de-Errores.md:370: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/40-Contratos-y-Representaciones/Manejo-de-Errores.md:397: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Deprecacion-y-Retiro.md:122: ERROR AI-4 dominio-no-permitido: developers.reservas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Deprecacion-y-Retiro.md:166: ERROR AI-4 dominio-no-permitido: developers.reservas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Deprecacion-y-Retiro.md:181: ERROR AI-4 dominio-no-permitido: developers.reservas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Deprecacion-y-Retiro.md:232: ERROR AI-4 dominio-no-permitido: api.twilio.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/50-Evolucion-y-Versionado/Estrategias-de-Versionado.md:208: ERROR AI-4 dominio-no-permitido: api.twilio.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/Design-First-y-Code-First.md:171: ERROR AI-4 dominio-no-permitido: api.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/60-Especificacion-y-Documentacion/OpenAPI.md:129: ERROR AI-4 dominio-no-permitido: api.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Autenticacion-y-Autorizacion.md:275: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Autenticacion-y-Autorizacion.md:289: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Autenticacion-y-Autorizacion.md:302: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Autenticacion-y-Autorizacion.md:319: ERROR AI-4 dominio-no-permitido: identidad.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Autenticacion-y-Autorizacion.md:320: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Autenticacion-y-Autorizacion.md:407: ERROR AI-4 dominio-no-permitido: identidad.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Autenticacion-y-Autorizacion.md:408: ERROR AI-4 dominio-no-permitido: identidad.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-de-la-Superficie.md:120: ERROR AI-4 dominio-no-permitido: app.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-de-la-Superficie.md:120: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-de-la-Superficie.md:283: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-de-la-Superficie.md:357: ERROR AI-4 dominio-no-permitido: app.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-de-la-Superficie.md:358: ERROR AI-4 dominio-no-permitido: admin.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-de-la-Superficie.md:381: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-de-la-Superficie.md:398: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Proteccion-de-la-Superficie.md:431: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Resiliencia-y-Reintentos.md:257: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/70-Seguridad-y-Robustez/Resiliencia-y-Reintentos.md:303: ERROR AI-4 dominio-no-permitido: pagos.proveedor.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Consumo-desde-Blazor-y-MAUI.md:62: ERROR AI-4 dominio-no-permitido: jsonplaceholder.typicode.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Consumo-desde-Blazor-y-MAUI.md:450: ERROR AI-4 dominio-no-permitido: 10.0.2.2
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Consumo-desde-Blazor-y-MAUI.md:521: ERROR AI-4 dominio-no-permitido: api.salas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Consumo-desde-Blazor-y-MAUI.md:621: ERROR AI-4 dominio-no-permitido: 10.0.2.2
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Organizacion-del-Proyecto-API.md:82: ERROR AI-4 dominio-no-permitido: aka.ms
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Organizacion-del-Proyecto-API.md:345: ERROR AI-4 dominio-no-permitido: portal.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/80-Implementacion-en-NET/Validacion.md:397: ERROR AI-4 dominio-no-permitido: tools.ietf.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Comparativa-y-Criterios.md:198: ERROR AI-4 dominio-no-permitido: api.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Comparativa-y-Criterios.md:210: ERROR AI-4 dominio-no-permitido: api.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Comparativa-y-Criterios.md:293: ERROR AI-4 dominio-no-permitido: api.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Comparativa-y-Criterios.md:304: ERROR AI-4 dominio-no-permitido: docs.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Microsoft-y-Azure.md:168: ERROR AI-4 dominio-no-permitido: api.reservas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Microsoft-y-Azure.md:190: ERROR AI-4 dominio-no-permitido: api.reservas.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Zalando-y-otras.md:104: ERROR AI-4 dominio-no-permitido: myapi.service.gov.uk
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Zalando-y-otras.md:124: ERROR AI-4 dominio-no-permitido: myapi.service.gov.uk
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Zalando-y-otras.md:259: ERROR AI-4 dominio-no-permitido: api.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/90-Guias-de-la-Industria/Zalando-y-otras.md:283: ERROR AI-4 dominio-no-permitido: docs.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/Experiencia-del-Consumidor.md:214: ERROR AI-4 dominio-no-permitido: api.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/95-Transversales/Experiencia-del-Consumidor.md:234: ERROR AI-4 dominio-no-permitido: api.ejemplo.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:48: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:49: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:50: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:51: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:52: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:53: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:79: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:80: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:81: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:87: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:88: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:89: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:90: aviso AI-4 dominio-no-permitido: www.iana.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:98: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:99: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:100: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:106: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:107: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:108: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:109: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:115: aviso AI-4 dominio-no-permitido: spec.openapis.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:116: aviso AI-4 dominio-no-permitido: spec.openapis.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:117: aviso AI-4 dominio-no-permitido: docs.oasis-open.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:118: aviso AI-4 dominio-no-permitido: spec.graphql.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:132: aviso AI-4 dominio-no-permitido: dotnet.microsoft.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:186: aviso AI-4 dominio-no-permitido: devblogs.microsoft.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:187: aviso AI-4 dominio-no-permitido: devblogs.microsoft.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:222: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:223: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:233: aviso AI-4 dominio-no-permitido: www.w3.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:234: aviso AI-4 dominio-no-permitido: www.w3.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:235: aviso AI-4 dominio-no-permitido: grpc.io
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:237: aviso AI-4 dominio-no-permitido: grpc.io
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:241: aviso AI-4 dominio-no-permitido: www.iana.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:264: aviso AI-4 dominio-no-permitido: google.aip.dev
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:265: aviso AI-4 dominio-no-permitido: opensource.zalando.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:266: aviso AI-4 dominio-no-permitido: www.gov.uk
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:294: aviso AI-4 dominio-no-permitido: datatracker.ietf.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:295: aviso AI-4 dominio-no-permitido: datatracker.ietf.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:296: aviso AI-4 dominio-no-permitido: datatracker.ietf.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:297: aviso AI-4 dominio-no-permitido: jsonapi.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:298: aviso AI-4 dominio-no-permitido: docs.oasis-open.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:301: aviso AI-4 dominio-no-permitido: www.w3.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:302: aviso AI-4 dominio-no-permitido: www.asyncapi.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:304: aviso AI-4 dominio-no-permitido: www.standardwebhooks.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:305: aviso AI-4 dominio-no-permitido: datatracker.ietf.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:307: aviso AI-4 dominio-no-permitido: ionspec.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:308: aviso AI-4 dominio-no-permitido: www.w3.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:309: aviso AI-4 dominio-no-permitido: trpc.io
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:335: aviso AI-4 dominio-no-permitido: www.nuget.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:336: aviso AI-4 dominio-no-permitido: www.nuget.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:340: aviso AI-4 dominio-no-permitido: www.nuget.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:344: aviso AI-4 dominio-no-permitido: www.nuget.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:358: aviso AI-4 dominio-no-permitido: ics.uci.edu
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:359: aviso AI-4 dominio-no-permitido: roy.gbiv.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:360: aviso AI-4 dominio-no-permitido: martinfowler.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:361: aviso AI-4 dominio-no-permitido: eden.dei.uc.pt
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:362: aviso AI-4 dominio-no-permitido: use-the-index-luke.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:363: aviso AI-4 dominio-no-permitido: developer.mozilla.org
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:364: aviso AI-4 dominio-no-permitido: www.cncf.io
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:380: aviso AI-4 dominio-no-permitido: docs.stripe.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:381: aviso AI-4 dominio-no-permitido: docs.stripe.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:382: aviso AI-4 dominio-no-permitido: docs.stripe.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:383: aviso AI-4 dominio-no-permitido: docs.stripe.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:386: aviso AI-4 dominio-no-permitido: shopify.dev
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:387: aviso AI-4 dominio-no-permitido: api.twilio.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:387: aviso AI-4 dominio-no-permitido: www.twilio.com
+Guides/Arquitectura/Organizacion-Estilo-Rest-API/99-Anexos/Referencias.md:388: aviso AI-4 dominio-no-permitido: graphql.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:63: ERROR AI-4 dominio-no-permitido: ...
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:199: ERROR AI-4 dominio-no-permitido: dora.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:199: ERROR AI-4 dominio-no-permitido: cloud.google.com
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:307: ERROR AI-4 dominio-no-permitido: calver.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:340: ERROR AI-4 dominio-no-permitido: 0ver.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:429: ERROR AI-4 dominio-no-permitido: www.conventionalcommits.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:581: ERROR AI-4 dominio-no-permitido: nvie.com
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:585: ERROR AI-4 dominio-no-permitido: trunkbaseddevelopment.com
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:609: ERROR AI-4 dominio-no-permitido: www.endoflineblog.com
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:784: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:794: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:796: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:798: ERROR AI-4 dominio-no-permitido: in-toto.io
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:851: ERROR AI-4 dominio-no-permitido: csrc.nist.gov
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:878: ERROR AI-4 dominio-no-permitido: owasp.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:903: ERROR AI-4 dominio-no-permitido: securityscorecards.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:934: ERROR AI-4 dominio-no-permitido: sigstore.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:978: ERROR AI-4 dominio-no-permitido: www.cisa.gov
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:978: ERROR AI-4 dominio-no-permitido: nvd.nist.gov
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:978: ERROR AI-4 dominio-no-permitido: nvd.nist.gov
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1012: ERROR AI-4 dominio-no-permitido: eur-lex.europa.eu
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1074: ERROR AI-4 dominio-no-permitido: timestamp.digicert.com
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1172: ERROR AI-4 dominio-no-permitido: opengitops.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1523: ERROR AI-4 dominio-no-permitido: www.conventionalcommits.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1525: ERROR AI-4 dominio-no-permitido: calver.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1526: ERROR AI-4 dominio-no-permitido: 0ver.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1527: ERROR AI-4 dominio-no-permitido: cyclonedx.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1528: ERROR AI-4 dominio-no-permitido: spdx.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1532: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1532: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1533: ERROR AI-4 dominio-no-permitido: csrc.nist.gov
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1534: ERROR AI-4 dominio-no-permitido: owasp.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1535: ERROR AI-4 dominio-no-permitido: securityscorecards.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1536: ERROR AI-4 dominio-no-permitido: sigstore.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1537: ERROR AI-4 dominio-no-permitido: in-toto.io
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1538: ERROR AI-4 dominio-no-permitido: www.ntia.gov
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1539: ERROR AI-4 dominio-no-permitido: www.whitehouse.gov
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1540: ERROR AI-4 dominio-no-permitido: www.whitehouse.gov
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1544: ERROR AI-4 dominio-no-permitido: dora.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1544: ERROR AI-4 dominio-no-permitido: cloud.google.com
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1547: ERROR AI-4 dominio-no-permitido: sre.google
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1550: ERROR AI-4 dominio-no-permitido: tag-app-delivery.cncf.io
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1551: ERROR AI-4 dominio-no-permitido: opengitops.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1555: ERROR AI-4 dominio-no-permitido: nvie.com
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1557: ERROR AI-4 dominio-no-permitido: trunkbaseddevelopment.com
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1559: ERROR AI-4 dominio-no-permitido: www.endoflineblog.com
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1565: ERROR AI-4 dominio-no-permitido: gitversion.net
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1566: ERROR AI-4 dominio-no-permitido: semantic-release.gitbook.io
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1569: ERROR AI-4 dominio-no-permitido: git-cliff.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1570: ERROR AI-4 dominio-no-permitido: commitlint.js.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1571: ERROR AI-4 dominio-no-permitido: commitizen-tools.github.io
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1572: ERROR AI-4 dominio-no-permitido: typicode.github.io
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1577: ERROR AI-4 dominio-no-permitido: docs.sigstore.dev
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1592: ERROR AI-4 dominio-no-permitido: spinnaker.io
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1593: ERROR AI-4 dominio-no-permitido: backstage.io
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1594: ERROR AI-4 dominio-no-permitido: stripe.com
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1595: ERROR AI-4 dominio-no-permitido: shopify.engineering
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1596: ERROR AI-4 dominio-no-permitido: github.blog
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1599: ERROR AI-4 dominio-no-permitido: serilog.net
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1600: ERROR AI-4 dominio-no-permitido: fastlane.tools
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1601: ERROR AI-4 dominio-no-permitido: argo-cd.readthedocs.io
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1602: ERROR AI-4 dominio-no-permitido: fluxcd.io
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1603: ERROR AI-4 dominio-no-permitido: www.getdbt.com
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1604: ERROR AI-4 dominio-no-permitido: airflow.apache.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1605: ERROR AI-4 dominio-no-permitido: iceberg.apache.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1606: ERROR AI-4 dominio-no-permitido: mlflow.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1607: ERROR AI-4 dominio-no-permitido: dvc.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1608: ERROR AI-4 dominio-no-permitido: huggingface.co
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1612: ERROR AI-4 dominio-no-permitido: www.cisa.gov
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1613: ERROR AI-4 dominio-no-permitido: nvd.nist.gov
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1614: ERROR AI-4 dominio-no-permitido: nvd.nist.gov
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1615: ERROR AI-4 dominio-no-permitido: blog.mithrilsecurity.io
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1619: ERROR AI-4 dominio-no-permitido: eur-lex.europa.eu
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1620: ERROR AI-4 dominio-no-permitido: eur-lex.europa.eu
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1621: ERROR AI-4 dominio-no-permitido: www.iso.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1622: ERROR AI-4 dominio-no-permitido: iceberg.apache.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1623: ERROR AI-4 dominio-no-permitido: mlflow.org
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1625: ERROR AI-4 dominio-no-permitido: www.bestpractices.dev
+Guides/Despliegue/DevOps-Guide/plan-mejoras-devops_v1.0.md:367: ERROR AI-4 dominio-no-permitido: www.conventionalcommits.org
+Guides/Despliegue/DevOps-Guide/plan-mejoras-devops_v1.0.md:367: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Despliegue/DevOps-Guide/plan-mejoras-devops_v1.0.md:367: ERROR AI-4 dominio-no-permitido: owasp.org
+Guides/Despliegue/DevOps-Guide/plan-mejoras-devops_v1.0.md:367: ERROR AI-4 dominio-no-permitido: csrc.nist.gov
+Guides/Despliegue/DevOps-Guide/publish-nuget.md:78: ERROR AI-4 dominio-no-permitido: www.nuget.org
+Guides/Despliegue/DevOps-Guide/publish-nuget.md:96: ERROR AI-4 dominio-no-permitido: api.nuget.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:46: aviso AI-4 dominio-no-permitido: www.iso.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:47: aviso AI-4 dominio-no-permitido: www.iso.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:48: aviso AI-4 dominio-no-permitido: www.iso.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:60: aviso AI-4 dominio-no-permitido: www.iso.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:61: aviso AI-4 dominio-no-permitido: www.iso.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:62: aviso AI-4 dominio-no-permitido: www.iso.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:80: aviso AI-4 dominio-no-permitido: www.omg.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:90: aviso AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:116: aviso AI-4 dominio-no-permitido: www.npgsql.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:129: aviso AI-4 dominio-no-permitido: c4model.com
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:130: aviso AI-4 dominio-no-permitido: pubs.opengroup.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:147: aviso AI-4 dominio-no-permitido: ieeexplore.ieee.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:159: aviso AI-4 dominio-no-permitido: tus.io
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:160: aviso AI-4 dominio-no-permitido: datatracker.ietf.org
+Guides/Despliegue/Documentacion-Informe-Despliegue/99-Anexos/Referencias.md:170: aviso AI-4 dominio-no-permitido: mermaid.js.org
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:1432: ERROR AI-1 comentario-html: <!-- e2e-playwright -->
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:1630: ERROR AI-4 dominio-no-permitido: api.nuget.org
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2686: ERROR AI-4 dominio-no-permitido: api.nuget.org
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2876: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2877: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2878: ERROR AI-4 dominio-no-permitido: dora.dev
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2880: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2883: ERROR AI-4 dominio-no-permitido: cyclonedx.org
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2884: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:340: ERROR AI-1 comentario-html: <!-- ¿Qué parte del negocio cubre? Si el sistema toca varios
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:345: ERROR AI-1 comentario-html: <!-- Una entrada por concepto. La definición debe alcanzar p
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:353: ERROR AI-1 comentario-html: <!-- classDiagram de Mermaid. Sin operaciones salvo las que 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:358: ERROR AI-1 comentario-html: <!-- Para cada una: ¿qué la identifica? ¿Qué la mantiene sie
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:365: ERROR AI-1 comentario-html: <!-- ¿Por qué este concepto no tiene identidad? ¿Es intercam
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:372: ERROR AI-1 comentario-html: <!-- ¿Qué se modifica junto y debe quedar consistente en la 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:380: ERROR AI-1 comentario-html: <!-- Para los conceptos con ciclo de vida relevante.      ¿Q
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:385: ERROR AI-1 comentario-html: <!-- ¿Qué conceptos usa el sistema sin gobernarlos? ¿De dónd
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:389: ERROR AI-1 comentario-html: <!-- ¿Dónde diverge del modelo de datos y por qué? ¿Qué tabl
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:393: ERROR AI-1 comentario-html: <!-- ¿Qué distinción del negocio quedó sin resolver? ¿Quién 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:395: ERROR AI-1 comentario-html: <!-- solo ESC-3 y ESC-4 -->
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/Modelo-de-Dominio.md:396: ERROR AI-1 comentario-html: <!-- ¿Qué sostiene cada afirmación? Marcar [OBS], [INF] o [N
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:500: ERROR AI-1 comentario-html: <!-- ¿Qué sistema se especifica y cuáles son sus límites? ¿Q
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:504: ERROR AI-1 comentario-html: <!-- ¿Qué términos del dominio se usan y dónde están definid
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:508: ERROR AI-1 comentario-html: <!-- ¿En qué entorno opera el sistema? ¿Con qué sistemas ext
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:513: ERROR AI-1 comentario-html: <!-- Uno por fila o por bloque, con ID estable. ¿Cada uno es
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:520: ERROR AI-1 comentario-html: <!-- Recorrer las ocho características de ISO/IEC 25010 como
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:527: ERROR AI-1 comentario-html: <!-- ¿Qué le imponen al sistema el entorno, la normativa, lo
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:531: ERROR AI-1 comentario-html: <!-- Ver plantilla de regla. Cada una una sola vez, referenc
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:534: ERROR AI-1 comentario-html: <!-- Ver plantilla de caso de uso. ¿Están todos al mismo niv
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:537: ERROR AI-1 comentario-html: <!-- ¿Con qué sistemas se integra, con qué contrato y con qu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:541: ERROR AI-1 comentario-html: <!-- ¿Cada requisito tiene origen arriba y verificación abaj
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:548: ERROR AI-1 comentario-html: <!-- ¿Qué se sabe que falta? Un hueco declarado es informaci
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:552: ERROR AI-1 comentario-html: <!-- ¿Qué cambió desde la baseline, por pedido de quién y co
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:561: ERROR AI-1 comentario-html: <!-- ¿El actor se daría por satisfecho y se iría después de 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:564: ERROR AI-1 comentario-html: <!-- ¿Quién tiene el objetivo? No quién opera el teclado. --
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:568: ERROR AI-1 comentario-html: <!-- ¿Quién más se ve afectado por el resultado y qué espera
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:571: ERROR AI-1 comentario-html: <!-- Estado verificable, no un deseo. -->
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:573: ERROR AI-1 comentario-html: <!-- ¿En qué estado queda el sistema si el flujo se interrum
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:580: ERROR AI-1 comentario-html: <!-- Pasos numerados, en voz activa, alternando actor y sist
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:587: ERROR AI-1 comentario-html: <!-- Numeradas según el paso que extienden: 3a, 3b, 6a.     
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:595: ERROR AI-1 comentario-html: <!-- Solo si el comportamiento difiere de verdad entre canal
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:599: ERROR AI-1 comentario-html: <!-- ¿Cuántas veces por día ocurre y qué pasa si falla?     
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:609: ERROR AI-1 comentario-html: <!-- ¿Sobreviviría esta frase si el sistema no existiera?   
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:613: ERROR AI-1 comentario-html: <!-- Si no hay nadie que pueda confirmarla, la regla es una 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:616: ERROR AI-1 comentario-html: <!-- ¿Rigió siempre? Los datos históricos anteriores a la vi
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:619: ERROR AI-1 comentario-html: <!-- El campo que más preguntas resuelve y el que más se olv
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:622: ERROR AI-1 comentario-html: <!-- "Salvo casos especiales" convierte la regla en no verif
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:627: ERROR AI-1 comentario-html: <!-- solo si hay condiciones combinadas -->
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/20-Analisis/SRS.md:633: ERROR AI-1 comentario-html: <!-- Un escenario por camino relevante, incluidos los bordes
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:349: ERROR AI-1 comentario-html: <!-- ¿Qué sistema y qué versión cubre? ¿Escenario ESC-_ y co
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:353: ERROR AI-1 comentario-html: <!-- ¿Qué hay que proteger? Tabla AST-: activo, clasificació
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:358: ERROR AI-1 comentario-html: <!-- ¿Quién es cada quien y cómo lo demuestra? ¿Proveedor pr
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:363: ERROR AI-1 comentario-html: <!-- ¿Qué puede hacer cada rol y qué NO puede? Tabla de role
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:368: ERROR AI-1 comentario-html: <!-- ¿Cuáles son los límites y qué tráfico se permite entre 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:373: ERROR AI-1 comentario-html: <!-- ¿Cuánto vive una sesión y qué la termina? ¿Cookie o tok
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:378: ERROR AI-1 comentario-html: <!-- ¿Qué secretos existen, dónde viven, cómo llegan a la ap
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:383: ERROR AI-1 comentario-html: <!-- ¿Qué va cifrado en tránsito y entre qué puntos?      ¿Q
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:388: ERROR AI-1 comentario-html: <!-- ¿Qué eventos se registran y con qué campos?      ¿Quién
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:394: ERROR AI-1 comentario-html: <!-- Tabla: control (CTL-), activo protegido, amenaza que mi
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:399: ERROR AI-1 comentario-html: <!-- ¿Qué NO está protegido, con qué impacto potencial,     
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:404: ERROR AI-1 comentario-html: <!-- ¿Qué controles dependen de terceros —proveedor de ident
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Arquitectura-de-Seguridad.md:408: ERROR AI-1 comentario-html: <!-- En ESC-3 y ESC-4, obligatorio: qué no se pudo verificar
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:349: ERROR AI-1 comentario-html: <!-- ¿Qué parte del sistema describe este HLD y qué queda ex
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:353: ERROR AI-1 comentario-html: <!-- ¿De qué SAD parte? ¿Qué ADR condicionan esta descomposi
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:360: ERROR AI-1 comentario-html: <!-- ¿Cuáles son las unidades de construcción y qué hace cad
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:368: ERROR AI-1 comentario-html: <!-- ¿Hay ciclos? Si los hay, ¿están justificados?      ¿Qué
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:376: ERROR AI-1 comentario-html: <!-- ¿Qué contrato cruza cada frontera entre módulos?      L
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:384: ERROR AI-1 comentario-html: <!-- ¿Cómo colaboran los módulos para resolver los casos de 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:389: ERROR AI-1 comentario-html: <!-- Precondiciones, resultado esperado en el camino feliz, 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:397: ERROR AI-1 comentario-html: <!-- ¿Qué módulo guarda estado y con qué alcance?      ¿Qué 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:402: ERROR AI-1 comentario-html: <!-- ¿Dónde empieza y termina cada transacción?      ¿Qué qu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:406: ERROR AI-1 comentario-html: <!-- ¿Qué lógica vive en el componente, qué en el servidor, 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:410: ERROR AI-1 comentario-html: <!-- ¿Cuáles de las reglas anteriores están automatizadas?  
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/HLD.md:417: ERROR AI-1 comentario-html: <!-- ¿Qué quedó sin decidir y quién lo decide?      En ESC-3
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Threat-Model.md:327: ERROR AI-1 comentario-html: <!-- ¿Qué versión y qué parte del sistema se modela?      ¿E
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Threat-Model.md:333: ERROR AI-1 comentario-html: <!-- Primera de las cuatro preguntas del método.      Mermai
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Threat-Model.md:340: ERROR AI-1 comentario-html: <!-- ¿Dónde cambian las garantías, y cuáles son a cada lado?
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Threat-Model.md:346: ERROR AI-1 comentario-html: <!-- ¿Quién querría atacar esto? Externo anónimo, usuario le
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Threat-Model.md:353: ERROR AI-1 comentario-html: <!-- Segunda pregunta. Una tabla por categoría o una por ele
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Threat-Model.md:360: ERROR AI-1 comentario-html: <!-- Tercera pregunta. Para cada amenaza: mitigar, transferi
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Threat-Model.md:366: ERROR AI-1 comentario-html: <!-- ¿Qué queda sin cubrir después de aplicar todo lo anteri
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Threat-Model.md:372: ERROR AI-1 comentario-html: <!-- Cuarta pregunta: ¿hicimos un buen trabajo?      ¿Qué ca
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Threat-Model.md:378: ERROR AI-1 comentario-html: <!-- ¿Qué cambio obliga a rehacer este modelo?      Ejemplos
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/30-Arquitectura/Threat-Model.md:384: ERROR AI-1 comentario-html: <!-- ¿Qué se dio por cierto sin comprobar?      En ESC-3 y E
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:457: ERROR AI-1 comentario-html: <!-- ¿Quién consume esta API: clientes propios, equipos inte
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:461: ERROR AI-1 comentario-html: <!-- ¿OpenAPI 3.1, .proto, esquema GraphQL? ¿Dónde vive el a
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:465: ERROR AI-1 comentario-html: <!-- ¿Los recursos expresan conceptos del dominio o tablas? 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:469: ERROR AI-1 comentario-html: <!-- Nombres, formatos de fecha, uso de nulos vs. ausencia d
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:474: ERROR AI-1 comentario-html: <!-- ¿Cómo se obtiene una credencial? ¿Cuánto vive? ¿Cómo se
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:478: ERROR AI-1 comentario-html: <!-- Catálogo de `type` de Problem Details (RFC 9457) con si
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:482: ERROR AI-1 comentario-html: <!-- Idempotencia: qué operaciones, con qué clave, cuánto se
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:487: ERROR AI-1 comentario-html: <!-- ¿Desplazamiento o cursor, y por qué? Tamaño por defecto
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:491: ERROR AI-1 comentario-html: <!-- Frecuencia, tamaño máximo de cuerpo, cardinalidad máxim
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:495: ERROR AI-1 comentario-html: <!-- ¿Dónde viaja la versión? ¿Qué cambio es compatible y cu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:499: ERROR AI-1 comentario-html: <!-- Producción y sandbox: URLs, diferencias de comportamien
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:503: ERROR AI-1 comentario-html: <!-- Referencia al archivo OpenAPI/proto versionado, no una 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:99: ERROR AI-4 dominio-no-permitido: api.reservas.example.com
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:101: ERROR AI-4 dominio-no-permitido: sandbox.api.reservas.example.com
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:175: ERROR AI-4 dominio-no-permitido: api.reservas.example.com
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:200: ERROR AI-4 dominio-no-permitido: api.reservas.example.com
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:219: ERROR AI-4 dominio-no-permitido: auth.example.com
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Integration-Guide.md:301: ERROR AI-1 comentario-html: <!-- Diagrama y tabla: sistema, dirección, protocolo, critic
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Integration-Guide.md:305: ERROR AI-1 comentario-html: <!-- ¿Qué necesitamos de este sistema y con qué frecuencia? 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Integration-Guide.md:314: ERROR AI-1 comentario-html: <!-- Nombre, versión, esquema, ejemplo.      ¿Qué hecho repr
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Integration-Guide.md:321: ERROR AI-1 comentario-html: <!-- ¿Somos idempotentes? ¿Con qué clave y con qué ventana? 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Integration-Guide.md:325: ERROR AI-1 comentario-html: <!-- ¿Cómo se verifica la firma? ¿Qué se responde y en cuánt
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Integration-Guide.md:329: ERROR AI-1 comentario-html: <!-- Mecanismo, alcance mínimo por operación, vida del token
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Integration-Guide.md:333: ERROR AI-1 comentario-html: <!-- URL, credenciales, datos disponibles, frecuencia de rei
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Integration-Guide.md:338: ERROR AI-1 comentario-html: <!-- Pasos numerados desde cero hasta producción, con punto 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Integration-Guide.md:342: ERROR AI-1 comentario-html: <!-- ¿Qué se monitorea de cada integración y qué dispara ale
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:381: ERROR AI-1 comentario-html: <!-- ¿Qué componentes cubre este documento y cuáles quedan d
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:385: ERROR AI-1 comentario-html: <!-- En dos o tres frases: ¿qué hace y qué no hace?      ¿Qu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:389: ERROR AI-1 comentario-html: <!-- Diagrama de clases en Mermaid.      Después del diagram
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:394: ERROR AI-1 comentario-html: <!-- Diagrama de secuencia de las operaciones no triviales. 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:399: ERROR AI-1 comentario-html: <!-- stateDiagram-v2 de las entidades con estado.      ¿Qué 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:404: ERROR AI-1 comentario-html: <!-- Por cada interfaz: precondiciones, garantías, errores e
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:409: ERROR AI-1 comentario-html: <!-- Solo los que tienen criterios de desempate, casos límit
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:413: ERROR AI-1 comentario-html: <!-- ¿Qué abarca cada transacción? ¿Qué nivel de aislamiento
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:417: ERROR AI-1 comentario-html: <!-- Solo CTX-1 y CTX-3 -->
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:418: ERROR AI-1 comentario-html: <!-- Vacío, cargando, con datos, con error, y los propios de
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:423: ERROR AI-1 comentario-html: <!-- ¿Qué casos de prueba (TC-) cubren este diseño?      ¿Qu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:427: ERROR AI-1 comentario-html: <!-- ¿Qué quedó sin decidir? ¿Qué se asumió sin confirmar y 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:319: ERROR AI-1 comentario-html: <!-- ¿Qué bases y qué esquemas cubre? ¿Qué queda fuera y dón
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:323: ERROR AI-1 comentario-html: <!-- Entidades y relaciones en vocabulario de negocio, sin t
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:327: ERROR AI-1 comentario-html: <!-- erDiagram con atributos, claves y cardinalidades.      
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:331: ERROR AI-1 comentario-html: <!-- Por tabla: tipos exactos, nulabilidad con su semántica,
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:336: ERROR AI-1 comentario-html: <!-- ¿Naturales o subrogadas? ¿Quién genera el valor y en qu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:340: ERROR AI-1 comentario-html: <!-- Por índice: columnas, si es único, si es filtrado, colu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:345: ERROR AI-1 comentario-html: <!-- ¿Qué reglas de negocio hace cumplir el esquema y con qu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:350: ERROR AI-1 comentario-html: <!-- Borrado lógico o físico, y por qué. Efecto sobre unicid
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:355: ERROR AI-1 comentario-html: <!-- ¿Qué se audita, con qué mecanismo, y quién puede leerlo
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:359: ERROR AI-1 comentario-html: <!-- ¿Cómo se genera, revisa y aplica una migración? ¿Quién 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/Modelo-de-Datos.md:364: ERROR AI-1 comentario-html: <!-- ¿Qué no se pudo verificar? ¿Qué columna es sospechosa d
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Administrator-Guide.md:297: ERROR AI-1 comentario-html: <!-- Decir explícitamente qué conocimientos se suponen y cuá
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Administrator-Guide.md:303: ERROR AI-1 comentario-html: <!-- Los términos del dominio con los que trabaja el adminis
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Administrator-Guide.md:308: ERROR AI-1 comentario-html: <!-- Tabla: rol | alcance | puede | NO puede. La última colu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Administrator-Guide.md:312: ERROR AI-1 comentario-html: <!-- Organizadas por tarea de negocio, no por pantalla. Cada
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Administrator-Guide.md:328: ERROR AI-1 comentario-html: <!-- Tabla: parámetro | dónde | efecto de negocio | CUÁNDO S
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Administrator-Guide.md:333: ERROR AI-1 comentario-html: <!-- Qué queda registrado, cuánto tiempo, quién puede consul
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Administrator-Guide.md:337: ERROR AI-1 comentario-html: <!-- Tabla: síntoma reportado por el usuario | qué verificar
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Administrator-Guide.md:343: ERROR AI-1 comentario-html: <!-- Qué NO se puede hacer desde acá y a quién corresponde. 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Administrator-Guide.md:348: ERROR AI-1 comentario-html: <!-- Compartido con el User Manual. Alias registrados cuando
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:363: ERROR AI-1 comentario-html: <!-- Qué cubre y qué no. Enlazar explícitamente a la guía de
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:368: ERROR AI-1 comentario-html: <!-- Tabla: entorno | propósito | datos | quién despliega | 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:373: ERROR AI-1 comentario-html: <!-- Diagrama Mermaid de la cadena. Por cada flecha: condici
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:378: ERROR AI-1 comentario-html: <!-- Cuál se usa en cada entorno y POR QUÉ: qué toleraba el 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:383: ERROR AI-1 comentario-html: <!-- ¿Tolera convivencia de versiones? ¿Hay estado en el pro
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:388: ERROR AI-1 comentario-html: <!-- Quién aplica las migraciones y cuándo. Clasificación de
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:393: ERROR AI-1 comentario-html: <!-- Solo en CTX-3 o cuando hay varios artefactos. Secuencia
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:397: ERROR AI-1 comentario-html: <!-- Precondiciones verificables → pasos numerados imperativ
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:402: ERROR AI-1 comentario-html: <!-- Las tres variantes por separado:      8.1 Solo código (
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:409: ERROR AI-1 comentario-html: <!-- Qué se mira, durante cuánto tiempo, y contra qué línea 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Deployment-Guide.md:412: ERROR AI-1 comentario-html: <!-- Fecha | versión | estrategia | duración | incidencias |
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:289: ERROR AI-1 comentario-html: <!-- Qué deja instalado y qué NO. Estado final nombrable: "i
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:294: ERROR AI-1 comentario-html: <!-- Diagrama Mermaid de los componentes que se van a instal
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:298: ERROR AI-1 comentario-html: <!-- Tabla: componente | versión mínima | versión probada | 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:304: ERROR AI-1 comentario-html: <!-- Solo en software entregado a terceros. Es la frontera d
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:307: ERROR AI-1 comentario-html: <!-- Un bloque por fase. Cada paso:      N. <verbo imperativ
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:320: ERROR AI-1 comentario-html: <!-- Si el sistema arranca sin telemetría, el primer inciden
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:323: ERROR AI-1 comentario-html: <!-- Tabla: clave | origen (entorno / secreto / fichero) | o
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:328: ERROR AI-1 comentario-html: <!-- Fin de la instalación y comienzo de la administración. 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:332: ERROR AI-1 comentario-html: <!-- Lista de comprobación de extremo a extremo, no repetici
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:336: ERROR AI-1 comentario-html: <!-- Qué borra, qué preserva, en qué orden. Distinguir desin
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:340: ERROR AI-1 comentario-html: <!-- Síntoma observable → causa probable → acción. Se llena 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:344: ERROR AI-1 comentario-html: <!-- Fecha | versión | entorno | quién ejecutó | qué hubo qu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:190: ERROR AI-4 dominio-no-permitido: login.interna
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:193: ERROR AI-4 dominio-no-permitido: otel-collector
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Installation-Guide.md:201: ERROR AI-4 dominio-no-permitido: reservas.interna
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:372: ERROR AI-1 comentario-html: <!-- Qué componentes hay en ejecución, dónde, y de qué depen
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:377: ERROR AI-1 comentario-html: <!-- SLIs con definición operativa (la fórmula exacta, no la
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:385: ERROR AI-1 comentario-html: <!-- Documentar el criterio, no la herramienta. La configura
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:389: ERROR AI-1 comentario-html: <!-- Tabla: ID | condición | duración | severidad | destino 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:394: ERROR AI-1 comentario-html: <!-- Tabla: tarea | frecuencia | dueño | automatizada | crit
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:398: ERROR AI-1 comentario-html: <!-- Por recurso limitado: límite, uso actual, tendencia, se
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:402: ERROR AI-1 comentario-html: <!-- Lo que no es evidente y sorprende a quien opera por pri
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:407: ERROR AI-1 comentario-html: <!-- Comprometidos por el dueño del negocio, con su nombre y
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:411: ERROR AI-1 comentario-html: <!-- Tabla por objeto protegido. Incluir secretos, infraestr
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:414: ERROR AI-1 comentario-html: <!-- El procedimiento ejecutable va al runbook; acá el orden
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:417: ERROR AI-1 comentario-html: <!-- Fecha | tipo de prueba | RTO medido | hallazgos | accio
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Operations-Guide.md:421: ERROR AI-1 comentario-html: <!-- Rotación de guardia, niveles, y a partir de qué criteri
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Postmortem.md:329: ERROR AI-1 comentario-html: <!-- Cinco líneas: qué pasó, cuánto duró, qué lo causó, cómo
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Postmortem.md:334: ERROR AI-1 comentario-html: <!-- Tabla con números: duración, usuarios afectados, operac
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Postmortem.md:339: ERROR AI-1 comentario-html: <!-- Diagrama Mermaid (timeline) más tabla si hace falta det
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Postmortem.md:349: ERROR AI-1 comentario-html: <!-- Cinco porqués como exploración, no como conclusión. Dec
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Postmortem.md:352: ERROR AI-1 comentario-html: <!-- Tabla por categoría: técnico | detección | respuesta | 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Postmortem.md:357: ERROR AI-1 comentario-html: <!-- Las tres cosas. La tercera es la que más se omite y la 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Postmortem.md:361: ERROR AI-1 comentario-html: <!-- Tabla: ID | acción | tipo (prevención/detección/mitigac
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Postmortem.md:367: ERROR AI-1 comentario-html: <!-- Lo generalizable más allá de este incidente. Qué creenc
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Postmortem.md:372: ERROR AI-1 comentario-html: <!-- Evidencia: consultas capturadas, gráficos, enlaces al c
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Runbook.md:404: ERROR AI-1 comentario-html: <!-- Qué percibe el usuario y cuántos están afectados. Dos o
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Runbook.md:408: ERROR AI-1 comentario-html: <!-- Lo que restaura el servicio SIN entender la causa. Va p
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Runbook.md:413: ERROR AI-1 comentario-html: <!-- Comprobaciones ordenadas por PROBABILIDAD, no por profu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Runbook.md:418: ERROR AI-1 comentario-html: <!-- Mermaid. Obligatorio cuando hay más de tres causas posi
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Runbook.md:422: ERROR AI-1 comentario-html: <!-- Un bloque por causa. Pasos numerados, imperativos, con 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Runbook.md:427: ERROR AI-1 comentario-html: <!-- Condiciones explícitas, al menos una con UMBRAL DE TIEM
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Runbook.md:431: ERROR AI-1 comentario-html: <!-- Comprobaciones que confirman la restauración. Al menos 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Runbook.md:435: ERROR AI-1 comentario-html: <!-- Qué registrar, cuándo silenciar alertas (siempre despué
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Runbook.md:439: ERROR AI-1 comentario-html: <!-- Por qué ocurre, qué se aprendió de ocurrencias anterior
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:288: ERROR AI-1 comentario-html: <!-- Encabezado fijo: declara el formato y el esquema de ver
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:294: ERROR AI-1 comentario-html: <!-- Declarar qué es la API pública de este proyecto. Sin es
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:300: ERROR AI-1 comentario-html: <!-- En ESC-3, si el registro se reconstruyó, declararlo acá
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:305: ERROR AI-1 comentario-html: <!-- Acumula entradas hasta etiquetar. Al publicar se renomb
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:309: ERROR AI-1 comentario-html: <!-- Orden cronológico inverso: lo más reciente arriba.     
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:313: ERROR AI-1 comentario-html: <!-- Funcionalidad nueva. Redactar desde el efecto observabl
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:317: ERROR AI-1 comentario-html: <!-- Comportamiento que cambió sin ser nuevo. Marcar **RUPTU
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:322: ERROR AI-1 comentario-html: <!-- Lo que se va a retirar: qué, en qué versión y en qué fe
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:326: ERROR AI-1 comentario-html: <!-- Lo que ya no está. Debe haber figurado antes en Obsolet
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:329: ERROR AI-1 comentario-html: <!-- Qué fallaba y qué se comporta distinto ahora. "Se arreg
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:333: ERROR AI-1 comentario-html: <!-- Vulnerabilidad corregida, versiones afectadas, severida
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Change-Log.md:337: ERROR AI-1 comentario-html: <!-- Enlaces de comparación entre versiones al pie, si el al
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:528: ERROR AI-1 comentario-html: <!-- ¿Para quién es? ¿Qué NO cubre y dónde está eso? Enlazar
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:533: ERROR AI-1 comentario-html: <!-- Versión exacta y cómo se verifica. Preferir un script q
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:536: ERROR AI-1 comentario-html: <!-- Numerados, copiables, con tiempo estimado. Objetivo: < 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:538: ERROR AI-1 comentario-html: <!-- ¿Cómo sabe el lector que funcionó? Tres comprobaciones 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:541: ERROR AI-1 comentario-html: <!-- Síntoma → causa → solución. Se alimenta de cada consult
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:544: ERROR AI-1 comentario-html: <!-- Árbol de proyectos con una línea de propósito cada uno.
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:546: ERROR AI-1 comentario-html: <!-- ¿Qué puede referenciar a qué? ¿Qué prueba lo verifica? 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:549: ERROR AI-1 comentario-html: <!-- Tabla "si el código hace X → va en Y". Resuelve la duda
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:553: ERROR AI-1 comentario-html: <!-- Declararlo primero: define si el resto se cumple. -->
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:555: ERROR AI-1 comentario-html: <!-- Tabla con ejemplos del dominio real, no genéricos.     
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:558: ERROR AI-1 comentario-html: <!-- Con severidades. Toda supresión con motivo y fecha de r
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:560: ERROR AI-1 comentario-html: <!-- Pocas, con ejemplo y contraejemplo. Comentarios, tamaño
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:564: ERROR AI-1 comentario-html: <!-- Nombrar los descartados y el criterio. Diagrama gitGrap
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:568: ERROR AI-1 comentario-html: <!-- Conventional Commits 1.0.0 si aplica: tipos en uso y qu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:570: ERROR AI-1 comentario-html: <!-- Cuántos aprobadores y para qué. Plazo de respuesta. Sev
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:577: ERROR AI-1 comentario-html: <!-- Regla de negocio vs validación vs falla técnica. Mapeo 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:579: ERROR AI-1 comentario-html: <!-- Niveles, estructurado, correlación, qué nunca se regist
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:581: ERROR AI-1 comentario-html: <!-- Ámbitos con su motivo y su trampa. En Blazor Server, ac
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:586: ERROR AI-1 comentario-html: <!-- Diagrama. Lo barato primero. Duración de cada etapa. --
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:588: ERROR AI-1 comentario-html: <!-- Umbral y motivo. Solo lo que el equipo sostiene un vier
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:590: ERROR AI-1 comentario-html: <!-- Construir una vez, promover el mismo artefacto. Cómo se
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:592: ERROR AI-1 comentario-html: <!-- Dónde viven, quién accede, cómo se rotan, qué pasa en l
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:594: ERROR AI-1 comentario-html: <!-- Enlace al Deployment Guide. Este documento termina en e
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md:597: ERROR AI-1 comentario-html: <!-- Solo términos propios del proyecto que no están en el g
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Release-Notes.md:286: ERROR AI-1 comentario-html: <!-- Una o dos frases: el titular de esta versión. Si nada l
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Release-Notes.md:290: ERROR AI-1 comentario-html: <!-- PRIMERO, siempre, y solo si existen. Qué tiene que hace
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Release-Notes.md:295: ERROR AI-1 comentario-html: <!-- Selectivo. Por cada una: qué podés hacer ahora que ante
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Release-Notes.md:300: ERROR AI-1 comentario-html: <!-- Lo que funciona distinto sin ser nuevo. Es lo que más c
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Release-Notes.md:304: ERROR AI-1 comentario-html: <!-- Con referencia al problema reportado cuando exista. No 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Release-Notes.md:308: ERROR AI-1 comentario-html: <!-- Cambios de contrato, obsolescencias con fecha de retiro
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Release-Notes.md:313: ERROR AI-1 comentario-html: <!-- Qué se va a retirar, en qué versión y en qué fecha. Anu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Release-Notes.md:317: ERROR AI-1 comentario-html: <!-- Lo que se publica sabiendo que falla, con alternativa p
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Release-Notes.md:321: ERROR AI-1 comentario-html: <!-- Registro completo de cambios: enlace al CHANGELOG.md.  
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Cases.md:456: ERROR AI-1 comentario-html: <!-- Qué módulo cubre, qué numeración usa, dónde vive el cód
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Cases.md:460: ERROR AI-1 comentario-html: <!-- RF- / RN- / RNF- → TC- → nivel → estado de cobertura.  
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Cases.md:466: ERROR AI-1 comentario-html: <!-- Entidades y usuarios compartidos por los casos, con val
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Cases.md:482: ERROR AI-1 comentario-html: <!-- Estado exacto y verificable. "Sistema funcionando" no e
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Cases.md:486: ERROR AI-1 comentario-html: <!-- Valores concretos, fuera de los pasos. -->
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Cases.md:489: ERROR AI-1 comentario-html: <!-- Numerados. Una acción por paso. La verificación NO va a
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Cases.md:492: ERROR AI-1 comentario-html: <!-- Observable y unívoco, en afirmativo. Incluir lo que NO 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Cases.md:497: ERROR AI-1 comentario-html: <!-- Estado tras la ejecución y cómo se restaura. Sin esto, 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Cases.md:501: ERROR AI-1 comentario-html: <!-- Ambigüedades del requisito que este caso resolvió, con 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Cases.md:505: ERROR AI-1 comentario-html: <!-- Con frecuencia de ejecución. Un manual ejecutado en cad
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:298: ERROR AI-1 comentario-html: <!-- Módulos, versiones, plataformas y navegadores soportado
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:300: ERROR AI-1 comentario-html: <!-- La sección que más se omite y más se necesita. Cada exc
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:303: ERROR AI-1 comentario-html: <!-- SRS con la versión exacta; API Specification; ISO/IEC/I
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:308: ERROR AI-1 comentario-html: <!-- Pirámide, trofeo u otra: la forma se elige por el riesg
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:311: ERROR AI-1 comentario-html: <!-- Tabla: nivel · qué verifica · herramienta · cuándo corr
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:314: ERROR AI-1 comentario-html: <!-- Qué se automatiza, qué queda manual y por qué. Un caso 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:318: ERROR AI-1 comentario-html: <!-- Tabla: entorno · propósito · datos · quién despliega.  
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:324: ERROR AI-1 comentario-html: <!-- Procedimiento, quién lo verifica y con qué frecuencia. 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:326: ERROR AI-1 comentario-html: <!-- Cómo se garantiza que ninguna prueba dependa del estado
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:330: ERROR AI-1 comentario-html: <!-- Tabla: ID · riesgo · probabilidad · impacto · mitigació
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:336: ERROR AI-1 comentario-html: <!-- Umbrales numéricos y, para cada uno, quién puede autori
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:339: ERROR AI-1 comentario-html: <!-- Qué hace detener la fase de prueba y qué se exige para 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:342: ERROR AI-1 comentario-html: <!-- Qué se compara, con qué granularidad, sobre qué conjunt
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:347: ERROR AI-1 comentario-html: <!-- Quién ejecuta cada nivel, quién decide la publicación, 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:351: ERROR AI-1 comentario-html: <!-- Pocas, cada una con la decisión que habilita. Evitar la
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Test-Plan.md:355: ERROR AI-1 comentario-html: <!-- Cómo se garantiza que cada RF- tenga al menos un TC-, y
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:638: ERROR AI-1 comentario-html: <!-- -->
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:648: ERROR AI-1 comentario-html: <!-- Sin esto, ninguna afirmación es verificable -->
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:651: ERROR AI-1 comentario-html: <!-- Y con qué fecha de sincronización cada uno -->
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:658: ERROR AI-1 comentario-html: <!-- Rol, permisos y conocimiento previo asumido. Enlace exp
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:662: ERROR AI-1 comentario-html: <!-- Requisitos previos reales: cuenta, permisos, navegador,
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:666: ERROR AI-1 comentario-html: <!-- Enlaces a los tutoriales. No el contenido: los tutorial
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:669: ERROR AI-1 comentario-html: <!-- Índice de guías rápidas, agrupadas por objetivo del usu
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:673: ERROR AI-1 comentario-html: <!-- Descripción exacta de pantallas, campos, estados, mensa
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:677: ERROR AI-1 comentario-html: <!-- Un apartado por campo: qué es, si es obligatorio, qué v
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:681: ERROR AI-1 comentario-html: <!-- Tabla: estado, qué significa, qué puede hacer el usuari
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:684: ERROR AI-1 comentario-html: <!-- Tabla: mensaje literal, por qué aparece, qué hacer. Es 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:688: ERROR AI-1 comentario-html: <!-- Enlace a la FAQ. Se mantiene aparte porque su ciclo de 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:691: ERROR AI-1 comentario-html: <!-- Valores numéricos que el usuario necesita recordar, en 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:694: ERROR AI-1 comentario-html: <!-- Término canónico, definición, alias que los usuarios em
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:698: ERROR AI-1 comentario-html: <!-- Navegación por teclado, compatibilidad con lectores de 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:702: ERROR AI-1 comentario-html: <!-- Canal, horario, y qué información conviene incluir al r
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:709: ERROR AI-1 comentario-html: <!-- "Su primera reserva", no "Introducción al módulo de res
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:712: ERROR AI-1 comentario-html: <!-- El resultado real y observable, más el tiempo estimado.
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:716: ERROR AI-1 comentario-html: <!-- Cuenta, permisos, datos. Cualquier requisito no declara
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:720: ERROR AI-1 comentario-html: <!-- Advertencias sobre efectos reales: si el tutorial crea 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:726: ERROR AI-1 comentario-html: <!-- Dar el valor: "escriba 4". No "escriba el número de asi
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:729: ERROR AI-1 comentario-html: <!-- Obligatorio en cada paso: es cómo el lector, solo, sabe
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:734: ERROR AI-1 comentario-html: <!-- Nombrar el recorrido para que quede como modelo mental 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:738: ERROR AI-1 comentario-html: <!-- Dos o tres enlaces al siguiente nivel. Evita que el tut
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:741: ERROR AI-1 comentario-html: <!-- Reglas del género: un solo camino; opciones ocultas a p
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:750: ERROR AI-1 comentario-html: <!-- Tomada literalmente de un ticket, de una búsqueda o de 
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:754: ERROR AI-1 comentario-html: <!-- "No todavía." / "Sí, hasta el momento de inicio." El da
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:757: ERROR AI-1 comentario-html: <!-- Aquí sí cabe el motivo: política de la organización, re
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:761: ERROR AI-1 comentario-html: <!-- Alternativa concreta, con la ruta exacta o el enlace al
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:765: ERROR AI-1 comentario-html: <!-- El origen no se publica necesariamente, pero se registr
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:773: ERROR AI-1 comentario-html: <!-- El título es la tarea que el usuario buscaría, no el no
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:776: ERROR AI-1 comentario-html: <!-- El rol en la cabecera evita que alguien recorra seis pa
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:786: ERROR AI-1 comentario-html: <!-- Si la variante es sustancial, es otra guía enlazada, no
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:789: ERROR AI-1 comentario-html: <!-- Diferencia clave con el tutorial: el lector está en pro
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:795: ERROR AI-1 comentario-html: <!-- Tablas de límites, estados, valores. Se consultan, no s
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:802: ERROR AI-1 comentario-html: <!-- La guía rápida no explica: enlaza. -->
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:1904: ERROR AI-4 dominio-no-permitido: tools.ietf.org
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:1945: ERROR AI-4 dominio-no-permitido: tools.ietf.org
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2506: ERROR AI-4 dominio-no-permitido: api.nuget.org
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2670: ERROR AI-4 dominio-no-permitido: api.nuget.org
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2844: ERROR AI-4 dominio-no-permitido: www.pearson.de
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2846: ERROR AI-4 dominio-no-permitido: www.jimmybogard.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2850: ERROR AI-4 dominio-no-permitido: www.businessrulesgroup.org
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2852: ERROR AI-4 dominio-no-permitido: www.ifi.uzh.ch
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2856: ERROR AI-4 dominio-no-permitido: dapperlib.dev
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2858: ERROR AI-4 dominio-no-permitido: www.eiffel.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2860: ERROR AI-4 dominio-no-permitido: www.domainlanguage.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2862: ERROR AI-4 dominio-no-permitido: media.techtarget.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2862: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2864: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2866: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2868: ERROR AI-4 dominio-no-permitido: refactoring.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2868: ERROR AI-4 dominio-no-permitido: refactoring.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2868: ERROR AI-4 dominio-no-permitido: refactoring.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2870: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2872: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2874: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2876: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2878: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2880: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2882: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2890: ERROR AI-4 dominio-no-permitido: www.enterpriseintegrationpatterns.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2892: ERROR AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2894: ERROR AI-4 dominio-no-permitido: lists.squeakfoundation.org
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2898: ERROR AI-4 dominio-no-permitido: luckypennysoftware.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2900: ERROR AI-4 dominio-no-permitido: blog.cleancoder.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2908: ERROR AI-4 dominio-no-permitido: dotnet.microsoft.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2938: ERROR AI-4 dominio-no-permitido: blog.ploeh.dk
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2940: ERROR AI-4 dominio-no-permitido: www.wirfs-brock.com
+Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md:2942: ERROR AI-4 dominio-no-permitido: curl.se
+Guides/Dot-NET-Arquitectura-Guide/Manejo-Archivos-Guide.md:110: ERROR AI-4 dominio-no-permitido: user
+Guides/Dot-NET-Arquitectura-Guide/Manejo-Archivos-Guide.md:439: ERROR AI-4 dominio-no-permitido: tus.io
+Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/README.md:246: ERROR AI-4 dominio-no-permitido: cacm.acm.org
+Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/README.md:250: ERROR AI-4 dominio-no-permitido: dl.acm.org
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1968: ERROR AI-4 dominio-no-permitido: dora.dev
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1969: ERROR AI-4 dominio-no-permitido: trunkbaseddevelopment.com
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1970: ERROR AI-4 dominio-no-permitido: trunkbaseddevelopment.com
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1971: ERROR AI-4 dominio-no-permitido: google.github.io
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1972: ERROR AI-4 dominio-no-permitido: google.github.io
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1973: ERROR AI-4 dominio-no-permitido: sre.google
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1974: ERROR AI-4 dominio-no-permitido: about.gitlab.com
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1975: ERROR AI-4 dominio-no-permitido: nvie.com
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1978: ERROR AI-4 dominio-no-permitido: playwright.dev
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1980: ERROR AI-4 dominio-no-permitido: www.cisa.gov
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1981: ERROR AI-4 dominio-no-permitido: www.iso.org
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1982: ERROR AI-4 dominio-no-permitido: www.computer.org
+Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md:1984: ERROR AI-4 dominio-no-permitido: www.conventionalcommits.org
+Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/Guia-Practica-GitHubFlow.md:1034: ERROR AI-4 dominio-no-permitido: google.github.io
+Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/Guia-Practica-GitHubFlow.md:1035: ERROR AI-4 dominio-no-permitido: google.github.io
+Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/Guia-Practica-GitHubFlow.md:1036: ERROR AI-4 dominio-no-permitido: dora.dev
+Guides/IA/SDD-Guide/References.md:1: ERROR AI-4 dominio-no-permitido: agentfactory.panaversity.org
+Guides/IA/SDD-Guide/References.md:4: ERROR AI-4 dominio-no-permitido: agentfactory.panaversity.org
+Guides/IA/SDD-Guide/References.md:6: ERROR AI-4 dominio-no-permitido: agentfactory.panaversity.org
+Guides/IA/SDD-Guide/Spec-Driven Development-SDD.md:79: ERROR AI-4 dominio-no-permitido: agentfactory.panaversity.org
+Guides/IA/references/agentes-especialidades/AG-04-ingeniero-prompts.md:20: aviso AI-3 frase-dirigida-al-agente: System prompt
+Guides/IA/references/agentes-especialidades/AG-04-ingeniero-prompts.md:47: aviso AI-3 frase-dirigida-al-agente: system prompt
+Guides/IA/references/agentes-especialidades/AG-04-ingeniero-prompts.md:60: aviso AI-3 frase-dirigida-al-agente: System prompt
+Guides/IA/references/agentes-especialidades/AG-04-ingeniero-prompts.md:72: aviso AI-3 frase-dirigida-al-agente: system prompt
+Guides/IA/references/agentes-especialidades/AG-04-ingeniero-prompts.md:89: aviso AI-3 frase-dirigida-al-agente: system prompt
+Guides/IA/references/agentes-especialidades/AG-04-ingeniero-prompts.md:106: aviso AI-3 frase-dirigida-al-agente: ignore previous instructions
+Guides/IA/references/agentes-especialidades/AG-04-ingeniero-prompts.md:150: aviso AI-3 frase-dirigida-al-agente: System Prompt
+Guides/IA/references/agentes-especialidades/AG-04-ingeniero-prompts.md:153: aviso AI-3 frase-dirigida-al-agente: system prompt
+Guides/IA/references/agentes-especialidades/AG-04-ingeniero-prompts.md:160: aviso AI-3 frase-dirigida-al-agente: system prompt
+Guides/IA/references/agentes-especialidades/AG-04-ingeniero-prompts.md:240: aviso AI-3 frase-dirigida-al-agente: system prompt
+Guides/IA/references/refinamiento_docs/agentes-refinamiento-docs.md:146: aviso AI-3 frase-dirigida-al-agente: system prompt
+Guides/IA/references/refinamiento_docs/agentes-refinamiento-docs.md:407: aviso AI-3 frase-dirigida-al-agente: system prompt
+Guides/IA/references/refinamiento_docs/prompt_refinanmiento.md:84: aviso AI-3 frase-dirigida-al-agente: system prompt
+Guides/Metodologia-Agiles/Scrum-Guide/ Metodologias-Agiles-Jira-Guide.md:199: ERROR AI-4 dominio-no-permitido: agilemanifesto.org
+Guides/Metodologia-Agiles/Scrum-Guide/ Metodologias-Agiles-Jira-Guide.md:260: ERROR AI-4 dominio-no-permitido: scrumguides.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1263: ERROR AI-1 comentario-html: <!-- Directory.Packages.props (raíz): versiones directas en 
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1271: ERROR AI-1 comentario-html: <!-- Transitiva subida a propósito (p. ej., un parche de seg
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1737: ERROR AI-1 comentario-html: <!-- Directory.Build.props — extracto de trazabilidad (compl
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1739: ERROR AI-1 comentario-html: <!-- rutas /_/ y build determinista -->
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1742: ERROR AI-1 comentario-html: <!-- repo y commit en el .nuspec -->
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2352: ERROR AI-1 comentario-html: <!-- true en la estación (F5) y en la prueba de regresión de
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2357: ERROR AI-1 comentario-html: <!-- npm ci, no npm install: instala el lock o falla. Exec u
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2372: ERROR AI-1 comentario-html: <!-- documentada: apaga el npm install -->
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2374: ERROR AI-1 comentario-html: <!-- RunNpmInstall es un target interno de Sdk.targets 1.0.6
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2627: ERROR AI-1 comentario-html: <!-- Anexo A.4. Una sola definición de "estoy en CI" para to
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2631: ERROR AI-1 comentario-html: <!-- Rutas normalizadas (/_/) y build totalmente determinist
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2633: ERROR AI-1 comentario-html: <!-- Restauración estricta: si el lock no coincide, NU1004 e
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2638: ERROR AI-1 comentario-html: <!-- NU1603 como error en las dos políticas de la guía (6.4)
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2642: ERROR AI-1 comentario-html: <!-- Capa 2: el TFM fija la versión de C#. Sólo si hace falt
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2644: ERROR AI-1 comentario-html: <!-- Capa 6: URL del repo y commit en el .nuspec; símbolos a
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2648: ERROR AI-1 comentario-html: <!-- NO configurar PathMap a mano: no normaliza el mapa de S
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2649: ERROR AI-1 comentario-html: <!-- Con qué SDK e imagen se construyó va AL LADO del artefa
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2659: ERROR AI-1 comentario-html: <!-- Anexo A.4b. El lock que gobierna es el del proyecto en 
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2680: ERROR AI-1 comentario-html: <!-- Anexo A.5. Versiones directas en un solo lugar (CPM). -
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2700: ERROR AI-1 comentario-html: <!-- Anexo A.6. Fuentes declaradas en el repo, no en el perf
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:505: ERROR AI-2 caracter-invisible: U+FEFF
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1643: ERROR AI-4 dominio-no-permitido: raw.githubusercontent.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1644: ERROR AI-4 dominio-no-permitido: raw.githubusercontent.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1672: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:1690: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2150: ERROR AI-2 caracter-invisible: U+FEFF
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2155: ERROR AI-2 caracter-invisible: U+FEFF
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2703: ERROR AI-4 dominio-no-permitido: api.nuget.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:2736: ERROR AI-4 dominio-no-permitido: registry.npmjs.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3264: ERROR AI-4 dominio-no-permitido: reproducible-builds.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3265: ERROR AI-4 dominio-no-permitido: reproducible-builds.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3266: ERROR AI-4 dominio-no-permitido: reproducible-builds.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3266: ERROR AI-4 dominio-no-permitido: reproducible-builds.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3267: ERROR AI-4 dominio-no-permitido: bazel.build
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3268: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3269: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3270: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3270: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3271: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3272: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3273: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3273: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3274: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3275: ERROR AI-4 dominio-no-permitido: www.unicode.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3276: ERROR AI-4 dominio-no-permitido: www.unicode.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3286: ERROR AI-4 dominio-no-permitido: nodejs.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3287: ERROR AI-4 dominio-no-permitido: tc39.es
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3288: ERROR AI-4 dominio-no-permitido: encoding.spec.whatwg.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3289: ERROR AI-4 dominio-no-permitido: www.rfc-editor.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3290: ERROR AI-4 dominio-no-permitido: peps.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3291: ERROR AI-4 dominio-no-permitido: docs.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3292: ERROR AI-4 dominio-no-permitido: peps.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3293: ERROR AI-4 dominio-no-permitido: peps.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3294: ERROR AI-4 dominio-no-permitido: peps.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3295: ERROR AI-4 dominio-no-permitido: peps.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3296: ERROR AI-4 dominio-no-permitido: peps.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3297: ERROR AI-4 dominio-no-permitido: peps.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3298: ERROR AI-4 dominio-no-permitido: docs.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3298: ERROR AI-4 dominio-no-permitido: docs.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3299: ERROR AI-4 dominio-no-permitido: git-scm.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3300: ERROR AI-4 dominio-no-permitido: git-scm.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3301: ERROR AI-4 dominio-no-permitido: git-scm.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3302: ERROR AI-4 dominio-no-permitido: git-scm.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3303: ERROR AI-4 dominio-no-permitido: git-scm.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3306: ERROR AI-4 dominio-no-permitido: spec.editorconfig.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3307: ERROR AI-4 dominio-no-permitido: editorconfig.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3310: ERROR AI-4 dominio-no-permitido: devblogs.microsoft.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3311: ERROR AI-4 dominio-no-permitido: code.visualstudio.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3313: ERROR AI-4 dominio-no-permitido: marketplace.visualstudio.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3316: ERROR AI-4 dominio-no-permitido: prettier.io
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3323: ERROR AI-4 dominio-no-permitido: www.nuget.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3324: ERROR AI-4 dominio-no-permitido: dotnet.microsoft.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3325: ERROR AI-4 dominio-no-permitido: builds.dotnet.microsoft.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3325: ERROR AI-4 dominio-no-permitido: builds.dotnet.microsoft.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3326: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3326: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3327: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3327: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3328: ERROR AI-4 dominio-no-permitido: nodejs.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3329: ERROR AI-4 dominio-no-permitido: nodejs.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3331: ERROR AI-4 dominio-no-permitido: nodejs.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3334: ERROR AI-4 dominio-no-permitido: packaging.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3335: ERROR AI-4 dominio-no-permitido: packaging.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3336: ERROR AI-4 dominio-no-permitido: packaging.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3337: ERROR AI-4 dominio-no-permitido: pip.pypa.io
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3338: ERROR AI-4 dominio-no-permitido: docs.astral.sh
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3339: ERROR AI-4 dominio-no-permitido: docs.astral.sh
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3340: ERROR AI-4 dominio-no-permitido: docs.astral.sh
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3342: ERROR AI-4 dominio-no-permitido: mise.jdx.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3343: ERROR AI-4 dominio-no-permitido: asdf-vm.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3344: ERROR AI-4 dominio-no-permitido: pnpm.io
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3345: ERROR AI-4 dominio-no-permitido: docs.astral.sh
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3354: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3354: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3355: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3356: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3356: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3357: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3358: ERROR AI-4 dominio-no-permitido: pnpm.io
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3359: ERROR AI-4 dominio-no-permitido: yarnpkg.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3360: ERROR AI-4 dominio-no-permitido: docs.astral.sh
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3361: ERROR AI-4 dominio-no-permitido: docs.astral.sh
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3362: ERROR AI-4 dominio-no-permitido: docs.astral.sh
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3362: ERROR AI-4 dominio-no-permitido: docs.astral.sh
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3363: ERROR AI-4 dominio-no-permitido: peps.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3364: ERROR AI-4 dominio-no-permitido: packaging.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3365: ERROR AI-4 dominio-no-permitido: pip.pypa.io
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3366: ERROR AI-4 dominio-no-permitido: pip.pypa.io
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3368: ERROR AI-4 dominio-no-permitido: python-poetry.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3369: ERROR AI-4 dominio-no-permitido: packaging.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3371: ERROR AI-4 dominio-no-permitido: docs.renovatebot.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3372: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3373: ERROR AI-4 dominio-no-permitido: docs.astral.sh
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3374: ERROR AI-4 dominio-no-permitido: docs.astral.sh
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3375: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3376: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3377: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3380: ERROR AI-4 dominio-no-permitido: hub.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3382: ERROR AI-4 dominio-no-permitido: containers.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3383: ERROR AI-4 dominio-no-permitido: containers.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3383: ERROR AI-4 dominio-no-permitido: containers.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3386: ERROR AI-4 dominio-no-permitido: containers.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3387: ERROR AI-4 dominio-no-permitido: devblogs.microsoft.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3389: ERROR AI-4 dominio-no-permitido: code.visualstudio.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3390: ERROR AI-4 dominio-no-permitido: code.visualstudio.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3391: ERROR AI-4 dominio-no-permitido: code.visualstudio.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3392: ERROR AI-4 dominio-no-permitido: code.visualstudio.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3395: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3396: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3399: ERROR AI-4 dominio-no-permitido: containers.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3401: ERROR AI-4 dominio-no-permitido: containers.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3402: ERROR AI-4 dominio-no-permitido: www.jetbrains.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3402: ERROR AI-4 dominio-no-permitido: www.jetbrains.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3403: ERROR AI-4 dominio-no-permitido: docs.astral.sh
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3404: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3411: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3412: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3413: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3413: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3414: ERROR AI-4 dominio-no-permitido: peps.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3415: ERROR AI-4 dominio-no-permitido: hatch.pypa.io
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3415: ERROR AI-4 dominio-no-permitido: hatch.pypa.io
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3416: ERROR AI-4 dominio-no-permitido: packaging.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3417: ERROR AI-4 dominio-no-permitido: docs.pypi.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3417: ERROR AI-4 dominio-no-permitido: docs.pypi.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3418: ERROR AI-4 dominio-no-permitido: spdx.github.io
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3418: ERROR AI-4 dominio-no-permitido: spdx.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3419: ERROR AI-4 dominio-no-permitido: cyclonedx.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3420: ERROR AI-4 dominio-no-permitido: www.cisa.gov
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3421: ERROR AI-4 dominio-no-permitido: raw.githubusercontent.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3422: ERROR AI-4 dominio-no-permitido: docs.gitlab.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3422: ERROR AI-4 dominio-no-permitido: docs.gitlab.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3423: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3423: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3423: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3423: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3425: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3426: ERROR AI-4 dominio-no-permitido: docs.sigstore.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3429: ERROR AI-4 dominio-no-permitido: oss.anchore.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3430: ERROR AI-4 dominio-no-permitido: devblogs.microsoft.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3432: ERROR AI-4 dominio-no-permitido: api.nuget.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3436: ERROR AI-4 dominio-no-permitido: man7.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3436: ERROR AI-4 dominio-no-permitido: man7.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3437: ERROR AI-4 dominio-no-permitido: nodejs.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3438: ERROR AI-4 dominio-no-permitido: git-scm.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3443: ERROR AI-4 dominio-no-permitido: pre-commit.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3443: ERROR AI-4 dominio-no-permitido: pypi.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3448: ERROR AI-4 dominio-no-permitido: docs.gitlab.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3450: ERROR AI-4 dominio-no-permitido: peps.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3454: ERROR AI-4 dominio-no-permitido: docs.gitlab.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3457: ERROR AI-4 dominio-no-permitido: webstore.iec.ch
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3459: ERROR AI-4 dominio-no-permitido: pnpm.io
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3460: ERROR AI-4 dominio-no-permitido: docs.sigstore.dev
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3461: ERROR AI-4 dominio-no-permitido: docs.npmjs.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3462: ERROR AI-4 dominio-no-permitido: docs.gitlab.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3467: ERROR AI-4 dominio-no-permitido: git-scm.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3468: ERROR AI-4 dominio-no-permitido: www.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3469: ERROR AI-4 dominio-no-permitido: pnpm.io
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3470: ERROR AI-4 dominio-no-permitido: yarnpkg.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3471: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3476: ERROR AI-4 dominio-no-permitido: docs.renovatebot.com
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3482: ERROR AI-4 dominio-no-permitido: docs.python.org
+Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md:3483: ERROR AI-4 dominio-no-permitido: docs.python.org
+Guides/Metodologia-Entorno-Desarrollo/Examples/N6-procedencia-y-trazabilidad/README.md:50: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Metodologia-Entorno-Desarrollo/Examples/N8-integracion-poliglota/README.md:104: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Testing/E2E-Guide/Beginner-Guide.md:345: ERROR AI-1 comentario-html: <!-- tests/MovilidadUrbana.E2ETests/MovilidadUrbana.E2ETests
+Guides/Testing/E2E-Guide/Beginner-Guide.md:422: ERROR AI-1 comentario-html: <!-- pruebas.runsettings -->
+Guides/Testing/E2E-Guide/Beginner-Guide.md:810: ERROR AI-5 html-oculto: <div hidden data-testid="estado-app" data-interactivo="@Rend
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1051: ERROR AI-4 dominio-no-permitido: ejemplo.test
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1416: ERROR AI-4 dominio-no-permitido: homologacion.ejemplo.test
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1794: ERROR AI-4 dominio-no-permitido: playwright.dev
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1794: ERROR AI-4 dominio-no-permitido: playwright.dev
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1973: ERROR AI-4 dominio-no-permitido: dora.dev
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1974: ERROR AI-4 dominio-no-permitido: trunkbaseddevelopment.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1975: ERROR AI-4 dominio-no-permitido: trunkbaseddevelopment.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1976: ERROR AI-4 dominio-no-permitido: google.github.io
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1977: ERROR AI-4 dominio-no-permitido: google.github.io
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1978: ERROR AI-4 dominio-no-permitido: sre.google
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1979: ERROR AI-4 dominio-no-permitido: about.gitlab.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1980: ERROR AI-4 dominio-no-permitido: nvie.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1983: ERROR AI-4 dominio-no-permitido: playwright.dev
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1985: ERROR AI-4 dominio-no-permitido: www.cisa.gov
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1986: ERROR AI-4 dominio-no-permitido: www.iso.org
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1987: ERROR AI-4 dominio-no-permitido: www.computer.org
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Estandares-Modelo-Ramas.md:1989: ERROR AI-4 dominio-no-permitido: www.conventionalcommits.org
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:1436: ERROR AI-1 comentario-html: <!-- e2e-playwright -->
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:1634: ERROR AI-4 dominio-no-permitido: api.nuget.org
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2690: ERROR AI-4 dominio-no-permitido: api.nuget.org
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2880: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2881: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2882: ERROR AI-4 dominio-no-permitido: dora.dev
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2884: ERROR AI-4 dominio-no-permitido: docs.docker.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2887: ERROR AI-4 dominio-no-permitido: cyclonedx.org
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2888: ERROR AI-4 dominio-no-permitido: slsa.dev
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitHubFlow.md:1039: ERROR AI-4 dominio-no-permitido: google.github.io
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitHubFlow.md:1040: ERROR AI-4 dominio-no-permitido: google.github.io
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Guia-Practica-GitHubFlow.md:1041: ERROR AI-4 dominio-no-permitido: dora.dev
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:349: ERROR AI-1 comentario-html: <!-- tests/MovilidadUrbana.E2ETests/MovilidadUrbana.E2ETests
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:426: ERROR AI-1 comentario-html: <!-- pruebas.runsettings -->
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:814: ERROR AI-5 html-oculto: <div hidden data-testid="estado-app" data-interactivo="@Rend
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1055: ERROR AI-4 dominio-no-permitido: ejemplo.test
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1420: ERROR AI-4 dominio-no-permitido: homologacion.ejemplo.test
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1798: ERROR AI-4 dominio-no-permitido: playwright.dev
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1798: ERROR AI-4 dominio-no-permitido: playwright.dev
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Caso-Login-Page.md:334: ERROR AI-4 dominio-no-permitido: ejemplo.invalido
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-Primer-Proyecto.md:90: ERROR AI-1 comentario-html: <!--             InputText:              Al elemento del DOM
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-Primer-Proyecto.md:100: ERROR AI-1 comentario-html: <!--             button:              Al elemento del DOM se
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-Primer-Proyecto.md:113: ERROR AI-1 comentario-html: <!--   div    Al elemento del DOM se identifica con: data-te
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1001: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1002: ERROR AI-4 dominio-no-permitido: martinfowler.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1004: ERROR AI-4 dominio-no-permitido: kentcdodds.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1008: ERROR AI-4 dominio-no-permitido: blog.cleancoder.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1009: ERROR AI-4 dominio-no-permitido: playwright.dev
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1010: ERROR AI-4 dominio-no-permitido: playwright.dev
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1012: ERROR AI-4 dominio-no-permitido: appium.io
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1013: ERROR AI-4 dominio-no-permitido: developer.android.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1014: ERROR AI-4 dominio-no-permitido: developer.android.com
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1015: ERROR AI-4 dominio-no-permitido: en.wikipedia.org
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1018: ERROR AI-4 dominio-no-permitido: site.mockito.org
+Guides/Testing/Lab-E2E.WebBlazor-Guides/Test-Guide/Panorama-De-Pruebas-Automatizadas.md:1019: ERROR AI-4 dominio-no-permitido: jestjs.io
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1215: ERROR AI-4 dominio-no-permitido: stripe.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1229: ERROR AI-4 dominio-no-permitido: docs.example.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1239: ERROR AI-4 dominio-no-permitido: www.example.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1249: ERROR AI-4 dominio-no-permitido: example.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1284: ERROR AI-4 dominio-no-permitido: stripe.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1327: ERROR AI-4 dominio-no-permitido: api.example.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1328: ERROR AI-4 dominio-no-permitido: api.example.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1605: ERROR AI-4 dominio-no-permitido: www.designcouncil.org.uk
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1642: ERROR AI-4 dominio-no-permitido: www.w3.org
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1643: ERROR AI-4 dominio-no-permitido: www.w3.org
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1655: ERROR AI-4 dominio-no-permitido: spec.openapis.org
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1659: ERROR AI-4 dominio-no-permitido: 12factor.net
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1664: ERROR AI-4 dominio-no-permitido: alistapart.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1671: ERROR AI-4 dominio-no-permitido: developer.apple.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1672: ERROR AI-4 dominio-no-permitido: m3.material.io
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1681: ERROR AI-4 dominio-no-permitido: atomicdesign.bradfrost.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1682: ERROR AI-4 dominio-no-permitido: carbondesignsystem.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1685: ERROR AI-4 dominio-no-permitido: polaris.shopify.com
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1690: ERROR AI-4 dominio-no-permitido: jnd.org
+== PR-3 anti-inyeccion: ROJO (errores=824 avisos=100) AI-1=354 AI-2=3 AI-3=13 AI-4=552 AI-5=2

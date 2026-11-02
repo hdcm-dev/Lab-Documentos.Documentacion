@@ -1,0 +1,38 @@
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (docs AGENTS.md)
+🔍 0 Total (in 0s) ✅ 0 OK 🚫 0 Errors
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)
+rc[enlaces]=0
+== PR-2 esquema (docs)
+docs/_requisitos.md:1: aviso traces-vacio: traces: [] es válido, pero conviene trazar al menos al doc_id del README de su cuerpo (D-17)
+== PR-2 esquema: verde (errores=0 avisos=1) archivos-con-frontmatter=2 sin-frontmatter-fuera-del-cuerpo=0 readme-del-cuerpo-sin-frontmatter=0
+rc[esquema]=0
+== PR-3 anti-inyección (docs AGENTS.md)
+== PR-3 anti-inyeccion: verde (errores=0 avisos=0) AI-1=0 AI-2=0 AI-3=0 AI-4=0 AI-5=0
+rc[ai]=0
+== PR-4 estructura: markdownlint-cli2, mermaid y mermaid-arroba (docs AGENTS.md)
+markdownlint-cli2 v0.17.2 (markdownlint v0.37.4)
+Finding: docs/**/*.md AGENTS.md
+Linting: 3 file(s)
+Summary: 0 error(s)
+== PR-4 mermaid: verde (bloques=0 invalidos=0)
+== PR-4 mermaid-arroba: verde (errores=0 avisos=0) bloques=0
+rc[estructura]=0
+== PR-5 trazas (docs AGENTS.md README.md)
+docs/_requisitos.md:1: ERROR id-duplicado: RD-00: también declarado en docs/_requisitos.md:15
+docs/_requisitos.md:15: ERROR id-duplicado: RD-00: también declarado en docs/_requisitos.md:1
+docs/_gobierno/como-intervenir.md:1: ERROR id-duplicado: PRC-01: también declarado en docs/_gobierno/como-intervenir.md:15
+docs/_gobierno/como-intervenir.md:15: ERROR id-duplicado: PRC-01: también declarado en docs/_gobierno/como-intervenir.md:1
+docs/_gobierno/como-intervenir.md:1: ERROR traza-no-resuelve: FDD-01: el ID no está declarado en el registro
+== PR-5 traces-resolve: ROJO (errores=5 avisos=0) trazas=1 resueltas=0 ids-duplicados=4 anclas=0 anclas-resueltas=0
+rc[trazas]=1
+== PR-6 contrato (docs)
+no aplica: la ruta no tiene contracts/openapi.json
+== PR-6 contratos: verde (errores=0 avisos=0) contratos=0
+rc[contrato]=0
+== PR-7 fijadas y reflint (docs)
+no aplica: la ruta no tiene piezas fijadas (BASE-FIJADA.md)
+== PR-7 fijadas: verde (errores=0 avisos=0) piezas=0
+== PR-7 reflint: verde (errores=0 avisos=0) referencias=0
+== PR-7 url-fecha: verde (errores=0 avisos=0) documentos-que-bloquean=0
+rc[fijadas]=0
+== agregado: ROJO

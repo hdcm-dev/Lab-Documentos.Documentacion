@@ -1,0 +1,9 @@
+SDD/Docs/_legacy/2026-08-15-migracion-8.2/GeometriaFactory-Contracts/11-Documentacion/README.md
+SDD/Docs/_legacy/2026-08-16-consolidacion-m10/GeometriaFactory-Web/11-Documentacion/README-Visor.md
+SDD/Docs/_legacy/2026-08-16-consolidacion-m10/GeometriaFactory-Api/11-Documentacion/README-Domain.md
+SDD/Docs/_legacy/2026-08-16-consolidacion-m10/GeometriaFactory-Api/11-Documentacion/README-Infrastructure.md
+SDD/Docs/_legacy/2026-08-16-consolidacion-m10/GeometriaFactory-Api/11-Documentacion/README-Application.md
+SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/11-Documentacion/README.md
+SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/11-Documentacion/README.md
+SDD/Docs/Producto/11-Documentacion/README.md
+SDD/Docs/Producto/11-Documentacion/_legacy/2026-08-17/README-v1.1.md
