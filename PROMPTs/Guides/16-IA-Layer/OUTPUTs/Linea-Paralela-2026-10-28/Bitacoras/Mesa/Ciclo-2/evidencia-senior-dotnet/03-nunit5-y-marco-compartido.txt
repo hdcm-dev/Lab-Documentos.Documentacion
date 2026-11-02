@@ -1,0 +1,6 @@
+# Reflexión sobre nunit.framework.dll 5.0.0 (volumen <volumen-nuget>), pwsh en mcr.microsoft.com/dotnet/sdk:10.0 (dotnet --version 10.0.403), 2026-10-28
+Task MultipleAsync(Func`1)
+Task`1 ThrowsAsync(Func`1)           (y sus 5 sobrecargas: todas devuelven Task`1)
+Void Multiple(Action) ; Void Multiple(Func`1)
+OrderAttribute: [Obsolete] "OrderAttribute is deprecated and may be removed in a future version of NUnit. Please use DependsOnTest or DependsOnFixture instead."
+# Marco compartido Microsoft.AspNetCore.App 10.0.14 en la imagen: contiene Microsoft.Extensions.Options.DataAnnotations.dll y Microsoft.Extensions.Http.dll

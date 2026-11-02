@@ -1,0 +1,13 @@
+{"tipo":"api_ps_inicio","fecha":"2026-10-29T21:55:47Z","servidor":"estacion-2","modelos":[]}
+{"tipo":"api_ps","fecha":"2026-10-29T21:55:49Z","servidor":"estacion-2","modelos":[{"name":"qwen3.5:4b","digest":"d8b0f5e9760c","context_length":8192,"size_vram":0,"expires_at":"2026-10-29T22:55:49.593681494Z"}]}
+{"tipo":"api_ps_tras","sub":"s01","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_tras","sub":"s02","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_tras","sub":"s03","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_tras","sub":"s04","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_tras","sub":"s05","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_tras","sub":"s06","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_tras","sub":"s07","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_tras","sub":"s08","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_tras","sub":"s09","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_tras","sub":"s10","modelos":[{"name":"qwen3.5:4b","context_length":8192}]}
+{"tipo":"api_ps_despues_keepalive0","fecha":"2026-10-29T21:58:03Z","modelos":[]}

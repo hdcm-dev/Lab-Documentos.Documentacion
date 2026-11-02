@@ -1,0 +1,26 @@
+CONCEDIDO <recurso-compartido> a ah02-c2 hasta 2026-10-28T18:58:19-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> ah02-c2)
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+/ex/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests.dll
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /ex/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+Medio en catálogo: Unacceptable la respuesta no es JSON
+Relevance: Inconclusive 
+Coherence:  
+Groundedness:  
+
+  Passed Paso2_EvaluadoPorUnJuez [5 m 45 s]
+  Standard Output Messages:
+ Medio en catálogo: Unacceptable la respuesta no es JSON
+ Relevance: Inconclusive 
+ Coherence:  
+ Groundedness:  
+
+
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 5.8111 Minutes
+LIBERADO <recurso-compartido> por ah02-c2

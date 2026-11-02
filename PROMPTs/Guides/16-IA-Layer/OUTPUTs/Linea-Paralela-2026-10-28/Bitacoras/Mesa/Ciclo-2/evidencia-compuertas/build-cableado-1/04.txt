@@ -1,0 +1,15 @@
+  Determining projects to restore...
+  Restored /ex/src/MovilidadUrbana.Busqueda/MovilidadUrbana.Busqueda.csproj (in 1.36 sec).
+  Restored /ex/tests/MovilidadUrbana.Busqueda.Tests/MovilidadUrbana.Busqueda.Tests.csproj (in 1.38 sec).
+  MovilidadUrbana.Busqueda -> /ex/src/MovilidadUrbana.Busqueda/bin/Release/net10.0/MovilidadUrbana.Busqueda.dll
+  MovilidadUrbana.Busqueda.Tests -> /ex/tests/MovilidadUrbana.Busqueda.Tests/bin/Release/net10.0/MovilidadUrbana.Busqueda.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:07.51
+Test run for /ex/tests/MovilidadUrbana.Busqueda.Tests/bin/Release/net10.0/MovilidadUrbana.Busqueda.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    13, Skipped:     0, Total:    13, Duration: 524 ms - MovilidadUrbana.Busqueda.Tests.dll (net10.0)

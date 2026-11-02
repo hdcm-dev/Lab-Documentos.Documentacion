@@ -1,0 +1,7 @@
+# R10 — re-corrida de N4 [E02] compilecheck (copia en {dir-de-trabajo}/verificacion-qa/n4cc), recurso build, SDK 10.0.403, 2026-10-28
+# dotnet build -c Release → Compilación correcta, 0 Errores
+# dotnet run -c Release --no-build (sin modelo; OLLAMA_ENDPOINT a un puerto cerrado de localhost)
+checkpoint: True
+output: ALOH
+checkpoint: True
+# Coincide con N4 §3.0 [E02], tercer intento.

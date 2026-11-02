@@ -1,0 +1,70 @@
+$ dotnet run --project src/MovilidadUrbana.Ejemplos.Orquestacion -- encuesta
+Encuesta de tres pasos: función frente a workflow de MAF (sin modelo).
+- completa: función → registrada; workflow de MAF → registrada (4 supersteps: paso-1 > paso-2 > paso-3 > registro)
+- falla el paso 1 (edad 15): función → detenida en el paso 1: edad; workflow de MAF → detenida en el paso 1: edad (2 supersteps: paso-1 > rechazo)
+- falla el paso 2 (sin medios): función → detenida en el paso 2: medios; workflow de MAF → detenida en el paso 2: medios (3 supersteps: paso-1 > paso-2 > rechazo)
+- falla el paso 3 (0 minutos): función → detenida en el paso 3: minutos; workflow de MAF → detenida en el paso 3: minutos (4 supersteps: paso-1 > paso-2 > paso-3 > rechazo)
+Escrituras en el almacén: 2
+rc=0
+$ dotnet run --project src/MovilidadUrbana.Ejemplos.Orquestacion -- alta --sin-modelo
+Modo sin modelo: un cliente guionado hace de extractor.
+> Agregá Goya, Corrientes, CP 34, 89959 habitantes
+  pasos: extraer > revisar > rechazo
+  resultado: Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).]; estado de la corrida: Idle
+  [confirmar-alta] ¿Agregar PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 }? → si
+> Agregá Goya, Corrientes, CP 3450, 89959 habitantes
+  pasos: extraer > revisar > confirmar-alta > registrar
+  resultado: Registrada: Se agregó la localidad Goya.; estado de la corrida: Idle
+Escrituras en el almacén: 1
+rc=0
+$ dotnet run --project src/MovilidadUrbana.Ejemplos.Orquestacion -- alta --sin-modelo --confirmar no
+Modo sin modelo: un cliente guionado hace de extractor.
+> Agregá Goya, Corrientes, CP 34, 89959 habitantes
+  pasos: extraer > revisar > rechazo
+  resultado: Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).]; estado de la corrida: Idle
+  [confirmar-alta] ¿Agregar PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 }? → no
+> Agregá Goya, Corrientes, CP 3450, 89959 habitantes
+  pasos: extraer > revisar > confirmar-alta > registrar
+  resultado: Descartada: La persona no confirmó; no se guardó nada.; estado de la corrida: Idle
+Escrituras en el almacén: 0
+rc=0
+$ dotnet run --project src/MovilidadUrbana.Ejemplos.Orquestacion -- alta --sin-modelo --confirmar nadie
+Modo sin modelo: un cliente guionado hace de extractor.
+> Agregá Goya, Corrientes, CP 34, 89959 habitantes
+  pasos: extraer > revisar > rechazo
+  resultado: Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).]; estado de la corrida: Idle
+  [confirmar-alta] ¿Agregar PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 }? → nadie
+> Agregá Goya, Corrientes, CP 3450, 89959 habitantes
+  pasos: extraer > revisar > confirmar-alta
+  resultado: (sin salida); estado de la corrida: PendingRequests
+Escrituras en el almacén: 0
+rc=0
+$ dotnet run --project src/MovilidadUrbana.Ejemplos.Orquestacion -- secuencial --sin-modelo
+Tipo expuesto: WorkflowHostAgent (es AIAgent)
+> Agregá Goya, Corrientes, CP 34, 89959 habitantes
+  [extractor] Goya; Corrientes; 34; 89959
+  [redactor] Se va a agregar Goya (Corrientes). ¿Confirmás?
+> Agregá Goya, Corrientes, CP 3450, 89959 habitantes
+  [extractor] Goya; Corrientes; 3450; 89959
+  [redactor] Se va a agregar Goya (Corrientes). ¿Confirmás?
+Escrituras en el almacén: 0
+rc=0
+$ dotnet run (sin DOTNET_ENVIRONMENT)
+fail: Microsoft.Extensions.Hosting.Internal.Host[11]
+      Hosting failed to start
+      Microsoft.Extensions.Options.OptionsValidationException: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.
+         at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+         at Microsoft.Extensions.Options.OptionsMonitor`1.<>c.<Get>b__10_0(String name, IOptionsFactory`1 factory)
+         at Microsoft.Extensions.Options.OptionsCache`1.<>c__DisplayClass3_1`1.<GetOrAdd>b__2()
+         at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+         at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+         at System.Lazy`1.CreateValue()
+         at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+         at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+         at Microsoft.Extensions.DependencyInjection.OptionsBuilderExtensions.<>c__DisplayClass0_1`1.<ValidateOnStart>b__1()
+         at Microsoft.Extensions.Options.StartupValidator.Validate()
+      --- End of stack trace from previous location ---
+         at Microsoft.Extensions.Options.StartupValidator.Validate()
+         at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+Configuración inválida: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.
+rc=3 (verificado aparte: dotnet run -- encuesta sin DOTNET_ENVIRONMENT)

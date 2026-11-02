@@ -1,0 +1,1 @@
+  deleted 'qwen3.5:2b'

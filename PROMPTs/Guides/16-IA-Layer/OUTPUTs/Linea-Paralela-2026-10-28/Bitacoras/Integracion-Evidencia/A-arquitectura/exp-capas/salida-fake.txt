@@ -1,0 +1,28 @@
+# Experimento A-arquitectura — modo fake — 2026-10-28 12:19:06 +00:00
+MEAI 10.11.0.0 · MAF 1.26.0.0 · OllamaSharp 5.5.0.0
+[1] Corpus leído de LocalidadPolicy y EncuestaPolicy por reflexión: 12 enunciados
+    LocalidadPolicy.RequisitoDelNombre → «Localidad, nombre: Entre 3 y 60 caracteres, único por provincia.»
+    LocalidadPolicy.RequisitoDeLaProvincia → «Localidad, provincia: Una de las provincias del catálogo.»
+    LocalidadPolicy.RequisitoDelCodigoPostal → «Localidad, codigo postal: 4 dígitos.»
+    LocalidadPolicy.RequisitoDeLosHabitantes → «Localidad, habitantes: Un número entero de 1 en adelante.»
+    EncuestaPolicy.RequisitoDelNombre → «Encuesta, nombre: Al menos 3 caracteres.»
+    EncuestaPolicy.RequisitoDeLaEdad → «Encuesta, edad: Entre 16 y 110 años.»
+    EncuestaPolicy.RequisitoDeLaLocalidad → «Encuesta, localidad: Una de las localidades cargadas en el ABM.»
+    EncuestaPolicy.RequisitoDeLosMedios → «Encuesta, medios: Al menos uno.»
+    EncuestaPolicy.RequisitoDeLaFrecuencia → «Encuesta, frecuencia: Con qué asiduidad usa esos medios.»
+    EncuestaPolicy.RequisitoDeLaDistancia → «Encuesta, distancia: Entre 0 y 500 km por día.»
+    EncuestaPolicy.RequisitoDeLosMinutos → «Encuesta, minutos: Entre 1 y 600 minutos.»
+    EncuestaPolicy.RequisitoDelMotivo → «Encuesta, motivo: El motivo principal del viaje.»
+[2] Vía A (RAG fijo, sin agente): fuentes=LocalidadPolicy.RequisitoDelCodigoPostal,EncuestaPolicy.RequisitoDeLaLocalidad,LocalidadPolicy.RequisitoDelNombre; llamadas al modelo=1; recibe 2 mensajes; instrucciones=no; tools=[]
+[3] Vía B (recuperación como herramienta) «¿Cuántos dígitos lleva el código postal de una localidad?» → (guion) con el resultado de la herramienta: [LocalidadPolicy.RequisitoDelCodigoPostal] Localidad, codigo postal: 4 dígitos.
+[EncuestaPolicy.RequisitoDeLaLocalidad] Encuesta, localidad: Una de las localidades cargadas en el ABM.
+[LocalidadPolicy.RequisitoDelNombre] Localidad, nombre: Entre 3 y 60 caracteres, único por provincia.
+      recibe 2 mensajes; instrucciones=no; tools=[buscar_requisitos,contar_localidades_por_provincia]
+      pide herramienta buscar_requisitos
+      recibe 4 mensajes; instrucciones=no; tools=[buscar_requisitos,contar_localidades_por_provincia]
+[3] Vía B (recuperación como herramienta) «¿Cuántas localidades hay cargadas en la provincia de Corrientes?» → (guion) con el resultado de la herramienta: 2
+      recibe 2 mensajes; instrucciones=no; tools=[buscar_requisitos,contar_localidades_por_provincia]
+      pide herramienta contar_localidades_por_provincia
+      recibe 4 mensajes; instrucciones=no; tools=[buscar_requisitos,contar_localidades_por_provincia]
+[4] Vía C (AIContextProvider de MAF) → (guion) respuesta sin herramientas
+      recibe 1 mensajes; instrucciones=sí: Requisitos relevantes: | [LocalidadPolicy.RequisitoDelCodigoPostal] Localidad, codigo postal: 4 dígitos. | [EncuestaPolicy.RequisitoDeLaLocalidad] Encuesta, localidad: Una de las localidades cargadas en el ABM.; tools=[]

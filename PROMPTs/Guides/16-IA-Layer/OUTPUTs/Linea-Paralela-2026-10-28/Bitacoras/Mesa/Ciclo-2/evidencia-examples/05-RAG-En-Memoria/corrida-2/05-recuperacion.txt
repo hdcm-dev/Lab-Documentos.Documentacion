@@ -1,0 +1,45 @@
+# Examples/05 — recuperación con el oro (16 consultas: 12 respondibles, 4 no respondibles; caso base 59399ba)
+# estación de laboratorio de 15 vCPU (contenedor 14 CPU / 34 GiB, CPU sin GPU, Ollama 0.40.11); Ollama 0.40.11; 2026-10-28 18:39 +00:00
+# modelo@digest: qwen3-embedding:0.6b@ac6da0dfba84; /api/embed por OllamaSharp; dimensión medida 1024; k = 3
+# estimando: la tarea (unidad = consulta); embeddings sin muestreo: m = 1 y la repetición es reproducción; criterio escrito antes: 00-criterio-previo.md
+## con instrucción: «Given a question from a person filling in a locality form or a transport survey, retrieve the requirement that answers it»; arranque e ingesta 1.8 s
+R01	RR@3=1.000	LocalidadPolicy.RequisitoDelCodigoPostal 0.662 | LocalidadPolicy.RequisitoDelNombre 0.449 | LocalidadPolicy.RequisitoDeLosHabitantes 0.400
+R02	RR@3=1.000	LocalidadPolicy.RequisitoDelNombre 0.571 | EncuestaPolicy.RequisitoDelNombre 0.494 | LocalidadPolicy.RequisitoDelCodigoPostal 0.311
+R03	RR@3=0.500	LocalidadPolicy.RequisitoDelNombre 0.593 | LocalidadPolicy.RequisitoDeLaProvincia 0.548 | LocalidadPolicy.RequisitoDelCodigoPostal 0.376
+R04	RR@3=1.000	LocalidadPolicy.RequisitoDeLosHabitantes 0.619 | LocalidadPolicy.RequisitoDelNombre 0.501 | LocalidadPolicy.RequisitoDelCodigoPostal 0.424
+R05	RR@3=1.000	EncuestaPolicy.RequisitoDeLaEdad 0.785 | EncuestaPolicy.RequisitoDeLosMinutos 0.578 | EncuestaPolicy.RequisitoDeLosMedios 0.548
+R06	RR@3=1.000	EncuestaPolicy.RequisitoDeLaDistancia 0.550 | LocalidadPolicy.RequisitoDelNombre 0.354 | EncuestaPolicy.RequisitoDeLosMinutos 0.344
+R07	RR@3=1.000	EncuestaPolicy.RequisitoDeLosMinutos 0.569 | EncuestaPolicy.RequisitoDeLaDistancia 0.550 | EncuestaPolicy.RequisitoDelMotivo 0.417
+R08	RR@3=1.000	EncuestaPolicy.RequisitoDeLosMedios 0.429 | EncuestaPolicy.RequisitoDelNombre 0.385 | EncuestaPolicy.RequisitoDelMotivo 0.384
+R09	RR@3=1.000	EncuestaPolicy.RequisitoDeLaLocalidad 0.602 | LocalidadPolicy.RequisitoDelNombre 0.506 | EncuestaPolicy.RequisitoDelNombre 0.499
+R10	RR@3=1.000	EncuestaPolicy.RequisitoDelNombre 0.788 | LocalidadPolicy.RequisitoDelNombre 0.568 | EncuestaPolicy.RequisitoDeLosMinutos 0.487
+R11	RR@3=1.000	EncuestaPolicy.RequisitoDelMotivo 0.770 | EncuestaPolicy.RequisitoDeLaDistancia 0.380 | EncuestaPolicy.RequisitoDelNombre 0.343
+R12	RR@3=1.000	LocalidadPolicy.RequisitoDelNombre 0.540 | EncuestaPolicy.RequisitoDelNombre 0.482 | LocalidadPolicy.RequisitoDeLosHabitantes 0.236
+N01	no-resp	EncuestaPolicy.RequisitoDeLaLocalidad 0.464 | EncuestaPolicy.RequisitoDeLosMedios 0.411 | EncuestaPolicy.RequisitoDelMotivo 0.392
+N02	no-resp	EncuestaPolicy.RequisitoDeLaDistancia 0.355 | EncuestaPolicy.RequisitoDeLosMinutos 0.316 | EncuestaPolicy.RequisitoDelMotivo 0.215
+N03	no-resp	EncuestaPolicy.RequisitoDeLaDistancia 0.301 | EncuestaPolicy.RequisitoDelMotivo 0.275 | EncuestaPolicy.RequisitoDeLosMinutos 0.257
+N04	no-resp	LocalidadPolicy.RequisitoDelCodigoPostal 0.539 | LocalidadPolicy.RequisitoDelNombre 0.473 | EncuestaPolicy.RequisitoDeLaLocalidad 0.304
+RESUMEN con instrucción: hit@1 11/12; Wilson 95 % [0.65; 0.99]; hit@3 12/12; Wilson 95 % [0.76; 1.00]; recall@3 1.000; MRR@3 0.958 — la tarea, K = 12 consultas × m = 1
+PUNTAJE MÁXIMO con instrucción: respondibles mín 0.429 / mediana 0.597; no respondibles 0.464, 0.355, 0.301, 0.539 (umbral de abstención: no calibrado en este ejemplo)
+LÍNEA DE AZAR con 12 enunciados y un relevante: hit@1 = 0.083, hit@3 = 0.250
+## sin instrucción: «»; arranque e ingesta 0.9 s
+R01	RR@3=1.000	LocalidadPolicy.RequisitoDelCodigoPostal 0.597 | LocalidadPolicy.RequisitoDeLosHabitantes 0.416 | LocalidadPolicy.RequisitoDelNombre 0.354
+R02	RR@3=1.000	LocalidadPolicy.RequisitoDelNombre 0.509 | EncuestaPolicy.RequisitoDelNombre 0.446 | LocalidadPolicy.RequisitoDelCodigoPostal 0.324
+R03	RR@3=1.000	LocalidadPolicy.RequisitoDeLaProvincia 0.490 | LocalidadPolicy.RequisitoDelNombre 0.485 | LocalidadPolicy.RequisitoDelCodigoPostal 0.339
+R04	RR@3=1.000	LocalidadPolicy.RequisitoDeLosHabitantes 0.617 | LocalidadPolicy.RequisitoDelNombre 0.437 | EncuestaPolicy.RequisitoDeLaLocalidad 0.425
+R05	RR@3=1.000	EncuestaPolicy.RequisitoDeLaEdad 0.772 | EncuestaPolicy.RequisitoDeLosMinutos 0.546 | EncuestaPolicy.RequisitoDeLaDistancia 0.513
+R06	RR@3=1.000	EncuestaPolicy.RequisitoDeLaDistancia 0.563 | EncuestaPolicy.RequisitoDeLosMinutos 0.341 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.282
+R07	RR@3=1.000	EncuestaPolicy.RequisitoDeLosMinutos 0.569 | EncuestaPolicy.RequisitoDeLaDistancia 0.522 | EncuestaPolicy.RequisitoDelMotivo 0.408
+R08	RR@3=1.000	EncuestaPolicy.RequisitoDeLosMedios 0.392 | EncuestaPolicy.RequisitoDelMotivo 0.357 | EncuestaPolicy.RequisitoDeLaDistancia 0.335
+R09	RR@3=1.000	EncuestaPolicy.RequisitoDeLaLocalidad 0.555 | EncuestaPolicy.RequisitoDeLosMedios 0.471 | EncuestaPolicy.RequisitoDelNombre 0.459
+R10	RR@3=1.000	EncuestaPolicy.RequisitoDelNombre 0.740 | EncuestaPolicy.RequisitoDeLosMinutos 0.528 | EncuestaPolicy.RequisitoDeLosMedios 0.526
+R11	RR@3=1.000	EncuestaPolicy.RequisitoDelMotivo 0.743 | EncuestaPolicy.RequisitoDeLaDistancia 0.355 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.333
+R12	RR@3=1.000	EncuestaPolicy.RequisitoDelNombre 0.451 | LocalidadPolicy.RequisitoDelNombre 0.407 | LocalidadPolicy.RequisitoDeLaProvincia 0.276
+N01	no-resp	EncuestaPolicy.RequisitoDeLaLocalidad 0.442 | EncuestaPolicy.RequisitoDeLosMedios 0.412 | EncuestaPolicy.RequisitoDelMotivo 0.378
+N02	no-resp	EncuestaPolicy.RequisitoDeLaDistancia 0.348 | EncuestaPolicy.RequisitoDeLosMinutos 0.343 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.247
+N03	no-resp	EncuestaPolicy.RequisitoDelMotivo 0.302 | EncuestaPolicy.RequisitoDeLaDistancia 0.268 | EncuestaPolicy.RequisitoDeLosMinutos 0.231
+N04	no-resp	LocalidadPolicy.RequisitoDelCodigoPostal 0.568 | LocalidadPolicy.RequisitoDelNombre 0.502 | EncuestaPolicy.RequisitoDeLaLocalidad 0.367
+RESUMEN sin instrucción: hit@1 12/12; Wilson 95 % [0.76; 1.00]; hit@3 12/12; Wilson 95 % [0.76; 1.00]; recall@3 1.000; MRR@3 1.000 — la tarea, K = 12 consultas × m = 1
+PUNTAJE MÁXIMO sin instrucción: respondibles mín 0.392 / mediana 0.566; no respondibles 0.442, 0.348, 0.302, 0.568 (umbral de abstención: no calibrado en este ejemplo)
+LÍNEA DE AZAR con 12 enunciados y un relevante: hit@1 = 0.083, hit@3 = 0.250
+PAREADA por consulta (RR@3, con frente a sin instrucción): pares 12; discordantes 1 (con mejor en 0, sin mejor en 1); no separado con este N

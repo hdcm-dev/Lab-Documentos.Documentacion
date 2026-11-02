@@ -1,0 +1,9 @@
+# Resultado guardado por DiskBasedReportingConfiguration (extracto), corrida del 2026-10-28, estación de laboratorio de 4 núcleos
+pedido: Extraé los medios de transporte y la frecuencia. Medios válidos: colectivo, auto, bicicleta, moto, caminata, tren. Frecuencias válidas: diaria, semanal, ocasional.
+Texto: Voy en bondi y a veces en bici, casi todos los días
+respuesta evaluada: Aquí tienes los medios de transporte y la frecuencia extraídos del texto, utilizando solo las opciones válidas solicitadas: |  | *   **Medios de transporte:** colectivo (bondi), bicicleta (bici) | *   **Frecuencia:** diaria (casi todos los días)
+finishReason: stop usage: {'inputTokenCount': 70, 'outputTokenCount': 60, 'totalTokenCount': 130}
+- Medio en catálogo: rating=unacceptable failed=True reason=la respuesta no es JSON eval-output-tokens=None diag=[]
+- Relevance: rating=inconclusive failed=True reason=Relevance has no score. eval-output-tokens=800 diag=["Failed to parse score for 'Relevance' from the following evaluation response:\r "]
+- Coherence: rating=None failed=None reason=None eval-output-tokens=None diag=['System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 300 seconds elapsing.  ---> System.TimeoutExc']
+- Groundedness: rating=None failed=None reason=None eval-output-tokens=None diag=['System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 300 seconds elapsing.  ---> System.TimeoutExc']

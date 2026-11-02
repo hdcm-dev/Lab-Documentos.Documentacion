@@ -1,0 +1,19 @@
+:root { --azul: #236c9c; --texto: #1d2329; --suave: #f3f6f8; --borde: #c9d3db; --peligro: #a32020; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; color: var(--texto); background: #fff; }
+.asistente { max-width: 46rem; margin: 0 auto; padding: 1rem; }
+h1 { color: var(--azul); font-size: 1.5rem; }
+.aviso { background: var(--suave); border-left: 4px solid var(--azul); padding: .75rem; }
+.conversacion { list-style: none; padding: 0; display: grid; gap: .75rem; }
+.turno { padding: .75rem; border: 1px solid var(--borde); border-radius: .5rem; white-space: pre-wrap; }
+.turno.persona { background: var(--suave); }
+.accion { border-top: 1px dashed var(--borde); margin-top: .5rem; padding-top: .5rem; display: grid; gap: .4rem; }
+.accion h2 { font-size: 1rem; margin: 0; }
+label { display: grid; gap: .2rem; }
+input, select, textarea { font: inherit; padding: .4rem; border: 1px solid var(--borde); border-radius: .3rem; width: 100%; }
+button { font: inherit; padding: .45rem .9rem; border-radius: .3rem; border: 1px solid var(--azul); background: var(--azul); color: #fff; cursor: pointer; margin-right: .4rem; }
+button[disabled] { opacity: .5; cursor: default; }
+button.peligro { background: var(--peligro); border-color: var(--peligro); }
+.error { color: var(--peligro); }
+.progreso, .fuentes, .resultado { font-size: .9rem; color: #46525c; }
+.entrada { display: grid; gap: .4rem; }

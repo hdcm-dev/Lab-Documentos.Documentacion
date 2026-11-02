@@ -1,0 +1,296 @@
+CONCEDIDO build a ej08-mcp hasta 2026-10-28T16:59:46-0300 (renová con: <gestor-de-turnos> renovar build ej08-mcp)
+    0 Error(s)
+    0 Warning(s)
+Time Elapsed 00:00:21.75
+Test run for tests/MovilidadUrbana.Ejemplos.Mcp.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Mcp.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in tests/MovilidadUrbana.Ejemplos.Mcp.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Mcp.Tests.dll
+   NUnit3TestExecutor discovered 44 of 44 NUnit test cases using Current Discovery mode, Non-Explicit run
+contar_localidades_por_provincia: esquema igual al del catálogo = True
+  alternativa {"type":"object","properties":{"provincia":{"description":"Una de: Buenos Aires, Chaco, C\u00F3rdoba, Corrientes, Entre R\u00EDos, Mendoza, Santa Fe","type":"string"}},"required":["provincia"]}
+  catálogo    {"type":"object","properties":{"provincia":{"description":"Una de: Buenos Aires, Chaco, C\u00F3rdoba, Corrientes, Entre R\u00EDos, Mendoza, Santa Fe","type":"string"}},"required":["provincia"]}
+listar_localidades: esquema igual al del catálogo = True
+  alternativa {"type":"object","properties":{"provincia":{"description":"Provincia del cat\u00E1logo, para filtrar","type":["string","null"],"default":null},"codigoPostal":{"description":"C\u00F3digo postal de 4 d\u00EDgitos, para filtrar","type":["string","null"],"default":null},"nombre":{"description":"Nombre exacto de la localidad, para buscarla","type":["string","null"],"default":null}}}
+  catálogo    {"type":"object","properties":{"provincia":{"description":"Provincia del cat\u00E1logo, para filtrar","type":["string","null"],"default":null},"codigoPostal":{"description":"C\u00F3digo postal de 4 d\u00EDgitos, para filtrar","type":["string","null"],"default":null},"nombre":{"description":"Nombre exacto de la localidad, para buscarla","type":["string","null"],"default":null}}}
+
+DataAnnotation validation failed for 'OpcionesDelServidorMcp' members: 'Token' with the error: 'The Token field is required.'.
+
+http://127.0.0.1:36065
+
+Mcp:Urls «http://0.0.0.0:0» no es loopback: el servidor MCP escucha sólo en 127.0.0.1, [::1] o localhost.
+
+Mcp:Urls «http://192.0.2.10:8080» no es loopback: el servidor MCP escucha sólo en 127.0.0.1, [::1] o localhost.
+
+Mcp:Urls «http://+:8080» no es loopback: el servidor MCP escucha sólo en 127.0.0.1, [::1] o localhost.
+
+  Passed LaAlternativaConAtributos_PublicaLoMismoQueElCatalogo [1 s]
+  Passed AllowedHostsAbierto_NoArranca("*") [14 ms]
+  Passed AllowedHostsAbierto_NoArranca("localhost;*") [2 ms]
+  Passed ElJsonDelEjemplo_DeclaraLoopbackYAllowedHostsCerrado [6 ms]
+  Passed FueraDeDevelopment_SinToken_NoArranca [31 ms]
+  Passed PorDefecto_EscuchaSoloEnLoopback [85 ms]
+  Passed UnaDireccionFueraDeLoopback_NoArranca("http://0.0.0.0:0") [36 ms]
+  Passed UnaDireccionFueraDeLoopback_NoArranca("http://192.0.2.10:8080") [2 ms]
+  Passed UnaDireccionFueraDeLoopback_NoArranca("http://+:8080") [2 ms]
+  Passed McpServerTool_ConAtributo_SoloEnElBloqueAlternativo [50 ms]
+  Passed NoAparece("np","x") [10 ms]
+  Passed NoAparece("Custom","Headers") [7 ms]
+  Passed NoAparece("WithToolsFrom","Assembly") [5 ms]
+  Passed NoAparece("Echo","Tool") [12 ms]
+  Passed SinLiteralesDeModeloNiEndpointFueraDeLasOpciones [11 ms]
+  Passed CadaMetodoDelAdaptador_EstaMarcadoComoLecturaOEscritura [1 ms]
+  Passed ElCatalogoTieneUnaEscritura_YElFiltroLaDeja [5 ms]
+  Passed LaPruebaDeCamposProhibidos_DetectaAlgo_CasoRojo [4 ms]
+contar_localidades_por_provincia: Respuesta`1, ConteoPorProvincia
+listar_localidades: Respuesta`1, LocalidadResumida
+
+contar_localidades_por_provincia({"provincia":"chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}
+«(sin modelo) La herramienta devolvió: {"$type":"text","Text":"{\n  \u0022ok\u0022: true,\n  \u0022datos\u0022: {\n    \u0022provincia\u0022: \u0022Chaco\u0022,\n    \u0022cantidad\u0022: 1\n  },\n  \u0022errores\u0022: {}\n}","Annotations":null,"AdditionalProperties":null}»
+
+ofrecidas: contar_localidades_por_provincia, listar_localidades, borrar_todo; descartadas: borrar_todo; faltantes: no_existe
+
+  Passed LoPublicado_NoDevuelveCamposDeLaPersonaNiLaSesion [6 ms]
+  Passed LoPublicado_PorNombre_EsLaListaCerrada [< 1 ms]
+  Passed LoPublicado_PorReflexion_EsDeLectura_YNingunoPideAprobacion [1 ms]
+  Passed NingunaHerramientaDelCatalogo_RecibeLaSesionComoParametro [12 ms]
+  Passed SessionContextDelCasoBase_EsElQueUsaElServidor [1 ms]
+  Passed ElAgente_RechazaUnaEntradaDemasiadoLarga_SinLlamarAlModelo [90 ms]
+  Passed ElAgenteConMcpClientTool_LlamaAlServidorPorMcp_SinModelo [497 ms]
+  Passed LaListaBlanca_DescartaLoQueElServidorPubliqueDeMas [43 ms]
+  Passed LaListaBlancaDeLaConfiguracion_EsLaDeLasHerramientasDeLectura [3 ms]
+ValidateScopes=false, servicios raíz
+  B lista: {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    },
+    {
+      "nombre": "Goya",
+      "provincia": "Corrientes",
+      "codigoPostal": "3450",
+      "habitantes": 89959
+    }
+  ],
+  "errores": {}
+}
+  B borra: {
+  "ok": true,
+  "datos": "Se eliminó la localidad Goya.",
+  "errores": {}
+}
+  Goya en A: 0
+
+Cannot resolve scoped service 'MovilidadUrbana.Ejemplos.Mcp.Servidor.Application.Consultas.ConsultaDeLocalidades' from root provider.
+
+ValidateScopes=True
+  B lista: {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}
+  B borra: {
+  "ok": false,
+  "errores": {
+    "nombre": "No hay ninguna localidad «Goya» cargada."
+  }
+}
+  Goya en A: 1
+
+ValidateScopes=False
+  B lista: {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}
+  B borra: {
+  "ok": false,
+  "errores": {
+    "nombre": "No hay ninguna localidad «Goya» cargada."
+  }
+}
+  Goya en A: 1
+
+herramientas declaradas: 396 caracteres
+mensaje tool: {"CallId":"58af0a6e","Result":{"$type":"text","Text":"{\n  \"ok\": true,\n  \"datos\": {\n    \"provincia\": \"Chaco\",\n    \"cantidad\": 1\n  },\n  \"errores\": {}\n}","Annotations":null,"AdditionalProperties":null}}
+respuesta: Hay 1 localidad cargada en Chaco.
+
+Host=atacante.example token=ok Origin=(no) → 400
+
+Host=(127.0.0.1) token=no Origin=(no) → 401
+
+Host=(127.0.0.1) token=malo Origin=(no) → 401
+
+Host=(127.0.0.1) token=ok Origin=http://atacante.example → 403
+
+  Passed CasoRojo_ServiciosRaizSinValidarAmbitos_BVeYBorraLoDeA [54 ms]
+  Passed CasoRojo_ServiciosRaizValidandoAmbitos_FallaEnCadaLlamada [3 ms]
+  Passed ConElAmbitoDeCadaSesion_BNoVeNiBorraLoDeA(True) [8 ms]
+  Passed ConElAmbitoDeCadaSesion_BNoVeNiBorraLoDeA(False) [3 ms]
+  Passed ElMensajeToolLlevaElResultadoDeMcp [258 ms]
+  Passed Host ajeno, con token → 400 [45 ms]
+  Passed Sin token → 401 [48 ms]
+  Passed Token incorrecto → 401 [38 ms]
+  Passed Origin ajeno, con token → 403 [25 ms]
+Host=(127.0.0.1) token=no Origin=http://atacante.example → 403
+
+Host=(127.0.0.1) token=ok Origin=http://localhost:3000 → 200
+
+Host=(127.0.0.1) token=ok Origin=(no) → 200
+
+Host=localhost token=ok Origin=(no) → 200
+
+contar_localidades_por_provincia → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}
+listar_localidades → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}
+
+McpProtocolException: Request failed (remote): Unknown tool: 'borrar_localidad'
+
+{
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    },
+    {
+      "nombre": "Goya",
+      "provincia": "Corrientes",
+      "codigoPostal": "3450",
+      "habitantes": 89959
+    }
+  ],
+  "errores": {}
+}
+
+contar_localidades_por_provincia readOnlyHint=True
+  mcp      {"type":"object","properties":{"provincia":{"description":"Una de: Buenos Aires, Chaco, C\u00F3rdoba, Corrientes, Entre R\u00EDos, Mendoza, Santa Fe","type":"string"}},"required":["provincia"]}
+  catálogo {"type":"object","properties":{"provincia":{"description":"Una de: Buenos Aires, Chaco, C\u00F3rdoba, Corrientes, Entre R\u00EDos, Mendoza, Santa Fe","type":"string"}},"required":["provincia"]}
+listar_localidades readOnlyHint=True
+  mcp      {"type":"object","properties":{"provincia":{"description":"Provincia del cat\u00E1logo, para filtrar","type":["string","null"],"default":null},"codigoPostal":{"description":"C\u00F3digo postal de 4 d\u00EDgitos, para filtrar","type":["string","null"],"default":null},"nombre":{"description":"Nombre exacto de la localidad, para buscarla","type":["string","null"],"default":null}}}
+  catálogo {"type":"object","properties":{"provincia":{"description":"Provincia del cat\u00E1logo, para filtrar","type":["string","null"],"default":null},"codigoPostal":{"description":"C\u00F3digo postal de 4 d\u00EDgitos, para filtrar","type":["string","null"],"default":null},"nombre":{"description":"Nombre exacto de la localidad, para buscarla","type":["string","null"],"default":null}}}
+
+  Passed Origin ajeno, sin token → 403 (Origin se revisa antes) [43 ms]
+  Passed Origin permitido, con token → 200 [35 ms]
+  Passed Sin Origin (cliente que no es navegador), con token → 200 [21 ms]
+  Passed Host localhost, con token → 200 [22 ms]
+  Passed CadaHerramientaPublicada_ConArgumentosValidos_NoEscribe [60 ms]
+  Passed LaEscrituraNoSePuedeLlamarPorMcp [34 ms]
+  Passed LaSesionEsLaFijaDeDemostracion_YElEncabezadoDelClienteNoLaCambia [27 ms]
+  Passed ToolsList_EsIgualAlJsonSchemaDelCatalogo [34 ms]
+
+Test Run Successful.
+Total tests: 44
+     Passed: 44
+ Total time: 5.3374 Seconds
+=== consola sin modelo
+Servidor MCP: movilidad-urbana 1.0.0, protocolo 2026-07-28
+Herramientas aceptadas: contar_localidades_por_provincia, listar_localidades
+Descartadas por la lista blanca: ninguna
+Modelo: ninguno (cliente guionado)
+
+> ¿Cuántas localidades hay cargadas en Chaco?
+  [mcp] contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}
+  (sin modelo) La herramienta devolvió: {"$type":"text","Text":"{\n  \u0022ok\u0022: true,\n  \u0022datos\u0022: {\n    \u0022provincia\u0022: \u0022Chaco\u0022,\n    \u0022cantidad\u0022: 1\n  },\n  \u0022errores\u0022: {}\n}","Annotations":null,"AdditionalProperties":null}
+
+> ¿Qué localidades hay cargadas en Corrientes?
+  [mcp] listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}
+  (sin modelo) La herramienta devolvió: {"$type":"text","Text":"{\n  \u0022ok\u0022: true,\n  \u0022datos\u0022: [\n    {\n      \u0022nombre\u0022: \u0022Corrientes\u0022,\n      \u0022provincia\u0022: \u0022Corrientes\u0022,\n      \u0022codigoPostal\u0022: \u00223400\u0022,\n      \u0022habitantes\u0022: 346334\n    }\n  ],\n  \u0022errores\u0022: {}\n}","Annotations":null,"AdditionalProperties":null}
+
+Escrituras en el servidor: 0
+rc consola=0
+=== sin DOTNET_ENVIRONMENT
+fail: Microsoft.Extensions.Hosting.Internal.Host[11]
+      Hosting failed to start
+      System.AggregateException: One or more errors occurred. (DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.) (DataAnnotation validation failed for 'OpcionesDelClienteMcp' members: 'Token' with the error: 'The Token field is required.'.)
+       ---> Microsoft.Extensions.Options.OptionsValidationException: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.
+         at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+         at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+         at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+         at System.Lazy`1.CreateValue()
+         at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+         at Microsoft.Extensions.DependencyInjection.OptionsBuilderExtensions.<>c__DisplayClass0_1`1.<ValidateOnStart>b__1()
+         at Microsoft.Extensions.Options.StartupValidator.Validate()
+         --- End of inner exception stack trace ---
+         at Microsoft.Extensions.Options.StartupValidator.Validate()
+         at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+       ---> (Inner Exception #1) Microsoft.Extensions.Options.OptionsValidationException: DataAnnotation validation failed for 'OpcionesDelClienteMcp' members: 'Token' with the error: 'The Token field is required.'.
+         at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+         at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+         at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+         at System.Lazy`1.CreateValue()
+         at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+         at Microsoft.Extensions.DependencyInjection.OptionsBuilderExtensions.<>c__DisplayClass0_1`1.<ValidateOnStart>b__1()
+         at Microsoft.Extensions.Options.StartupValidator.Validate()<---
+      
+Configuración inválida: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'. | DataAnnotation validation failed for 'OpcionesDelClienteMcp' members: 'Token' with the error: 'The Token field is required.'.
+rc consola=3
+=== ConModelo sin OLLAMA_ENDPOINT
+A total of 1 test files matched the specified pattern.
+  Skipped AgenteConMcpClientTool_ContraElModelo [829 ms]
+
+None     - Failed:     0, Passed:     0, Skipped:     0, Total:     0, Duration: 829 ms - MovilidadUrbana.Ejemplos.Mcp.Tests.dll (net10.0)
+LIBERADO build por ej08-mcp
+rc=0

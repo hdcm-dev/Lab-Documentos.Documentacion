@@ -1,0 +1,48 @@
+[turno de recurso: línea omitida en la evidencia]
+[turno de recurso: línea omitida en la evidencia]
+10.0.403
+    0 Error(s)
+    0 Warning(s)
+Time Elapsed 00:00:16.59
+  Passed ConVectoresFijos_ElAlmacenDevuelveElOrdenEsperado_YElPuntajeEsSimilitud [524 ms]
+  Passed GeneradorDe1024_ConDimensionDeclarada1024_Arranca_YCargaLos12 [24 ms]
+  Passed GeneradorDe512_ConDimensionDeclarada1024_NoArranca [80 ms]
+  Passed LaInstruccionVaSoloEnLaConsulta_NuncaEnElDocumento [50 ms]
+  Passed SinDimensionDeclarada_SeTomaLaMedida [5 ms]
+  Passed SinTimeout_LasOpcionesNoValidan_YNoArranca [13 ms]
+  Passed ElCorpus_SonLos12RequisitosDeLasPoliticas_LeidosDelCodigo [5 ms]
+  Passed ElOro_EstaVersionado_YCadaClaveSaleDelTextoDeUnRelevante [69 ms]
+  Passed ElLiteral_SoloApareceEnOpcionesYAppsettings("localhost:11434") [18 ms]
+  Passed ElLiteral_SoloApareceEnOpcionesYAppsettings("qwen3.5:4b") [1 ms]
+  Passed ElLiteral_SoloApareceEnOpcionesYAppsettings("qwen3-embedding") [1 ms]
+  Passed ElLiteral_SoloApareceEnOpcionesYAppsettings("8192") [1 ms]
+  Passed ElCriterio_EscritoAntes_SeAplicaIgualALasDosEstrategias [8 ms]
+  Passed LaComparacionPareada_SoloDiceDifiereConSeisDiscordantesEnUnSentido [14 ms]
+  Passed LasMetricas_ReproducenElCalculoAMano [9 ms]
+  Passed ContextoFijo_MandaLos12_ConElMismoPrefijoEnCadaPedido_YNoBusca [56 ms]
+  Passed ElBloqueDeFragmentos_SeRecortaConMarca [6 ms]
+  Passed LaCitaInventada_NoCuentaComoCita [10 ms]
+  Passed LasCuatroEstrategias_SeResuelvenPorClave [3 ms]
+  Passed UnaPreguntaMasLargaQueElMaximo_NoBusca_NiLlamaAlModelo [4 ms]
+  Passed UnFragmentoConInstrucciones_LlegaComoDato_DentroDelSobre [3 ms]
+  Passed ViaA_BuscaSiempreAntesDelModelo_YMandaLosKFragmentosMarcadosComoContenidoExterno [8 ms]
+  Passed CuandoElModeloPideBuscar_LaAplicacionBusca_YDevuelveLosFragmentosMarcados("rag-herramienta") [125 ms]
+  Passed CuandoElModeloPideBuscar_LaAplicacionBusca_YDevuelveLosFragmentosMarcados("rag-agente") [92 ms]
+  Passed SiElModeloNoPideBuscar_NoHayBusqueda_YLaRespuestaSaleSinFragmentos("rag-herramienta") [3 ms]
+  Passed SiElModeloNoPideBuscar_NoHayBusqueda_YLaRespuestaSaleSinFragmentos("rag-agente") [2 ms]
+  Passed ViaB_ElBucleSeCortaEnElMaximoDeIteraciones [5 ms]
+Total tests: 27
+     Passed: 27
+ Total time: 3.5906 Seconds
+  Skipped Oro_ContextoFijoFrenteARag_Pareado [128 ms]
+  Skipped Oro_ConYSinInstruccion [18 ms]
+None     - Failed:     0, Passed:     0, Skipped:     0, Total:     0, Duration: 154 ms - MovilidadUrbana.RagEnMemoria.Tests.dll (net10.0)
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+The following sources were used:
+   https://api.nuget.org/v3/index.json
+
+The given project `MovilidadUrbana.RagEnMemoria` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.RagEnMemoria.Tests` has no vulnerable packages given the current sources.
+[turno de recurso: línea omitida en la evidencia]

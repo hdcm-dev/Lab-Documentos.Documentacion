@@ -1,0 +1,8 @@
+CONCEDIDO build a senior-dotnet hasta 2026-10-28T10:10:56-0300 (renová con: <gestor-de-turnos> renovar build senior-dotnet)
+10.0.403
+[A SelectMany(Medios).GroupBy en el servidor] InvalidOperationException: The LINQ expression 'e => e.Medios' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable'
+[B Count(e => e.Medios.Contains("colectivo"))] InvalidOperationException: The LINQ expression 'DbSet<RespuestaDeEncuesta>()
+[C GroupBy(Motivo) en el servidor] OK → [{"Motivo":"estudio","N":1},{"Motivo":"trabajo","N":2}]
+[D proyección sólo de Medios + agregado en memoria] OK → [{"Medio":"colectivo","N":2},{"Medio":"bicicleta","N":1},{"Medio":"auto","N":1}]
+[SQL de D] SELECT "e"."Medios" FROM "Encuestas" AS "e" WHERE "e"."SessionId" = 's'
+LIBERADO build por senior-dotnet

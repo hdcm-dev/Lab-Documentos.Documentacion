@@ -1,0 +1,73 @@
+# Revisión independiente: especificación de la capa de IA de sugerencias de compra (Red de Bibliotecas del Valle)
+
+**Base:** conocimiento *AI-Layer-Integration-Designing-Specification* v1.0, §12, columna **PROTO**. La capacidad 1 es la única «especificada». La 2 está «pendiente» y resuelta en escalón −1. La 3 es «sólo diseño». No usé el checklist que trae la especificación.
+
+## Checklist C-00 a C-19 (PROTO)
+
+| # | Nivel PROTO | Veredicto | Sección o motivo |
+|---|---|---|---|
+| C-00 | DEBE | **NO** | La propia §0 dice que los archivos no estuvieron a la vista y que se trabajó sobre el resumen del anexo. La regla es explícita: si las normas existen y no están a la vista, el ítem es NO con la lista de lo que falta. Falta leer `docs/adr/` (ADR-001 a ADR-014; en especial ADR-003, 007 y 011) y `docs/Glosario.md`, con el formato de su columna «desde». Los términos nuevos sí se propusieron (§0), pero eso no alcanza para el SÍ. |
+| C-01 | DEBE | **SÍ** · §1.2 | Las cuatro preguntas están respondidas para la capacidad 1. La capacidad 2 tiene la métrica en §1.3 y ADR-019. Pendiente de firma. |
+| C-02 | DEBE | **SÍ** · §1.3 | Resultado «en parte», con la clasificación manual del bibliotecario como respaldo. La capacidad 2 queda en −1 con ADR-019. Pendiente de firma de ACT-ARQ. |
+| C-03 | DEBE | **SÍ** · §1.1, §1.4 | ESC y un CTX de cada par, con motivo. Inventario con estado. ACT-DEV no tiene quién lo ejerza, así que el SÍ queda «pendiente de firma de ACT-DEV», lo que en PROTO vale. Observación: la columna Nivel de la capacidad 2 usa un valor que el inventario no prevé; se anotó. |
+| C-04 | DEBE | **SÍ** · §5.3 | Capacidad 1: K0, A0 con persona que firma, salida estructurada. Capacidad 2: −1. La capacidad 3 está exenta por ser sólo diseño. Observación: llamar «carril aparte» al duplicado no es exacto, porque ahí no hay herramienta: el código llama al caso de uso con argumentos que extrajo el modelo. |
+| C-05 | DEBERÍA | **NO** (con motivo, no bloquea) · §5.1, §5.2 | Los diagramas no se validaron con la herramienta de mermaid del proyecto. La correspondencia de capas está, pero Domain figura «a confirmar». |
+| C-06 | DEBE | **SÍ** · §5.2 | No hay flecha de `IA/` ni del servidor Ollama hacia `Data/` ni hacia Domain. Observación: no se dice dónde vive el tipo `PropuestaDeClasificacion`. Si fuera la entidad EF que la deuda de §11.4 propone persistir en `Data/`, el adaptador en `IA/` dependería de `Data/` y violaría la propia regla de §5.1. Conviene fijarlo en Application. |
+| C-07 | DEBE | **SÍ** · §5.4 | La ficha tiene todos los campos y los tres resultados. Observación: hay una incoherencia interna. La ficha valida la categoría en el caso de uso **después** de *ok*. En cambio, REQ-IA-22 y la rama *rechazado* dicen que una categoría fuera del catálogo produce *rechazado*. Hay que decidir quién aplica la regla. |
+| C-08 | DEBE | **SÍ** · §9 (ADR-015, 016, 017) | Los tres ADR tienen ASR, todos los campos y numeración que continúa el registro (provisional, porque el registro no se vio, ver C-00). Pendiente de firma de ACT-ARQ, lo que en PROTO vale. Observación: la confianza «media» de ADR-015 y ADR-017 no se ajusta a la definición de §8 (ver la lista de defectos del conocimiento). |
+| C-09 | DEBE | **NO APLICA** · §1.1, §5.3 | Ninguna capacidad especificada es A1 o más. El modelo no elige herramientas: la llamada a `Buscar` la decide el código. |
+| C-10 | DEBE | **SÍ** · §10 | Los Id son únicos y de dos dígitos. Todos tienen criterio y prueba. REQ-IA-13 y 14 están en NO APLICA con motivo y conservan su criterio. El verificador se aplicó a mano, lo que el conocimiento permite. |
+| C-11 | DEBERÍA | **SÍ** · §10 | Todos tienen tipo y estado de la prueba. REQ-IA-12 y 25 son *conducta* y el resto *garantía*. Observación: a las filas NO APLICA se les puso tipo y estado sin necesidad. |
+| C-12 | DEBERÍA | **NO** (parcial, no bloquea) · §11.1, §11.2 | La matriz y la ficha están. Fallan tres cosas. (1) La exclusión de LLM03 se apoya en que ADR-016 fija el modelo y su versión, y ADR-016 no los fija. Además, «lo opera ACT-OPS» no es un motivo para excluir un riesgo. (2) «Resto de la lista agéntica» se excluye en bloque, sin nombrar los riesgos. (3) El campo Medición de la ficha no tiene conjunto de textos de ataque ni quién lo provee. |
+| C-13 | DEBE | **NO** · §3.2 | La tabla dice qué viaja y adónde, pero deja abierta, sin propuesta, la decisión de R-02: si el texto libre se enmascara antes de viajar. Sin esa decisión no está determinado qué sale (texto crudo o enmascarado), y REQ-IA-15 no puede verificarlo. Falta una propuesta concreta para que ACT-SEC la firme. Con esa propuesta, el ítem pasaría a SÍ pendiente de firma. |
+| C-14 | DEBE | **SÍ** · §8 | Dirección, modelo, topes y parámetro de apagado van en configuración fuera del repositorio. |
+| C-15 | DEBE | **NO APLICA** · §3.3 | No hay MCP en ninguna dirección. |
+| C-16 | PUEDE | **NO APLICA** · §3.3 | Las vistas Razor se renderizan en el servidor y no hay otro cliente. Es la fila «no aplica» de §6. |
+| C-17 | DEBE | **NO** (parcial) · §1.2 | El 80 % sobre 200 está completo. El umbral de falsos duplicados de «2 % como máximo» no tiene denominador definido (¿sobre las 200, o sobre las propuestas como duplicado?), así que no se puede medir. Además, la rama «en parte» exige que el modelo supere la línea base (el bibliotecario medido sobre el mismo conjunto), y esa línea base no se mide ni aparece en el criterio de REQ-IA-12, que sólo exige k ≥ 160. |
+| C-18 | DEBE | **SÍ** · §8, §10 (REQ-IA-18) | La sede sale de la cuenta (ADR-007), ni el puerto ni el prompt la reciben, y lo de otra sede responde «no encontrado». Observación: que el administrador global confirme en cualquier sede es una lectura posible de R-01, no la única. |
+| C-19 | DEBE | **SÍ** · §11.3 | Están declarados la validación de categoría, la decisión de duplicado y el tope de largo. Observación: falta, por coherencia, el validador de formato de REQ-IA-03. Mide el formato y no ve si la propuesta es correcta. |
+
+**Resultado (PROTO):** la especificación **no está completa**. Tres ítems DEBE están en NO y bloquean: **C-00, C-13 y C-17**. C-05 y C-12 son DEBERÍA en NO con motivo y no bloquean. Esto contradice el resultado «completa en PROTO» que se declara en la propia §12. Falta además la pasada de una persona de la mesa.
+
+Otras observaciones que no son ítems del checklist:
+- Los registros de rechazo «sin el texto de la sugerencia» no tienen requisito ni prueba. REQ-IA-09 cubre sólo los spans, y el caso es CTX-SENS.
+- Que un texto sobre el tope dé *degradado* es una elección de la especificación, no algo que el conocimiento fije.
+
+---
+
+## Defectos de la especificación atribuibles al conocimiento
+
+1. **C-00, «a la vista».** No se aclara si un resumen de las normas (un anexo) cuenta como haberlas leído. La especificación lo tomó como SÍ.
+2. **Línea base contra umbral.** §1 exige que el modelo supere la línea base manual, pero C-17 pide sólo «umbral con su valor». No hay regla sobre cómo se combinan línea base y umbral absoluto, ni sobre cómo medir la línea base (oráculo, reetiquetado, desacuerdos entre etiquetadores). Por eso REQ-IA-12 quedó sin la comparación.
+3. **Estados del inventario.** No existe un estado para una capacidad resuelta sin modelo, ni se define «pendiente» ni si los ítems del checklist se le aplican. La columna Nivel no admite −1. Además, el catálogo exige un ESC aunque la capacidad no use modelo.
+4. **ADR-SIN-IA sólo para el servicio.** No hay tema para una capacidad que sale en −1 dentro de un servicio con capa. La especificación tuvo que usar el tema más cercano.
+5. **Carril aparte definido sólo como herramienta.** No se describe el caso A0 en el que el código llama a un caso de uso con argumentos que extrajo el modelo. Eso llevó a una etiqueta inexacta.
+6. **Dónde se aplican «las reglas».** *ok* se define como «pasó las reglas», pero P-8 pone las reglas en el código sin decir si las aplica el adaptador o el caso de uso. De ahí sale la incoherencia entre la ficha y REQ-IA-22. Tampoco se dice si una entrada sobre el tope da *degradado* o *rechazado*.
+7. **Escala de confianza de los ADR.** «Alta» exige fuente y prueba sin servidor, y «media» habla de conducta del modelo. No hay valor para «con fuente, pero la prueba todavía no está escrita».
+8. **Filas NO APLICA de requisitos.** No se dice qué va en PROTO, PROD, Tipo y Estado.
+9. **Niveles de requisitos que chocan con reglas del mismo conocimiento.**
+   - REQ-IA-17 es DEBERÍA en PROTO, aunque R-08 es una regla sin nivel y §3 dice que un piloto en producción es «CTX-PROTO con R-08».
+   - REQ-IA-09 sigue en DEBERÍA aunque el contexto sea CTX-SENS.
+   - REQ-IA-12 es DEBERÍA mientras C-17 es DEBE.
+   - En los tres casos, quien especifica tuvo que endurecer el nivel a mano.
+10. **Riesgos no listados.** El conocimiento exige no omitirlos en silencio, pero no nombra LLM03, LLM04, LLM07 ni la lista agéntica, ni da controles para ellos. Sin la guía no se pueden declarar uno por uno, y eso contradice que el conocimiento sea «autocontenido para especificar».
+11. **C-13 y R-02.** No se dice si la especificación debe proponer una opción para que ACT-SEC la firme, ni si una decisión de ACT-SEC todavía no tomada puede ir como «SÍ pendiente de firma» en PROTO.
+12. **R-01, «vale también cuando el rol es global».** Es ambiguo si el administrador global recibe «no encontrado» o ve todo.
+13. **«Filtro» sin definir para R-04 y C-19.** No queda claro si cuentan la validación de formato, la validación contra catálogo o el tope de entrada.
+14. **REQ-IA-02 sin el SDK nombrado.** El conocimiento exige que la prueba nombre el SDK, pero no nombra los paquetes (Microsoft.Extensions.AI y el adaptador del proveedor).
+15. **Segundo plano fuera de alcance.** El conocimiento lo declara fuera de alcance (§14), pero choca con REQ-IA-21 («sin reintentos») si el mecanismo de tareas reintenta. R-08 tampoco dice qué pasa con lo acumulado mientras la capacidad estaba apagada cuando se enciende.
+16. **Dos pasadas del checklist.** §12 pide dos pasadas, pero no dice si se puede declarar «completa» con una sola. La especificación lo hizo.
+
+## Defectos de la especificación atribuibles a datos ausentes del caso
+
+1. Los archivos de normas no estaban disponibles: ADR-001 a ADR-014 y `docs/Glosario.md`, con el formato de la columna «desde».
+2. No se sabe dónde viven las entidades del dominio, lo que define el alcance de REQ-IA-01. Tampoco dónde se definirá `PropuestaDeClasificacion`.
+3. No se sabe si existe un proyecto de pruebas previo, del que depende el criterio de REQ-IA-17.
+4. No se sabe quién ejerce ACT-DEV.
+5. Faltan los valores operativos: modelo y versión en Ollama, tope de largo, límite de concurrencia y tiempo máximo. Esto afecta también la exclusión de LLM03.
+6. Falta la semántica de `CatalogoService.Buscar`: si la coincidencia es exacta o parcial, si acepta título vacío y si devuelve el formato.
+7. Faltan definiciones de la métrica: el denominador del 2 %, cómo se mide la línea base del bibliotecario y cómo se resuelven los desacuerdos del reetiquetado. Son decisiones de ACT-ARQ que el caso no trae.
+8. Faltan decisiones de ACT-SEC: si se enmascara el texto libre, si alcanza con un servidor exclusivo, qué conjunto de textos de ataque se usa (y quién lo provee) y si se puede usar el correo de los lectores (capacidad 3).
+9. Faltan las 40 preguntas reales de la capacidad 2 y el significado de «pendiente» respecto de la categoría asignada.
+10. No se conoce el mecanismo de segundo plano: si reintenta y cómo trata lo acumulado al encender la capacidad.
+11. La herramienta de validación de mermaid del proyecto no estuvo disponible. Es un dato de entorno más que del caso.

@@ -1,0 +1,16 @@
+# Términos reemplazados por BIT-16-04 que siguen en el cuerpo de los núcleos (antes de la nota de reparación)
+# fecha: 2026-10-28; comando: por archivo, líneas anteriores al primer encabezado '## 2026-10-28'
+Infrastructure/Ai\b                        N0b=0 N1b=0 N1=1 N2=0 N3b=0 N3=0 N4=0 N5=0 N6=0
+IAsistenteDeEncuesta                       N0b=0 N1b=0 N1=6 N2=0 N3b=0 N3=0 N4=0 N5=0 N6=0
+VectorStoreVector\(384\)                   N0b=0 N1b=0 N1=0 N2=0 N3b=0 N3=0 N4=0 N5=0 N6=1
+OLLAMA_EMBED_MODEL                         N0b=0 N1b=0 N1=0 N2=0 N3b=0 N3=0 N4=0 N5=0 N6=0
+OLLAMA_MODEL_NAME                          N0b=0 N1b=0 N1=0 N2=0 N3b=0 N3=0 N4=0 N5=0 N6=3
+MSTest                                     N0b=0 N1b=0 N1=0 N2=0 N3b=0 N3=0 N4=0 N5=1 N6=0
+Experimental\.Microsoft\.Extensions\.AI    N0b=0 N1b=0 N1=0 N2=0 N3b=0 N3=0 N4=0 N5=9 N6=0
+borrar_localidad                           N0b=0 N1b=0 N1=0 N2=0 N3b=0 N3=0 N4=0 N5=0 N6=0
+AyudaPorRag                                N0b=0 N1b=0 N1=0 N2=0 N3b=0 N3=0 N4=0 N5=0 N6=0
+ExtractorDeLocalidadOllama                 N0b=0 N1b=0 N1=0 N2=0 N3b=0 N3=0 N4=0 N5=0 N6=0
+Reclamo|reclamo                            N0b=0 N1b=0 N1=0 N2=8 N3b=0 N3=0 N4=0 N5=4 N6=0
+Articulo                                   N0b=0 N1b=0 N1=0 N2=0 N3b=0 N3=2 N4=0 N5=0 N6=0
+Movie                                      N0b=0 N1b=0 N1=2 N2=0 N3b=0 N3=0 N4=0 N5=0 N6=0
+nomic-embed-text|all-minilm                N0b=0 N1b=0 N1=2 N2=4 N3b=0 N3=14 N4=0 N5=0 N6=0

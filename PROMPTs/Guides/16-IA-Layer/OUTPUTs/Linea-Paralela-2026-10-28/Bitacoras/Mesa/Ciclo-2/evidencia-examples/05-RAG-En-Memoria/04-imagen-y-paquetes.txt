@@ -1,0 +1,11 @@
+Imagen: mcr.microsoft.com/dotnet/sdk@sha256:de4fe90a98845d75910b9769662465c84de1a934665c431279d1382b2bddc02b (SDK 10.0.403)
+Paquetes (nuget.org v3-flatcontainer, 2026-10-28; última estable a esa fecha):
+  Microsoft.Extensions.AI 10.11.0
+  OllamaSharp 5.5.0
+  Microsoft.Extensions.VectorData.Abstractions 10.11.0
+  CommunityToolkit.VectorData.InMemory 1.0.1 (publicado 2026-08-10; net10.0 depende de MEAI.Abstractions >= 10.8.3, VectorData.Abstractions >= 10.8.2)
+  Microsoft.Agents.AI 1.26.0 (sólo vía C)
+  Microsoft.Extensions.Hosting / Http / Options.DataAnnotations 10.0.14 (última estable de la línea 10; 11.0.0-rc.3 existe y no se usa)
+  Microsoft.NET.Test.Sdk 18.11.0; NUnit 5.0.0; NUnit3TestAdapter 6.3.1
+dotnet list package --vulnerable --include-transitive: sin paquetes vulnerables en los dos proyectos (ver 01-build-cableado-y-paquetes.txt).
+R-PRIV v2 sobre Examples/05-RAG-En-Memoria y sobre esta carpeta: patrones=0 identificadores=0 cabeceras=0 (2026-10-28).

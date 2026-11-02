@@ -1,0 +1,36 @@
+Modo sin modelo: un cliente guionado pide las herramientas.
+Bucle: hasta 3 iteraciones, 2 errores consecutivos.
+> ¿Cuántas localidades hay cargadas en Chaco?
+  [herramienta] contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}
+(sin modelo) La herramienta devolvió: {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}
+> ¿Y cuántas hay en Misiones?
+  [herramienta] contar_localidades_por_provincia({"provincia":"Misiones"}) → {
+  "ok": false,
+  "errores": {
+    "provincia": "«Misiones» no es una provincia del catálogo (Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza, Santa Fe)."
+  }
+}
+(sin modelo) La herramienta devolvió: {
+  "ok": false,
+  "errores": {
+    "provincia": "«Misiones» no es una provincia del catálogo (Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza, Santa Fe)."
+  }
+}
+salida=0
+  Skipped PrimerEjercicio_PorLaVia("ollama") [88 ms]
+  Skipped PrimerEjercicio_PorLaVia("openai-compatible") [1 ms]
+Passed!  - Failed:     0, Passed:    23, Skipped:     0, Total:    23, Duration: 1 s - MovilidadUrbana.Ejemplos.ToolCalling.Tests.dll (net10.0)

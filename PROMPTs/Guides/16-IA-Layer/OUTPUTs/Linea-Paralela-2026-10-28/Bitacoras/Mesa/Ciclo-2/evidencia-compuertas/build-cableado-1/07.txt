@@ -1,0 +1,15 @@
+  Determining projects to restore...
+  Restored /ex/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/MovilidadUrbana.Ejemplos.AgenteConAprobacion.csproj (in 2.06 sec).
+  Restored /ex/tests/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests.csproj (in 2.1 sec).
+  MovilidadUrbana.Ejemplos.AgenteConAprobacion -> /ex/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/bin/Release/net10.0/MovilidadUrbana.Ejemplos.AgenteConAprobacion.dll
+  MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:09.13
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    25, Skipped:     0, Total:    25, Duration: 852 ms - MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests.dll (net10.0)

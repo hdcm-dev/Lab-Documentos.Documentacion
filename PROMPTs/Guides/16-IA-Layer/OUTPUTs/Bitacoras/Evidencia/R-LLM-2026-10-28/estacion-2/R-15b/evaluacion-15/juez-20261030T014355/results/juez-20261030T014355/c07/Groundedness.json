@@ -1,0 +1,87 @@
+{
+  "scenarioName": "c07",
+  "iterationName": "Groundedness",
+  "executionName": "juez-20261030T014355",
+  "creationTime": "2026-10-30T02:25:53.0138486Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "\u00BFQu\u00E9 edad tiene que tener quien contesta la encuesta?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Quien conteste la encuesta debe tener entre 18 y 110 a\u00F1os [Fuente: EncuestaPolicy.RequisitoDeLaEdad]."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Groundedness",
+        "reason": "The response incorrectly states the minimum age as 18, whereas the context clearly specifies 16. Since the answer attempts to respond but includes factual errors relative to the provided text, it receives a score of 3.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Groundedness is less than 4."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "[Fuente: EncuestaPolicy.RequisitoDeLaEdad] Encuesta \u00B7 requisito de la edad: Entre 16 y 110 a\u00F1os.\n[Fuente: EncuestaPolicy.RequisitoDeLaFrecuencia] Encuesta \u00B7 requisito de la frecuencia: Con qu\u00E9 asiduidad usa esos medios.\n[Fuente: EncuestaPolicy.RequisitoDeLosMinutos] Encuesta \u00B7 requisito de los minutos: Entre 1 y 600 minutos.\n"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:\n1. **Analyze the Context**: The provided context states that the age requirement for the survey is \u0022Entre 16 y 110 a\u00F1os\u0022 (Between 16 and 110 years).\n2. **Analyze the Query**: The user asks, \u0022\u00BFQu\u00E9 edad tiene que tener quien contesta la encuesta?\u0022 (What age must the person answering the survey have?).\n3. **Analyze the Response**: The assistant responds, \u0022Quien conteste la encuesta debe tener entre 18 y 110 a\u00F1os\u0022 (The person answering the survey must be between 18 and 110 years).\n4. **Compare Context and Response**: The context specifies the lower bound as 16, but the response incorrectly states the lower bound as 18. The upper bound (110) is correct.\n5. **Evaluate Groundedness**: The response attempts to answer the question and cites the correct source, but it contains incorrect information regarding the specific age range (18 instead of 16). This matches the definition of Groundedness 3: \u0022An answer that attempts to respond to the question but includes incorrect information not supported by the context.\u0022"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "qwen3.5:4b",
+          "eval-input-tokens": "1353",
+          "eval-output-tokens": "325",
+          "eval-total-tokens": "1678",
+          "eval-duration-ms": "38515.70"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 38.5154136,
+        "model": "qwen3.5:4b",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1353,
+          "outputTokenCount": 325,
+          "totalTokenCount": 1678
+        },
+        "cacheKey": "EAA3641A70F71DE33684E4FADD609367F6E3FD21C175B952964E79F6D2625DDBF211345824E9B708B42B5D064543E446",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

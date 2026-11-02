@@ -1,0 +1,17 @@
+VALIDO 01__Demos__MovilidadUrbana.Asistente__README.md__L24.mmd svg=33656
+VALIDO 02__Dot-Net-Integration-AI-Layer-Guide.md__L247.mmd svg=39390
+VALIDO 03__Dot-Net-Integration-AI-Layer-Guide.md__L360.mmd svg=34140
+VALIDO 04__Dot-Net-Integration-AI-Layer-Guide.md__L468.mmd svg=18860
+VALIDO 05__Dot-Net-Integration-AI-Layer-Guide.md__L715.mmd svg=41706
+VALIDO 06__Dot-Net-Integration-AI-Layer-Guide.md__L944.mmd svg=17610
+VALIDO 07__Dot-Net-Integration-AI-Layer-Guide.md__L1204.mmd svg=16294
+VALIDO 08__Dot-Net-Integration-AI-Layer-Guide.md__L1271.mmd svg=12355
+VALIDO 09__Dot-Net-Integration-AI-Layer-Guide.md__L1381.mmd svg=21994
+VALIDO 10__Dot-Net-Integration-AI-Layer-Guide.md__L1538.mmd svg=21620
+VALIDO 11__Dot-Net-Integration-AI-Layer-Guide.md__L1888.mmd svg=22664
+VALIDO 12__Dot-Net-Integration-AI-Layer-Guide.md__L2146.mmd svg=26205
+VALIDO 13__Dot-Net-Integration-AI-Layer-Guide.md__L2248.mmd svg=13412
+VALIDO 14__Dot-Net-Integration-AI-Layer-Guide.md__L2733.mmd svg=18389
+VALIDO 15__Dot-Net-Integration-AI-Layer-Guide.md__L2833.mmd svg=14650
+VALIDO 16__Dot-Net-Integration-AI-Layer-Guide.md__L3285.mmd svg=32283
+mermaid ? válidos 16/16

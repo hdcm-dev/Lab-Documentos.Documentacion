@@ -1,0 +1,4 @@
+5c3d340eee5cc6ce61249873ff60aa89053d5750c592c62e1af8c06e0c81b7a5  LAB/Lab-Documentos/Lab-Documentos.Documentacion/PROMPTs/Guides/16-IA-Layer/OUTPUTs/Bitacoras/Prompt-02/E7/Prueba-De-Autocontencion.md
+3895b96d49abf16a0b74d81e2f8947847a664e1be2a5eaecc9d449be292cd4b1  LAB/Lab-Documentos/Lab-Documentos/Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Conocimientos/knowledge-AI-Layer-Integration-Designing-Specification.md
+e9593d41dbd493a76defebe3e029d18f34ceccb8b4a02b1c9a4d63d081175306  LAB/Lab-Documentos/Lab-Documentos/Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Conocimientos/knowledge-AI-Layer-Integration-Designing-Specification.md
+d7d348f2942618035522551d80e550ab51f714337ba170462253b9474ab0f63d  LAB/Lab-Documentos/Lab-Documentos/Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Conocimientos/knowledge-AI-Layer-Integration-Designing-Specification.md

@@ -1,0 +1,14 @@
+# Demo y 09: la única config que arranca es Development; publicación en todas las interfaces
+4:  "AllowedHosts": "*",
+appsettings.Development.json:
+{
+  "Logging": { "LogLevel": { "Default": "Information", "Microsoft.AspNetCore": "Information" } },
+  "AI": {
+    "TimeoutSegundos": 300
+  }
+}
+66:        services.AgregarCadenaDeChat(ServiceLifetime.Scoped, habilitarDatosSensibles: entorno.IsDevelopment());
+<guía>/Dot-Net-Integration-AI-Layer-Guide.md:3115:docker run --rm -it -p 5260:8080 --network ia-guia -v "$PWD":/work -w /work \
+<guía>/Demos/MovilidadUrbana.Asistente/README.md:105:docker run --rm -it -p 5260:8080 --network ia-guia -v "$PWD":/work -w /work \
+<guía>/Examples/09-Pruebas-Con-Cliente-Falso/README.md:154:docker run --rm --network ia-guia -p 8080:8080 -e OLLAMA_ENDPOINT=http://ollama:11434 \
+42:if (!string.IsNullOrWhiteSpace(builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]))

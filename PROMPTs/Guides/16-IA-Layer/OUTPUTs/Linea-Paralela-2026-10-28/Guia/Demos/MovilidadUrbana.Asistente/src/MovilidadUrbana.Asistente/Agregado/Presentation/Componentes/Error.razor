@@ -1,0 +1,10 @@
+@* Muestra el error de un campo, codificado por Razor. *@
+@if (Errores.TryGetValue(Campo, out var mensaje))
+{
+    <span class="error" role="alert">@mensaje</span>
+}
+
+@code {
+    [Parameter, EditorRequired] public IReadOnlyDictionary<string, string> Errores { get; set; } = new Dictionary<string, string>();
+    [Parameter, EditorRequired] public string Campo { get; set; } = string.Empty;
+}

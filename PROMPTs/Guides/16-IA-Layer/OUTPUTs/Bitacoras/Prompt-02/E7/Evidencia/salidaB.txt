@@ -1,0 +1,73 @@
+# Revisión independiente de la especificación con el checklist de §12, columna PROTO
+
+**Contexto declarado por la especificación:** CTX-PROTO, CTX-EXISTENTE, CTX-SENS, CTX-LOCAL. En PROTO, «pendiente de firma» es admisible en todos los ítems. Sólo bloquean la completitud los ítems DEBE.
+
+## Checklist, ítem por ítem
+
+| # | Ítem | PROTO | Veredicto | Sección de la especificación · motivo · qué falta |
+|---|---|---|---|---|
+| C-00 | Normas del repo leídas; términos nuevos propuestos | DEBE | **NO** | Paso 0. Se aplicaron la numeración de ADR (ADR-015 en adelante) y la regla del glosario, y se propusieron 8 términos. **Falta** leer ADR-001 a ADR-014, saber qué documentos no se editan y dónde vive la especificación. Sin las ADR vigentes no se puede descartar que alguna choque con ADR-015 a ADR-020. |
+| C-01 | Las cuatro preguntas con respuesta escrita | DEBE | **SÍ** (pendiente de firma) | §1.2. La C1 está completa. La C2 y la C3 responden «no declarado» o «no aplica», lo que alcanza para capacidades «sólo diseño». *Observación:* la pregunta 2 de la C3 («sí, alcanza una regla») contradice tener la C3 en el inventario de capacidades de IA (ver defectos propios). |
+| C-02 | Resultado del árbol registrado; respaldo nombrado si es «en parte» | DEBE | **SÍ** (pendiente de firma) | §1.3. La C1 sale por «en parte»; el respaldo nombrado es la clasificación manual, con línea base del bibliotecario sobre el mismo conjunto. *Observaciones:* (a) en la C2, la pregunta 2 del árbol (¿dato exacto?) se contestó en la práctica «no», aunque el texto dice que el conteo es exacto. Está anotado en Dudas. (b) La C3 no recorre el árbol: «R-07» no es un nodo del árbol. |
+| C-03 | ESC-, CTX-, ACT- del catálogo; inventario con estado | DEBE | **SÍ** (pendiente de firma) | §1.1 y §1.4. Están los cuatro pares CTX con motivo, PROTO dicho de la capacidad y ACT como roles. ACT-SEC, ACT-OPS y ACT-ARQ (arquitectura) están sin designar: el rol está fijado, falta la persona. *Observación:* en el inventario, la C3 lleva «—» en Nivel, valor que la tabla de §7 del conocimiento no admite. |
+| C-04 | Cada capacidad con escalón de conocimiento, nivel de agencia y patrón de salida | DEBE | **NO** | §3.3. La C1 (K0 más carril aparte, A0 con persona que firma, salida estructurada) y la C2 (carril aparte, A1 lectura, anclaje) están completas. **Falta** la C3, que tiene escalón «—» y nivel «—». El ejemplo de §11 del conocimiento resuelve un caso casi igual: A0 con persona que firma para redactar y R-07 para el envío. Si la C3 no lleva modelo, hay que sacarla del inventario o asignarle el escalón −1. |
+| C-05 | C4 de contexto y contenedores en mermaid, validados; correspondencia de capas | DEBERÍA | **NO** (omisión con motivo escrito; no bloquea) | §2.1, §3.1 y §3.2. Los dos diagramas y la tabla de correspondencia existen. No se validaron con la herramienta del proyecto; el motivo está escrito. En la lectura manual no se ven errores de sintaxis. *Observación:* §3.1 dice que Persistence «no se modifica», pero §7.5 prevé una migración para guardar la propuesta. |
+| C-06 | Ninguna flecha del C4 va del modelo al dominio ni a los datos | DEBE | **SÍ** | §3.2. Las flechas que salen de `AI/` van sólo a `Services/` y a Ollama. La flecha `Services/ → Data/` está declarada como deuda preexistente y no sale del modelo. |
+| C-07 | Ficha del puerto por capacidad con prompt propio, con tres resultados | DEBE | **SÍ** | §3.4 (C1, con los ocho campos y los tres resultados). §3.5 agrega una ficha para la C2 aunque es una sesión de chat. *Observación:* la pertenencia de la categoría a la lista se valida dos veces, en el adaptador (*rechazado*) y en el paso 3 del caso de uso. Hay que fijar un solo responsable. |
+| C-08 | ADR-LLAMADA, ADR-PROVEEDOR y ADR-CAPAS con ASR y número del registro | DEBE | **SÍ** (pendiente de firma) | §5: ADR-015, ADR-016 y ADR-017. Las tres tienen ASR, alternativas con fuente, «deja de valer si» y firma. |
+| C-09 | ADR-HERRAMIENTAS y ADR-AGENCIA si hay A1 o más | DEBE | **SÍ** (pendiente de firma) | §5: ADR-019 y ADR-020. *Observación:* el ASR de ADR-020 cita REQ-IA-20, que está en NO APLICA. |
+| C-10 | Todo `REQ-IA-nn` con criterio y prueba (verificador con salida 0) | DEBE | **NO** | §6. En la revisión manual, las 23 filas tienen criterio y prueba, el orden de columnas es correcto, los Id son únicos y las filas NO APLICA conservan su criterio. **Falta** correr el verificador automático: el ítem exige salida 0 y no hay evidencia. *Observación:* REQ-IA-03 tiene dos criterios (texto no JSON y categoría inexistente) y una sola prueba con nombre del primero. |
+| C-11 | Tipo y estado de la prueba en cada requisito | DEBERÍA | **SÍ** | §6. Todos están en *especificada*. REQ-IA-12 es *conducta* y el resto *garantía*. |
+| C-12 | Matriz con filas activadas, excluidos con motivo, ficha por capacidad | DEBERÍA | **SÍ** | §7.1 a §7.3. Las activaciones coinciden con §10 del conocimiento, incluido ASI09 en la C1 y su ausencia en la C2. *Observación:* la exclusión de LLM03 no es una decisión. El motivo («la guía no lo asigna» y queda en Dudas) deja el riesgo abierto en lugar de excluirlo. |
+| C-13 | Datos mínimos por servidor, decididos por ACT-SEC | DEBE | **SÍ** (pendiente de firma) | §2.2. Hay una propuesta por capacidad con lo que viaja y lo que nunca viaja. *Observación:* queda abierta la opción de enmascarado y ACT-SEC no está designado, así que la firma pendiente no tiene firmante. En PROD este ítem pasaría a NO. |
+| C-14 | Ningún valor de infraestructura ni secreto en el repo | DEBE | **SÍ** | §4, fila «Secretos e infraestructura». No hay requisito ni prueba que lo verifique, pero el ítem no lo exige. |
+| C-15 | Si hay MCP: quién consume, dirección y control | DEBE | **NO APLICA** | §2.3: no hay MCP en ninguna dirección. |
+| C-16 | Si hay clientes, la frontera de §6 | PUEDE | **NO** (opcional; no bloquea) | §2.3. No se sabe si `Controllers/` sirve vistas renderizadas en el servidor, caso en que §6 no aplica, o una API para un cliente aparte. |
+| C-17 | Métrica, umbral y error caro, con quién fija el umbral | DEBE | **NO** | §1.2. La C1 tiene tres métricas, error caro y quién fija el umbral (el jefe de bibliotecas, actuando como ACT-ARQ). **Falta** el valor de U-CAT, U-FDUP y U-NODUP: un umbral sin valor no permite decidir si se sigue. Además es incoherente con la C2, que pasó a «sólo diseño» justamente por no tener umbral. |
+| C-18 | Si hay varios inquilinos, R-01 con su requisito | DEBE | **NO** | §4 declara R-01 como transversal, pero REQ-IA-18 está marcado sólo para la C2, que es sólo diseño. **Falta** el requisito para la C1, la única capacidad especificada. Hay que cubrir que un bibliotecario no pueda ver ni confirmar la propuesta de una sugerencia de otra sede («no encontrado») y que la búsqueda de duplicados respete el alcance del catálogo si este es por sede. |
+| C-19 | Cada filtro declara lo que mide y lo que no ve | DEBE | **SÍ** | §7.4 cubre cuatro filtros: categoría en la lista, duplicado por catálogo, enmascarado y anclaje. *Observación:* «coincidencia de título» no dice si es exacta o normalizada (tildes, subtítulos), y de eso depende lo que el filtro no ve. |
+
+**Resultado:** la especificación **no está completa** en PROTO. Los ítems DEBE en NO son **C-00, C-04, C-10, C-17 y C-18**. C-05 y C-16 están en NO pero no bloquean. Además falta la segunda pasada del checklist, a cargo de una persona de la mesa.
+
+## Defectos de la especificación atribuibles al conocimiento
+
+1. **El árbol no contempla «dato exacto con interpretación en lenguaje natural».** La pregunta 2 manda el dato exacto al escalón −1, pero A1 lectura ([Caso N]) es justamente una consulta exacta pedida en lenguaje natural. Falta la regla que dice cuándo la interpretación justifica el modelo frente a una pantalla de filtros. Eso causó el desvío de la C2 (C-02).
+2. **No se dice si el umbral necesita valor.** La pregunta 3 del árbol, C-17 y §1 exigen umbral pero no aclaran si basta con nombrarlo y designar quién lo fija. De ahí que la C1 y la C2 recibieran tratamientos opuestos.
+3. **El estado «sólo diseño» no tiene reglas.** Falta decir qué ítems del checklist, qué ADR y qué REQ exige una capacidad «sólo diseño». La especificación escribió requisitos y una ADR completos para la C2 y dejó la C3 sin nivel (C-04).
+4. **REQ-IA-18 está sólo en el grupo A1 lectura**, mientras que R-01 y C-18 no dependen del nivel. Una capacidad A0 multi-inquilino queda sin requisito de inquilino (C-18).
+5. **La matriz de §10 activa riesgos en A0 cuyos requisitos son de grupos A1.** LLM01 en A0 remite a REQ-IA-07 y REQ-IA-19 (A1). LLM10 en A0 remite a REQ-IA-08 (tope del bucle, que A0 no tiene). LLM09 en salida *estructurada* no tiene patrón. La especificación tuvo que inventar REQ-IA-22 y REQ-IA-23.
+6. **No está definido el resultado de un formato inválido.** La tabla de §5 no dice si es *degradado* (sin respuesta usable) o *rechazado* (violó una regla).
+7. **«A0 con persona que firma» sólo se define como «borrador que una persona revisa y envía».** No hay variante para una propuesta que una persona confirma, como una clasificación. Esto afecta el código del nivel y la activación de ASI09.
+8. **Faltan herramientas que el checklist exige.** El «verificador automático» (C-10) y la «herramienta de mermaid del proyecto» (C-05) se exigen sin decir qué son, dónde están ni qué comprueban. Contradice el «autocontenido para especificar» de §0.
+9. **El checklist binario no tiene forma de marcar** un DEBERÍA o PUEDE omitido con motivo, ni un DEBE parcial. La especificación inventó «parcial» y «sin determinar».
+10. **Rol sin designar.** No se dice qué hacer cuando no existe quien ejerce un rol de decisión, sobre todo ACT-SEC: «pendiente de firma» sin firmante.
+11. **El vocabulario del campo Estado de las ADR** («vigente» o «reemplazada») no incluye «propuesta», pese a que la firma puede estar pendiente.
+12. **R-06 está redactada sólo para herramientas.** No dice si rige cuando el *código* de una capacidad A0 necesita un caso de uso que no existe (la búsqueda en el catálogo). Tampoco fija el límite entre «agregar lo acotado» y «traer todo».
+13. **C-00 no dice cómo marcar normas existentes pero no disponibles** para quien especifica (NO o NO APLICA).
+
+## Defectos de la especificación atribuibles a datos ausentes del caso
+
+1. El contenido de ADR-001 a ADR-014, los documentos que no se editan, dónde vive la especificación y el formato de `docs/Glosario.md` (C-00).
+2. Los valores de U-CAT, U-FDUP y U-NODUP (C-17).
+3. Quiénes ejercen ACT-SEC, ACT-OPS y ACT-ARQ de arquitectura (C-03 y C-13).
+4. Si existe un caso de uso de búsqueda en el catálogo por título y autor, si el catálogo es de la red o por sede, y si otro formato cuenta como duplicado (C-18, ADR-018).
+5. Dónde están las entidades de Domain, necesario para apuntar REQ-IA-01.
+6. Del servidor Ollama: si es compartido, quién lo opera, qué modelo usa, su versión y su origen (ADR-016, LLM03).
+7. Si `Controllers/` sirve vistas o una API para otro cliente (C-16).
+8. De la C2: métrica, umbral, error caro, si existe una pantalla de filtros como respaldo y si las pendientes ya tienen categoría.
+9. De la C3: cómo se avisa hoy, qué servicio de correo existe y el consentimiento de los lectores (C-04).
+10. Cómo elige la sede el administrador, y si el servicio ya autentica por sede.
+11. Si las sugerencias históricas pueden usarse como conjunto de evaluación, junto con su consentimiento y retención.
+12. Si la propuesta se calcula al enviar o en segundo plano. El conocimiento lo excluye en §14, así que es decisión del proyecto, y de ella dependen la migración y el criterio de REQ-IA-16.
+13. En el entorno de quien especificó no estaban el verificador de requisitos ni el validador de mermaid (C-10 y C-05).
+
+## Defectos propios de la redacción (fuera de las dos listas pedidas)
+
+- **Persistencia:** §3.1 dice que `Data/` «no se modifica», pero §7.5 requiere una migración.
+- **C3:** la pregunta 2 dice que alcanza una regla, lo que llevaría a sacarla del inventario. Tampoco se usó el ejemplo de §11 para descomponerla en redacción A0 más envío R-07.
+- **Árbol en la C1:** la pregunta 3 se contestó «sí» con el umbral sin valor, cuando la C2 se frenó por lo mismo.
+- **REQ-IA-16:** el criterio («la sugerencia se guarda sin propuesta») presupone una sincronía que no está decidida.
+- **REQ-IA-03:** tiene dos criterios y una sola prueba nombrada.
+- **Validación de categoría:** se hace en el adaptador y también en el caso de uso.
+- **ADR-020:** su ASR cita un requisito en NO APLICA.
+- **LLM03:** queda sin decisión real de exclusión.

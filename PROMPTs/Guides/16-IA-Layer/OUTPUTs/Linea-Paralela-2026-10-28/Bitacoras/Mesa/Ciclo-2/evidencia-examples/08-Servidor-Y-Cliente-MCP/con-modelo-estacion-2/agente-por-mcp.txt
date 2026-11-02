@@ -1,0 +1,209 @@
+# R-LLM — estimando: este pedido, 2 pedidos × 10 semillas (s = 1..10) cada uno, qwen3.5:4b@d8b0f5e9760c, T 0.7, top_p 0.8, top_k 20, presence 1.5, think false, num_ctx 8192, ruta API /api/chat (OllamaSharp 5.5.0), agente de MAF 1.26.0 con McpClientTool (ModelContextProtocol 2.3.0, Streamable HTTP, protocolo 2026-07-28), bucle 3 iteraciones / 2 errores, Ollama 0.40.11, fecha 2026-10-28T18:56:32.7800933+00:00
+# rótulo: medido en una estación de laboratorio con más núcleos (CPU sin GPU; contenedor limitado a 14 CPU / 34 GiB; Ollama 0.40.11), 2026-10-28
+# criterio previo: invariantes m/m (0 escrituras en el servidor; herramientas en la lista blanca; ejecuciones ≤ máximo; sin excepción); tasas de este pedido informadas, sin umbral
+# lista blanca: contar_localidades_por_provincia, listar_localidades; descartadas: ninguna
+# instrucciones: «Sos el asistente de la encuesta de movilidad urbana. Para cualquier dato de localidades usá las herramientas; no inventes cantidades ni nombres. Si una herramienta devuelve errores, explicáselos a la persona. Respondé en español, en una o dos oraciones.»
+s=1 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=9.4s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «Hay solo una localidad cargada en la provincia de Chaco.»
+s=1 pedido=Corrientes listar_con_Corrientes=True nombra_Corrientes_sin_Resistencia=True pared=9.3s herramientas=[listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}] «La única localidad cargada en la provincia de Corrientes es la ciudad homónima.»
+s=2 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.7s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco están cargadas una sola localidad.»
+s=2 pedido=Corrientes listar_con_Corrientes=True nombra_Corrientes_sin_Resistencia=True pared=10.7s herramientas=[listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}] «En la provincia de Corrientes se cargó únicamente una localidad: Corrientes, con 346.334 habitantes y código postal 3400.»
+s=3 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.8s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco hay cargada una sola localidad.»
+s=3 pedido=Corrientes listar_con_Corrientes=True nombra_Corrientes_sin_Resistencia=True pared=10.8s herramientas=[listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}] «En la provincia de Corrientes se cargó una sola localidad: la ciudad de Corrientes, con código postal 3400 y aproximadamente 346.334 habitantes.»
+s=4 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=9.0s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «Hay 1 localidad cargada en la provincia de Chaco.»
+s=4 pedido=Corrientes listar_con_Corrientes=True nombra_Corrientes_sin_Resistencia=True pared=10.4s herramientas=[listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}] «En la provincia de Corrientes hay una sola localidad cargada: la ciudad de Corrientes, con 346.334 habitantes y código postal 3400.»
+s=5 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.9s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco hay cargada únicamente una localidad.»
+s=5 pedido=Corrientes listar_con_Corrientes=True nombra_Corrientes_sin_Resistencia=True pared=10.8s herramientas=[listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}] «En la provincia de Corrientes hay una sola localidad cargada: la ciudad de Corrientes, con código postal 3400 y más de 346 mil habitantes.»
+s=6 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.7s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «Hay 1 localidad cargada en la provincia de Chaco.»
+s=6 pedido=Corrientes listar_con_Corrientes=True nombra_Corrientes_sin_Resistencia=True pared=10.8s herramientas=[listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}] «La única localidad cargada en la provincia de Corrientes es la ciudad homónima, con un código postal 3400 y una población de 346.334 habitantes.»
+s=7 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.7s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco hay cargada una localidad.»
+s=7 pedido=Corrientes listar_con_Corrientes=True nombra_Corrientes_sin_Resistencia=True pared=8.9s herramientas=[listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}] «En la provincia de Corrientes hay cargada únicamente una localidad: Corrientes.»
+s=8 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.8s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco están cargadas únicamente una localidad.»
+s=8 pedido=Corrientes listar_con_Corrientes=True nombra_Corrientes_sin_Resistencia=True pared=11.3s herramientas=[listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}] «En la provincia de Corrientes está cargada una sola localidad: la ciudad de Corrientes, con un código postal de 3400 y más de 346 mil habitantes.»
+s=9 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=9.0s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco hay cargada una sola localidad.»
+s=9 pedido=Corrientes listar_con_Corrientes=True nombra_Corrientes_sin_Resistencia=True pared=10.8s herramientas=[listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}] «En la provincia de Corrientes se cargó una sola localidad, que es la capital misma, con un código postal de 3400 y unos habitantes registrados en el catálogo.»
+s=10 pedido=Chaco herramienta_con_Chaco=True nombra_1=True pared=8.4s herramientas=[contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}] «En la provincia de Chaco están cargadas 1 localidad.»
+s=10 pedido=Corrientes listar_con_Corrientes=True nombra_Corrientes_sin_Resistencia=True pared=11.2s herramientas=[listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}] «En la provincia de Corrientes está cargada únicamente una localidad: la ciudad de Corrientes, con un código postal de 3400 y aproximadamente 346.334 habitantes.»
+# resultado (estimando: este pedido, cada fila por separado; no se comparan entre sí):
+#  Chaco — pidió una herramienta con Chaco: 10/10; Wilson 95 % [0.72; 1.00]; nombra la cantidad 1: 10/10; Wilson 95 % [0.72; 1.00]
+#  Corrientes — pidió listar_localidades con Corrientes: 10/10; Wilson 95 % [0.72; 1.00]; nombra Corrientes sin Resistencia: 10/10; Wilson 95 % [0.72; 1.00]
+#  invariantes violadas: 0; escrituras en el servidor: 0; pared por pedido: mediana 9.3 s (mín 8.4, máx 11.3, N = 20)

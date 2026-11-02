@@ -1,0 +1,4 @@
+2026-10-28T16:30:14-03:00 raiz=09-Pruebas-Con-Cliente-Falso patrones=0 identificadores=0 cabeceras=0
+-- patrones por archivo
+-- cabeceras por archivo (antes de excluir sintéticos)
+2026-10-28T16:30:14-03:00 raiz=09-Pruebas-Con-Cliente-Falso patrones=0 identificadores=11 cabeceras=0

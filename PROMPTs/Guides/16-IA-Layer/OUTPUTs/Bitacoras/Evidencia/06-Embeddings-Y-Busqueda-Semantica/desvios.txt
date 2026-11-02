@@ -1,0 +1,20 @@
+06-Embeddings-Y-Busqueda-Semantica — desvíos y notas de la construcción (2026-10-27)
+
+1. Corrida con modelo fuera de verificar.sh en una carpeta propia de RLLM (c06-modelo), con turno [recurso-modelo-propio]
+   (turno 20261027T134616-[recurso-modelo-propio]-3624199-941, 42 s, fase 3a). Ollama 0.40.11 y digests verificados
+   (servidor-propio.jsonl). Es la corrida que cuenta: R-LLM/06-Embeddings-Y-Busqueda-Semantica.modelo.jsonl
+   (44 llamadas, 32 entradas). Hubo una corrida anterior (13:24Z, 30 s) con el mismo código; se descarta
+   porque el README y el registro se cerraron después; no es una repetición para elegir el mejor resultado
+   (los dos dan 12/12 en el top-3).
+2. La sesión del constructor se cortó (caída del host) antes de armar esta carpeta. Al retomar: el código del
+   ejemplo y _Comun no cambiaron después de la corrida (mtime ≤ 10:56 -0300; paquetes_hash 51bc7596…
+   igual), así que no se volvió a correr contra el modelo. Se recompiló, se probó y se corrió --fake de nuevo
+   (build-pruebas-y-fake.log) y el registro --fake de R-LLM se reemplazó por el de esa corrida.
+3. OllamaSharp 5.5.0 no expone en GenerateAsync las duraciones del servidor: load_duration_ms y
+   total_duration_ms quedan null (declarado en el README). 06 no compara tiempos, así que no afecta al plan.
+4. EMB-B rige: no hizo falta EMB-C.
+5. Cifras (estímulo del mismo autor; observado en el laboratorio: qwen3-embedding:0.6b ac6da0dfba84, Ollama
+   0.40.11, Ollama propio, 2026-10-27): hit@1 10/12, hit@3 12/12, MRR 0,889 en las dos variantes; léxica
+   7/12 · 8/12 · 0,679; azar 1/12 · 3/12 · 0,259. Regla pareada §10.4: se afirma la ventaja sobre el azar
+   (hit@1 b=10 c=1 p=0,012; hit@3 b=9 c=0 p=0,004); NO se afirma sobre la léxica (hit@1 b=3 c=0 p=0,25;
+   hit@3 b=4 c=0 p=0,125) ni entre variantes de instrucción (b=c=0).

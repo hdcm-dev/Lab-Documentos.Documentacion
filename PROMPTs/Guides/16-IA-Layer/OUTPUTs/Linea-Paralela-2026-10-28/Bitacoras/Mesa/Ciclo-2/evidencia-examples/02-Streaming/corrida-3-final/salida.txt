@@ -1,0 +1,17 @@
+EN COLA <recurso-compartido> (posición 2); esperando hasta 90 min...
+CONCEDIDO <recurso-compartido> a ex02-streaming hasta 2026-10-28T15:51:05-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> ex02-streaming)
+EN COLA build (posición 1); esperando hasta 90 min...
+CONCEDIDO build a ex02-streaming hasta 2026-10-28T15:51:15-0300 (renová con: <gestor-de-turnos> renovar build ex02-streaming)
+    0 Warning(s)
+    0 Error(s)
+=== Cableado
+Passed!  - Failed:     0, Passed:     9, Skipped:     0, Total:     9, Duration: 426 ms - MovilidadUrbana.Streaming.Tests.dll (net10.0)
+=== ConModelo cancelación
+10/10 sin violar los invariantes — estimando: este pedido, 1 pedido × 10 semillas (s = 1..10), qwen3.5:4b@d8b0f5e9760c, T 0.7, think false, ruta /api/chat (OllamaSharp), num_ctx 8192, Ollama 0.40.11, fecha 2026-10-28; criterio previo: (2) del encabezado; Wilson 95 % [0.72; 1.00]
+  Passed Cancelar_al_primer_texto_corta_la_respuesta [12 m 46 s]
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 12.8084 Minutes
+LIBERADO build por ex02-streaming
+LIBERADO <recurso-compartido> por ex02-streaming

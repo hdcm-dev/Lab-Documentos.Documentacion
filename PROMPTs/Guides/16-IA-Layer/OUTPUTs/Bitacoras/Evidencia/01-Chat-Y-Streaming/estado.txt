@@ -1,0 +1,5 @@
+# 01-Chat-Y-Streaming · estado al 2026-10-27 (re-verificación)
+- Construido según §E.2 (fila 01) y §E.1: consola net10.0 + suite NUnit en un proyecto; capa única (FabricaDeClientes); --fake con guion de 2 respuestas en 5 fragmentos; variante negativa simulada (sin la capa: Text vacío y finish=length).
+- Corrida contra el modelo (TURNO-1, <recurso-compartido>, 2 entradas, 2 llamadas K): hecha por constructor-01 a las 10:14–10:16 (126 s de turno, del tope de 4 h). Registro: R-LLM/01-Chat-Y-Streaming.modelo.jsonl; entradas_hash = SHA-256 actual de entradas.v1.json (e72a01c4…); num_ctx 65536 con origen arnes-ps-tras-carga; razonamiento None; truncado_posible false; e01 y e02 «pasa». No se repite: la pieza ya tiene su corrida válida y repetirla gastaría tope (§E.5).
+- Re-verificación tras la caída: build -warnaserror 0 avisos, 9 pruebas pasan y 1 [Category("LLM")] se salta, --fake --verificar rc 0, oráculo campos-pedidos recalculado desde los tres registros (rc 0), AC-7 y AC-8 rc 0.
+- Observado en el laboratorio: qwen3.5:4b, Ollama 0.32.0-rc0, sólo CPU, servidor compartido, 2026-10-27. Estímulo del mismo autor; demostración sin tasa.

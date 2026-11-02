@@ -1,0 +1,37 @@
+flowchart TB
+  subgraph ENT["Entrada (adaptadores de entrada)"]
+    PAG["Página de chat (Blazor Server)<br/>sesión por cookie que asigna el servidor"]
+    API["Controllers copiados<br/>/api/v1/localidades · /api/v1/encuestas"]
+    ASI["AsistenteController (agregado)<br/>/api/v1/asistente · …/desde-texto"]
+    LIM["Límite de concurrencia del modelo<br/>503 + Retry-After"]
+    HER["Herramientas de sólo lectura<br/>listar_localidades · contar_localidades · resultados_de_encuesta"]
+  end
+  subgraph NUC["Núcleo"]
+    DOM["Domain copiado<br/>Catalogos · LocalidadRules · EncuestaRules"]
+    APP["Application copiada<br/>LocalidadService · EncuestaService · *Policy"]
+    AGR["Application agregada<br/>AsistenteDeMovilidad · ProponerLocalidadDesdeTexto · ProponerBajaDesdeTexto<br/>ProponerPaso2DesdeTexto · ResultadosDeEncuestaService · NormalizadorDeCatalogos<br/>puertos de IA (sin tipos de Microsoft.Extensions.AI)"]
+  end
+  subgraph INF["Infrastructure"]
+    PER["Persistence copiada (EF Core SQLite)<br/>+ LecturaDeResultadosEf (agregada)"]
+    subgraph IA["Agregado/Infrastructure/AI"]
+      ADP["Adaptadores: clasificador, extractores,<br/>AyudaContextoFijo, consulta con herramientas"]
+      CAD["Cadena del IChatClient (por ámbito):<br/>[caché, apagada] → UseFunctionInvocation → UseOpenTelemetry → cliente"]
+      HIS["Historial (D-11): SessionId + ConversacionId, 30 min"]
+    end
+  end
+  OLL[("Servidor Ollama de prueba<br/>OLLAMA_ENDPOINT")]
+  PAG --> LIM
+  ASI --> LIM
+  LIM --> AGR
+  PAG -. confirma con .-> API
+  API --> APP
+  AGR --> APP
+  AGR --> DOM
+  APP --> DOM
+  ADP -. implementa .-> AGR
+  ADP --> CAD --> OLL
+  CAD --> HER
+  HER --> APP
+  HER --> AGR
+  PER -. implementa .-> APP
+  PER -. implementa .-> AGR

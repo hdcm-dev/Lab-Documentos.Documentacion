@@ -1,0 +1,12 @@
+flowchart TD
+    A["¿Lo puede resolver una función?"] -->|sí| F["Código, sin modelo"]
+    A -->|no| B["¿Alcanza una llamada al modelo, con o sin salida estructurada?"]
+    B -->|sí| L["Llamada única (§5)"]
+    B -->|no| C["¿Los pasos se conocen de antemano?"]
+    C -->|sí| W["Workflow: el código fija el orden"]
+    C -->|no| D["¿Hace falta sesión, aprobación o componerlo?"]
+    D -->|no| M["Agente mínimo: IChatClient con UseFunctionInvocation"]
+    D -->|sí| G["Agente de MAF: AsAIAgent sobre el mismo IChatClient"]
+    W --> V["¿Pasos con responsabilidades o permisos distintos?"]
+    V -->|sí| X["Orquestación multiagente: workflow de MAF con agentes como pasos"]
+    V -->|no| W2["Workflow de MAF o función con un paso con modelo"]

@@ -1,0 +1,22 @@
+parte       palabras    tope      %
+Encabezado      177       -
+Prólogo       2116    2200    96%
+Parte I        1091    1100    99%
+Parte II       3687    3700   100%
+Parte III      6183    6300    98%
+Parte IV       5861    6000    98%
+Parte V        8293    8300   100%
+Parte VI       8745    8800    99%
+Parte VII      7319    7500    98%
+Cierre         3078    3100    99%
+Anexos        13000   13000   100%
+  Anexo A      2597
+  Anexo B      1678
+  Anexo C       898
+  Anexo D      3809
+  Anexo E      2187
+  Anexo F       481
+  Anexo G      1046
+  Anexo H       304
+Total         59373   60000    99%
+control: wc -w del archivo = 69804

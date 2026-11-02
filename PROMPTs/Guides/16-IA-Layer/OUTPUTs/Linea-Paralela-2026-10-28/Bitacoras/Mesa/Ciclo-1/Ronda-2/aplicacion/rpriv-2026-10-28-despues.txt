@@ -1,0 +1,9 @@
+2026-10-28T14:39:38-03:00 raiz=OUTPUTs patrones=0 identificadores=452 cabeceras=0
+-- patrones por archivo
+-- cabeceras por archivo (antes de excluir sintéticos)
+Bitacoras/Mesa/Ciclo-1/Ronda-2/aplicacion/rpriv-sinteticos.txt:2
+Bitacoras/Mesa/Ciclo-1/Ronda-2/evidencia-aprobacion-evidencia/sinteticos-prueba.txt:2
+Bitacoras/Mesa/Ciclo-1/Ronda-2/evidencia-senior-dotnet/R2-cuerpo-salida.txt:3
+rc=1
+-- enlaces relativos (G2-enlaces.py) sobre todos los .md de OUTPUTs/
+enlaces relativos: 375; rotos: 0

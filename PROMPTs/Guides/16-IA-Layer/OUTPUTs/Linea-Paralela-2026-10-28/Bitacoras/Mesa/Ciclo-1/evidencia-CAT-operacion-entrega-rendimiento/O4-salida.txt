@@ -1,0 +1,21 @@
+CONCEDIDO build a cat-op hasta 2026-10-28T10:24:41-0300 (renová con: <gestor-de-turnos> renovar build cat-op)
+10.0.403
+== VALIDAR=true
+[A] sourceName=(por defecto) -> ActivitySource=Experimental.Microsoft.Extensions.AI Meter=Experimental.Microsoft.Extensions.AI
+[A] sourceName=MovilidadUrbana.AI -> ActivitySource=MovilidadUrbana.AI Meter=Experimental.Microsoft.Extensions.AI,MovilidadUrbana.AI
+[A] SDK AddSource("Experimental.Microsoft.Extensions.AI") + cliente sourceName="MovilidadUrbana.AI" -> spans exportados: 0
+[A] SDK AddSource("MovilidadUrbana.AI") + cliente sourceName="MovilidadUrbana.AI" -> spans exportados: 1
+[B] AddChatClient Singleton, scope sesion-A -> herramienta vio: InvalidOperationException: Cannot resolve scoped service 'SessionContext' from root provider
+[B] AddChatClient Singleton, scope sesion-B -> herramienta vio: InvalidOperationException: Cannot resolve scoped service 'SessionContext' from root provider
+[B] AddChatClient Scoped, scope sesion-A -> herramienta vio: SessionId=sesion-A
+[B] AddChatClient Scoped, scope sesion-B -> herramienta vio: SessionId=sesion-B
+== VALIDAR=false
+[A] sourceName=(por defecto) -> ActivitySource=Experimental.Microsoft.Extensions.AI Meter=Experimental.Microsoft.Extensions.AI
+[A] sourceName=MovilidadUrbana.AI -> ActivitySource=MovilidadUrbana.AI Meter=Experimental.Microsoft.Extensions.AI,MovilidadUrbana.AI
+[A] SDK AddSource("Experimental.Microsoft.Extensions.AI") + cliente sourceName="MovilidadUrbana.AI" -> spans exportados: 0
+[A] SDK AddSource("MovilidadUrbana.AI") + cliente sourceName="MovilidadUrbana.AI" -> spans exportados: 1
+[B] AddChatClient Singleton, scope sesion-A -> herramienta vio: SessionId=(vacío)
+[B] AddChatClient Singleton, scope sesion-B -> herramienta vio: SessionId=(vacío)
+[B] AddChatClient Scoped, scope sesion-A -> herramienta vio: SessionId=sesion-A
+[B] AddChatClient Scoped, scope sesion-B -> herramienta vio: SessionId=sesion-B
+LIBERADO build por cat-op

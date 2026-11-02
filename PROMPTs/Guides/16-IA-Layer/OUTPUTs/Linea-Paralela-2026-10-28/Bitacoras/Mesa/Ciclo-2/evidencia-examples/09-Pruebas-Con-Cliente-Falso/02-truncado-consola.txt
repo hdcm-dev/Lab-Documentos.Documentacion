@@ -1,0 +1,24 @@
+EN COLA <recurso-propio> (posición 1); esperando hasta 90 min...
+CONCEDIDO <recurso-propio> a ex09-truncado hasta 2026-10-28T16:54:14-0300 (renová con: <gestor-de-turnos> renovar <recurso-propio> ex09-truncado)
+2026-10-28T19:14:15+00:00
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /ex/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+# R-LLM — invariantes n/n — estimando: este pedido, 1 pedido × 3 semillas (s = 1..3) por num_ctx, qwen3.5:4b@d8b0f5e9760c, T 0.7, top_p 0.8, top_k 20, think false, MaxOutputTokens 8, ruta API /api/chat (OllamaSharp 5.5.0), num_ctx 8192 y 4096, prompt de 185 líneas, Ollama 0.40.11, criterio previo: comentario de esta clase, fecha 2026-10-28T19:14:23.5175355+00:00
+# rótulo: medido en una estación de laboratorio con más núcleos (15 vCPU, CPU sin GPU; contenedor limitado a 14 CPU / 34 GiB; Ollama 0.40.11), 2026-10-28
+s=1: num_ctx 8192 → InputTokenCount 5114, handler prompt_eval_count 5114 cached 0, CachedInputTokenCount null, respuesta «3001», pared 50.8 s | num_ctx 4096 → ContextoTruncadoException esperado 5114 recibido 2050 (handler prompt_eval_count 2050), pared 21.4 s
+s=2: num_ctx 8192 → InputTokenCount 5114, handler prompt_eval_count 5114 cached 0, CachedInputTokenCount null, respuesta «3001», pared 50.0 s | num_ctx 4096 → ContextoTruncadoException esperado 5114 recibido 2050 (handler prompt_eval_count 2050), pared 20.3 s
+s=3: num_ctx 8192 → InputTokenCount 5114, handler prompt_eval_count 5114 cached 0, CachedInputTokenCount null, respuesta «3001», pared 50.2 s | num_ctx 4096 → ContextoTruncadoException esperado 5114 recibido 2050 (handler prompt_eval_count 2050), pared 20.6 s
+invariantes: 0 violaciones
+existencia: con 8192 respondió «3001» en 3 de 3
+
+  Passed NumCtxLlega_YElDetectorVeElTruncado [3 m 33 s]
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 3.6147 Minutes
+2026-10-28T19:17:57+00:00
+LIBERADO <recurso-propio> por ex09-truncado

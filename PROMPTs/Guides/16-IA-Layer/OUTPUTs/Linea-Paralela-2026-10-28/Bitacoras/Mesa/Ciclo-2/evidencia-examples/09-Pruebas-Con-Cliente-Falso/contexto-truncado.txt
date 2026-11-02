@@ -1,0 +1,7 @@
+# R-LLM — invariantes n/n — estimando: este pedido, 1 pedido × 3 semillas (s = 1..3) por num_ctx, qwen3.5:4b@d8b0f5e9760c, T 0.7, top_p 0.8, top_k 20, think false, MaxOutputTokens 8, ruta API /api/chat (OllamaSharp 5.5.0), num_ctx 8192 y 4096, prompt de 185 líneas, Ollama 0.40.11, criterio previo: comentario de esta clase, fecha 2026-10-28T19:14:23.5175355+00:00
+# rótulo: medido en una estación de laboratorio con más núcleos (15 vCPU, CPU sin GPU; contenedor limitado a 14 CPU / 34 GiB; Ollama 0.40.11), 2026-10-28
+s=1: num_ctx 8192 → InputTokenCount 5114, handler prompt_eval_count 5114 cached 0, CachedInputTokenCount null, respuesta «3001», pared 50.8 s | num_ctx 4096 → ContextoTruncadoException esperado 5114 recibido 2050 (handler prompt_eval_count 2050), pared 21.4 s
+s=2: num_ctx 8192 → InputTokenCount 5114, handler prompt_eval_count 5114 cached 0, CachedInputTokenCount null, respuesta «3001», pared 50.0 s | num_ctx 4096 → ContextoTruncadoException esperado 5114 recibido 2050 (handler prompt_eval_count 2050), pared 20.3 s
+s=3: num_ctx 8192 → InputTokenCount 5114, handler prompt_eval_count 5114 cached 0, CachedInputTokenCount null, respuesta «3001», pared 50.2 s | num_ctx 4096 → ContextoTruncadoException esperado 5114 recibido 2050 (handler prompt_eval_count 2050), pared 20.6 s
+invariantes: 0 violaciones
+existencia: con 8192 respondió «3001» en 3 de 3

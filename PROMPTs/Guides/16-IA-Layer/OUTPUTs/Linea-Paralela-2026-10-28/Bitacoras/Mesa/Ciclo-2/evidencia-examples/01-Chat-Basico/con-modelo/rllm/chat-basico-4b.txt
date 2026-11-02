@@ -1,0 +1,15 @@
+# R-LLM — estimando: este pedido, 1 pedido × 10 semillas (s = 1..10), qwen3.5:4b@d8b0f5e9760c, T 0.7, top_p 0.8, top_k 20, presence 1.5, think false, num_ctx 8192, ruta API /api/chat (OllamaSharp), Ollama 0.40.11, fecha 2026-10-28T17:55:33.3211109+00:00
+# criterio previo: invariantes (texto no vacío, FinishReason stop, InputTokenCount > 0) en m/m; tasa «nombra 4 dígitos» con k ≥ m − 2
+# sistema: «Sos el asistente de la encuesta de Movilidad Urbana. Respondé en español, en una o dos oraciones. Requisitos para cargar una localidad: nombre: entre 3 y 60 caracteres, único por provincia; provincia: una de las provincias del catálogo (Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza, Santa Fe); código postal: 4 dígitos; habitantes: un número entero de 1 en adelante.»
+# pedido: «¿Cuántos dígitos lleva el código postal de una localidad?»
+s=1 pasa=True pared=10.1s entrada=130 salida=27 fin=stop «El código postal de una localidad debe tener **cuatro** dígitos, según los requisitos para cargarla en la encuesta.»
+s=2 pasa=True pared=3.3s entrada=130 salida=13 fin=stop «El código postal debe tener exactamente **4 dígitos**.»
+s=3 pasa=True pared=3.1s entrada=130 salida=13 fin=stop «El código postal debe tener exactamente 4 dígitos.»
+s=4 pasa=True pared=2.8s entrada=130 salida=13 fin=stop «El código postal debe tener exactamente 4 dígitos.»
+s=5 pasa=True pared=3.0s entrada=130 salida=16 fin=stop «El código postal de una localidad debe tener **cuatro dígitos**.»
+s=6 pasa=True pared=6.3s entrada=130 salida=38 fin=stop «El código postal debe consistir en exactamente **cuatro dígitos**. Asegúrese de que este requisito se cumpla al cargar la información de cualquier localidad en la encuesta.»
+s=7 pasa=True pared=2.6s entrada=130 salida=13 fin=stop «El código postal debe tener exactamente 4 dígitos.»
+s=8 pasa=True pared=2.5s entrada=130 salida=13 fin=stop «El código postal debe tener exactamente **4 dígitos**.»
+s=9 pasa=True pared=2.4s entrada=130 salida=12 fin=stop «El código postal debe tener **4 dígitos**.»
+s=10 pasa=True pared=2.8s entrada=130 salida=13 fin=stop «El código postal debe tener exactamente **4 dígitos**.»
+# resultado: nombra 4 dígitos 10/10; Wilson 95 % [0.72; 1.00] — estimando: este pedido; invariantes violadas: 0

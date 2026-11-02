@@ -1,0 +1,66 @@
+## --sin-modelo --aprobar s
+Modo sin modelo (cliente guionado)
+
+== 4.1 Llamada única con una herramienta
+> ¿Cuántas localidades hay en Chaco?
+En Chaco hay 1 localidad(es) cargada(s).
+
+== 4.2 El mismo IChatClient como agente de MAF, con sesión
+> ¿Cuántas localidades hay en Chaco?
+En Chaco hay 1 localidad(es) cargada(s).
+> ¿Y en Corrientes?
+En Corrientes hay 1 localidad(es) cargada(s).
+
+== Escritura con aprobación
+> Borrá Resistencia
+  [aprobación] Dar de baja la localidad «Resistencia» (Chaco), id 2. (herramienta eliminar_localidad; vence 19:07:05 UTC)
+  ¿Aprobás? (s/n): s (fija por --aprobar)
+Resultado: {
+  "isSuccess": true,
+  "message": "Se eliminó la localidad Resistencia.",
+  "errors": {}
+}
+Localidades de la sesión: Corrientes
+# código de salida: 0
+## --sin-modelo --aprobar n
+Modo sin modelo (cliente guionado)
+
+== 4.1 Llamada única con una herramienta
+> ¿Cuántas localidades hay en Chaco?
+En Chaco hay 1 localidad(es) cargada(s).
+
+== 4.2 El mismo IChatClient como agente de MAF, con sesión
+> ¿Cuántas localidades hay en Chaco?
+En Chaco hay 1 localidad(es) cargada(s).
+> ¿Y en Corrientes?
+En Corrientes hay 1 localidad(es) cargada(s).
+
+== Escritura con aprobación
+> Borrá Resistencia
+  [aprobación] Dar de baja la localidad «Resistencia» (Chaco), id 2. (herramienta eliminar_localidad; vence 19:07:10 UTC)
+  ¿Aprobás? (s/n): n (fija por --aprobar)
+Resultado: Tool call invocation was rejected by the approver and must not be retried.
+Localidades de la sesión: Corrientes, Resistencia
+# código de salida: 0
+## --sin-modelo, sin --aprobar y sin entrada (stdin cerrado): sin respuesta = no
+Modo sin modelo (cliente guionado)
+
+== 4.1 Llamada única con una herramienta
+> ¿Cuántas localidades hay en Chaco?
+En Chaco hay 1 localidad(es) cargada(s).
+
+== 4.2 El mismo IChatClient como agente de MAF, con sesión
+> ¿Cuántas localidades hay en Chaco?
+En Chaco hay 1 localidad(es) cargada(s).
+> ¿Y en Corrientes?
+En Corrientes hay 1 localidad(es) cargada(s).
+
+== Escritura con aprobación
+> Borrá Resistencia
+  [aprobación] Dar de baja la localidad «Resistencia» (Chaco), id 2. (herramienta eliminar_localidad; vence 19:07:16 UTC)
+  ¿Aprobás? (s/n): Resultado: Tool call invocation was rejected by the approver and must not be retried.
+Localidades de la sesión: Corrientes, Resistencia
+# código de salida: 0
+## sin DOTNET_ENVIRONMENT=Development (falta TimeoutSegundos)
+Configuración inválida: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.
+# código de salida: 3

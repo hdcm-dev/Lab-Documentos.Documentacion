@@ -1,0 +1,9 @@
+# Guía: estimando de la tarea
+225:**Estimandos.** Cada tasa dice de qué es: **«este pedido»** (un solo texto repetido con semillas distintas; no generaliza) o **«la tarea»** (al menos 10 pedidos redactados antes, al menos 3 semillas por pedido, intervalo calculado sobre los pedidos). 
+532:El éxito se fija **antes de construir**: métricas, tipos de error con su criterio de liberación y plan de evaluación [REF-031, objetivo A3 «Fit for purpose»], con el costo del error documentado y una decisión explícita de seguir [REF-032, MAP 3.2 y
+1732:| Respondibles que pasan en 3 de 3 (K = 12) | 10/12, [0,55; 0,95] | 10/12, [0,55; 0,95] | 3 discordantes (2 y 1): no separado con este N |
+1733:| No respondibles que pasan en 3 de 3 (K = 4: menos de 10 pedidos, sólo existencia) | 0 de 4 | 1 de 4 | 2 discordantes: no separado con este N |
+1734:| Todas (K = 16): media de las tasas por consulta | 0,771 | 0,771 | 5 discordantes (3 y 2): no separado con este N |
+2822:| Tasa de la tarea | 10 pedidos redactados antes, 3 semillas por pedido | tabla por pedido y «pedidos que pasan en m/m: j/K, Wilson 95 %», con el intervalo sobre los pedidos [REF-130] |
+3324:| D5 | «¿Cuántos dígitos lleva el código postal?» | CASO-4 · ESC-01 | los 12 requisitos van al prompt; una fuente inventada no se muestra | la tarea, K = 12, m = 3: pasan en 3/3, 8/12 [0,39; 0,86] |
+4049:3. **Por tipo de afirmación:** (a) existencia, con n ≥ 1 y la salida cruda: «se observó en k de n»; (b) invariante: no es una tasa, se prueba en `Cableado/` y en `ConModelo/` falla ante una sola violación (cota para 0/n: 1 − 0,05^(1/n), 0,26 con 

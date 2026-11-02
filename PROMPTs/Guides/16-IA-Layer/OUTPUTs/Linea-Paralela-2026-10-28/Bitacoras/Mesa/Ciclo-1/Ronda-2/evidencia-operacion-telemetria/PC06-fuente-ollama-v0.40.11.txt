@@ -1,0 +1,69 @@
+# PC-06 — fuente de Ollama v0.40.11 (bajada 2026-10-28 12:18 -03)
+# https://raw.githubusercontent.com/ollama/ollama/v0.40.11/server/routes.go  (sha256 28034a9f11df5d5c)
+   202	func usesAutomaticNumCtx(model *Model, requestOpts map[string]any) bool {
+   203		if _, ok := requestOpts["num_ctx"]; ok {
+   204			return false
+   205		}
+   206		if model != nil {
+   207			if _, ok := model.Options["num_ctx"]; ok {
+   208				return false
+   209			}
+   210		}
+   211		return envconfig.ContextLength() == 0
+   212	}
+
+   278		numCtxAuto := usesAutomaticNumCtx(m, requestOpts)
+   279		embeddingBatchDefault := shouldApplyEmbeddingBatchDefault(m, requestOpts)
+   280		numBatchAuto := usesAutomaticNumBatch(m, requestOpts) && !embeddingBatchDefault
+   281		opts, err := s.modelOptionsWithEmbeddingBatchDefault(m, requestOpts, embeddingBatchDefault)
+   282		if err != nil {
+   283			return nil, nil, nil, err
+   284		}
+   285	
+   286		runnerCh, errCh := s.sched.getRunner(ctx, m, opts, keepAlive, numCtxAuto, numBatchAuto, shift)
+
+# https://raw.githubusercontent.com/ollama/ollama/v0.40.11/server/sched.go  (sha256 c0b7fd52ee126f43)
+    44	
+    45		// numCtxAuto is true when NumCtx came from Ollama's automatic VRAM-tier
+    46		// default rather than explicit request, model, or environment config.
+    47		numCtxAuto bool
+
+  1437		// Don't reload runner if num_gpu=-1 was provided
+  1438		optsExisting := runner.Options.Runner
+  1439		optsNew := req.opts.Runner
+  1440		optsNew.NumCtx = effectiveContext(optsNew.NumCtx, runner.trainContext)
+  1441		if runner.numCtxAuto && req.numCtxAuto {
+  1442			optsNew.NumCtx = optsExisting.NumCtx
+  1443		}
+  1444		if runner.numBatchAuto && req.numBatchAuto {
+  1445			optsNew.NumBatch = optsExisting.NumBatch
+  1446		}
+  1447		if runner.useMMapAuto && optsNew.UseMMap == nil {
+  1448			optsNew.UseMMap = optsExisting.UseMMap
+  1449		}
+  1450		if optsNew.NumGPU < 0 {
+  1451			optsExisting.NumGPU = -1
+  1452			optsNew.NumGPU = -1
+  1453		}
+  1454	
+  1455		contextShift := req.contextShift
+  1456		if req.model.ModelPath != "" {
+  1457			contextShift = resolveContextShift(req.shift, req.model)
+  1458		}
+  1459		if runner.contextShift != contextShift {
+  1460			return true
+  1461		}
+  1462	
+  1463		ctx, cancel := context.WithTimeout(ctx, timeout)
+  1464		defer cancel()
+  1465		loaded := runner.model.Load()
+  1466		if loaded == nil ||
+  1467			!reflect.DeepEqual(loaded.AdapterPaths, req.model.AdapterPaths) || // have the adapters changed?
+  1468			!reflect.DeepEqual(loaded.ProjectorPaths, req.model.ProjectorPaths) || // have the projectors changed?
+  1469			(!loaded.IsMLX() && !reflect.DeepEqual(optsExisting, optsNew)) || // have the runner options changed?
+  1470			runner.llama.Ping(ctx) != nil {
+  1471			return true
+  1472		}
+  1473	
+
+# https://docs.ollama.com/context-length (leída 2026-10-28): «Ollama defaults to the following context lengths based on VRAM: < 24 GiB VRAM: 4k context; 24-48 GiB VRAM: 32k context; >= 48 GiB VRAM: 256k context». Cambio: OLLAMA_CONTEXT_LENGTH al arrancar el servidor; verificación: columna CONTEXT de ollama ps.

@@ -1,0 +1,45 @@
+# E-OP-03 — Cifras y rótulos cotejados (2026-10-28). Rutas relativas a la carpeta de la guía y a Bitacoras/.
+## (1) 27 s por llamada: en la guía y su origen
+4051:5. **Presupuesto:** con una mediana de unos 27 s por llamada del 4b en la estación de 4 núcleos, un turno de 45 minutos da unas 90 llamadas (una tasa de la tarea con K = 10 y m = 5, o cuatro tasas de un pedido con m = 10). Lo que no entra se rotula «no medido».
+4018:| llamada a herramienta (`/v1`) | `qwen3.5:4b@d8b0f5e9760c` | 10 | — | 361 | 4,68 (4,65–34,51; la primera con carga) | — | 4 núcleos |
+4019:| llamada a herramienta, «a pie» | `qwen3.5:4b@d8b0f5e9760c` | 10 | — | 360 | 4,75 (4,69–20,61) | — | 4 núcleos |
+4020:| llamada a herramienta, razonamiento encendido | `qwen3.5:4b@d8b0f5e9760c` | 5 | — | 359 | 24,22 (19,12–33,76); 152 tokens de salida | — | 4 núcleos |
+4038:| llamada a herramienta, siguientes | `qwen3.5:35b-a3b` frente a `qwen3.5:4b@d8b0f5e9760c` | 10 + 10 | caliente | — | 13,3 frente a 3,2 (mediana) | — | con más núcleos |
+96:**R-LLM-5 — Presupuesto.** En esta sonda el 4b tardó una mediana de 27 s por llamada a herramienta (máx. 68 s; 59 llamadas en 25,4 min), con los mismos límites de contenedor de §R.6. Un turno de 45 min alcanza para unas 90 llamadas: entra una tasa de tarea mínima (K = 10 × m = 5 = 50) o cuatro tasas de pedido de m = 10. Lo que no entra en el turno se rotula «no medido» y se planifica en estación 2 (dictamen §4).
+## (2) 4,65–4,96 s
+2583:Cuando podés escribir la función. Validar un código postal o contar respuestas de la encuesta es código (`ValidarPaso`, `CountAsync`); la encuesta como grafo de §7.6.1 da lo mismo que la función, con más piezas. Los sistemas con agentes cambian latencia y costo por desempeño [REF-030], y en CTX-LOCAL se nota: una llamada a herramienta con el modelo cargado tardó de 4,65 a 4,96 s de mediana por serie, sin contar la carga (estación de 4 núcleos), y cada vuelta del bucle es una llamada más.
+326:en caliente, las herramientas del 4b dan **4,65–4,96 s** de mediana por serie (4,68 y 4,75 s)
+288:| qwen3.5:4b@d8b0f5e9… | ídem (`caminata`) | apagado | 10 | 10 | **10/10** | 20,61 s / 4,69–4,96 s | — |
+## (3) límite de memoria del contenedor de la estación de 4 núcleos
+6:# Límites: NanoCpus=4000000000 Memory=5368709120
+5368709120 B = 5 GiB exactos
+ocurrencias de «5 GB» en el entregable:
+Examples/07-Agente-Con-Aprobacion/README.md:1
+Examples/02-Streaming/README.md:1
+Demos/MovilidadUrbana.Asistente/README.md:1
+Examples/08-Servidor-Y-Cliente-MCP/README.md:1
+Examples/02-Streaming/src/MovilidadUrbana.Streaming/appsettings.Development.json:1
+Examples/01-Chat-Basico/README.md:1
+Dot-Net-Integration-AI-Layer-Guide.md:10
+Examples/04-Embeddings-Y-Busqueda/README.md:1
+## (4) costo del juez: origen (sonda aparte, siete evaluadores)
+105:Sonda .NET (`SondaEval-Program.cs`) con `RelevanceEvaluator`, `CoherenceEvaluator`, `FluencyEvaluator`, `GroundednessEvaluator`, `RetrievalEvaluator`, `CompletenessEvaluator` y `EquivalenceEvaluator`
+227:**Rótulos de estado.** «No medido»: no se corrió, y se dice. «No ejecutado»: es la forma de un pedido o de un comando, no un snippet de un ejemplo. «
+2496:**Rótulo: corrida sólo con un doble.** La vía C no se corrió contra el modelo. Sobre la vía B, la única cifra disponible es la de §6. Por diseño, l
+2644:- **Qué es.** En `ConModelo/` cada afirmación es de uno de tres tipos. **Invariante:** una propiedad que vale en cada corrida (0 escrituras, ninguna herr
+3066:Compila en `Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/ConModelo/EvaluacionConJuezTests.cs` (l. 36-4
+3074:- **Costo medido**, con `qwen3.5:4b`: 1285 s para un caso con siete evaluadores en la estación de 4 núcleos (N = 1 caso, anfitrión sin reservar), y unos
+3060:    evaluators: [new RelevanceEvaluator(), new CoherenceEvaluator(), new GroundednessEvaluator(), new MedioEnCatalogoEvaluator()],
+## (5) TimeoutSegundos en appsettings base de Examples/03 (la regla dice: sólo el entorno)
+Examples/03-Salida-Estructurada/src/MovilidadUrbana.SalidaEstructurada/appsettings.json:15:    "TimeoutSegundos": 300,
+11:            .AddJsonFile(Path.Combine(AppContext.BaseDirectory, "appsettings.json"))
+## (6) cola del limitador en la demo
+11:    "Concurrencia": { "Permisos": 1, "Cola": 2, "ReintentarEnSegundos": 30 },
+2939:El servidor de prueba procesa un pedido por modelo a la vez por defecto (`OLLAMA_NUM_PARALLEL` = 1) [REF-079], y cada pedido puede tard
+3460:- `AI:TimeoutSegundos` no tiene valor por defecto en el código y sólo `appsettings.Development.json` lo declara (300 s): sin `ASPNETC
+4022:| propuesta de escritura (CP inválido) | `qwen3.5:4b@d8b0f5e9760c` | 10 | — | 571 | 26,37 (18,46–57,90) | — | 4 núcleos |
+## (7) log de la demo
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/appsettings.Development.json:2:  "Logging": { "LogLevel": { "Default": "Information", "Microsoft.AspNetCore": "Information" } },
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/appsettings.json:3:  "Logging": { "LogLevel": { "Default": "Information", "Microsoft.AspNetCore": "Warning" } },
+2935:Un detalle de los registros, no de la traza: con el nivel `Information`, `IHttpClientFactory` escribe la URL del se
+3702:**ACT-OPS.** El servidor de modelos está fijado por digest (Anexo E.2). La configuración se valida al arrancar y 

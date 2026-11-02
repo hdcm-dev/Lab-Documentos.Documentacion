@@ -1,0 +1,15 @@
+# R4 — Sensibilidad de verificar-capas.sh (EA-3), 2026-10-28, estación 1
+# Copia de Integracion-Evidencia/A-arquitectura/exp-capas en {dir-de-trabajo}/verificacion-qa/exp-capas
+# con Copia/ regenerada (cp -r de Lab-E2E.WebBlazor src/MovilidadUrbana.ApiWeb/{Domain,Application}, HEAD 59399ba).
+# 1) Tal como está en la bitácora (sin Copia/): grep: Copia/Domain: No existe el fichero o el directorio
+# 2) Con Copia/ regenerada: misma salida que verificar-capas-salida.txt (0/0/0/2, idénticas).
+# 3) Mutación en Nuevo/Application:
+#    - Abstractions/<primer .cs> += "public Microsoft.Extensions.AI.IChatClient? Cliente { get; set; }"
+#    - GlobalUsings.cs = "global using Microsoft.Extensions.AI;"
+#    Salida:
+== using de IA por carpeta (Microsoft.Extensions.AI | Microsoft.Agents | OllamaSharp | VectorData)
+  Copia/Domain: 0 archivo(s)
+  Copia/Application: 0 archivo(s)
+  Nuevo/Application: 0 archivo(s)
+  Nuevo/Infrastructure/AI: 2 archivo(s)
+# => falso negativo: la regla RA-2 queda violada y el script informa 0. Además el script nunca termina con código != 0 por conteo (sólo imprime).

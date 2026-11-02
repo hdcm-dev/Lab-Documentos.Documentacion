@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/MovilidadUrbana.Busqueda/MovilidadUrbana.Busqueda.csproj" />
+  <Project Path="tests/MovilidadUrbana.Busqueda.Tests/MovilidadUrbana.Busqueda.Tests.csproj" />
+</Solution>

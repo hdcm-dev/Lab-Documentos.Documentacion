@@ -1,0 +1,105 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MovilidadUrbana.PruebaDeArquitectura -> /ex/src/MovilidadUrbana.PruebaDeArquitectura/bin/Debug/net10.0/MovilidadUrbana.PruebaDeArquitectura.dll
+  MovilidadUrbana.PruebaDeArquitectura.Tests -> /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/bin/Debug/net10.0/MovilidadUrbana.PruebaDeArquitectura.Tests.dll
+Test run for /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/bin/Debug/net10.0/MovilidadUrbana.PruebaDeArquitectura.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+/ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/bin/Debug/net10.0/MovilidadUrbana.PruebaDeArquitectura.Tests.dll
+NUnit Adapter 6.3.1.0: Test execution started
+Running all tests in /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/bin/Debug/net10.0/MovilidadUrbana.PruebaDeArquitectura.Tests.dll
+   NUnit3TestExecutor discovered 13 of 13 NUnit test cases using Current Discovery mode, Non-Explicit run
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.Atributo.LocalidadSinClave → Microsoft.EntityFrameworkCore.KeylessAttribute (atributo de tipo)
+
+MovilidadUrbana.PruebaDeArquitectura.Infrastructure.AI.Mutantes.HerramientaEnInfrastructure.ContadorDeLocalidadesComoHerramienta → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (campo <localidades>P)
+MovilidadUrbana.PruebaDeArquitectura.Infrastructure.AI.Mutantes.HerramientaEnInfrastructure.ContadorDeLocalidadesComoHerramienta → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (cuerpo de .ctor)
+MovilidadUrbana.PruebaDeArquitectura.Infrastructure.AI.Mutantes.HerramientaEnInfrastructure.ContadorDeLocalidadesComoHerramienta → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (parámetro de .ctor)
+MovilidadUrbana.PruebaDeArquitectura.Infrastructure.AI.Mutantes.HerramientaEnInfrastructure.ContadorDeLocalidadesComoHerramienta+<<Herramienta>b__2_0>d → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (cuerpo de MoveNext)
+
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (campo <MensajeOriginal>k__BackingField)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (campo <UltimoMensaje>k__BackingField)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de get_MensajeOriginal)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de get_UltimoMensaje)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de set_MensajeOriginal)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de set_UltimoMensaje)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (parámetro de set_MensajeOriginal)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (parámetro de set_UltimoMensaje)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (propiedad MensajeOriginal)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (propiedad UltimoMensaje)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (retorno de get_MensajeOriginal)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (retorno de get_UltimoMensaje)
+
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.Cuerpo.ResumenQueArmaUnMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de LargoDelSaludo)
+MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.Cuerpo.ResumenQueArmaUnMensaje → Microsoft.Extensions.AI.ChatRole (cuerpo de LargoDelSaludo)
+
+  Passed Agujero_declarado_nameof_no_deja_rastro [29 ms]
+  Passed Atributo_de_EF_Core_en_el_nucleo_se_detecta [87 ms]
+  Standard Output Messages:
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.Atributo.LocalidadSinClave → Microsoft.EntityFrameworkCore.KeylessAttribute (atributo de tipo)
+
+
+  Passed Caso_de_uso_expuesto_como_herramienta_desde_Infrastructure_se_detecta [16 ms]
+  Standard Output Messages:
+ MovilidadUrbana.PruebaDeArquitectura.Infrastructure.AI.Mutantes.HerramientaEnInfrastructure.ContadorDeLocalidadesComoHerramienta → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (campo <localidades>P)
+ MovilidadUrbana.PruebaDeArquitectura.Infrastructure.AI.Mutantes.HerramientaEnInfrastructure.ContadorDeLocalidadesComoHerramienta → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (cuerpo de .ctor)
+ MovilidadUrbana.PruebaDeArquitectura.Infrastructure.AI.Mutantes.HerramientaEnInfrastructure.ContadorDeLocalidadesComoHerramienta → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (parámetro de .ctor)
+ MovilidadUrbana.PruebaDeArquitectura.Infrastructure.AI.Mutantes.HerramientaEnInfrastructure.ContadorDeLocalidadesComoHerramienta+<<Herramienta>b__2_0>d → MovilidadUrbana.ApiWeb.Application.Localidades.LocalidadService (cuerpo de MoveNext)
+
+
+  Passed R4_global_using_y_propiedad_ChatMessage_se_detecta [30 ms]
+  Standard Output Messages:
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (campo <MensajeOriginal>k__BackingField)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (campo <UltimoMensaje>k__BackingField)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de get_MensajeOriginal)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de get_UltimoMensaje)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de set_MensajeOriginal)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de set_UltimoMensaje)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (parámetro de set_MensajeOriginal)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (parámetro de set_UltimoMensaje)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (propiedad MensajeOriginal)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (propiedad UltimoMensaje)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (retorno de get_MensajeOriginal)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.R4.PropuestaConMensaje → Microsoft.Extensions.AI.ChatMessage (retorno de get_UltimoMensaje)
+
+
+  Passed Uso_solo_dentro_de_un_cuerpo_de_metodo_la_firma_no_lo_ve_y_el_IL_si [2 ms]
+  Standard Output Messages:
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.Cuerpo.ResumenQueArmaUnMensaje → Microsoft.Extensions.AI.ChatMessage (cuerpo de LargoDelSaludo)
+ MovilidadUrbana.PruebaDeArquitectura.Application.Mutantes.Cuerpo.ResumenQueArmaUnMensaje → Microsoft.Extensions.AI.ChatRole (cuerpo de LargoDelSaludo)
+
+
+  Passed El_puerto_se_resuelve_con_el_adaptador_y_la_herramienta_con_el_caso_de_uso [319 ms]
+  Passed Cada_excepcion_declarada_sigue_existiendo [36 ms]
+  Passed El_adaptador_de_IA_no_conoce_el_acceso_a_datos [17 ms]
+  Passed El_dominio_no_conoce_Application [20 ms]
+Núcleo: 34 tipos inspeccionados.
+
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (cuerpo de InvokeAsync)
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (parámetro de InvokeAsync)
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<>c__DisplayClass3_0 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (campo session)
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<>c__DisplayClass3_0 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (cuerpo de <InvokeAsync>b__0)
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<InvokeAsync>d__3 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (campo session)
+encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<InvokeAsync>d__3 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (cuerpo de MoveNext)
+
+  Passed El_nucleo_no_conoce_IA_ni_acceso_a_datos_ni_HTTP_ni_las_capas_de_afuera [41 ms]
+  Standard Output Messages:
+ Núcleo: 34 tipos inspeccionados.
+
+
+  Passed Infrastructure_no_usa_casos_de_uso_ni_Presentacion [54 ms]
+  Passed La_persistencia_no_conoce_IA [20 ms]
+  Passed Presentacion_no_conoce_acceso_a_datos_ni_proveedor_de_IA_ni_Infrastructure [30 ms]
+  Standard Output Messages:
+ encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (cuerpo de InvokeAsync)
+ encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (parámetro de InvokeAsync)
+ encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<>c__DisplayClass3_0 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (campo session)
+ encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<>c__DisplayClass3_0 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (cuerpo de <InvokeAsync>b__0)
+ encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<InvokeAsync>d__3 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (campo session)
+ encontrada: MovilidadUrbana.ApiWeb.Sessions.SessionHeaderMiddleware+<InvokeAsync>d__3 → MovilidadUrbana.ApiWeb.Infrastructure.Sessions.SessionContext (cuerpo de MoveNext)
+
+
+
+Test Run Successful.
+Total tests: 13
+     Passed: 13
+ Total time: 2.4262 Seconds
+test rc=0

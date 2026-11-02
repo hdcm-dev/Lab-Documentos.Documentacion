@@ -1,0 +1,69 @@
+x01: «Me muevo en micro todos los días para ir al trabajo.»
+  propuesta del modelo: {
+  "medios": ["micro"],
+  "frecuencia": "todos los días"
+}
+  claves: medios [colectivo] · frecuencia «diaria»
+  ValidarPaso(2): sin errores
+  oráculo normalizacion-esperada: pasa
+x02: «De vez en cuando uso el auto o voy a pie.»
+  propuesta del modelo: {
+  "medios": ["auto", "a pie"],
+  "frecuencia": "De vez en cuando"
+}
+  claves: medios [auto, caminata] · frecuencia «ocasional»
+  ValidarPaso(2): sin errores
+  oráculo normalizacion-esperada: pasa
+x03: «Tomo el tren y después el colectivo, de lunes a domingo.»
+  propuesta del modelo: {
+  "medios": ["tren", "colectivo"],
+  "frecuencia": "de lunes a domingo"
+}
+  claves: medios [colectivo, tren] · frecuencia «diaria»
+  ValidarPaso(2): sin errores
+  oráculo normalizacion-esperada: pasa
+x04: «Un par de veces por semana voy en bicicleta.»
+  propuesta del modelo: {
+  "medios": ["bicicleta"],
+  "frecuencia": "un par de veces por semana"
+}
+  claves: medios [bicicleta] · frecuencia «semanal»
+  ValidarPaso(2): sin errores
+  oráculo normalizacion-esperada: pasa
+x05: «Ando en moto a diario.»
+  propuesta del modelo: {
+  "medios": ["moto"],
+  "frecuencia": "diario"
+}
+  claves: medios [moto] · frecuencia «diario»
+  ValidarPaso(2): frecuencia: La frecuencia no es una opción del catálogo.
+  oráculo normalizacion-esperada: falla
+x06: «Rara vez salgo; cuando salgo voy a pie.»
+  propuesta del modelo: {
+  "medios": [
+    "a pie"
+  ],
+  "frecuencia": "rara vez"
+}
+  claves: medios [caminata] · frecuencia «ocasional»
+  ValidarPaso(2): sin errores
+  oráculo normalizacion-esperada: pasa
+x07: «Viajo en coche y en ómnibus algunos días por semana.»
+  propuesta del modelo: {
+  "medios": ["coche", "ómnibus"],
+  "frecuencia": "algunos días por semana"
+}
+  claves: medios [auto, colectivo] · frecuencia «semanal»
+  ValidarPaso(2): sin errores
+  oráculo normalizacion-esperada: pasa
+x08: «Todos los días uso la bici y el tren.»
+  propuesta del modelo: {
+  "medios": ["bici", "tren"],
+  "frecuencia": "Todos los días"
+}
+  claves: medios [bicicleta, tren] · frecuencia «diaria»
+  ValidarPaso(2): sin errores
+  oráculo normalizacion-esperada: pasa
+extensión: 7/8 válidas con normalización correcta (estímulo del mismo autor; descriptiva, §10.4)
+registro: 16 líneas en 04-Normalizacion-Contra-Catalogo.jsonl
+invariantes de código: se cumplen

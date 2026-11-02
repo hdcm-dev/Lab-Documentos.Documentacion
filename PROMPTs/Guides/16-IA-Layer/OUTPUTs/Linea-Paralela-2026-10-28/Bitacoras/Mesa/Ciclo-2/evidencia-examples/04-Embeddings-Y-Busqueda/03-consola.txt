@@ -1,0 +1,92 @@
+EN COLA build (posición 2); esperando hasta 90 min...
+CONCEDIDO build a ej04-embeddings hasta 2026-10-28T15:44:46-0300 (renová con: <gestor-de-turnos> renovar build ej04-embeddings)
+    0 Warning(s)
+$ buscar
+Modo: Ollama; modelo: qwen3-embedding:0.6b; dimensión: 1024
+> ¿Cuántos números lleva el CP?
+  0.3730  [LocalidadPolicy.RequisitoDelCodigoPostal] 4 dígitos.
+  0.3468  [LocalidadPolicy.RequisitoDeLosHabitantes] Un número entero de 1 en adelante.
+  0.3122  [EncuestaPolicy.RequisitoDeLosMedios] Al menos uno.
+  (sin umbral de abstención configurado: la similitud siempre devuelve algo)
+exit=0
+$ buscar (no respondible)
+Modo: Ollama; modelo: qwen3-embedding:0.6b; dimensión: 1024
+> ¿Si elimino una ciudad se pierden las encuestas?
+  0.4630  [EncuestaPolicy.RequisitoDeLaLocalidad] Una de las localidades cargadas en el ABM.
+  0.3862  [EncuestaPolicy.RequisitoDelNombre] Al menos 3 caracteres.
+  0.3827  [EncuestaPolicy.RequisitoDelMotivo] El motivo principal del viaje.
+  (sin umbral de abstención configurado: la similitud siempre devuelve algo)
+exit=0
+$ similitud colectivo ómnibus
+Modo: Ollama; modelo: qwen3-embedding:0.6b; dimensión: 1024
+0.6082
+exit=0
+$ --AI:DimensionDeEmbeddings=512
+warn: Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator[2096506843]
+      gen_ai.client.operation.exception
+      MovilidadUrbana.Busqueda.Busqueda.DimensionDeEmbeddingsException: El modelo de embeddings «qwen3-embedding:0.6b» devolvió vectores de 1024 dimensiones y el almacén declara 512. Vectores de dimensiones distintas no se pueden comparar: corregí AI:DimensionDeEmbeddings o el modelo.
+         at MovilidadUrbana.Busqueda.Busqueda.VerificadorDeDimension.GenerateAsync(IEnumerable`1 values, EmbeddingGenerationOptions options, CancellationToken cancellationToken) in /work/src/MovilidadUrbana.Busqueda/Busqueda/VerificadorDeDimension.cs:line 26
+         at Microsoft.Extensions.AI.CachingEmbeddingGenerator`2.GenerateAsync(IEnumerable`1 values, EmbeddingGenerationOptions options, CancellationToken cancellationToken)
+         at Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator`2.GenerateAsync(IEnumerable`1 values, EmbeddingGenerationOptions options, CancellationToken cancellationToken)
+fail: Microsoft.Extensions.Hosting.Internal.Host[11]
+      Hosting failed to start
+      MovilidadUrbana.Busqueda.Busqueda.DimensionDeEmbeddingsException: El modelo de embeddings «qwen3-embedding:0.6b» devolvió vectores de 1024 dimensiones y el almacén declara 512. Vectores de dimensiones distintas no se pueden comparar: corregí AI:DimensionDeEmbeddings o el modelo.
+         at MovilidadUrbana.Busqueda.Busqueda.VerificadorDeDimension.GenerateAsync(IEnumerable`1 values, EmbeddingGenerationOptions options, CancellationToken cancellationToken) in /work/src/MovilidadUrbana.Busqueda/Busqueda/VerificadorDeDimension.cs:line 26
+         at Microsoft.Extensions.AI.CachingEmbeddingGenerator`2.GenerateAsync(IEnumerable`1 values, EmbeddingGenerationOptions options, CancellationToken cancellationToken)
+         at Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator`2.GenerateAsync(IEnumerable`1 values, EmbeddingGenerationOptions options, CancellationToken cancellationToken)
+         at Microsoft.Extensions.AI.EmbeddingGeneratorExtensions.GenerateAsync[TInput,TEmbedding](IEmbeddingGenerator`2 generator, TInput value, EmbeddingGenerationOptions options, CancellationToken cancellationToken)
+         at Microsoft.Extensions.AI.EmbeddingGeneratorExtensions.GenerateVectorAsync[TInput,TEmbeddingElement](IEmbeddingGenerator`2 generator, TInput value, EmbeddingGenerationOptions options, CancellationToken cancellationToken)
+         at MovilidadUrbana.Busqueda.Busqueda.AlmacenDeRequisitos.InicializarAsync(CancellationToken ct) in /work/src/MovilidadUrbana.Busqueda/Busqueda/AlmacenDeRequisitos.cs:line 42
+         at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+         at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+El modelo de embeddings «qwen3-embedding:0.6b» devolvió vectores de 1024 dimensiones y el almacén declara 512. Vectores de dimensiones distintas no se pueden comparar: corregí AI:DimensionDeEmbeddings o el modelo.
+exit=4
+$ sin DOTNET_ENVIRONMENT=Development
+fail: Microsoft.Extensions.Hosting.Internal.Host[11]
+      Hosting failed to start
+      Microsoft.Extensions.Options.OptionsValidationException: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.
+         at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+         at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+         at MovilidadUrbana.Busqueda.Configuracion.ComposicionDeIA.<>c__DisplayClass2_0.<AgregarBusquedaDeRequisitos>b__4(IServiceProvider sp) in /work/src/MovilidadUrbana.Busqueda/Configuracion/ComposicionDeIA.cs:line 67
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+         at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+         at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+         at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+         at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+         at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+         at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+         at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+         at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+Configuración inválida: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.
+exit=3
+$ --AI:Modo=SinModelo, sin OLLAMA_ENDPOINT
+Modo: SinModelo; modelo: generador-lexico-falso; dimensión: 1024
+> ¿Cuántos números lleva el CP?
+  0.0845  [EncuestaPolicy.RequisitoDeLaEdad] Entre 16 y 110 años.
+  0.0845  [EncuestaPolicy.RequisitoDeLosMinutos] Entre 1 y 600 minutos.
+  0.0707  [LocalidadPolicy.RequisitoDelNombre] Entre 3 y 60 caracteres, único por provincia.
+  (sin umbral de abstención configurado: la similitud siempre devuelve algo)
+exit=0
+hit@1 = 5/12; Wilson 95 % [0.19; 0.68] (azar 0.08)
+hit@3 = 7/12; Wilson 95 % [0.32; 0.81] (azar 0.25)
+recall@3 = 0.542 (promedio sobre 12 respondibles)
+MRR@3 = 0.486 (promedio sobre 12 respondibles)
+abstención correcta = 4/10; Wilson 95 % [0.17; 0.69]; abstenciones indebidas en respondibles = 6/12
+
+exit=0
+LIBERADO build por ej04-embeddings

@@ -1,0 +1,87 @@
+---
+doc_id: BIT-16-MESA-C2-INF-ARQ
+doc_type: informe-de-especialista
+title: Informe del especialista en arquitectura de software — ciclo 2
+objeto: BIT-16-04 v1 (04-Plan-De-Integracion.md, ESTRUCTURA APROBADA v1)
+rol: Arquitecto de software (pedido del PO)
+modo: a ciegas respecto de los informes del ciclo 2; leído el ciclo 1 (informe propio, 08-Cierre) para no repetir lo resuelto
+fecha: 2026-10-26
+---
+
+# Informe de arquitectura — ciclo 2
+
+Mandato: ADR-01…ADR-12, puertos y adaptadores, caso de uso orquestador, la demo como ilustración de capas y el delta contra `8fb4c3a`. Además del plan, leí el caso base **en el commit** (`git show 8fb4c3a:<ruta>` en `LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor`), porque el delta de §F.2 sólo se puede verificar contra ese código.
+
+Lo que el ciclo 1 resolvió y no repito: el caso de uso orquestador (ARQ-01 → `AltaDesdeTextoService`/`EncuestaDesdeTextoService`), ADR-11 (carpetas o proyectos), la línea de base con tabla de delta, la sesión fija de `/mcp` y la capa única de opciones del proveedor. Los hallazgos de abajo son nuevos, o son huecos que esos parches dejaron o introdujeron.
+
+Niveles de evidencia (M§3): E2 = cita literal del artefacto con ubicación; E3 = contraejemplo construido (en este informe, sobre el código del caso base en `8fb4c3a`, citado literalmente). Lo que es conjetura va como pregunta.
+
+## Hallazgos
+
+### ARQ2-01 · La demo une dos aplicaciones independientes en un host, y esa decisión no está en ningún ADR ni en el delta (S2, confianza 0,85)
+
+- **Ubicación**: §F.2 (párrafo «Línea de base» y filas `Sessions/SessionMiddleware + Components/App.razor + Components/Routes.razor` y «MovilidadUrbana.Web»); §13.12 (ADR-11, «deja de valer si la demo crece a más de un host»); AC-10.
+- **Afirmación**: la línea de base es «copia literal de `src/MovilidadUrbana.ApiWeb/` y de las piezas de `src/MovilidadUrbana.Web/` que se nombran abajo». En `8fb4c3a` son **dos aplicaciones independientes**, cada una con sus capas, y las piezas de la Web que se copian dependen de tipos que no existen en ApiWeb. El `Program.cs` de ApiWeb no registra ni mapea componentes Razor. Así que la página Blazor obliga a cambiar `Program.cs`, el csproj y los namespaces, y a traer layout y assets. Nada de eso figura en la tabla de delta, y con eso AC-10 («todo cambio … figura en la tabla de delta») falla por construcción. Además, unir dos hosts en uno es una decisión de arquitectura (un host o dos, una sesión por cookie y otra por encabezado en el mismo pipeline) que ADR-11 da por supuesta: su condición de caducidad mira el caso al revés.
+- **Evidencia (E3, sobre `8fb4c3a`)**: `ApiWeb.csproj`: «Es un proyecto independiente: trae sus propias capas … y no referencia a ningún otro proyecto de la solución». `Web/Components/App.razor`: `@inject MovilidadUrbana.Web.Infrastructure.Sessions.SessionContext Session`, `@Assets["css/Tokens.css"]`, `js/mq-dialogo.js`. `Web/Components/Routes.razor`: `@using MovilidadUrbana.Web.Infrastructure.Sessions`, `DefaultLayout="typeof(Layout.MainLayout)"`, `NotFoundPage="typeof(Pages.NotFound)"`. `ApiWeb/Program.cs` sólo tiene `AddControllers()`, `AddOpenApi()`, `UseMiddleware<SessionHeaderMiddleware>()` y `MapControllers()`, sin `AddRazorComponents`, `AddInteractiveServerComponents`, `UseAntiforgery`, `MapStaticAssets` ni `MapRazorComponents`, que sí están en `Web/Program.cs`. Plan §F.2: ninguna fila para `Program.cs`, `*.csproj` ni `MainLayout`/`NotFound`/assets.
+- **Impacto**: el constructor improvisa la fusión. La tabla de delta, que es la lección «qué agregó la IA», omite el cambio más grande que hace la demo, y AC-10 no se puede cumplir.
+- **Dirección**: registrar la decisión «un host que compone la API y una página Blazor, frente a dos hosts como en el caso base», con alternativas y caducidad (en ADR-11 o en un ADR propio), y sumar a §F.2 las filas de `Program.cs`, csproj, namespaces y layout mínimo con su columna y motivo.
+
+### ARQ2-02 · La copia literal del csproj choca con AC-1 y AC-6, y el delta sólo registra EF Core (S2, confianza 0,85)
+
+- **Ubicación**: §F.2 (fila `Infrastructure/Persistence`, «EF Core Sqlite 10.0.11 → 10.0.14»); §E.1 (tabla de versiones y `Directory.Packages.props`); AC-1; AC-6.
+- **Afirmación**: el csproj de ApiWeb en `8fb4c3a` trae `<NoWarn>$(NoWarn);CS1591</NoWarn>` con `GenerateDocumentationFile`, y además `Microsoft.AspNetCore.OpenApi 10.0.11` y `Scalar.AspNetCore 2.17.3` con `Version=` en línea. AC-1 exige compilar «sin `NoWarn`». Si se saca el `NoWarn` y se compila con `-warnaserror`, falla todo miembro público sin comentario XML. AC-6 exige que lo resuelto sea igual al Anexo F, que no lista OpenApi ni Scalar. Y la gestión central de versiones obliga a sacar los `Version=` del csproj. Ninguno de los tres cambios está en el delta.
+- **Evidencia (E3, sobre `8fb4c3a`)**: `ApiWeb.csproj`: `<GenerateDocumentationFile>true</GenerateDocumentationFile>`, `<NoWarn>$(NoWarn);CS1591</NoWarn>`, `<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.11" />`, `<PackageReference Include="Scalar.AspNetCore" Version="2.17.3" />`. Contraejemplo: `LocalidadService.GetAllAsync` es público y no tiene `///`, así que con `GenerateDocumentationFile` y sin el `NoWarn` emite CS1591 y `-warnaserror` lo vuelve error. Plan AC-1: «`dotnet build -warnaserror` con 0 errores y sin `NoWarn`». §E.1: la tabla no tiene OpenApi ni Scalar.
+- **Impacto**: la demo no pasa AC-1 o AC-6 sin cambios que nadie decidió. O se rompe la promesa «copia literal», o se cae un criterio de aceptación.
+- **Dirección**: decidir qué pasa con el `NoWarn` de CS1591 (conservarlo como excepción declarada de AC-1, o documentar lo público), con OpenApi y Scalar (fijarlos en el Anexo F o quitarlos como delta «por otro motivo»), y con el paso a gestión central, y registrarlo en §F.2.
+
+### ARQ2-03 · La aprobación en el escalón 1 (PD-5, sin MAF) no tiene dónde vivir entre dos peticiones HTTP (S2, confianza 0,75)
+
+- **Ubicación**: §F.4 («Dónde vive el pedido pendiente»); §13.13 (ADR-12); §F.1 (PD-5, «agencia 1 · aprobación transversal»); §E.2 `09` («sin MAF»); DEP-09.
+- **Afirmación**: ADR-12 y §F.4 resuelven el estado pendiente **sólo** para la `AgentSession` de MAF (circuito Blazor, `IAlmacenDeConversaciones` con `SerializeSessionAsync`). Pero PD-5 está en el escalón 1, con `ApprovalRequiredAIFunction` bajo `UseFunctionInvocation` y sin agente. Ahí no hay `AgentSession`: entre la petición que devuelve el `ToolApprovalRequestContent` y la que trae la decisión, alguien tiene que conservar el historial, con la llamada a la herramienta incluida. El plan no dice quién: si el servidor, en qué almacén; si el cliente reenvía el historial, cómo se garantiza que «lo ejecutado = lo mostrado» (AC-4). DEP-09 sólo comprueba que el pedido se produce, no el ida y vuelta.
+- **Evidencia (E2)**: §F.4: «en la API, en `IAlmacenDeConversaciones` (…), serializados con `SerializeSessionAsync` (DEP-11)»; §13.13: «la AgentSession vive en el estado del componente … en la API, en un almacén en memoria indexado por (sesión, conversación), serializado con SerializeSessionAsync»; §E.2 `09`: «las dos con `ApprovalRequiredAIFunction` bajo `UseFunctionInvocation`, **sin MAF**»; N4 l. 602: «`ToolApprovalRequestContent.ToolCall` + `CreateResponse(bool)` + respuesta en la misma sesión»; DEP-09: «que `ApprovalRequiredAIFunction` produzca `ToolApprovalRequestContent`».
+- **Impacto**: PD-5 anda en `Cableado/` (un solo proceso) y no en la API real, o se resuelve con un estático compartido. Es el mismo antipatrón que ADR-12 prohíbe para el agente.
+- **Dirección**: extender ADR-12 al escalón 1 (qué se guarda, dónde, con qué clave y vencimiento cuando no hay `AgentSession`) y ampliar DEP-09 a una sonda de dos peticiones.
+- **Pregunta (C)**: si el diseño elegido es que el cliente reenvíe el historial, ¿el servidor vuelve a resolver los argumentos de la `FunctionCallContent` aprobada contra el caso de uso, o ejecuta lo que manda el cliente? (para seguridad; ver solicitud).
+
+### ARQ2-04 · El chat de la demo tiene dos mecanismos (IChatClient y AIAgent) y un solo punto de entrada, y el almacén de conversaciones no tiene capa (S2, confianza 0,8)
+
+- **Ubicación**: §A.4, punto 6; §F.1 (PD-1, PD-5 en el escalón 1; PD-6 en el 3); §F.2 (fila Controllers: `AsistenteController`, SSE de `ChatResponseUpdate`); §F.3 (diagrama); §F.4 (`IAlmacenDeConversaciones`).
+- **Afirmación**: §A.4 dice que en el chat (PD-1, PD-5, PD-6) «Presentación consume el `IChatClient` del asistente». Pero PD-6 es un agente de MAF (`AsAIAgent`, `AgentSession`, escalón 3), y lo que se consume ahí es un `AIAgent` más un almacén de sesiones. El plan tiene un solo `AsistenteController` y una sola página de chat. Si los dos usan el agente, PD-1 y PD-5 corren en el escalón 3 y el mapa de §3.5 y §F.1 queda mal. Si usan el `IChatClient`, PD-6 no tiene punto de entrada. El SSE previsto es de `ChatResponseUpdate`, que es el tipo del cliente y no el del agente. `IAlmacenDeConversaciones` no aparece en el diagrama de §F.3 ni en la tabla de delta, y no tiene capa asignada.
+- **Evidencia (E2)**: §A.4: «La única excepción declarada es el chat (PD-1, PD-5, PD-6): ahí Presentación consume el `IChatClient` del asistente»; §F.1: PD-5 «agencia 1», PD-6 «agencia 3»; §F.2: «`AsistenteController` (chat con SSE: `TypedResults.ServerSentEvents` de `ChatResponseUpdate`…)»; §F.3: `EP -->|chat · excepción declarada| CH`, `CH["IChatClient del asistente…"]`, sin nodo de agente ni de almacén; §F.4: «en la API, en `IAlmacenDeConversaciones`».
+- **Impacto**: dos constructores arman el chat distinto. La demo, que tiene que ilustrar las capas, deja sin capa justo la pieza con estado.
+- **Dirección**: fijar el contrato de entrada de cada paso del chat (qué consume Presentación en PD-1/PD-5 y qué en PD-6, con una ruta o un modo por escalón), ubicar `IAlmacenDeConversaciones` (puerto en Application o detalle de Presentación) y dibujarlo en §F.3 y en el delta.
+
+### ARQ2-05 · La ayuda (PD-2) es una segunda excepción no declarada, y la «política de origen» no tiene en la demo ningún pedido que la dispare (S3, confianza 0,75)
+
+- **Ubicación**: §F.3 (arista `EP -->|ayuda| PT`); §B.2; §A.4, punto 6; §F.4 («Política de origen»); AC-4.
+- **Afirmación**: §B.2 dice que «todo adaptador desemboca en un caso de uso» y que la única excepción es el chat. Pero en §F.3 el endpoint de ayuda llama **directo** al puerto `IAyuda`, sin caso de uso. Esa es una segunda excepción, sin declarar. Además, la política de origen se aplica «si el pedido trae contexto recuperado (la ayuda de PD-2…)» al `IChatClient` «asistente». Pero en la demo el contexto recuperado entra por `AyudaController` → `IAyuda`, y el asistente no tiene ninguna herramienta de recuperación (§F.4 lista listar, contar, resumir, agregar y eliminar). Ningún pedido al asistente trae contexto recuperado. La cláusula de AC-4 «ninguna herramienta de escritura montada con contexto recuperado» se cumple sin que nada la pruebe, y no se dice quién marca un pedido como «con contexto recuperado».
+- **Evidencia (E2)**: §F.3: `EP -->|ayuda| PT`; §B.2: «todo adaptador desemboca en un caso de uso. Excepción declarada: el chat»; §F.4: «si el pedido trae contexto recuperado (la ayuda de PD-2, o cualquier texto que la app no escribió), el `IChatClient` «asistente» se arma **sin** herramientas de escritura»; tabla de §F.4 sin herramienta de búsqueda; AC-4: «ninguna herramienta de escritura montada con contexto recuperado».
+- **Impacto**: la demo enseña un control que nunca se activa, y el lector no ve dónde se decide el origen. El control queda probado sólo en `Examples/16`.
+- **Dirección**: o declarar la ayuda como excepción de lectura (o darle un caso de uso), y decir que en la demo la política de origen es preventiva y que se ejerce en 16; o darle al asistente una herramienta de recuperación y fijar el punto del código que marca el origen, con su prueba.
+
+### ARQ2-06 · El delta de Application está vacío, pero las herramientas y el controller necesitan casos de uso que `LocalidadService` no tiene (S3, confianza 0,8)
+
+- **Ubicación**: §F.2 (fila `Application/`, columna «Modificado a causa de la IA»: «—»; fila Controllers: «`LocalidadesController` deja de leer del repositorio salteando el servicio»); §F.4 (pedido de aprobación: «resuelve los argumentos contra el caso de uso dentro de la sesión»).
+- **Afirmación**: en `8fb4c3a`, `LocalidadService` sólo tiene `GetAllAsync`, `SaveAsync` (que devuelve `Result` sin la entidad) y `DeleteAsync`. El controller usa el repositorio en `GetById`, en `Create` (para ubicar la entidad recién creada) y en `Update`. Para que el controller «deje de leer del repositorio», y para que el pedido de aprobación muestre nombre y provincia del id «resolviendo contra el caso de uso», hace falta un caso de uso nuevo (por ejemplo, obtener por id) o filtrar `GetAllAsync` en cada lugar. También cambia `Application/DependencyInjection.cs`, que tiene que registrar los servicios nuevos. Nada de eso figura en el delta, y la tabla da Application como sólo «agregado».
+- **Evidencia (E3, sobre `8fb4c3a`)**: `LocalidadService.cs`: métodos públicos `GetAllAsync`, `SaveAsync`, `DeleteAsync`; `LocalidadesController.cs`: `ILocalidadRepository repository` y `repository.GetByIdAsync(id, …)` en `GetById` y `Update`, y `(await repository.GetAllAsync(…)).Single(…)` en `Create`; `Application/DependencyInjection.cs`: sólo `AddScoped<LocalidadService>()` y `AddScoped<EncuestaService>()`.
+- **Impacto**: aparece un cambio en Application sin registrar, o el constructor resuelve con el repositorio (lo que AC-5 prohíbe en herramientas) o con `GetAllAsync` filtrado en Presentación.
+- **Dirección**: declarar en §F.2 los cambios de Application que exige la integración (qué método, en qué columna y por qué) y cómo `agregar_localidad` devuelve el id creado, si el modelo lo necesita.
+
+### ARQ2-07 · Trazabilidad ADR ↔ sección: un resto de la v0 y tres secciones sin su ADR (S3, confianza 0,9)
+
+- **Ubicación**: §C, Anexo F («§5.8 desaparece como subsección: queda una remisión») frente a §C §5 («§5.8 Decisión en curso: ADR-02»), §A.2 y P-02; plantilla de §C («Qué decisión toca»); §C §11; dueños de ADR-08 y ADR-11.
+- **Afirmación**: (a) En la v1, §5.8 es el anticipo de ADR-02 que exigen §A.2 y P-02, y el Anexo F lo hace «desaparecer». Es la frase de la v0, donde §5.8 eran los paquetes y el anticipo era §5.9. Es un resto que los parches dejaron y produce una contradicción interna. (b) §A.2 promete que «cada sección temática cierra con "qué decisión de arquitectura toca esto"», y la plantilla la exige en §4–§8 y §10–§12. Sin embargo, §11 no tiene subsección de decisión (ADR-06 es la de seguridad de herramientas). ADR-08 («la salida es una propuesta») no lo cita ninguna sección, aunque su tema es §5.3. Y ADR-11 tampoco, aunque el suyo es §4.3.
+- **Evidencia (E2)**: Anexo F: «§5.8 desaparece como subsección: queda una remisión»; §C §5: «§5.8 Decisión en curso: ADR-02. (El estado de paquetes vigentes y obsoletos pasa al Anexo F.)»; P-02: «anticipos de ADR-01 y ADR-02 en §4.6 y §5.8»; v0 l. 361: «§5.8 Paquetes vigentes y obsoletos … · §5.9 Decisión en curso: D-02». §C §11: subsecciones §11.1–§11.7, sin «Qué decisión toca». `grep -o "ADR-08"`: sólo en §A.4, §13.9 y §F.7. `ADR-11`: sólo en §13.12, PR-13, §F.3 y AC-5.
+- **Impacto**: el redactor puede borrar el anticipo de ADR-02, y dos ADR quedan sin la sección que los motiva. Eso contradice el «una casa por pieza» de §C para las decisiones.
+- **Dirección**: corregir la frase del Anexo F para que hable del estado de paquetes y no de §5.8; sumar «Qué decisión toca» a §11 (ADR-06) y citar ADR-08 en §5 y ADR-11 en §4, o registrar en §13 por qué no tienen sección dueña.
+
+## Revisado y bien
+
+1. **Caso de uso orquestador (§A.4 punto 6, §F.2, §F.3)**: `AltaDesdeTextoService` y `EncuestaDesdeTextoService` en Application componen el puerto de extracción, las reglas y el guardado, y el diagrama ya no conecta Presentación con los puertos de escritura. Esto resuelve ARQ-01 del ciclo 1 sin crear lógica en el adaptador, y la secuencia de §A.4 coincide con §F.3.
+2. **Sesión por adaptador de entrada (§F.5)**: es fiel a `8fb4c3a`. `SessionHeaderMiddleware` aplica el id sólo si es válido y lo devuelve en el encabezado. `SessionMiddleware` emite la cookie sólo en documentos. `Routes.OnParametersSet` fija el `SessionContext` del circuito, con la misma cita de la cabecera. El `UseWhen` por ruta y la sesión fija de `/mcp` como delta declarado son la forma correcta de tener tres fuentes de identidad sin que ninguna herramienta reciba la sesión como argumento.
+3. **Ciclo de vida en ADR-12 (§13.13, §F.4)**: el `IChatClient` es singleton, y las herramientas y el agente van por scope (petición o circuito). Es coherente con la composición del caso base, que en `Infrastructure/DependencyInjection.cs` usa `AddDbContextFactory` «y no contexto de ámbito: un circuito de Blazor vive más que una petición». Las herramientas por circuito no arrastran un `DbContext` vencido.
+
+## Solicitudes de convocatoria
+
+- **Seguridad (AH-01)**, por ARQ2-03: si el ida y vuelta de la aprobación en el escalón 1 se resuelve con el historial que reenvía el cliente, falta evaluar si AC-4 («lo ejecutado = lo mostrado») se puede garantizar en el servidor.
+- **Operación y entrega** (ya pendiente del ciclo 1), por ARQ2-01 y ARQ2-02: fusionar dos hosts en uno cambia el contenedor, el puerto publicado y los assets estáticos de §F.9.

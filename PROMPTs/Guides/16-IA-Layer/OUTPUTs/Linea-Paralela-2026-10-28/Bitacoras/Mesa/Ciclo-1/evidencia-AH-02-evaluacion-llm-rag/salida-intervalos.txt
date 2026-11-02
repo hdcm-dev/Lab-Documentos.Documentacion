@@ -1,0 +1,15 @@
+EA-6 vía B omite recuperar (BIT-16-04 §1): 2/5 = 0.40  IC95 Wilson [0.12, 0.77]
+EA-6 salida-real: vía B pide buscar_requisitos: 3/5 = 0.60  IC95 Wilson [0.23, 0.88]
+EA-6 vía A acierta y cita (corrida única): 1/1 = 1.00  IC95 Wilson [0.21, 1.00]
+X2 D1 falso aceptado si no hubiera confirmación: 2/10 = 0.20  IC95 Wilson [0.06, 0.51]
+X2 D1 altera CP inválido: 10/10 = 1.00  IC95 Wilson [0.72, 1.00]
+E-B2 válida para el dominio: 11/13 = 0.85  IC95 Wilson [0.58, 0.96]
+E-B3 aprobación emitida: 3/3 = 1.00  IC95 Wilson [0.44, 1.00]
+E-B5 coloquial→Medios: 4/7 = 0.57  IC95 Wilson [0.25, 0.84]
+Juez: acuerdo 16/20 (hipotético, MI-16 tope): 16/20 = 0.80  IC95 Wilson [0.58, 0.92]
+Juez: acuerdo 8/10 (hipotético, MI-16 piso): 8/10 = 0.80  IC95 Wilson [0.49, 0.94]
+Corpus B *Policy: hit@1 (sonda AH-02): 5/6 = 0.83  IC95 Wilson [0.44, 0.97]
+0 fallas en n=3: cota superior 95 % ≈ 0.63 (regla del tres 1.00)
+0 fallas en n=5: cota superior 95 % ≈ 0.45 (regla del tres 0.60)
+0 fallas en n=10: cota superior 95 % ≈ 0.26 (regla del tres 0.30)
+0 fallas en n=30: cota superior 95 % ≈ 0.10 (regla del tres 0.10)

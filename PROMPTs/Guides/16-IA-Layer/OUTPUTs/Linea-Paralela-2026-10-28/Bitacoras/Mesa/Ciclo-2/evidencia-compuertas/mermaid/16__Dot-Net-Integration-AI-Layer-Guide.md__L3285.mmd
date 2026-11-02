@@ -1,0 +1,24 @@
+sequenceDiagram
+  autonumber
+  actor P as Persona
+  participant UI as Página de chat
+  participant AS as AsistenteDeMovilidad (núcleo)
+  participant AD as Adaptadores de IA
+  participant M as Servidor Ollama de prueba
+  participant API as API copiada
+  P->>UI: «Borrá Resistencia»
+  UI->>UI: pide permiso al limitador
+  UI->>AS: ConversarAsync(sesión, conversación, texto)
+  AS-->>UI: EtapaIniciada interpretar
+  AS->>AD: clasificar la intención
+  AD->>M: salida estructurada
+  AS-->>UI: EtapaIniciada proponer-baja
+  AS->>AD: elegir entre las localidades de la sesión
+  AD->>M: salida estructurada con tipo e id
+  Note over AS: valida tipo, id y sesión y lee la entidad
+  AS-->>UI: TextoParcial y AccionPropuesta
+  AS-->>UI: Final
+  Note over UI: cero bajas hasta el clic
+  P->>UI: Confirmar baja
+  UI->>API: DELETE de la localidad, con X-Sesion-Id
+  API-->>UI: 204

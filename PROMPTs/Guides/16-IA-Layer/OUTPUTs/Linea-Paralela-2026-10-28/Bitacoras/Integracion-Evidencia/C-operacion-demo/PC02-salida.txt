@@ -1,0 +1,62 @@
+CONCEDIDO build a operacion-telemetria hasta 2026-10-28T12:26:17-0300 (renová con: <gestor-de-turnos> renovar build operacion-telemetria)
+10.0.403
+# runtime 10.0.14; MEAI 10.11.0.0; OpenTelemetry 1.20.1+0bfd4c350f670dbc819b39bd57fac4c3ad5ba238
+
+[A] Rama A: caché → UseFunctionInvocation → UseOpenTelemetry → cliente
+  caché fría: respuesta=«2»; llamadas al cliente guionado=2; spans de «MovilidadUrbana.AI»=4; resultados de herramienta vistos por el cliente=1
+    orchestrate_tools [in=24, out=6, dur=91.3 ms]
+      chat [in=12, out=3, dur=46.0 ms]
+      execute_tool contar_localidades_por_provincia [in=-, out=-, dur=6.6 ms]
+      chat [in=12, out=3, dur=0.8 ms]
+    métrica gen_ai.client.token.usage (Histogram): input:n=2,suma=24 | output:n=2,suma=6
+    métrica gen_ai.client.operation.duration (Histogram): :n=2,suma=0.0063443
+  caché caliente: respuesta=«2»; llamadas al cliente guionado=0; spans de «MovilidadUrbana.AI»=0; resultados de herramienta vistos por el cliente=0
+    métrica movilidadurbana.ai.cache.aciertos (LongSum): :n=1,suma=1
+
+[B] R-C07: UseOpenTelemetry → caché → UseFunctionInvocation → cliente
+  caché fría: respuesta=«2»; llamadas al cliente guionado=2; spans de «MovilidadUrbana.AI»=1; resultados de herramienta vistos por el cliente=1
+    chat [in=24, out=6, dur=0.9 ms]
+    métrica gen_ai.client.token.usage (Histogram): input:n=1,suma=24 | output:n=1,suma=6
+    métrica gen_ai.client.operation.duration (Histogram): :n=1,suma=0.0008447
+  caché caliente: respuesta=«2»; llamadas al cliente guionado=0; spans de «MovilidadUrbana.AI»=1; resultados de herramienta vistos por el cliente=0
+    chat [in=24, out=6, dur=0.3 ms]
+    métrica movilidadurbana.ai.cache.aciertos (LongSum): :n=1,suma=1
+    métrica gen_ai.client.token.usage (Histogram): input:n=1,suma=24 | output:n=1,suma=6
+    métrica gen_ai.client.operation.duration (Histogram): :n=1,suma=0.0003065
+
+[D] Doble capa: UseOpenTelemetry (externa) → caché → UseFunctionInvocation → UseOpenTelemetry (interna) → cliente, mismo sourceName
+  caché fría: respuesta=«2»; llamadas al cliente guionado=2; spans de «MovilidadUrbana.AI»=5; resultados de herramienta vistos por el cliente=1
+    chat [in=24, out=6, dur=0.5 ms]
+      orchestrate_tools [in=24, out=6, dur=0.2 ms]
+        chat [in=12, out=3, dur=0.0 ms]
+        execute_tool contar_localidades_por_provincia [in=-, out=-, dur=0.0 ms]
+        chat [in=12, out=3, dur=0.0 ms]
+    métrica gen_ai.client.token.usage (Histogram): input:n=3,suma=48 | output:n=3,suma=12
+    métrica gen_ai.client.operation.duration (Histogram): :n=3,suma=0.0004485
+  caché caliente: respuesta=«2»; llamadas al cliente guionado=0; spans de «MovilidadUrbana.AI»=1; resultados de herramienta vistos por el cliente=0
+    chat [in=24, out=6, dur=0.2 ms]
+    métrica movilidadurbana.ai.cache.aciertos (LongSum): :n=1,suma=1
+    métrica gen_ai.client.token.usage (Histogram): input:n=1,suma=24 | output:n=1,suma=6
+    métrica gen_ai.client.operation.duration (Histogram): :n=1,suma=0.0001999
+
+[D2] Doble capa con distributed cache de MEAI sin contador (UseDistributedCache), mismo orden que D
+  caché fría: respuesta=«2»; llamadas al cliente guionado=2; spans de «MovilidadUrbana.AI»=5; resultados de herramienta vistos por el cliente=1
+    chat [in=24, out=6, dur=0.4 ms]
+      orchestrate_tools [in=24, out=6, dur=0.2 ms]
+        chat [in=12, out=3, dur=0.0 ms]
+        execute_tool contar_localidades_por_provincia [in=-, out=-, dur=0.0 ms]
+        chat [in=12, out=3, dur=0.0 ms]
+    métrica gen_ai.client.token.usage (Histogram): input:n=3,suma=48 | output:n=3,suma=12
+    métrica gen_ai.client.operation.duration (Histogram): :n=3,suma=0.00040980000000000004
+  caché caliente: respuesta=«2»; llamadas al cliente guionado=0; spans de «MovilidadUrbana.AI»=1; resultados de herramienta vistos por el cliente=0
+    chat [in=24, out=6, dur=0.3 ms]
+    métrica gen_ai.client.token.usage (Histogram): input:n=1,suma=24 | output:n=1,suma=6
+    métrica gen_ai.client.operation.duration (Histogram): :n=1,suma=0.0001975
+
+[S] Clave de caché y sesión (caché por fuera de UseFunctionInvocation)
+  miembros con «Key» en DistributedCachingChatClient: Method:get_CacheKeyAdditionalValues, Method:set_CacheKeyAdditionalValues, Method:GetCacheKey, Property:CacheKeyAdditionalValues, Field:_cacheKeyAdditionalValues
+  CacheKeyAdditionalValues=(sin) sesion-A: llamadas al cliente=2 → fallo de caché
+  CacheKeyAdditionalValues=(sin) sesion-B: llamadas al cliente=0 → ACIERTO (respuesta de otra sesión)
+  CacheKeyAdditionalValues=[SessionId] sesion-A: llamadas al cliente=2 → fallo de caché
+  CacheKeyAdditionalValues=[SessionId] sesion-B: llamadas al cliente=2 → fallo de caché
+LIBERADO build por operacion-telemetria

@@ -1,0 +1,7 @@
+# R9 — 2026-10-28, recurso build, SDK 10.0.403 (estación 1), dotnet run -c Release
+MEAI 10.11.0.0
+MaximumIterationsPerRequest=40
+MaximumConsecutiveErrorsPerRequest=3
+TerminateOnUnknownCalls=False
+ChatOptions.Reasoning existe=True
+ReasoningEffort.None existe=True valores=None,Low,Medium,High,ExtraHigh

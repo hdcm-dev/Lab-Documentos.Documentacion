@@ -1,0 +1,8 @@
+CONCEDIDO build a aplicacion-c1 hasta 2026-10-28T11:58:40-0300 (renová con: <gestor-de-turnos> renovar build aplicacion-c1)
+2026-10-28T14:38:40+00:00
+10.0.403
+Permisos=0, con atributo: OptionsValidationException -> DataAnnotation validation failed for 'OpcionesDeIA.Concurrencia' members: 'Permisos' with the error: 'The field Permisos must be between 1 and 64.'.
+Permisos=0, sin atributo: arrancó
+sin TimeoutSegundos: OptionsValidationException -> DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.
+válido: arrancó
+LIBERADO build por aplicacion-c1

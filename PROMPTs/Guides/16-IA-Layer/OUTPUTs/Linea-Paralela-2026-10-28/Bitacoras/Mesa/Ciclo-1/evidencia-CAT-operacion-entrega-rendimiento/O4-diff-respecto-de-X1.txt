@@ -1,0 +1,4 @@
+42c42
+<     using var root = sc.BuildServiceProvider(new ServiceProviderOptions { ValidateScopes = true });
+---
+>     using var root = sc.BuildServiceProvider(new ServiceProviderOptions { ValidateScopes = bool.Parse(Environment.GetEnvironmentVariable("VALIDAR") ?? "true") });

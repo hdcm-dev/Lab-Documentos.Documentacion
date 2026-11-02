@@ -1,0 +1,31 @@
+2026-10-28T09:45:05-03:00
+Microsoft.Extensions.AI	10.11.0	listed=True	published=2026-10-14	deprecation=no	vulns=0
+Microsoft.Extensions.AI.Abstractions	10.11.0	listed=True	published=2026-10-14	deprecation=no	vulns=0
+Microsoft.Extensions.AI.OpenAI	10.11.0	listed=True	published=2026-10-14	deprecation=no	vulns=0
+OllamaSharp	5.5.0	listed=True	published=2026-09-30	deprecation=no	vulns=0
+Microsoft.Extensions.VectorData.Abstractions	10.11.0	listed=True	published=2026-10-14	deprecation=no	vulns=0
+CommunityToolkit.VectorData.InMemory	1.0.1	listed=True	published=2026-08-10	deprecation=no	vulns=0
+CommunityToolkit.VectorData.SqliteVec	1.0.3-preview	listed=True	published=2026-10-09	deprecation=no	vulns=0
+Microsoft.Extensions.DataIngestion	10.11.0-preview.1.26513.7	listed=True	published=2026-10-14	deprecation=no	vulns=0
+Microsoft.Agents.AI	1.26.0	listed=True	published=2026-10-23	deprecation=no	vulns=0
+Microsoft.Agents.AI.Workflows	1.26.0	listed=True	published=2026-10-23	deprecation=no	vulns=0
+Microsoft.Agents.AI.Hosting	1.26.0-preview.261023.1	listed=True	published=2026-10-23	deprecation=no	vulns=0
+ModelContextProtocol.AspNetCore	2.3.0	listed=True	published=2026-10-20	deprecation=no	vulns=0
+Microsoft.Extensions.AI.Evaluation	10.11.0	listed=True	published=2026-10-14	deprecation=no	vulns=0
+Microsoft.Extensions.AI.Evaluation.Quality	10.11.0	listed=True	published=2026-10-14	deprecation=no	vulns=0
+Microsoft.Extensions.AI.Evaluation.Reporting	10.11.0	listed=True	published=2026-10-14	deprecation=no	vulns=0
+Microsoft.Extensions.AI.Evaluation.Safety	10.11.0-preview.1.26513.7	listed=True	published=2026-10-14	deprecation=no	vulns=0
+Microsoft.Extensions.AI.Evaluation.NLP	10.11.0-preview.1.26513.7	listed=True	published=2026-10-14	deprecation=no	vulns=0
+Aspire.OpenAI	13.6.4-preview.1.26523.11	listed=True	published=2026-10-24	deprecation=no	vulns=0
+CommunityToolkit.Aspire.Hosting.Ollama	13.6.1	listed=True	published=2026-10-26	deprecation=no	vulns=0
+Microsoft.ML.OnnxRuntimeGenAI	0.18.0	listed=True	published=2026-10-14	deprecation=no	vulns=0
+OpenTelemetry.Extensions.Hosting	1.20.1	listed=True	published=2026-10-20	deprecation=no	vulns=0
+OpenTelemetry.Exporter.OpenTelemetryProtocol	1.20.1	listed=True	published=2026-10-20	deprecation=no	vulns=0
+Microsoft.EntityFrameworkCore.Sqlite	10.0.14	listed=True	published=2026-10-25	deprecation=no	vulns=0
+Microsoft.Extensions.Compliance.Redaction	10.11.0	listed=True	published=2026-10-14	deprecation=no	vulns=0
+
+# Microsoft.Extensions.AI.Ollama
+Microsoft.Extensions.AI.Ollama	9.7.0-preview.1.25356.2	listed=True	published=2025-07-08	deprecation=["Other"]	vulns=0
+# PyPI/npm LangGraph
+pypi langgraph 1.2.18 2026-10-26T20:04:29
+npm @langchain/langgraph 1.5.3 2026-10-26T19:41:49.181Z

@@ -1,0 +1,17 @@
+220:- **«estación de 4 núcleos»** abrevia *medido en la estación de laboratorio (CPU 
+221:- **«estación con más núcleos»** abrevia *medido en una estación de laboratorio 
+407:- **El modo cambia la latencia.** Llamadas a herramientas: razonamiento apagado, pared
+408:- **El servidor no hace cumplir el esquema de la herramienta.** «¿Cuánta gente cont
+409:- **La forma no es la verdad.** «Agregá Goya, Corrientes, CP 34, 89959 habitantes» 
+410:- **La ventana declarada no es la configurada.** El 4b declara 262 144 tokens nativos 
+412:Y el prompt se paga en tiempo: en esa estación, la lectura rondó 19 tokens por segun
+464:Dos de esos riesgos ya se observaron. En **ESC-02**, la similitud siempre devuelve alg
+886:No como fuente de verdad: el prompt orienta y la regla se hace cumplir en código [REF
+2813:Compila en `Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.Prue
+2939:El servidor de prueba procesa un pedido por modelo a la vez por defecto (`OLLAMA_NUM_
+3015:§5 mostró que, si el prompt supera `num_ctx`, Ollama lo recorta sin dar error y la 
+3051:Compila en `Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.Prue
+3086:Contra el modelo, con la composición de la demo: ante la inyección por `Localidad.N
+3090:LLM05 (*Improper Output Handling*) es tratar la salida del modelo como código o marc
+3171:Ollama es un servidor local fácil de compartir; atiende un pedido por modelo por def
+3435:> `qwen3.5:4b` se eligió frente a `qwen3.5:2b` porque normaliza al catálogo (D3: el

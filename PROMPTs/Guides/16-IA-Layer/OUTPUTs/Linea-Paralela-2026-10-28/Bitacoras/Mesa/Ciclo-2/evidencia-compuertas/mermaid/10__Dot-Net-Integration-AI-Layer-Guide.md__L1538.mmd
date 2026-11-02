@@ -1,0 +1,15 @@
+flowchart LR
+  subgraph Arranque["Al arrancar: ingesta"]
+    A["12 requisitos leídos por reflexión"] --> B["Documento: tema y texto, sin instrucción"]
+    B --> C["IEmbeddingGenerator y control de dimensión"]
+    C --> D[("Colección InMemory, similitud coseno")]
+  end
+  subgraph Pedido["Por pedido: vía A"]
+    Q["Pregunta con largo validado"] --> QI["Consulta con instrucción de tarea"]
+    QI --> S["SearchAsync top-k"]
+    S --> E["Sobre JSON: datos, no instrucciones"]
+    E --> P["Instrucción fija, fragmentos, pregunta al final"]
+    P --> L["IChatClient"]
+    L --> R["Respuesta; la aplicación valida las citas"]
+  end
+  D --> S

@@ -1,0 +1,154 @@
+10.0.403
+    0 Error(s)
+    0 Warning(s)
+Time Elapsed 00:00:20.23
+   "errores": {
+     "codigoPostal": "El código postal debe tener 4 dígitos (0-9)."
+   }
+ }; lecturas en esta pregunta: 0; escrituras: 0
+  Passed Negativa2_CodigoPostalInvalido_ErrorPorCampo_SinLeerNiEscribir("34OO") [9 ms]
+  Standard Output Messages:
+ listar_localidades({"codigoPostal":"34OO"}) → {
+   "ok": false,
+   "errores": {
+     "codigoPostal": "El código postal debe tener 4 dígitos (0-9)."
+   }
+ }; lecturas en esta pregunta: 0; escrituras: 0
+  Passed Negativa3_LocalidadInexistente_ErrorPorCampo_SinEscrituras [6 ms]
+  Standard Output Messages:
+ listar_localidades({"nombre":"Bella Vista"}) → {
+   "ok": false,
+   "errores": {
+     "nombre": "No hay ninguna localidad «Bella Vista» cargada."
+   }
+ }; lecturas en esta pregunta: 1; escrituras: 0
+  Passed Negativa4_LocalidadDeOtraSesion_NoSeVe_YLaRespuestaEsLaDeUnaInexistente [43 ms]
+  Standard Output Messages:
+ listar_localidades({"nombre":"Goya"}) → {
+   "ok": false,
+   "errores": {
+     "nombre": "No hay ninguna localidad «Goya» cargada."
+   }
+ }; lecturas en esta pregunta: 1; escrituras: 1
+ listar_localidades({"nombre":"Goya"}) → {
+   "ok": false,
+   "errores": {
+     "nombre": "No hay ninguna localidad «Goya» cargada."
+   }
+ }; lecturas en esta pregunta: 1; escrituras: 0
+ listar_localidades({"nombre":"Goya"}) → {
+   "ok": true,
+   "datos": [
+     {
+       "nombre": "Goya",
+       "provincia": "Corrientes",
+       "codigoPostal": "3450",
+       "habitantes": 89959
+     }
+   ],
+   "errores": {}
+ }; lecturas en esta pregunta: 1; escrituras: 1
+contar_localidades_por_provincia({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Corrientes",
+    "cantidad": 1
+  },
+  "errores": {}
+}; lecturas en esta pregunta: 1; escrituras: 1
+contar_localidades_por_provincia({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Corrientes",
+    "cantidad": 2
+  },
+  "errores": {}
+}; lecturas en esta pregunta: 1; escrituras: 1
+excepción: «base caída»; ejecuciones de la herramienta=3; llamadas al modelo=3
+MaximumIterationsPerRequest=5; MaximumConsecutiveErrorsPerRequest=1
+llamadas al modelo=4; herramientas ejecutadas=3; lecturas=3; última llamada: herramientas=0, ToolMode=null; texto final=«respuesta sin herramientas»
+  Passed Negativa4b_ContarEnOtraSesion_NoSumaLoDeLaOtra [49 ms]
+  Standard Output Messages:
+ contar_localidades_por_provincia({"provincia":"Corrientes"}) → {
+   "ok": true,
+   "datos": {
+     "provincia": "Corrientes",
+     "cantidad": 1
+   },
+   "errores": {}
+ }; lecturas en esta pregunta: 1; escrituras: 1
+ contar_localidades_por_provincia({"provincia":"Corrientes"}) → {
+   "ok": true,
+   "datos": {
+     "provincia": "Corrientes",
+     "cantidad": 2
+   },
+   "errores": {}
+ }; lecturas en esta pregunta: 1; escrituras: 1
+  Passed ErroresConsecutivos_PasadoElMaximo_LaExcepcionSale [15 ms]
+  Standard Output Messages:
+ excepción: «base caída»; ejecuciones de la herramienta=3; llamadas al modelo=3
+  Passed LimiteFueraDeRango_NoArranca("0","2") [4 ms]
+  Passed LimiteFueraDeRango_NoArranca("3","-1") [2 ms]
+  Passed LosLimitesSalenDeLaConfiguracion [11 ms]
+  Standard Output Messages:
+ MaximumIterationsPerRequest=5; MaximumConsecutiveErrorsPerRequest=1
+  Passed UnModeloQueNoTermina_SeCortaEnElMaximoDeIteraciones [8 ms]
+  Standard Output Messages:
+ llamadas al modelo=4; herramientas ejecutadas=3; lecturas=3; última llamada: herramientas=0, ToolMode=null; texto final=«respuesta sin herramientas»
+  Passed ElPatronDetectaUnLiteral("IChatClient c = new OllamaApiClient(new Uri(\"http://localhost:11434\"), \"qwen3.5:4b\");") [4 ms]
+  Passed ElPatronDetectaUnLiteral("f.MaximumIterationsPerRequest = 5;") [< 1 ms]
+  Passed ElPatronDetectaUnLiteral("http.Timeout = TimeSpan.FromSeconds(300);") [< 1 ms]
+archivos .cs revisados: 21; literales fuera de opciones: 0
+tipos de Application/Domain revisados: 30; referencias a MEAI u proveedores: 0
+ollama: cliente OllamaSharp.OllamaApiClient; rutas /api/chat, /api/chat; herramienta contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}; texto «Hay 1 localidad cargada en Chaco.»
+openai-compatible: cliente OpenAI.Chat.ChatClient; rutas /v1/chat/completions, /v1/chat/completions; herramienta contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}; texto «Hay 1 localidad cargada en Chaco.»
+/api/chat: tools=2, options={"num_ctx":8192}, tool={"role":"tool","content":"{\u0022CallId\u0022:\u0022fd747978\u0022,\u0022Result\u0022:{\u0022ok\u0022:true,\u0022datos\u0022:{\u0022provincia\u0022:\u0022Chaco\u0022,\u0022cantidad\u0022:1},\u0022errores\u0022:{}}}"}
+/v1: tools=2, resto del cuerpo={"model":"modelo-de-prueba","reasoning_effort":"none","tool_choice":"auto"}, tool={"role":"tool","tool_call_id":"call_1","content":"{\n  \u0022ok\u0022: true,\n  \u0022datos\u0022: {\n    \u0022provincia\u0022: \u0022Chaco\u0022,\n    \u0022cantidad\u0022: 1\n  },\n  \u0022errores\u0022: {}\n}"}
+  Passed NingunLiteralDeConfiguracionFueraDeOpciones [28 ms]
+  Standard Output Messages:
+ archivos .cs revisados: 21; literales fuera de opciones: 0
+  Passed Application_NoNombraTiposDelProveedorNiDeMEAI [27 ms]
+  Standard Output Messages:
+ tipos de Application/Domain revisados: 30; referencias a MEAI u proveedores: 0
+  Passed CasoRojo_UnaPropiedadChatResponse_SeDetecta [< 1 ms]
+  Passed DosProveedores_MismaHerramienta_MismoResultadoDelCasoDeUso [1 s]
+  Standard Output Messages:
+ ollama: cliente OllamaSharp.OllamaApiClient; rutas /api/chat, /api/chat; herramienta contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+   "ok": true,
+   "datos": {
+     "provincia": "Chaco",
+     "cantidad": 1
+   },
+   "errores": {}
+ }; texto «Hay 1 localidad cargada en Chaco.»
+ openai-compatible: cliente OpenAI.Chat.ChatClient; rutas /v1/chat/completions, /v1/chat/completions; herramienta contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+   "ok": true,
+   "datos": {
+     "provincia": "Chaco",
+     "cantidad": 1
+   },
+   "errores": {}
+ }; texto «Hay 1 localidad cargada en Chaco.»
+  Passed ElResultadoDeLaHerramientaViajaAlModelo_EnElFormatoDeCadaVia [41 ms]
+  Standard Output Messages:
+ /api/chat: tools=2, options={"num_ctx":8192}, tool={"role":"tool","content":"{\u0022CallId\u0022:\u0022fd747978\u0022,\u0022Result\u0022:{\u0022ok\u0022:true,\u0022datos\u0022:{\u0022provincia\u0022:\u0022Chaco\u0022,\u0022cantidad\u0022:1},\u0022errores\u0022:{}}}"}
+ /v1: tools=2, resto del cuerpo={"model":"modelo-de-prueba","reasoning_effort":"none","tool_choice":"auto"}, tool={"role":"tool","tool_call_id":"call_1","content":"{\n  \u0022ok\u0022: true,\n  \u0022datos\u0022: {\n    \u0022provincia\u0022: \u0022Chaco\u0022,\n    \u0022cantidad\u0022: 1\n  },\n  \u0022errores\u0022: {}\n}"}
+Test Run Successful.
+Total tests: 23
+     Passed: 23
+ Total time: 5.6284 Seconds

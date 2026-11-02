@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant P as Persona
+    participant S as Servidor (puerto del asistente)
+    participant A as Agente de MAF
+    participant H as Herramienta de escritura
+    P->>S: «Borrá Resistencia»
+    S->>A: RunAsync en la sesión de la conversación
+    A-->>S: ToolApprovalRequestContent (no ejecuta)
+    S->>S: resuelve la entidad en la sesión y registra la pendiente con id aleatorio
+    S-->>P: «Dar de baja Resistencia (Chaco), id 2» + id de aprobación
+    P->>S: decisión con el id de aprobación
+    S->>S: toma la pendiente: misma sesión y conversación, no vencida, un solo uso
+    S->>A: ToolApprovalResponseContent con la llamada guardada
+    A->>H: ejecuta la llamada aprobada
+    H->>H: la guarda compara con la copia del servidor
+    H-->>A: resultado del caso de uso
+    A-->>S: texto final
+    S-->>P: «Se dio de baja Resistencia»

@@ -1,0 +1,4 @@
+D1: n=10 fallas 2b=1 [0.02; 0.40] 4b=10 [0.72; 1.00] discordantes=9 (sólo 2b 0, sólo 4b 9)  R-LLM-3e: difiere
+D3: n=10 fallas 2b=10 [0.72; 1.00] 4b=0 [0.00; 0.28] discordantes=10 (sólo 2b 10, sólo 4b 0)  R-LLM-3e: difiere
+D3-T: n=10 fallas 2b=9 [0.60; 0.98] 4b=1 [0.02; 0.40] discordantes=8 (sólo 2b 8, sólo 4b 0)  R-LLM-3e: difiere
+D6: n=10 fallas 2b=10 [0.72; 1.00] 4b=10 [0.72; 1.00] discordantes=0 (sólo 2b 0, sólo 4b 0)  R-LLM-3e: no separado con este N

@@ -1,0 +1,15 @@
+# Sonda: ChatCompletionAgent de SK 1.81.0 con un IChatClient guionado, en cuatro formas de registrarlo
+# Fecha: 2026-10-28. Imagen: mcr.microsoft.com/dotnet/sdk@sha256:de4fe90a98845d75910b9769662465c84de1a934665c431279d1382b2bddc02b (SDK 10.0.403). Sin modelo: no corresponde cabecera R-LLM (el ejemplo no corre contra el servidor de prueba).
+# Comando: proyecto de sonda aparte (SK Core 1.81.0, Agents.Core 1.81.0, MAF 1.26.0, MEAI 10.11.0); ichatclient = IChatClient en los servicios del kernel; adaptador = AsChatCompletionService(); adaptador+invocacion = AsBuilder().UseKernelFunctionInvocation().Build().AsChatCompletionService(); kernel.InvokePrompt con IChatClient
+
+EN COLA build (posición 2); esperando hasta 90 min...
+CONCEDIDO build a ex12 hasta 2026-10-28T16:28:27-0300 (renová con: <gestor-de-turnos> renovar build ex12)
+ichatclient: msg role=assistant items=[FunctionCallContent] content=''
+ichatclient: llamadas=1 ejec=0 pedido=Encuesta_resultados_por_medio ofrecidas=Encuesta_resultados_por_medio
+adaptador: msg role=assistant items=[FunctionCallContent] content=''
+adaptador: llamadas=1 ejec=0 pedido=Encuesta_resultados_por_medio ofrecidas=Encuesta_resultados_por_medio
+adaptador+invocacion: msg role=assistant items=[TextContent] content='(sin modelo) ok Corrientes'
+adaptador+invocacion: llamadas=2 ejec=1 pedido=Encuesta_resultados_por_medio ofrecidas=Encuesta_resultados_por_medio|Encuesta_resultados_por_medio
+kernel.InvokePrompt: EXC ArgumentNullException: Value cannot be null. (Parameter 'metadata')
+kernel.InvokePrompt: llamadas=0 ejec=0 pedido= ofrecidas=
+LIBERADO build por ex12

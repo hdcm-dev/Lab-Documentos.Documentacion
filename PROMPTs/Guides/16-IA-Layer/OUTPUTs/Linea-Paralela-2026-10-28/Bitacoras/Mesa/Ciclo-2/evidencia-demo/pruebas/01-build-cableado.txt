@@ -1,0 +1,14 @@
+EN COLA build (posición 3); esperando hasta 90 min...
+CONCEDIDO build a demo-prueba hasta 2026-10-28T16:32:31-0300 (renová con: <gestor-de-turnos> renovar build demo-prueba)
+10.0.403
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:01:00.68
+Test run for /work/tests/MovilidadUrbana.Asistente.Tests/bin/Release/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: /salida/cableado.trx
+
+Passed!  - Failed:     0, Passed:    69, Skipped:     0, Total:    69, Duration: 38 s - MovilidadUrbana.Asistente.Tests.dll (net10.0)
+LIBERADO build por demo-prueba

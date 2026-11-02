@@ -1,0 +1,11 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MovilidadUrbana.PruebaDeArquitectura -> /ex/src/MovilidadUrbana.PruebaDeArquitectura/bin/Debug/net10.0/MovilidadUrbana.PruebaDeArquitectura.dll
+  MovilidadUrbana.PruebaDeArquitectura.Tests -> /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/bin/Debug/net10.0/MovilidadUrbana.PruebaDeArquitectura.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:16.15
+build rc=0

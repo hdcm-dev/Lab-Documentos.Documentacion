@@ -1,0 +1,10 @@
+# procedencia de CasoBase/ — origen: Lab-E2E.WebBlazor 59399ba, src/MovilidadUrbana.ApiWeb; fecha 2026-10-28T16:02:46-03:00
+igual  ./Application/Abstractions/ILocalidadRepository.cs
+igual  ./Application/Abstractions/ISessionContext.cs
+igual  ./Application/Localidades/LocalidadModel.cs
+igual  ./Application/Localidades/LocalidadService.cs
+igual  ./Application/Result.cs
+igual  ./Domain/Catalogos.cs
+igual  ./Domain/Entities/Localidad.cs
+igual  ./Domain/Rules/LocalidadRules.cs
+igual  ./Infrastructure/Sessions/SessionContext.cs

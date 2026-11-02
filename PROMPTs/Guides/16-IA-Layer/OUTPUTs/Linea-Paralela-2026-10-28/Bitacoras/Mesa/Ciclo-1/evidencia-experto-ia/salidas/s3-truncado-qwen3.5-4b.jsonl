@@ -1,0 +1,1 @@
+{"sonda": "s3", "modelo": "qwen3.5:4b", "opciones": "sin num_ctx; think false; temperature 0; num_predict 8", "caracteres_prompt": 23153, "prompt_eval_count": 2050, "done_reason": "stop", "respuesta": "colectivo", "ps": [{"modelo": "qwen3.5:4b", "context_length": 4096}, {"modelo": "qwen2.5:0.5b", "context_length": 4096}], "pared_s": 100.25, "fecha": "2026-10-28T09:55:06-0300"}

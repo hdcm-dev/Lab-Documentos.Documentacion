@@ -1,0 +1,10 @@
+N0b-Producto-Datos-Y-Perfil.md 7
+N1-Capa-IA-En-El-Stack.md 9
+N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md 7
+N2-Abstracciones-Y-Proveedores-NET.md 10
+N3-RAG-En-NET.md 9
+N3b-CAG-Y-Estrategias-De-Conocimiento.md 7
+N4-Agentes-Y-Orquestacion.md 11
+N5-Operacion-Calidad-Seguridad.md 11
+N6-Caso-Movilidad-Urbana.md 9
+total 80

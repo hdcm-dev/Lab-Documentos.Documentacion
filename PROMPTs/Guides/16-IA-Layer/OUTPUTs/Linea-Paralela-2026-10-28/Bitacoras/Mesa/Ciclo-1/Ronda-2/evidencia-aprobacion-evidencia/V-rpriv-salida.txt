@@ -1,0 +1,21 @@
+# 2026-10-28T14:10:24-03:00 juez de evidencia, ronda 2. RPRIV_LISTA de prueba fuera de OUTPUTs, con un token inexistente (identificadores no se mide aquí). sinteticos-prueba.txt = las dos líneas de P2-01.
+## rpriv-v2-del-diseno.sh
+a-escapado.jsonl: raiz=<temporal> patrones=0 identificadores=0 cabeceras=0
+b-con-espacios.json: raiz=<temporal> patrones=0 identificadores=0 cabeceras=0
+c-indentado.json: raiz=<temporal> patrones=0 identificadores=0 cabeceras=0
+d-vacios.json: raiz=<temporal> patrones=0 identificadores=0 cabeceras=0
+OUTPUTs con sintéticos: raiz=OUTPUTs patrones=1 identificadores=0 cabeceras=0
+OUTPUTs sin sintéticos: raiz=OUTPUTs patrones=1 identificadores=0 cabeceras=5
+cabeceras por archivo
+Bitacoras/Mesa/Ciclo-1/Ronda-2/evidencia-aprobacion-evidencia/sinteticos-prueba.txt:2
+Bitacoras/Mesa/Ciclo-1/Ronda-2/evidencia-senior-dotnet/R2-cuerpo-salida.txt:3
+## rpriv-v2-con-ajuste-CH.sh
+a-escapado.jsonl: raiz=<temporal> patrones=0 identificadores=0 cabeceras=1
+b-con-espacios.json: raiz=<temporal> patrones=0 identificadores=0 cabeceras=1
+c-indentado.json: raiz=<temporal> patrones=0 identificadores=0 cabeceras=1
+d-vacios.json: raiz=<temporal> patrones=0 identificadores=0 cabeceras=0
+OUTPUTs con sintéticos: raiz=OUTPUTs patrones=1 identificadores=0 cabeceras=0
+OUTPUTs sin sintéticos: raiz=OUTPUTs patrones=1 identificadores=0 cabeceras=5
+cabeceras por archivo
+Bitacoras/Mesa/Ciclo-1/Ronda-2/evidencia-aprobacion-evidencia/sinteticos-prueba.txt:2
+Bitacoras/Mesa/Ciclo-1/Ronda-2/evidencia-senior-dotnet/R2-cuerpo-salida.txt:3

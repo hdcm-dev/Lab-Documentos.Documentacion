@@ -1,0 +1,9 @@
+  Determining projects to restore...
+  Restored /ex/CopiaSola.csproj (in 4.35 sec).
+  CopiaSola -> /ex/bin/Release/net10.0/CopiaSola.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:09.32

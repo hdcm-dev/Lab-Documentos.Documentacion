@@ -1,0 +1,15 @@
+# barrido ampliado (tarea) sobre Examples/13-Prueba-De-Arquitectura, 2026-10-28T16:18:47-03:00
+patrón: nombres de equipos y contenedores del laboratorio, rutas del home, la clave de cabeceras por pedido, ids de bitácora y la palabra prohibida de P-44
+coincidencias: 0
+literales localhost:11434 o qwen3.5:4b en *.cs: 0
+archivos con esos literales (RV-12 los permite en appsettings y README):
+README.md
+src/MovilidadUrbana.PruebaDeArquitectura/appsettings.json
+directorios bin/ u obj/: 0
+diff -r CasoBase contra el caso base (commit 59399ba):
+  Domain: igual
+  Application: igual
+  Infrastructure: igual
+  Contracts: igual
+  Controllers: igual
+  Sessions: igual

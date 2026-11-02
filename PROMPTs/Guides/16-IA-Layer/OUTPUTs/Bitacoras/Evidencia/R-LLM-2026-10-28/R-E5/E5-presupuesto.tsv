@@ -1,0 +1,25 @@
+estacion	modelo	corrida	n	mediana_s	p90_s	max_s	media_s	frio	maquina_valores
+estacion-1	qwen3-embedding:0.6b	R-06	124	1.2	4.6	9.5	2.0	0	estacion-1
+estacion-1	qwen3.5:4b	05-Contexto-Completo-Con-Prefijo	13	111.6	159.8	206.3	113.6	13	estacion-1
+estacion-1	qwen3.5:4b	R-01	2	45.0	59.4	59.4	45.0	0	estacion-1
+estacion-1	qwen3.5:4b	R-03	20	15.7	17.8	28.3	14.3	11	estacion-1
+estacion-1	qwen3.5:4b	R-04	10	14.5	17.3	19.2	14.8	10	estacion-1
+estacion-1	qwen3.5:4b	R-09	4	41.4	57.5	57.5	39.4	2	estacion-1
+estacion-1	qwen3.5:4b	R-17	2	12.1	15.6	15.6	12.1	1	estacion-1
+estacion-1	qwen3.5:4b	R-D13	2	105.5	127.8	127.8	105.5	2	estacion-1
+estacion-1	qwen3.5:4b	R-D9	2	39.1	54.2	54.2	39.1	1	estacion-1
+estacion-2	qwen3.5:4b	R-07	20	5.1	6.8	8.1	5.1	17	estacion-2
+estacion-2	qwen3.5:4b	R-08	37	2.9	8.6	11.4	4.4	11	estacion-2
+estacion-2	qwen3.5:4b	R-11	20	3.1	4.5	9.1	3.4	1	estacion-2
+estacion-2	qwen3.5:4b	R-12	4	3.3	5.6	5.6	3.6	2	estacion-2
+estacion-2	qwen3.5:4b	R-13	2	3.4	4.7	4.7	3.4	1	estacion-2
+estacion-2	qwen3.5:4b	R-15	31	50.2	85.4	94.0	55.3	31	estacion-2
+estacion-2	qwen3.5:4b	R-15b	14	44.0	55.2	82.7	47.4	14	estacion-2
+estacion-2	qwen3.5:4b	R-16	120	4.9	6.1	6.7	4.8	60	estacion-2
+estacion-2	qwen3.5:4b	R-D3	3	28.4	66.1	66.1	32.5	1	estacion-2
+estacion-2	qwen3.5:4b	R-PD	4	4.6	8.9	8.9	5.2	3	estacion-2
+
+# por estacion y modelo (descriptivo, sin agregar entre estaciones)
+estacion-1	qwen3-embedding:0.6b	124	1.2	4.6	9.5	2.0	llamadas_por_45min_mediana=2285
+estacion-1	qwen3.5:4b	55	17.3	117.9	206.3	45.0	llamadas_por_45min_mediana=155
+estacion-2	qwen3.5:4b	255	5.1	47.3	94.0	13.4	llamadas_por_45min_mediana=526

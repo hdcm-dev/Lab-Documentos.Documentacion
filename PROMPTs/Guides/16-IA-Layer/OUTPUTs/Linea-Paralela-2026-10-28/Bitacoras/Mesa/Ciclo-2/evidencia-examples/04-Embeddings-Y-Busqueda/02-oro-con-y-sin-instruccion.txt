@@ -1,0 +1,66 @@
+# R-LLM-4 — estimando: tarea, K = 12 respondibles + 10 no respondibles × m = 3 repeticiones (los embeddings no muestrean: sin semilla ni temperatura), qwen3-embedding:0.6b@ac6da0dfba84, T n/a, think n/a, ruta /api/embed (OllamaSharp 5.5.0), criterio previo: 00-criterio-previo.md, 2026-10-28; Wilson 95 % sobre las consultas; crudo: este archivo. Ollama 0.40.11; medido en la estación de laboratorio.
+repeticiones: 128/128 pares de vectores idénticos (diferencia máxima 0)
+
+## Formato: con instrucción; k = 3; umbral calibrado = 0.4756 (calibración NO separable)
+id	resp	rango	hit@1	hit@3	recall@3	RR@3	mejor	abst	top-3
+e01	sí	1	1	1	1.00	1.00	0.3730	sí	LocalidadPolicy.RequisitoDelCodigoPostal 0.3730 | LocalidadPolicy.RequisitoDeLosHabitantes 0.3468 | EncuestaPolicy.RequisitoDeLosMedios 0.3122
+e02	sí	1	1	1	1.00	1.00	0.4417	sí	LocalidadPolicy.RequisitoDeLosHabitantes 0.4417 | LocalidadPolicy.RequisitoDelNombre 0.3297 | LocalidadPolicy.RequisitoDelCodigoPostal 0.2944
+e03	sí	1	1	1	1.00	1.00	0.4337	sí	LocalidadPolicy.RequisitoDeLaProvincia 0.4337 | LocalidadPolicy.RequisitoDelNombre 0.3870 | EncuestaPolicy.RequisitoDeLaLocalidad 0.3417
+e04	sí	1	1	1	1.00	1.00	0.5282	no	LocalidadPolicy.RequisitoDelNombre 0.5282 | LocalidadPolicy.RequisitoDeLaProvincia 0.4298 | LocalidadPolicy.RequisitoDelCodigoPostal 0.2959
+e05	sí	1	1	1	1.00	1.00	0.8013	no	EncuestaPolicy.RequisitoDeLaEdad 0.8013 | EncuestaPolicy.RequisitoDeLaDistancia 0.5619 | EncuestaPolicy.RequisitoDelNombre 0.5489
+e06	sí	1	1	1	1.00	1.00	0.5757	no	EncuestaPolicy.RequisitoDeLaDistancia 0.5757 | EncuestaPolicy.RequisitoDeLosMinutos 0.4401 | EncuestaPolicy.RequisitoDeLosMedios 0.3770
+e07	sí	1	1	1	1.00	1.00	0.7574	no	EncuestaPolicy.RequisitoDeLosMinutos 0.7574 | EncuestaPolicy.RequisitoDeLaDistancia 0.5892 | EncuestaPolicy.RequisitoDelMotivo 0.4869
+e08	sí	1	1	1	1.00	1.00	0.6859	no	EncuestaPolicy.RequisitoDeLosMedios 0.6859 | EncuestaPolicy.RequisitoDeLaDistancia 0.4047 | EncuestaPolicy.RequisitoDeLosMinutos 0.3810
+e09	sí	1	1	1	1.00	1.00	0.6403	no	EncuestaPolicy.RequisitoDelMotivo 0.6403 | EncuestaPolicy.RequisitoDeLosMedios 0.4327 | EncuestaPolicy.RequisitoDeLosMinutos 0.4082
+e10	sí	-	0	0	0.00	0.00	0.5467	no	EncuestaPolicy.RequisitoDeLosMedios 0.5467 | EncuestaPolicy.RequisitoDeLosMinutos 0.5372 | EncuestaPolicy.RequisitoDeLaDistancia 0.5086
+e11	sí	1	1	1	1.00	1.00	0.3532	sí	EncuestaPolicy.RequisitoDeLaLocalidad 0.3532 | LocalidadPolicy.RequisitoDelNombre 0.3343 | LocalidadPolicy.RequisitoDeLaProvincia 0.3209
+e12	sí	1	1	1	1.00	1.00	0.5377	no	EncuestaPolicy.RequisitoDelNombre 0.5377 | LocalidadPolicy.RequisitoDelNombre 0.4902 | EncuestaPolicy.RequisitoDeLosMedios 0.2809
+e13	no	-	-	-	-	-	0.4630	sí	EncuestaPolicy.RequisitoDeLaLocalidad 0.4630 | EncuestaPolicy.RequisitoDelNombre 0.3862 | EncuestaPolicy.RequisitoDelMotivo 0.3827
+e14	no	-	-	-	-	-	0.5309	no	EncuestaPolicy.RequisitoDelNombre 0.5309 | EncuestaPolicy.RequisitoDeLaEdad 0.4672 | EncuestaPolicy.RequisitoDeLosMedios 0.4519
+e15	no	-	-	-	-	-	0.5776	no	EncuestaPolicy.RequisitoDeLaDistancia 0.5776 | EncuestaPolicy.RequisitoDeLosMedios 0.5105 | EncuestaPolicy.RequisitoDeLosMinutos 0.5100
+e16	no	-	-	-	-	-	0.2779	sí	EncuestaPolicy.RequisitoDelMotivo 0.2779 | EncuestaPolicy.RequisitoDeLosMedios 0.2500 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.2465
+e17	no	-	-	-	-	-	0.4923	no	LocalidadPolicy.RequisitoDelNombre 0.4923 | LocalidadPolicy.RequisitoDeLosHabitantes 0.4311 | LocalidadPolicy.RequisitoDelCodigoPostal 0.4199
+e18	no	-	-	-	-	-	0.4319	sí	EncuestaPolicy.RequisitoDelNombre 0.4319 | EncuestaPolicy.RequisitoDeLaEdad 0.3964 | EncuestaPolicy.RequisitoDeLaDistancia 0.3241
+e19	no	-	-	-	-	-	0.5592	no	EncuestaPolicy.RequisitoDelNombre 0.5592 | EncuestaPolicy.RequisitoDeLosMedios 0.5235 | EncuestaPolicy.RequisitoDeLaEdad 0.5151
+e20	no	-	-	-	-	-	0.5858	no	EncuestaPolicy.RequisitoDelNombre 0.5858 | EncuestaPolicy.RequisitoDeLaEdad 0.5690 | EncuestaPolicy.RequisitoDeLosMedios 0.5448
+e21	no	-	-	-	-	-	0.4408	sí	LocalidadPolicy.RequisitoDelCodigoPostal 0.4408 | LocalidadPolicy.RequisitoDeLaProvincia 0.4243 | LocalidadPolicy.RequisitoDelNombre 0.4153
+e22	no	-	-	-	-	-	0.5588	no	EncuestaPolicy.RequisitoDeLaDistancia 0.5588 | EncuestaPolicy.RequisitoDelNombre 0.5348 | EncuestaPolicy.RequisitoDeLaEdad 0.5220
+hit@1 = 11/12; Wilson 95 % [0.65; 0.99] (azar 0.08)
+hit@3 = 11/12; Wilson 95 % [0.65; 0.99] (azar 0.25)
+recall@3 = 0.917 (promedio sobre 12 respondibles)
+MRR@3 = 0.917 (promedio sobre 12 respondibles)
+abstención correcta = 4/10; Wilson 95 % [0.17; 0.69]; abstenciones indebidas en respondibles = 4/12
+
+## Formato: sin instrucción; k = 3; umbral calibrado = 0.4407 (calibración NO separable)
+id	resp	rango	hit@1	hit@3	recall@3	RR@3	mejor	abst	top-3
+e01	sí	-	0	0	0.00	0.00	0.3495	sí	EncuestaPolicy.RequisitoDelNombre 0.3495 | LocalidadPolicy.RequisitoDeLosHabitantes 0.3435 | EncuestaPolicy.RequisitoDeLosMedios 0.3294
+e02	sí	1	1	1	1.00	1.00	0.4084	sí	LocalidadPolicy.RequisitoDeLosHabitantes 0.4084 | EncuestaPolicy.RequisitoDeLaLocalidad 0.3047 | LocalidadPolicy.RequisitoDelCodigoPostal 0.2730
+e03	sí	1	1	1	1.00	1.00	0.4534	no	LocalidadPolicy.RequisitoDeLaProvincia 0.4534 | EncuestaPolicy.RequisitoDeLaLocalidad 0.3699 | LocalidadPolicy.RequisitoDelNombre 0.3416
+e04	sí	1	1	1	1.00	1.00	0.4401	sí	LocalidadPolicy.RequisitoDelNombre 0.4401 | LocalidadPolicy.RequisitoDeLaProvincia 0.3889 | EncuestaPolicy.RequisitoDeLaLocalidad 0.2973
+e05	sí	1	1	1	1.00	1.00	0.8016	no	EncuestaPolicy.RequisitoDeLaEdad 0.8016 | EncuestaPolicy.RequisitoDelNombre 0.5622 | EncuestaPolicy.RequisitoDeLaDistancia 0.5384
+e06	sí	1	1	1	1.00	1.00	0.5411	no	EncuestaPolicy.RequisitoDeLaDistancia 0.5411 | EncuestaPolicy.RequisitoDeLosMinutos 0.3781 | EncuestaPolicy.RequisitoDeLosMedios 0.2951
+e07	sí	1	1	1	1.00	1.00	0.6655	no	EncuestaPolicy.RequisitoDeLosMinutos 0.6655 | EncuestaPolicy.RequisitoDeLaDistancia 0.4603 | EncuestaPolicy.RequisitoDelMotivo 0.4369
+e08	sí	1	1	1	1.00	1.00	0.6393	no	EncuestaPolicy.RequisitoDeLosMedios 0.6393 | EncuestaPolicy.RequisitoDelMotivo 0.3932 | EncuestaPolicy.RequisitoDeLaDistancia 0.3921
+e09	sí	1	1	1	1.00	1.00	0.7065	no	EncuestaPolicy.RequisitoDelMotivo 0.7065 | EncuestaPolicy.RequisitoDeLosMinutos 0.3719 | EncuestaPolicy.RequisitoDeLosMedios 0.3673
+e10	sí	-	0	0	0.00	0.00	0.5279	no	EncuestaPolicy.RequisitoDelMotivo 0.5279 | EncuestaPolicy.RequisitoDeLosMinutos 0.5207 | EncuestaPolicy.RequisitoDeLosMedios 0.5112
+e11	sí	1	1	1	1.00	1.00	0.3450	sí	EncuestaPolicy.RequisitoDeLaLocalidad 0.3450 | LocalidadPolicy.RequisitoDeLaProvincia 0.3268 | LocalidadPolicy.RequisitoDelCodigoPostal 0.2833
+e12	sí	1	1	1	1.00	1.00	0.5205	no	EncuestaPolicy.RequisitoDelNombre 0.5205 | LocalidadPolicy.RequisitoDelNombre 0.3940 | EncuestaPolicy.RequisitoDeLosMedios 0.2937
+e13	no	-	-	-	-	-	0.4725	no	EncuestaPolicy.RequisitoDeLaLocalidad 0.4725 | EncuestaPolicy.RequisitoDelNombre 0.3867 | EncuestaPolicy.RequisitoDelMotivo 0.3853
+e14	no	-	-	-	-	-	0.4854	no	EncuestaPolicy.RequisitoDelNombre 0.4854 | EncuestaPolicy.RequisitoDeLaEdad 0.3996 | EncuestaPolicy.RequisitoDeLosMedios 0.3568
+e15	no	-	-	-	-	-	0.5461	no	EncuestaPolicy.RequisitoDeLaDistancia 0.5461 | EncuestaPolicy.RequisitoDelNombre 0.5361 | EncuestaPolicy.RequisitoDeLaEdad 0.5089
+e16	no	-	-	-	-	-	0.2773	sí	EncuestaPolicy.RequisitoDelMotivo 0.2773 | EncuestaPolicy.RequisitoDeLaFrecuencia 0.2570 | EncuestaPolicy.RequisitoDelNombre 0.2476
+e17	no	-	-	-	-	-	0.4225	sí	LocalidadPolicy.RequisitoDelNombre 0.4225 | EncuestaPolicy.RequisitoDeLaLocalidad 0.4162 | LocalidadPolicy.RequisitoDeLaProvincia 0.3972
+e18	no	-	-	-	-	-	0.3499	sí	EncuestaPolicy.RequisitoDelNombre 0.3499 | EncuestaPolicy.RequisitoDeLaEdad 0.3083 | EncuestaPolicy.RequisitoDeLaLocalidad 0.2384
+e19	no	-	-	-	-	-	0.5510	no	EncuestaPolicy.RequisitoDelNombre 0.5510 | EncuestaPolicy.RequisitoDeLaEdad 0.5091 | EncuestaPolicy.RequisitoDeLosMedios 0.5071
+e20	no	-	-	-	-	-	0.5709	no	EncuestaPolicy.RequisitoDelNombre 0.5709 | EncuestaPolicy.RequisitoDeLaEdad 0.5499 | EncuestaPolicy.RequisitoDeLaLocalidad 0.5401
+e21	no	-	-	-	-	-	0.4116	sí	LocalidadPolicy.RequisitoDeLaProvincia 0.4116 | EncuestaPolicy.RequisitoDeLaLocalidad 0.4030 | LocalidadPolicy.RequisitoDelCodigoPostal 0.3639
+e22	no	-	-	-	-	-	0.5601	no	EncuestaPolicy.RequisitoDelNombre 0.5601 | EncuestaPolicy.RequisitoDeLaEdad 0.5303 | EncuestaPolicy.RequisitoDeLaDistancia 0.5157
+hit@1 = 10/12; Wilson 95 % [0.55; 0.95] (azar 0.08)
+hit@3 = 10/12; Wilson 95 % [0.55; 0.95] (azar 0.25)
+recall@3 = 0.833 (promedio sobre 12 respondibles)
+MRR@3 = 0.833 (promedio sobre 12 respondibles)
+abstención correcta = 4/10; Wilson 95 % [0.17; 0.69]; abstenciones indebidas en respondibles = 4/12
+
+pareada hit@1: sólo con instrucción 1, sólo sin instrucción 0 → no separado con este N
+pareada hit@3: sólo con instrucción 1, sólo sin instrucción 0 → no separado con este N
+pareada abstención: sólo con instrucción 1, sólo sin instrucción 1 → no separado con este N

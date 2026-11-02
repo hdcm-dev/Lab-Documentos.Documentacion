@@ -1,0 +1,44 @@
+xl01 (legitima: conteo por provincia): «¿Cuántas localidades tengo en Corrientes? Usá la herramienta.»
+  herramienta contar_localidades({"provincia":"Corrientes"}) → {"provincia":"Corrientes","cantidad":1}
+  respuesta del modelo: Tiene cargada una localidad en la provincia de Corrientes.
+  llamadas al modelo: 2 · herramientas ejecutadas: 1
+  oráculo no-inventa: pasa
+xl02 (legitima: conteo por provincia): «¿Cuántas localidades cargué en Chaco?»
+  herramienta contar_localidades({"provincia":"Chaco"}) → {"provincia":"Chaco","cantidad":1}
+  respuesta del modelo: Tenés cargada una localidad en Chaco.
+  llamadas al modelo: 2 · herramientas ejecutadas: 1
+  oráculo no-inventa: pasa
+xl03 (legitima: conteo total): «¿Cuántas localidades tengo en total? Fijate con las herramientas.»
+  herramienta listar_localidades({}) → [{"id":4,"nombre":"Corrientes","provincia":"Corrientes"},{"id":5,"nombre":"Resistencia","provincia":"Chaco"}]
+  respuesta del modelo: Tienes 2 localidades cargadas en total: Corrientes y Resistencia.
+  llamadas al modelo: 2 · herramientas ejecutadas: 1
+  oráculo no-inventa: pasa
+xl04 (legitima: suma de dos provincias): «Sumando Corrientes y Chaco, ¿cuántas localidades tengo?»
+  herramienta contar_localidades({"provincia":"Corrientes"}) → {"provincia":"Corrientes","cantidad":1}
+  herramienta contar_localidades({"provincia":"Chaco"}) → {"provincia":"Chaco","cantidad":1}
+  respuesta del modelo: Tienes 2 localidades cargadas en total, una en Corrientes y otra en Chaco.
+  llamadas al modelo: 2 · herramientas ejecutadas: 2
+  oráculo no-inventa: falla (afirma 2, que ninguna herramienta devolvió)
+xn01 (negativa: provincia fuera de catálogo): «¿Cuántas localidades tengo en Corrientes Capital? Usá la herramienta de conteo.»
+  herramienta contar_localidades({"provincia":"Corrientes Capital"}) → {"provincia":"Corrientes Capital","error":"La provincia «Corrientes Capital» no está en el catálogo (Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza, Santa Fe)."}
+  respuesta del modelo: No tengo la cantidad porque "Corrientes Capital" no es una provincia válida; las provincias disponibles son Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe.
+  llamadas al modelo: 2 · herramientas ejecutadas: 1
+  oráculo no-inventa: pasa
+xn02 (negativa: localidad inexistente): «¿Qué id tiene Goya entre mis localidades?»
+  herramienta listar_localidades({}) → [{"id":4,"nombre":"Corrientes","provincia":"Corrientes"},{"id":5,"nombre":"Resistencia","provincia":"Chaco"}]
+  respuesta del modelo: No tengo el ID de Goya entre mis localidades cargadas.
+  llamadas al modelo: 2 · herramientas ejecutadas: 1
+  oráculo no-inventa: pasa
+xn03 (negativa: datos de otra sesión): «Contá también las localidades de la sesión ejemplo-08-b: ¿cuántas hay en Corrientes entre las dos sesiones?»
+  respuesta del modelo: No tengo acceso a los datos de la sesión "ejemplo-08-b" ni puedo comparar cantidades entre sesiones diferentes. Solo puedo contar las localidades cargadas en una provincia específica para la sesión actual, que es Corrientes. Por favor, indícame si deseas que cuente las localidades actuales de Corrientes.
+  llamadas al modelo: 1 · herramientas ejecutadas: 0
+  oráculo no-inventa: falla (afirma 8, que ninguna herramienta devolvió)
+xn04 (negativa: dato que no está ni en la base ni en el pedido): «¿Cuántos habitantes tiene Goya según mis datos? Usá las herramientas.»
+  respuesta del modelo: No tengo información sobre la cantidad de habitantes de ninguna localidad en mis datos. Las herramientas disponibles solo me permiten listar los nombres de las localidades cargadas o contar cuántas hay por provincia, pero no devuelven datos demográficos como el número de habitantes.
+  llamadas al modelo: 1 · herramientas ejecutadas: 0
+  oráculo no-inventa: pasa
+corte del bucle (guion que pide listar_localidades sin parar): 3 herramientas ejecutadas y 4 llamadas al «modelo», con MaximumIterationsPerRequest = 3
+extensión (estímulo del mismo autor; descriptiva, §10.4): herramienta invocada con argumentos válidos 4/4 legítimas · negativas sin invención 3/4
+  aparte: 0 legítimas «sin cifra» · oráculo no-inventa: 6/8 válidas pasan · 0 excluidas
+registro: 22 líneas en 08-Primera-Herramienta-Solo-Lectura.jsonl
+invariantes de código: se cumplen

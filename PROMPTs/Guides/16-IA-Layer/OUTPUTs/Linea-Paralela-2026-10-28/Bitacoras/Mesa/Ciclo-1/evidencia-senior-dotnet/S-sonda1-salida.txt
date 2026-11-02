@@ -1,0 +1,26 @@
+CONCEDIDO build a senior-dotnet hasta 2026-10-28T10:07:00-0300 (renová con: <gestor-de-turnos> renovar build senior-dotnet)
+10.0.403
+/work/Program.cs(43,22): warning ASP0000: Calling 'BuildServiceProvider' from application code results in an additional copy of singleton services being created. Consider alternatives such as dependency injecting services as parameters to 'Configure'. (https://aka.ms/AA5k895) [/work/SondaSenior.csproj]
+/work/Program.cs(54,22): warning ASP0000: Calling 'BuildServiceProvider' from application code results in an additional copy of singleton services being created. Consider alternatives such as dependency injecting services as parameters to 'Configure'. (https://aka.ms/AA5k895) [/work/SondaSenior.csproj]
+/work/Program.cs(70,23): warning ASP0000: Calling 'BuildServiceProvider' from application code results in an additional copy of singleton services being created. Consider alternatives such as dependency injecting services as parameters to 'Configure'. (https://aka.ms/AA5k895) [/work/SondaSenior.csproj]
+# SDK runtime 10.0.14; MEAI 10.11.0.0; OllamaSharp 5.5.0.0; MAF 1.26.0.0
+[S1] OTel afuera (orden de BIT-16-04 §6.2): UseOpenTelemetry → UseFunctionInvocation → cliente
+      respuesta=«2»; spans de «MovilidadUrbana.AI» = 1
+        chat|chat|parent=-
+[S1] OTel adentro: UseFunctionInvocation → UseOpenTelemetry → cliente
+      respuesta=«2»; spans de «MovilidadUrbana.AI» = 4
+        chat|chat|parent=orchestrate_tools
+        execute_tool contar_localidades_por_provincia|execute_tool contar_localidades_por_provincia|parent=orchestrate_tools
+        chat|chat|parent=orchestrate_tools
+        orchestrate_tools|orchestrate_tools|parent=-
+[S2] AddChatClient(fábrica con new OllamaApiClient(Uri), Scoped), 3 scopes → OllamaApiClient distintos = 3; HttpClient distintos = 3; timeout del HttpClient = 00:01:40
+[S2] Interno Singleton por clave + IHttpClientFactory, externo Scoped → OllamaApiClient distintos en 2 scopes = 1; timeout = 00:03:00
+[S2] Mismo patrón con el guion como interno Singleton, scope sesion-A → la herramienta vio: sesion-A
+[S2] Mismo patrón con el guion como interno Singleton, scope sesion-B → la herramienta vio: sesion-B
+[S3] TypedResults.ServerSentEvents en 10.0.0.0: ServerSentEvents<>(IAsyncEnumerable`1 values, String eventType) | ServerSentEvents<T>(IAsyncEnumerable`1 values, String eventType) | ServerSentEvents<T>(IAsyncEnumerable`1 values)
+[S3] AIAgent.SerializeSessionAsync(AgentSession session, JsonSerializerOptions jsonSerializerOptions, CancellationToken cancellationToken) → ValueTask`1<JsonElement>
+[S3] AIAgent.DeserializeSessionAsync(JsonElement serializedState, JsonSerializerOptions jsonSerializerOptions, CancellationToken cancellationToken) → ValueTask`1<AgentSession>
+[S3] VectorStoreVectorAttribute(Int32 dimensions)
+[S3] VectorStoreVectorProperty(String name, Int32 dimensions)
+[S3] VectorStoreVectorProperty(String name, Type type, Int32 dimensions)
+LIBERADO build por senior-dotnet

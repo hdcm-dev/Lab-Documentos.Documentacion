@@ -1,0 +1,96 @@
+== sha256
+eeede578a6b34e2f2f46124c0f36b1a11a8caf85fb2d4010b17a831011defa18  Dot-Net-Integration-AI-Layer-Guide.md
+== contar (REC-21)
+parte       palabras    tope      %
+Encabezado      200       -
+Parte 0        2065    1400   148%
+Parte I        3670    3500   105%
+Parte II       6517    5000   130%
+Parte III      6388    5500   116%
+Parte IV       8709    7500   116%
+Parte V        8724    6500   134%
+Parte VI       5410    4500   120%
+Cierre         3076    3000   103%
+Anexos        14261    7430   192%
+  Anexo A      2657
+  Anexo B      1693
+  Anexo C      2187
+  Anexo D      3706
+  Anexo E      2460
+  Anexo F       464
+  Anexo G      1094
+Total         58820   44330   133%
+control: wc -w del archivo = 73299
+rc 0
+== AC-5 diff-dominio
+diff-dominio: idénticos
+rc 0
+== AC-7 guia entera
+AC-7: 0 coincidencias (autoprueba: 40 de 40 positivos marcados; 0 registro(s) revisados)
+rc 0
+== AC-8 guia entera
+AC-8: 0 coincidencias fuera de excepciones (2 exceptuadas; autopruebas: 0 negativos, 5/5 positivos, lista 11/11)
+rc 0
+== AC-9 bloques
+bloques 57 con diferencias 0
+rc 0
+== AC-10 diff-base
+nuevo       tests/MovilidadUrbana.Asistente.Tests/ConModelo/OraculosDeHumo.cs
+nuevo       tests/MovilidadUrbana.Asistente.Tests/Entradas.cs
+diff-base (8fb4c3a): 27 iguales tras la cabecera, 17 distintos, 59 nuevos, 0 quitados
+AC-10: todo cambio figura en la tabla de delta
+rc 0
+== vmd guia
+encabezados: 229
+anclas: 282
+enlaces-internos: 1620
+enlaces-relativos: 2
+REF-definidas: 180
+REF-citadas: 180
+sin-titulo-registrado: 4
+rutas: 110
+rutas-exceptuadas: 4
+rc 0
+== vmd arbol
+archivos .md: 20; enlaces internos: 0; enlaces relativos: 0; marcas: 0
+rc 0
+== intervalos
+B12-16b	L3167	0/10	medicion-parcial	IC95	-
+compuerta-intervalos: 67 figuras reconocidas, 67 en el mapa; 40 de 40 filas coinciden
+rc 0
+== cabeceras (arbol de la guia)
+cabeceras: ningún cuerpo capturado en .
+rc 2
+== REC-02 marcadores
+0
+rc 1
+== M-J patrones
+39
+== M-B tool_choice
+7
+== M-G 'no es validación'
+2
+== compuerta-rpriv
+etiqueta: 0
+identificadores: 0
+R-PRIV: 0 hallazgo(s); clases privadas: patrones=4 lista=40 historicos=1
+rc 0
+== rpriv-ampliado
+== 2026-10-29T23:29:41-03:00 raiz=texto
+ip-parcial lineas=0 archivos=0
+home lineas=0 archivos=0
+usuario-mascara lineas=0 archivos=0
+cabeceras lineas=0 archivos=0
+contenedores lineas=0 archivos=0
+turnos lineas=1 archivos=1
+identificadores lineas=1 archivos=1
+-- ip-parcial por archivo
+-- home por archivo
+-- usuario-mascara por archivo
+-- cabeceras por archivo
+-- contenedores por archivo
+-- turnos por archivo
+Examples/15-Pruebas-Y-Evaluacion/entradas/salidas-07.v1.json:1
+-- identificadores por archivo
+Examples/15-Pruebas-Y-Evaluacion/entradas/salidas-07.v1.json:1
+rc 1

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Cableado/: sin modelo, deterministas, siempre. Este ejemplo no tiene ConModelo/. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
+    <PackageReference Include="NUnit" Version="5.0.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MovilidadUrbana.PruebaDeArquitectura\MovilidadUrbana.PruebaDeArquitectura.csproj" />
+  </ItemGroup>
+
+  <!-- Las mismas mutaciones del proyecto src, compiladas siempre dentro de este ensamblado: así las
+       pruebas de «la regla detecta» corren sin tocar el código de la aplicación. -->
+  <ItemGroup>
+    <Compile Include="..\..\src\MovilidadUrbana.PruebaDeArquitectura\Mutaciones\**\*.cs" LinkBase="Mutaciones" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="NUnit.Framework" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,80 @@
+CONCEDIDO <recurso-compartido> a ex02-streaming hasta 2026-10-28T15:35:22-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> ex02-streaming)
+CONCEDIDO build a ex02-streaming hasta 2026-10-28T15:35:22-0300 (renová con: <gestor-de-turnos> renovar build ex02-streaming)
+    0 Error(s)
+
+Time Elapsed 00:00:06.20
+=== corrida completa
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /src/src/MovilidadUrbana.Streaming/bin/Release/net10.0/
+> ¿Qué datos pide la encuesta de movilidad?
+info: System.Net.Http.HttpClient.ollama.LogicalHandler[100]
+      Start processing HTTP request POST <OLLAMA_ENDPOINT>/api/chat
+info: System.Net.Http.HttpClient.ollama.ClientHandler[100]
+      Sending HTTP request POST <OLLAMA_ENDPOINT>/api/chat
+info: System.Net.Http.HttpClient.ollama.ClientHandler[101]
+      Received HTTP response headers after 26011.3973ms - 200
+info: System.Net.Http.HttpClient.ollama.LogicalHandler[101]
+      End processing HTTP request after 26032.6903ms - 200
+La encuesta solicita tu nombre y edad, así como la localidad donde vives. También pregunta sobre los medios de transporte que utilizas, su frecuencia, distancia y duración en kilómetros o minutos. Finalmente, te indaga sobre el motivo principal de tus viajes, como trabajar o estudiar.
+[completa: motivo de fin stop; tokens de entrada 206, de salida 57]
+[fragmentos 57; primer texto a los 26.2 s; total 35.9 s; mensajes en el historial 3]
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+=== corrida cortada a los 20 s
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /src/src/MovilidadUrbana.Streaming/bin/Release/net10.0/
+> Explicá con detalle, campo por campo, todo lo que pide la encuesta y para qué sirve cada dato.
+info: System.Net.Http.HttpClient.ollama.LogicalHandler[100]
+      Start processing HTTP request POST <OLLAMA_ENDPOINT>/api/chat
+info: System.Net.Http.HttpClient.ollama.ClientHandler[100]
+      Sending HTTP request POST <OLLAMA_ENDPOINT>/api/chat
+info: System.Net.Http.HttpClient.ollama.ClientHandler[101]
+      Received HTTP response headers after 12613.5288ms - 200
+info: System.Net.Http.HttpClient.ollama.LogicalHandler[101]
+      End processing HTTP request after 12632.6344ms - 200
+La encuesta solicita tu nombre y edad para identificar al respondiente, además de conocer tu localidad y los medios de transporte habituales como colectivo, auto o bicicleta. También pregunta sobre la frecuencia del viaje, la distancia y duración en kilómetros o minutos para
+[completa: motivo de fin ; tokens de entrada , de salida ]
+[fragmentos 49; primer texto a los 12.8 s; total 20.2 s; mensajes en el historial 3]
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+=== ConModelo
+0/10 sin violar los invariantes; 10/10 con la pregunta siguiente en menos de 15 s — estimando: este pedido, 1 pedido × 10 semillas (s = 1..10), qwen3.5:4b@d8b0f5e9760c, T 0.7, think false, ruta /api/chat (OllamaSharp), num_ctx 8192, Ollama 0.40.11, fecha 2026-10-28; criterio previo: (2) del encabezado; Wilson 95 % invariantes [0.00; 0.28], servidor libre [0.72; 1.00]
+  Failed Cancelar_al_primer_texto_corta_y_libera_el_servidor [57 s]
+  Error Message:
+     Assert.That(violaciones, Is.Empty)
+  Expected: <empty>
+  But was:  < "s1: no cancelada", "s2: no cancelada", "s3: no cancelada", "s4: no cancelada", "s5: no cancelada", "s6: no cancelada", "s7: no cancelada", "s8: no cancelada", "s9: no cancelada", "s10: no cancelada" >
+  Stack Trace:
+     at MovilidadUrbana.Streaming.Tests.ConModelo.StreamingConModeloTests.Cancelar_al_primer_texto_corta_y_libera_el_servidor() in /src/tests/MovilidadUrbana.Streaming.Tests/ConModelo/StreamingConModeloTests.cs:line 133
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)
+   at NUnit.Framework.Internal.Execution.SimpleWorkItem.<>c__DisplayClass3_0.<PerformWork>b__0()
+   at NUnit.Framework.Internal.ContextUtils.<>c__DisplayClass1_0`1.<DoIsolated>b__0(Object _)
+   at NUnit.Framework.Internal.ContextUtils.<>c__DisplayClass2_0.<DoIsolated>b__0(Object s)
+1)    at MovilidadUrbana.Streaming.Tests.ConModelo.StreamingConModeloTests.Cancelar_al_primer_texto_corta_y_libera_el_servidor() in /src/tests/MovilidadUrbana.Streaming.Tests/ConModelo/StreamingConModeloTests.cs:line 133
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.ExecutionContextCallback(Object s)
+  Standard Output Messages:
+ 0/10 sin violar los invariantes; 10/10 con la pregunta siguiente en menos de 15 s — estimando: este pedido, 1 pedido × 10 semillas (s = 1..10), qwen3.5:4b@d8b0f5e9760c, T 0.7, think false, ruta /api/chat (OllamaSharp), num_ctx 8192, Ollama 0.40.11, fecha 2026-10-28; criterio previo: (2) del encabezado; Wilson 95 % invariantes [0.00; 0.28], servidor libre [0.72; 1.00]
+10/10 sin violar los invariantes — estimando: este pedido, 1 pedido × 10 semillas (s = 1..10), qwen3.5:4b@d8b0f5e9760c, T 0.7, think false, ruta /api/chat (OllamaSharp), num_ctx 8192, Ollama 0.40.11, fecha 2026-10-28; criterio previo: invariantes (1) del encabezado; Wilson 95 % [0.72; 1.00]
+  Passed Respuesta_completa_en_streaming [2 m 27 s]
+  Standard Output Messages:
+ 10/10 sin violar los invariantes — estimando: este pedido, 1 pedido × 10 semillas (s = 1..10), qwen3.5:4b@d8b0f5e9760c, T 0.7, think false, ruta /api/chat (OllamaSharp), num_ctx 8192, Ollama 0.40.11, fecha 2026-10-28; criterio previo: invariantes (1) del encabezado; Wilson 95 % [0.72; 1.00]
+Test Run Failed.
+Total tests: 2
+     Passed: 1
+     Failed: 1
+ Total time: 3.4205 Minutes
+LIBERADO build por ex02-streaming
+LIBERADO <recurso-compartido> por ex02-streaming

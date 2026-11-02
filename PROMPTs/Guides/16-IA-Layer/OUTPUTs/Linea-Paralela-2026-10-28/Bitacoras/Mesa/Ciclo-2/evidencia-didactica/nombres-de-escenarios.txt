@@ -1,0 +1,34 @@
+Nombres con que la guía acompaña a cada ESC (grep, 2026-10-28)
+== ESC-01
+  (asistente sobre datos propios)                         veces=2 primera=l.1324
+  asistente                                               veces=1 primera=l.934
+  asistente sobre datos propios                           veces=4 primera=l.278
+  (ayuda sobre requisitos)                                veces=2 primera=l.280
+  (consulta de datos)                                     veces=1 primera=l.1835
+  consulta de datos                                       veces=1 primera=l.2571
+== ESC-02
+  (búsqueda por significado)                              veces=1 primera=l.1324
+  búsqueda                                                veces=1 primera=l.935
+  búsqueda por significado                                veces=2 primera=l.1754
+  búsqueda semántica                                      veces=3 primera=l.282
+== ESC-03
+  **decide la aplicación**                                veces=1 primera=l.466
+  (extracción estructurada)                               veces=1 primera=l.3211
+  extracción                                              veces=1 primera=l.936
+  extracción a estructura                                 veces=2 primera=l.1755
+  extracción estructurada                                 veces=3 primera=l.283
+== ESC-04
+  (acción con aprobación)                                 veces=1 primera=l.1835
+  acción con aprobación                                   veces=2 primera=l.1756
+  acción con herramientas                                 veces=1 primera=l.863
+  (acciones con confirmación)                             veces=1 primera=l.3211
+  agentes y herramientas                                  veces=2 primera=l.284
+  **decide el modelo**                                    veces=1 primera=l.466
+  herramientas                                            veces=1 primera=l.937
+  siempre que una herramienta dependa                     veces=1 primera=l.3011
+== ESC-05
+  exposición por                                          veces=2 primera=l.288
+  (integración con terceros)                              veces=1 primera=l.1835
+  integración con terceros                                veces=1 primera=l.2575
+  invierte el sentido                                     veces=1 primera=l.466
+  quedan en los ejemplos                                  veces=1 primera=l.3211

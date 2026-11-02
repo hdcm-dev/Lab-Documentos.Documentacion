@@ -1,0 +1,17 @@
+# DEP-02 — versiones estables más recientes en nuget.org, consultadas el 2026-10-27 (api.nuget.org/v3-flatcontainer)
+microsoft.extensions.ai: 10.11.0
+microsoft.extensions.ai.abstractions: 10.11.0
+microsoft.extensions.ai.openai: 10.11.0
+ollamasharp: 5.5.0
+microsoft.extensions.vectordata.abstractions: 10.11.0
+microsoft.extensions.ai.evaluation: 10.11.0
+microsoft.extensions.compliance.abstractions: 10.11.0
+communitytoolkit.vectordata.inmemory: 1.0.1
+microsoft.agents.ai: 1.26.0
+microsoft.agents.ai.workflows: 1.26.0
+modelcontextprotocol: 2.3.0
+microsoft.semantickernel: 1.81.0
+opentelemetry: 1.20.1
+microsoft.extensions.caching.memory: 10.0.14
+microsoft.extensions.hosting: 10.0.14
+microsoft.entityframeworkcore.sqlite: 10.0.14

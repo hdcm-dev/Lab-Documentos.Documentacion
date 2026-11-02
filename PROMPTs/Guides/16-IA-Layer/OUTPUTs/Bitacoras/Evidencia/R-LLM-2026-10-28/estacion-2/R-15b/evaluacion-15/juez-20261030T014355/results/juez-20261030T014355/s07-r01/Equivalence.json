@@ -1,0 +1,79 @@
+{
+  "scenarioName": "s07-r01",
+  "iterationName": "Equivalence",
+  "executionName": "juez-20261030T014355",
+  "creationTime": "2026-10-30T02:31:55.1958972Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "\u00BFQu\u00E9 largo puede tener el nombre de una localidad y se puede repetir dentro de la misma provincia?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "El nombre de una localidad debe tener entre 3 y 60 caracteres, pero no puede repetirse dentro de la misma provincia porque debe ser \u00FAnico por provincia. [Fuente: LocalidadPolicy.RequisitoDelNombre] [Fuente: LocalidadPolicy.RequisitoDeLaProvincia]"
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Equivalence": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Equivalence",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Equivalence)": {
+            "name": "Ground Truth (Equivalence)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Localidad \u00B7 requisito del nombre: Entre 3 y 60 caracteres, \u00FAnico por provincia."
+              }
+            ]
+          }
+        },
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "qwen3.5:4b",
+          "eval-input-tokens": "956",
+          "eval-output-tokens": "2",
+          "eval-total-tokens": "958",
+          "eval-duration-ms": "9743.06"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 9.7426856,
+        "model": "qwen3.5:4b",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 956,
+          "outputTokenCount": 2,
+          "totalTokenCount": 958
+        },
+        "cacheKey": "7A7365B1B9D0530CB0AF8BAB0A9CB84FAC0AE60E9F4D4825381A888D76E9152FC50D6E22F9E6A3FD3E01964CE0ACA264",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

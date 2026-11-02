@@ -1,0 +1,16 @@
+Examples/01-Chat-Basico/ | filter TestCategory=Cableado filter TestCategory=ConModelo 
+Examples/02-Streaming/ | filter TestCategory=Cableado" filter TestCategory=ConModelo 
+Examples/03-Salida-Estructurada/ | filter "Category!=ConModelo" filter "Category=ConModelo" 
+Examples/04-Embeddings-Y-Busqueda/ | filter TestCategory=Cableado filter TestCategory=ConModelo 
+Examples/05-RAG-En-Memoria/ | filter "FullyQualifiedName~Cableado" filter "FullyQualifiedName~ConModelo" 
+Examples/06-Tool-Calling/ | filter TestCategory=Cableado filter TestCategory=ConModelo 
+Examples/07-Agente-Con-Aprobacion/ | filter TestCategory=Cableado filter TestCategory=ConModelo 
+Examples/08-Servidor-Y-Cliente-MCP/ | filter TestCategory=Cableado filter TestCategory=ConModelo 
+Examples/09-Pruebas-Con-Cliente-Falso/ | filter TestCategory=Cableado filter TestCategory=ConModelo 
+Examples/10-Workflow/ | filter TestCategory=Cableado filter TestCategory=ConModelo 
+Examples/12-Anotaciones-Pareadas/ | filter TestCategory=Cableado 
+Examples/13-Prueba-De-Arquitectura/ | filter Category=Regla 
+Demos/MovilidadUrbana.Asistente | filter "FullyQualifiedName~Cableado" filter "TestCategory=ConModelo&Name~D1_" 
+
+Category("Cableado") en las pruebas de la demo:
+0

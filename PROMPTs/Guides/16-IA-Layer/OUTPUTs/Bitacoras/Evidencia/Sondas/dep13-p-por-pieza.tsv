@@ -1,0 +1,23 @@
+01-Chat-Y-Streaming.modelo                         compartido  2   231   316   90   54.2   50.2   0
+02-Cambio-De-Adaptador.modelo                      propio      2   103   103   144  6.8    6.7    0
+04-Normalizacion-Contra-Catalogo.modelo            compartido  2   110   112   32   33.3   29.8   0
+05-Contexto-Completo-Con-Prefijo.modelo.corrida-4  propio      13  1712  1738  23   24.8   13.8   0
+05-Contexto-Completo-Con-Prefijo.modelo            propio      13  1712  1735  23   15.3   9.5    0
+06-Embeddings-Y-Busqueda-Semantica.modelo          propio      44  11    50         2.7    0.7    0
+07-RAG-Con-Citas.modelo                            compartido  16  224   239   114  111.5  48.6   0
+08-Primera-Herramienta-Solo-Lectura.modelo         compartido  3   508   577   35   76.1   52.2   1
+09-Caso-De-Uso-Como-Herramienta.modelo             compartido  4   592   730   78   109.5  68.4   2
+11-Agente-Con-Aprobacion.modelo                    compartido  2   500   591   40   61.7   43.3   1
+12-Uno-O-Varios-Agentes.modelo                     compartido  4   285   290   25   51.6   30.3   0
+13-Servidor-Y-Cliente-MCP.modelo                   compartido  2   367   462   17   74.1   52     1
+15-Pruebas-Y-Evaluacion.modelo                     propio      52  967   1401  800  26.6   10.1   0
+16-Inyeccion-Indirecta.modelo                      compartido  24  453   667   53   424.1  102.2  12
+17-Observabilidad-Y-Pipeline.modelo                compartido  2   113   113   39   207.8  133.2  0
+Demo-MovilidadUrbana.Asistente.modelo              compartido  4   128   805   44   44.9   34.6   1
+03-Salida-Estructurada                             compartido  2   131   138   48   31.1   30     0
+07-RAG-Con-Citas.estabilidad                       compartido  3   228   228   28   51.6   25.8   0
+DEP-03-Sonda-NumCtx                                propio      3   2050  5714  26   76.6   33.9   0
+DEP-09-Sonda-Aprobacion                            compartido  2   594   722   78   29.6   27.4   1
+DEP-13-Sonda-Clase-K                               compartido  2   645   646   79   123.1  107.4  0
+03-Salida-Estructurada                             compartido  8   132   144   49   27.1   25.9   0
+04-Normalizacion-Contra-Catalogo                   compartido  8   103   110   34   20.7   18.7   0

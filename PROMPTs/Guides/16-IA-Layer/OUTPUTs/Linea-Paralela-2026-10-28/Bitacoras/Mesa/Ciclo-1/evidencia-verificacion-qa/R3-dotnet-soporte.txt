@@ -1,0 +1,6 @@
+2026-10-28T09:45:42-03:00
+# https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json
+11.0 sts go-live latest-sdk 11.0.100-rc.3.26522.148 eol None
+10.0 lts active latest-sdk 10.0.403 eol 2028-11-14
+9.0 sts maintenance latest-sdk 9.0.320 eol 2026-11-10
+8.0 lts maintenance latest-sdk 8.0.427 eol 2026-11-10

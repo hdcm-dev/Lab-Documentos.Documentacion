@@ -1,0 +1,57 @@
+CONCEDIDO <recurso-compartido> a AH-02 hasta 2026-10-28T10:41:26-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> AH-02)
+# Sonda AH-02 recuperacion 2026-10-28T12:56:26.851460+00:00 modelo qwen3-embedding:0.6b
+=== repeticion 1 ===
+## corpus A (parafrasis E3): dim=1024 n_docs=12 huella_doc0=e4d44e0db87b
+  q='¿Cuántos números lleva el CP?' oro=loc-cp rank=1 respondible_B=si top3=[loc-cp:0.400, loc-hab:0.361, enc-pasos:0.291]
+  q='¿Puedo cargar dos pueblos con el mismo nombre en una provincia?' oro=loc-nombre rank=1 respondible_B=si top3=[loc-nombre:0.544, loc-baja:0.375, loc-cp:0.268]
+  q='¿Un chico de 15 años puede contestar?' oro=enc-edad rank=1 respondible_B=si top3=[enc-edad:0.545, loc-baja:0.329, enc-dist:0.256]
+  q='Si no viajo, ¿qué pongo en kilómetros?' oro=enc-dist rank=1 respondible_B=parcial top3=[enc-dist:0.574, enc-min:0.425, enc-motivo:0.372]
+  q='¿Se puede ir caminando como medio?' oro=enc-medios rank=1 respondible_B=no top3=[enc-medios:0.606, enc-dist:0.469, enc-frec:0.396]
+  q='Si elimino una ciudad, ¿se pierden las encuestas?' oro=loc-baja rank=1 respondible_B=no top3=[loc-baja:0.702, enc-pasos:0.417, enc-edad:0.291]
+  q='¿Qué opciones hay para la razón del viaje?' oro=enc-motivo rank=1 respondible_B=no top3=[enc-motivo:0.673, enc-pasos:0.447, enc-medios:0.431]
+  q='¿Los datos de otro usuario se mezclan con los míos?' oro=sesion rank=1 respondible_B=no top3=[sesion:0.544, loc-baja:0.450, enc-pasos:0.356]
+  q='¿Puedo viajar en avión?' oro=None rank=- respondible_B=no top3=[enc-medios:0.409, enc-dist:0.370, enc-min:0.364]
+  q='¿A qué hora abre la municipalidad?' oro=None rank=- respondible_B=no top3=[enc-min:0.227, enc-frec:0.211, enc-dist:0.180]
+  q='¿Cuál es la capital de Francia?' oro=None rank=- respondible_B=no top3=[loc-baja:0.221, enc-motivo:0.188, enc-pasos:0.175]
+  RESUMEN corpus A (parafrasis E3): con_oro=8 hit@1=8/8 hit@3=8/8 MRR@5=1.000 (azar: hit@3 esperado = 0.250)
+## corpus B (*Policy reales): dim=1024 n_docs=12 huella_doc0=d647ec79ad56
+  q='¿Cuántos números lleva el CP?' oro=L.CodigoPostal rank=1 respondible_B=si top3=[L.CodigoPostal:0.363, L.Habitantes:0.348, E.Nombre:0.340]
+  q='¿Puedo cargar dos pueblos con el mismo nombre en una provincia?' oro=L.Nombre rank=1 respondible_B=si top3=[L.Nombre:0.524, L.Provincia:0.335, L.Habitantes:0.303]
+  q='¿Un chico de 15 años puede contestar?' oro=E.Edad rank=1 respondible_B=si top3=[E.Edad:0.511, E.Nombre:0.385, E.Minutos:0.363]
+  q='Si no viajo, ¿qué pongo en kilómetros?' oro=E.Distancia rank=1 respondible_B=parcial top3=[E.Distancia:0.456, E.Motivo:0.390, E.Nombre:0.303]
+  q='¿Se puede ir caminando como medio?' oro=E.Medios rank=2 respondible_B=no top3=[E.Motivo:0.389, E.Medios:0.385, E.Distancia:0.364]
+  q='Si elimino una ciudad, ¿se pierden las encuestas?' oro=None rank=- respondible_B=no top3=[E.Localidad:0.445, E.Medios:0.431, E.Distancia:0.384]
+  q='¿Qué opciones hay para la razón del viaje?' oro=E.Motivo rank=1 respondible_B=no top3=[E.Motivo:0.698, E.Distancia:0.351, E.Medios:0.307]
+  q='¿Los datos de otro usuario se mezclan con los míos?' oro=None rank=- respondible_B=no top3=[E.Nombre:0.366, E.Frecuencia:0.309, E.Medios:0.281]
+  q='¿Puedo viajar en avión?' oro=None rank=- respondible_B=no top3=[E.Motivo:0.383, E.Distancia:0.294, E.Medios:0.292]
+  q='¿A qué hora abre la municipalidad?' oro=None rank=- respondible_B=no top3=[L.CodigoPostal:0.249, E.Minutos:0.225, E.Distancia:0.219]
+  q='¿Cuál es la capital de Francia?' oro=None rank=- respondible_B=no top3=[L.Provincia:0.305, E.Motivo:0.268, L.CodigoPostal:0.254]
+  RESUMEN corpus B (*Policy reales): con_oro=6 hit@1=5/6 hit@3=6/6 MRR@5=0.917 (azar: hit@3 esperado = 0.250)
+=== repeticion 2 ===
+## corpus A (parafrasis E3): dim=1024 n_docs=12 huella_doc0=e4d44e0db87b
+  q='¿Cuántos números lleva el CP?' oro=loc-cp rank=1 respondible_B=si top3=[loc-cp:0.400, loc-hab:0.361, enc-pasos:0.291]
+  q='¿Puedo cargar dos pueblos con el mismo nombre en una provincia?' oro=loc-nombre rank=1 respondible_B=si top3=[loc-nombre:0.544, loc-baja:0.375, loc-cp:0.268]
+  q='¿Un chico de 15 años puede contestar?' oro=enc-edad rank=1 respondible_B=si top3=[enc-edad:0.545, loc-baja:0.329, enc-dist:0.256]
+  q='Si no viajo, ¿qué pongo en kilómetros?' oro=enc-dist rank=1 respondible_B=parcial top3=[enc-dist:0.574, enc-min:0.425, enc-motivo:0.372]
+  q='¿Se puede ir caminando como medio?' oro=enc-medios rank=1 respondible_B=no top3=[enc-medios:0.606, enc-dist:0.469, enc-frec:0.396]
+  q='Si elimino una ciudad, ¿se pierden las encuestas?' oro=loc-baja rank=1 respondible_B=no top3=[loc-baja:0.702, enc-pasos:0.417, enc-edad:0.291]
+  q='¿Qué opciones hay para la razón del viaje?' oro=enc-motivo rank=1 respondible_B=no top3=[enc-motivo:0.673, enc-pasos:0.447, enc-medios:0.431]
+  q='¿Los datos de otro usuario se mezclan con los míos?' oro=sesion rank=1 respondible_B=no top3=[sesion:0.544, loc-baja:0.450, enc-pasos:0.356]
+  q='¿Puedo viajar en avión?' oro=None rank=- respondible_B=no top3=[enc-medios:0.409, enc-dist:0.370, enc-min:0.364]
+  q='¿A qué hora abre la municipalidad?' oro=None rank=- respondible_B=no top3=[enc-min:0.227, enc-frec:0.211, enc-dist:0.180]
+  q='¿Cuál es la capital de Francia?' oro=None rank=- respondible_B=no top3=[loc-baja:0.221, enc-motivo:0.188, enc-pasos:0.175]
+  RESUMEN corpus A (parafrasis E3): con_oro=8 hit@1=8/8 hit@3=8/8 MRR@5=1.000 (azar: hit@3 esperado = 0.250)
+## corpus B (*Policy reales): dim=1024 n_docs=12 huella_doc0=d647ec79ad56
+  q='¿Cuántos números lleva el CP?' oro=L.CodigoPostal rank=1 respondible_B=si top3=[L.CodigoPostal:0.363, L.Habitantes:0.348, E.Nombre:0.340]
+  q='¿Puedo cargar dos pueblos con el mismo nombre en una provincia?' oro=L.Nombre rank=1 respondible_B=si top3=[L.Nombre:0.524, L.Provincia:0.335, L.Habitantes:0.303]
+  q='¿Un chico de 15 años puede contestar?' oro=E.Edad rank=1 respondible_B=si top3=[E.Edad:0.511, E.Nombre:0.385, E.Minutos:0.363]
+  q='Si no viajo, ¿qué pongo en kilómetros?' oro=E.Distancia rank=1 respondible_B=parcial top3=[E.Distancia:0.456, E.Motivo:0.390, E.Nombre:0.303]
+  q='¿Se puede ir caminando como medio?' oro=E.Medios rank=2 respondible_B=no top3=[E.Motivo:0.389, E.Medios:0.385, E.Distancia:0.364]
+  q='Si elimino una ciudad, ¿se pierden las encuestas?' oro=None rank=- respondible_B=no top3=[E.Localidad:0.445, E.Medios:0.431, E.Distancia:0.384]
+  q='¿Qué opciones hay para la razón del viaje?' oro=E.Motivo rank=1 respondible_B=no top3=[E.Motivo:0.698, E.Distancia:0.351, E.Medios:0.307]
+  q='¿Los datos de otro usuario se mezclan con los míos?' oro=None rank=- respondible_B=no top3=[E.Nombre:0.366, E.Frecuencia:0.309, E.Medios:0.281]
+  q='¿Puedo viajar en avión?' oro=None rank=- respondible_B=no top3=[E.Motivo:0.383, E.Distancia:0.294, E.Medios:0.292]
+  q='¿A qué hora abre la municipalidad?' oro=None rank=- respondible_B=no top3=[L.CodigoPostal:0.249, E.Minutos:0.225, E.Distancia:0.219]
+  q='¿Cuál es la capital de Francia?' oro=None rank=- respondible_B=no top3=[L.Provincia:0.305, E.Motivo:0.268, L.CodigoPostal:0.254]
+  RESUMEN corpus B (*Policy reales): con_oro=6 hit@1=5/6 hit@3=6/6 MRR@5=0.917 (azar: hit@3 esperado = 0.250)
+LIBERADO <recurso-compartido> por AH-02

@@ -1,0 +1,14 @@
+# Consultadas 2026-10-28 (WebFetch)
+[A] Use the IHttpClientFactory - .NET, https://learn.microsoft.com/en-us/dotnet/core/extensions/httpclient-factory , ms.date 2026-08-06, updated_at 2026-08-13
+ «HttpClient instances created by IHttpClientFactory are intended to be short-lived.»
+ «Keeping a single HttpClient instance alive for a long duration is a common pattern that can be used as an alternative to IHttpClientFactory, however, this pattern requires additional setup, such as PooledConnectionLifetime.»
+ «If a typed client instance is captured in a singleton, it may prevent it from reacting to DNS changes, defeating one of the purposes of IHttpClientFactory.»
+ Receta: services.AddHttpClient(name).UseSocketsHttpHandler((handler, _) => handler.PooledConnectionLifetime = TimeSpan.FromMinutes(2)).SetHandlerLifetime(Timeout.InfiniteTimeSpan);
+[B] ASP.NET Core Blazor with EF Core, https://learn.microsoft.com/en-us/aspnet/core/blazor/blazor-ef-core?view=aspnetcore-10.0 , ms.date 2025-11-11, updated_at 2026-10-13
+ «One example of user state is data held in dependency injection (DI) service instances that are scoped to the circuit.»
+ «In server-side Blazor apps, scoped service registrations can be problematic because the instance is shared across components within the user's circuit. DbContext isn't thread safe…»
+ «Consider using one context per operation.» / «The recommended approach to create a new DbContext with dependencies is to use a factory.»
+[C] Creating Metrics - .NET, https://learn.microsoft.com/en-us/dotnet/core/diagnostics/metrics-instrumentation , ms.date 2024-11-19, updated_at 2026-06-26
+ «For usage in DI-aware libraries static variables are considered an anti-pattern…»
+ «In code that uses DI, such as ASP.NET Core or apps with Generic Host, create the Meter object using IMeterFactory.» «…keeping Meters in different service collections isolated … especially useful for testing so that multiple tests running in parallel only observe measurements produced from within the same test case.»
+ «…C# static initialization is lazy and the variable is usually never referenced.» (BEWARE: «Static initializers only run when code in a running method refers to a static variable.»)

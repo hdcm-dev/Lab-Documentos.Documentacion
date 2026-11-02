@@ -1,0 +1,11 @@
+2026-10-27T11:32:04-0300	[recurso-modelo]	constructor-16	pedido	16 inyección indirecta TURNO-2: 6 entradas x 2 variantes, 24 llamadas H (ttl 45m)
+2026-10-27T11:32:04-0300	[recurso-modelo]	constructor-16	concedido	16 inyección indirecta TURNO-2: 6 entradas x 2 variantes, 24 llamadas H (ttl 45m)
+2026-10-27T11:54:34-0300	[recurso-modelo]	constructor-16	renovado	+45m
+2026-10-27T12:12:23-0300	[recurso-modelo]	constructor-16	liberado	-
+2026-10-27T12:58:16-0300	build	constructor-16	pedido	16 inyección indirecta: build -warnaserror, pruebas Category!=LLM, --fake --verificar (ttl 20m)
+2026-10-27T12:58:16-0300	build	constructor-16	concedido	16 inyección indirecta: build -warnaserror, pruebas Category!=LLM, --fake --verificar (ttl 20m)
+2026-10-27T12:59:09-0300	build	constructor-16	liberado	-
+2026-10-27T12:59:56-0300	[recurso-modelo]	constructor-16	pedido	16 inyección indirecta TURNO-2: corrida completa 6 entradas x 2 variantes, 24 llamadas H (la 1ª se cortó con la sesión) (ttl 45m)
+2026-10-27T13:03:23-0300	[recurso-modelo]	constructor-16	concedido	16 inyección indirecta TURNO-2: corrida completa 6 entradas x 2 variantes, 24 llamadas H (la 1ª se cortó con la sesión) (ttl 45m)
+2026-10-27T13:25:53-0300	[recurso-modelo]	constructor-16	renovado	+45m
+2026-10-27T13:44:26-0300	[recurso-modelo]	constructor-16	liberado	-

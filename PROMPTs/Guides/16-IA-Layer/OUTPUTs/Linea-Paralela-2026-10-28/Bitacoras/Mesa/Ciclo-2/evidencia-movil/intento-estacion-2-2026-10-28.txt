@@ -1,0 +1,40 @@
+Prueba móvil de la demo (MD-1, MI-20) — intento en la estación 2 (estación 2), 2026-10-28
+Agente: movil-{estación-2}. Resultado: NO EJECUTADA. Bloqueada por una decisión vigente del operador.
+
+Cronología (hora de estación 1 / estación 2, UTC-3):
+- 17:5x  SDK del emulador en un volumen nuevo de estación 2 (<contenedor-emulador>): copia del SDK local (API 34)
+         + imagen system-images;android-33;google_apis;x86_64 rev 17 y platforms;android-33 traídos de estación 1.
+         WebView 155.0.8059.43 copiada a {dir-de-trabajo}/emu/webview/.
+- 18:0x  Demo copiada a {dir-de-trabajo}/demo (sin bin/obj/datos) y compilada en mcr.microsoft.com/dotnet/sdk:10.0
+         (de4fe90a9884) con turno build: Build succeeded, 0 warnings, 0 errores, 21,7 s.
+- 18:03:27 Contenedor <contenedor-emulador> creado con el método de estación 1 (arrancar-emu.sh, API 33, pixel_6,
+         4096 MB, gpu swiftshader_indirect, -accel on, --cpus 4, --memory 7g). Se creó el AVD y arrancó QEMU2.
+- 18:03:28 Última línea del journal del arranque anterior de estación 2. La VM quedó colgada.
+- ~18:05 La presidencia la ve fuera de la tailnet y reserva <recurso-propio> (registro.log 18:12:05).
+- 18:14:47 estación 2 vuelve a arrancar (uptime -s). <ollama-estación-2> quedó Exited (255): no tiene política
+         de reinicio. Lo levanté con docker start; /api/version = 0.40.11; ollama list completo (4 modelos);
+         0 archivos en 0 bytes en el volumen de modelos. Avisé a la presidencia (SendMessage a main).
+
+Causa: el emulador acelerado por KVM dentro de la VM de VirtualBox (VT-x anidado). Ya está documentado:
+`<repo-privado-de-infraestructura>` (INC-2026-001, §0):
+tres cuelgues el 24 y el 25-10 con el mismo factor común, y la «Decisión del operador (folio 017): QEMU no corre
+en estación 2. El emulador acelerado dentro de VirtualBox no está soportado por Google. El ensayo de KVM pasa a una
+notebook física». Este es el cuarto evento con el mismo factor. La carta de la tarea daba la estación 2 como apta
+(«tiene /dev/kvm») y no citaba esa decisión; yo no la busqué antes de arrancar.
+
+No se reintenta en estación 2 (ni con gpu guest ni sin aceleración: la imagen x86_64 exige KVM).
+estación 1 tampoco puede: 4,9 GB disponibles, 17 GB de swap en uso y tres emuladores de otras sesiones corriendo.
+teléfono de pruebas y emulador-gda/emulador-fc están reservados a otras sesiones. equipo anterior está caída (contingencia del día).
+
+D1, D4, D5, D6 en Android: no recorridos. Tiempos y legibilidad en el teléfono: no medidos. Capturas: ninguna.
+
+Creado en estación 2 (quedan; el contenedor del emulador se borró):
+- volúmenes: <contenedor-emulador> (~13,5 GB: SDK + API 33; inútil en estación 2 por la decisión del operador, se puede
+  borrar con «docker volume rm <contenedor-emulador>»), <contenedor-emulador> (AVD creado, sin arrancar del todo),
+  <volumen-nuget> (paquetes de la demo).
+- imágenes descargadas: mcr.microsoft.com/dotnet/sdk:10.0 (de4fe90a9884), python:3.12-slim.
+- archivos: {dir-de-trabajo}/emu/ (arrancar-emu.sh, webview/…apk, <contenedor-emulador>.env con la clave VNC, modo 600),
+  {dir-de-trabajo}/demo/ (copia de la demo, con bin/ y obj/ del build, de root).
+- contenedor de la demo: no se llegó a levantar.
+Nota: los 312 archivos de 0 bytes del SDK son los de INC-2026-001 (folio 016); vienen del volumen
+android-emu_android-emu-sdk, no los causó este evento.

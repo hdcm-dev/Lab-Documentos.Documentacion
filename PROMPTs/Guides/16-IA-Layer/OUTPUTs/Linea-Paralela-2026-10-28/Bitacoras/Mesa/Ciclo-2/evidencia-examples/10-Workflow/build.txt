@@ -1,0 +1,7 @@
+# imagen: mcr.microsoft.com/dotnet/sdk@sha256:de4fe90a98845d75910b9769662465c84de1a934665c431279d1382b2bddc02b; copia limpia, 2026-10-28T16:22:12-03:00
+$ dotnet build 10-Workflow.slnx
+  MovilidadUrbana.Ejemplos.Orquestacion -> /ex/src/MovilidadUrbana.Ejemplos.Orquestacion/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.dll
+  MovilidadUrbana.Ejemplos.Orquestacion.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)

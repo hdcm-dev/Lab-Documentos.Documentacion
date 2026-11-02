@@ -1,0 +1,35 @@
+[recurso-modelo-propio]	constructor-02	10:13:33	10:13:50	17	liberado	02: 1 pregunta por dos adaptadores (2 llamadas P-K) (ttl 60m)
+[recurso-modelo]	constructor-01	10:14:48	10:16:54	126	liberado	ejemplo 01 contra qwen3.5:4b (TURNO-1, 2 llamadas K) (ttl 45m)
+[recurso-modelo]	ej04-constructor	10:16:58	10:18:21	83	liberado	ejemplo 04 contra qwen3.5:4b (TURNO-1, 2 llamadas K) (ttl 45m)
+[recurso-modelo]	constructor-03	10:18:22	10:19:25	63	liberado	ejemplo 03 contra qwen3.5:4b (TURNO-1, 2 llamadas K) (ttl 45m)
+[recurso-modelo-propio]	constructor-05	10:19:31	10:21:40	129	liberado	05 contexto completo con prefijo: mide tiempos (alternado, plan) (ttl 
+[recurso-modelo-propio]	constructor-05	10:23:04	10:24:43	99	liberado	05 desvío: alternado con calentamiento, mide tiempos (ttl 60m)
+[recurso-modelo-propio]	ctor-ej06	10:24:46	10:25:16	30	liberado	Ejemplo06: 44 embeddings (fase 3a) (ttl 60m)
+[recurso-modelo-propio]	constructor-07	10:27:07	10:27:15	8	liberado	fase 3a: embeddings de 07 (28 textos) (ttl 60m)
+[recurso-modelo]	constructor-07	10:27:28	10:32:38	310	liberado	07 RAG con citas: 16 entradas TURNO-1 (ttl 45m)
+[recurso-modelo-propio]	constructor-02	10:43:34	10:43:50	16	liberado	02 dos vias contra ollama propio (reanudación) (ttl 60m)
+[recurso-modelo-propio]	c05-constructor	10:45:01	10:56:14	673	liberado	05 corrida 3 del desvío: mide tiempos con el modelo descargado (no car
+[recurso-modelo]	constructor-07	10:47:15	11:00:15	780	liberado	07 RAG con citas: 16 entradas TURNO-1 (reanudación tras corte) (ttl 45
+[recurso-modelo-propio]	ctor-ej06	10:56:17	10:56:59	42	liberado	Ejemplo06: 44 embeddings (fase 3a, reanudación) (ttl 60m)
+[recurso-modelo-propio]	demo-asistente	10:57:00	10:57:12	12	liberado	demo PD-2: 13 embeddings (fase 3a) (ttl 60m)
+[recurso-modelo]	ej08-constructor	11:00:15	11:02:57	162	liberado	Ejemplo08 TURNO-1: 2 entradas de demostracion contra qwen3.5:4b (ttl 4
+[recurso-modelo]	ctor-09	11:02:59	11:07:38	279	liberado	09 caso de uso como herramienta: 2 entradas TURNO-1 (6 llamadas H) (tt
+[recurso-modelo]	demo-asistente	11:07:42	11:11:41	239	liberado	demo humo PD-2 PD-3 PD-6 TURNO-1 (5 llamadas, K+K+L) (ttl 45m)
+[recurso-modelo]	constructor-07	11:11:46	11:13:06	80	liberado	07 estabilidad: 3 repeticiones de r03 (TURNO-1) (ttl 20m)
+[recurso-modelo]	demo-asistente	11:13:15	11:14:19	64	liberado	demo humo PD-6 repetido (defecto de la prueba en la corrida 1; 3 llama
+[recurso-modelo]	demo-asistente	11:15:20	11:16:18	58	liberado	demo humo PD-6 (registro fiel: instantánea en el grabador; 2-3 llamada
+[recurso-modelo]	constructor-13	11:19:25	11:21:16	111	liberado	13 MCP TURNO-2: 1 pregunta, 2 llamadas H (ttl 45m)
+[recurso-modelo]	ctor-12	11:21:17	11:23:25	128	liberado	12 uno o varios agentes TURNO-2: 2 pedidos x 2 variantes (<=8 llamadas
+[recurso-modelo-propio]	ctor-15	11:31:10	11:40:04	534	liberado	fase 3b: juez de 15 (52 llamadas qwen2.5:0.5b) (ttl 60m)
+[recurso-modelo]	constructor-16	11:32:04	12:12:23	2419	liberado	16 inyección indirecta TURNO-2: 6 entradas x 2 variantes, 24 llamadas 
+[recurso-modelo-propio]	ctor-15	11:42:27	11:42:43	16	liberado	prueba Category=LLM de 15 (1 llamada) (ttl 60m)
+[recurso-modelo-propio]	constructor-02	12:23:50	12:24:12	22	liberado	Ejemplo02: 1 pregunta por las dos vias (2 llamadas, sin medir tiempos)
+[recurso-modelo]	constructor-11	12:55:25	12:56:56	91	liberado	ejemplo 11 TURNO-1: 1 pedido «Borrá Resistencia» (≈3 llamadas L) (ttl 
+[recurso-modelo]	ej17-constructor	12:58:46	13:03:21	275	liberado	17 TURNO-2: 3 pedidos, 2 llamadas K (ttl 45m)
+[recurso-modelo]	constructor-16	13:03:23	13:44:26	2463	liberado	16 inyección indirecta TURNO-2: corrida completa 6 entradas x 2 varian
+[recurso-modelo-propio]	constructor-05	13:04:27	13:07:34	187	liberado	05 contra el Ollama propio: 13 llamadas, mide tiempos del servidor (tt
+[recurso-modelo]	corr04	13:44:28	13:45:32	64	liberado	corrección 04: verificar.sh correr (demostración, M = 2) (ttl 45m)
+---
+[recurso-modelo-propio] total_s 1785
+[recurso-modelo] total_s 7795
+abiertos []

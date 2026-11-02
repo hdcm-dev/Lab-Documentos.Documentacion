@@ -1,0 +1,20 @@
+Rótulo largo de estación pese a la abreviatura de §0.5 (grep, 2026-10-28)
+4 núcleos, forma larga:
+220 407 408 410 412 464 2939 3090 3435 
+más núcleos, forma larga:
+221 409 886 2813 3015 3051 3086 3171 
+Forma corta «estación de 4 núcleos»: 36; «estación con más núcleos»: 17
+
+Menciones del caso «CP 34 → 3400/3489» (mismo texto de D1) por sección:
+409:- **La forma no es la verdad.** «Agregá Goya, Corrientes, CP 34, 89959 habitantes» con esquema: forma de `LocalidadPropuesta` en 10/1
+460:| ESC-03 | **Extracción estructurada** | texto libre → objeto tipado | proponer datos; la app valida y decide | «Agregá Goya, Corri
+886:No como fuente de verdad: el prompt orienta y la regla se hace cumplir en código [REF-046]. Medido: `Examples/03` instruye «No invente
+1144:| «Agregá Goya, Corrientes, CP 34, 89959 habitantes» | forma 10/10 [0,72; 1]; **CP inventado 8/10 [0,49; 0,94], siempre «3400»**, 
+1145:| «…CP 3450, unos 90 mil» | forma, propuesta exacta y sin errores: 10/10 [0,72; 1] |
+2271:Contra el modelo, criterio previo en `00-criterio-previo.md`, mismos parámetros que §7.3.4, 10 semillas por pedido, estimando **este 
+2353:`SecuencialTests` fija lo que hay que saber: el resultado de `ComoAgente` es un `WorkflowHostAgent`, o sea un `AIAgent`; el orden es ex
+3320:| D1 | «Agregá Goya, Corrientes, CP 34, 89959 habitantes» | CASO-2 · ESC-03 → ESC-04 | «34» da error en `codigoPostal`, 0 escri
+3352:¿Por qué confirmar un alta que pasa las reglas? Porque inventar un dato **con forma válida** existe, y las reglas no lo ven. Con el 
+3480:Para toda escritura que nace de una propuesta del modelo, alta o baja; las lecturas no la necesitan. El alta asistida también se confi
+3665:3. *¿Por qué se confirma un alta que pasa las reglas?* Porque un CP inventado con forma válida («3400») pasa `LocalidadRules`; lo 
+4074:| 10 · `WorkflowConModeloTests` | este pedido, 10 semillas por pedido | CP «3489» inventado llegó a la persona 1/10 [0,02; 0,40]; s

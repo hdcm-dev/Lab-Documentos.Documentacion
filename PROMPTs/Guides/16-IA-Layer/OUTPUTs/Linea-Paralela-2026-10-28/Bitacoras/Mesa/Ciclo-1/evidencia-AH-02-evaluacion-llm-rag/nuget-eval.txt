@@ -1,0 +1,6 @@
+microsoft.extensions.ai.evaluation 10.11.0 | estables: ['10.11.0']
+microsoft.extensions.ai.evaluation.quality 10.11.0 | estables: ['10.11.0']
+microsoft.extensions.ai.evaluation.reporting 10.11.0 | estables: ['10.11.0']
+microsoft.extensions.ai.evaluation.nlp 10.11.0-preview.1.26513.7 | estables: []
+microsoft.extensions.ai.evaluation.safety 10.11.0-preview.1.26513.7 | estables: []
+2026-10-28T12:57:03Z

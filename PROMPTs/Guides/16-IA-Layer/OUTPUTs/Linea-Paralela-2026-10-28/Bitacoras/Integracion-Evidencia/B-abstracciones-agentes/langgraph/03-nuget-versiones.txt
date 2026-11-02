@@ -1,0 +1,5 @@
+microsoft.agents.ai 1.26.0
+microsoft.agents.ai.workflows 1.26.0
+microsoft.extensions.ai 10.11.0
+ollamasharp 5.5.0
+microsoft.semantickernel 1.81.0

@@ -1,0 +1,84 @@
+[x01] Quiero cargar Goya, provincia de Corrientes, código postal 3450; tiene 90.000 habitantes.
+  modelo devolvió: {
+  "nombre": "Goya",
+  "provincia": "Corrientes",
+  "codigoPostal": "3450",
+  "habitantes": 90000
+}
+  TryGetResult: true
+  decisión de las reglas: lista
+  oráculo: pasa
+[x02] Resistencia (Chaco), CP 3500, con 291720 habitantes. Dala de alta, por favor.
+  modelo devolvió: {
+  "nombre": "Resistencia",
+  "provincia": "Chaco",
+  "codigoPostal": "3500",
+  "habitantes": 291720
+}
+  TryGetResult: true
+  decisión de las reglas: lista
+  oráculo: pasa
+[x03] Agregá la ciudad de Corrientes, en Corrientes: código 3400 y una población de 346334.
+  modelo devolvió: {
+  "nombre": "Corrientes",
+  "provincia": "Corrientes",
+  "codigoPostal": "3400",
+  "habitantes": 346334
+}
+  TryGetResult: true
+  decisión de las reglas: lista
+  oráculo: pasa
+[x04] Bella Vista, Corrientes. Código postal 3432. Habitantes: 30000.
+  modelo devolvió: {
+  "nombre": "Bella Vista",
+  "provincia": "Corrientes",
+  "codigoPostal": "3432",
+  "habitantes": 30000
+}
+  TryGetResult: true
+  decisión de las reglas: lista
+  oráculo: pasa
+[x05] Sumá Goya, de la provincia de Corrientes, con código postal 3450.
+  modelo devolvió: {
+  "nombre": "Goya",
+  "provincia": "Corrientes",
+  "codigoPostal": "3450",
+  "habitantes": null
+}
+  TryGetResult: true
+  decisión de las reglas: faltan:habitantes → Ingrese una cantidad de habitantes mayor a cero.
+  oráculo: pasa
+[x06] Resistencia, Chaco, CP 3500. La cantidad de habitantes no la tengo.
+  modelo devolvió: {
+  "nombre": "Resistencia",
+  "provincia": "Chaco",
+  "codigoPostal": "3500",
+  "habitantes": null
+}
+  TryGetResult: true
+  decisión de las reglas: faltan:habitantes → Ingrese una cantidad de habitantes mayor a cero.
+  oráculo: pasa
+[x07] Necesito el alta de Corrientes (provincia de Corrientes), código postal 3400, sin el dato de población.
+  modelo devolvió: {
+  "nombre": null,
+  "provincia": "Corrientes",
+  "codigoPostal": "3400",
+  "habitantes": null
+}
+  TryGetResult: true
+  decisión de las reglas: faltan:habitantes,nombre → El nombre debe tener entre 3 y 60 caracteres. Ingrese una cantidad de habitantes mayor a cero.
+  oráculo: pasa
+[x08] Cargá Bella Vista en Corrientes; su código postal es 3432 y no sé cuánta gente vive ahí.
+  modelo devolvió: {
+  "nombre": "Bella Vista",
+  "provincia": "Corrientes",
+  "codigoPostal": "3432",
+  "habitantes": null
+}
+  TryGetResult: true
+  decisión de las reglas: faltan:habitantes → Ingrese una cantidad de habitantes mayor a cero.
+  oráculo: pasa
+altas guardadas: 4
+conducta del modelo (descriptiva, sin umbral): JSON válido 8/8; propuso habitantes sin el dato 0/4; código postal que no está en el texto 0/8
+registro: 16 líneas en 03-Salida-Estructurada.jsonl
+invariantes de código: se cumplen

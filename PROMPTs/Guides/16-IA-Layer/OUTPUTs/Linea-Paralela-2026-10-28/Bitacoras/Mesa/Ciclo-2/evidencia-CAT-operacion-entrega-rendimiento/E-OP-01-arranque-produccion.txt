@@ -1,0 +1,13 @@
+# E-OP-01 — Arranque de la demo fuera de Development (2026-10-28, SDK 10.0, turno «build»)
+# Copia de la demo fuera del repositorio; dotnet build y dotnet run --no-build en mcr.microsoft.com/dotnet/sdk:10.0, red none.
+## build
+Time Elapsed 00:00:14.92
+build rc=0
+## ASPNETCORE_ENVIRONMENT=Production, sin-variable (con-variable = -e AI__TimeoutSegundos=300)
+Microsoft.Extensions.Options.OptionsValidationException: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.
+rc=134 (124 = sigue arriba al vencer el timeout de 90 s)
+Unhandled exception. Microsoft.Extensions.Options.OptionsValidationException: DataAnnotation validation failed for 'OpcionesDeIA' members: 'TimeoutSegundos' with the error: 'The field TimeoutSegundos must be between 1 and 3600.'.
+## ASPNETCORE_ENVIRONMENT=Production, con-variable (con-variable = -e AI__TimeoutSegundos=300)
+Application started. Press Ctrl+C to shut down.
+Now listening on: http://[::]:8080
+rc=124 (124 = sigue arriba al vencer el timeout de 90 s)

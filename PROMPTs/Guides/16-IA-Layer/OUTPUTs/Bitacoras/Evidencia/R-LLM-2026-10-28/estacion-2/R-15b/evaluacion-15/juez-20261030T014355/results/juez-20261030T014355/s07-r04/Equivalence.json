@@ -1,0 +1,79 @@
+{
+  "scenarioName": "s07-r04",
+  "iterationName": "Equivalence",
+  "executionName": "juez-20261030T014355",
+  "creationTime": "2026-10-30T02:32:25.3487164Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "\u00BFCu\u00E1l es la poblaci\u00F3n m\u00E1s chica que se puede cargar para una localidad?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "La poblaci\u00F3n m\u00EDnima que se puede cargar para una localidad es un n\u00FAmero entero de 1 en adelante [Fuente: LocalidadPolicy.RequisitoDeLosHabitantes]."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Equivalence": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Equivalence",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Equivalence)": {
+            "name": "Ground Truth (Equivalence)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Localidad \u00B7 requisito de los habitantes: Un n\u00FAmero entero de 1 en adelante."
+              }
+            ]
+          }
+        },
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "qwen3.5:4b",
+          "eval-input-tokens": "922",
+          "eval-output-tokens": "2",
+          "eval-total-tokens": "924",
+          "eval-duration-ms": "9004.28"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 9.0041088,
+        "model": "qwen3.5:4b",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 922,
+          "outputTokenCount": 2,
+          "totalTokenCount": 924
+        },
+        "cacheKey": "4A4BDC0CE936CAF3C9C018E5D87AC8830901887DBEEE430731C647622D97DF5ED884B844F8B0B90CEC8AF69526B7B9AC",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/MovilidadUrbana.Ejemplos.ToolCalling/MovilidadUrbana.Ejemplos.ToolCalling.csproj" />
+  <Project Path="tests/MovilidadUrbana.Ejemplos.ToolCalling.Tests/MovilidadUrbana.Ejemplos.ToolCalling.Tests.csproj" />
+</Solution>

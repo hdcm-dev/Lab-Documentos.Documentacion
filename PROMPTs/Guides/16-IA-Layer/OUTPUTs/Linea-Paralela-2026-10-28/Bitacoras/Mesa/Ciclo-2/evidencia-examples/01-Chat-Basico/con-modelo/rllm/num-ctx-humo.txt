@@ -1,0 +1,11 @@
+# R-LLM — estimando: este pedido (invariantes), 1 pedido × 3 semillas por tamaño (s = 1..3) + 1 de referencia, qwen2.5:0.5b@a8b0c5157701, T 0.7, think sin enviar, num_ctx 16384/8192/4096, MaxOutputTokens 3, ruta API /api/chat (OllamaSharp), Ollama 0.40.11, fecha 2026-10-28T17:57:06.4542096+00:00
+# criterio previo: (a) entrada(8192) > 4096 en 3/3; (b) entrada(4096) ≤ 4096 en 3/3; (c) entrada(8192) = entrada(16384)
+# pedido: 22014 caracteres, 242 líneas, generado por PromptLargo (determinista)
+num_ctx=16384 s=1 entrada=6843 salida=3 fin=length pared=137.6s «Tiene»
+num_ctx=8192 s=1 entrada=6843 salida=3 fin=length pared=165.8s «Tiene»
+num_ctx=8192 s=2 entrada=6843 salida=3 fin=length pared=0.4s «La encuesta»
+num_ctx=8192 s=3 entrada=6843 salida=3 fin=length pared=0.4s «La encuesta»
+num_ctx=4096 s=1 entrada=2050 salida=3 fin=stop pared=34.0s «14»
+num_ctx=4096 s=2 entrada=2050 salida=3 fin=stop pared=0.3s «30»
+num_ctx=4096 s=3 entrada=2050 salida=3 fin=stop pared=0.4s «34»
+# resultado — estimando: este pedido; (a) 3/3; (b) 3/3; (c) 3/3; referencia=6843

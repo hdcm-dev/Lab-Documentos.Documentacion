@@ -1,0 +1,10 @@
+flowchart LR
+  P["Application: puerto del dominio"] --> A["Infrastructure/AI: adaptador"]
+  A --> I["IChatClient"]
+  O["OpcionesDeIA: sección AI"] -.-> C["Composición: AI:Proveedor"]
+  C --> N["OllamaApiClient: vía nativa"]
+  C --> V["OpenAIChatClient: vía /v1"]
+  I --- N
+  I --- V
+  N --> S["servidor Ollama de prueba"]
+  V --> S

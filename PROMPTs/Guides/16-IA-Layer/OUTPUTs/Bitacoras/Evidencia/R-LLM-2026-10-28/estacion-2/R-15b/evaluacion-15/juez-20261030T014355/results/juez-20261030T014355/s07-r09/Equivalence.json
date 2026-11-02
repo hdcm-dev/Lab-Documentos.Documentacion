@@ -1,0 +1,79 @@
+{
+  "scenarioName": "s07-r09",
+  "iterationName": "Equivalence",
+  "executionName": "juez-20261030T014355",
+  "creationTime": "2026-10-30T02:33:15.2820057Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "\u00BFQu\u00E9 se pregunta sobre cada cu\u00E1nto viaja la persona?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Se pregunta con qu\u00E9 asiduidad utiliza los medios de transporte por d\u00EDa, ya que el contexto establece un l\u00EDmite m\u00E1ximo de 500 km diarios para este requisito. [Fuente: EncuestaPolicy.RequisitoDeLaFrecuencia]"
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Equivalence": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Equivalence",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Equivalence)": {
+            "name": "Ground Truth (Equivalence)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Encuesta \u00B7 requisito de la frecuencia: Con qu\u00E9 asiduidad usa esos medios."
+              }
+            ]
+          }
+        },
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "qwen3.5:4b",
+          "eval-input-tokens": "936",
+          "eval-output-tokens": "2",
+          "eval-total-tokens": "938",
+          "eval-duration-ms": "10780.60"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 10.780463,
+        "model": "qwen3.5:4b",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 936,
+          "outputTokenCount": 2,
+          "totalTokenCount": 938
+        },
+        "cacheKey": "BB4D75D90760C25AA5124875732D5AD9A0738B195D2839683DCAD2EB85191C98D63F11B7C2A8338F9903C6B7E770A612",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

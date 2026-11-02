@@ -1,0 +1,10 @@
+# Formato de fechas y estilo de cita por núcleo (2026-10-28)
+N0b  fechas_con_U+2011=0   fechas_ISO=56   cita_backtick=0    cita_corchete=0    cita_parentesis=24
+N1b  fechas_con_U+2011=0   fechas_ISO=179  cita_backtick=161  cita_corchete=0    cita_parentesis=0
+N1   fechas_con_U+2011=27  fechas_ISO=58   cita_backtick=220  cita_corchete=0    cita_parentesis=0
+N2   fechas_con_U+2011=0   fechas_ISO=111  cita_backtick=0    cita_corchete=201  cita_parentesis=0
+N3b  fechas_con_U+2011=0   fechas_ISO=59   cita_backtick=0    cita_corchete=241  cita_parentesis=1
+N3   fechas_con_U+2011=0   fechas_ISO=143  cita_backtick=1    cita_corchete=358  cita_parentesis=0
+N4   fechas_con_U+2011=0   fechas_ISO=154  cita_backtick=0    cita_corchete=364  cita_parentesis=0
+N5   fechas_con_U+2011=0   fechas_ISO=91   cita_backtick=207  cita_corchete=0    cita_parentesis=4
+N6   fechas_con_U+2011=0   fechas_ISO=91   cita_backtick=0    cita_corchete=127  cita_parentesis=8

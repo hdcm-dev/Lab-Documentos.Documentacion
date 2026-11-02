@@ -1,0 +1,72 @@
+== Examples/01-Chat-Basico
+The given project `MovilidadUrbana.Ejemplos.ChatBasico` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.ChatBasico.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.ChatBasico` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.ChatBasico.Tests` has no deprecated packages given the current sources.
+== Examples/02-Streaming/src/MovilidadUrbana.Streaming
+The given project `MovilidadUrbana.Streaming` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Streaming` has no deprecated packages given the current sources.
+== Examples/02-Streaming/tests/MovilidadUrbana.Streaming.Tests
+The given project `MovilidadUrbana.Streaming.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Streaming.Tests` has no deprecated packages given the current sources.
+== Examples/03-Salida-Estructurada/src/MovilidadUrbana.SalidaEstructurada
+The given project `MovilidadUrbana.SalidaEstructurada` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.SalidaEstructurada` has no deprecated packages given the current sources.
+== Examples/03-Salida-Estructurada/tests/MovilidadUrbana.SalidaEstructurada.Tests
+The given project `MovilidadUrbana.SalidaEstructurada.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.SalidaEstructurada.Tests` has no deprecated packages given the current sources.
+== Examples/04-Embeddings-Y-Busqueda
+The given project `MovilidadUrbana.Busqueda` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Busqueda.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Busqueda` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Busqueda.Tests` has no deprecated packages given the current sources.
+== Examples/05-RAG-En-Memoria
+The given project `MovilidadUrbana.RagEnMemoria` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.RagEnMemoria.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.RagEnMemoria` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.RagEnMemoria.Tests` has no deprecated packages given the current sources.
+== Examples/06-Tool-Calling
+The given project `MovilidadUrbana.Ejemplos.ToolCalling` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.ToolCalling.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.ToolCalling` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.ToolCalling.Tests` has no deprecated packages given the current sources.
+== Examples/07-Agente-Con-Aprobacion
+The given project `MovilidadUrbana.Ejemplos.AgenteConAprobacion` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.AgenteConAprobacion` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests` has no deprecated packages given the current sources.
+== Examples/08-Servidor-Y-Cliente-MCP
+The given project `MovilidadUrbana.Ejemplos.Mcp.Cliente` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.Mcp.Servidor` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.Mcp.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.Mcp.Cliente` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.Mcp.Servidor` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.Mcp.Tests` has no deprecated packages given the current sources.
+== Examples/09-Pruebas-Con-Cliente-Falso
+The given project `MovilidadUrbana.Ejemplos.PruebasConClienteFalso` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.PruebasConClienteFalso` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests` has no deprecated packages given the current sources.
+== Examples/10-Workflow
+The given project `MovilidadUrbana.Ejemplos.Orquestacion` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.Orquestacion.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.Orquestacion` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.Orquestacion.Tests` has no deprecated packages given the current sources.
+== Examples/12-Anotaciones-Pareadas
+The given project `MovilidadUrbana.Ejemplos.AnotacionesPareadas` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.AnotacionesPareadas` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests` has no deprecated packages given the current sources.
+== Examples/13-Prueba-De-Arquitectura
+The given project `MovilidadUrbana.PruebaDeArquitectura` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.PruebaDeArquitectura.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.PruebaDeArquitectura` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.PruebaDeArquitectura.Tests` has no deprecated packages given the current sources.
+== Demos/MovilidadUrbana.Asistente
+The given project `MovilidadUrbana.Asistente` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Asistente.Tests` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Asistente` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Asistente.Tests` has no deprecated packages given the current sources.
+== Demos/MovilidadUrbana.Asistente/verificacion/CopiaSola
+The given project `CopiaSola` has no vulnerable packages given the current sources.
+The given project `CopiaSola` has no deprecated packages given the current sources.

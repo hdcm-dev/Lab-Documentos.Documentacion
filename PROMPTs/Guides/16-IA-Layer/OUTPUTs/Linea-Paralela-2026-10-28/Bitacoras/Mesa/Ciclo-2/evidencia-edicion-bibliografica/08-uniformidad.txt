@@ -1,0 +1,40 @@
+== nombres de ESC tras el id (tabla o paréntesis)
+      1 ESC-01 asistente
+      2 ESC-01 (asistente sobre datos propios
+      4 ESC-01 asistente sobre datos propios
+      1 ESC-01 (consulta de datos
+      1 ESC-01 consulta de datos
+      1 ESC-02 búsqueda
+      1 ESC-02 (búsqueda por significado
+      2 ESC-02 búsqueda por significado
+      3 ESC-02 búsqueda semántica
+      1 ESC-03 extracción
+      2 ESC-03 extracción a estructura
+      1 ESC-03 (extracción estructurada
+      3 ESC-03 extracción estructurada
+      1 ESC-04 (acción con aprobación
+      2 ESC-04 acción con aprobación
+      1 ESC-04 acción con herramientas
+      2 ESC-04 agentes y herramientas
+      2 ESC-05 exposición por
+      1 ESC-05 (integración con terceros
+      1 ESC-05 integración con terceros
+== voseo/2a persona
+316:tu  417:tu  417:tus  420:verificá 426:tu  429:tu  583:tu  2357:podés 2562:tu  2580:necesitás 2583:podés 2586:necesitás 2592:Hacé 2598:querés 2598:usás 2601:podés 2604:exponés 2604:tu  3399:Probá 3447:trates 3462:bajá 3471:buscá 3483:podés 3486:revisá 
+== etiquetas ESC en preguntas guía por sección
+§1.5 preguntas=1 con-etiqueta=1
+§2.6 preguntas=7 con-etiqueta=7
+§3.9 preguntas=3 con-etiqueta=3
+§4.9 preguntas=5 con-etiqueta=0
+§5.9 preguntas=10 con-etiqueta=10
+§6.11 preguntas=16 con-etiqueta=16
+§7.13 preguntas=12 con-etiqueta=0
+§8.13 preguntas=13 con-etiqueta=13
+§9.9 preguntas=6 con-etiqueta=0
+== estilo del criterio
+11 \*\*Criterio:\*\*
+24 \*Criterio:\*
+8 \*\*Criterio\*\*:
+4 \*\*Aplica\*\*
+4 \*\*Cuándo no
+1 Criterio\.\*\*

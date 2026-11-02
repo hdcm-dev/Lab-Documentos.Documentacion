@@ -1,0 +1,6 @@
+# grep de literales (RV-12) en src/ fuera de OpcionesDeIA.cs y appsettings*.json
+src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Program.cs:38:Console.WriteLine(sinModelo ? "Modo sin modelo (cliente guionado)" : $"Modelo: {ia.Modelo}; num_ctx: {ia.NumCtx}");
+src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/FabricaDeOpcionesDeChat.cs:24:            AdditionalProperties = new() { ["num_ctx"] = ia.NumCtx },
+# fin
+# bin/ u obj/ en la carpeta del ejemplo:
+# fin

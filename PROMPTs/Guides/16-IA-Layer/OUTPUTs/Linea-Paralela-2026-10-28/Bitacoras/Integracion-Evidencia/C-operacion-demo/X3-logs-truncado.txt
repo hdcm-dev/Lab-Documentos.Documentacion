@@ -1,0 +1,4 @@
+# X3 — líneas del log del contenedor <ollama> (docker logs --since 40m), IPs enmascaradas; consultado 2026-10-28T09:15:56-03:00
+time=2026-10-28T12:11:26.825Z level=WARN source=llama_server.go:334 msg="truncating input prompt" limit=2050 prompt=10082 keep=4 new=2050
+time=2026-10-28T12:12:49.519Z level=WARN source=llama_server.go:334 msg="truncating input prompt" limit=4098 prompt=10082 keep=4 new=4098
+# (12:11:26Z = caso sin-num_ctx; 12:12:49Z = caso num_ctx-8192). Las respuestas HTTP fueron 200 con done_reason stop: el cliente no recibe aviso.

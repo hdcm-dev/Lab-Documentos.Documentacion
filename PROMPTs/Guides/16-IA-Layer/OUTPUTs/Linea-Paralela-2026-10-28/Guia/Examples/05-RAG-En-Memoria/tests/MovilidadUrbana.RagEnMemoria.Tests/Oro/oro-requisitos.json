@@ -1,0 +1,22 @@
+{
+  "descripcion": "Oro de la ayuda sobre requisitos. Corpus: los 12 enunciados de LocalidadPolicy y EncuestaPolicy del caso base. Redactado a mano el 2026-10-28, antes de cualquier corrida contra el modelo. 'clave' es una expresión regular sobre la respuesta en minúsculas y sin tildes; debe coincidir con el texto de al menos un relevante.",
+  "versionDelCasoBase": "59399ba",
+  "consultas": [
+    { "id": "R01", "consulta": "¿Cuántos números lleva el código postal?", "relevantes": ["LocalidadPolicy.RequisitoDelCodigoPostal"], "respondible": true, "clave": "\\b4\\b|cuatro" },
+    { "id": "R02", "consulta": "¿Qué largo puede tener el nombre de la ciudad que cargo?", "relevantes": ["LocalidadPolicy.RequisitoDelNombre"], "respondible": true, "clave": "\\b60\\b|sesenta" },
+    { "id": "R03", "consulta": "¿Puedo escribir cualquier provincia o tiene que ser de una lista?", "relevantes": ["LocalidadPolicy.RequisitoDeLaProvincia"], "respondible": true, "clave": "catalogo" },
+    { "id": "R04", "consulta": "¿Cuántos habitantes tiene que tener como mínimo una localidad?", "relevantes": ["LocalidadPolicy.RequisitoDeLosHabitantes"], "respondible": true, "clave": "\\b1\\b|\\buno\\b" },
+    { "id": "R05", "consulta": "¿Desde qué edad se puede contestar la encuesta?", "relevantes": ["EncuestaPolicy.RequisitoDeLaEdad"], "respondible": true, "clave": "\\b16\\b|dieciseis" },
+    { "id": "R06", "consulta": "¿Cuántos kilómetros por día puedo declarar como máximo?", "relevantes": ["EncuestaPolicy.RequisitoDeLaDistancia"], "respondible": true, "clave": "\\b500\\b|quinientos" },
+    { "id": "R07", "consulta": "¿Cuánto puede durar el viaje que informo, en minutos?", "relevantes": ["EncuestaPolicy.RequisitoDeLosMinutos"], "respondible": true, "clave": "\\b600\\b|seiscientos" },
+    { "id": "R08", "consulta": "¿Tengo que marcar algún medio de transporte o lo puedo dejar vacío?", "relevantes": ["EncuestaPolicy.RequisitoDeLosMedios"], "respondible": true, "clave": "al menos uno|al menos un|\\buno\\b" },
+    { "id": "R09", "consulta": "En la encuesta, ¿la localidad la escribo yo o la elijo de algún lado?", "relevantes": ["EncuestaPolicy.RequisitoDeLaLocalidad"], "respondible": true, "clave": "cargad|\\babm\\b" },
+    { "id": "R10", "consulta": "¿Cuántas letras tiene que tener mi nombre en la encuesta?", "relevantes": ["EncuestaPolicy.RequisitoDelNombre"], "respondible": true, "clave": "\\b3\\b|\\btres\\b" },
+    { "id": "R11", "consulta": "¿Qué me piden sobre el motivo del viaje?", "relevantes": ["EncuestaPolicy.RequisitoDelMotivo"], "respondible": true, "clave": "principal" },
+    { "id": "R12", "consulta": "¿Qué reglas tiene el nombre?", "relevantes": ["LocalidadPolicy.RequisitoDelNombre", "EncuestaPolicy.RequisitoDelNombre"], "respondible": true, "clave": "\\b3\\b|\\btres\\b" },
+    { "id": "N01", "consulta": "¿Si elimino una ciudad se pierden las encuestas?", "relevantes": [], "respondible": false, "clave": null },
+    { "id": "N02", "consulta": "¿Cuál es el horario de atención de la oficina de transporte?", "relevantes": [], "respondible": false, "clave": null },
+    { "id": "N03", "consulta": "¿Cuánto cuesta el boleto de colectivo?", "relevantes": [], "respondible": false, "clave": null },
+    { "id": "N04", "consulta": "¿Puedo cargar dos localidades con el mismo código postal?", "relevantes": [], "respondible": false, "clave": null }
+  ]
+}

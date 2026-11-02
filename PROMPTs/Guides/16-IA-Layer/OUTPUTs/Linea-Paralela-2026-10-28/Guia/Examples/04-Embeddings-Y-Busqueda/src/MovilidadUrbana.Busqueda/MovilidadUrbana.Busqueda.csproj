@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Ejemplo 04: buscar el requisito por significado (ESC-02) y medir la recuperación sola, sin generar. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MovilidadUrbana.Busqueda</RootNamespace>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Versiones consultadas en nuget.org el 2026-10-28. -->
+    <PackageReference Include="Microsoft.Extensions.AI" Version="10.11.0" />
+    <PackageReference Include="OllamaSharp" Version="5.5.0" />
+    <PackageReference Include="Microsoft.Extensions.VectorData.Abstractions" Version="10.11.0" />
+    <PackageReference Include="CommunityToolkit.VectorData.InMemory" Version="1.0.1" />
+    <PackageReference Include="System.Numerics.Tensors" Version="10.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="10.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="10.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\oro\oro-requisitos.json" Link="oro\oro-requisitos.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

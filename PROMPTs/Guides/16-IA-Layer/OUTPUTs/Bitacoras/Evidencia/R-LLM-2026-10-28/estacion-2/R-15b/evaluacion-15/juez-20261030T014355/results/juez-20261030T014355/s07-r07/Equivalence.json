@@ -1,0 +1,80 @@
+{
+  "scenarioName": "s07-r07",
+  "iterationName": "Equivalence",
+  "executionName": "juez-20261030T014355",
+  "creationTime": "2026-10-30T02:32:54.2516042Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "En la encuesta, \u00BFpuedo escribir una localidad que todav\u00EDa no se dio de alta?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "S\u00ED, puedes escribir una localidad que a\u00FAn no est\u00E9 cargada en el ABM siempre y cuando cumpla con tener al menos 3 caracteres. [Fuente: EncuestaPolicy.RequisitoDeLaLocalidad][Fuente: EncuestaPolicy.RequisitoDelNombre]"
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Equivalence": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "Equivalence",
+        "interpretation": {
+          "rating": "unacceptable",
+          "failed": true,
+          "reason": "Equivalence is less than 4."
+        },
+        "context": {
+          "Ground Truth (Equivalence)": {
+            "name": "Ground Truth (Equivalence)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Encuesta \u00B7 requisito de la localidad: Una de las localidades cargadas en el ABM."
+              }
+            ]
+          }
+        },
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "qwen3.5:4b",
+          "eval-input-tokens": "949",
+          "eval-output-tokens": "2",
+          "eval-total-tokens": "951",
+          "eval-duration-ms": "9781.11"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 9.780923,
+        "model": "qwen3.5:4b",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 949,
+          "outputTokenCount": 2,
+          "totalTokenCount": 951
+        },
+        "cacheKey": "F16E0495852403DCB69BB897D7483DDD9A5B068ADBCF3CDF610161D61DC6779A48AE70EBDF466ACED4C18C31B200CDE6",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

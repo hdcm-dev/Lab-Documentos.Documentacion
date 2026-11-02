@@ -1,0 +1,15 @@
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest  pulling manifest 
+verifying sha256 digest 
+writing manifest 
+success 

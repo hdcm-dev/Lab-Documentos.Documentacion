@@ -1,0 +1,8 @@
+e02: «Agregá Goya, Corrientes, CP 3450, 90000 habitantes.»
+  pedido de aprobación [ficc_cbe4c0c7]: Dar de ALTA la localidad «Goya», provincia «Corrientes», CP «3450», 90000 habitantes.
+  la persona aprueba
+  ejecutó agregar_localidad → éxito: Se agregó la localidad Goya.
+  asistente (modelo): La localidad Goya en Corrientes se ha agregado correctamente al ABM con el código postal 3450 y 90.000 habitantes.
+  llamadas al modelo: 2 · oráculo alta-con-aprobacion (esperado alta): pasa
+registro: 3 renglones en 09-Caso-De-Uso-Como-Herramienta.jsonl
+invariantes de código: se cumplen

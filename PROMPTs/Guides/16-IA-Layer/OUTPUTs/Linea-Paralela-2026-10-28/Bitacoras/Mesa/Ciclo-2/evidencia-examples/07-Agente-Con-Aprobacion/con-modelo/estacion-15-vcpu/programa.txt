@@ -1,0 +1,25 @@
+# R-LLM — estimando: existencia, 1 corrida, sin semilla, estación: estación de laboratorio de 15 vCPU, fecha 2026-10-28T15:52:34-03:00
+# Ollama {"version":"0.40.11"}
+# modelo@digest: ['qwen3.5:4b@d8b0f5e9760c']
+# parámetros: appsettings.json + appsettings.Development.json (T 0.7, top_p 0.8, top_k 20, min_p 0, presence 1.5, repeat 1.0, think false, num_ctx 8192, iteraciones 3, sin semilla), /api/chat (OllamaSharp 5.5.0), MAF 1.26.0
+# comando: dotnet run --project src/MovilidadUrbana.Ejemplos.AgenteConAprobacion -c Release --no-build -- --aprobar s
+Modelo: qwen3.5:4b; num_ctx: 8192
+
+== 4.1 Llamada única con una herramienta
+> ¿Cuántas localidades hay en Chaco?
+Hay 1 localidad cargada en la provincia de Chaco.
+
+== 4.2 El mismo IChatClient como agente de MAF, con sesión
+> ¿Cuántas localidades hay en Chaco?
+En la provincia de Chaco hay 1 localidad cargada en el catálogo.
+> ¿Y en Corrientes?
+En la provincia de Corrientes también hay 1 localidad cargada en el catálogo.
+
+== Escritura con aprobación
+> Borrá Resistencia
+  [aprobación] Dar de baja la localidad «Resistencia» (Chaco), id 2. (herramienta eliminar_localidad; vence 18:58:10 UTC)
+  ¿Aprobás? (s/n): s (fija por --aprobar)
+He borrado la localidad Resistencia.
+Localidades de la sesión: Corrientes
+# código de salida: 0
+# pared total: 38 s

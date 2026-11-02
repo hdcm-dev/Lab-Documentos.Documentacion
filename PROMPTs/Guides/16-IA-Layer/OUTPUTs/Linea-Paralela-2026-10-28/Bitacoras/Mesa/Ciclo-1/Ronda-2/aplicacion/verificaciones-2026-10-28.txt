@@ -1,0 +1,86 @@
+# verificación de la ronda 2 — 2026-10-28T14:36:23-03:00
+## P2-01 compuerta v2 sobre OUTPUTs/ (patrones=0 y cabeceras=0; identificadores informa)
+raiz=. patrones=0 identificadores=452 cabeceras=0
+## P2-01 casos rojos y verdes (lista de prueba temporal, fuera de OUTPUTs/)
+a-diseno-una-linea.jsonl           esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+b-escapado.jsonl                   esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+c-con-espacios.json                esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+d-indentado.json                   esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+e-camelcase.json                   esperado=cabeceras=1  patrones=0 identificadores=0 cabeceras=1 rc=1
+f-vacios.json                      esperado=cabeceras=0  patrones=0 identificadores=0 cabeceras=0 rc=0
+g-sintetico.txt                    esperado=cabeceras=0  patrones=0 identificadores=0 cabeceras=0 rc=0
+h-ruta-home.md                     esperado=patrones=1  patrones=1 identificadores=0 cabeceras=0 rc=1
+## Notas de la ronda 2 por parche (total en OUTPUTs/)
+P2-01 4
+P2-02 9
+P2-03 10
+P2-04 8
+P2-05 11
+P2-06 7
+P2-07 10
+P2-08 10
+P2-09 12
+P2-10 14
+P2-11 8
+P2-12 4
+P2-13 12
+P2-14 13
+P2-15 2
+## Frases viejas con la nota de la ronda 2 a la vista en el mismo archivo
+«estado del servidor» 04-Integracion.md: apariciones=1 notas-ronda-2=45
+«estado del servidor» N3b-CAG-Y-Estrategias-De-Conocimiento.md: apariciones=1 notas-ronda-2=6
+«si el cliente la expone» 04-Integracion.md: apariciones=2 notas-ronda-2=45
+«si el cliente la expone» N3b-CAG-Y-Estrategias-De-Conocimiento.md: apariciones=5 notas-ronda-2=6
+«si el cliente la expone» N5-Operacion-Calidad-Seguridad.md: apariciones=2 notas-ronda-2=9
+«N ≥ 96» 04-Integracion.md: apariciones=4 notas-ronda-2=45
+«N ≥ 96» N0b-Producto-Datos-Y-Perfil.md: apariciones=4 notas-ronda-2=5
+«se apaga al terminar» 04-Integracion.md: apariciones=1 notas-ronda-2=45
+«se apaga al terminar» Sondeo-Entorno.md: apariciones=1 notas-ronda-2=2
+«no se comparó punta a punta» 04-Integracion.md: apariciones=2 notas-ronda-2=45
+## P2-05 «pierde la sesión|falla al arrancar|mezcla sesiones» en BIT-16-04 fuera de notas (debe ser 0)
+0
+## P2-02 fila N6 de 03-Marco: nota de la ronda 2 presente
+1
+## P2-10 criterio D1–D6: sha256 del texto previo a la nota (debe ser el de F09)
+6c306217efdc0f78f22cf5b95a29356cdb0291dd3fbcbee7523cb0c74f96f416
+## P2-10 pares por semilla (03-comparacion.jsonl)
+D1: n=10 fallas 2b=1 [0.02; 0.40] 4b=10 [0.72; 1.00] discordantes=9 (sólo 2b 0, sólo 4b 9)  R-LLM-3e: difiere
+D3: n=10 fallas 2b=10 [0.72; 1.00] 4b=0 [0.00; 0.28] discordantes=10 (sólo 2b 10, sólo 4b 0)  R-LLM-3e: difiere
+D3-T: n=10 fallas 2b=9 [0.60; 0.98] 4b=1 [0.02; 0.40] discordantes=8 (sólo 2b 8, sólo 4b 0)  R-LLM-3e: difiere
+D6: n=10 fallas 2b=10 [0.72; 1.00] 4b=10 [0.72; 1.00] discordantes=0 (sólo 2b 0, sólo 4b 0)  R-LLM-3e: no separado con este N
+## P2-09/P2-10 PC-06 por paso
+qwen3.5:4b | 1 frío, sin num_ctx | N=5 | load_s 11.51–19.20 | prompt_eval_count [30] | prompt_eval_s 2.6–3.8 | done_reason ['stop'] | ps [4096]
+qwen3.5:4b | 2 con num_ctx=8192 | N=5 | load_s 11.36–22.80 | prompt_eval_count [30] | prompt_eval_s 3.0–3.5 | done_reason ['stop'] | ps [8192]
+qwen3.5:4b | 3 sin num_ctx, cargado con 8192 | N=5 | load_s 10.48–16.06 | prompt_eval_count [30] | prompt_eval_s 2.3–3.9 | done_reason ['stop'] | ps [4096]
+qwen3.5:4b | 4 sin num_ctx otra vez | N=5 | load_s 0.00–0.01 | prompt_eval_count [30] | prompt_eval_s 2.5–4.0 | done_reason ['stop'] | ps [4096]
+qwen2.5:0.5b | 1 frío, sin num_ctx | N=5 | load_s 0.82–1.93 | prompt_eval_count [2050] | prompt_eval_s 22.1–40.4 | done_reason ['stop'] | ps [4096]
+qwen2.5:0.5b | 2 con num_ctx=8192 | N=5 | load_s 1.10–1.99 | prompt_eval_count [5134] | prompt_eval_s 67.3–95.5 | done_reason ['stop'] | ps [8192]
+qwen2.5:0.5b | 3 sin num_ctx, cargado con 8192 | N=5 | load_s 1.12–1.74 | prompt_eval_count [2050] | prompt_eval_s 21.8–40.7 | done_reason ['stop'] | ps [4096]
+qwen2.5:0.5b | 4 sin num_ctx otra vez | N=5 | load_s 0.00–0.00 | prompt_eval_count [2050] | prompt_eval_s 0.0–0.1 | done_reason ['stop'] | ps [4096]
+## P2-06 copias en Integracion-Evidencia/C-operacion-demo (cmp = 0)
+igual PC02-salida.txt
+igual P2-06v2-salida.txt
+igual P2-06v2-Program.cs
+igual P2-06v2.csproj
+igual P206v2-salida.txt
+igual P206v2-Program.cs
+igual P206v2-Sonda.csproj
+## P2-15 encabezado «## Validación del núcleo (ciclo 1)» por registro (debe ser 1)
+N0b-Producto-Datos-Y-Perfil.md 1
+N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md 1
+N1-Capa-IA-En-El-Stack.md 1
+N2-Abstracciones-Y-Proveedores-NET.md 1
+N3b-CAG-Y-Estrategias-De-Conocimiento.md 1
+N3-RAG-En-NET.md 1
+N4-Agentes-Y-Orquestacion.md 1
+N5-Operacion-Calidad-Seguridad.md 1
+N6-Caso-Movilidad-Urbana.md 1
+## [C: en las notas de la ronda 2 (sólo menciones de la marca de C1-32 y de la compuerta)
+## [C: fuera de notas en 00, 01 y 03 (ciclo 1: 13 = 11 marcas + 2 explicaciones)
+13
+## 06-Plan §10 presente y §8 sin tocar
+1
+fd9ca80fa3e90c5b85063dcbcc2caaf3eead2f47c22806bdc189d3b3bee227b0
+## Enlaces relativos (G2-enlaces.py) sobre todos los .md de OUTPUTs/
+ROTO-ARCHIVO ./Bitacoras/README.md -> Mesa/Ciclo-1/Ronda-2/05-Aplicacion.md
+enlaces relativos: 366; rotos: 1

@@ -1,0 +1,41 @@
+Test run for /work/tests/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /work/tests/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests.dll
+   NUnit3TestExecutor discovered 25 of 25 NUnit test cases using Current Discovery mode, Non-Explicit run
+  Passed A4_LaEntidadSeReleeAlEjecutar [1 s]
+el plazo cortó a los 205 ms
+
+  Passed Alta_PendienteHastaAprobar [167 ms]
+  Passed AprobacionDeAEnviadaEnB_CeroBajas [78 ms]
+  Passed AprobacionForjada_CeroBajas [12 ms]
+  Passed AprobacionVencida_CeroBajas [9 ms]
+  Passed Aprobada_UnaBajaPorElCasoDeUso_YUnSoloUso [37 ms]
+  Passed AprobadorQueDevuelveNull_EsNo_CeroBajas [12 ms]
+  Passed AprobadorQueNoResponde_VenceElPlazo_CeroBajas [228 ms]
+  Passed CasoRojo_SinLaGuarda_MafEjecutaLoAlterado [35 ms]
+  Passed ConUnaPendiente_ElAsistenteNoAvanza [9 ms]
+reemplazos en la sesión guardada: 2; texto: «Resultado: Rechazado: esta llamada no coincide con la que aprobó la persona.»
+
+  Passed EnMaf_LosArgumentosForjadosNoSeEjecutan [4 ms]
+  Passed EntradaDemasiadoLarga_CeroLlamadas [16 ms]
+  Passed IdInexistenteODeOtraSesion_NoSePregunta_CeroBajas [58 ms]
+  Passed LaBajaQuedaPendienteYNoSeEjecuta [13 ms]
+  Passed SesionGuardadaAlterada_LaGuardaNoEjecuta [17 ms]
+  Passed ConfiguracionInvalida_NoArranca("AI:TimeoutSegundos","0") [46 ms]
+  Passed ConfiguracionInvalida_NoArranca("AI:Aprobaciones:VencimientoDeAprobacionMinutos","0") [3 ms]
+  Passed ConfiguracionInvalida_NoArranca("AI:Herramientas:MaximoDeIteraciones","0") [6 ms]
+  Passed ElPuertoSoloRecibeTextoIdsYDecision [12 ms]
+MaximoDeIteraciones=3; llamadas al cliente: llamada única 4, agente de MAF 4
+
+  Passed EscriturasConAprobacionYGuarda_LecturasSin [9 ms]
+  Passed AgenteDeMaf_MismoClienteConSesionDeDosTurnos [43 ms]
+  Passed ElCorteDelBucleEsElMismoEnLosDosPasos [31 ms]
+  Passed LlamadaUnica_PideLaHerramientaYRespondeConElCasoDeUso [14 ms]
+  Passed InyeccionEnElMensaje_LaBajaQuedaPendiente [17 ms]
+  Passed InyeccionEnLocalidadNombre_LaBajaQuedaPendiente [12 ms]
+
+Test Run Successful.
+Total tests: 25
+     Passed: 25
+ Total time: 7.3435 Seconds

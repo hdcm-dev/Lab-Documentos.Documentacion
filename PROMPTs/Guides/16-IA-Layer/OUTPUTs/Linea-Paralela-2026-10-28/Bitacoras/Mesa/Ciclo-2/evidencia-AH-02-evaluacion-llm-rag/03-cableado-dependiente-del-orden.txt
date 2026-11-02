@@ -1,0 +1,53 @@
+# Cableado/ que dependen del orden de llegada o del reloj (grep), 2026-10-28
+    /// <summary>Cliente falso de 2 s, Permisos = 1 y Cola = 2: los pedidos 1–3 en 200 y el 4.º en 503 con Retry-After.</summary>
+    [Test]
+    public async Task CuartoPedidoSimultaneo_Recibe503ConRetryAfter()
+    {
+        var falso = new ClienteGuionado { Responder = _ => "Listo.", Demora = TimeSpan.FromSeconds(2) };
+        await using var api = Api(falso);
+        var concurrencia = api.Services.GetRequiredService<IOptions<OpcionesDeIA>>().Value.Concurrencia;
+        Assert.That((concurrencia.Permisos, concurrencia.Cola), Is.EqualTo((1, 2)), "valores de appsettings.json");
+        using var http = api.CreateClient();
+        // Calentamiento: un pedido inválido (400, sin llamar al modelo) para que el primer pedido medido no
+        // llegue tarde por la compilación JIT y cambie el orden de llegada.
+        await http.PostAsJsonAsync("/api/v1/asistente", new { texto = "" });
+
+        var pedidos = Enumerable.Range(1, 4).Select(async i =>
+        {
+            await Task.Delay(i * 250);
+            var r = await http.PostAsJsonAsync("/api/v1/asistente", new { texto = $"Pregunta {i} sobre las localidades de Chaco" });
+            return (Pedido: i, Codigo: r.StatusCode, Reintentar: r.Headers.RetryAfter?.ToString());
+        }).ToArray();
+        var resultados = await Task.WhenAll(pedidos);
+        foreach (var r in resultados) TestContext.Out.WriteLine($"pedido {r.Pedido}: {(int)r.Codigo} Retry-After={r.Reintentar ?? "-"}");
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(resultados.Take(3).Select(r => r.Codigo), Has.All.EqualTo(HttpStatusCode.OK));
+            Assert.That(resultados[3].Codigo, Is.EqualTo(HttpStatusCode.ServiceUnavailable));
+            Assert.That(resultados[3].Reintentar, Is.EqualTo(concurrencia.ReintentarEnSegundos.ToString()));
+            Assert.That(falso.Llamadas, Is.EqualTo(3));
+        });
+    }
+-- versión de la demo (independiente del orden)
+    [Test]
+    public async Task CTRL09_con_1_permiso_y_cola_2_el_cuarto_pedido_simultaneo_recibe_503_con_Retry_After()
+    {
+        using var app = new Fabrica(new ClienteFalsoLento(ClienteFalso.Reactivo(_ => Responde.Json(new { intencion = "FueraDeAlcance" })), TimeSpan.FromSeconds(1)));
+        var c = app.Cliente("c9");
+
+        var respuestas = await Task.WhenAll(Enumerable.Range(0, 4).Select(_ =>
+            c.PostAsJsonAsync("api/v1/asistente", new PedidoAlAsistente("hola", null))));
+
+        var rechazadas = respuestas.Where(r => r.StatusCode == HttpStatusCode.ServiceUnavailable).ToList();
+        Assert.Multiple(() =>
+        {
+            Assert.That(respuestas.Count(r => r.StatusCode == HttpStatusCode.OK), Is.EqualTo(3));
+            Assert.That(rechazadas, Has.Count.EqualTo(1));
+            Assert.That(rechazadas[0].Headers.RetryAfter?.Delta, Is.EqualTo(TimeSpan.FromSeconds(30)));
+        });
+    }
+-- umbrales de reloj
+Examples/02-Streaming/tests/MovilidadUrbana.Streaming.Tests/Cableado/StreamingCableadoTests.cs:63:        Assert.That(reloj.Elapsed, Is.LessThan(TimeSpan.FromSeconds(1)));
+Examples/07-Agente-Con-Aprobacion/tests/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests/Cableado/AprobacionTests.cs:86:            Assert.That(reloj.Elapsed, Is.LessThan(TimeSpan.FromSeconds(5)));
+Demos/MovilidadUrbana.Asistente/tests/MovilidadUrbana.Asistente.Tests/Cableado/PaginaYConversacionTests.cs:92:        Assert.That(reloj.Elapsed, Is.LessThan(TimeSpan.FromSeconds(1)));

@@ -1,0 +1,5 @@
+CONCEDIDO <recurso-compartido> a implementador hasta 2026-10-28T10:32:19-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> implementador)
+# 2026-10-28T12:47:25.1379295+00:00 modelo=qwen2.5:0.5b caracteres_prompt=22161
+[sin num_ctx] InputTokenCount=2050 respuesta=«3229» FinishReason=stop ms=19783
+[num_ctx=8192 por AdditionalProperties] InputTokenCount=4098 respuesta=«3156» FinishReason=stop ms=49373
+LIBERADO <recurso-compartido> por implementador

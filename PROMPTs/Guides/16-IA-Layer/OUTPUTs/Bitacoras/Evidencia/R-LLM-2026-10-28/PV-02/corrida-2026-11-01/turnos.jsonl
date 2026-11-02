@@ -1,0 +1,2 @@
+{"tipo":"num-ctx","fecha":"2026-11-01T18:54:10Z","turno_id":"20261101T185353-modelo-propio-2565931-23251","fase":"propia","modelo":"qwen3.5:4b","num_ctx_pedido":8192,"num_ctx_ps":8192,"num_ctx_origen":"arnes-ps-tras-carga"}
+{"turno_id":"20261101T185353-modelo-propio-2565931-23251","recurso":"modelo-propio","fase":"correr 05-Contexto-Completo-Con-Prefijo","pedido_en":"2026-11-01T18:53:53Z","concedido_en":"2026-11-01T18:53:53Z","liberado_en":"2026-11-01T19:08:01Z","duracion_s":848,"rc":0,"sin_turno":false,"servidor":"propio","maquina":"estacion-1"}

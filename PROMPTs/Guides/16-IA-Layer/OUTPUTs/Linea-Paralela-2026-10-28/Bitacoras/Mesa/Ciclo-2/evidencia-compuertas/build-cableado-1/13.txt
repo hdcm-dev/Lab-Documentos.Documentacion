@@ -1,0 +1,15 @@
+  Determining projects to restore...
+  Restored /ex/src/MovilidadUrbana.PruebaDeArquitectura/MovilidadUrbana.PruebaDeArquitectura.csproj (in 3.29 sec).
+  Restored /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/MovilidadUrbana.PruebaDeArquitectura.Tests.csproj (in 3.29 sec).
+  MovilidadUrbana.PruebaDeArquitectura -> /ex/src/MovilidadUrbana.PruebaDeArquitectura/bin/Release/net10.0/MovilidadUrbana.PruebaDeArquitectura.dll
+  MovilidadUrbana.PruebaDeArquitectura.Tests -> /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/bin/Release/net10.0/MovilidadUrbana.PruebaDeArquitectura.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:10.58
+Test run for /ex/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/bin/Release/net10.0/MovilidadUrbana.PruebaDeArquitectura.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    13, Skipped:     0, Total:    13, Duration: 422 ms - MovilidadUrbana.PruebaDeArquitectura.Tests.dll (net10.0)

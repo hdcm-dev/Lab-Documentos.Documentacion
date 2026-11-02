@@ -1,0 +1,17 @@
+CONCEDIDO build a senior-dotnet hasta 2026-10-28T10:03:03-0300 (renová con: <gestor-de-turnos> renovar build senior-dotnet)
+10.0.403
+Microsoft.Extensions.AI.ReasoningOptions: sin [Experimental]
+Microsoft.Extensions.AI.ReasoningEffort: sin [Experimental]
+Microsoft.Extensions.AI.ApprovalRequiredAIFunction: sin [Experimental]
+Microsoft.Extensions.AI.ToolApprovalRequestContent: sin [Experimental]
+Microsoft.Extensions.AI.ToolApprovalResponseContent: sin [Experimental]
+Microsoft.Agents.AI.AIContextProvider: sin [Experimental]
+Microsoft.Extensions.AI.ChatResponseFormat: sin [Experimental]
+Microsoft.Extensions.AI.MessageCountingChatReducer: [Experimental("MEAI001")]
+Microsoft.Extensions.AI.ReducingChatClient: [Experimental("MEAI001")]
+Microsoft.Extensions.AI.IImageGenerator: [Experimental("MEAI001")]
+ChatOptions.Reasoning: sin [Experimental]
+ChatOptions.AllowBackgroundResponses: sin [Experimental]
+ChatClientAgentOptions.AIContextProviders: sin [Experimental]
+FunctionInvokingChatClient.MaximumIterationsPerRequest por defecto: 40; MaximumConsecutiveErrorsPerRequest: 3
+LIBERADO build por senior-dotnet

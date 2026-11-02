@@ -1,0 +1,15 @@
+# Fuentes consultadas por AH-01 (2026-10-28, E4)
+
+Cada fila se leyó hoy en la fuente primaria. Lo que va entre comillas es literal.
+
+| Id | URL | Qué confirma | Fecha de consulta |
+|---|---|---|---|
+| S-OW1 | https://genai.owasp.org/llm-top-10/ | Edición **2025** vigente, nombres LLM01:2025 a LLM10:2025 iguales a N5 §3.4. La página no anuncia ninguna edición 2026 | 2026-10-28 |
+| S-OW2 | https://genai.owasp.org/llmrisk/llm01-prompt-injection/ | «Indirect prompt injections occur when an LLM accepts input from external sources, such as websites or files». RAG y el ajuste fino «do not fully mitigate prompt injection vulnerabilities». Hay 7 mitigaciones; entre ellas, «Segregate and identify external content», «Require human approval for high-risk actions» y «Conduct adversarial testing and attack simulations» | 2026-10-28 |
+| S-OW3 | https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/ | Título «LLM02:2025 Sensitive Information Disclosure». Mitigaciones: saneamiento, control de acceso («only to the data it needs»), técnicas de privacidad para que los registros individuales «are harder to reverse-engineer», y redacción por patrones | 2026-10-28 |
+| S-OW4 | https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/ | Título «OWASP Top 10 for Agentic Applications for 2026», publicado el 2025-12-09. La página no lista ASI01–ASI10: los nombres están sólo en el PDF, como ya dice N5 §3.4 | 2026-10-28 |
+| S-MCP1 | https://modelcontextprotocol.io/specification/latest/basic/security_best_practices (versión 2026-07-28) | «Local MCP Server Compromise»: los servidores locales «SHOULD» usar `stdio` o, si usan HTTP, «Require an authorization token». También define *State Handle Hijacking*: la posesión de un handle no es autenticación, y un handle sin autenticación debe tener entropía suficiente | 2026-10-28 |
+| S-MCP2 | https://modelcontextprotocol.io/specification/latest/server/tools (versión 2026-07-28) | «there SHOULD always be a human in the loop with the ability to deny tool invocations». «clients MUST consider tool annotations to be untrusted unless they come from trusted servers». En Security Considerations, los servidores «MUST» validar las entradas, controlar el acceso, limitar la tasa y sanear las salidas. Los clientes «SHOULD» pedir confirmación, mostrar las entradas y validar los resultados antes de pasarlos al LLM | 2026-10-28 |
+| S-MS1 | https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/mlops-in-openai/security/security-plan-llm-application (ms.date 2025-04-22) | Threat #5: «Encode model output back to users to mitigate undesired code execution by JavaScript or Markdown». Threat #8: «Set strict input limits based on the LLM's context window». Threat #7: el system prompt «should not be considered a secret» ni usarse como control. Threat #2: redactar datos personales de los logs (Presidio) | 2026-10-28 |
+
+En la URL de búsqueda `.../security/security-recommend`, el canónico que devolvió la página es el de S-MS1.

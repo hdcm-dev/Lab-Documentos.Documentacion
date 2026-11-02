@@ -1,0 +1,67 @@
+646 | OK | Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Agregado/Application/Propuestas/IExtractorDeLocalidad.cs | 7-10 4/4 
+657 | OK | Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Agregado/Application/Propuestas/ProponerLocalidadDesdeTexto.cs | 11-26 15/15 
+680 | OK | Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Agregado/Infrastructure/AI/ExtractorDeLocalidadLlm.cs | 12-28 16/16 
+704 | OK | Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Agregado/Presentation/Herramientas/HerramientasDeLectura.cs | 14-15 2/2 
+789 | OK | Examples/13-Prueba-De-Arquitectura/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/Cableado/ReglaDeDependenciasTests.cs | 39-50 10/10 
+808 | DIFIERE | Examples/13-Prueba-De-Arquitectura/tests/MovilidadUrbana.PruebaDeArquitectura.Tests/Cableado/ReglaDeDependenciasTests.cs | 39-50 0/1 global using Microsoft.Extensions.AI;
+812 | SIN-REF |  | 
+959 | OK | Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/OpcionesDeIA.cs | 28-40 9/9 
+983 | SIN-REF |  | 
+996 | OK | Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/ManejadorDeCredenciales.cs | 11-19 9/9 
+1014 | OK | Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Conversacion/AsistenteDeMovilidad.cs | 26-36 10/10 
+1032 | OK | Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Conversacion/FabricaDeOpcionesDeChat.cs | 9-31 21/21 
+1073 | OK | Examples/02-Streaming/src/MovilidadUrbana.Streaming/AsistenteDeLaEncuesta.cs | 52-79 24/24 
+1118 | DIFIERE | Examples/03-Salida-Estructurada/src/MovilidadUrbana.SalidaEstructurada/Infrastructure/AI/ExtractorDeLocalidadLlm.cs | 31-35 0/7 public sealed record LocalidadPropuesta(; TipoDePropuesta Tipo,; int? Id,; string? Nombre,; string? Provincia,; string? CodigoPostal,; int? Habitantes);
+1130 | OK | Examples/03-Salida-Estructurada/src/MovilidadUrbana.SalidaEstructurada/Infrastructure/AI/ExtractorDeLocalidadLlm.cs | 31-35 4/4 
+1156 | OK | Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/ComposicionDeIA.cs | 56-74 17/17 
+1227 | SIN-REF |  | 
+1241 | SIN-REF |  | 
+1402 | OK | Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Application/Ayuda/RequisitosDelDominio.cs | 24-36 12/12 
+1422 | OK | Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/AI/AdaptadoresDeAyuda.cs | 12-24 13/13 
+1473 | OK | Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/LectorDePrefijoCacheado.cs | 29-43 14/14 
+1513 | LINEAS-CORRIDAS | Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/DetectorDeContextoTruncado.cs | 25-32 10/13 primera línea del bloque en l. [25]
+1564 | OK | Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/Persistence/AlmacenDeRequisitos.cs | 78-83 5/5 
+1581 | OK | Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/Persistence/AlmacenDeRequisitos.cs | 35-48 14/14 
+1604 | OK | Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/Persistence/AlmacenDeRequisitos.cs | 57-62 6/6 
+1621 | OK | Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/AI/ContenidoExterno.cs | 23-27 5/5 
+1637 | OK | Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/AI/AdaptadoresDeAyuda.cs | 34-42 8/8 
+1655 | OK | Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/AI/AdaptadoresDeAyuda.cs | 57-64 7/7 
+1680 | OK | Examples/04-Embeddings-Y-Busqueda/src/MovilidadUrbana.Busqueda/Evaluacion/MetricasDeRecuperacion.cs | 38-50 10/10 
+1700 | OK | Examples/04-Embeddings-Y-Busqueda/src/MovilidadUrbana.Busqueda/Evaluacion/EvaluacionDeRecuperacion.cs | 20-22 3/3 
+1925 | OK | Examples/06-Tool-Calling/src/MovilidadUrbana.Ejemplos.ToolCalling/Infrastructure/AI/HerramientasDeLocalidades.cs | 12-30 16/16 
+1949 | SIN-REF |  | 
+1967 | OK | Examples/06-Tool-Calling/src/MovilidadUrbana.Ejemplos.ToolCalling/Infrastructure/AI/ComposicionDeIA.cs | 70-80 11/11 
+2030 | DIFIERE | Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/DelChatAlAgente/AgenteDeMaf.cs | 9-23 2/9 public static async Task<string> PreguntarAsync(; IChatClient chat, HerramientasDeLocalidades herramientas, ChatOptions ; CancellationToken ct = default); opciones.Tools = [herramientas.ContarLocalidades()];; ChatResponse respuesta = await chat.GetResponseAsync(; [new(ChatRole.System, Instrucciones.
+2044 | OK | Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/DelChatAlAgente/AgenteDeMaf.cs | 9-23 14/14 
+2078 | OK | Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/HerramientasDeLocalidades.cs | 75-85 10/10 
+2098 | OK | Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Application/Asistente/IAprobador.cs | 15-28 14/14 
+2129 | OK | Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/AsistenteConAprobacion.cs | 48-59 10/10 
+2171 | OK | Examples/07-Agente-Con-Aprobacion/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/Aprobaciones/AutorizacionDeEscritura.cs | 42-50 8/8 
+2199 | DIFIERE | Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Infrastructure/Workflows/EncuestaComoWorkflowDeMaf.cs | 36-59 3/10 public async Task<ResultadoDeLaEncuesta> CompletarAsync(EncuestaModel ; for (int paso = 1; paso <= EncuestaRules.TotalDePasos; paso++); var errores = servicio.ValidarPaso(paso, encuesta);; if (errores.Count > 0) return new(false, paso, errores);; await servicio.RegistrarAsync(encuesta, cancellationT
+2215 | OK | Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Infrastructure/Workflows/EncuestaComoWorkflowDeMaf.cs | 36-59 21/21 
+2259 | OK | Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Infrastructure/Workflows/WorkflowDeAlta.cs | 84-90 7/7 
+2285 | OK | Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Infrastructure/Workflows/WorkflowDeAlta.cs | 126-158 33/33 
+2331 | OK | Examples/10-Workflow/src/MovilidadUrbana.Ejemplos.Orquestacion/Infrastructure/Workflows/AltaAsistidaSecuencial.cs | 26-44 17/17 
+2376 | OK | Examples/08-Servidor-Y-Cliente-MCP/src/MovilidadUrbana.Ejemplos.Mcp.Servidor/Mcp/ServidorMcp.cs | 67-76 10/10 
+2397 | OK | Examples/08-Servidor-Y-Cliente-MCP/src/MovilidadUrbana.Ejemplos.Mcp.Servidor/Mcp/PerimetroDelServidorMcp.cs | 17-29 13/13 
+2415 | SIN-REF |  | 
+2446 | OK | Examples/08-Servidor-Y-Cliente-MCP/src/MovilidadUrbana.Ejemplos.Mcp.Cliente/Mcp/ConexionMcp.cs | 44-57 13/13 
+2484 | OK | Examples/05-RAG-En-Memoria/src/MovilidadUrbana.RagEnMemoria/Infrastructure/AI/AyudaRagEnAgente.cs | 20-26 7/7 
+2752 | OK | Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/Cableado/ClienteGuionado.cs | 32-56 23/23 
+2788 | OK | Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/ConModelo/ServidorDePrueba.cs | 19-22 4/4 
+2805 | OK | Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/ConModelo/PipelineConModeloTests.cs | 15-19 5/5 
+2843 | OK | Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/ComposicionDeIA.cs | 80-95 16/16 
+2872 | OK | Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/TelemetriaDeIA.cs | 9-20 9/9 
+2891 | OK | Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/CacheConContador.cs | 18-37 18/18 
+2924 | OK | Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Infrastructure/AI/CacheConContador.cs | 21-22 2/2 
+2943 | OK | Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/Http/EndpointsDelAsistente.cs | 22-41 20/20 
+2976 | OK | Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/Cableado/CicloDeVidaDelClienteTests.cs | 51-75 21/21 
+3025 | OK | Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/Evaluacion/MedioEnCatalogoEvaluator.cs | 19-41 22/22 
+3057 | OK | Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/ConModelo/EvaluacionConJuezTests.cs | 36-41 6/6 
+3333 | OK | Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Application/Localidades/PropuestasDeLocalidad.cs | 48-59 9/9 
+3366 | OK | Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Application/Localidades/PropuestasDeLocalidad.cs | 94-111 16/16 
+3395 | OK | Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Presentation/Componentes/Paginas/ChatDelAsistente.razor | 134-156 22/22 
+3498 | OK | Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/OpcionesDeIA.cs | 13-26 9/9 
+3515 | SIN-REF |  | 
+3592 | OK | Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/ComposicionDeIA.cs | 25-40 15/15 
+RESUMEN Counter({'OK': 54, 'SIN-REF': 7, 'DIFIERE': 4, 'LINEAS-CORRIDAS': 1})

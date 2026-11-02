@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/3iVP3gZYeRbR+bQQIuYVR+IDbks</id>
+  <title>arXiv Query: search_query=&amp;id_list=2407.16833&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-28T20:49:30Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2407.16833" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2407.16833v2</id>
+    <title>Retrieval Augmented Generation or Long-Context LLMs? A Comprehensive Study and Hybrid Approach</title>
+    <updated>2024-10-17T17:51:19Z</updated>
+    <link href="https://arxiv.org/abs/2407.16833v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.16833v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Retrieval Augmented Generation (RAG) has been a powerful tool for Large Language Models (LLMs) to efficiently process overly lengthy contexts. However, recent LLMs like Gemini-1.5 and GPT-4 show exceptional capabilities to understand long contexts directly. We conduct a comprehensive comparison between RAG and long-context (LC) LLMs, aiming to leverage the strengths of both. We benchmark RAG and LC across various public datasets using three latest LLMs. Results reveal that when resourced sufficiently, LC consistently outperforms RAG in terms of average performance. However, RAG's significantly lower cost remains a distinct advantage. Based on this observation, we propose Self-Route, a simple yet effective method that routes queries to RAG or LC based on model self-reflection. Self-Route significantly reduces the computation cost while maintaining a comparable performance to LC. Our findings provide a guideline for long-context applications of LLMs using RAG and LC.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-23T20:51:52Z</published>
+    <arxiv:comment>Accepted to EMNLP 2024 industry track</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Zhuowan Li</name>
+    </author>
+    <author>
+      <name>Cheng Li</name>
+    </author>
+    <author>
+      <name>Mingyang Zhang</name>
+    </author>
+    <author>
+      <name>Qiaozhu Mei</name>
+    </author>
+    <author>
+      <name>Michael Bendersky</name>
+    </author>
+  </entry>
+</feed>

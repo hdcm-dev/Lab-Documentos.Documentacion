@@ -1,0 +1,79 @@
+{
+  "scenarioName": "s07-r03",
+  "iterationName": "Equivalence",
+  "executionName": "juez-20261030T014355",
+  "creationTime": "2026-10-30T02:32:16.3435031Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "\u00BFCu\u00E1ntos n\u00FAmeros lleva el c\u00F3digo postal de una localidad?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "El c\u00F3digo postal de una localidad debe llevar 4 d\u00EDgitos [Fuente: LocalidadPolicy.RequisitoDelCodigoPostal]."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Equivalence": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Equivalence",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Equivalence)": {
+            "name": "Ground Truth (Equivalence)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Localidad \u00B7 requisito del c\u00F3digo postal: 4 d\u00EDgitos."
+              }
+            ]
+          }
+        },
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "qwen3.5:4b",
+          "eval-input-tokens": "909",
+          "eval-output-tokens": "2",
+          "eval-total-tokens": "911",
+          "eval-duration-ms": "10010.47"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 10.0103257,
+        "model": "qwen3.5:4b",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 909,
+          "outputTokenCount": 2,
+          "totalTokenCount": 911
+        },
+        "cacheKey": "1E7DCF63EAF4E6DE441D169F0A105A24A5E416986089692076C6A82B3AB21DFEC26EFD35151E530D6B79B76756468273",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

@@ -1,0 +1,1 @@
+qwen2.5:0.5b context_length= 8192 expires= 2026-10-28T12:59:37.60286803Z
