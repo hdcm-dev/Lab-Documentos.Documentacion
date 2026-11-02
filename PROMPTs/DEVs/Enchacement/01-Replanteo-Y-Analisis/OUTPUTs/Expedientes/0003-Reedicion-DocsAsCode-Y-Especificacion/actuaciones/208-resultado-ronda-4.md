@@ -248,7 +248,7 @@ corrida válida que pasa y no queda abierto ningún P0.
 | Defectos P0 abiertos de la 1.4 | 4: C1 K4-01, C2 K4-01, C2 K4-02, C3a K4-01 |
 
 **Veredicto: el conocimiento 1.4 no cumple el criterio.** Por la decisión del PO del 2026-11-02, el conocimiento se
-publica igual en el PR 7, **como «borrador ensayado, no probado»**, no como «probado en la ronda 4». Rótulo exacto
+publica igual en el PR 7, **como «borrador ensayado, no probado»**, no como «probado en la ronda 4». Rótulo exacto (Enmendado por F209)
 para su cabecera:
 
 > **Borrador ensayado, no probado.** Conocimiento 1.4, ensayado en la ronda 4 del expediente 0003 (`EXP0003-F208`,
