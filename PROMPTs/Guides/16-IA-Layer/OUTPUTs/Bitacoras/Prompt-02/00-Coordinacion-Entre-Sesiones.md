@@ -81,3 +81,5 @@ Registro vivo, sólo por agregado. Sesiones: guía 16 (esta línea), FRAMEWORK M
 - 2026-11-02 — FC: LD #48 y #49 fusionados; en curso fc/ci-ios (PR común: .github/workflows/framework-concept-ios.yml + Concepts/.../Demo), no toca Guides/ ni dominios.txt. DAC: vía libre en Lab-Geometria y dominios.txt; dac/0003-ensayos en LDD sin PR (sólo expediente 0003); su PR 8 futuro puede tocar dominios.txt y se realinea sobre el main de la guía 16.
 
 - 2026-11-02 — Fusionados con aviso previo: Lab-Geometria #236 (merge c5afa0e) y el PR del repo privado del caso (merge f47ddf5; PR solo de documentación, CI roja heredada de main). Ramas remotas g16/ai-layer-v1 borradas. Bitácora re-enmascarada: R-PRIV 0.
+
+- 2026-11-02 — Fusionados con aviso «fusiono»: LD #50 (merge 3b10b0f, guía 0.12.0 «en revisión» + 4 dominios) y LDD #54 (merge e34a744, bitácora enmascarada). Ramas borradas; worktrees retirados; clones compartidos avanzados por ff a main; exclusiones locales reducidas a los prompts del PO e INPUTs/. Pendiente del PO: revisión humana D-23. Acuerdo b (reindexar la ia-db) queda para la última sesión que cierre.
