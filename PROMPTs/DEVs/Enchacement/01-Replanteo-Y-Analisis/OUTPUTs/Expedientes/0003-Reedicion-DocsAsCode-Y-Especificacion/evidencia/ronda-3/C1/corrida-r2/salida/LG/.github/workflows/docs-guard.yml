@@ -1,0 +1,42 @@
+# Compuerta documental (A-07). Propuesta sujeta a D-09: copia con huella del guion de origen en .docs-guard/,
+# con el registro de prefijos (A-02) y el esquema (A-03) del proyecto; .docs-guard-origen/ queda intacta para la
+# autoprueba. Huellas SHA-256 frente a la compuerta de origen:
+#   dg.py        471936d8f86f2d91a6b9633adc8016bfb9135547053739a7952d3321e689bdbf
+#   ci-local.sh  5d07aed13433fbe55289e0dc1551f0bd06e6ceace7f400152106d8c8369e851d
+# Verifica sólo docs/ (carpeta nueva); lo heredado (SDD/) avisa. Todos los grupos avisan hasta que la plataforma
+# pueda volver obligatorio el check (acto H, ficha §4).
+name: docs-guard
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  docs-guard:
+    runs-on: ubuntu-latest        # el runner Linux de la integración continua del proyecto
+    env:
+      DOCS_GUARD_CACHE: ${{ runner.temp }}/docs-guard
+      npm_config_cache: ${{ runner.temp }}/docs-guard/npm
+      npm_config_update_notifier: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash .docs-guard/scripts/ci-local.sh herramientas docs
+      - run: npx --yes markdownlint-cli2@0.17.2 --help | head -1 || true
+      - run: bash .docs-guard-origen/scripts/ci-local.sh autoprueba docs
+      - run: bash .docs-guard/scripts/ci-local.sh enlaces docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh esquema docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh ai docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh estructura docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh trazas docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh contrato docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh fijadas docs
+        continue-on-error: true
+      - run: bash .docs-guard/scripts/ci-local.sh avisos SDD

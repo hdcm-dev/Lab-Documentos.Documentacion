@@ -1,0 +1,3 @@
+README.md:0
+AGENTS.md:1
+Guides/README.md:0

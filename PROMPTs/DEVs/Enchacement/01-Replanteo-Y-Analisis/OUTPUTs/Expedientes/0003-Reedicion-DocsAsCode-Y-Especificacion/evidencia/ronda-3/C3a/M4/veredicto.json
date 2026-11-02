@@ -1,0 +1,4 @@
+{"criterio":"cita archivo:linea de salida/ (A-01.md y artefactos) resuelta contra repo/{,proyecto}; si falta en repo pero existe en salida/ con la linea en rango = creada por la corrida; coordinacion/ sin permiso de lectura (no evaluada, ninguna respuesta del coordinador citada)",
+ "C3a-r1":{"citas":117,"ok":112,"creadas_por_la_corrida":4,"A01":{"citas":87,"ok":87,"invenciones":0},"residuos_script":1,"residuos_triados":{"comentario_heredado_de_compuerta/tools/docs-guard/dg.py_que_cita_el_anexo_del_marco":1},"invenciones":0},
+ "C3a-r2":{"citas":165,"ok":156,"creadas_por_la_corrida":7,"A01":{"citas":71,"ok":71,"invenciones":0},"residuos_script":2,"residuos_triados":{"comentario_heredado_de_compuerta/tools/docs-guard/dg.py_que_cita_el_anexo_del_marco(copiado_a_.docs-guard_y_.docs-guard-origen)":2},"invenciones":0},
+ "muestra":"20 citas verificadas por corrida en C3a-r1.json / C3a-r2.json (muestra_verificada)"}

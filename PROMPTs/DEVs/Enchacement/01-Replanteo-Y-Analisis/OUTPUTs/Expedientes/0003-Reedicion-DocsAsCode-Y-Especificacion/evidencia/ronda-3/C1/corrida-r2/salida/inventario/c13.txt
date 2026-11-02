@@ -1,0 +1,54 @@
+== LG
+README.md:3:Fábrica de Geometría: laboratorio de geometría de la cátedra, público de consulta.
+AGENTS.md:11:Dos unidades de entrega —`GeometriaFactory-Api`, el servicio de datos, y `GeometriaFactory-Web`, la pieza pública con su visor— sobre siete proyectos de código. C# sobre .NET 10, EF Core sobre SQLite, TypeScript con webpack en el visor.
+AGENTS.md:71:- El servicio **escucha en 5080**, no en 8080: la configuración de Kestrel gana sobre `ASPNETCORE_URLS`. Publicar `-p <libre>:5080`.
+AGENTS.md:84:| desplegarlo y saber volver atrás | `SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/09-Devops/Guia-Publicacion-Image-Docker.md` y el registro de cambios (`Guia-Despliegue.md` no está emitida) |
+.github/workflows/ci.yml:28:#   PUBLICAR    toca un servidor real, depende de secretos y de un anfitrión que a veces
+.github/workflows/ci.yml:31:# Con un solo flujo, ampliar el filtro para cubrir el `Api` habría significado publicar el
+.github/workflows/ci.yml:35:# ESTE FLUJO NO PUBLICA NADA y no lee ningún secreto. Corre las dos puertas y termina.
+.github/workflows/e2e.yml:4:# QUE PRUEBA, Y CONTRA QUE. No levanta nada: abre un navegador contra la dirección publicada y
+.github/workflows/e2e.yml:15:#      recicla, la dirección pública del laboratorio puede cambiar—. Una compuerta que se pone en
+.github/workflows/e2e.yml:19:# Se dispara A MANO, después de que el Product Owner publica una versión en el servidor propio.
+.github/workflows/e2e.yml:21:# ya no publica lo que corre: esa atadura se quitó (mesa `SDD/Docs/Audit/Mesa-2026-09-14.md`, R-15).
+.github/workflows/e2e.yml:36:# la dirección pública, que es exactamente lo que no se quiere que estas pruebas dependan.
+.github/workflows/e2e.yml:68:    # una máquina que aguante publicar dos piezas y abrir un navegador sin cobrar por minuto.
+.github/workflows/e2e.yml:70:    # EL RUNNER PROPIO NO EJECUTA CODIGO DE UN FORK. El repositorio es público: un pull request
+.github/workflows/e2e.yml:94:      # El bundle del visor lo genera `GeometriaFactory.Web.csproj` cuando el banco local publica
+.github/workflows/e2e.yml:106:      # SIN NINGUNA VARIABLE DE ENTORNO, Y ESO ES EL PUNTO: sin `URL_BASE` la suite publica y
+.github/workflows/e2e.yml:133:    # SOLO A MANO: toca datos del laboratorio desplegado y lo pide quien acaba de publicar.
+.github/workflows/e2e.yml:180:          # LA DIRECCION PUBLICA Y LA DEL SERVICIO DE DATOS SON LAS MISMAS QUE USA LA PUBLICACION.
+.github/workflows/e2e.yml:182:          # que se publicó, que es un modo de falla difícil de ver.
+.github/workflows/e2e.yml:183:          URL_BASE: ${{ secrets.PUBLIC_URL }}
+.github/workflows/deploy-front-ftp.yml:1:# Publicación del front por transferencia al hosting (intake §17.6.P.7 y §17.6.P.8;
+.github/workflows/deploy-front-ftp.yml:5:# sin `GeometriaFactory.Contracts`, un cambio del contrato no dispara la publicación y las dos
+.github/workflows/deploy-front-ftp.yml:8:# Y NO TERMINA EN LA SUBIDA: termina comprobando que la dirección pública responde.
+.github/workflows/deploy-front-ftp.yml:10:# NO EMPIEZA POR PUBLICAR, TAMPOCO. Antes de subir corre las dos puertas que
+.github/workflows/deploy-front-ftp.yml:14:# de compilación frenaba la publicación, pero **una advertencia y la batería entera en rojo
+.github/workflows/deploy-front-ftp.yml:29:# `changelog.md` «Dockerizar el front», 2026-09-06). Este flujo publica al hosting externo
+.github/workflows/deploy-front-ftp.yml:32:# estas rutas —lo hacía, y por eso `main` se publicó dos veces a dos topologías el mismo día,
+.github/workflows/deploy-front-ftp.yml:41:      # los reintentos de FTP se fusionó a `main` y NO DISPARÓ ESTA PUBLICACIÓN, porque el
+.github/workflows/deploy-front-ftp.yml:43:      # si el arreglo servía. UN PUBLICADOR QUE NO SE EJERCITA CUANDO SE LO MODIFICA se
+.github/workflows/deploy-front-ftp.yml:73:      - name: Publicar el front
+.github/workflows/deploy-front-ftp.yml:103:      # la publicacion dejo de funcionar. «Antes andaba» tiene exactamente esa explicacion, y
+.github/workflows/deploy-front-ftp.yml:118:      # pudimos crear la cuenta». UNA PUBLICACION QUE NO REINICIA NO ES UNA PUBLICACION.
+.github/workflows/deploy-front-ftp.yml:137:          PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+.github/workflows/deploy-front-ftp.yml:168:                      --max-time 15 "$PUBLIC_URL" || true)"
+.github/workflows/deploy-front-ftp.yml:232:          PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+.github/workflows/deploy-front-ftp.yml:248:                      --max-time 20 "$PUBLIC_URL" || true)"
+.github/workflows/deploy-front-ftp.yml:257:      - name: Comprobar que la direccion publica responde
+.github/workflows/deploy-front-ftp.yml:259:          PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+.github/workflows/deploy-front-ftp.yml:266:          test -n "$PUBLIC_URL" || { echo "Falta el secreto PUBLIC_URL del repositorio."; exit 1; }
+.github/workflows/deploy-front-ftp.yml:267:          status_code="$(curl --silent --show-error --location --max-time 30 --output /dev/null --write-out '%{http_code}' "$PUBLIC_URL")"
+.github/workflows/deploy-front-ftp.yml:268:          echo "La direccion publica respondio $status_code"
+.github/workflows/deploy-front-ftp.yml:269:          test "$status_code" = "200" || { echo "La direccion publica no respondio 200."; exit 1; }
+.github/workflows/deploy-front-ftp.yml:274:          # el flujo podia declarar `success` con el sitio PUBLICADO Y SIN DATOS: la pagina
+.github/workflows/deploy-front-ftp.yml:279:          # PUBLICADO Y ROTO NO ES UN EXITO. La pagina de estado existe para decir si el dato
+.github/workflows/deploy-front-ftp.yml:280:          # es real; si dice que no, la publicacion no cumplio su proposito.
+.github/workflows/deploy-front-ftp.yml:281:          estado="$(curl --silent --show-error --location --max-time 40 "${PUBLIC_URL%/}/estado" || true)"
+.github/workflows/deploy-front-ftp.yml:283:            echo "::error::El sitio esta publicado y NO alcanza al servicio de datos."
+.github/workflows/deploy-front-ftp.yml:288:          echo "El sitio publicado alcanza al servicio de datos."
+rc=0
+== LGD
+README.md:24:| **Qué delega** | El agente que conduce la unidad abre el pull request, publica el informe con el enlace, lo fusiona si la guarda G1–G4 pasa y no hay reserva, borra la rama remota y deja `main` local al día |
+grep: AGENTS.md: No such file or directory
+rc=2

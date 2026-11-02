@@ -1,0 +1,14 @@
+LGD/ia-db/indexes/00_MASTER-INDEX.md:7
+LGD/ia-db/indexes/01_Corpus-Documental-SDD.md:3
+LGD/ia-db/indexes/02_Arquitectura-Y-Proyectos.md:4
+LGD/ia-db/indexes/03_Dominio-Y-Reglas-De-Negocio.md:20
+LGD/ia-db/indexes/04_Superficie-HTTP-Y-Contratos.md:7
+LGD/ia-db/indexes/05_Front-Web-Y-Visor-3D.md:10
+LGD/ia-db/indexes/06_Persistencia-Y-Seguridad.md:8
+LGD/ia-db/indexes/07_Pruebas-Y-Puertas-De-Calidad.md:5
+LGD/ia-db/indexes/08_DevOps-Construccion-Y-Despliegue.md:1
+LGD/ia-db/indexes/09_Samples-Ejecutables.md:5
+LGD/ia-db/indexes/10_Glosario-Y-Nomenclatura.md:12
+LGD/ia-db/indexes/11_Decisiones-Auditorias-Y-Pendientes.md:7
+LGD/ia-db/indexes/12_Observaciones-Del-Indexado.md:5
+LGD/ia-db/README.md:4

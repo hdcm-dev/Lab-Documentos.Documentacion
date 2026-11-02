@@ -1,0 +1,166 @@
+== PR-4 estructura: markdownlint-cli2, mermaid y mermaid-arroba (Guides AGENTS.md)
+markdownlint-cli2 v0.17.2 (markdownlint v0.37.4)
+Finding: Guides/**/*.md AGENTS.md
+Linting: 279 file(s)
+Summary: 133 error(s)
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Glosario.md:37 MD003/heading-style Heading style [Expected: atx; Actual: setext]
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Glosario.md:65 MD003/heading-style Heading style [Expected: atx; Actual: setext]
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Glosario.md:89 MD003/heading-style Heading style [Expected: atx; Actual: setext]
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Glosario.md:147 MD003/heading-style Heading style [Expected: atx; Actual: setext]
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Glosario.md:159 MD003/heading-style Heading style [Expected: atx; Actual: setext]
+Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/99-Anexos/Glosario.md:221 MD003/heading-style Heading style [Expected: atx; Actual: setext]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:32 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "1. Propósito, alcance y posici..."]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:89 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "2. DevOps: definición operativ..."]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:184 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "3. Métricas: DORA y más allá"]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:247 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "4. Versionado: SemVer, CalVer,..."]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:425 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "5. Conventional Commits y traz..."]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:546 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "6. Estrategias de branching"]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:652 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "7. Pipeline CI/CD"]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:765 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "8. Supply chain security"]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1089 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "9. Release engineering: del co..."]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1159 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "10. GitOps y por qué no aplica..."]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1208 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "11. Seis contextos de industri..."]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1396 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "12. Síntesis: las decisiones D..."]
+Guides/Despliegue/DevOps-Guide/marco-teorico.md:1518 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "13. Bibliografía consolidada"]
+Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/Estructura-del-Documento.md:54:36 MD056/table-column-count Table column count [Expected: 5; Actual: 4; Too few cells, row will be missing data]
+Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/Estructura-del-Documento.md:56:47 MD056/table-column-count Table column count [Expected: 5; Actual: 4; Too few cells, row will be missing data]
+Guides/Despliegue/Documentacion-Informe-Despliegue/50-Redaccion/Estructura-del-Documento.md:65:35 MD056/table-column-count Table column count [Expected: 5; Actual: 4; Too few cells, row will be missing data]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:91 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "1. Automatización de la constr..."]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:238 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "2. Qué es GitHub Actions"]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:354 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "3. Marco de referencia: escena..."]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:419 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "4. Mapa conceptual: «estoy acá..."]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:463 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "5. Anatomía de un workflow, se..."]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:707:39 MD056/table-column-count Table column count [Expected: 2; Actual: 3; Too many cells, extra data will be missing]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:1115 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "6. Composición, reutilización ..."]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:1352 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "7. Escenarios de automatizació..."]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2147 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "8. Cadena de suministro y evid..."]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2257 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "9. Operación: runners, costo, ..."]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2461 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo A — Glosario"]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2501 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo B — Plantillas comentada..."]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2715 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo C — Listas de verificaci..."]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2766 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo D — Preguntas que forman..."]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2834 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo E — Fuentes"]
+Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md:2908 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo F — Catálogo de evidenci..."]
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/50-Operativa/Postmortem.md:155 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "`PM-2026-05-03` — Degradación ..."]
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:297 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Su primera reserva"]
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:353:5 MD042/no-empty-links No empty links [Context: "[Invitar personas a una reserv..."]
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:354:5 MD042/no-empty-links No empty links [Context: "[Reservar una sala periódica](..."]
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:355:5 MD042/no-empty-links No empty links [Context: "[Qué hacer si la sala que nece..."]
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/70-Usuarios/User-Manual.md:395 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Reservar una sala — Guía rápid..."]
+Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Actividades/Actividad-1-Deduciendo-Reglas-Negocios.md:19 MD001/heading-increment Heading levels should only increment by one level at a time [Expected: h2; Actual: h3]
+Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Mis-Apuntes-Borradores/Mis-Notas.md:620 MD024/no-duplicate-heading Multiple headings with the same content [Context: "La redundancia no es ruido: es..."]
+Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Mis-Apuntes-Borradores/Mis-Notas.md:630 MD024/no-duplicate-heading Multiple headings with the same content [Context: "Y eso explica mi error con RN-..."]
+Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Mis-Apuntes-Borradores/Mis-Notas.md:638 MD024/no-duplicate-heading Multiple headings with the same content [Context: "Lo que proponés es otro algori..."]
+Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Mis-Apuntes-Borradores/Mis-Notas.md:648 MD024/no-duplicate-heading Multiple headings with the same content [Context: "Dónde te pondría un freno"]
+Guides/Dot-NET-Arquitectura-Guide/Interactive-Activities/Mis-Apuntes-Borradores/Mis-Notas.md:659 MD024/no-duplicate-heading Multiple headings with the same content [Context: "Qué dicen los especialistas"]
+Guides/IA/references/agentes-especialidades/tabla-caracterizacion-agentes.md:12 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "1. Tabla de Caracterización de..."]
+Guides/IA/references/refinamiento_docs/agentes-refinamiento-docs.md:11 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "1. Tabla de Caracterización de..."]
+Guides/IA/references/refinamiento_docs/agentes-refinamiento-docs.md:33 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "2. Detalle de Competencias y C..."]
+Guides/IA/references/refinamiento_docs/agentes-refinamiento-docs.md:330 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "3. Prompt Maestro para Orquest..."]
+Guides/IA/references/refinamiento_docs/agentes-refinamiento-docs.md:473 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "4. Instrucciones de Uso"]
+Guides/IA/references/refinamiento_docs/agentes-refinamiento-docs.md:507 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "5. Control de Cambios"]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:135 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "1. Qué es una prueba E2E"]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:243 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "2. Marco de referencia"]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:283 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "3. Mapa conceptual"]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:322 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "4. Anatomía de un proyecto E2E..."]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:485 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "5. Qué testear y qué no"]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:617 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "6. Cómo se escribe un caso"]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:784 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "7. Lo que aparece cuando la ap..."]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1165 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "8. Los workflows de GitHub Act..."]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1546 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "9. Evidencias y observaciones"]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1627 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo A — Plantilla comentada ..."]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1703 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo B — Plantilla comentada ..."]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1733 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo C — Listas de verificaci..."]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1768 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo D — Glosario"]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1786 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo E — Fuentes"]
+Guides/Testing/E2E-Guide/Beginner-Guide.md:1803 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo F — Ruta de lectura suge..."]
+Guides/Testing/E2E-Guide/Quick-Guide-ABM.md:37 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "1. El ciclo de una corrida"]
+Guides/Testing/E2E-Guide/Quick-Guide-ABM.md:61 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "2. Los siete pasos"]
+Guides/Testing/E2E-Guide/Quick-Guide-ABM.md:274 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "3. Las trampas que cuestan una..."]
+Guides/Testing/E2E-Guide/Quick-Guide-ABM.md:291 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "4. Lista de verificación"]
+Guides/Testing/E2E-Guide/Quick-Guide-ABM.md:311 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "5. Evidencia"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:139 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "1. Qué es una prueba E2E"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:247 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "2. Marco de referencia"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:287 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "3. Mapa conceptual"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:326 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "4. Anatomía de un proyecto E2E..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:489 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "5. Qué testear y qué no"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:621 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "6. Cómo se escribe un caso"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:788 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "7. Lo que aparece cuando la ap..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1169 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "8. Los workflows de GitHub Act..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1550 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "9. Evidencias y observaciones"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1631 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo A — Plantilla comentada ..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1707 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo B — Plantilla comentada ..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1737 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo C — Listas de verificaci..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1772 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo D — Glosario"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1790 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo E — Fuentes"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md:1807 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo F — Ruta de lectura suge..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Del-Requerimiento-Al-Caso.md:613 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "10. Qué de esto tiene evidenci..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Del-Requerimiento-Al-Caso.md:677 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "11. Los criterios de este docu..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Mapa-Del-Conjunto.md:54 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "1. La cadena, en una pantalla"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Mapa-Del-Conjunto.md:74 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "2. El vocabulario, en una cade..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Mapa-Del-Conjunto.md:143 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "3. El mapa del conjunto"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Mapa-Del-Conjunto.md:206 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "4. Los criterios de este docum..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-ABM.md:57 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "1. El ciclo de una corrida"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-ABM.md:81 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "2. Los siete pasos"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-ABM.md:294 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "3. Las trampas que cuestan una..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-ABM.md:311 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "4. Lista de verificación"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Quick-Guide-ABM.md:331 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "5. Evidencia"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:95 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "1. Automatización de la constr..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:242 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "2. Qué es GitHub Actions"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:358 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "3. Marco de referencia: escena..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:423 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "4. Mapa conceptual: «estoy acá..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:467 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "5. Anatomía de un workflow, se..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:711:39 MD056/table-column-count Table column count [Expected: 2; Actual: 3; Too many cells, extra data will be missing]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:1119 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "6. Composición, reutilización ..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:1356 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "7. Escenarios de automatizació..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2151 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "8. Cadena de suministro y evid..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2261 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "9. Operación: runners, costo, ..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2465 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo A — Glosario"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2505 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo B — Plantillas comentada..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2719 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo C — Listas de verificaci..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2770 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo D — Preguntas que forman..."]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2838 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo E — Fuentes"]
+Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md:2912 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Anexo F — Catálogo de evidenci..."]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:34 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "1. Introducción y encuadre"]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:73 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "2. Fundamentos conceptuales"]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:165 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "3. Modelos de proceso de diseñ..."]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:266 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "4. Principios, heurísticas y l..."]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:389 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "5. Estándares y normativa"]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:485 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "6. Sistemas de diseño"]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:616 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "7. Investigación, evaluación y..."]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:730 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "8. UX en plataformas web"]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:938 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "9. UX en plataformas móviles"]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1132 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "10. Developer Experience en RE..."]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1392 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "11. Caso aplicado: motor DSL m..."]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1492 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "12. Síntesis y checklist de ap..."]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1529 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Apéndice A — Glosario"]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1587 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Apéndice B — Bibliografía"]
+Guides/UX-UI-Design/UX-UI-Guide/UX-UI-Guide.md:1697 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Apéndice C — Índice de cuadros"]
+Guides/Despliegue/Documentacion-Informe-Despliegue/30-Despliegue/Operacion-y-Resiliencia.md:110: ERROR mermaid inválido: Parse error on line 20:
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:304: ERROR mermaid inválido: Parse error on line 16:
+Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/40-Diseno/LLD.md:164: ERROR mermaid inválido: Parse error on line 11:
+Ambiguous Alternatives Detected: <0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1> in <MANY2> inside <GitGraph​> Rule,
+<NEWLINE, commit, id:> may appears as a prefix path in all these alternatives.
+See: https://chevrotain.io/docs/guide/resolving_grammar_errors.html#AMBIGUOUS_ALTERNATIVES
+For Further details.
+node:fs:1521
+  const result = binding.readdir(
+                         ^
+
+Error: EACCES: permission denied, scandir 'Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion'
+    at readdirSync (node:fs:1521:26)
+    at recorrer (file:///opt/docs-guard/mermaid-19e43dcfddb8/mermaid-parse.mjs:18:19)
+    at recorrer.next (<anonymous>)
+    at recorrer (file:///opt/docs-guard/mermaid-19e43dcfddb8/mermaid-parse.mjs:20:65)
+    at recorrer.next (<anonymous>)
+    at recorrer (file:///opt/docs-guard/mermaid-19e43dcfddb8/mermaid-parse.mjs:20:65)
+    at recorrer.next (<anonymous>)
+    at file:///opt/docs-guard/mermaid-19e43dcfddb8/mermaid-parse.mjs:27:14 {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'scandir',
+  path: 'Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion'
+}
+
+Node.js v20.20.2
+== PR-4 mermaid-arroba: verde (errores=0 avisos=0) bloques=274

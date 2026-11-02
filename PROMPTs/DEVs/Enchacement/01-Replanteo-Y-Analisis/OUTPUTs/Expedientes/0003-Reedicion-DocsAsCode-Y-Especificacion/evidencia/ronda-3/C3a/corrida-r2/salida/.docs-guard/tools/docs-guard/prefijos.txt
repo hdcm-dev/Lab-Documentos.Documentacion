@@ -1,0 +1,10 @@
+# Registro cerrado de prefijos de ID de Colmenar (A-02). Un prefijo nuevo entra por PR que lo agrega acá.
+# Columnas: prefijo, ámbito y descripción.
+#   interno  el ID se declara en este repositorio (doc_id o encabezado).
+#   externo  el ID se declara fuera del repositorio; resuelve contra el SHA de su source.lock.
+#
+FIC     interno   ficha o anexo del sistema documentador
+RD      interno   requerimiento documental (RRD)
+PRC     interno   proceso
+AUD     interno   registro de audiencias
+EX      externo   exigencia numerada del convenio con el programa provincial (EX-31 a EX-46 para Colmenar)

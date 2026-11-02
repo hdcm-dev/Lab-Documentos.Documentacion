@@ -1,0 +1,42 @@
+# Registro cerrado de prefijos de ID (D09, N09 §7). Un prefijo nuevo entra por PR que lo agrega acá.
+# Columnas: prefijo, ámbito y descripción.
+#   interno  el ID se declara en este repositorio (doc_id o encabezado): si no resuelve, traces-resolve bloquea.
+#   externo  el ID se declara en el sistema que se documenta: resuelve contra el SHA de source.lock; sin source.lock
+#            avisa («no verificable»), con source.lock bloquea.
+#
+# Aparato de la guía (Creacion-Guias-Tecnicas, Convenciones)
+ESC     interno   escenario del marco
+CTX     interno   contexto del marco
+ACT     interno   actor del marco
+DOC     interno   documento temático por tipo de documentación
+FAM     interno   familia documental
+MET     interno   método ágil
+ARQ     interno   modelo de arquitectura
+MARCO   interno   documento del marco de referencia
+MAPA    interno   mapa conceptual
+ANX     interno   anexo
+IDX     interno   índice
+# Framework Concept (Concepts/Framework-Concept): espacio propio para no chocar con los cuerpos de Guides/
+FC      interno   documento del Framework Concept (FC-TEM-nn, FC-GUIA-INDICE, FC-MARCO-REFERENCIA, FC-ANEXO-99)
+# Cuerpo de la guía del sistema documentador (N09 §7)
+TEM     interno   tema del cuerpo
+CQ      interno   criterio de calidad
+PE      interno   patrón de ejemplo
+OBJ     interno   objetivo de aprendizaje
+EJR     interno   ejercicio
+RD      interno   requerimiento documental (RRD)
+VER     interno   ítem de verificación
+DEMO    interno   pieza de una demo de Examples/ (E1-U3: mini demo MovilidadUrbana, DEMO-MU-nn)
+GP      interno   guía práctica de un ejemplo (Examples/)
+# Prefijos de la industria que usan los ejemplos y los sistemas documentados
+RF      externo   requisito funcional
+RNF     externo   requisito no funcional
+RN      externo   regla de negocio
+CU      externo   caso de uso
+ADR     externo   decisión de arquitectura
+TC      externo   caso de prueba
+RSK     externo   riesgo
+FLU     externo   flujo de usuario
+NB      externo   necesidad de negocio
+# Sistema documentador del repositorio (ficha de diseño documental A-01; propuesta de la adopción)
+FIC     interno   ficha o anexo del sistema documentador

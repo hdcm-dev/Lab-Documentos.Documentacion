@@ -1,0 +1,4 @@
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (docs )
+aviso: no hay AGENTS.md en la raíz del repositorio (CL-03)
+🔍 0 Total (in 0s) ✅ 0 OK 🚫 0 Errors
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)

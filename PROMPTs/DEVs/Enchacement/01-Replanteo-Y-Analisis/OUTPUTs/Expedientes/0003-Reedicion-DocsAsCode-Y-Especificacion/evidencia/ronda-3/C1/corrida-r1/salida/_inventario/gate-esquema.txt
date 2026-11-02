@@ -1,0 +1,3 @@
+== PR-2 esquema (docs)
+docs/_diseno/ficha-diseno-documental.md:1: aviso traces-vacio: traces: [] es válido, pero conviene trazar al menos al doc_id del README de su cuerpo (D-17)
+== PR-2 esquema: verde (errores=0 avisos=1) archivos-con-frontmatter=4 sin-frontmatter-fuera-del-cuerpo=0 readme-del-cuerpo-sin-frontmatter=0

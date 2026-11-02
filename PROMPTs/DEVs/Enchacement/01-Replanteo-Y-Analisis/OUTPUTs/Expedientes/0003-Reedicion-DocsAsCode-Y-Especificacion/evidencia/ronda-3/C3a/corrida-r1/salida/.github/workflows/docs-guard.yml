@@ -1,0 +1,29 @@
+# Compuerta documental de Colmenar (A-07). Propuesta sujeta a D-09: copia con huella del guion de origen en
+# .docs-guard/ y copia intacta en .docs-guard-origen/ para la autoprueba. Sin probar en la CI.
+name: docs-guard
+on:
+  pull_request:
+jobs:
+  docs-guard:
+    runs-on: [self-hosted, linux]   # {etiqueta-runner}: la máquina Linux del proyecto; etiqueta pendiente
+    env:
+      DOCS_GUARD_CACHE: ${{ runner.temp }}/docs-guard-cache
+      npm_config_cache: ${{ runner.temp }}/docs-guard-cache/npm
+      npm_config_update_notifier: "false"
+    steps:
+      - uses: actions/checkout@v4   # fijar por SHA: pendiente
+      - run: .docs-guard/scripts/ci-local.sh herramientas docs
+      - run: npx --yes markdownlint-cli2@0.17.2 --help | head -1 || true
+      - run: .docs-guard-origen/scripts/ci-local.sh autoprueba docs
+      - run: .docs-guard/scripts/ci-local.sh enlaces docs
+        continue-on-error: true
+      - run: .docs-guard/scripts/ci-local.sh esquema docs
+      - run: .docs-guard/scripts/ci-local.sh ai docs
+      - run: .docs-guard/scripts/ci-local.sh estructura docs
+        continue-on-error: true
+      - run: .docs-guard/scripts/ci-local.sh trazas docs
+      - run: .docs-guard/scripts/ci-local.sh contrato docs
+        continue-on-error: true
+      - run: .docs-guard/scripts/ci-local.sh fijadas docs
+        continue-on-error: true
+      - run: .docs-guard/scripts/ci-local.sh avisos docs

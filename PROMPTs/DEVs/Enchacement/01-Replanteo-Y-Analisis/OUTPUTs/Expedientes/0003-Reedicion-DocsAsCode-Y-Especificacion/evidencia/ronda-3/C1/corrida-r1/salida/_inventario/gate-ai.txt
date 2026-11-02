@@ -1,0 +1,2 @@
+== PR-3 anti-inyección (docs )
+== PR-3 anti-inyeccion: verde (errores=0 avisos=0) AI-1=0 AI-2=0 AI-3=0 AI-4=0 AI-5=0

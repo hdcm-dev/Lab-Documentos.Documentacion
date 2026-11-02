@@ -1,0 +1,17 @@
+# A-10 — carril programado de Colmenar. Sólo avisa, con un issue.
+# Frecuencia: diaria de octubre a marzo (cosecha) y mensual el resto del año; frescura: 90 días (norma de calidad).
+# Qué vigila: atraso del source.lock de la guía de estudio (repo dedicado), frescura de last_review en docs/ y
+# coincidencia de la copia de la tabla de productos veterinarios con la publicada (comando pendiente: sin fuente).
+name: docs-guard-programado
+on:
+  schedule:
+    - cron: "0 6 * 10-12,1-3 *"   # diario en temporada de cosecha
+    - cron: "0 6 1 4-9 *"         # mensual fuera de temporada
+jobs:
+  avisos:
+    runs-on: [self-hosted, "{etiqueta-runner}"]
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@{sha-de-checkout}
+      - run: python3 .docs-guard/tools/docs-guard/dg.py frescura --dias 90 docs || echo "aviso: abrir issue"
+      - run: .docs-guard/scripts/ci-local.sh avisos docs || echo "aviso: abrir issue"

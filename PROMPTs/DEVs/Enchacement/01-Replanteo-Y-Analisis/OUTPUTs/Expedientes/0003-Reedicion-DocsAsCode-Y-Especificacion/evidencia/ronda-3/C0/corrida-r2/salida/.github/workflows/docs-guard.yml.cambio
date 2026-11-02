@@ -1,0 +1,16 @@
+# A-07 (propuesta sujeta a D-09 y D-10, sin probar en la CI): cambio sobre .github/workflows/docs-guard.yml.
+# No es el archivo entero: reemplaza el bloque de las líneas 58-64 del workflow actual. Los valores entre llaves son
+# alias de valores privados ya presentes en el archivo (I-09), que el cambio no toca.
+  docs-guard:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: [self-hosted, {etiqueta-runner}]   # sin cambios
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        # la carpeta del cuerpo (como hoy) y la carpeta nueva de la adopción; lo heredado (Guides, Concepts) no entra
+        ruta: ${{ inputs.ruta && fromJSON(format('["{0}"]', inputs.ruta)) || fromJSON('["Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion","docs"]') }}
+    env:
+      RUTA: ${{ matrix.ruta }}
+      DOCS_GUARD_TRAZAS_EXTRA: ${{ inputs.trazas-extra || 'AGENTS.md README.md Guides/README.md' }}
+# Guion local equivalente (sin cambios en scripts/ci-local.sh):  scripts/ci-local.sh todo docs

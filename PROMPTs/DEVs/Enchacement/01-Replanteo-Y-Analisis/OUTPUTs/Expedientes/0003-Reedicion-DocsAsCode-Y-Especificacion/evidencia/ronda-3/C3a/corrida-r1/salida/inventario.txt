@@ -1,0 +1,81 @@
+### 1
+== PR-5 traces-resolve: verde (errores=0 avisos=0) trazas=0 resueltas=0 ids-duplicados=0 anclas=0 anclas-resueltas=0
+rc=0
+### 1b
+rc=0
+### 2
+rc=0
+### 3
+grep: docs/tecnica: No such file or directory
+rc=2
+### 4
+grep: docs/ayuda: No such file or directory
+rc=2
+### 5a
+0
+### 5b
+rc=0
+### 6
+grep: INDICE.md: No such file or directory
+rc=2
+### 7
+      4 EX
+rc=0
+### 8
+      1 <TargetFrameworks>net10.0-android
+rc=0
+### 9 FIC
+0
+### 9 RD
+0
+### 9 PRC
+0
+### 9 AUD
+0
+### 10
+2026-11-02
+### 11
+dba3b7dacbfa86751cb88e646769d910f171023885b6b5dcc363e3fe4c3c6cca  -
+### 12b
+./Colmenar/Platforms/Windows/Package.appxmanifest:9:  <Identity Name="maui-package-name-placeholder" Publisher="CN=User Name" Version="0.0.0.0" />
+./Colmenar/Platforms/Windows/app.manifest:3:  <assemblyIdentity version="1.0.0.0" name="Colmenar.WinUI.app"/>
+rc=0
+### 13
+grep: AGENTS.md: No such file or directory
+grep: .github: No such file or directory
+README.md:38:- Habrá un sitio web público, ya decidido y pagado por el programa provincial, donde los productores aprenden a usar
+README.md:46:- La API que guarda los datos vive en otro repositorio, privado, y la mantiene un proveedor externo de la
+README.md:47:  cooperativa. La app la consume por versión publicada; el equipo de la app no puede cambiarla.
+README.md:48:- El modelo de datos compartido (apiario, colmena, visita, tambor) se publica como paquete .NET público. Vive en su
+README.md:51:- La app trae adentro una copia de la tabla oficial de productos veterinarios autorizados para colmenas. La publica
+README.md:75:## 6. Público y privado
+README.md:77:- Este repositorio es público. El repositorio de la API es privado. El del paquete es público.
+README.md:78:- El nombre del proveedor de la API y el del organismo sanitario no se publican en ningún lado.
+README.md:80:  capturas, ejemplos ni datos de prueba publicados.
+README.md:81:- Los nombres de los alumnos de la escuela no se publican.
+README.md:99:  fallidas, y la certificación de calidad exige que nada salga publicado con una verificación fallida.
+README.md:101:  productos autorizados coincide con la publicada por el organismo; fuera de temporada, una vez al mes.
+rc=2
+### git
+d39dfbd4d113794fc0edca9f6d16739b51a502f3
+1
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+ls: cannot access '.github': No such file or directory
+### find md
+./README.md
+### auth
+./Colmenar/Platforms/iOS/Info.plist:35:			<key>UIWindowSceneSessionRoleApplication</key>
+./Colmenar/Platforms/MacCatalyst/Info.plist:43:			<key>UIWindowSceneSessionRoleApplication</key>
+rc=0
+### openapi
+./Colmenar/Platforms/Windows/App.xaml.cs:8:/// <summary>
+./Colmenar/Platforms/Windows/App.xaml.cs:9:/// Provides application-specific behavior to supplement the default Application class.
+./Colmenar/Platforms/Windows/App.xaml.cs:10:/// </summary>
+./Colmenar/Platforms/Windows/App.xaml.cs:13:	/// <summary>
+./Colmenar/Platforms/Windows/App.xaml.cs:14:	/// Initializes the singleton application object.  This is the first line of authored code
+./Colmenar/Platforms/Windows/App.xaml.cs:15:	/// executed, and as such is the logical equivalent of main() or WinMain().
+./Colmenar/Platforms/Windows/App.xaml.cs:16:	/// </summary>
+rc=0
+### resx

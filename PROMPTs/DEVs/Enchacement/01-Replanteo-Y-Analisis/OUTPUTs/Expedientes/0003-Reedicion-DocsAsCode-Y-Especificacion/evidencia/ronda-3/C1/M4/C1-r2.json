@@ -1,0 +1,135 @@
+{
+ "corrida": "C1-r2",
+ "citas": 9918,
+ "ok": 9910,
+ "invenciones": 4,
+ "fuera_de_repo": 4,
+ "A01": {
+  "citas": 74,
+  "invenciones": 0
+ },
+ "detalle_invenciones": [
+  [
+   "salida/inventario/c03-adaptado.txt",
+   "Api/05/README.md:101",
+   "archivo-inexistente"
+  ],
+  [
+   "salida/inventario/c03-adaptado.txt",
+   "Api/09-Devops/Pipeline-CI-CD.md:69",
+   "archivo-inexistente"
+  ],
+  [
+   "salida/inventario/c03-adaptado.txt",
+   "Maquetas/.../README.md:305",
+   "archivo-inexistente"
+  ],
+  [
+   "salida/inventario/par-rojo-verde.txt",
+   "docs/_gobierno/como-intervenir.md:1",
+   "archivo-inexistente"
+  ]
+ ],
+ "muestra_verificada": [
+  [
+   "salida/inventario/c03-adaptado.txt",
+   "LG/SDD/Docs/_legacy/2026-08-16-consolidacion-m10/GeometriaFactory-Api/10-Examples/README-Domain.md:116",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01-LG.txt",
+   "SDD/Intake/PRODUCT-INTAKE-Fabrica-De-Geometria.md:1",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01-LG.txt",
+   "SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/06-Backlog-Tecnico/Product-Backlog.md:396",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/08-Calidad-Y-Pruebas/Casos-Prueba-Referenciales.md:665",
+   "ok"
+  ],
+  [
+   "salida/inventario/c03-adaptado.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/02-Especificacion-Funcional/Casos-De-Uso/CU-00024-Resetear-La-Contrasena-De-Un-Alumno.md:182",
+   "ok"
+  ],
+  [
+   "salida/LG/docs/_diseno/ficha-diseno-documental.md",
+   "LGD/README.md:19-27",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01-LG.txt",
+   "SDD/Docs/Audit/B-02-03-GeometriaFactory-Application-r1.md:448",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01-LG.txt",
+   "SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/08-Calidad-Y-Pruebas/Casos-Prueba-Referenciales.md:537",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Api/06-Backlog-Tecnico/historias-usuario/US-02012-Derivar-La-Familia-Plana-O-Volumetrica-Desde-El-Tipo.md:1",
+   "ok"
+  ],
+  [
+   "salida/inventario/c12b.txt",
+   "LG/src/GeometriaFactory.Web/Program.cs:192",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01-LG.txt",
+   "SDD/Docs/Audit/B-02-03-GeometriaFactory-Application-r1.md:305",
+   "ok"
+  ],
+  [
+   "salida/inventario/c03-adaptado.txt",
+   "LG/SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/08-Calidad-Y-Pruebas/Pruebas-Extremo-A-Extremo.md:105",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01-LG.txt",
+   "SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/06-Backlog-Tecnico/_legacy/2026-09-13/Product-Backlog-v4.5.md:376",
+   "ok"
+  ],
+  [
+   "salida/inventario/c03-adaptado.txt",
+   "LG/SDD/Docs/_legacy/2026-08-16-consolidacion-m10/GeometriaFactory-Api/02-Especificacion-Funcional/Glosario-Funcional-Domain.md:46",
+   "ok"
+  ],
+  [
+   "salida/inventario/c03-adaptado.txt",
+   "LG/SDD/Docs/_legacy/2026-08-15-migracion-8.2/GeometriaFactory-Contracts/06-Backlog-Tecnico/historias-usuario/US-08003-Transportar-El-Listado-De-Cuentas-Del-Panel-Del-Administrador.md:40",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01-LG.txt",
+   "SDD/Docs/Audit/B-02-03-GeometriaFactory-Contracts-r3.md:283",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01-LG.txt",
+   "SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/02-Especificacion-Funcional/Casos-De-Uso/_legacy/2026-08-09/CU-04-Administrar-Las-Cuentas-De-La-Comision-v1.0.md:1",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01-LG.txt",
+   "SDD/Docs/Unidades-Entrega/GeometriaFactory-Web/06-Backlog-Tecnico/Product-Backlog.md:274",
+   "ok"
+  ],
+  [
+   "salida/inventario/c01-LG.txt",
+   "SDD/Docs/Audit/DoR-Tramo-k-2026-09-12.md:61",
+   "ok"
+  ],
+  [
+   "salida/inventario/c03-adaptado.txt",
+   "LG/SDD/Docs/Audit/Cierre-De-Hallazgos-Abiertos-2026-08-17.md:47",
+   "ok"
+  ]
+ ]
+}

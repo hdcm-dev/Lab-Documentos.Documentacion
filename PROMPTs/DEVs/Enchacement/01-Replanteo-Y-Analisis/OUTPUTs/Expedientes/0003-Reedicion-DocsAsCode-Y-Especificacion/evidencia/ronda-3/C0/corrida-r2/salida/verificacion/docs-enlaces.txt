@@ -1,0 +1,29 @@
+== PR-1 enlaces: lychee --offline --include-fragments y relativos fuera del repo (docs AGENTS.md)
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Glosario.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/01-Mapa.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Como-Decidir.md#6-qui%C3%A9n-decide | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Esquema-Frontmatter-Y-Prefijos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Referencias.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Criterios-De-Calidad.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Patrones-De-Ejemplos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Como-Decidir.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/00-Marco.md#5-convenciones | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Lista-De-Verificacion.md#8-cara-agente | Cannot find file
+Issues found in 1 input. Find details below.
+
+[AGENTS.md]:
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Como-Decidir.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Criterios-De-Calidad.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/README.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Glosario.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Referencias.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Patrones-De-Ejemplos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/00-Marco.md#5-convenciones | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Esquema-Frontmatter-Y-Prefijos.md | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Como-Decidir.md#6-qui%C3%A9n-decide | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Lista-De-Verificacion.md#8-cara-agente | Cannot find file
+[ERROR] file:///corrida/salida/montaje/LD/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/01-Mapa.md | Cannot find file
+
+🔍 27 Total (in 0s) ✅ 16 OK 🚫 11 Errors
+== PR-1 fuera-del-repo: verde (errores=0 avisos=0)

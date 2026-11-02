@@ -1,0 +1,121 @@
+{
+ "corrida": "C3a-r1",
+ "citas": 117,
+ "ok": 112,
+ "creadas_por_la_corrida": 4,
+ "residuos": 1,
+ "A01": {
+  "citas": 87,
+  "ok": 87,
+  "residuos": 0
+ },
+ "detalle_residuos": [
+  [
+   "salida/.docs-guard/tools/docs-guard/dg.py",
+   "Esquema-Frontmatter-Y-Prefijos.md:54",
+   "archivo-inexistente"
+  ]
+ ],
+ "muestra_verificada": [
+  [
+   "salida/A-01.md",
+   "README.md:95",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "Colmenar/Platforms/Windows/App.xaml.cs:8-16",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:100-101",
+   "ok"
+  ],
+  [
+   "salida/inventario.txt",
+   "./Colmenar/Platforms/Windows/App.xaml.cs:8",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:67-68",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:46-47",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:59-60",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:72-73",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:59-60",
+   "ok"
+  ],
+  [
+   "salida/inventario.txt",
+   "README.md:77",
+   "ok"
+  ],
+  [
+   "salida/inventario.txt",
+   "./Colmenar/Platforms/Windows/app.manifest:3",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:100-101",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "Colmenar/Platforms/Windows/App.xaml.cs:8-16",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:16-25",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:94",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:67-69",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:18",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:34-35",
+   "ok"
+  ],
+  [
+   "salida/A-01.md",
+   "README.md:51-52",
+   "ok"
+  ],
+  [
+   "salida/verificacion.txt",
+   "./Colmenar/Platforms/Windows/Package.appxmanifest:9",
+   "ok"
+  ]
+ ]
+}

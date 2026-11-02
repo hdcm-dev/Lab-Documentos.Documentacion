@@ -1,0 +1,12 @@
+== fin chequeo; citas distintas: 49
+== sueltas:
+rc=1
+== muestra
+Guías de estudio y conceptos para el desarrollo de software, escritas en Markdown y leídas en GitHub, sin sitio
+publicado. La portada humana es el [README](README.md). Las carpetas que importan a un agente:
+          repository: {organizacion}/Lab-Documentos
+RD      interno   requerimiento documental (RRD)
+            .AddPolicy(Politica, p => p.RequireAuthenticatedUser().RequireClaim("sub"));
+    - cron: "17 6 * * 1"
+== barrido 12b
+rc=1

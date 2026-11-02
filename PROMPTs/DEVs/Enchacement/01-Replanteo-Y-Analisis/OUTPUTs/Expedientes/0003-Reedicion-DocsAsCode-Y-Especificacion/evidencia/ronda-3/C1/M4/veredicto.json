@@ -1,0 +1,4 @@
+{"criterio":"cita archivo:linea de salida/ resuelta contra repo/{,LG,LGD}; coordinacion/ sin permiso de lectura (no evaluada)",
+ "C1-r1":{"citas":5236,"ok":5231,"A01":{"citas":69,"invenciones":0},"residuos_script":5,"residuos_triados":{"ruta_absoluta_de_otro_clon_en_grep":4,"archivo_creado_por_la_corrida_en_salida/LG/docs/_diseno":1},"invenciones":0},
+ "C1-r2":{"citas":9918,"ok":9910,"A01":{"citas":74,"invenciones":0},"residuos_script":8,"residuos_triados":{"ruta_absoluta_de_otro_clon_en_grep":4,"abreviatura_citada_dentro_de_texto_del_repo(Audit)":3,"archivo_creado_por_la_corrida_en_salida/LG/docs/_gobierno":1},"invenciones":0},
+ "muestra":"20 citas verificadas por corrida en C1-r1.json / C1-r2.json (muestra_verificada)"}
