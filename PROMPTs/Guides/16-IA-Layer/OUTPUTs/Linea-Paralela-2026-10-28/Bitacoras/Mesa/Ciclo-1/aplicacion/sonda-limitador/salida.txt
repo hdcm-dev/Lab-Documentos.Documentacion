@@ -1,0 +1,8 @@
+CONCEDIDO build a aplicacion-c1 hasta 2026-10-28T11:59:07-0300 (renová con: <gestor-de-turnos> renovar build aplicacion-c1)
+2026-10-28T14:39:07+00:00
+10.0.403
+pedido 1: 200 Retry-After=-
+pedido 2: 200 Retry-After=-
+pedido 3: 200 Retry-After=-
+pedido 4: 503 Retry-After=30
+LIBERADO build por aplicacion-c1

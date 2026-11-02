@@ -1,0 +1,18 @@
+[verificar] servidor compartido: versión y digests coinciden con los esperados
+[verificar] num_ctx = 8192 (arnes-ps-tras-carga, qwen3.5:4b)
+An issue was encountered verifying workloads. For more information, run "dotnet workload update".
+e01: «Agregá Goya, Corrientes, CP 34, 90000 habitantes.»
+  pedido de aprobación [ficc_3fc52965]: Dar de ALTA la localidad «Goya», provincia «Corrientes», CP «34», 90000 habitantes.
+  la persona aprueba
+  ejecutó agregar_localidad → rechazo: Revise los campos marcados en rojo. (codigoPostal: El código postal debe tener 4 dígitos.)
+  asistente (modelo): La localidad no se pudo registrar porque el código postal debe tener exactamente 4 dígitos. Por favor, inténtalo nuevamente con un código postal válido de cuatro números.
+  llamadas al modelo: 2 · oráculo alta-con-aprobacion (esperado rechazo): pasa
+e02: «Agregá Goya, Corrientes, CP 3450, 90000 habitantes.»
+  pedido de aprobación [ficc_69b08021]: Dar de ALTA la localidad «Goya», provincia «Corrientes», CP «3450», 90000 habitantes.
+  la persona aprueba
+  ejecutó agregar_localidad → éxito: Se agregó la localidad Goya.
+  asistente (modelo): Se agregó correctamente la localidad Goya en la provincia de Corrientes con el código postal 3450 y 90.000 habitantes.
+  llamadas al modelo: 2 · oráculo alta-con-aprobacion (esperado alta): pasa
+registro: 6 renglones en 09-Caso-De-Uso-Como-Herramienta.jsonl
+invariantes de código: se cumplen
+[verificar] descargado qwen3.5:4b (keep_alive 0)

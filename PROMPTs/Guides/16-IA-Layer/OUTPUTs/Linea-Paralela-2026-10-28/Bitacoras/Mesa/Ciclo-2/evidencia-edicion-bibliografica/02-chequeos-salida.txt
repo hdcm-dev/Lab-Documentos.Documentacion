@@ -1,0 +1,51 @@
+anclas internas: 165 rotas: 0
+REF usadas en cuerpo: 137 definidas: 137
+  usadas sin definir: []
+  definidas sin uso: []
+citas con coma dentro de corchete [REF-a, REF-b]: 6
+citas pegadas ][REF: 14  separadas '] [REF': 13
+primera palabra columna Consulta: {'consulta': 79, 'consultada': 39, 'artículo': 1, 'consultado': 17, 'usada': 1}
+  URL autolink con espacio REF-030
+  URL autolink con espacio REF-032
+  URL autolink con espacio REF-035
+  versión débil REF-037 : 2025
+  versión débil REF-046 : 2025
+  versión débil REF-058 : página sin versión
+  versión débil REF-060 : sin versión publicada
+  versión débil REF-067 : —
+  versión débil REF-068 : —
+  versión débil REF-076 : página sin versión
+  versión débil REF-078 : página sin versión
+  versión débil REF-080 : página sin versión
+  versión débil REF-081 : página sin versión
+  versión débil REF-086 : 2025
+  versión débil REF-090 : —
+  versión débil REF-103 : sin versión
+  versión débil REF-104 : sin versión
+  versión débil REF-105 : sin versión
+  versión débil REF-106 : rama main
+  versión débil REF-107 : —
+  versión débil REF-121 : 2023
+  versión débil REF-122 : 2024
+  versión débil REF-127 : 2023
+rótulo completo 4 núcleos: 9  rótulo completo más núcleos: 8
+  7  no es control de acceso
+  5  El modelo repite la política; la prueba muestra el código
+  5  el modelo repite la política; la prueba muestra el código
+ 11  3400
+  5  10,5
+  2  50 s por cada 1000
+ 16  2050
+  2  Tengés
+  3  13,3
+  3  167 s
+  3  no-launch-profile
+  7  IHttpClientFactory
+  5  el catálogo normaliza y las reglas deciden
+  8  La forma no es
+  3  el modelo propone; la aplicación ejecuta
+  4  If you can write a function
+  6  por defecto `http://localhost:11434`
+  4  Rótulos de estación y estimandos como en §0.5
+'Compila en' total: 59  en itálica '*Compila en': 15
+rangos con guion '-' l. a-b: 35  con '–': 74  'líneas a–b': 26

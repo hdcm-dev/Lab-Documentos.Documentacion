@@ -1,0 +1,10 @@
+qwen3.5:4b rc=0 152s
+qwen3-embedding:0.6b rc=0 31s
+qwen3.5:35b-a3b rc=0 1023s
+NAME                    ID              SIZE      MODIFIED               
+qwen3.5:35b-a3b         72aac7c28be8    22 GB     Less than a second ago    
+qwen2.5:0.5b            a8b0c5157701    397 MB    15 minutes ago            
+qwen3-embedding:0.6b    ac6da0dfba84    639 MB    17 minutes ago            
+qwen3.5:4b              d8b0f5e9760c    3.3 GB    17 minutes ago            
+
+[exited with code 0]

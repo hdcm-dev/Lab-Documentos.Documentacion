@@ -1,0 +1,35 @@
+# EXPERT-group-chat — XML de documentación de Microsoft.Agents.AI.Workflows 1.26.0 (lib/net10.0), consultado 2026-10-28
+## Tipos *Manager* (grep 'name="T:.*Manager"' y GroupChat):
+1396:        <member name="T:Microsoft.Agents.AI.Workflows.Checkpointing.ICheckpointManager">
+1497:        <member name="T:Microsoft.Agents.AI.Workflows.Checkpointing.InMemoryCheckpointManager">
+1800:        <member name="T:Microsoft.Agents.AI.Workflows.CheckpointManager">
+3551:        <member name="T:Microsoft.Agents.AI.Workflows.GroupChatManager">
+3659:        <member name="T:Microsoft.Agents.AI.Workflows.GroupChatWorkflowBuilder">
+5554:        <member name="T:Microsoft.Agents.AI.Workflows.RoundRobinGroupChatManager">
+
+## CreateGroupChatBuilderWith (l. 710-720)
+        <member name="M:Microsoft.Agents.AI.Workflows.AgentWorkflowBuilder.CreateGroupChatBuilderWith(System.Func{System.Collections.Generic.IReadOnlyList{Microsoft.Agents.AI.AIAgent},Microsoft.Agents.AI.Workflows.GroupChatManager})">
+            <summary>Creates a new <see cref="T:Microsoft.Agents.AI.Workflows.GroupChatWorkflowBuilder"/> with <paramref name="managerFactory"/>.</summary>
+            <param name="managerFactory">
+            Function that will create the <see cref="T:Microsoft.Agents.AI.Workflows.GroupChatManager"/> for the workflow instance. The manager will be
+            provided with the set of agents that will participate in the group chat.
+            </param>
+            <returns>The builder for creating a workflow based on handoffs.</returns>
+
+## GroupChatManager.SelectNextAgentAsync (l. 3575-3583)
+        <member name="M:Microsoft.Agents.AI.Workflows.GroupChatManager.SelectNextAgentAsync(System.Collections.Generic.IReadOnlyList{Microsoft.Extensions.AI.ChatMessage},System.Threading.CancellationToken)">
+            <summary>
+            Selects the next agent to participate in the group chat based on the provided chat history and team.
+            </summary>
+            <param name="history">The chat history to consider.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests.
+            The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>The next <see cref="T:Microsoft.Agents.AI.AIAgent"/> to speak. This agent must be part of the chat.</returns>
+        </member>
+
+## RoundRobinGroupChatManager (l. 5554-5558)
+        <member name="T:Microsoft.Agents.AI.Workflows.RoundRobinGroupChatManager">
+            <summary>
+            Provides a <see cref="T:Microsoft.Agents.AI.Workflows.GroupChatManager"/> that selects agents in a round-robin fashion.
+            </summary>
+        </member>

@@ -1,0 +1,25 @@
+10.0.403
+# Sonda CAT-formal — 2026-10-28 13:00:32Z — .NET 10.0.14
+[F1] LocalidadRules.CodigoPostalValido (copia literal de ApiWeb @59399ba)
+    ASCII 3400                           → True
+    ASCII 34                             → False
+    ASCII 34000                          → False
+    árabe-índico ٣٤٠٠ (U+0663..)         → True
+    ancho completo ３４００ (U+FF13..)       → True
+    devanagari ३४०० (U+0969..)           → True
+    con espacios ' 3400 '                → True
+    con salto final '3400\n'             → True
+    0000                                 → True
+    null                                 → False
+[F2] LocalidadRules.HabitantesValidos
+    0            → False
+    1            → True
+    2147483647   → True
+    null         → False
+    -5           → False
+[F3] NombreValido con 61 y 200 caracteres (LargoMaximoDelNombre = 60)
+    61 → True; 200 → True
+[F4] Score de InMemory 1.0.1: CosineSimilarity frente a CosineDistance con vectores fijos
+    CosineSimilarity orden devuelto: d0:1.000, d1:0.800, d2:0.000, d3:-1.000
+    CosineDistance   orden devuelto: d0:0.000, d1:0.200, d2:1.000, d3:2.000
+    (d0 idéntico, d1 cos=0.8, d2 ortogonal, d3 opuesto)

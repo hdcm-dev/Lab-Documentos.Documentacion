@@ -1,0 +1,3 @@
+{"tipo":"salud","fecha":"2026-10-29T17:53:57-03:00","servidor":"estacion-1","ollama_version":"0.40.11","modelo_4b":"qwen3.5:4b","coincide_4b":true,"embedding":"qwen3-embedding:0.6b","coincide_emb":true}
+{"tipo":"api_ps","fecha":"2026-10-29T17:54:15-03:00","servidor":"estacion-1","cargados":[{"name":"qwen3.5:4b","digest":"d8b0f5e9760c","context_length":8192}]}
+{"tipo":"api_ps_cierre","fecha":"2026-10-29T17:56:46-03:00","servidor":"estacion-1","cargados":[]}

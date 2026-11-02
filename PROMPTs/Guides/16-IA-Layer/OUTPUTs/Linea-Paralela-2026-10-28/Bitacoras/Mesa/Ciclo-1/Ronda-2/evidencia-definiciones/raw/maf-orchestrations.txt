@@ -1,0 +1,81 @@
+META [('ms.topic', 'article'), ('ms.date', '2026-02-12T00:00:00Z'), ('updated_at', '2026-08-25T18:41:00Z')]
+ 
+ Workflow orchestrations in Agent Framework | Microsoft Learn 
+ Skip to main content
+ Skip to Ask Learn chat experience
+ This browser is no longer supported. 
+ Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+ Download Microsoft Edge
+ More info about Internet Explorer and Microsoft Edge
+ Table of contents 
+ Exit editor mode 
+ Ask Learn 
+ Ask Learn 
+ Reading mode 
+ Table of contents 
+ Read in English 
+ Add 
+ Add to Plans 
+ Edit 
+ Copy Markdown 
+ Print 
+ Note 
+ Access to this page requires authorization. You can try signing in or changing directories .
+ Access to this page requires authorization. You can try changing directories .
+ Workflow orchestrations 
+ Feedback 
+ Summarize this article for me
+ In this article
+ Agent Framework provides several built-in multi-agent orchestration patterns: 
+ Pattern 
+ Description 
+ Sequential 
+ Agents execute one after another in a defined order 
+ Concurrent 
+ Agents execute in parallel 
+ Handoff 
+ Agents transfer control to each other based on context 
+ Group Chat 
+ Agents collaborate in a shared conversation 
+ Magentic 
+ A manager agent dynamically coordinates specialized agents 
+ Tip 
+ Orchestrations support human-in-the-loop interactions through tool approval and request info. Agents can use approval-required tools that pause the workflow for human review before execution. See Human-in-the-Loop and the sequential orchestration HITL tutorial for details. 
+ Next steps 
+ Sequential Orchestration 
+ Feedback 
+ Was this page helpful?
+ Yes 
+ No 
+ No 
+ Need help with this topic?
+ Want to try using Ask Learn to clarify or guide you through this topic?
+ Ask Learn 
+ Ask Learn 
+ Suggest a fix? 
+ Additional resources
+ Last updated on 
+ 2026-08-25
+ In this article 
+ Was this page helpful?
+ Need help with this topic?
+ Want to try using Ask Learn to clarify or guide you through this topic?
+ Ask Learn 
+ Ask Learn 
+ Suggest a fix? 
+ en-us 
+ Your Privacy Choices 
+ Theme 
+ Light 
+ Dark 
+ High contrast 
+ AI Disclaimer 
+ Previous Versions 
+ Blog 
+ Contribute 
+ Privacy 
+ Consumer Health Privacy 
+ Terms of Use 
+ Trademarks 
+ © Microsoft 2026 
+ 

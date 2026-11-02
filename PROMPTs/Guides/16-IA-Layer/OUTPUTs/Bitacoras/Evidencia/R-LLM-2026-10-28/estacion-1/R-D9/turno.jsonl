@@ -1,0 +1,3 @@
+{"tipo":"salud","corrida":"R-D9","fecha":"2026-10-29T18:53:39-03:00","servidor":"estacion-1","ollama_version":"0.40.11","digest_4b":"d8b0f5e9760c","digest_emb":"ac6da0dfba84","coincide":true}
+{"tipo":"api_ps","corrida":"R-D9","fecha":"2026-10-29T18:53:55-03:00","servidor":"estacion-1","cargados":[{"name":"qwen3.5:4b","digest":"d8b0f5e9760c","context_length":8192}]}
+{"tipo":"api_ps_cierre","corrida":"R-D9","fecha":"2026-10-29T18:55:16-03:00","servidor":"estacion-1","cargados":[]}

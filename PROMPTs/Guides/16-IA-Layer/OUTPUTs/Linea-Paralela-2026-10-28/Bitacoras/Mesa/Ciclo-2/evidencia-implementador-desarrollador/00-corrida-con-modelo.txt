@@ -1,0 +1,11 @@
+CONCEDIDO <recurso-propio> a <agente> hasta 2026-10-28T18:37:33-0300 (renová con: <gestor-de-turnos> renovar <recurso-propio> <agente>)
+CONCEDIDO build a <agente> hasta 2026-10-28T18:37:33-0300 (renová con: <gestor-de-turnos> renovar build <agente>)
+### 06-conmodelo 17:52:33
+rc=0 17:59:17
+### demo-conmodelo-d1 17:59:17
+rc=0 18:00:40
+### 10-conmodelo 18:00:40
+rc=1 18:10:37
+FIN
+LIBERADO build por <agente>
+LIBERADO <recurso-propio> por <agente>

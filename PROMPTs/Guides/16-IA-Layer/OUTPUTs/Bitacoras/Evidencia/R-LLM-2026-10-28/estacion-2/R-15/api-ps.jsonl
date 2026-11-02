@@ -1,0 +1,2 @@
+{"tipo":"api_ps_inicio","fecha":"2026-10-29T21:58:58Z","servidor":"estacion-2","modelos":[]}
+{"tipo":"api_ps","fecha":"2026-10-29T21:59:00Z","servidor":"estacion-2","modelos":[{"name":"qwen3.5:4b","digest":"d8b0f5e9760c","context_length":8192,"expires_at":"2026-10-29T22:59:00.584587271Z"}]}

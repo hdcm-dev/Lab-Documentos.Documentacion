@@ -1,0 +1,47 @@
+# Demo: ExtraerBaja concatena Localidad.Nombre en el mensaje de sistema, sin sobre JSON ni recorte
+35:    public static string ExtraerBaja(IReadOnlyList<LocalidadDeReferencia> disponibles)
+36:    {
+37:        var texto = new StringBuilder(
+38:            "La persona quiere dar de baja una localidad. Devolvé tipo Baja y el id de la localidad de la lista que " +
+39:            "nombra el pedido. Si ninguna coincide, devolvé localidadId null.\n");
+40:        texto.AppendLine(ContenidoExterno.Aviso);
+41:        foreach (var l in disponibles) texto.AppendLine($"- id {l.Id}: {l.Nombre} ({l.Provincia})");
+42:        return texto.ToString();
+43:    }
+44:
+
+# AdaptadoresDeModelo.Extraer: 'sistema' va en ChatRole.System
+62:    public Task<AccionSugerida?> ExtraerAsync(string texto, IReadOnlyList<LocalidadDeReferencia> disponibles, CancellationToken cancellationToken) =>
+63:        Extraer<AccionSugerida>(TextosDeInstruccion.ExtraerBaja(disponibles), texto, cancellationToken);
+64:
+65:    private async Task<T?> Extraer<T>(string sistema, string texto, CancellationToken cancellationToken) where T : class
+66:    {
+67:        var r = await chat.GetResponseAsync<T>(
+68:            [new(ChatRole.System, sistema), new(ChatRole.User, $"Texto: {texto}")],
+69:            fabrica.Crear(), cancellationToken: cancellationToken);
+70:        return r.TryGetResult(out var valor) ? valor : null;   // sin resultado legible: camino sin IA
+71:    }
+
+# ProponerBajaDesdeTexto: lista TODAS las localidades de la sesión
+79:public sealed class ProponerBajaDesdeTexto(IExtractorDeBaja extractor, ILocalidadRepository repository)
+80:{
+81:    public async Task<ResultadoDePropuesta> ProponerAsync(string texto, CancellationToken cancellationToken)
+82:    {
+83:        var disponibles = (await repository.GetAllAsync(cancellationToken))
+84:            .Select(l => new LocalidadDeReferencia(l.Id, l.Nombre, l.Provincia))
+85:            .ToList();
+86:        var sugerida = await extractor.ExtraerAsync(texto, disponibles, cancellationToken);
+
+# LocalidadRules.NombreValido (copia): sólo largo >= 3, sin tope ni filtro de saltos de línea
+18:    public static bool NombreValido(string? nombre) =>
+19-        (nombre ?? string.Empty).Trim().Length >= LargoMinimoDelNombre;
+
+# Contraste: las herramientas sí usan ContenidoExterno.Envolver (JSON + recorte)
+28:        return ContenidoExterno.Envolver(
+39:            return ContenidoExterno.Envolver(new { cantidad = lista.Count }, Largo);
+43:            ? ContenidoExterno.Envolver(new { error = $"La provincia «{provincia}» no está en el catálogo." }, Largo)
+44:            : ContenidoExterno.Envolver(new { provincia = normalizada, cantidad = lista.Count(l => l.Provincia == normalizada) }, Largo);
+49:        ContenidoExterno.Envolver(await resultados.ResumirAsync(cancellationToken), Largo);
+
+# grep detector de truncado en la demo:
+(sin coincidencias)

@@ -1,0 +1,79 @@
+# Excepciones del barrido RD-PO-4 (AC-8 de BIT-16-04 v2, §F.10). Creado al cerrar el ciclo 1; recalculado al aplicar el ciclo 2 (2026-10-26, PAR2-03).
+# Patrones del ciclo 2, sobre todos los archivos (texto y código):
+#   (1) sin distinguir mayúsculas y sin borde de palabra, para que caigan los identificadores compuestos;
+#   (2) sensible a mayúsculas, el identificador de código del dominio de transporte que I-06 excluye (la palabra de texto con tilde queda fuera).
+#   Los dos patrones literales están en la celda AC-8 del plan; este archivo no los repite, para no listarse a sí mismo.
+# Casos positivos: Compuertas/rd-po-4.positivos (el barrido tiene que marcar sus 5 líneas; si marca menos, la compuerta falla).
+# Formato: ruta-relativa-a-Bitacoras:línea  motivo
+# Regla: sólo entran líneas que NOMBRAN la prohibición o la registran (o falsos positivos del patrón sin borde); nunca contenido que use un dominio ajeno.
+# Las líneas se recalculan cada vez que cambia el archivo (la relectura S-14 corre el barrido y actualiza esta lista).
+04-Plan-De-Integracion.md:26  Restricciones del plan: enumera los dominios que I-06 manda reemplazar
+04-Plan-De-Integracion.md:980  Celda de AC-8 (v3): define los patrones del barrido y los casos positivos
+04-Plan-De-Integracion.md:1010  Riesgo R-06: nombra dónde aparecen dominios ajenos en los dossiers, para reescribirlos
+04-Plan-De-Integracion.v2.md:26  Copia histórica de la v2 (mismas restricciones)
+04-Plan-De-Integracion.v2.md:937  Copia histórica de la v2 (AC-8 v2)
+04-Plan-De-Integracion.v2.md:966  Copia histórica de la v2 (R-06)
+04-Plan-De-Integracion.v1.md:26  Copia histórica de la v1 (mismas restricciones)
+04-Plan-De-Integracion.v1.md:823  Copia histórica de la v1 (AC-8 v1)
+04-Plan-De-Integracion.v1.md:852  Copia histórica de la v1 (R-06)
+04-Plan-De-Integracion.v0.md:24  Copia histórica de la v0 (mismas restricciones)
+04-Plan-De-Integracion.v0.md:697  Copia histórica de la v0 (AC-8 v0)
+04-Plan-De-Integracion.v0.md:724  Copia histórica de la v0 (R-06)
+Compuertas/rd-po-4.positivos:1  Caso positivo de la compuerta (PAR2-03)
+Compuertas/rd-po-4.positivos:2  Caso positivo de la compuerta (PAR2-03)
+Compuertas/rd-po-4.positivos:3  Caso positivo de la compuerta (PAR2-03)
+Compuertas/rd-po-4.positivos:4  Caso positivo de la compuerta (PAR2-03)
+Compuertas/rd-po-4.positivos:5  Caso positivo de la compuerta (PAR2-03)
+Mesa/I-06-Directiva-Del-PO-Caso-Unico-Y-Medios.md:16  Directiva del PO que establece la prohibición
+Mesa/Ciclo-1/03-Consolidacion.md:179  Consolidación: registra el hallazgo H-052 sobre el barrido
+Mesa/Ciclo-1/04-Veredictos.md:81  Voto del jurado sobre H-052 (cita los términos del barrido)
+Mesa/Ciclo-1/05-Parches.md:813  Texto del parche PAR-19 que define AC-8
+Mesa/Ciclo-1/06-Aprobacion.md:69  Objeción a PAR-19 transcripta (cita el patrón de AC-8)
+Mesa/Ciclo-1/07-Aplicacion-Y-Verificacion.md:31  Ajuste AJ-04 (describe la regla de AC-8)
+Mesa/Ciclo-2/00-Auditoria-Homogeneidad.md:47  Auditoría: cita los términos de AC-8 que verificaron los jueces del ciclo 1
+Mesa/Ciclo-2/02-Informes/qa.md:91  Hallazgo QA-06 (H2-053): cita el patrón de código de AC-8 v1
+Mesa/Ciclo-2/02-Informes/qa.md:92  Hallazgo QA-06 (H2-053): describe el archivo de prueba con identificadores compuestos
+Mesa/Ciclo-2/03-Consolidacion.md:181  Consolidación: registra H2-053 sobre los patrones de AC-8
+Mesa/Ciclo-2/05-Parches.md:192  Texto del parche PAR2-03 que define AC-8 v2
+Mesa/Ciclo-3/02-Informes/qa.md:27  Hallazgo QA3-01 (H3-022): cita el patrón 1 y su falso positivo
+Mesa/Ciclo-3/02-Informes/qa.md:29  Hallazgo QA3-01 (H3-022): dirección verificada con el patrón nuevo
+Mesa/Ciclo-3/05-Parches.md:56  Parches del ciclo 3: verificación del patrón de AC-8 con lookbehind
+Mesa/Ciclo-3/05-Parches.md:466  Texto del parche PAR3-15 que define AC-8 v3
+Mesa/Ciclo-3/06-Aprobacion.md:47  Aprobación del ciclo 3: cita el patrón de AC-8 v3 en la objeción de riesgo a PAR3-15
+# Pendientes (NO son excepciones; deuda declarada, R-06): estos archivos usan dominios ajenos en
+# snippets o salidas y se reescriben o se rotulan antes de cualquier commit:
+#   Sondeo-Entorno.md, Nucleos/N2-Abstracciones-Y-Proveedores-NET.md, Nucleos/N5-Operacion-Calidad-Seguridad.md,
+#   Nucleos/N4-Agentes-Y-Orquestacion.md (nuevo en el ciclo 2: identificadores compuestos que el patrón v1 no veía),
+#   Nucleos/N4-Evidencia/compilecheck/Program.cs, Mesa/Ciclo-1/02-Informes/qa.md (cita textual de los anteriores).
+# Saneamiento R-06 (2026-10-27, construcción): evidencia ejecutada rotulada «dominio ilustrativo del dossier; la guía usa Movilidad Urbana».
+# Apartamiento declarado de la «Regla» de arriba: estas líneas SÍ usan un dominio ajeno, pero reescribirlas alteraría evidencia ejecutada (R-06 lo admite). No se citan en la guía.
+Mesa/Ciclo-1/02-Informes/qa.md:66  Hallazgo QA-06: nombra los términos del barrido
+Mesa/Ciclo-1/02-Informes/qa.md:69  Hallazgo QA-06: nombra los términos del barrido
+Mesa/Ciclo-1/02-Informes/qa.md:70  Hallazgo QA-06: cita la celda AC-8 vieja
+Mesa/Ciclo-1/02-Informes/qa.md:72  Hallazgo QA-06: propone patrones del barrido
+Nucleos/N4-Agentes-Y-Orquestacion.md:8  Rótulo R-06 que nombra el dominio ilustrativo
+Nucleos/N4-Agentes-Y-Orquestacion.md:267  Snippet espejo de la evidencia compilada (rotulado)
+Nucleos/N4-Agentes-Y-Orquestacion.md:273  Snippet espejo de la evidencia compilada (rotulado)
+Nucleos/N4-Agentes-Y-Orquestacion.md:288  Snippet espejo de la evidencia compilada (rotulado)
+Nucleos/N4-Agentes-Y-Orquestacion.md:299  Snippet espejo de la evidencia compilada (rotulado)
+Nucleos/N4-Evidencia/compilecheck/Program.cs:18  Evidencia compilada (rotulada)
+Nucleos/N4-Evidencia/compilecheck/Program.cs:21  Evidencia compilada (rotulada)
+Nucleos/N4-Evidencia/compilecheck/Program.cs:25  Evidencia compilada (rotulada)
+Nucleos/N4-Evidencia/compilecheck/Program.cs:72  Evidencia compilada (rotulada)
+Nucleos/N4-Evidencia/compilecheck/Program.cs:73  Evidencia compilada (rotulada)
+Nucleos/N4-Evidencia/compilecheck/Program.cs:74  Evidencia compilada (rotulada)
+Nucleos/N5-Operacion-Calidad-Seguridad.md:190  Salida ejecutada E3 (rotulada)
+Nucleos/N5-Operacion-Calidad-Seguridad.md:198  Salida ejecutada E5 (rotulada)
+Nucleos/N5-Operacion-Calidad-Seguridad.md:318  Snippet verificado en E3 (rotulado)
+Sondeo-Entorno.md:82  Salida ejecutada del sondeo (rotulada)
+Sondeo-Entorno.md:83  Salida ejecutada del sondeo (rotulada)
+Sondeo-Entorno.md:86  Salida ejecutada del sondeo (rotulada)
+Sondeo-Entorno.md:87  Salida ejecutada del sondeo (rotulada)
+Sondeo-Entorno.md:184  Salida ejecutada del sondeo (rotulada)
+Sondeo-Entorno.md:190  Salida ejecutada del sondeo (rotulada)
+# Barrido de $RD_PO_LISTA (nombres de otros proyectos):
+# 2026-10-29 — Recuperación (B-02, RPRI-08): retirada. I-06:10 pasó a paráfrasis y ya no nombra el dominio ajeno. Era: «Mesa/I-06-Directiva-Del-PO-Caso-Unico-Y-Medios.md:10  Cita textual de la directiva del PO que establece la prohibición».
+# Saneamiento 2026-10-27: 978→980 y 1008→1010 (P2-AC6 agregó dos filas a §E.1); las dos líneas del juez de 15 ya estaban exceptuadas en Compuertas/rd-po-4.excepciones de la guía, faltaban acá.
+Evidencia/R-LLM/15-Pruebas-Y-Evaluacion.modelo.jsonl:46  el juez traduce «boleto del tren» (n04 del oro de 06, Movilidad Urbana) al inglés; salida del modelo, no se edita (ejemplo 15)
+Evidencia/R-LLM/15-Pruebas-Y-Evaluacion.modelo.jsonl:47  el juez traduce «boleto del tren» (n04 del oro de 06, Movilidad Urbana) al inglés; salida del modelo, no se edita (ejemplo 15)
+README.md:141  2026-10-29 (B-02): nombre de la carpeta de la línea archivada («Linea-*-2026-10-28»), falso positivo del patrón (2); la línea ya marcaba antes de B-02

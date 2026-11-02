@@ -1,0 +1,4 @@
+{"tipo":"salud","corrida":"R-05","fecha":"2026-10-29T17:58:54-03:00","servidor":"estacion-1","ollama_version":"0.40.11","digest_4b":"d8b0f5e9760c","digest_emb":"ac6da0dfba84","coincide":true}
+{"tipo":"ps-antes","corrida":"R-05","fecha":"2026-10-29T17:58:54-03:00","servidor":"estacion-1","ps":{"models":[]}}
+{"tipo":"ps-tras-carga","corrida":"R-05","fecha":"2026-10-29T17:59:20-03:00","servidor":"estacion-1","ps":{"models":[{"name":"qwen3.5:4b","model":"qwen3.5:4b","size":3376404232,"digest":"d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04","details":{"parent_model":"","format":"gguf","family":"qwen35","families":["qwen35"],"parameter_size":"4.2B","quantization_level":"Q4_K_M"},"expires_at":"2026-10-29T21:29:20.817981662Z","size_vram":0,"context_length":8192,"runner":"llamacpp"}]},"num_ctx_cargado":8192}
+{"tipo":"ps-al-cerrar","corrida":"R-05","fecha":"2026-10-29T18:23:59-03:00","servidor":"estacion-1","rc":"0","ps":{"models":[]}}

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!-- Ejemplo 08: servidor MCP propio de Movilidad Urbana, publicado desde el catálogo único de herramientas. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MovilidadUrbana.Ejemplos.Mcp.Servidor</RootNamespace>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Versiones consultadas en nuget.org el 2026-10-28; iguales a la tabla de paquetes de la guía. -->
+    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Extensions.AI" Version="10.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Nombres propios (no appsettings.json) para que no choquen con los del cliente, que lo hospeda en proceso. -->
+    <Content Update="servidor-mcp*.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

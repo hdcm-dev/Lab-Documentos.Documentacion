@@ -1,0 +1,12 @@
+# Salidas de compilación
+bin/
+obj/
+# Base SQLite que la demo crea al arrancar (y sus archivos WAL)
+datos/
+*.db
+*.db-shm
+*.db-wal
+# Salidas de las pruebas con modelo y resultados de dotnet test
+resultados-conmodelo/
+TestResults/
+*.trx

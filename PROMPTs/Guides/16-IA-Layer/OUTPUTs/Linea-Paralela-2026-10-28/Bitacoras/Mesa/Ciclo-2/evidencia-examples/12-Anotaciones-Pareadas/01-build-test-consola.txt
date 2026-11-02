@@ -1,0 +1,756 @@
+# Ejemplo 12: build, dotnet test Cableado (verbosidad detallada), consola, paquetes vulnerables y deprecados
+# Fecha: 2026-10-28. Imagen: mcr.microsoft.com/dotnet/sdk@sha256:de4fe90a98845d75910b9769662465c84de1a934665c431279d1382b2bddc02b (SDK 10.0.403). Sin modelo: no corresponde cabecera R-LLM (el ejemplo no corre contra el servidor de prueba).
+# Comando: copia del ejemplo fuera del workspace; dotnet build; dotnet test --filter TestCategory=Cableado; dotnet run; dotnet list package --vulnerable --include-transitive; --deprecated
+# Nota: se quitaron 257 líneas «rm: no se puede borrar …» del guion de copia (bin/ y obj/ de corridas anteriores, propiedad del contenedor): esta corrida es incremental. La corrida desde cero es 02-comandos-del-readme.txt.
+
+EN COLA build (posición 1); esperando hasta 90 min...
+CONCEDIDO build a ex12 hasta 2026-10-28T16:32:57-0300 (renová con: <gestor-de-turnos> renovar build ex12)
+10.0.403
+### BUILD
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MovilidadUrbana.Ejemplos.AnotacionesPareadas -> /ex/src/MovilidadUrbana.Ejemplos.AnotacionesPareadas/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.AnotacionesPareadas.dll
+  MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:28.37
+### TEST
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+/ex/tests/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests.dll
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /ex/tests/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests.dll
+   NUnit3TestExecutor discovered 18 of 18 NUnit test cases using Current Discovery mode, Non-Explicit run
+MAF: llamadas al cliente 2; lecturas 1; nombre pedido «resultados_por_medio»
+MAF: llamada 1 ofreció «resultados_por_medio» con esquema {"type":"object","properties":{"localidad":{"description":"Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.","type":["string","null"],"default":null}}}
+MAF: llamada 2 ofreció «resultados_por_medio» con esquema {"type":"object","properties":{"localidad":{"description":"Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.","type":["string","null"],"default":null}}}
+MAF: texto final «(sin modelo) {   "localidad": "Corrientes",   "totalDeRespuestas": 2,   "porMedio": [     {       "medio": "colectivo",       "etiqueta": "Colectivo",       "respuestas": 2     },     {       "medio": "auto",       "etiqueta": "Auto particular",       "respuestas": 0     },     {       "medio": "bicicleta",       "etiqueta": "Bicicleta",       "respuestas": 0     },     {       "medio": "moto",       "etiqueta": "Moto",       "respuestas": 0     },     {       "medio": "caminata",       "etiqueta": "A pie",       "respuestas": 1     },     {       "medio": "tren",       "etiqueta": "Tren",       "respuestas": 0     }   ] }»
+
+  Passed AsAIAgent_EjecutaLaHerramientaUnaVez [2 s]
+  Standard Output Messages:
+ MAF: llamadas al cliente 2; lecturas 1; nombre pedido «resultados_por_medio»
+ MAF: llamada 1 ofreció «resultados_por_medio» con esquema {"type":"object","properties":{"localidad":{"description":"Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.","type":["string","null"],"default":null}}}
+ MAF: llamada 2 ofreció «resultados_por_medio» con esquema {"type":"object","properties":{"localidad":{"description":"Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.","type":["string","null"],"default":null}}}
+ MAF: texto final «(sin modelo) {   "localidad": "Corrientes",   "totalDeRespuestas": 2,   "porMedio": [     {       "medio": "colectivo",       "etiqueta": "Colectivo",       "respuestas": 2     },     {       "medio": "auto",       "etiqueta": "Auto particular",       "respuestas": 0     },     {       "medio": "bicicleta",       "etiqueta": "Bicicleta",       "respuestas": 0     },     {       "medio": "moto",       "etiqueta": "Moto",       "respuestas": 0     },     {       "medio": "caminata",       "etiqueta": "A pie",       "respuestas": 1     },     {       "medio": "tren",       "etiqueta": "Tren",       "respuestas": 0     }   ] }»
+
+
+SK sin prefijo: llamadas al cliente 2; lecturas 0; nombre pedido «resultados_por_medio»
+SK sin prefijo: llamada 1 ofreció «Encuesta_resultados_por_medio» con esquema {
+  "type": "object",
+  "condition": "Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.",
+  "properties": {
+    "localidad": {
+      "description": "Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.",
+      "type": "string"
+    }
+  }
+}
+SK sin prefijo: llamada 2 ofreció «Encuesta_resultados_por_medio» con esquema {
+  "type": "object",
+  "condition": "Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.",
+  "properties": {
+    "localidad": {
+      "description": "Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.",
+      "type": "string"
+    }
+  }
+}
+SK sin prefijo: texto final «(sin modelo) Error: Requested function "resultados_por_medio" not found.»
+
+SK: llamadas al cliente 2; lecturas 1; nombre pedido «Encuesta_resultados_por_medio»
+SK: llamada 1 ofreció «Encuesta_resultados_por_medio» con esquema {
+  "type": "object",
+  "condition": "Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.",
+  "properties": {
+    "localidad": {
+      "description": "Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.",
+      "type": "string"
+    }
+  }
+}
+SK: llamada 2 ofreció «Encuesta_resultados_por_medio» con esquema {
+  "type": "object",
+  "condition": "Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.",
+  "properties": {
+    "localidad": {
+      "description": "Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.",
+      "type": "string"
+    }
+  }
+}
+SK: texto final «(sin modelo) {"Localidad":"Corrientes","TotalDeRespuestas":2,"PorMedio":[{"Medio":"colectivo","Etiqueta":"Colectivo","Respuestas":2},{"Medio":"auto","Etiqueta":"Auto particular","Respuestas":0},{"Medio":"bicicleta","Etiqueta":"Bicicleta","Respuestas":0},{"Medio":"moto","Etiqueta":"Moto","Respuestas":0},{"Medio":"caminata","Etiqueta":"A pie","Respuestas":1},{"Medio":"tren","Etiqueta":"Tren","Respuestas":0}],"Error":null}»
+
+SK sin invocación: llamadas al cliente 1; lecturas 0; nombre pedido «Encuesta_resultados_por_medio»
+SK sin invocación: llamada 1 ofreció «Encuesta_resultados_por_medio» con esquema {
+  "type": "object",
+  "condition": "Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.",
+  "properties": {
+    "localidad": {
+      "description": "Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.",
+      "type": "string"
+    }
+  }
+}
+SK sin invocación: texto final «»
+
+SK : FunctionResultContent.Result es MovilidadUrbana.Ejemplos.AnotacionesPareadas.Application.Resultados.ResultadosPorMedio
+MAF: FunctionResultContent.Result es System.Text.Json.JsonElement
+
+tipos de Application revisados: 7; con tipos de marcos de IA: 0
+
+SK : {"type":"object","condition":"Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.","properties":{"localidad":{"description":"Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.","type":"string"}}}
+MAF: {"type":"object","properties":{"localidad":{"description":"Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.","type":["string","null"],"default":null}}}
+
+SK : KernelFunctionFromMethod | KernelFunction.Name «resultados_por_medio» | AIFunction.Name «Encuesta_resultados_por_medio» | PluginName «Encuesta»
+MAF: ReflectionAIFunction | AIFunction.Name «resultados_por_medio»
+
+  Passed ChatCompletionAgent_ConElNombreSinPrefijo_NoEjecuta [459 ms]
+  Standard Output Messages:
+ SK sin prefijo: llamadas al cliente 2; lecturas 0; nombre pedido «resultados_por_medio»
+ SK sin prefijo: llamada 1 ofreció «Encuesta_resultados_por_medio» con esquema {
+   "type": "object",
+   "condition": "Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.",
+   "properties": {
+     "localidad": {
+       "description": "Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.",
+       "type": "string"
+     }
+   }
+ }
+ SK sin prefijo: llamada 2 ofreció «Encuesta_resultados_por_medio» con esquema {
+   "type": "object",
+   "condition": "Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.",
+   "properties": {
+     "localidad": {
+       "description": "Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.",
+       "type": "string"
+     }
+   }
+ }
+ SK sin prefijo: texto final «(sin modelo) Error: Requested function "resultados_por_medio" not found.»
+
+
+  Passed ChatCompletionAgent_EjecutaLaHerramientaUnaVez [120 ms]
+  Standard Output Messages:
+ SK: llamadas al cliente 2; lecturas 1; nombre pedido «Encuesta_resultados_por_medio»
+ SK: llamada 1 ofreció «Encuesta_resultados_por_medio» con esquema {
+   "type": "object",
+   "condition": "Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.",
+   "properties": {
+     "localidad": {
+       "description": "Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.",
+       "type": "string"
+     }
+   }
+ }
+ SK: llamada 2 ofreció «Encuesta_resultados_por_medio» con esquema {
+   "type": "object",
+   "condition": "Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.",
+   "properties": {
+     "localidad": {
+       "description": "Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.",
+       "type": "string"
+     }
+   }
+ }
+ SK: texto final «(sin modelo) {"Localidad":"Corrientes","TotalDeRespuestas":2,"PorMedio":[{"Medio":"colectivo","Etiqueta":"Colectivo","Respuestas":2},{"Medio":"auto","Etiqueta":"Auto particular","Respuestas":0},{"Medio":"bicicleta","Etiqueta":"Bicicleta","Respuestas":0},{"Medio":"moto","Etiqueta":"Moto","Respuestas":0},{"Medio":"caminata","Etiqueta":"A pie","Respuestas":1},{"Medio":"tren","Etiqueta":"Tren","Respuestas":0}],"Error":null}»
+
+
+  Passed ChatCompletionAgent_SinUseKernelFunctionInvocation_NoEjecutaNiFalla [4 ms]
+  Standard Output Messages:
+ SK sin invocación: llamadas al cliente 1; lecturas 0; nombre pedido «Encuesta_resultados_por_medio»
+ SK sin invocación: llamada 1 ofreció «Encuesta_resultados_por_medio» con esquema {
+   "type": "object",
+   "condition": "Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.",
+   "properties": {
+     "localidad": {
+       "description": "Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.",
+       "type": "string"
+     }
+   }
+ }
+ SK sin invocación: texto final «»
+
+
+  Passed ElResultadoLlegaAlCliente_ComoObjetoEnSk_YComoJsonEnMaf [23 ms]
+  Standard Output Messages:
+ SK : FunctionResultContent.Result es MovilidadUrbana.Ejemplos.AnotacionesPareadas.Application.Resultados.ResultadosPorMedio
+ MAF: FunctionResultContent.Result es System.Text.Json.JsonElement
+
+
+  Passed ApplicationSinTiposDeMarcosDeIA [19 ms]
+  Standard Output Messages:
+ tipos de Application revisados: 7; con tipos de marcos de IA: 0
+
+
+  Passed CasoRojo_ElAdaptadorSiNombraElMarco [1 ms]
+  Passed ElEsquemaDeParametros_CoincideEnNombresYDescripciones_NoEnTipos [14 ms]
+  Standard Output Messages:
+ SK : {"type":"object","condition":"Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.","properties":{"localidad":{"description":"Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.","type":"string"}}}
+ MAF: {"type":"object","properties":{"localidad":{"description":"Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.","type":["string","null"],"default":null}}}
+
+
+  Passed ElNombreQueVeElModelo_LlevaElPrefijoDelPluginEnSemanticKernel [1 ms]
+  Passed LasDosSonAIFunction_ConLaMismaDescripcion [1 ms]
+  Standard Output Messages:
+ SK : KernelFunctionFromMethod | KernelFunction.Name «resultados_por_medio» | AIFunction.Name «Encuesta_resultados_por_medio» | PluginName «Encuesta»
+ MAF: ReflectionAIFunction | AIFunction.Name «resultados_por_medio»
+
+
+SK : {
+  "localidad": "Corrientes",
+  "totalDeRespuestas": 2,
+  "porMedio": [
+    {
+      "medio": "colectivo",
+      "etiqueta": "Colectivo",
+      "respuestas": 2
+    },
+    {
+      "medio": "auto",
+      "etiqueta": "Auto particular",
+      "respuestas": 0
+    },
+    {
+      "medio": "bicicleta",
+      "etiqueta": "Bicicleta",
+      "respuestas": 0
+    },
+    {
+      "medio": "moto",
+      "etiqueta": "Moto",
+      "respuestas": 0
+    },
+    {
+      "medio": "caminata",
+      "etiqueta": "A pie",
+      "respuestas": 1
+    },
+    {
+      "medio": "tren",
+      "etiqueta": "Tren",
+      "respuestas": 0
+    }
+  ]
+}
+MAF: {
+  "localidad": "Corrientes",
+  "totalDeRespuestas": 2,
+  "porMedio": [
+    {
+      "medio": "colectivo",
+      "etiqueta": "Colectivo",
+      "respuestas": 2
+    },
+    {
+      "medio": "auto",
+      "etiqueta": "Auto particular",
+      "respuestas": 0
+    },
+    {
+      "medio": "bicicleta",
+      "etiqueta": "Bicicleta",
+      "respuestas": 0
+    },
+    {
+      "medio": "moto",
+      "etiqueta": "Moto",
+      "respuestas": 0
+    },
+    {
+      "medio": "caminata",
+      "etiqueta": "A pie",
+      "respuestas": 1
+    },
+    {
+      "medio": "tren",
+      "etiqueta": "Tren",
+      "respuestas": 0
+    }
+  ]
+}
+
+SK : {
+  "localidad": "resistencia",
+  "totalDeRespuestas": 2,
+  "porMedio": [
+    {
+      "medio": "colectivo",
+      "etiqueta": "Colectivo",
+      "respuestas": 1
+    },
+    {
+      "medio": "auto",
+      "etiqueta": "Auto particular",
+      "respuestas": 1
+    },
+    {
+      "medio": "bicicleta",
+      "etiqueta": "Bicicleta",
+      "respuestas": 1
+    },
+    {
+      "medio": "moto",
+      "etiqueta": "Moto",
+      "respuestas": 0
+    },
+    {
+      "medio": "caminata",
+      "etiqueta": "A pie",
+      "respuestas": 0
+    },
+    {
+      "medio": "tren",
+      "etiqueta": "Tren",
+      "respuestas": 0
+    }
+  ]
+}
+MAF: {
+  "localidad": "resistencia",
+  "totalDeRespuestas": 2,
+  "porMedio": [
+    {
+      "medio": "colectivo",
+      "etiqueta": "Colectivo",
+      "respuestas": 1
+    },
+    {
+      "medio": "auto",
+      "etiqueta": "Auto particular",
+      "respuestas": 1
+    },
+    {
+      "medio": "bicicleta",
+      "etiqueta": "Bicicleta",
+      "respuestas": 1
+    },
+    {
+      "medio": "moto",
+      "etiqueta": "Moto",
+      "respuestas": 0
+    },
+    {
+      "medio": "caminata",
+      "etiqueta": "A pie",
+      "respuestas": 0
+    },
+    {
+      "medio": "tren",
+      "etiqueta": "Tren",
+      "respuestas": 0
+    }
+  ]
+}
+
+SK : {
+  "totalDeRespuestas": 4,
+  "porMedio": [
+    {
+      "medio": "colectivo",
+      "etiqueta": "Colectivo",
+      "respuestas": 3
+    },
+    {
+      "medio": "auto",
+      "etiqueta": "Auto particular",
+      "respuestas": 1
+    },
+    {
+      "medio": "bicicleta",
+      "etiqueta": "Bicicleta",
+      "respuestas": 1
+    },
+    {
+      "medio": "moto",
+      "etiqueta": "Moto",
+      "respuestas": 0
+    },
+    {
+      "medio": "caminata",
+      "etiqueta": "A pie",
+      "respuestas": 1
+    },
+    {
+      "medio": "tren",
+      "etiqueta": "Tren",
+      "respuestas": 0
+    }
+  ]
+}
+MAF: {
+  "totalDeRespuestas": 4,
+  "porMedio": [
+    {
+      "medio": "colectivo",
+      "etiqueta": "Colectivo",
+      "respuestas": 3
+    },
+    {
+      "medio": "auto",
+      "etiqueta": "Auto particular",
+      "respuestas": 1
+    },
+    {
+      "medio": "bicicleta",
+      "etiqueta": "Bicicleta",
+      "respuestas": 1
+    },
+    {
+      "medio": "moto",
+      "etiqueta": "Moto",
+      "respuestas": 0
+    },
+    {
+      "medio": "caminata",
+      "etiqueta": "A pie",
+      "respuestas": 1
+    },
+    {
+      "medio": "tren",
+      "etiqueta": "Tren",
+      "respuestas": 0
+    }
+  ]
+}
+
+SK : {
+  "localidad": "Goya",
+  "totalDeRespuestas": 0,
+  "porMedio": [],
+  "error": "No hay respuestas registradas para «Goya»."
+}
+MAF: {
+  "localidad": "Goya",
+  "totalDeRespuestas": 0,
+  "porMedio": [],
+  "error": "No hay respuestas registradas para «Goya»."
+}
+
+Name sin name: «ResultadosPorMedio»; Description «Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.»
+
+lecturas 0; texto «(sin modelo) Error: Function failed. Exception: No service for type 'System.Collections.Generic.IEnumerable`1[Microsoft.SemanticKernel.KernelPlugin]' has been registered.»
+
+ofrecida «Encuesta_resultados_por_medio»; lecturas 0; texto «(sin modelo) Error: Function failed.»
+
+  Passed ElResultadoNoTraeDatosDeLaPersona [80 ms]
+  Passed MismosArgumentos_MismoResultado("Corrientes") [9 ms]
+  Standard Output Messages:
+ SK : {
+   "localidad": "Corrientes",
+   "totalDeRespuestas": 2,
+   "porMedio": [
+     {
+       "medio": "colectivo",
+       "etiqueta": "Colectivo",
+       "respuestas": 2
+     },
+     {
+       "medio": "auto",
+       "etiqueta": "Auto particular",
+       "respuestas": 0
+     },
+     {
+       "medio": "bicicleta",
+       "etiqueta": "Bicicleta",
+       "respuestas": 0
+     },
+     {
+       "medio": "moto",
+       "etiqueta": "Moto",
+       "respuestas": 0
+     },
+     {
+       "medio": "caminata",
+       "etiqueta": "A pie",
+       "respuestas": 1
+     },
+     {
+       "medio": "tren",
+       "etiqueta": "Tren",
+       "respuestas": 0
+     }
+   ]
+ }
+ MAF: {
+   "localidad": "Corrientes",
+   "totalDeRespuestas": 2,
+   "porMedio": [
+     {
+       "medio": "colectivo",
+       "etiqueta": "Colectivo",
+       "respuestas": 2
+     },
+     {
+       "medio": "auto",
+       "etiqueta": "Auto particular",
+       "respuestas": 0
+     },
+     {
+       "medio": "bicicleta",
+       "etiqueta": "Bicicleta",
+       "respuestas": 0
+     },
+     {
+       "medio": "moto",
+       "etiqueta": "Moto",
+       "respuestas": 0
+     },
+     {
+       "medio": "caminata",
+       "etiqueta": "A pie",
+       "respuestas": 1
+     },
+     {
+       "medio": "tren",
+       "etiqueta": "Tren",
+       "respuestas": 0
+     }
+   ]
+ }
+
+
+  Passed MismosArgumentos_MismoResultado("resistencia") [1 ms]
+  Standard Output Messages:
+ SK : {
+   "localidad": "resistencia",
+   "totalDeRespuestas": 2,
+   "porMedio": [
+     {
+       "medio": "colectivo",
+       "etiqueta": "Colectivo",
+       "respuestas": 1
+     },
+     {
+       "medio": "auto",
+       "etiqueta": "Auto particular",
+       "respuestas": 1
+     },
+     {
+       "medio": "bicicleta",
+       "etiqueta": "Bicicleta",
+       "respuestas": 1
+     },
+     {
+       "medio": "moto",
+       "etiqueta": "Moto",
+       "respuestas": 0
+     },
+     {
+       "medio": "caminata",
+       "etiqueta": "A pie",
+       "respuestas": 0
+     },
+     {
+       "medio": "tren",
+       "etiqueta": "Tren",
+       "respuestas": 0
+     }
+   ]
+ }
+ MAF: {
+   "localidad": "resistencia",
+   "totalDeRespuestas": 2,
+   "porMedio": [
+     {
+       "medio": "colectivo",
+       "etiqueta": "Colectivo",
+       "respuestas": 1
+     },
+     {
+       "medio": "auto",
+       "etiqueta": "Auto particular",
+       "respuestas": 1
+     },
+     {
+       "medio": "bicicleta",
+       "etiqueta": "Bicicleta",
+       "respuestas": 1
+     },
+     {
+       "medio": "moto",
+       "etiqueta": "Moto",
+       "respuestas": 0
+     },
+     {
+       "medio": "caminata",
+       "etiqueta": "A pie",
+       "respuestas": 0
+     },
+     {
+       "medio": "tren",
+       "etiqueta": "Tren",
+       "respuestas": 0
+     }
+   ]
+ }
+
+
+  Passed MismosArgumentos_MismoResultado(null) [1 ms]
+  Standard Output Messages:
+ SK : {
+   "totalDeRespuestas": 4,
+   "porMedio": [
+     {
+       "medio": "colectivo",
+       "etiqueta": "Colectivo",
+       "respuestas": 3
+     },
+     {
+       "medio": "auto",
+       "etiqueta": "Auto particular",
+       "respuestas": 1
+     },
+     {
+       "medio": "bicicleta",
+       "etiqueta": "Bicicleta",
+       "respuestas": 1
+     },
+     {
+       "medio": "moto",
+       "etiqueta": "Moto",
+       "respuestas": 0
+     },
+     {
+       "medio": "caminata",
+       "etiqueta": "A pie",
+       "respuestas": 1
+     },
+     {
+       "medio": "tren",
+       "etiqueta": "Tren",
+       "respuestas": 0
+     }
+   ]
+ }
+ MAF: {
+   "totalDeRespuestas": 4,
+   "porMedio": [
+     {
+       "medio": "colectivo",
+       "etiqueta": "Colectivo",
+       "respuestas": 3
+     },
+     {
+       "medio": "auto",
+       "etiqueta": "Auto particular",
+       "respuestas": 1
+     },
+     {
+       "medio": "bicicleta",
+       "etiqueta": "Bicicleta",
+       "respuestas": 1
+     },
+     {
+       "medio": "moto",
+       "etiqueta": "Moto",
+       "respuestas": 0
+     },
+     {
+       "medio": "caminata",
+       "etiqueta": "A pie",
+       "respuestas": 1
+     },
+     {
+       "medio": "tren",
+       "etiqueta": "Tren",
+       "respuestas": 0
+     }
+   ]
+ }
+
+
+  Passed MismosArgumentos_MismoResultado("Goya") [< 1 ms]
+  Standard Output Messages:
+ SK : {
+   "localidad": "Goya",
+   "totalDeRespuestas": 0,
+   "porMedio": [],
+   "error": "No hay respuestas registradas para «Goya»."
+ }
+ MAF: {
+   "localidad": "Goya",
+   "totalDeRespuestas": 0,
+   "porMedio": [],
+   "error": "No hay respuestas registradas para «Goya»."
+ }
+
+
+  Passed AIFunctionFactory_NoLeeElNombreDeKernelFunction [17 ms]
+  Standard Output Messages:
+ Name sin name: «ResultadosPorMedio»; Description «Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.»
+
+
+  Passed LaKernelFunction_EnMaf_ConErroresDetallados_MuestraElMotivo [11 ms]
+  Standard Output Messages:
+ lecturas 0; texto «(sin modelo) Error: Function failed. Exception: No service for type 'System.Collections.Generic.IEnumerable`1[Microsoft.SemanticKernel.KernelPlugin]' has been registered.»
+
+
+  Passed LaKernelFunction_EntregadaTalCualAUnAgenteDeMaf_FallaAlEjecutar [4 ms]
+  Standard Output Messages:
+ ofrecida «Encuesta_resultados_por_medio»; lecturas 0; texto «(sin modelo) Error: Function failed.»
+
+
+
+Test Run Successful.
+Total tests: 18
+     Passed: 18
+ Total time: 9.4215 Seconds
+### RUN
+== Declaración que ve el modelo
+Semantic Kernel: KernelFunctionFromMethod; Name «Encuesta_resultados_por_medio»; JsonSchema {"type":"object","condition":"Cuenta las respuestas de la encuesta de transporte por medio. No devuelve datos de quienes respondieron.","properties":{"localidad":{"description":"Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.","type":"string"}}}
+Agent Framework: ReflectionAIFunction; Name «resultados_por_medio»; JsonSchema {"type":"object","properties":{"localidad":{"description":"Localidad de la encuesta. Opcional: sin localidad, cuenta todas las respuestas.","type":["string","null"],"default":null}}}
+== Invocación directa con {"localidad":"Corrientes"}
+Semantic Kernel: {"localidad":"Corrientes","totalDeRespuestas":2,"porMedio":[{"medio":"colectivo","etiqueta":"Colectivo","respuestas":2},{"medio":"auto","etiqueta":"Auto particular","respuestas":0},{"medio":"bicicleta","etiqueta":"Bicicleta","respuestas":0},{"medio":"moto","etiqueta":"Moto","respuestas":0},{"medio":"caminata","etiqueta":"A pie","respuestas":1},{"medio":"tren","etiqueta":"Tren","respuestas":0}]}
+Agent Framework: {"localidad":"Corrientes","totalDeRespuestas":2,"porMedio":[{"medio":"colectivo","etiqueta":"Colectivo","respuestas":2},{"medio":"auto","etiqueta":"Auto particular","respuestas":0},{"medio":"bicicleta","etiqueta":"Bicicleta","respuestas":0},{"medio":"moto","etiqueta":"Moto","respuestas":0},{"medio":"caminata","etiqueta":"A pie","respuestas":1},{"medio":"tren","etiqueta":"Tren","respuestas":0}]}
+== Agente con cliente guionado: «¿Qué medios usa la gente de Corrientes?»
+ChatCompletionAgent: pidió «Encuesta_resultados_por_medio»; llamadas al cliente 2; resultado recibido como ResultadosPorMedio
+  (sin modelo) {"Localidad":"Corrientes","TotalDeRespuestas":2,"PorMedio":[{"Medio":"colectivo","Etiqueta":"Colectivo","Respuestas":2},{"Medio":"auto","Etiqueta":"Auto particular","Respuestas":0},{"Medio":"bicicleta","Etiqueta":"Bicicleta","Respuestas":0},{"Medio":"moto","Etiqueta":"Moto","Respuestas":0},{"Medio":"caminata","Etiqueta":"A pie","Respuestas":1},{"Medio":"tren","Etiqueta":"Tren","Respuestas":0}],"Error":null}
+AsAIAgent: pidió «resultados_por_medio»; llamadas al cliente 2; resultado recibido como JsonElement
+  (sin modelo) {"localidad": "Corrientes","totalDeRespuestas": 2,"porMedio": [{"medio": "colectivo","etiqueta": "Colectivo","respuestas": 2},{"medio": "auto","etiqueta": "Auto particular","respuestas": 0},{"medio": "bicicleta","etiqueta": "Bicicleta","respuestas": 0},{"medio": "moto","etiqueta": "Moto","respuestas": 0},{"medio": "caminata","etiqueta": "A pie","respuestas": 1},{"medio": "tren","etiqueta": "Tren","respuestas": 0}]}
+salida: 0
+### VULNERABLE
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+The following sources were used:
+   https://api.nuget.org/v3/index.json
+
+The given project `MovilidadUrbana.Ejemplos.AnotacionesPareadas` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests` has no vulnerable packages given the current sources.
+### DEPRECATED
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+The following sources were used:
+   https://api.nuget.org/v3/index.json
+
+The given project `MovilidadUrbana.Ejemplos.AnotacionesPareadas` has no deprecated packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests` has no deprecated packages given the current sources.
+### TEST-LISTA
+SK: texto final «(sin modelo) {"Localidad":"Corrientes","TotalDeRespuestas":2,"PorMedio":[{"Medio":"colectivo","Etiqueta":"Colectivo","Respuestas":2},{"Medio":"auto","Etiqueta":"Auto particular","Respuestas":0},{"Medio":"bicicleta","Etiqueta":"Bicicleta","Respuestas":0},{"Medio":"moto","Etiqueta":"Moto","Respuestas":0},{"Medio":"caminata","Etiqueta":"A pie","Respuestas":1},{"Medio":"tren","Etiqueta":"Tren","Respuestas":0}],"Error":null}»
+  Passed AsAIAgent_EjecutaLaHerramientaUnaVez [558 ms]
+  Passed ChatCompletionAgent_ConElNombreSinPrefijo_NoEjecuta [177 ms]
+  Passed ChatCompletionAgent_EjecutaLaHerramientaUnaVez [86 ms]
+  Passed ChatCompletionAgent_SinUseKernelFunctionInvocation_NoEjecutaNiFalla [10 ms]
+  Passed ElResultadoLlegaAlCliente_ComoObjetoEnSk_YComoJsonEnMaf [8 ms]
+  Passed ApplicationSinTiposDeMarcosDeIA [21 ms]
+  Passed CasoRojo_ElAdaptadorSiNombraElMarco [1 ms]
+  Passed ElEsquemaDeParametros_CoincideEnNombresYDescripciones_NoEnTipos [10 ms]
+  Passed ElNombreQueVeElModelo_LlevaElPrefijoDelPluginEnSemanticKernel [7 ms]
+  Passed LasDosSonAIFunction_ConLaMismaDescripcion [1 ms]
+  Passed ElResultadoNoTraeDatosDeLaPersona [54 ms]
+  Passed MismosArgumentos_MismoResultado("Corrientes") [5 ms]
+  Passed MismosArgumentos_MismoResultado("resistencia") [1 ms]
+  Passed MismosArgumentos_MismoResultado(null) [1 ms]
+  Passed MismosArgumentos_MismoResultado("Goya") [< 1 ms]
+  Passed AIFunctionFactory_NoLeeElNombreDeKernelFunction [10 ms]
+  Passed LaKernelFunction_EnMaf_ConErroresDetallados_MuestraElMotivo [14 ms]
+  Passed LaKernelFunction_EntregadaTalCualAUnAgenteDeMaf_FallaAlEjecutar [4 ms]
+Total tests: 18
+     Passed: 18
+ Total time: 4.3515 Seconds
+LIBERADO build por ex12

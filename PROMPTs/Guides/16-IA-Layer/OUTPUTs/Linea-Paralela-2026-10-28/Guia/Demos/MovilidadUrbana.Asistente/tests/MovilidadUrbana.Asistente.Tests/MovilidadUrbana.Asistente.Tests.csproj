@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Dos suites en un proyecto: Cableado/ corre siempre y sin modelo; ConModelo/ corre por turno contra
+       el servidor Ollama de prueba (OLLAMA_ENDPOINT) y, sin esa variable, queda Inconclusive. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.14" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
+    <PackageReference Include="NUnit" Version="5.0.0" />
+    <PackageReference Include="NUnit.Analyzers" Version="4.15.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MovilidadUrbana.Asistente\MovilidadUrbana.Asistente.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ConModelo/CRITERIO.md" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="ConModelo/oro-ayuda.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="NUnit.Framework" />
+  </ItemGroup>
+
+</Project>

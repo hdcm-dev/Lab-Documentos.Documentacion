@@ -1,0 +1,31 @@
+15-Pruebas-Y-Evaluacion — desvíos y notas de la construcción (2026-10-27)
+
+1. Salidas de 07 congeladas en el ejemplo. El plan (§E.1, fase 3b) dice «el juez de 15 sobre las salidas de 07
+   persistidas en RLLM_DIR». Se congelaron en Examples/15-Pruebas-Y-Evaluacion/entradas/salidas-07.v1.json
+   (SHA-256 en ejemplo.json), armadas con `--congelar-salidas-07` desde Evidencia/R-LLM/07-RAG-Con-Citas.modelo.jsonl
+   (turno 20261027T134714, la corrida válida). Motivo: condición (iii) de §E.1 (congelar con SHA antes de la
+   corrida que cuenta) y que un lector pueda correr 15 sin haber corrido 07. El contenido es el mismo del registro.
+2. Anotador: «anotado por el agente constructor, no por una persona» (el PO no anotó). §10.6 no lo llama
+   calibración humana.
+3. Regla de acuerdo fijada antes de juzgar (no la fija el plan en detalle): umbral «alta» = puntaje ≥ 4; en la
+   calibración se anota por métrica (fundamentada ↔ Groundedness, relevante ↔ Relevance) y el caso acierta si
+   coinciden las dos; en las 16, «las dos altas» se compara con el oráculo rag-con-citas de 07. c08 («sin cita»)
+   se anota «fundamentada»: el juez no mide citas; la falta de cita la detecta el determinista.
+4. Paquetes extra: Microsoft.Extensions.VectorData.Abstractions y CommunityToolkit.VectorData.InMemory, porque
+   IndiceDeAyuda.cs de 07 (enlazado para no copiar el oráculo) define Recuperacion junto al almacén.
+5. Caché del reporte: un reporte nuevo por corrida (RLLM_DIR/evaluacion-15/<ejecución>), para que toda entrada
+   que cuenta tenga sus llamadas en el registro; `--reporte <carpeta>` reusa la caché (lo prueba
+   Reporte_SegundaCorrida_SaleDeLaCache_SinLlamarAlJuez) y esas entradas quedan excluidas con motivo «caché del
+   reporte». Un reporte por evaluador y por grupo (cachingKeys), porque c01–c05 son idénticas a sus salidas de 07.
+6. AC-8: dos líneas del registro con modelo (s07-n04, llamadas 1 y 2) contienen un término del patrón (a) de AC-8: el juez traduce
+   «boleto del tren» (pregunta n04 del oro, Movilidad Urbana) al inglés. Es salida del modelo y no se edita: se
+   agregaron dos excepciones en Compuertas/rd-po-4.excepciones con ese motivo. Con ellas AC-8 da rc 0.
+   (El registro se copió a Evidencia/R-LLM y la compuerta se corrió sobre la copia; ver compuertas.log.)
+7. Resultado: 0/52 salidas interpretables (el 0,5B no escribe <S2>…</S2>); juez no calibrado, puntajes no
+   interpretados; conclusión sólo en los deterministas (lo previsto por el plan §E.2 y §10.6).
+8. Ollama propio: 534 s de turno (fase 3b) frente a un pesimista de 3.120 s (§E.5). Más una llamada de la prueba
+   Category=LLM con su propio turno (prueba-llm.log). Sin <recurso-compartido>.
+9. La última compilación (renombre cosmético de un elemento de tupla en CongeladorDeSalidas.cs, que caía en el patrón (b) de AC-8) es
+   posterior a la corrida con modelo; build -warnaserror, 25/25 pruebas y --fake --verificar se volvieron a
+   correr después (build-pruebas-y-fake.log). En ese log el «rc=» es el de `tail`; el rc 0 de la consola sale
+   de correr-fake-verificar.log (verificar.sh correr).

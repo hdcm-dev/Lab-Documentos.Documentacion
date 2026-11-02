@@ -1,0 +1,9 @@
+{
+  "AllowedHosts": "localhost;127.0.0.1",
+  "Mcp": {
+    "Ruta": "/mcp",
+    "Urls": [ "http://127.0.0.1:5288" ],
+    "OrigenesPermitidos": []
+  },
+  "Logging": { "LogLevel": { "Default": "Warning" } }
+}

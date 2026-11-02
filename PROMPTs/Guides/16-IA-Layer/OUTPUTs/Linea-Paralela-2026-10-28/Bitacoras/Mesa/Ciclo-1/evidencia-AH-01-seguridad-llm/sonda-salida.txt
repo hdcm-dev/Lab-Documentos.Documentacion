@@ -1,0 +1,60 @@
+# Corrida: 2026-10-28T09:55:10-03:00 en estación 1
+## 1. Rutas del home por archivo (conteo)
+./Crear-IA-Layer-Guide-Reedicion.md:1
+./Reanudar.md:3
+./Bitacoras/Mesa/Ciclo-1/00-Convocatoria.md:7
+./Bitacoras/Sondeo-Entorno.md:2
+./Bitacoras/00-Contrato-De-Entrada.md:1
+./Bitacoras/Nucleos/N0b-Producto-Datos-Y-Perfil.md:3
+./Bitacoras/Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:3
+./Bitacoras/Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:2
+./Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md:4
+## 2. IPs privadas o de tailnet (RFC 1918 y <rango-cgnat>), enmascaradas
+./Reanudar.md:60:<ip-tailnet>
+./Bitacoras/Mesa/Ciclo-1/00-Convocatoria.md:287:<ip-tailnet>
+./Bitacoras/Mesa/Ciclo-1/00-Convocatoria.md:325:<ip-tailnet>
+./Bitacoras/Mesa/Ciclo-1/00-Convocatoria.md:397:<ip-tailnet>
+./Bitacoras/Mesa/Ciclo-1/00-Convocatoria.md:430:<ip-tailnet>
+./Bitacoras/Nucleos/N5-Operacion-Calidad-Seguridad.md:186:10.11.x.x
+./Bitacoras/Nucleos/N5-Operacion-Calidad-Seguridad.md:186:10.11.x.x
+## 3. Usuario@host en comandos (enmascarado)
+./Reanudar.md:60:<usuario>@{enmascarado}
+./Bitacoras/Nucleos/N3-Evidencia/salidas.md:66:recall@{enmascarado}
+./Bitacoras/Nucleos/N3-Evidencia/salidas.md:66:recall@{enmascarado}
+./Bitacoras/Nucleos/N3-Evidencia/salidas.md:68:recall@{enmascarado}
+./Bitacoras/Nucleos/N3-Evidencia/salidas.md:68:recall@{enmascarado}
+./Bitacoras/Nucleos/N3-Evidencia/salidas.md:69:recall@{enmascarado}
+./Bitacoras/Nucleos/N3-Evidencia/salidas.md:69:recall@{enmascarado}
+./Bitacoras/Nucleos/N2-Abstracciones-Y-Proveedores-NET.md:488:emplates@{enmascarado}
+./Bitacoras/Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:356:mermaid@{enmascarado}
+## 4. Hostnames del laboratorio en los núcleos y en BIT-16-04 (conteo por archivo)
+Bitacoras/Nucleos/N0b-Producto-Datos-Y-Perfil.md 20
+Bitacoras/Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md 10
+Bitacoras/Nucleos/N1-Capa-IA-En-El-Stack.md 10
+Bitacoras/Nucleos/N2-Abstracciones-Y-Proveedores-NET.md 12
+Bitacoras/Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md 19
+Bitacoras/Nucleos/N3-RAG-En-NET.md 23
+Bitacoras/Nucleos/N4-Agentes-Y-Orquestacion.md 9
+Bitacoras/Nucleos/N5-Operacion-Calidad-Seguridad.md 12
+Bitacoras/Nucleos/N6-Caso-Movilidad-Urbana.md 10
+Bitacoras/04-Integracion.md 23
+## 5. Hostname dentro del diagrama de BIT-16-04 §6.2
+274:  OLL[("Ollama propio en contenedor (estación 1)<br/>OLLAMA_ENDPOINT · OLLAMA_MODEL · OLLAMA_EMBEDDING_MODEL<br/>num_ctx explícito")]
+## 6. Puerto 11434: anfitriones con que aparece
+      3 127.0.0.1:11434
+     34 localhost:11434
+      1 <puerto>:11434
+## 7. Aprobación cableada en true (N4 §4.3)
+Bitacoras/Nucleos/N4-Agentes-Y-Orquestacion.md:307:    bool aprobado = /* decisión de la persona */ true;
+## 8. Cliente MCP con npx -y sin versión (N4 §4.6)
+Bitacoras/Nucleos/N4-Agentes-Y-Orquestacion.md:396:    Name = "Everything", Command = "npx", Arguments = ["-y", "@modelcontextprotocol/server-everything"],
+## 9. Menciones de OWASP/inyección en N4
+0
+## 10. Controles de MCP o de salida hacia la UI en M1–M12 (BIT-16-04 §6.3)
+0
+## 11. Contexto RAG concatenado sin marcar (N6 §4.3)
+254:    contexto.AppendLine($"[{hit.Record.Fuente}] {hit.Record.Texto}");   // la Fuente habilita la cita
+
+## 12. Visibilidad del repo (API de GitHub)
+  "private": false,
+  "visibility": "public",

@@ -1,0 +1,21 @@
+| Evaluador | N | tok entrada (med) | tok salida (med) | pared estación 2 s (med; rango) | modelo estación 2 s (med) | estación 1 estimado s (med, central) | estación 1 rango s |
+|---|---|---|---|---|---|---|---|
+| Relevance | 4 | 992 | 391 | 36.1; 34.3–38.1 | 41.4 | 105 | 72–135 |
+| Coherence | 4 | 1336 | 494 | 43.0; 40.8–51.5 | 53.2 | 137 | 105–172 |
+| Fluency | 4 | 970 | 332 | 31.9; 26.9–42.5 | 36.4 | 96 | 71–140 |
+| Groundedness | 4 | 1276 | 336 | 33.6; 26.4–40.4 | 39.5 | 113 | 84–161 |
+| Retrieval | 4 | 3606 | 470 | 44.7; 41.4–69.5 | 72.0 | 253 | 206–340 |
+| Completeness | 4 | 1408 | 364 | 36.1; 28.4–36.8 | 43.1 | 123 | 93–164 |
+| Equivalence | 4 | 896 | 2 | 5.0; 4.3–8.0 | 8.4 | 47 | 41–69 |
+
+Total medido estación 2, 28 llamadas: 950.4 s; media 33.9 s por evaluación.
+estación 1 central (lectura 19.0, gen 7.4): 3518 s = 58.6 min; media 126 s por evaluación
+estación 1 optimista (lectura 21.9, gen 10.7): 2822 s = 47.0 min; media 101 s por evaluación
+estación 1 pesimista (lectura 13.2, gen 7.4): 4489 s = 74.8 min; media 160 s por evaluación
+Ajuste del modelo en estación 2: suma estimada 1187 s frente a 950 s medidos.
+
+Media por evaluación (Relevance, Groundedness, Completeness): estación 2 34.7 s medido; estación 1 114 s estimado
+10 casos x 2 adaptadores x 3 evaluadores x N=1: 60 evaluaciones -> estación 2 35 min; estación 1 114 min (2.5 turnos de 45 min)
+10 casos x 2 adaptadores x 3 evaluadores x N=3: 180 evaluaciones -> estación 2 104 min; estación 1 342 min (7.6 turnos de 45 min)
+20 casos x 2 adaptadores x 3 evaluadores x N=1: 120 evaluaciones -> estación 2 69 min; estación 1 228 min (5.1 turnos de 45 min)
+20 casos x 2 adaptadores x 3 evaluadores x N=3: 360 evaluaciones -> estación 2 208 min; estación 1 683 min (15.2 turnos de 45 min)

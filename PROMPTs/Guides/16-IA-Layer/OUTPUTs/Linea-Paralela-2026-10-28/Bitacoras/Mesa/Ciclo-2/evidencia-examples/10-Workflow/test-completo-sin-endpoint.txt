@@ -1,0 +1,98 @@
+$ dotnet test 10-Workflow.slnx --logger "console;verbosity=normal"   (sin OLLAMA_ENDPOINT)
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MovilidadUrbana.Ejemplos.Orquestacion -> /ex/src/MovilidadUrbana.Ejemplos.Orquestacion/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.dll
+  MovilidadUrbana.Ejemplos.Orquestacion.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running all tests in /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll
+   NUnit3TestExecutor discovered 29 of 29 NUnit test cases using Current Discovery mode, Non-Explicit run
+executors: paso-1, paso-2, paso-3, rechazo, registro; aristas: 6; tipos: ValidarPasoExecutor, FunctionExecutor`2
+
+completa: función → registrada; grafo → registrada; 4 supersteps: paso-1 > paso-2 > paso-3 > registro
+
+falla el paso 1 (edad 15): función → detenida en el paso 1: edad; grafo → detenida en el paso 1: edad; 2 supersteps: paso-1 > rechazo
+
+falla el paso 2 (sin medios): función → detenida en el paso 2: medios; grafo → detenida en el paso 2: medios; 3 supersteps: paso-1 > paso-2 > rechazo
+
+falla el paso 3 (0 minutos): función → detenida en el paso 3: minutos; grafo → detenida en el paso 3: minutos; 4 supersteps: paso-1 > paso-2 > paso-3 > rechazo
+
+tipos de Application revisados: 17; referencias a la capa de IA: 0
+
+archivos .cs revisados: 29; literales fuera de opciones: 0
+
+  Passed ElGrafoSumaPiezasYNingunaEsUnAgente [771 ms]
+  Passed FuncionYWorkflowDeMafDanLoMismo(completa) [557 ms]
+  Passed FuncionYWorkflowDeMafDanLoMismo(falla el paso 1 (edad 15)) [9 ms]
+  Passed FuncionYWorkflowDeMafDanLoMismo(falla el paso 2 (sin medios)) [10 ms]
+  Passed FuncionYWorkflowDeMafDanLoMismo(falla el paso 3 (0 minutos)) [18 ms]
+  Passed ApplicationNoConoceLaCapaDeIA [28 ms]
+  Passed ElPatronDetectaUnLiteral("IChatClient c = new OllamaApiClient(new Uri(\"http://localhost:11434\"), \"qwen3.5:4b\");") [9 ms]
+  Passed ElPatronDetectaUnLiteral("http.Timeout = TimeSpan.FromSeconds(300);") [< 1 ms]
+  Passed NingunLiteralDeConfiguracionFueraDeOpciones [46 ms]
+corrida 1: [extractor] Goya; Corrientes; 3450; 89959 | [redactor] Se va a agregar Goya (Corrientes). ¿Confirmás?
+corrida 2: [extractor] Goya; Corrientes; 3450; 89959 | [redactor] Se va a agregar Goya (Corrientes). ¿Confirmás?
+tipo: WorkflowHostAgent; llamadas: extractor > redactor > extractor > redactor; mensajes que recibió cada una: 1, 2, 1, 2
+
+declarado: salida=localidad: Goya; error=(ninguno)
+
+sin declarar: salida=(ninguna); error=InvalidOperationException: Cannot output object of type String. Expecting one of [].
+
+  Passed ComoAgente_EsUnAIAgent_YElOrdenEsElDelGrafo [1 s]
+  Passed InvertirElCodigo_InvierteElOrden [10 ms]
+  Passed ConYieldDeclarado_Funciona [24 ms]
+  Passed SinDeclararYield_CompilaYFallaAlEjecutar [19 ms]
+primera: pasos extraer > revisar > confirmar-alta; estado PendingRequests; checkpoint cdd4a12671af4d10960a0fe7e7d7e0a5
+segunda: pasos confirmar-alta > registrar; pedidos 1; resultado Registrada: Se agregó la localidad Goya.; estado Idle
+
+pasos: extraer > revisar > confirmar-alta > registrar; resultado: Rechazada: Revise los campos marcados en rojo. [nombre: Ya existe una localidad con ese nombre en la provincia.]; estado: Idle; escrituras: 0
+
+pasos: extraer > revisar > confirmar-alta > registrar; resultado: Registrada: Se agregó la localidad Goya.; estado: Idle; escrituras: 1
+pasos: extraer > revisar > confirmar-alta > registrar; resultado: Registrada: Se agregó la localidad Bella Vista.; estado: Idle; escrituras: 1
+
+Falló el executor extraer. ← EntradaDemasiadoLargaException: El texto tiene 2001 caracteres y el máximo es 2000.
+
+pasos: extraer > revisar > rechazo; resultado: Rechazada: La propuesta no pasó la revisión; no se guardó nada. [propuesta: El modelo no devolvió una propuesta con la forma pedida.]; estado: Idle; escrituras: 0
+
+pasos: extraer > revisar > confirmar-alta > registrar; resultado: Registrada: Se agregó la localidad Goya.; estado: Idle; escrituras: 1
+
+pasos: extraer > revisar > confirmar-alta > registrar; resultado: Descartada: La persona no confirmó; no se guardó nada.; estado: Idle; escrituras: 0
+
+pasos: extraer > revisar > rechazo; resultado: Rechazada: La propuesta no pasó la revisión; no se guardó nada. [nombre: Entre 3 y 60 caracteres.]; estado: Idle; escrituras: 0
+
+pasos: extraer > revisar > rechazo; resultado: Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).]; estado: Idle; escrituras: 0
+
+  Passed CheckpointConPedidoPendiente_SeReanudaEnOtraCorrida_SinVolverALlamarAlModelo [362 ms]
+  Passed ElCasoDeUsoTieneLaUltimaPalabra_DuplicadaConfirmadaNoSeGuarda [49 ms]
+  Passed ElOrdenLoFijaElCodigo_ElModeloNoRecibeHerramientas [27 ms]
+  Passed EntradaDemasiadoLarga_0LlamadasAlModelo_0Escrituras [13 ms]
+  Passed JsonMalformado_SeRechazaSinEscribir [20 ms]
+  Passed LaPersonaDecide(True,Registrada,1) [26 ms]
+  Passed LaPersonaDecide(False,Descartada,0) [24 ms]
+  Passed NombreDe61Caracteres_SeRechaza_AunqueLaReglaCopiadaLoAcepta [11 ms]
+  Passed PropuestaInvalida_SeRechazaAntesDeLaPersona_0Escrituras("Goya","Corrientes","34",89959,"codigoPostal") [16 ms]
+pasos: extraer > revisar > rechazo; resultado: Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).]; estado: Idle; escrituras: 0
+
+pasos: extraer > revisar > rechazo; resultado: Rechazada: La propuesta no pasó la revisión; no se guardó nada. [provincia: No es una provincia del catálogo.]; estado: Idle; escrituras: 0
+
+pasos: extraer > revisar > rechazo; resultado: Rechazada: La propuesta no pasó la revisión; no se guardó nada. [habitantes: Falta la cantidad de habitantes o no es mayor a cero.]; estado: Idle; escrituras: 0
+
+pasos: extraer > revisar > rechazo; resultado: Rechazada: La propuesta no pasó la revisión; no se guardó nada. [nombre: Entre 3 y 60 caracteres.]; estado: Idle; escrituras: 0
+
+pasos: extraer > revisar > confirmar-alta; resultado: ; estado: PendingRequests; escrituras: 0
+
+Secuencial_ConElModelo: ConModelo: no medido (falta OLLAMA_ENDPOINT).
+WorkflowDeAlta_ConElModelo: ConModelo: no medido (falta OLLAMA_ENDPOINT).
+  Passed PropuestaInvalida_SeRechazaAntesDeLaPersona_0Escrituras("Goya","Corrientes","٣٤٥٠",89959,"codigoPostal") [16 ms]
+  Passed PropuestaInvalida_SeRechazaAntesDeLaPersona_0Escrituras("Goya","Misiones","3450",89959,"provincia") [7 ms]
+  Passed PropuestaInvalida_SeRechazaAntesDeLaPersona_0Escrituras("Goya","Corrientes","3450",null,"habitantes") [10 ms]
+  Passed PropuestaInvalida_SeRechazaAntesDeLaPersona_0Escrituras("G","Corrientes","3450",89959,"nombre") [9 ms]
+  Passed SinRespuestaDeLaPersona_LaCorridaQuedaPendiente_0Escrituras [25 ms]
+  Skipped Secuencial_ConElModelo [87 ms]
+  Skipped WorkflowDeAlta_ConElModelo [7 ms]
+
+Test Run Successful.
+Total tests: 27
+     Passed: 27
+ Total time: 6.8886 Seconds

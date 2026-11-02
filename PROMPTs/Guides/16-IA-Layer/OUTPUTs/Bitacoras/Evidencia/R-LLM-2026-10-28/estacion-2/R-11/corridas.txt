@@ -1,0 +1,10 @@
+s01 rc=0 20s
+s02 rc=0 12s
+s03 rc=0 13s
+s04 rc=0 11s
+s05 rc=0 12s
+s06 rc=0 12s
+s07 rc=0 11s
+s08 rc=0 12s
+s09 rc=0 13s
+s10 rc=0 14s

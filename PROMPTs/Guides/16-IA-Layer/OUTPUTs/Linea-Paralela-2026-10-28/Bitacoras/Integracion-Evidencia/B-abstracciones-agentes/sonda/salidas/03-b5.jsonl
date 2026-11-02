@@ -1,0 +1,10 @@
+{"paso": "b5-inicio", "modelo": "qwen3-embedding:0.6b", "dimension": 1024, "fecha": "2026-10-28T09:22:36-0300"}
+{"paso": "b5", "consulta": "voy caminando", "esperado": "caminata", "top1": "bicicleta", "score1": 0.663, "top2": "moto", "score2": 0.66, "margen": 0.003, "acierto": false}
+{"paso": "b5", "consulta": "a pata", "esperado": "caminata", "top1": "caminata", "score1": 0.622, "top2": "moto", "score2": 0.601, "margen": 0.021, "acierto": true}
+{"paso": "b5", "consulta": "me tomo el bondi", "esperado": "colectivo", "top1": "moto", "score1": 0.544, "top2": "colectivo", "score2": 0.524, "margen": 0.02, "acierto": false}
+{"paso": "b5", "consulta": "en la bici", "esperado": "bicicleta", "top1": "bicicleta", "score1": 0.748, "top2": "moto", "score2": 0.717, "margen": 0.031, "acierto": true}
+{"paso": "b5", "consulta": "en mi coche", "esperado": "auto", "top1": "moto", "score1": 0.667, "top2": "auto", "score2": 0.658, "margen": 0.009, "acierto": false}
+{"paso": "b5", "consulta": "en el ferrocarril", "esperado": "tren", "top1": "tren", "score1": 0.788, "top2": "colectivo", "score2": 0.713, "margen": 0.075, "acierto": true}
+{"paso": "b5", "consulta": "en la moto de mi hermano", "esperado": "moto", "top1": "moto", "score1": 0.726, "top2": "caminata", "score2": 0.628, "margen": 0.098, "acierto": true}
+{"paso": "b5", "consulta": "en avión", "esperado": null, "top1": "moto", "score1": 0.641, "top2": "auto", "score2": 0.6, "margen": 0.041, "acierto": null}
+{"paso": "b5-fin", "aciertos": 4, "con_clave_esperada": 7, "pared_s": 0.95}

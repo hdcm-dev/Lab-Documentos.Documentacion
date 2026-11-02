@@ -1,0 +1,3 @@
+precomputar rc=0 4s
+verificar rc=0 96s
+estabilidad rc=0 9s

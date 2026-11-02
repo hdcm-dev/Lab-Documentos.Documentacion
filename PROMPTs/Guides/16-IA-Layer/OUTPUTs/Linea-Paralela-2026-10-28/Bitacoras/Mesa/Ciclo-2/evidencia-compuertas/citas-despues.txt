@@ -1,0 +1,3 @@
+== rutas citadas que no existen
+rutas citadas: 214; inexistentes: 0; rangos verificados: 17; fuera de archivo: 0
+== directorios de primer nivel bajo cada ejemplo no citados

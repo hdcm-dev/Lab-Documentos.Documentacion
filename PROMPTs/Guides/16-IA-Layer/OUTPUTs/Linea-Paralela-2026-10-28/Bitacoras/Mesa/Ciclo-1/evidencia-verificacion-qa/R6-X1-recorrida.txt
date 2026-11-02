@@ -1,0 +1,11 @@
+# R6 — re-corrida de X1 (sin modelo), recurso build, SDK 10.0.403 (anfitrión estación 1), 2026-10-28; salida idéntica a X1-sonda-otel-t1-salida.txt líneas [A]/[B]
+CONCEDIDO build a verificacion-qa hasta 2026-10-28T10:16:49-0300 (renová con: <gestor-de-turnos> renovar build verificacion-qa)
+[A] sourceName=(por defecto) -> ActivitySource=Experimental.Microsoft.Extensions.AI Meter=Experimental.Microsoft.Extensions.AI
+[A] sourceName=MovilidadUrbana.AI -> ActivitySource=MovilidadUrbana.AI Meter=Experimental.Microsoft.Extensions.AI,MovilidadUrbana.AI
+[A] SDK AddSource("Experimental.Microsoft.Extensions.AI") + cliente sourceName="MovilidadUrbana.AI" -> spans exportados: 0
+[A] SDK AddSource("MovilidadUrbana.AI") + cliente sourceName="MovilidadUrbana.AI" -> spans exportados: 1
+[B] AddChatClient Singleton, scope sesion-A -> herramienta vio: InvalidOperationException: Cannot resolve scoped service 'SessionContext' from root provider
+[B] AddChatClient Singleton, scope sesion-B -> herramienta vio: InvalidOperationException: Cannot resolve scoped service 'SessionContext' from root provider
+[B] AddChatClient Scoped, scope sesion-A -> herramienta vio: SessionId=sesion-A
+[B] AddChatClient Scoped, scope sesion-B -> herramienta vio: SessionId=sesion-B
+LIBERADO build por verificacion-qa

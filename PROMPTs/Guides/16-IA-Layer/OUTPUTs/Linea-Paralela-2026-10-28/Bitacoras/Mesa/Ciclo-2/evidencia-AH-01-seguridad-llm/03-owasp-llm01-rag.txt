@@ -1,0 +1,13 @@
+# OWASP GenAI LLM01:2025 Prompt Injection — consulta 2026-10-28
+URL: https://genai.owasp.org/llmrisk/llm01-prompt-injection/
+Texto de la fuente (cita literal obtenida en la consulta):
+  "...research shows that they [RAG and fine-tuning] do not fully mitigate prompt injection vulnerabilities."
+Encabezados de mitigación: Constrain model behavior; Define and validate expected output formats;
+Implement input and output filtering; Enforce privilege control and least privilege access;
+Require human approval for high-risk actions; Segregate and identify external content;
+Conduct adversarial testing and attack simulations.
+Lo que dice la guía (grep 'mitiga'):
+1358:**Contenido externo.** Todo texto que entra al prompt y no escribió la aplicación (un fragmento, el resultado de una herramienta). Puede traer instrucciones; marcarlo como dato (CTRL-14) le pide al modelo que no lo obedezca y evita que rompa el formato. No es una defensa suficiente: OWASP describe la inyección indirecta y aclara que RAG no la mitiga [REF-046]. La garantía es que el modelo no tenga herramientas que escriban (§8).
+2664:- **Qué no es.** No se resuelve con un mensaje de sistema más firme. OWASP plantea defensa en capas: privilegio mínimo, validación en código, aprobación humana y segregar el contenido externo [REF-046]; *spotlighting* es una técnica de marcado de ese contenido [REF-122]. Que RAG «no mitiga» la inyección también lo dice OWASP [REF-046].
+2692:Un control entra a la lista mínima si mitiga un daño que se observó en este entorno o un daño sobre datos personales, **y** si se implementa en la demo con poco código propio (la cota es de unas 40 líneas, elegida, no medida). Un control de daño grave que cuesta más no se descarta en silencio: va a la lista de CTX-PROD con su motivo. Cada fila dice dónde se prueba; toda prueba nombrada está en verde en la corrida del 2026-10-28 (69 de 69 en `Cableado/` de la demo; las cifras de los ejemplos están en cada subsección).
+3815:| REF-046 | OWASP GenAI, «LLM01:2025 Prompt Injection» (inyección indirecta; RAG no la mitiga) | <https://genai.owasp.org/llmrisk/llm01-prompt-injection/> | 2025 | consulta 2026-10-25 |

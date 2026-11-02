@@ -1,0 +1,39 @@
+# Ollama, OpenAI compatibility — https://docs.ollama.com/api/openai-compatibility — consultado 2026-10-28T12:05-03:00 (curl + extracción de texto). Sección /v1/chat/completions, «Supported request fields» (literal, una entrada por línea):
+Supported request fields
+model
+messages
+Text 
+content
+Image 
+content
+Base64 encoded image
+Image URL
+Array of 
+content
+ parts
+frequency_penalty
+presence_penalty
+response_format
+seed
+stop
+stream
+stream_options
+include_usage
+temperature
+top_p
+max_tokens
+tools
+reasoning_effort
+ (model-defined names and compatibility aliases)
+reasoning
+effort
+ (model-defined names and compatibility aliases)
+tool_choice
+logit_bias
+user
+n
+reasoning_effort
+ and 
+reasoning.effort
+ control model thinking. Use 
+/api/show

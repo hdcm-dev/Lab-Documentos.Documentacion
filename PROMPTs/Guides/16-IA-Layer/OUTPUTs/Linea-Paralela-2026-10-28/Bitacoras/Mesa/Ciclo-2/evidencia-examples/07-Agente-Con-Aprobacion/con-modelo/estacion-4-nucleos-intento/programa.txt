@@ -1,0 +1,43 @@
+# R-LLM — estimando: existencia, 1 corrida, sin semilla, estación: estación de laboratorio de 4 núcleos, fecha 2026-10-28T15:46:22-03:00
+# Ollama {"version":"0.40.11"}
+# modelo@digest: ['qwen3.5:4b@d8b0f5e9760c']
+# parámetros: appsettings.json + appsettings.Development.json (T 0.7, top_p 0.8, top_k 20, min_p 0, presence 1.5, repeat 1.0, think false, num_ctx 8192, iteraciones 3, sin semilla), /api/chat (OllamaSharp 5.5.0), MAF 1.26.0
+# comando: dotnet run --project src/MovilidadUrbana.Ejemplos.AgenteConAprobacion -c Release --no-build -- --aprobar s
+Modelo: qwen3.5:4b; num_ctx: 8192
+
+== 4.1 Llamada única con una herramienta
+> ¿Cuántas localidades hay en Chaco?
+Unhandled exception. System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 300 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: Operation canceled.
+ ---> System.Net.Sockets.SocketException (125): Operation canceled
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|118_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at OllamaSharp.OllamaApiClient.SendToOllamaAsync(HttpRequestMessage requestMessage, OllamaRequest ollamaRequest, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+MoveNext()
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.OllamaApiClient.Microsoft.Extensions.AI.IChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at Microsoft.Extensions.AI.FunctionInvokingChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at MovilidadUrbana.Ejemplos.AgenteConAprobacion.Infrastructure.AI.DelChatAlAgente.LlamadaUnica.PreguntarAsync(IChatClient chat, HerramientasDeLocalidades herramientas, ChatOptions opciones, String pregunta, CancellationToken ct) in /work/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Infrastructure/AI/DelChatAlAgente/LlamadaUnica.cs:line 13
+   at Program.<Main>$(String[] args) in /work/src/MovilidadUrbana.Ejemplos.AgenteConAprobacion/Program.cs:line 48
+   at Program.<Main>(String[] args)
+# código de salida: 134
+# pared total: 308 s

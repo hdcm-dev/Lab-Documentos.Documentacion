@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+W={dir-de-trabajo}/verificacion-qa-c2
+cd $W
+run(){ d=$1; shift; echo "=== $d $(date -Is)"; docker run --rm -v "$W/$d":/ex -v <volumen-nuget>:/root/.nuget/packages -w /ex mcr.microsoft.com/dotnet/sdk:10.0 bash -c "$*" 2>&1 | tail -40; echo "rc=${PIPESTATUS[0]}"; }
+run 10-Workflow "dotnet --version && dotnet build 10-Workflow.slnx 2>&1 | grep -E 'Warn|warn|error|Build succeeded|Compilación|correcta|Advertencia|Error' | tail -8 && dotnet test 10-Workflow.slnx --filter TestCategory=Cableado"
+run 06-Tool-Calling "dotnet build 06-Tool-Calling.slnx 2>&1 | grep -E 'Warn|warn|error|Build succeeded|Advertencia|Error' | tail -8 && dotnet test 06-Tool-Calling.slnx --filter TestCategory=Cableado"
+run 02-Streaming "dotnet build tests/MovilidadUrbana.Streaming.Tests -c Release 2>&1 | grep -E 'Warn|warn|error|Build succeeded|Advertencia|Error' | tail -8 && dotnet test tests/MovilidadUrbana.Streaming.Tests -c Release --no-build --filter TestCategory=Cableado"
+run MovilidadUrbana.Asistente "dotnet build MovilidadUrbana.Asistente.slnx 2>&1 | grep -E 'Warn|warn|error|Build succeeded|Advertencia|Error' | tail -8 && dotnet test MovilidadUrbana.Asistente.slnx --filter 'FullyQualifiedName~Cableado'"

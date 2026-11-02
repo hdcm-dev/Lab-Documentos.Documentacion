@@ -1,0 +1,79 @@
+{
+  "scenarioName": "s07-r05",
+  "iterationName": "Equivalence",
+  "executionName": "juez-20261030T014355",
+  "creationTime": "2026-10-30T02:32:36.1754132Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "\u00BFCu\u00E1ntas letras tiene que tener como m\u00EDnimo un nombre?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Un nombre debe tener al menos tres caracteres, ya sea para una encuesta o para una localidad [Fuente: EncuestaPolicy.RequisitoDelNombre]."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Equivalence": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Equivalence",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Equivalence)": {
+            "name": "Ground Truth (Equivalence)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Encuesta \u00B7 requisito del nombre: Al menos 3 caracteres.\nLocalidad \u00B7 requisito del nombre: Entre 3 y 60 caracteres, \u00FAnico por provincia."
+              }
+            ]
+          }
+        },
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "qwen3.5:4b",
+          "eval-input-tokens": "933",
+          "eval-output-tokens": "2",
+          "eval-total-tokens": "935",
+          "eval-duration-ms": "10825.87"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 10.8256949,
+        "model": "qwen3.5:4b",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 933,
+          "outputTokenCount": 2,
+          "totalTokenCount": 935
+        },
+        "cacheKey": "9717035F21070B96180E1C8D4F67A85A3D5AB3AD12E58960719BBAAB1DBF526E0648A49395CF31800D7566FA42E0AFE9",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

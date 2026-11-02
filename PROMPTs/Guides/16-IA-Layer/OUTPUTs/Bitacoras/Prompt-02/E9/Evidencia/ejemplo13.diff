@@ -1,0 +1,48 @@
+--- ej13/README.md	2026-11-01 21:15:34.170266273 -0300
++++ Examples/13-Servidor-Y-Cliente-MCP/README.md	2026-11-01 21:15:34.178266358 -0300
+@@ -11,11 +11,11 @@
+ 1. **Sólo lecturas.** Publica una herramienta, `listar_localidades` (`[McpServerToolType]` / `[McpServerTool]`, con `ReadOnly = true`), sobre `LocalidadService` de `_Comun`. Devuelve id, nombre y provincia.
+ 2. **Sesión fija `demo-mcp`, puesta por el código.** Ninguna firma recibe un id de sesión, así que quien llama por MCP no puede pedir otra. La base tiene además una sesión que hace de «sesión de la API», con Goya, y por MCP Goya no aparece nunca (H-014).
+ 3. **Sólo loopback.** Kestrel escucha en `IPAddress.Loopback`, en un puerto que elige el sistema. `MapMcp("/mcp")` usa el transporte HTTP en modo `Stateless`.
+-4. **Host y `Origin`.** `AllowedHosts` admite sólo `localhost`, `127.0.0.1` y `[::1]`: con otro `Host`, `HostFiltering` responde 400. Un filtro responde 403 a todo `Origin` que no sea loopback (`null` incluido), porque la especificación MCP 2025-06-18 (Transports) obliga al servidor a validar `Origin`. Un pedido sin `Origin`, de un cliente que no es navegador, pasa.
++4. **Host y `Origin`.** `AllowedHosts` admite sólo `localhost`, `127.0.0.1` y `[::1]`: con otro `Host`, `HostFiltering` responde 400. Un filtro responde 403 a todo `Origin` que no sea loopback (`null` incluido), porque la especificación MCP 2026-07-28 (Streamable HTTP) obliga al servidor a validar `Origin`. Un pedido sin `Origin`, de un cliente que no es navegador, pasa.
+ 
+ **Ninguna de las tres cosas es control de acceso.** El servidor no autentica a nadie: cualquier proceso de la máquina lo puede usar. Lo que lo hace aceptable es que sólo publica una lectura, y en una sesión de demostración (H-013).
+ 
+-**Cliente** (`Infrastructure/AI/ClienteMcp.cs`): `McpClient.ListToolsAsync` devuelve `McpClientTool`, que ya es un `AIFunction` y se puede poner tal cual en `ChatOptions.Tools`. Pero todo lo que manda el servidor es **no confiable** (MCP 2025-06-18, Tools): los nombres, las descripciones, las anotaciones y, después, los resultados. Por eso:
++**Cliente** (`Infrastructure/AI/ClienteMcp.cs`): `McpClient.ListToolsAsync` devuelve `McpClientTool`, que ya es un `AIFunction` y se puede poner tal cual en `ChatOptions.Tools`. Pero todo lo que manda el servidor es **no confiable** (MCP 2026-07-28, Tools): los nombres, las descripciones, las anotaciones y, después, los resultados. Por eso:
+ 
+ - el cliente monta **sólo** lo que está en su lista permitida por nombre (`listar_localidades`) y descarta el resto;
+ - la descripción que ve el modelo es la que escribe el cliente (`WithDescription`), no la que mandó el servidor, en las lecturas y también en las escrituras;
+--- ej13/ClienteMcp.cs	2026-11-01 21:15:34.170266273 -0300
++++ Examples/13-Servidor-Y-Cliente-MCP/Infrastructure/AI/ClienteMcp.cs	2026-11-01 21:15:34.174266315 -0300
+@@ -1,6 +1,6 @@
+ // Nuevo: el lado cliente del ejemplo 13 (§8.9). McpClient.ListToolsAsync devuelve McpClientTool, que
+ // ya es AIFunction: se puede poner tal cual en ChatOptions.Tools. Pero lo que anuncia el servidor
+-// (nombres, descripciones, anotaciones y, después, resultados) es NO CONFIABLE (MCP 2025-06-18,
++// (nombres, descripciones, anotaciones y, después, resultados) es NO CONFIABLE (MCP 2026-07-28,
+ // Tools). Por eso el cliente monta sólo lo que está en SU lista permitida por nombre, con SU
+ // descripción, y descarta el resto. Las anotaciones del servidor (ReadOnly, Destructive) no deciden
+ // nada: un servidor puede mentir en ellas.
+--- ej13/ServidorMcp.cs	2026-11-01 21:15:34.170266273 -0300
++++ Examples/13-Servidor-Y-Cliente-MCP/Infrastructure/Mcp/ServidorMcp.cs	2026-11-01 21:15:34.174266315 -0300
+@@ -4,7 +4,7 @@
+ //      máquina lo alcanza.
+ //   2. AllowedHosts en loopback (HostFiltering): un Host que no es loopback recibe 400. Protege del
+ //      rebinding de DNS, no de un proceso local.
+-//   3. Un filtro que rechaza con 403 todo Origin que no sea loopback (MCP 2025-06-18, Transports:
++//   3. Un filtro que rechaza con 403 todo Origin que no sea loopback (MCP 2026-07-28, Streamable HTTP:
+ //      el servidor MUST validar Origin). Un pedido sin Origin (un cliente que no es navegador) pasa.
+ using System.Net;
+ using Microsoft.AspNetCore.Builder;
+--- ej13/LecturasMcp.cs	2026-11-01 21:15:34.170266273 -0300
++++ Examples/13-Servidor-Y-Cliente-MCP/Infrastructure/Mcp/LecturasMcp.cs	2026-11-01 21:15:34.174266315 -0300
+@@ -35,7 +35,7 @@
+ /// <summary>
+ /// SÓLO PARA LA PRUEBA DE CABLEADO: un servidor que además anuncia una escritura, con anotaciones
+ /// que mienten (ReadOnly = true) y una descripción que pide ser usada. Muestra que el cliente no
+-/// decide por lo que el servidor dice de sí mismo (MCP 2025-06-18, Tools: las anotaciones son
++/// decide por lo que el servidor dice de sí mismo (MCP 2026-07-28, Tools: las anotaciones son
+ /// «no confiables»), sino por su lista permitida por nombre.
+ /// </summary>
+ [McpServerToolType]

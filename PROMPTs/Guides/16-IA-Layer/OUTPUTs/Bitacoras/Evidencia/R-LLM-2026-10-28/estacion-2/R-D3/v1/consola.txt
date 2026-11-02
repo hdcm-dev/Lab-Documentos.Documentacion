@@ -1,0 +1,12 @@
+[con-opcion] prompt_eval_count=5397 prompt_eval_ms=63619.6 eval_count=26 load_ms=3.6 total_ms=65946.6 reloj_ms=66060.9 num_ctx=8192 truncado_posible=False
+  salida: La Localidad 001 tiene el código postal 1037 y está en la provincia de Chaco.
+[con-opcion-repetida] prompt_eval_count=5397 prompt_eval_ms=366.5 eval_count=26 load_ms=3.9 total_ms=2906.5 reloj_ms=2911.3 num_ctx=8192 truncado_posible=False
+  salida: La Localidad 001 tiene el código postal 1037 y está en la provincia de Chaco.
+[sin-opcion] prompt_eval_count=2050 prompt_eval_ms=21839.8 eval_count=42 load_ms=2082.2 total_ms=28415.4 reloj_ms=28423.1 num_ctx=null truncado_posible=null
+  salida: No existe información sobre una "Localidad 001" en los datos proporcionados, ya que la lista comienza desde la Localidad 126 hasta la Localidad 200.
+caracteres del prompt (instrucciones + pregunta): 13290; estimación de la guarda (4,0 c/t): 3323
+caracteres por token medidos: 2.462
+ms por token de prompt: frío 11.788; repetido 0.068; umbral (media geométrica) 0.895
+prompt_eval_count con la opción 5397 · sin la opción 2050
+oráculo dep03-num-ctx: pasa
+esperado (fila 1 del padrón): Localidad 001 | provincia Chaco | CP 1037 | 8919 habitantes

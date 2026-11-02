@@ -1,0 +1,17 @@
+# 2026-10-25 SDK 10.0.403 — dotnet build: 0 Error(s), 0 Warning(s) (sin NoWarn)
+[4.1] visto: c1={"isSuccess":false,"message":"Revise los campos marcados en rojo.","errors":{"codigoPostal":"El c\u00F3digo postal debe tener 4 d\u00EDgitos."}}
+[4.6] localidades: 2
+[4.2] errores: medios=Medios fuera del catálogo: avion
+[4.3] [LocalidadPolicy.RequisitoDelCodigoPostal] 4 dígitos. | [EncuestaPolicy.RequisitoDeLaEdad] Entre 16 y 110 años. | 
+[4.4] pedido de aprobación: True; localidades: 2
+[4.4] tras rechazo: localidades: 2
+[4.5] compila
+[R] Microsoft.Extensions.AI.ApprovalRequiredAIFunction attrs: 
+[R] Microsoft.Extensions.AI.ToolApprovalRequestContent attrs: NullableContextAttribute(1),NullableAttribute(0)
+[R] Microsoft.Extensions.AI.ToolApprovalResponseContent attrs: NullableContextAttribute(1),NullableAttribute(0)
+[R] CommunityToolkit.VectorData.InMemory.InMemoryVectorStore attrs: NullableContextAttribute(1),NullableAttribute(0)
+
+# recompilado con SessionMode = HttpServerSessionMode.Stateless:
+    0 Error(s)
+    0 Warning(s)
+[4.5] compila

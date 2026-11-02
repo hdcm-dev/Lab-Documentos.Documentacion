@@ -1,0 +1,43 @@
+[demo] Ollama propio 0.40.11
+An issue was encountered verifying workloads. For more information, run "dotnet workload update".
+Test run for /artefactos/demo/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 5.0.0.0: Test execution started
+Running selected tests in /artefactos/demo/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+Setup failed for test fixture MovilidadUrbana.Asistente.Tests.ConModelo.EmbeddingsDePd2
+MovilidadUrbana.Asistente.Comun.AI.ConfiguracionInvalidaException : Servidor compartido sin num_ctx del arnés: se rechaza la corrida (leer /api/ps dentro del turno y exportar OLLAMA_NUM_CTX).
+StackTrace:    at MovilidadUrbana.Asistente.Comun.AI.ConfiguracionDelModelo.Validar() in /guia/Examples/_Comun/MovilidadUrbana.Asistente.Comun/AI/ConfiguracionDelModelo.cs:line 98
+   at MovilidadUrbana.Asistente.Tests.ConModelo.EmbeddingsDePd2.Predicado() in /guia/Demos/MovilidadUrbana.Asistente/tests/MovilidadUrbana.Asistente.Tests/ConModelo/EmbeddingsDePd2.cs:line 20
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.GetResult()
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.OneTimeSetUpCommand.<>c__DisplayClass0_0.<.ctor>b__0(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.BeforeTestCommand.Execute(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.BeforeTestCommand.Execute(TestExecutionContext context)
+   at NUnit.Framework.Internal.Execution.CompositeWorkItem.PerformOneTimeSetUp()
+NUnit Adapter 5.0.0.0: Test execution complete
+  Failed Persistir [14 ms]
+  Error Message:
+   OneTimeSetUp: MovilidadUrbana.Asistente.Comun.AI.ConfiguracionInvalidaException : Servidor compartido sin num_ctx del arnés: se rechaza la corrida (leer /api/ps dentro del turno y exportar OLLAMA_NUM_CTX).
+  Stack Trace:
+     at MovilidadUrbana.Asistente.Comun.AI.ConfiguracionDelModelo.Validar() in /guia/Examples/_Comun/MovilidadUrbana.Asistente.Comun/AI/ConfiguracionDelModelo.cs:line 98
+   at MovilidadUrbana.Asistente.Tests.ConModelo.EmbeddingsDePd2.Predicado() in /guia/Demos/MovilidadUrbana.Asistente/tests/MovilidadUrbana.Asistente.Tests/ConModelo/EmbeddingsDePd2.cs:line 20
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.GetResult()
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.OneTimeSetUpCommand.<>c__DisplayClass0_0.<.ctor>b__0(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.BeforeTestCommand.Execute(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.BeforeTestCommand.Execute(TestExecutionContext context)
+   at NUnit.Framework.Internal.Execution.CompositeWorkItem.PerformOneTimeSetUp()
+
+
+Total tests: 1
+     Failed: 1
+Test Run Failed.
+ Total time: 0.8300 Seconds
+[demo] descargado qwen3-embedding:0.6b (keep_alive 0)

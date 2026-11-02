@@ -1,0 +1,28 @@
+EN COLA <recurso-compartido> (posición 3); esperando hasta 90 min...
+CONCEDIDO <recurso-compartido> a senior-dotnet-r2 hasta 2026-10-28T13:37:24-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> senior-dotnet-r2)
+10.0.403
+# 2026-10-28T15:52:26.1429523+00:00 modelo=qwen3.5:4b digest=d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04 Ollama=0.40.11 MEAI 10.11.0.0 OllamaSharp 5.5.0.0 OpenAI 2.14.0.0
+# parámetros: Temperature 0, Seed 1, MaxOutputTokens 16, Reasoning.Effort None (think:false), num_ctx sin fijar (el del modelo cargado); nonce de prefijo a6cb6d13
+# mensaje de sistema (1814 caracteres): primera línea «[corrida a6cb6d13] Sos el asistente de la encuesta de Movilidad Urbana. Respondé sólo con un número.», 60 líneas «Localidad NN: k respuestas» con k=(NN*7)%23+1
+
+[A frío (prefijo nuevo)] pregunta «¿Cuántas respuestas tiene la Localidad 17?» → «5» pared=48.3s
+      IChatClient: Usage.InputTokenCount=710 CachedInputTokenCount=null AdditionalCounts=null
+      DelegatingHandler (última línea de /api/chat): prompt_eval_count=710 prompt_eval_cached_count=0
+      cuerpo enviado (sin mensajes): {"model":"qwen3.5:4b","options":{"temperature":0,"seed":1,"num_predict":16},"stream":false,"think":false,"<clave-de-cabeceras>":{}}
+[B mismo pedido] pregunta «¿Cuántas respuestas tiene la Localidad 17?» → «5» pared=1.0s
+      IChatClient: Usage.InputTokenCount=710 CachedInputTokenCount=null AdditionalCounts=null
+      DelegatingHandler (última línea de /api/chat): prompt_eval_count=710 prompt_eval_cached_count=706
+      cuerpo enviado (sin mensajes): {"model":"qwen3.5:4b","options":{"temperature":0,"seed":1,"num_predict":16},"stream":false,"think":false,"<clave-de-cabeceras>":{}}
+[C misma tabla, otra pregunta] pregunta «¿Cuántas respuestas tiene la Localidad 42?» → «19» pared=30.0s
+      IChatClient: Usage.InputTokenCount=710 CachedInputTokenCount=null AdditionalCounts=null
+      DelegatingHandler (última línea de /api/chat): prompt_eval_count=710 prompt_eval_cached_count=198
+      cuerpo enviado (sin mensajes): {"model":"qwen3.5:4b","options":{"temperature":0,"seed":1,"num_predict":16},"stream":false,"think":false,"<clave-de-cabeceras>":{}}
+[D /v1 MaxOutputTokens 3] → «1: 8 ⏎ 2: 15 ⏎ 3: 22 ⏎ 4: 6 ⏎ 5: 13 ⏎ 6: 20 ⏎ 7: 4 ⏎ 8: 11 ⏎ 9: 18 ⏎ 10: 2» pared=38.8s FinishReason=stop
+      Usage: Input=711 Output=57 CachedInput=198
+      cuerpo enviado (sin mensajes): {"temperature":0,"model":"qwen3.5:4b","reasoning_effort":"none","max_completion_tokens":3,"seed":1}
+      usage crudo devuelto: {"prompt_tokens":711,"prompt_tokens_details":{"cached_tokens":198},"completion_tokens":57,"total_tokens":768}
+[E /v1 MaxOutputTokens 3, repetido] → «1: 8 ⏎ 2: 15 ⏎ 3: 22 ⏎ 4: 6 ⏎ 5: 13 ⏎ 6: 20 ⏎ 7: 4 ⏎ 8: 11 ⏎ 9: 18 ⏎ 10: 2» pared=10.3s FinishReason=stop
+      Usage: Input=711 Output=57 CachedInput=707
+      cuerpo enviado (sin mensajes): {"temperature":0,"model":"qwen3.5:4b","reasoning_effort":"none","max_completion_tokens":3,"seed":1}
+      usage crudo devuelto: {"prompt_tokens":711,"prompt_tokens_details":{"cached_tokens":707},"completion_tokens":57,"total_tokens":768}
+LIBERADO <recurso-compartido> por senior-dotnet-r2

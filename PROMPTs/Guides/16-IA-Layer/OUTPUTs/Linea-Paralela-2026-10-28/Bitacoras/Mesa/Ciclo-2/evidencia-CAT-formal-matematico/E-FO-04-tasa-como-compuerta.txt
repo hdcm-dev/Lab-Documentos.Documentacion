@@ -1,0 +1,10 @@
+# ChatConModeloTests: la tasa hace fallar la prueba
+Examples/01-Chat-Basico/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/ConModelo/ChatConModeloTests.cs:18:///    la prueba falla si k &lt; m − 2 (umbral elegido, no medido).
+Examples/01-Chat-Basico/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/ConModelo/ChatConModeloTests.cs:68:        Assert.That(k, Is.GreaterThanOrEqualTo(m - 2));
+Examples/01-Chat-Basico/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/ConModelo/MaxOutputTokensConModeloTests.cs:69:            Assert.That(v1Excedida, Is.GreaterThanOrEqualTo(1), "por /v1 no se observó salida por encima de MaxOutputTokens");
+
+# Guía: reglas que lo contradicen
+2644:- **Qué es.** En `ConModelo/` cada afirmación es de uno de tres tipos. **Invariante:** una propiedad que vale en cada corrida (0 escrituras, ninguna herramienta fuera de la lista cerrada); la prueba **falla ante una sola violación**. **Tasa observada:*
+2646:- **Qué no es.** Una tasa no es un umbral de aceptación. Sin un conjunto de pedidos redactados antes (tasa de la tarea), no hay umbral que fijar.
+3327:**Invariantes con el modelo:** las ocho pruebas de `ConModelo/` pasaron: 0 escrituras en todas las corridas, 0 bajas en D6 y en las dos inyecciones de CTRL-14 (§8.10.1), ninguna herramienta fuera de las tres de lectura. Las tasas no hacen fallar una prue
+3629:invariantes en 10/10 y «nombra 4 dígitos» con k ≥ 8, 2026-10-28; Wilson 95 % [0,72; 1]; crudo: chat-basico-4b.txt

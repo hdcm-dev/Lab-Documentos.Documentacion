@@ -1,0 +1,211 @@
+@page "/"
+@using System.Text
+@using MovilidadUrbana.ApiWeb.Contracts
+@implements IDisposable
+@inject IAsistenteDeMovilidad Asistente
+@inject ISessionContext Sesion
+@inject OperacionesDeLocalidad Operaciones
+@inject LimitadorDelModelo Limitador
+@inject IOptions<OpcionesDeIA> Opciones
+
+<PageTitle>Asistente · Movilidad Urbana</PageTitle>
+
+<main class="asistente">
+    <h1 tabindex="-1">Asistente de Movilidad Urbana</h1>
+    <p class="aviso" role="note">@AvisosDelAsistente.QueHace</p>
+
+    <ol class="conversacion" aria-live="polite">
+        @foreach (var turno in turnos)
+        {
+            <li class="turno @(turno.DeLaPersona ? "persona" : "asistente")">
+                @* Todo texto del modelo se muestra codificado por Razor: nunca como HTML. *@
+                <p class="texto">@turno.Texto.ToString()</p>
+
+                @if (turno.Accion is { Tipo: TipoDeAccion.Baja } baja)
+                {
+                    <section class="accion" aria-label="Baja propuesta">
+                        <h2>Baja propuesta</h2>
+                        <p>@baja.Datos.Nombre (@baja.Datos.Provincia), CP @baja.Datos.CodigoPostal, @baja.Datos.Habitantes habitantes.</p>
+                        @if (turno.Resultado is null)
+                        {
+                            <button type="button" class="peligro" @onclick="() => ConfirmarBajaAsync(turno)">Confirmar baja</button>
+                            <button type="button" @onclick="() => Descartar(turno)">Descartar</button>
+                        }
+                    </section>
+                }
+                else if (turno.Accion is { Tipo: TipoDeAccion.Alta } && turno.Formulario is { } f)
+                {
+                    <section class="accion" aria-label="Alta propuesta">
+                        <h2>Alta propuesta: revisá los datos</h2>
+                        <label>Nombre <input @bind="f.Nombre" disabled="@(turno.Resultado is not null)" /></label>
+                        <Error Errores="turno.Errores" Campo="nombre" />
+                        <label>Provincia
+                            <select @bind="f.Provincia" disabled="@(turno.Resultado is not null)">
+                                <option value="">(elegí una)</option>
+                                @foreach (var p in Catalogos.Provincias) { <option value="@p">@p</option> }
+                            </select>
+                        </label>
+                        <Error Errores="turno.Errores" Campo="provincia" />
+                        <label>Código postal <input @bind="f.CodigoPostal" disabled="@(turno.Resultado is not null)" /></label>
+                        <Error Errores="turno.Errores" Campo="codigoPostal" />
+                        <label>Habitantes <input type="number" @bind="f.Habitantes" disabled="@(turno.Resultado is not null)" /></label>
+                        <Error Errores="turno.Errores" Campo="habitantes" />
+                        @if (turno.Resultado is null)
+                        {
+                            <button type="button" @onclick="() => ConfirmarAltaAsync(turno)">Guardar</button>
+                            <button type="button" @onclick="() => Descartar(turno)">Descartar</button>
+                        }
+                    </section>
+                }
+
+                @if (turno.Resultado is not null) { <p class="resultado" role="status">@turno.Resultado</p> }
+                @if (turno.Fuentes.Count > 0)
+                {
+                    <p class="fuentes">Fuente: @string.Join(", ", turno.Fuentes)</p>
+                }
+            </li>
+        }
+    </ol>
+
+    @if (etapa is not null)
+    {
+        <p class="progreso" role="status">@NombreDeEtapa(etapa)…</p>
+    }
+
+    <div class="entrada">
+        <label for="pedido">Tu pedido</label>
+        <textarea id="pedido" @bind="texto" @bind:event="oninput" maxlength="@Opciones.Value.LargoMaximoDeEntrada" disabled="@ocupado" rows="3"></textarea>
+        @if (errorDeEntrada is not null) { <p class="error" role="alert">@errorDeEntrada</p> }
+        <button type="button" @onclick="EnviarAsync" disabled="@ocupado">Enviar</button>
+        <button type="button" @onclick="Cancelar" disabled="@(!ocupado)">Cancelar</button>
+    </div>
+</main>
+
+@code {
+    private sealed class FormularioDeAlta
+    {
+        public string Nombre { get; set; } = string.Empty;
+        public string Provincia { get; set; } = string.Empty;
+        public string CodigoPostal { get; set; } = string.Empty;
+        public int? Habitantes { get; set; }
+    }
+
+    private sealed class TurnoEnPantalla(bool deLaPersona)
+    {
+        public bool DeLaPersona { get; } = deLaPersona;
+        public StringBuilder Texto { get; } = new();
+        public AccionPropuesta? Accion { get; set; }
+        public FormularioDeAlta? Formulario { get; set; }
+        public IReadOnlyDictionary<string, string> Errores { get; set; } = new Dictionary<string, string>();
+        public IReadOnlyList<string> Fuentes { get; set; } = [];
+        public string? Resultado { get; set; }
+    }
+
+    private readonly List<TurnoEnPantalla> turnos = [];
+    private readonly string conversacionId = Guid.NewGuid().ToString("n");
+    private CancellationTokenSource? cancelacion;
+    private string texto = string.Empty;
+    private string? etapa;
+    private string? errorDeEntrada;
+    private bool ocupado;
+
+    private async Task EnviarAsync()
+    {
+        errorDeEntrada = null;
+        if (string.IsNullOrWhiteSpace(texto)) return;
+        if (texto.Length > Opciones.Value.LargoMaximoDeEntrada)
+        {
+            errorDeEntrada = $"El pedido admite hasta {Opciones.Value.LargoMaximoDeEntrada} caracteres.";
+            return;
+        }
+
+        var pedido = texto;
+        texto = string.Empty;
+        var dePersona = new TurnoEnPantalla(true);
+        dePersona.Texto.Append(pedido);
+        var respuesta = new TurnoEnPantalla(false);
+        turnos.Add(dePersona);
+        turnos.Add(respuesta);
+        ocupado = true;
+        cancelacion = new CancellationTokenSource();
+
+        try
+        {
+            using var permiso = await Limitador.Limitador.AcquireAsync(1, cancelacion.Token);
+            if (!permiso.IsAcquired)
+            {
+                respuesta.Texto.Append("El servidor del modelo está ocupado. Probá de nuevo en unos segundos.");
+                return;
+            }
+
+            await foreach (var evento in Asistente.ConversarAsync(Sesion.Id, conversacionId, pedido, cancelacion.Token))
+            {
+                switch (evento)
+                {
+                    case EtapaIniciada e: etapa = e.Nombre; break;
+                    case TextoParcial t: respuesta.Texto.Append(t.Texto); break;
+                    case AccionPropuesta a:
+                        respuesta.Accion = a;
+                        respuesta.Errores = a.Datos.Errores;
+                        if (a.Tipo == TipoDeAccion.Alta)
+                            respuesta.Formulario = new FormularioDeAlta { Nombre = a.Datos.Nombre, Provincia = a.Datos.Provincia, CodigoPostal = a.Datos.CodigoPostal, Habitantes = a.Datos.Habitantes };
+                        break;
+                    case Final f: respuesta.Fuentes = f.Fuentes; break;
+                }
+                await InvokeAsync(StateHasChanged);
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            respuesta.Texto.Append(" (cancelado)");
+        }
+        catch (Exception)
+        {
+            // El detalle no se muestra ni se registra con el texto de la persona.
+            respuesta.Texto.Append(" No se pudo completar el pedido: el servidor del modelo no respondió.");
+        }
+        finally
+        {
+            ocupado = false;
+            etapa = null;
+            cancelacion?.Dispose();
+            cancelacion = null;
+        }
+    }
+
+    private void Cancelar() => cancelacion?.Cancel();
+
+    private async Task ConfirmarBajaAsync(TurnoEnPantalla turno)
+    {
+        var id = turno.Accion!.Datos.LocalidadId!.Value;
+        var r = await Operaciones.EliminarAsync(Sesion.Id, id, CancellationToken.None);
+        turno.Resultado = r.Ok ? $"Se dio de baja {turno.Accion.Datos.Nombre}." : $"La API respondió {r.Estado}: no se dio de baja.";
+    }
+
+    private async Task ConfirmarAltaAsync(TurnoEnPantalla turno)
+    {
+        var f = turno.Formulario!;
+        var r = await Operaciones.AgregarAsync(Sesion.Id, new LocalidadRequest(f.Nombre, f.Provincia, f.CodigoPostal, f.Habitantes), CancellationToken.None);
+        if (r.Ok) turno.Resultado = $"Se agregó la localidad {f.Nombre.Trim()}.";
+        else turno.Errores = r.Errores.ToDictionary(e => e.Key, e => string.Join(" ", e.Value));
+    }
+
+    private static void Descartar(TurnoEnPantalla turno) => turno.Resultado = "Descartado: no se cambió nada.";
+
+    private static string NombreDeEtapa(string nombre) => nombre switch
+    {
+        "interpretar" => "Interpretando el pedido",
+        "consultar-datos" => "Consultando tus datos",
+        "leer-requisitos" => "Leyendo los requisitos",
+        "proponer-alta" => "Preparando el alta",
+        "proponer-baja" => "Preparando la baja",
+        "normalizar-encuesta" => "Ordenando medios y frecuencia",
+        _ => nombre
+    };
+
+    public void Dispose()
+    {
+        cancelacion?.Cancel();
+        cancelacion?.Dispose();
+    }
+}

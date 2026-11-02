@@ -1,0 +1,15 @@
+  Determining projects to restore...
+  Restored /ex/src/MovilidadUrbana.Ejemplos.ToolCalling/MovilidadUrbana.Ejemplos.ToolCalling.csproj (in 2.97 sec).
+  Restored /ex/tests/MovilidadUrbana.Ejemplos.ToolCalling.Tests/MovilidadUrbana.Ejemplos.ToolCalling.Tests.csproj (in 2.97 sec).
+  MovilidadUrbana.Ejemplos.ToolCalling -> /ex/src/MovilidadUrbana.Ejemplos.ToolCalling/bin/Release/net10.0/MovilidadUrbana.Ejemplos.ToolCalling.dll
+  MovilidadUrbana.Ejemplos.ToolCalling.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.ToolCalling.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.ToolCalling.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:09.09
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.ToolCalling.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.ToolCalling.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    23, Skipped:     0, Total:    23, Duration: 771 ms - MovilidadUrbana.Ejemplos.ToolCalling.Tests.dll (net10.0)

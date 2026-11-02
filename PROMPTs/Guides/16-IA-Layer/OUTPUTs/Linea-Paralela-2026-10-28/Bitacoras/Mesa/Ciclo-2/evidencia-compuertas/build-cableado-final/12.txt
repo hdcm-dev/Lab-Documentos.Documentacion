@@ -1,0 +1,15 @@
+  Determining projects to restore...
+  Restored /ex/src/MovilidadUrbana.Ejemplos.AnotacionesPareadas/MovilidadUrbana.Ejemplos.AnotacionesPareadas.csproj (in 6.68 sec).
+  Restored /ex/tests/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests.csproj (in 6.7 sec).
+  MovilidadUrbana.Ejemplos.AnotacionesPareadas -> /ex/src/MovilidadUrbana.Ejemplos.AnotacionesPareadas/bin/Release/net10.0/MovilidadUrbana.Ejemplos.AnotacionesPareadas.dll
+  MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:12.24
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    18, Skipped:     0, Total:    18, Duration: 403 ms - MovilidadUrbana.Ejemplos.AnotacionesPareadas.Tests.dll (net10.0)

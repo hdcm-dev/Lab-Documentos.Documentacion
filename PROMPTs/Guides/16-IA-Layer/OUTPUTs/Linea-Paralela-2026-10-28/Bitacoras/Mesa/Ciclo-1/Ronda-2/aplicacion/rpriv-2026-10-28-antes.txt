@@ -1,0 +1,8 @@
+2026-10-28T14:25:32-03:00 raiz=OUTPUTs patrones=1 identificadores=446 cabeceras=0
+-- patrones por archivo
+Bitacoras/Mesa/Ciclo-1/Ronda-2/evidencia-AH-01-seguridad/README.md:1
+-- cabeceras por archivo (antes de excluir sintéticos)
+Bitacoras/Mesa/Ciclo-1/Ronda-2/aplicacion/rpriv-sinteticos.txt:2
+Bitacoras/Mesa/Ciclo-1/Ronda-2/evidencia-aprobacion-evidencia/sinteticos-prueba.txt:2
+Bitacoras/Mesa/Ciclo-1/Ronda-2/evidencia-senior-dotnet/R2-cuerpo-salida.txt:3
+rc=1

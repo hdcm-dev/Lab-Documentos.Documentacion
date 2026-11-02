@@ -1,0 +1,159 @@
+CONCEDIDO build a senior-dotnet-r2 hasta 2026-10-28T12:25:27-0300 (renová con: <gestor-de-turnos> renovar build senior-dotnet-r2)
+# OllamaSharp 5.5.0.0; MCP 2.3.0.0; MCP.AspNetCore 2.3.0.0
+== OllamaSharp.Models.OllamaRequest : Object [NullableContextAttribute,NullableAttribute]
+   P Dictionary`2 <clave-de-cabeceras> []
+== OllamaSharp.Models.Chat.ChatRequest : OllamaRequest [NullableContextAttribute,NullableAttribute]
+   C ()
+   P String Model [NullableAttribute,JsonPropertyNameAttribute]
+   P IEnumerable`1 Messages [NullableAttribute,JsonPropertyNameAttribute]
+   P RequestOptions Options [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P String Template [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P String KeepAlive [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Object Format [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Boolean Stream [JsonPropertyNameAttribute]
+   P Nullable`1 Think [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P IEnumerable`1 Tools [NullableAttribute,JsonPropertyNameAttribute,JsonIgnoreAttribute]
+== OllamaSharp.Models.Chat.ChatDoneResponseStream : ChatResponseStream [NullableContextAttribute,NullableAttribute]
+   C ()
+   P Int64 TotalDuration [JsonPropertyNameAttribute]
+   P Int64 LoadDuration [JsonPropertyNameAttribute]
+   P Int32 PromptEvalCount [JsonPropertyNameAttribute]
+   P Int64 PromptEvalDuration [JsonPropertyNameAttribute]
+   P Int32 EvalCount [JsonPropertyNameAttribute]
+   P Int64 EvalDuration [JsonPropertyNameAttribute]
+   P String DoneReason [JsonPropertyNameAttribute]
+== OllamaSharp.Models.RequestOptions : Object []
+   C ()
+   P Nullable`1 MiroStat [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 MiroStatEta [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 MiroStatTau [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 NumCtx [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 NumGqa [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 NumGpu [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 MainGpu [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 NumBatch [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 NumThread [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 NumKeep [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 RepeatLastN [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 RepeatPenalty [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 PresencePenalty [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 FrequencyPenalty [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 Temperature [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 Seed [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P String[] Stop [NullableAttribute,JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 TfsZ [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 NumPredict [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 TopK [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 TopP [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 MinP [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 TypicalP [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 PenalizeNewline [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 UseMmap [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 UseMlock [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 LowVram [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 F16kv [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 LogitsAll [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 VocabOnly [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 Numa [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+== OllamaSharp.OllamaApiClient : Object [NullableContextAttribute,NullableAttribute]
+   M IAsyncEnumerable`1 CreateModelAsync(CreateModelRequest request, CancellationToken cancellationToken)
+   M Task DeleteModelAsync(DeleteModelRequest request, CancellationToken cancellationToken)
+   M Task`1 ListLocalModelsAsync(CancellationToken cancellationToken)
+   M Task`1 ListRunningModelsAsync(CancellationToken cancellationToken)
+   M Task`1 ShowModelAsync(ShowModelRequest request, CancellationToken cancellationToken)
+   M Task CopyModelAsync(CopyModelRequest request, CancellationToken cancellationToken)
+   M IAsyncEnumerable`1 PullModelAsync(PullModelRequest request, CancellationToken cancellationToken)
+   M IAsyncEnumerable`1 PushModelAsync(PushModelRequest request, CancellationToken cancellationToken)
+   M Task`1 EmbedAsync(EmbedRequest request, CancellationToken cancellationToken)
+   M IAsyncEnumerable`1 GenerateAsync(GenerateRequest request, CancellationToken cancellationToken)
+   M IAsyncEnumerable`1 ChatAsync(ChatRequest request, CancellationToken cancellationToken)
+   M Task`1 SystemOneAsync(SystemOneRequest request, CancellationToken cancellationToken)
+   M Task`1 IsRunningAsync(CancellationToken cancellationToken)
+   M Task`1 GetVersionAsync(CancellationToken cancellationToken)
+   M Task PushBlobAsync(String digest, Byte[] bytes, CancellationToken cancellationToken)
+   M Task`1 IsBlobExistsAsync(String digest, CancellationToken cancellationToken)
+   M Void Dispose()
+   C (String uriString, String defaultModel)
+   C (Uri uri, String defaultModel)
+   C (Configuration config)
+   C (HttpClient client, String defaultModel, JsonSerializerContext jsonSerializerContext)
+   P Dictionary`2 DefaultRequestHeaders []
+   P JsonSerializerOptions OutgoingJsonSerializerOptions []
+   P JsonSerializerOptions IncomingJsonSerializerOptions []
+   P Configuration Config []
+   P Uri Uri []
+   P String SelectedModel []
+== OllamaSharp.Models.EmbedRequest : OllamaRequest [NullableContextAttribute,NullableAttribute]
+   C ()
+   P String Model [JsonPropertyNameAttribute]
+   P List`1 Input [JsonPropertyNameAttribute]
+   P RequestOptions Options [NullableAttribute,JsonPropertyNameAttribute]
+   P String KeepAlive [NullableAttribute,JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 Truncate [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+   P Nullable`1 Dimensions [JsonPropertyNameAttribute,JsonIgnoreAttribute]
+tipo Done: OllamaSharp.Models.GenerateDoneResponseStream
+tipo Done: OllamaSharp.Models.Chat.ChatDoneResponseStream
+== ModelContextProtocol.Server.McpServerTool : Object [NullableContextAttribute,NullableAttribute]
+   M ValueTask`1 InvokeAsync(RequestContext`1 request, CancellationToken cancellationToken)
+   M McpServerTool Create(Delegate method, McpServerToolCreateOptions options)
+   M McpServerTool Create(MethodInfo method, Object target, McpServerToolCreateOptions options)
+   M McpServerTool Create(MethodInfo method, Func`2 createTargetFunc, McpServerToolCreateOptions options)
+   M McpServerTool Create(AIFunction function, McpServerToolCreateOptions options)
+   M String ToString()
+   P Tool ProtocolTool []
+   P IReadOnlyList`1 Metadata []
+== Microsoft.AspNetCore.Builder.McpEndpointRouteBuilderExtensions : Object [ExtensionAttribute]
+   M IEndpointConventionBuilder MapMcp(IEndpointRouteBuilder endpoints, String pattern)
+== ModelContextProtocol.AIContentExtensions : Object [NullableContextAttribute,NullableAttribute,ExtensionAttribute]
+   M Func`4 CreateSamplingHandler(IChatClient chatClient, JsonSerializerOptions serializerOptions)
+   M ChatMessage ToChatMessage(PromptMessage promptMessage, JsonSerializerOptions options)
+   M ChatMessage ToChatMessage(CallToolResult result, String callId, JsonSerializerOptions options)
+   M IList`1 ToChatMessages(GetPromptResult promptResult)
+   M IList`1 ToPromptMessages(ChatMessage chatMessage)
+   M AIContent ToAIContent(ContentBlock content, JsonSerializerOptions options)
+   M AIContent ToAIContent(ResourceContents content)
+   M IList`1 ToAIContents(IEnumerable`1 contents, JsonSerializerOptions options)
+   M IList`1 ToAIContents(IEnumerable`1 contents)
+   M ContentBlock ToContentBlock(AIContent content, JsonSerializerOptions options)
+aspnet tipo: Microsoft.AspNetCore.Builder.McpEndpointRouteBuilderExtensions
+aspnet tipo: Microsoft.Extensions.DependencyInjection.McpAuthenticationExtensions
+aspnet tipo: Microsoft.Extensions.DependencyInjection.HttpMcpServerBuilderExtensions
+aspnet tipo: ModelContextProtocol.AspNetCore.HttpServerSessionMode
+aspnet tipo: ModelContextProtocol.AspNetCore.HttpServerTransportOptions
+aspnet tipo: ModelContextProtocol.AspNetCore.ISessionMigrationHandler
+aspnet tipo: ModelContextProtocol.AspNetCore.Authentication.McpAuthenticationDefaults
+aspnet tipo: ModelContextProtocol.AspNetCore.Authentication.McpAuthenticationEvents
+aspnet tipo: ModelContextProtocol.AspNetCore.Authentication.McpAuthenticationHandler
+aspnet tipo: ModelContextProtocol.AspNetCore.Authentication.McpAuthenticationOptions
+aspnet tipo: ModelContextProtocol.AspNetCore.Authentication.ResourceMetadataRequestContext
+== ModelContextProtocol.AspNetCore.HttpServerTransportOptions : Object [NullableContextAttribute,NullableAttribute]
+   C ()
+   P Func`4 ConfigureSessionOptions [NullableAttribute]
+   P Func`4 RunSessionHandler [NullableAttribute,ExperimentalAttribute]
+   P HttpServerSessionMode SessionMode []
+   P Boolean Stateless []
+   P Boolean EnableLegacySse [ObsoleteAttribute]
+   P ISseEventStreamStore EventStreamStore [ObsoleteAttribute]
+   P ISessionMigrationHandler SessionMigrationHandler [ObsoleteAttribute]
+   P Boolean PerSessionExecutionContext [ObsoleteAttribute]
+   P TimeSpan IdleTimeout [ObsoleteAttribute]
+   P Int32 MaxIdleSessionCount [ObsoleteAttribute]
+   P TimeProvider TimeProvider [NullableAttribute]
+== Microsoft.Extensions.AI.AIFunctionFactory : Object [NullableContextAttribute,NullableAttribute]
+   M AIFunction Create(Delegate method, AIFunctionFactoryOptions options)
+   M AIFunction Create(Delegate method, String name, String description, JsonSerializerOptions serializerOptions)
+   M AIFunction Create(MethodInfo method, Object target, AIFunctionFactoryOptions options)
+   M AIFunction Create(MethodInfo method, Object target, String name, String description, JsonSerializerOptions serializerOptions)
+   M AIFunction Create(MethodInfo method, Func`2 createInstanceFunc, AIFunctionFactoryOptions options)
+   M AIFunctionDeclaration CreateDeclaration(String name, String description, JsonElement jsonSchema, Nullable`1 returnJsonSchema)
+== Microsoft.Extensions.AI.AIFunctionFactoryOptions : Object [NullableContextAttribute,NullableAttribute]
+   C ()
+   P JsonSerializerOptions SerializerOptions []
+   P AIJsonSchemaCreateOptions JsonSchemaCreateOptions []
+   P String Name []
+   P String Description []
+   P IReadOnlyDictionary`2 AdditionalProperties [NullableAttribute]
+   P Func`2 ConfigureParameterBinding [NullableAttribute]
+   P Func`4 MarshalResult [NullableAttribute]
+   P Boolean ExcludeResultSchema []
+LIBERADO build por senior-dotnet-r2

@@ -1,0 +1,31 @@
+10.0.403
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /ex/src/MovilidadUrbana.SalidaEstructurada/bin/Debug/net10.0/
+Texto: Agregá Goya, Corrientes, CP 34, 89959 habitantes
+Propuesta del modelo (forma): {
+  "Tipo": "Alta",
+  "Id": null,
+  "Nombre": "Goya",
+  "Provincia": "Corrientes",
+  "CodigoPostal": "3400",
+  "Habitantes": 89959
+}
+Revisión (validez): ParaConfirmar
+{
+  "Formulario": {
+    "Id": null,
+    "Nombre": "Goya",
+    "Provincia": "Corrientes",
+    "CodigoPostal": "3400",
+    "Habitantes": 89959,
+    "IsEdit": false
+  },
+  "Errores": {}
+}
+Escrituras en el repositorio: 0
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...

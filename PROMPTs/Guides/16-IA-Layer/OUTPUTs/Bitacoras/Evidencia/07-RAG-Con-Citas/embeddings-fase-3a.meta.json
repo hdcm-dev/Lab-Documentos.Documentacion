@@ -1,0 +1,13 @@
+{
+  "rotulo": "precomputado en la fase 3a (Ollama propio); textos: corpus plantilla.v1 y preguntas del oro, escritas para el ejemplo",
+  "pieza": "07-RAG-Con-Citas",
+  "version": "v1",
+  "plantilla": "plantilla.v1",
+  "modelo": "qwen3-embedding:0.6b",
+  "digest": "ac6da0dfba84",
+  "ollama_version": "0.40.11",
+  "oro_sha256": "6b724009d9210376412db4ed948768d3e3622abe17c4bd7af47903440fadfb2a",
+  "dimension": 1024,
+  "fecha": "2026-10-27T13:27:14.993808+00:00",
+  "textos": 28
+}

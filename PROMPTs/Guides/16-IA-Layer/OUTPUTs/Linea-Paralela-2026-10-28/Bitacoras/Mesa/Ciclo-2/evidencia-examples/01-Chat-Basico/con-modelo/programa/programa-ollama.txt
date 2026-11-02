@@ -1,0 +1,14 @@
+# R-LLM — estimando: existencia, 1 corrida (2 vueltas), proveedor ollama, estación de laboratorio de 4 núcleos, fecha 2026-10-28T15:17:14-03:00
+# Ollama {"version":"0.40.11"}
+# modelo@digest: ['qwen3.5:4b@d8b0f5e9760c']
+# parámetros: appsettings.json + appsettings.Development.json (T 0.7, top_p 0.8, top_k 20, min_p 0, presence 1.5, repeat 1.0, think false, num_ctx 8192 sólo por la vía nativa, sin semilla)
+# comando: dotnet run --project src/MovilidadUrbana.Ejemplos.ChatBasico -c Release --no-build -- --AI:Proveedor=ollama
+Proveedor: ollama; modelo: qwen3.5:4b; num_ctx: 8192
+> ¿Cuántos dígitos lleva el código postal de una localidad?
+El código postal debe consistir en **cuatro** dígitos numéricos.
+  [uso] entrada=130 salida=19 fin=stop
+> ¿Y la provincia puede ser cualquiera?
+No, la provincia no puede ser cualquiera; solo se pueden seleccionar las provincias específicas del catálogo como Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza o Santa Fe.
+  [uso] entrada=166 salida=41 fin=stop
+# código de salida: 0
+# pared total: 24 s

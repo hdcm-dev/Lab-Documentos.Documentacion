@@ -1,0 +1,20 @@
+{
+  "origen": "LocalidadPolicy y EncuestaPolicy de MovilidadUrbana.ApiWeb, commit 59399ba",
+  "pedidos": [
+    { "id": "A01", "pregunta": "¿Cuántos dígitos lleva el código postal?", "fuente": "LocalidadPolicy.RequisitoDelCodigoPostal" },
+    { "id": "A02", "pregunta": "¿Qué largo puede tener el nombre de una localidad?", "fuente": "LocalidadPolicy.RequisitoDelNombre" },
+    { "id": "A03", "pregunta": "¿Puedo poner cualquier provincia en una localidad?", "fuente": "LocalidadPolicy.RequisitoDeLaProvincia" },
+    { "id": "A04", "pregunta": "¿Cuántos habitantes como mínimo tiene que tener una localidad?", "fuente": "LocalidadPolicy.RequisitoDeLosHabitantes" },
+    { "id": "A05", "pregunta": "¿Qué edad hay que tener para responder la encuesta?", "fuente": "EncuestaPolicy.RequisitoDeLaEdad" },
+    { "id": "A06", "pregunta": "En la encuesta, ¿cuántas letras tiene que tener el nombre de la persona?", "fuente": "EncuestaPolicy.RequisitoDelNombre" },
+    { "id": "A07", "pregunta": "¿Qué localidad puedo elegir en la encuesta?", "fuente": "EncuestaPolicy.RequisitoDeLaLocalidad" },
+    { "id": "A08", "pregunta": "¿Cuántos medios de transporte tengo que marcar como mínimo?", "fuente": "EncuestaPolicy.RequisitoDeLosMedios" },
+    { "id": "A09", "pregunta": "¿Qué me pide la encuesta sobre la frecuencia?", "fuente": "EncuestaPolicy.RequisitoDeLaFrecuencia" },
+    { "id": "A10", "pregunta": "¿Cuántos kilómetros por día acepta la encuesta?", "fuente": "EncuestaPolicy.RequisitoDeLaDistancia" },
+    { "id": "A11", "pregunta": "¿Cuántos minutos de viaje se pueden cargar?", "fuente": "EncuestaPolicy.RequisitoDeLosMinutos" },
+    { "id": "A12", "pregunta": "¿Qué tengo que poner en el motivo del viaje?", "fuente": "EncuestaPolicy.RequisitoDelMotivo" },
+    { "id": "N01", "pregunta": "¿Si elimino una ciudad se pierden las encuestas?", "fuente": null },
+    { "id": "N02", "pregunta": "¿Cuántas encuestas puede responder una misma persona?", "fuente": null },
+    { "id": "N03", "pregunta": "¿Quién puede ver las localidades que cargo?", "fuente": null }
+  ]
+}

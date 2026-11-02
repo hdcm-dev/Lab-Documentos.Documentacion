@@ -1,0 +1,16 @@
+07-RAG-Con-Citas — desvíos y notas de la construcción (2026-10-27)
+
+1. Corrida interrumpida. La primera corrida contra el compartido (turno <recurso-compartido> 10:27:28–10:32:38 -0300,
+   310 s, fuera de verificar.sh) se cortó con la sesión tras r04. Su registro parcial queda aparte
+   (R-LLM/07-RAG-Con-Citas.interrumpida-1.jsonl, 4 entradas, no cuenta). La corrida que cuenta es la completa
+   (R-LLM/07-RAG-Con-Citas.modelo.jsonl, turno 20261027T134714, 780 s). Uso de <recurso-compartido> de 07:
+   310 + 780 + 80 (estabilidad) = 1.170 s, contra un pesimista de 1.280 + 240 s (plan §E.5).
+2. Fase 3a de embeddings fuera de verificar.sh. El arnés no lee la clave "embeddings" de ejemplo.json, así que
+   no precomputa los embeddings de 07 en «fase 3a». Se corrieron a mano con turno [recurso-modelo-propio]
+   (10:27:07–10:27:15 -0300): `--precomputar-embeddings`, 28 textos, qwen3-embedding:0.6b@ac6da0dfba84,
+   Ollama 0.40.11 (07/embeddings-fase-3a.meta.json). Pendiente del arnés: leer esa clave en la fase 3a.
+3. Estabilidad fuera de verificar.sh. El arnés no tiene modo --estabilidad: se corrió a mano dentro de un turno
+   <recurso-compartido> con la misma lectura de num_ctx desde /api/ps (65536, origen arnes); su línea se agregó a mano a
+   turnos.jsonl (fase «correr 07-RAG-Con-Citas --estabilidad (a mano, sin verificar.sh)»).
+4. Oráculo: en las 5 «sin valor verificable» sólo se comprueba la cita (lo fija el plan §E.2); r07 contradice
+   en sentido la regla que cita y pasa igual. Límite declarado en el README.

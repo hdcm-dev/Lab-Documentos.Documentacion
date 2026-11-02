@@ -1,0 +1,26 @@
+Ejemplo 02-Cambio-De-Adaptador · corrida del 2026-10-27 (TURNO-3, fase 3a, turno [recurso-modelo-propio], 22 s)
+
+Observado en el laboratorio: qwen2.5:0.5b (digest a8b0c5157701), Ollama propio 0.40.11, máquina propio-remoto.
+Demostración, 1 entrada (a01, escrita para el ejemplo), 2 llamadas: sin tasa.
+
+1. Corrección respecto del plan (contrato del arnés, punto 4): la versión anterior de Program.cs
+   construía su propio OllamaApiClient. Ahora la vía nativa sale de FabricaDeClientes.CrearChatOllama
+   y la de /v1 se envuelve con FabricaDeClientes.Envolver(…, Adaptador.OpenAIv1). Con el modelo, las
+   opciones efectivas del registro se calculan con OpcionesDelProveedor.Aplicar (mismo patrón que
+   03, 05, 08, 13 y 15); la prueba LasOpcionesDelRegistro_SonLasQueVeElEspia comprueba, con el espía
+   debajo de la capa, que coinciden con lo que de verdad sale. Los R-LLM de 02 de las 10:43 (código
+   anterior) se reemplazan por los de esta corrida.
+2. Con una sola vía pedida (--adaptador) no se escribe línea «entrada»: el oráculo compara las dos
+   vías de una misma corrida y recalcular-oraculos.sh agrupa por entrada_id dentro del archivo.
+   El registro de evidencia tiene una sola corrida por archivo.
+3. Por /v1 no llegan las duraciones del servidor (prompt_eval_duration_ms, total_duration_ms en null)
+   ni num_ctx; truncado_posible queda null («no verificable»), como fija §E.1.
+4. Las dos vías dieron el mismo texto (temperature 0 y seed 42 por las dos; prompt_eval_count 103 y
+   eval_count 144 en ambas). Es un dato de esta corrida, no una garantía.
+5. Contenido de la salida (conducta del modelo, no del código): el 0,5B agrega un ejemplo inventado
+   con una localidad y una provincia que no están en Catalogos y un código postal de 5 dígitos, que
+   contradice el requisito que él mismo enuncia («4 dígitos»). AC-7 y AC-8 dan rc 0 sobre el
+   registro; esos nombres no se agregaron a Compuertas/localidades-permitidas.txt porque no son dato
+   del ejemplo sino salida del modelo y la compuerta no los marca. Queda para la presidencia si la
+   regla 10 del contrato alcanza también a la salida del modelo. Ilustra §5.6: el adaptador no cambia
+   la conducta; las reglas del dominio son las que deciden.

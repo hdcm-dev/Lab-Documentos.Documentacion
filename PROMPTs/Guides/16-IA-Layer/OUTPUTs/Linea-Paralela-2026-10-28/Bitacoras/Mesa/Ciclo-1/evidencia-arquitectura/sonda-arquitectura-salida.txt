@@ -1,0 +1,46 @@
+== S1 commit del caso base
+59399ba 2026-10-27 09:59:17 -0300
+== S2 carpetas de ApiWeb (lo que MI-05 copia: Domain, Application, Controllers, Sessions)
+Application
+appsettings.Development.json
+appsettings.json
+Contracts
+Controllers
+Domain
+Infrastructure
+MovilidadUrbana.ApiWeb.csproj
+Program.cs
+Properties
+Sessions
+== S3 dependencias de Controllers/ fuera de Domain/Application
+$WORKSPACE/LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor/src/MovilidadUrbana.ApiWeb/Controllers/EncuestasController.cs:2:using MovilidadUrbana.ApiWeb.Application.Encuestas;
+$WORKSPACE/LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor/src/MovilidadUrbana.ApiWeb/Controllers/EncuestasController.cs:3:using MovilidadUrbana.ApiWeb.Contracts;
+$WORKSPACE/LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor/src/MovilidadUrbana.ApiWeb/Controllers/EncuestasController.cs:4:using MovilidadUrbana.ApiWeb.Domain.Rules;
+$WORKSPACE/LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor/src/MovilidadUrbana.ApiWeb/Controllers/LocalidadesController.cs:2:using MovilidadUrbana.ApiWeb.Application.Abstractions;
+$WORKSPACE/LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor/src/MovilidadUrbana.ApiWeb/Controllers/LocalidadesController.cs:3:using MovilidadUrbana.ApiWeb.Application.Localidades;
+$WORKSPACE/LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor/src/MovilidadUrbana.ApiWeb/Controllers/LocalidadesController.cs:4:using MovilidadUrbana.ApiWeb.Contracts;
+$WORKSPACE/LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor/src/MovilidadUrbana.ApiWeb/Controllers/LocalidadesController.cs:5:using MovilidadUrbana.ApiWeb.Domain.Entities;
+== S4 LocalidadesController inyecta el repositorio (saltea el caso de uso)
+15:    ILocalidadRepository repository) : ControllerBase
+32:        var localidad = await repository.GetByIdAsync(id, cancellationToken);
+47:        var creada = (await repository.GetAllAsync(cancellationToken))
+60:        if (await repository.GetByIdAsync(id, cancellationToken) is null) return NotFound();
+67:        return Ok(ToDto((await repository.GetByIdAsync(id, cancellationToken))!));
+== S5 API pública de LocalidadService (¿hay validar sin guardar?)
+8:public sealed class LocalidadService(ILocalidadRepository repository)
+10:    public Task<IReadOnlyList<Localidad>> GetAllAsync(CancellationToken cancellationToken = default) =>
+13:    public async Task<Result> SaveAsync(LocalidadModel model, CancellationToken cancellationToken = default)
+60:    public async Task<Result> DeleteAsync(int id, CancellationToken cancellationToken = default)
+== S6 ProvinciaValida en Domain (¿controla catálogo?)
+21:    public static bool ProvinciaValida(string? provincia) => !string.IsNullOrWhiteSpace(provincia);
+== S7 puertos de IA de EA-2 (forma del contrato)
+9:    Task<RespuestaConFuentes> ResponderAsync(string pregunta, CancellationToken ct = default);
+15:    Task<string> ResponderAsync(string pedido, CancellationToken ct = default);
+== S8 carpetas que mira la prueba de arquitectura EA-3
+5:for d in Copia/Domain Copia/Application Nuevo/Application Nuevo/Infrastructure/AI; do
+== S9 paquetes que busca EA-3
+6:  n=$(grep -rlE '^using (Microsoft\.Extensions\.AI|Microsoft\.Agents|OllamaSharp|Microsoft\.Extensions\.VectorData|CommunityToolkit\.VectorData)' $d | wc -l)
+== S10 el adaptador de la vía B depende del servicio concreto de Application
+4:using MovilidadUrbana.ApiWeb.Application.Localidades;
+5:using MovilidadUrbana.Asistente.Application.Abstractions;
+24:public sealed class AsistenteDeMovilidadLlm(IChatClient chatConHerramientas, ChatOptions opciones, BuscadorDeRequisitos buscador, LocalidadService localidades) : IAsistenteDeMovilidad

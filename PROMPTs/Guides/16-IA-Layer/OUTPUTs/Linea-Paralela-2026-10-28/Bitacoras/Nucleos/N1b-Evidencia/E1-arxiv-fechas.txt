@@ -1,0 +1,8 @@
+1706.03762 | 2017-06-12T17:57:34Z | Attention Is All You Need
+2005.11401 | 2020-05-22T21:34:34Z | Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+2005.14165 | 2020-05-28T17:29:03Z | Language Models are Few-Shot Learners
+2203.02155 | 2022-03-04T07:04:42Z | Training language models to follow instructions with human feedback
+2210.03629 | 2022-10-06T01:00:32Z | ReAct: Synergizing Reasoning and Acting in Language Models
+2302.04761 | 2023-02-09T16:49:57Z | Toolformer: Language Models Can Teach Themselves to Use Tools
+2307.09288 | 2023-07-18T14:31:57Z | Llama 2: Open Foundation and Fine-Tuned Chat Models
+2412.15115 | 2024-12-19T17:56:09Z | Qwen2.5 Technical Report

@@ -1,0 +1,19 @@
+d01: «Voy en bondi y a veces en bici, casi todos los días.»
+  propuesta del modelo: {
+  "medios": ["bondi", "bici"],
+  "frecuencia": "casi todos los días"
+}
+  claves: medios [bicicleta, colectivo] · frecuencia «diaria»
+  ValidarPaso(2): sin errores
+  oráculo normalizacion-cerrada: pasa
+d02: «Algunos días por semana voy caminando y otros en moto.»
+  propuesta del modelo: {
+  "medios": ["caminando", "moto"],
+  "frecuencia": null
+}
+  claves: medios [caminata, moto] · frecuencia «»
+  ValidarPaso(2): frecuencia: Seleccione la frecuencia de uso.
+  oráculo normalizacion-cerrada: falla
+demostración: 1 de 2 entradas con todas sus claves en Catalogos (sin tasa)
+registro: 4 líneas en 04-Normalizacion-Contra-Catalogo.jsonl
+invariantes de código: se cumplen

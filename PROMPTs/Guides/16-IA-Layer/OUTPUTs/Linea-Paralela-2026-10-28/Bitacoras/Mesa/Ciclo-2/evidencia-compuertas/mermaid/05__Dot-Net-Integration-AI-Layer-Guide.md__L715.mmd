@@ -1,0 +1,51 @@
+flowchart TB
+  subgraph DEMO["Demo: copia de la API + Agregado"]
+    subgraph PRES["Adaptadores de entrada (Presentation)"]
+      UI["Página de chat Blazor"]
+      CNEW["AsistenteController: /asistente, /localidades/desde-texto, /encuestas/pasos/2/desde-texto"]
+      CCOP["Controllers /api/v1 (copia)"]
+      LIM["Limitador de concurrencia en la entrada: 503 + Retry-After"]
+    end
+    subgraph APP["Application (núcleo)"]
+      ORQ["AsistenteDeMovilidad: orquesta el turno, no escribe"]
+      UCN["ProponerLocalidadDesdeTexto, ProponerBajaDesdeTexto, ProponerPaso2DesdeTexto, ResultadosDeEncuestaService"]
+      NORM["NormalizadorDeCatalogos"]
+      UCC["LocalidadService, EncuestaService (copia)"]
+      PORTS["Puertos hacia la IA: IExtractorDeLocalidad, IExtractorDeBaja, IAyuda, otros"]
+      REPO["ILocalidadRepository, IEncuestaRepository, ISessionContext (copia)"]
+    end
+    DOM["Domain (copia): Catalogos, Rules, Policy, entidades"]
+    subgraph INF["Infrastructure"]
+      PERS["Persistence: EF Core SQLite (copia)"]
+      subgraph IA["Infrastructure/AI (agregado)"]
+        ADP["Adaptadores de salida: prompts y opciones"]
+        TOOLS["Herramientas de sólo lectura (AIFunction): rol de adaptador de entrada"]
+        PIPE["Cadena del IChatClient: caché apagada, UseFunctionInvocation, UseOpenTelemetry, OllamaSharp"]
+      end
+    end
+  end
+  OLL[("Servidor Ollama de prueba (OLLAMA_ENDPOINT)")]
+  subgraph EJ["Sólo en Examples/ (fuera de la demo)"]
+    E0405["04 y 05: embeddings, almacén vectorial, ayuda con recuperación"]
+    E07["07: agente de MAF con aprobación de herramientas"]
+    E08["08: servidor MCP de sólo lectura (otro adaptador de entrada)"]
+  end
+  UI --> LIM
+  CNEW --> LIM
+  LIM --> ORQ
+  CNEW --> UCN
+  CCOP --> UCC
+  UI -.->|"confirmación: operación normal de la API"| CCOP
+  ORQ --> PORTS
+  UCN --> PORTS
+  UCN --> NORM
+  UCN --> DOM
+  UCC --> DOM
+  UCC --> REPO
+  ADP -.->|implementa| PORTS
+  PERS -.->|implementa| REPO
+  ADP --> PIPE
+  PIPE --> TOOLS
+  TOOLS --> UCC
+  TOOLS --> UCN
+  PIPE --> OLL

@@ -1,0 +1,6 @@
+[k01] p=646 s=73 prompt_eval_ms=64190.9 eval_ms=18635.4 load_ms=10.3 total_ms=83108.2 reloj_ms=83318.2 num_ctx=8192 truncado_posible=False modelo_cargado_antes=True
+  prompt 10.06 tok/s · salida 3.92 tok/s · fórmula AJ-02 p/9,4 + s/4 = 87.0 s · oráculo dep13-clase-k: falla
+  salida: El padrón registra veinticinco localidades distribuidas por cinco provincias argentinas: Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza, Santa Fe y Buenos Aires. Cada entrada incluye el código postal y la cantidad de habitantes, ofreciendo un panorama demográfico detallado para la planificación de movilidad urbana en estas regiones específicas del país.
+[k02] p=645 s=95 prompt_eval_ms=86225.3 eval_ms=41336.2 load_ms=1 total_ms=127748 reloj_ms=127750.6 num_ctx=8192 truncado_posible=False modelo_cargado_antes=True
+  prompt 7.48 tok/s · salida 2.30 tok/s · fórmula AJ-02 p/9,4 + s/4 = 92.4 s · oráculo dep13-clase-k: falla
+  salida: El padrón incluye 20 localidades registradas para el ABM de Movilidad Urbana. Estas abarcan diversas regiones provinciales del país, distribuidas principalmente entre Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza, Santa Fe y Buenos Aires. Cada entrada contiene datos específicos como código postal y cantidad de habitantes, ofreciendo una visión detallada de la población en cada uno de estos puntos geográficos seleccionados para el estudio.

@@ -1,0 +1,45 @@
+== §6 (P-26, P-44, P-12, P-38, P-39, P-31) ==
+  0  npx -y                                                     .
+  0  GuessNumber|EchoTool|GetWeather                            .
+  0  «mismo modelo» (guía)                                   Dot-Net-Integration-AI-Layer-Guide.md
+  0  = true; (aprobación) en Examples/07                       Examples/07-Agente-Con-Aprobacion
+  0  Comentario                                                 .
+  0  mezcla sesiones                                            .
+  0  Evaluation en Demos/                                       Demos
+  0  Proveedor en Demos/                                        Demos
+  0  AyudaRag|ApprovalRequiredAIFunction en Demos/              Demos
+  0  \bC[1-8]\b fuera de CASO-/CTRL- (guía)                    Dot-Net-Integration-AI-Layer-Guide.md
+  0  \bM[0-9]{1,2}\b (guía)                                    Dot-Net-Integration-AI-Layer-Guide.md
+== §10.4 ==
+  0  pierde la sesión                                          .
+  0  falla al arrancar (con ValidateScopes)                     .
+  0  AyudaRag (Demos)                                           Demos
+  0  IAlmacenDeRequisitos (Demos)                               Demos
+  0  MapMcp (Demos)                                             Demos
+  0  McpServerTool (Demos)                                      Demos
+  0  AprobacionPendiente (Demos)                                Demos
+  0  aprobaciones/ (Demos)                                      Demos
+  3  UseDistributedCache|CacheConContador (Demos)               Demos
+  0  estado del servidor                                        .
+  0  si el cliente la expone                                    .
+  0  no se comparó punta a punta                               .
+  1  agentic workflow|flujo agéntico|flujo de trabajo          .
+  0  ia.cache.aciertos (sin prefijo)                            .
+  0  ReadCacheStreamingAsync y no con ReadCacheAsync            .
+  0  [McpServerTool] (todo)                                     .
+  0  [C: marcas (guía)                                         Dot-Net-Integration-AI-Layer-Guide.md
+== RV ==
+  0  int.MaxValue|llama3.1                                      .
+  0  MarkupString (Demos)                                       Demos
+  0  ApprovalRequiredAIFunction|AprobacionPendiente|aprobaciones/ (Demos) RV-21 Demos
+  2  doble capa (guía; leer)                                   Dot-Net-Integration-AI-Layer-Guide.md
+  4  «no vuelve a ejecutar las herramientas» (presente ≥1)  Dot-Net-Integration-AI-Layer-Guide.md
+== ids de bitácora en la guía (RV-08) ==
+  0  P-NN|P2-NN                                                 Dot-Net-Integration-AI-Layer-Guide.md
+  0  MI-NN                                                      Dot-Net-Integration-AI-Layer-Guide.md
+  0  C1-NN                                                      Dot-Net-Integration-AI-Layer-Guide.md
+  0  R-C, EA-, PC-, RV-, RD-PO, BIT-, REED, S-NN, N0..N6, DC-, SUP- Dot-Net-Integration-AI-Layer-Guide.md
+  0  Bitácora/Bitacoras/mesa/presidencia/jurado                Dot-Net-Integration-AI-Layer-Guide.md
+  0  ids en Examples/Demos (P-,MI-,C1-,PC-,RV-)                 Examples Demos
+== RD-PO-4 dominios ajenos ==
+  2  reclamo|pozo|semáforo|Movie|línea 1|ReportarIncidente    .

@@ -1,0 +1,15 @@
+248: ### 1.2 El árbol de decisión | flowchart TD
+361: ### 2.4 Línea de tiempo | timeline
+469: ### 3.2 Escenarios | flowchart TD
+716: ### 4.5 El diagrama único: Movilidad Urbana con capa de IA | flowchart TB
+945: ### 5.3 Composición y configuración validada | flowchart LR
+1205: ### 5.8 Métodos y marcos: MEAI, Agent Framework, Semantic Ke | flowchart TB
+1272: ### 5.9 Preguntas guía | flowchart TD
+1382: ### 6.2 La escalera de estrategias: un criterio, no una secu | flowchart TD
+1539: ### 6.6 Escalón 2: el pipeline de RAG en .NET | flowchart LR
+1889: ### 7.2 El mapa por mecanismo | flowchart TD
+2147: #### 7.5.2 La decisión es explícita y el contrato vive en el | sequenceDiagram
+2249: #### 7.6.2 Un workflow de verdad: el alta con un paso con mo | flowchart LR
+2734: ### 8.4 Probar sin modelo y con modelo: dos suites | flowchart LR
+2834: #### 8.5.1 El orden: caché → herramientas → telemetría → cli | flowchart LR
+3286: ### 9.4 El turno del asistente | sequenceDiagram

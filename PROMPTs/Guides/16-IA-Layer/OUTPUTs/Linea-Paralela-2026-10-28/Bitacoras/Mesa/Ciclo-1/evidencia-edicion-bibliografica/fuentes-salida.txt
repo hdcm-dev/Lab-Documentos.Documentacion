@@ -1,0 +1,35 @@
+N0b: filas=20 prefijo=['B'] formato=F01 fecha_por_tabla=True filas_sin_fecha=0 filas_sin_version_ni_fecha=4
+N1b: filas=24 prefijo=['H'] formato=F01 fecha_por_tabla=True filas_sin_fecha=0 filas_sin_version_ni_fecha=0
+N1: filas=27 prefijo=['E', 'F'] formato=F01 fecha_por_tabla=True filas_sin_fecha=0 filas_sin_version_ni_fecha=4
+N2: filas=15 prefijo=['F'] formato=F1 fecha_por_tabla=False filas_sin_fecha=0 filas_sin_version_ni_fecha=0
+N3b: filas=24 prefijo=['G'] formato=F1 fecha_por_tabla=False filas_sin_fecha=0 filas_sin_version_ni_fecha=0
+N3: filas=33 prefijo=['F'] formato=F1 fecha_por_tabla=False filas_sin_fecha=0 filas_sin_version_ni_fecha=0
+N4: filas=32 prefijo=['F'] formato=F01 fecha_por_tabla=True filas_sin_fecha=0 filas_sin_version_ni_fecha=16
+N5: filas=30 prefijo=['E', 'F'] formato=F01 fecha_por_tabla=True filas_sin_fecha=0 filas_sin_version_ni_fecha=15
+N6: filas=20 prefijo=['E', 'F'] formato=F01 fecha_por_tabla=False filas_sin_fecha=0 filas_sin_version_ni_fecha=0
+
+(a) ids presentes en más de un núcleo:
+   41 ids; p. ej. F01→['N1', 'N4', 'N5', 'N6']; F02→['N1', 'N4', 'N5', 'N6']; F03→['N1', 'N4', 'N5', 'N6']; F04→['N1', 'N4', 'N5', 'N6']; F05→['N1', 'N4', 'N5', 'N6']; F06→['N1', 'N4', 'N5', 'N6']; F07→['N1', 'N4', 'N5', 'N6']; F08→['N1', 'N4', 'N5', 'N6']
+
+(b) misma URL con ids distintos:
+   https://api.nuget.org/v3-flatcontainer/{id}/index.json  ←  N2:F15, N3:F1, N4:F30, N6:F15
+   https://arxiv.org/abs/2005.11401  ←  N1b:H05, N1:F01, N3:F28
+   https://arxiv.org/abs/2307.03172  ←  N3:F29, N5:F22
+   https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/  ←  N1b:H23, N2:F11, N4:F02
+   https://devblogs.microsoft.com/agent-framework/semantic-kernel-and-microsoft-agent-framework/  ←  N2:F12, N4:F26
+   https://docs.ollama.com/faq  ←  N3b:G13, N5:F17
+   https://genai.owasp.org/llmrisk/llm01-prompt-injection/  ←  N1:F16, N5:F13
+   https://github.com/awaescher/OllamaSharp  ←  N2:F7, N3:F24
+   https://github.com/microsoft/semantic-kernel  ←  N1:F22, N4:F03
+   https://learn.microsoft.com/en-us/agent-framework/agents/tools/tool-approval  ←  N4:F06, N6:F12
+   https://learn.microsoft.com/en-us/agent-framework/integrations/by-component/model-providers/ollama  ←  N4:F23, N6:F11
+   https://learn.microsoft.com/en-us/agent-framework/overview/  ←  N1:F17, N4:F01, N6:F08
+   https://learn.microsoft.com/en-us/dotnet/ai/conceptual/rag  ←  N1:F08, N3:F9, N6:F09
+   https://learn.microsoft.com/en-us/dotnet/ai/evaluation/libraries  ←  N3:F25, N5:F07
+   https://learn.microsoft.com/en-us/dotnet/ai/ichatclient  ←  N1:F05, N2:F2, N5:F05, N6:F06
+   https://learn.microsoft.com/en-us/dotnet/ai/iembeddinggenerator  ←  N1:F07, N2:F4, N3:F10
+   https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai  ←  N1:F04, N2:F1, N5:F04
+   https://learn.microsoft.com/en-us/dotnet/ai/quickstarts/structured-output  ←  N1:F10, N2:F5, N6:F07
+   https://learn.microsoft.com/en-us/dotnet/ai/vector-stores/overview  ←  N1:F09, N3:F2, N6:F10
+   https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai.distributedcachingchatclient  ←  N3b:G5, N5:F16
+   https://www.anthropic.com/engineering/building-effective-agents  ←  N0b:B03, N1:F02, N4:F21

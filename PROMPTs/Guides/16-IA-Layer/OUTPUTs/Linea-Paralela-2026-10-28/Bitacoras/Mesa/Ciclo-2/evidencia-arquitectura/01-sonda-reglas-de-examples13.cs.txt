@@ -1,0 +1,45 @@
+using MovilidadUrbana.Asistente.Application.Abstractions;
+using MovilidadUrbana.Asistente.Tests.Comun;
+
+namespace MovilidadUrbana.Asistente.Tests.Cableado;
+
+// SONDA de la relectura (no es parte de la demo): aplica a la demo las cinco reglas de Examples/13 que la
+// demo no prueba, con las familias de Capas.cs traducidas a los espacios de nombres de la demo.
+[TestFixture, Category("Sonda")]
+public sealed class SondaReglasDeExamples13
+{
+    static bool En(string? ns, params string[] r) => ns is not null && r.Any(x => ns == x || ns.StartsWith(x + "."));
+    static readonly string[] Dominio = ["MovilidadUrbana.ApiWeb.Domain"];
+    static readonly string[] Nucleo = ["MovilidadUrbana.ApiWeb.Domain", "MovilidadUrbana.ApiWeb.Application", "MovilidadUrbana.Asistente.Application"];
+    static readonly string[] Infra = ["MovilidadUrbana.ApiWeb.Infrastructure", "MovilidadUrbana.Asistente.Infrastructure"];
+    static readonly string[] Persist = ["MovilidadUrbana.ApiWeb.Infrastructure", "MovilidadUrbana.Asistente.Infrastructure.Persistence"];
+    static readonly string[] AdIA = ["MovilidadUrbana.Asistente.Infrastructure.AI"];
+    static readonly string[] Pres = ["MovilidadUrbana.ApiWeb.Controllers", "MovilidadUrbana.ApiWeb.Sessions", "MovilidadUrbana.ApiWeb.Contracts", "MovilidadUrbana.Asistente.Presentation"];
+    static readonly string[] IA = ["Microsoft.Extensions.AI", "Microsoft.Agents.AI", "ModelContextProtocol", "OllamaSharp"];
+    static readonly string[] Datos = ["Microsoft.EntityFrameworkCore", "Microsoft.Data.Sqlite"];
+    static readonly string[] CasosDeUsoNs = ["MovilidadUrbana.ApiWeb.Application.Localidades", "MovilidadUrbana.ApiWeb.Application.Encuestas",
+        "MovilidadUrbana.Asistente.Application.Localidades", "MovilidadUrbana.Asistente.Application.Encuestas", "MovilidadUrbana.Asistente.Application.Asistente"];
+
+    static List<Type> Tipos(string[] capa) => typeof(IAsistenteDeMovilidad).Assembly.GetTypes().Where(t => En(t.Namespace, capa)).ToList();
+
+    static void Informar(string regla, string[] capa, Func<string, bool> prohibido)
+    {
+        var tipos = Tipos(capa);
+        var v = ReglaDeCapas.Violaciones(tipos, prohibido);
+        TestContext.Out.WriteLine($"## {regla}: {tipos.Count} tipos, {v.Count} hallazgos");
+        foreach (var x in v.Distinct().Take(400)) TestContext.Out.WriteLine("   " + x);
+    }
+
+    [Test]
+    public void Reglas()
+    {
+        Informar("R2 dominio no conoce Application", Dominio, ns => En(ns, Nucleo) && !En(ns, Dominio));
+        // R3: Examples/13 usa EsCasoDeUso (tipos *Service y Proponer*): acá se aproxima por espacio de nombres
+        // de casos de uso, así que también cuenta records de esos espacios; el detalle se lee en la salida.
+        Informar("R3 Infrastructure no usa casos de uso ni Presentation", Infra, ns => En(ns, CasosDeUsoNs) || En(ns, Pres));
+        Informar("R4 persistencia no conoce IA", Persist, ns => En(ns, IA));
+        Informar("R5 adaptador de IA no conoce acceso a datos ni persistencia", AdIA, ns => En(ns, Datos) || En(ns, Persist));
+        Informar("R6 Presentation no conoce acceso a datos, proveedor ni Infrastructure", Pres, ns => En(ns, Datos) || En(ns, "OllamaSharp") || En(ns, Infra));
+        Assert.Pass();
+    }
+}

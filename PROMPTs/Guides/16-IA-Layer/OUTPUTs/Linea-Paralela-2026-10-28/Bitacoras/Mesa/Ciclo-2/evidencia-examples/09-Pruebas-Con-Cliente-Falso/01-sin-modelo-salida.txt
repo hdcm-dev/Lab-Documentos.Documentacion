@@ -1,0 +1,105 @@
+EN COLA build (posición 2); esperando hasta 90 min...
+CONCEDIDO build a ex09 hasta 2026-10-28T16:30:25-0300 (renová con: <gestor-de-turnos> renovar build ex09)
++ date -Is
+2026-10-28T19:05:26+00:00
++ dotnet --version
+10.0.403
++ dotnet build 09-Pruebas-Con-Cliente-Falso.slnx
++ tail -4
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:12.27
++ grep -vE '^\s+at '
++ dotnet test 09-Pruebas-Con-Cliente-Falso.slnx --no-build --logger 'console;verbosity=normal'
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running all tests in /ex/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests.dll
+   NUnit3TestExecutor discovered 41 of 41 NUnit test cases using Current Discovery mode, Non-Explicit run
+  Passed Scoped_SinCruce_BNoVeNiBorraLoDeA(Scoped,False) [933 ms]
+  Passed Scoped_SinCruce_BNoVeNiBorraLoDeA(Scoped,True) [50 ms]
+  Passed Singleton_ValidateScopesFalse_CasoRojo_BVeYBorraLoDeA_SinError [29 ms]
+  Passed Singleton_ValidateScopesTrue_FallaEnCadaLlamadaALaHerramienta [18 ms]
+pedido 1: 200 Retry-After=-
+pedido 2: 200 Retry-After=-
+pedido 3: 200 Retry-After=-
+pedido 4: 503 Retry-After=30
+
+  Passed CuartoPedidoSimultaneo_Recibe503ConRetryAfter [8 s]
+  Passed EntradaDe2001Caracteres_Responde400_SinLlamarAlModelo [138 ms]
+  Passed UnaSesionPorEncabezado_LaRespuestaDevuelveElMismoId [69 ms]
+  Passed ConElLargoCompletoOSinLargoEsperado_LaRespuestaPasa(5134L) [7 ms]
+  Passed ConElLargoCompletoOSinLargoEsperado_LaRespuestaPasa(null) [1 ms]
+  Passed ElHandlerLeePromptEvalCachedCount_QueOllamaSharpNoExpone [158 ms]
+  Passed ElHandlerTambienLeePorStreaming_SinCambiarLosFragmentos [9 ms]
+  Passed InputTokenCountMenorQueElEsperado_EsContextoTruncado [20 ms]
+  Passed InputTokenCountMenorQueElEsperado_PorStreaming_TambienEsContextoTruncado [28 ms]
+  Passed SinElCampoEnLaLineaFinal_LaLecturaQuedaNula [17 ms]
+spans: orchestrate_tools | chat | execute_tool contar_localidades_por_provincia | chat
+
+  Passed ActivityListener_ConLaFuenteCorrectaVeSpans_ConOtraNinguno("MovilidadUrbana.AI",True) [178 ms]
+  Passed ActivityListener_ConLaFuenteCorrectaVeSpans_ConOtraNinguno("MovilidadUrbana.OtraFuente",False) [12 ms]
+  Passed ElPipelineQuedaEnElOrden_Cache_Funciones_Telemetria_Cliente [9 ms]
+  Passed EnableSensitiveData_SoloEnDevelopment("Development",True) [9 ms]
+  Passed EnableSensitiveData_SoloEnDevelopment("Production",False) [8 ms]
+  Passed NingunLiteralFueraDeLasOpciones [87 ms]
+  Passed SinTimeoutSegundos_NoArranca [18 ms]
+  Passed P1_CacheFria_ConUnaHerramienta_DejaOrchestrateTools_Chat_ExecuteTool_Chat [23 ms]
+  Passed P2_CacheCaliente_PorGetResponseAsync_CeroSpans_CeroLlamadas_ContadorEnUno [25 ms]
+  Passed P2b_CasoRojo_SoloReadCacheAsync(True,1) [30 ms]
+  Passed P2b_CasoRojo_SoloReadCacheAsync(False,0) [26 ms]
+  Passed P2b_Streaming_CoalesceStreamingUpdatesPorDefecto_CeroLlamadas_ContadorEnUno [14 ms]
+  Passed P2b_Streaming_CoalesceStreamingUpdatesFalse_CeroLlamadas_ContadorEnUno [6 ms]
+  Passed P3_DosSesiones_MismoTexto_DosFallos_LlamadasEnLasDos [8 ms]
+  Passed P4_CasoRojo_ClaveMalArmada_SirveLaRespuestaVieja("sin VersionDeDatos en la clave") [10 ms]
+  Passed P4_CasoRojo_ClaveMalArmada_SirveLaRespuestaVieja("versión leída al crear la instancia") [6 ms]
+  Passed P4_EscrituraConfirmada_InvalidaLaRespuestaCacheada_MismaSesionYMismaInstancia [15 ms]
+  Passed ContratoDeSalidaEstructurada_CasoFeliz_Malformado_YEsquema [35 ms]
+Relevance: NumericMetric interpretación=Average diagnósticos=1
+Coherence: NumericMetric interpretación=Average diagnósticos=1
+Groundedness: NumericMetric interpretación=Average diagnósticos=1
+Medio en catálogo: BooleanMetric interpretación=Good diagnósticos=0
+
+NumCtxLlega_YElDetectorVeElTruncado: ConModelo: no medido (falta OLLAMA_ENDPOINT).
+Paso2_EvaluadoPorUnJuez: Juez: no medido (corre sólo bajo demanda, con CONMODELO_JUEZ=1).
+CacheFriaYCaliente_ConElModelo: ConModelo: no medido (falta OLLAMA_ENDPOINT).
+Paso2_ContraElModelo: ConModelo: no medido (falta OLLAMA_ENDPOINT).
+  Passed EvaluacionConJuezFalso_LasMetricasAparecen_YQuedaElAlmacen [434 ms]
+  Passed MedioEnCatalogoEvaluator_DaLaMetricaConSuMotivo("{\"medios\":[\"piedra\"],\"frecuencia\":\"diaria\"}",False,"piedra") [86 ms]
+  Passed MedioEnCatalogoEvaluator_DaLaMetricaConSuMotivo("{\"medios\":[\"bondi\",\"bici\"],\"frecuencia\":\"diaria\"}",False,"bondi") [18 ms]
+  Passed MedioEnCatalogoEvaluator_DaLaMetricaConSuMotivo("{\"medios\":[\"colectivo\",\"bicicleta\"],\"frecuencia\":\"diaria\"}",True,"catálogo") [< 1 ms]
+  Passed MedioEnCatalogoEvaluator_DaLaMetricaConSuMotivo("no es JSON",False,"no es JSON") [< 1 ms]
+  Skipped NumCtxLlega_YElDetectorVeElTruncado [62 ms]
+  Skipped Paso2_EvaluadoPorUnJuez [11 ms]
+  Skipped CacheFriaYCaliente_ConElModelo [5 ms]
+  Skipped Paso2_ContraElModelo [4 ms]
+
+Test Run Successful.
+Total tests: 37
+     Passed: 37
+ Total time: 17.3825 Seconds
++ tail -15
++ dotnet list 09-Pruebas-Con-Cliente-Falso.slnx package --vulnerable --include-transitive
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+The following sources were used:
+   https://api.nuget.org/v3/index.json
+
+The given project `MovilidadUrbana.Ejemplos.PruebasConClienteFalso` has no vulnerable packages given the current sources.
+The given project `MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests` has no vulnerable packages given the current sources.
++ tail -2
++ dotnet tool install --tool-path /tmp/herramientas Microsoft.Extensions.AI.Evaluation.Console --version 10.11.0
+You can invoke the tool using the following command: aieval
+Tool 'microsoft.extensions.ai.evaluation.console' (version '10.11.0') was successfully installed.
++ tail -5
++ /tmp/herramientas/aieval report --path tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/bin/Debug/net10.0/almacen-evaluacion --output informe-evaluacion.html
+The aieval .NET tool collects usage data in order to help us improve your experience. The data is anonymous and doesn't include personal information. You can opt-out of this data collection by setting the DOTNET_AIEVAL_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+
+info: aieval[0] Storage root path: /ex/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/bin/Debug/net10.0/almacen-evaluacion
+info: aieval[0] Execution: cableado-juez-falso Scenario: MovilidadUrbana.Encuesta.Paso2 Iteration: 1
+info: aieval[0] Report: /ex/informe-evaluacion.html [html]
++ ls -la informe-evaluacion.html
+-rw-r--r-- 1 root root 912581 Oct 28 19:06 informe-evaluacion.html
+LIBERADO build por ex09

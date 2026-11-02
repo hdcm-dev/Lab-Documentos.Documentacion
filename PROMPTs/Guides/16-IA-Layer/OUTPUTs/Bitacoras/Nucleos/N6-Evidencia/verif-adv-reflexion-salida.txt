@@ -1,0 +1,15 @@
+ConfigureSessionOptions: Func`4 NullableAttribute(System.Collections.ObjectModel.ReadOnlyCollection`1[System.Reflection.CustomAttributeTypedArgument])
+RunSessionHandler: Func`4 NullableAttribute(System.Collections.ObjectModel.ReadOnlyCollection`1[System.Reflection.CustomAttributeTypedArgument]),ExperimentalAttribute(MCPEXP002)
+SessionMode: HttpServerSessionMode 
+Stateless: Boolean 
+EnableLegacySse: Boolean ObsoleteAttribute(Legacy SSE transport has no built-in request backpressure and should only be used with completely trusted clients in isolated processes. Use Streamable HTTP instead.)
+EventStreamStore: ISseEventStreamStore ObsoleteAttribute(Stateful Streamable HTTP mode is a back-compat-only escape hatch for 2025-11-25 protocol revision clients and earlier. Set HttpServerTransportOptions.SessionMode = HttpServerSessionMode.Stateless (the default as of the 2026-07-28 protocol revision) for new code. See SEP-2567.)
+SessionMigrationHandler: ISessionMigrationHandler ObsoleteAttribute(Stateful Streamable HTTP mode is a back-compat-only escape hatch for 2025-11-25 protocol revision clients and earlier. Set HttpServerTransportOptions.SessionMode = HttpServerSessionMode.Stateless (the default as of the 2026-07-28 protocol revision) for new code. See SEP-2567.)
+PerSessionExecutionContext: Boolean ObsoleteAttribute(Stateful Streamable HTTP mode is a back-compat-only escape hatch for 2025-11-25 protocol revision clients and earlier. Set HttpServerTransportOptions.SessionMode = HttpServerSessionMode.Stateless (the default as of the 2026-07-28 protocol revision) for new code. See SEP-2567.)
+IdleTimeout: TimeSpan ObsoleteAttribute(Stateful Streamable HTTP mode is a back-compat-only escape hatch for 2025-11-25 protocol revision clients and earlier. Set HttpServerTransportOptions.SessionMode = HttpServerSessionMode.Stateless (the default as of the 2026-07-28 protocol revision) for new code. See SEP-2567.)
+MaxIdleSessionCount: Int32 ObsoleteAttribute(Stateful Streamable HTTP mode is a back-compat-only escape hatch for 2025-11-25 protocol revision clients and earlier. Set HttpServerTransportOptions.SessionMode = HttpServerSessionMode.Stateless (the default as of the 2026-07-28 protocol revision) for new code. See SEP-2567.)
+TimeProvider: TimeProvider NullableAttribute(1)
+default SessionMode = Stateless
+default Stateless = True
+ChatClientExtensions.AsAIAgent(IChatClient chatClient, String instructions, String name, String description, IList`1 tools, ILoggerFactory loggerFactory, IServiceProvider services)
+ChatClientExtensions.AsAIAgent(IChatClient chatClient, ChatClientAgentOptions options, ILoggerFactory loggerFactory, IServiceProvider services)

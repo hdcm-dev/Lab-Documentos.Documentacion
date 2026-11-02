@@ -1,0 +1,14 @@
+CONCEDIDO build a aprob-impacto hasta 2026-10-28T14:37:16-0300 (renová con: <gestor-de-turnos> renovar build aprob-impacto)
+10.0.403
+# runtime 10.0.14; MEAI 10.11.0.0
+[1] streaming x2, Coalesce=por defecto (valor efectivo True): llamadas al cliente=1; ReadCacheAsync llamadas=2 aciertos=1; ReadCacheStreamingAsync llamadas=0 aciertos=0; WriteCacheAsync=1; WriteCacheStreamingAsync=0
+[1] streaming x2, Coalesce=True (valor efectivo True): llamadas al cliente=1; ReadCacheAsync llamadas=2 aciertos=1; ReadCacheStreamingAsync llamadas=0 aciertos=0; WriteCacheAsync=1; WriteCacheStreamingAsync=0
+[1] streaming x2, Coalesce=False (valor efectivo False): llamadas al cliente=1; ReadCacheAsync llamadas=0 aciertos=0; ReadCacheStreamingAsync llamadas=2 aciertos=1; WriteCacheAsync=0; WriteCacheStreamingAsync=1
+[2] GetResponseAsync x2: llamadas al cliente=1; ReadCacheAsync aciertos=1; ReadCacheStreamingAsync llamadas=0
+[3] sólo ReadCacheAsync, streaming x2, Coalesce por defecto: llamadas al cliente=1; contador=1
+[3'] sólo ReadCacheAsync, streaming x2, Coalesce=false: llamadas al cliente=1; contador=0
+[4] [SessionId, VersionDeDatos]: 1.er pedido llamadas=1; tras escritura (v 0→1) llamadas=1 → fallo de caché
+[4] caso rojo [SessionId]: 1.er pedido llamadas=1; tras escritura (v 0→1) llamadas=0 → ACIERTO (respuesta vieja)
+[5] ConversationId con valor, x2: llamadas al cliente=2 (2 = no cachea)
+[5'] EnableCaching sobrescrito a false, 2 normales + 2 streaming: llamadas al cliente=4
+LIBERADO build por aprob-impacto

@@ -1,0 +1,21 @@
+# Guía l. 2017-2022 y 3652
+| la misma pregunta, con «Misiones» | `/api/chat` | alguna herramienta: 0/10 [0,00; 0,28] | dice «fuera del catálogo» 9/10 [0,60; 0,98]; afirma un conteo con número 0/10 [0,00; 0,28] |
+| ídem | `/v1` | 0/10 [0,00; 0,28] | «fuera del catálogo» 10/10 [0,72; 1,00]; conteo con número 0/10 [0,00; 0,28] |
+**Lo que esto enseña.** Con «Misiones», el modelo no pidió la herramienta: leyó la lista de provincias en el `[Description]` del parámetro y contestó sin consultar. Por lectura manual, entre 3 y 4 de cada 10 respuestas afirmaron «no hay localidades» o «cero» sin haber consultado (existencia). La conclusión correcta no es «la validación del argumento protege la respuesta»: cuando el modelo decide no llamar a la herramienta, la validación no participa. La garantía es la **invariante**: el número, cuando lo hay, lo calcula el caso de uso, y nada escribe. Sacar el catálogo de la descripción cambiaría la tasa, pero eso no se midió.
+2. *Con «Misiones», que no está en el catálogo, el modelo contestó «cero» sin consultar. ¿Qué garantía quedó en pie?* Que cuando hay un número lo calcula el caso de uso y que nada escribe; la validación del argumento no participa si el modelo no llama a la herramienta (§7.3.4).
+
+# criterio previo Ex06
+9:| HerramientasConModeloTests(ollama) | qwen3.5:4b (appsettings), muestreo «Instruct non-thinking general», think false, num_ctx 8192, /api/chat, bucle 3/2 | este pedido | 2 pedidos × 10 semillas 
+  (regex \b\d+\s+localidad)
+
+== tool-calling-ollama.txt
+3:s=3 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False «No hay localidades cargadas para la provincia de Misiones en el catálogo actual, ya que solo se incluyen datos para Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe.»
+4:s=4 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False «Actualmente no se cargan localidades de la provincia de Misiones en el catálogo, por lo que el número total es cero.»
+5:s=5 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False «No hay localidades cargadas para la provincia de Misiones, ya que el catálogo solo incluye datos para Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe.»
+9:s=9 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=False afirma_conteo=False «No se pueden cargar localidades en la provincia de Misiones porque solo existen datos para Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe. Por lo tanto, el número total de localidades en Misiones es cero.»
+== tool-calling-openai-compatible.txt
+3:s=3 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False «No hay localidades cargadas para la provincia de Misiones en el catálogo actual, ya que solo se incluyen datos para Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe.»
+4:s=4 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False «Actualmente no se cargan localidades de la provincia de Misiones en el catálogo, por lo que el número total es cero.»
+5:s=5 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False «No hay localidades cargadas para la provincia de Misiones, ya que el catálogo solo incluye datos para Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe.»
+8:s=8 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False «No puedo responder esa pregunta porque la provincia de "Misiones" no está incluida en las opciones del catálogo que tengo acceso (Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza, Santa Fe). Por lo tanto, no se cargaron localidades para esa región.»
+10:s=10 pedido=Misiones pidio_herramienta=False dice_fuera_de_catalogo=True afirma_conteo=False «No puedo responder esa pregunta porque Misiones no está entre las provincias que tienen localidades cargadas en el catálogo disponible (Buenos Aires, Chaco, Córdoba, Corrientes, Entre Ríos, Mendoza y Santa Fe). Por lo tanto, la cantidad de localidades para esa provincia es cero.»

@@ -1,0 +1,25 @@
+cota exacta unilateral 95 % para 0/n (Clopper-Pearson): 1-0.05**(1/n)
+  n=5: 0.451
+  n=10: 0.259
+  n=12: 0.221
+  n=16: 0.171
+Wilson bilateral 95 % para 0/10: limite superior 0.278 (ver wilson-salida.txt)
+prueba del signo bilateral exacta, todos los discordantes en un sentido: p = 2*0.5**d
+  d=5: p=0.0625
+  d=6: p=0.0312
+  d=7: p=0.0156
+  d=9: p=0.0039
+  d=10: p=0.0020
+prueba del signo con discordantes mixtos (la regla del codigo dice 'no separado'):
+  7 vs 1: p=0.0703
+  9 vs 1: p=0.0215
+  8 vs 2: p=0.1094
+  2 vs 1: p=1.0000
+  3 vs 2: p=1.0000
+estimando 'pasa en m/m': si cada semilla acierta con prob p, P(pasa 3/3)=p**3
+  p=0.7: p^3=0.343; p^5=0.168
+  p=0.8: p^3=0.512; p^5=0.328
+  p=0.9: p^3=0.729; p^5=0.590
+  p=0.95: p^3=0.857; p^5=0.774
+presupuesto E.5 regla 5: 45 min / 27 s = 100 llamadas; K=10 x m=5 = 50 ; 4 x m=10 = 40
+azar hit@3 con 12 enunciados y 2 relevantes: 1-C(10,3)/C(12,3) = 0.455

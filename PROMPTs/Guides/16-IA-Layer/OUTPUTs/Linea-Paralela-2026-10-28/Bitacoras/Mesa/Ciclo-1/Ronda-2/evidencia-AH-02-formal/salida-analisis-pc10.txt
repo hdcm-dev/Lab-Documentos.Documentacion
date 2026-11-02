@@ -1,0 +1,26 @@
+modelo qwen3.5:4b@d8b0f5e9760c… Ollama 0.40.11 /api/chat T 0.7 num_predict 300 think=false; inicio 2026-10-28T15:05:19Z
+errores HTTP: 0 de 59
+
+[1] Por pedido (semillas 1..8), criterio: exactamente una llamada a buscar_requisitos
+  P0: 01101011  5/8  Wilson95 [0.31, 0.86]  «¿Cuántos dígitos lleva el código postal de una localidad?»
+  P1: 11111111  8/8  Wilson95 [0.68, 1.00]  «¿Qué formato tiene que tener el código postal al cargar una localidad?»
+  P2: 11111111  8/8  Wilson95 [0.68, 1.00]  «¿Cuál es la cantidad mínima de habitantes que acepta una localidad?»
+  P3: 11111111  8/8  Wilson95 [0.68, 1.00]  «¿Qué requisitos tiene el nombre de una localidad?»
+  P4: 11111111  8/8  Wilson95 [0.68, 1.00]  «¿Qué medios de transporte se pueden registrar en la encuesta?»
+  P5: 11111111  8/8  Wilson95 [0.68, 1.00]  «¿Es obligatorio indicar la provincia al cargar una localidad?»
+  semilla: s1=5/6 s2=6/6 s3=6/6 s4=5/6 s5=6/6 s6=5/6 s7=6/6 s8=6/6
+
+[2] Agregado 45/48 = 0.938; Wilson ingenuo (48 ensayos independientes) [0.83, 0.98]
+  ICC(ANOVA) = 0.286; efecto de diseño 1+(m-1)ICC = 3.00; n efectivo ≈ 16.0 (de 48)
+  bootstrap por conglomerado (se remuestrean los 6 pedidos, 20000 réplicas) IC95 percentil [0.81, 1.00]
+  homogeneidad entre pedidos: chi2 = 16.00 (gl 5); p por permutación = 0.0179
+  efecto de la semilla entre pedidos (¿la semilla s arrastra el mismo resultado en todos?): Cochran Q = 7.00 (gl 7); p por permutación = 1.0000
+
+[3] P0 semillas 1..8: 5/8; P0 semillas 1001..1008: 7/8 (11111110); Fisher exacto bilateral p = 0.569
+
+[4] Reproducibilidad: misma semilla, mismo pedido, otra corrida (bloque C frente a A)
+  P0 seed 1: idéntica = True  (ok False / False)
+  P0 seed 2: idéntica = True  (ok True / True)
+  P0 seed 3: idéntica = True  (ok True / True)
+
+latencia por corrida: mediana 27.0 s, máx 68.3 s, total 25.4 min

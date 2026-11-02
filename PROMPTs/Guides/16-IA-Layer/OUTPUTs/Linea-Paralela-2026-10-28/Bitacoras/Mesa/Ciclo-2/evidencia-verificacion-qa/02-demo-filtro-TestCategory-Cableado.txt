@@ -1,0 +1,8 @@
+  All projects are up-to-date for restore.
+  MovilidadUrbana.Asistente -> /ex/src/MovilidadUrbana.Asistente/bin/Debug/net10.0/MovilidadUrbana.Asistente.dll
+  MovilidadUrbana.Asistente.Tests -> /ex/tests/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll
+Test run for /ex/tests/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+No test matches the given testcase filter `TestCategory=Cableado` in /ex/tests/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll
+
+LIBERADO build por verificacion-qa-c2

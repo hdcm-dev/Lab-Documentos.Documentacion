@@ -1,0 +1,12 @@
+v1 rc=0 28s
+ext rc=0 80s
+fdc-01 rc=0 14s
+fdc-02 rc=0 9s
+fdc-03 rc=0 9s
+fdc-04 rc=0 11s
+fdc-05 rc=0 13s
+fdc-06 rc=0 11s
+fdc-07 rc=0 11s
+fdc-08 rc=0 10s
+fdc-09 rc=0 9s
+fdc-10 rc=0 13s

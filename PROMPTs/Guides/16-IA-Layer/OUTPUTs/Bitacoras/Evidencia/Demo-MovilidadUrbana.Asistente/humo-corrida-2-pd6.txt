@@ -1,0 +1,18 @@
+CONCEDIDO <recurso-compartido> a demo-asistente hasta 2026-10-27T11:58:15-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> demo-asistente)
+[demo] num_ctx = 65536 (arnes)
+An issue was encountered verifying workloads. For more information, run "dotnet workload update".
+Test run for /artefactos/demo/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 5.0.0.0: Test execution started
+Running selected tests in /artefactos/demo/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+pd6-01 (demo-pd6-pedido): pasa Eliminar la localidad «Resistencia» (Chaco), id 2, de tu sesión.
+
+NUnit Adapter 5.0.0.0: Test execution complete
+  Passed Pd6_BajaConAprobacion [58 s]
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 1.0274 Minutes
+LIBERADO <recurso-compartido> por demo-asistente

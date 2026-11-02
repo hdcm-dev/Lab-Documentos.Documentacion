@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!-- Compila SÓLO las carpetas copiadas de MovilidadUrbana.ApiWeb, sin nada de Agregado/ ni del
+       Program.cs de la demo. Prueba que la copia es un cierre de compilación. Usa los mismos paquetes
+       y versiones que el MovilidadUrbana.ApiWeb.csproj de origen. Se corre con verificar-copia.sh. -->
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../../src/MovilidadUrbana.Asistente/Domain/**/*.cs" />
+    <Compile Include="../../src/MovilidadUrbana.Asistente/Application/**/*.cs" />
+    <Compile Include="../../src/MovilidadUrbana.Asistente/Contracts/**/*.cs" />
+    <Compile Include="../../src/MovilidadUrbana.Asistente/Controllers/**/*.cs" />
+    <Compile Include="../../src/MovilidadUrbana.Asistente/Sessions/**/*.cs" />
+    <Compile Include="../../src/MovilidadUrbana.Asistente/Infrastructure/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.11" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.17.3" />
+  </ItemGroup>
+
+</Project>

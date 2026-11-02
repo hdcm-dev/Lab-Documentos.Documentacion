@@ -1,0 +1,41 @@
+CONCEDIDO build a ex03-salida hasta 2026-10-28T15:23:10-0300 (renová con: <gestor-de-turnos> renovar build ex03-salida)
+10.0.403
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:07.61
+  Determining projects to restore...
+  Restored /ex/tests/MovilidadUrbana.SalidaEstructurada.Tests/MovilidadUrbana.SalidaEstructurada.Tests.csproj (in 541 ms).
+  1 of 2 projects are up-to-date for restore.
+  MovilidadUrbana.SalidaEstructurada -> /ex/src/MovilidadUrbana.SalidaEstructurada/bin/Debug/net10.0/MovilidadUrbana.SalidaEstructurada.dll
+  MovilidadUrbana.SalidaEstructurada.Tests -> /ex/tests/MovilidadUrbana.SalidaEstructurada.Tests/bin/Debug/net10.0/MovilidadUrbana.SalidaEstructurada.Tests.dll
+Test run for /ex/tests/MovilidadUrbana.SalidaEstructurada.Tests/bin/Debug/net10.0/MovilidadUrbana.SalidaEstructurada.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /ex/tests/MovilidadUrbana.SalidaEstructurada.Tests/bin/Debug/net10.0/MovilidadUrbana.SalidaEstructurada.Tests.dll
+   NUnit3TestExecutor discovered 16 of 16 NUnit test cases using Current Discovery mode, Non-Explicit run
+format: {"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":{"tipo":{"type":"string","enum":["Alta","Modificacion"]},"id":{"type":["integer","null"]},"nombre":{"type":["string","null"]},"provincia":{"type":["string","null"]},"codigoPostal":{"type":["string","null"]},"habitantes":{"type":["integer","null"]}},"required":["tipo","id","nombre","provincia","codigoPostal","habitantes"]}
+options: {"num_ctx":8192,"presence_penalty":1.5,"temperature":0.7,"top_k":20,"top_p":0.8}; think: False
+
+  Passed ContenidoQueNoEsJson_PorElClienteReal_DaNull [371 ms]
+  Passed ElPedidoLlevaElEsquemaEnFormat_YLasOpcionesPorPedido [53 ms]
+  Passed AltaConId_SeDescarta [22 ms]
+  Passed CpInventadoQuePasaLasReglas_LlegaSinErrores_YSoloGuardaElClicDeLaPersona [19 ms]
+  Passed EntradaMasLargaQueElMaximo_NoLlamaAlModelo [7 ms]
+  Passed FormaValidaPeroInvalidaParaElDominio_LaPantallaPideLosDatos [4 ms]
+  Passed IdDeOtraSesion_SeDescartaComoInexistente_SinEscrituras [61 ms]
+  Passed IdNegativo_SeDescartaSinTocarElRepositorio [2 ms]
+  Passed JsonMalformado_TryGetResultDaFalso_YLaAplicacionSigueSinIA [7 ms]
+  Passed LoQueLasReglasCopiadasDejanPasar_LaEntradaDeIALoRechaza("provincia","{\"tipo\":\"Alta\",\"id\":null,\"nombre\":\"Posadas\",\"provincia\":\"Misiones\",\"codigoPostal\":\"3300\",\"habitantes\":1}") [12 ms]
+  Passed LoQueLasReglasCopiadasDejanPasar_LaEntradaDeIALoRechaza("codigoPostal","{\"tipo\":\"Alta\",\"id\":null,\"nombre\":\"Goya\",\"provincia\":\"Corrientes\",\"codigoPostal\":\"٣٤٥٠\",\"habitantes\":1}") [4 ms]
+  Passed LoQueLasReglasCopiadasDejanPasar_LaEntradaDeIALoRechaza("nombre","{\"tipo\":\"Alta\",\"id\":null,\"nombre\":\"NOMBRE_DE_61\",\"provincia\":\"Corrientes\",\"codigoPostal\":\"3450\",\"habitantes\":1}") [1 ms]
+  Passed Modificacion_LoQueElTextoNoCambiaSaleDeLaEntidadDeLaSesion [4 ms]
+  Passed ProvinciaEnMinusculas_SeNormalizaAlCatalogo [2 ms]
+  Passed TipoFueraDelEnum_TieneFormaPeroSeDescartaAntesDeLaPantalla [2 ms]
+Extraccion_ConElServidorDePrueba: Sin OLLAMA_ENDPOINT: no medido.
+  Skipped Extraccion_ConElServidorDePrueba [41 ms]
+
+Test Run Successful.
+Total tests: 15
+     Passed: 15
+ Total time: 2.8157 Seconds

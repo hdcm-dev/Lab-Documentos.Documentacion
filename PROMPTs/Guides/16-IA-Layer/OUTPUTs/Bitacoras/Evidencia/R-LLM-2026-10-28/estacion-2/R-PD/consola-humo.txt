@@ -1,0 +1,23 @@
+[demo] num_ctx = 8192 (arnes-ps-tras-carga)
+[demo] sin embeddings persistidos: PD-2 se saltará (correr antes «embeddings»)
+An issue was encountered verifying workloads. For more information, run "dotnet workload update".
+Test run for /artefactos/demo/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 5.0.0.0: Test execution started
+Running selected tests in /artefactos/demo/MovilidadUrbana.Asistente.Tests/bin/Debug/net10.0/MovilidadUrbana.Asistente.Tests.dll
+   NUnit3TestExecutor discovered 3 of 3 NUnit test cases using Current Discovery mode, Non-Explicit run
+pd2-01 (demo-pd2-cita): pasa fuente LocalidadPolicy.RequisitoDelCodigoPostal; plan EMB-C: no ejecutado contra un modelo de embeddings
+
+  Passed Pd2_AyudaConCita [4 s]
+pd3-01 (demo-pd3-habitantes): pasa decision 03 faltan:habitantes; habitantes propuesto por el modelo: null
+
+  Passed Pd3_SinHabitantes [5 s]
+pd6-01 (demo-pd6-pedido): pasa Eliminar la localidad «Resistencia» (Chaco), id 2, de tu sesión.
+
+NUnit Adapter 5.0.0.0: Test execution complete
+  Passed Pd6_BajaConAprobacion [12 s]
+
+Test Run Successful.
+Total tests: 3
+     Passed: 3
+ Total time: 23.7206 Seconds

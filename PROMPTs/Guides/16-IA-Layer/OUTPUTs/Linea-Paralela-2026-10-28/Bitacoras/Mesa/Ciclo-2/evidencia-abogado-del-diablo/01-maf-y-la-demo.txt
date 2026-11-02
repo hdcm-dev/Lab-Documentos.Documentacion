@@ -1,0 +1,21 @@
+# Paquetes de la demo (csproj) — sin Microsoft.Agents.*
+18:    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.14" />
+19:    <PackageReference Include="Microsoft.Extensions.AI" Version="10.11.0" />
+20:    <PackageReference Include="OllamaSharp" Version="5.5.0" />
+21:    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.20.1" />
+22:    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.20.1" />
+
+# Historial multi-turno sin MAF
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Application/Abstractions/PuertosDeIA.cs:57:/// Estado de la conversación (D-11): clave SessionId + ConversacionId y vencimiento. Guarda texto de la
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Application/Abstractions/PuertosDeIA.cs:60:public interface IHistorialDeConversacion
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Application/Asistente/AsistenteDeMovilidad.cs:25:    IHistorialDeConversacion historial,
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Infrastructure/AI/ComposicionDeIA.cs:70:        services.AddSingleton<IHistorialDeConversacion, HistorialEnMemoria>();
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Infrastructure/AI/HistorialEnMemoria.cs:9:/// Historial de conversaciones en memoria del servidor (D-11): clave SessionId + ConversacionId, vencimiento
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Infrastructure/AI/HistorialEnMemoria.cs:13:public sealed class HistorialEnMemoria(IOptions<OpcionesDeIA> opciones, TimeProvider reloj) : IHistorialDeConversacion
+Demos/MovilidadUrbana.Asistente/src/MovilidadUrbana.Asistente/Agregado/Infrastructure/AI/OpcionesDeIA.cs:87:/// <summary>Estado de la conversación (D-11).</summary>
+
+# Árbol y preguntas que mandan 'sesión de varios turnos' a MAF
+265:  T --> D5{"¿Hace falta sesión de varios turnos,<br/>aprobación integrada o componerlo?"}
+1855:- **Agente de MAF (`AIAgent`).** El agente de Microsoft Agent Framework: el mismo `IChatClient` envuelto con `AsAIAgent(...)`. Le suma instrucciones con nombre, sesión de varios turnos (`AgentSession`), aprobación de herramientas, middleware de agente, proveedores de contexto y la interfaz común `AIAgent` [REF-092].
+2042:Paso 2, el mismo cliente como agente de MAF con sesión de varios turnos. Compila en `…/Infrastructure/AI/DelChatAlAgente/AgenteDeMaf.cs`, líneas 9–23 (`using Microsoft.Agents.AI;` y `using Microsoft.Extensions.AI;` en las líneas 1–2):
+2580:Un `IChatClient` con `UseFunctionInvocation` **ya es un agente**, el mínimo: el modelo decide en un bucle y la aplicación ejecuta y pone el límite. Si la interacción es una pregunta, pocas llamadas a herramientas y una respuesta (ESC-01: «¿cuántas localidades hay en Chaco?»), alcanza. El agente de MAF se justifica cuando necesitás sesión de varios turnos, aprobación integrada, middleware, proveedores de contexto o componerlo en un workflow. Como envuelve el mismo `IChatClient` y reusa su bucle (§7.4), el paso es un diff chico: se empieza por el mínimo y se sube cuando aparece una de esas necesidades.

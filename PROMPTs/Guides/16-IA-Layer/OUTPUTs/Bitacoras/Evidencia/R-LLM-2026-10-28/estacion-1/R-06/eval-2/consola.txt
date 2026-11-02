@@ -1,0 +1,67 @@
+Corpus: 12 fragmentos (plantilla.v1), p. ej. «Localidad · requisito del nombre: Entre 3 y 60 caracteres, único por provincia.»
+Observado en el laboratorio: qwen3-embedding:0.6b (ac6da0dfba84), Ollama 0.40.11, Ollama propio, 2026-10-29. Estímulo del mismo autor.
+
+pregunta  variante          rango  top-1                                    puntaje  oráculo
+r01       sin-instruccion       1  LocalidadPolicy.RequisitoDelNombre         0.688  pasa
+r02       sin-instruccion       1  LocalidadPolicy.RequisitoDeLaProvincia     0.556  pasa
+r03       sin-instruccion       1  LocalidadPolicy.RequisitoDelCodigoPostal   0.686  pasa
+r04       sin-instruccion       1  LocalidadPolicy.RequisitoDeLosHabitantes   0.518  pasa
+r05       sin-instruccion       1  EncuestaPolicy.RequisitoDelNombre          0.641  pasa
+r06       sin-instruccion       1  EncuestaPolicy.RequisitoDeLaEdad           0.727  pasa
+r07       sin-instruccion       1  EncuestaPolicy.RequisitoDeLaLocalidad      0.586  pasa
+r08       sin-instruccion       1  EncuestaPolicy.RequisitoDeLosMedios        0.647  pasa
+r09       sin-instruccion       3  EncuestaPolicy.RequisitoDelMotivo          0.508  pasa
+r10       sin-instruccion       1  EncuestaPolicy.RequisitoDeLaDistancia      0.701  pasa
+r11       sin-instruccion       3  EncuestaPolicy.RequisitoDeLaDistancia      0.601  pasa
+r12       sin-instruccion       1  EncuestaPolicy.RequisitoDelMotivo          0.667  pasa
+n01       sin-instruccion       -  LocalidadPolicy.RequisitoDeLosHabitantes   0.402  excluida
+n02       sin-instruccion       -  EncuestaPolicy.RequisitoDeLosMedios        0.383  excluida
+n03       sin-instruccion       -  LocalidadPolicy.RequisitoDeLaProvincia     0.261  excluida
+n04       sin-instruccion       -  EncuestaPolicy.RequisitoDelMotivo          0.308  excluida
+n05       sin-instruccion       -  EncuestaPolicy.RequisitoDeLosMedios        0.611  excluida
+r01       con-instruccion       1  LocalidadPolicy.RequisitoDelNombre         0.747  pasa
+r02       con-instruccion       1  LocalidadPolicy.RequisitoDeLaProvincia     0.590  pasa
+r03       con-instruccion       1  LocalidadPolicy.RequisitoDelCodigoPostal   0.734  pasa
+r04       con-instruccion       1  LocalidadPolicy.RequisitoDeLosHabitantes   0.589  pasa
+r05       con-instruccion       1  EncuestaPolicy.RequisitoDelNombre          0.719  pasa
+r06       con-instruccion       1  EncuestaPolicy.RequisitoDeLaEdad           0.730  pasa
+r07       con-instruccion       1  EncuestaPolicy.RequisitoDeLaLocalidad      0.530  pasa
+r08       con-instruccion       1  EncuestaPolicy.RequisitoDeLosMedios        0.576  pasa
+r09       con-instruccion       3  EncuestaPolicy.RequisitoDelMotivo          0.561  pasa
+r10       con-instruccion       1  EncuestaPolicy.RequisitoDeLaDistancia      0.675  pasa
+r11       con-instruccion       3  EncuestaPolicy.RequisitoDeLaDistancia      0.610  pasa
+r12       con-instruccion       1  EncuestaPolicy.RequisitoDelMotivo          0.678  pasa
+n01       con-instruccion       -  LocalidadPolicy.RequisitoDeLosHabitantes   0.370  excluida
+n02       con-instruccion       -  EncuestaPolicy.RequisitoDelNombre          0.389  excluida
+n03       con-instruccion       -  LocalidadPolicy.RequisitoDeLaProvincia     0.260  excluida
+n04       con-instruccion       -  EncuestaPolicy.RequisitoDelMotivo          0.270  excluida
+n05       con-instruccion       -  EncuestaPolicy.RequisitoDeLosMedios        0.522  excluida
+
+Métricas sobre las respondibles medidas por las dos variantes (M = 12; descriptivas, guía §10.4):
+  modelo sin-instruccion           hit@1 10/12 = 0.833   hit@3 12/12 = 1.000   MRR 0.889
+  modelo con-instruccion           hit@1 10/12 = 0.833   hit@3 12/12 = 1.000   MRR 0.889
+  léxica                           hit@1  7/12 = 0.583   hit@3  8/12 = 0.667   MRR 0.679
+  azar (permutación con semilla)   hit@1  1/12 = 0.083   hit@3  3/12 = 0.250   MRR 0.259
+  azar (esperanza analítica)       hit@1 0.090         hit@3 0.267         MRR 0.269
+  recall@3 de la pregunta del nombre (r05), modelo sin-instruccion: 1.00
+  recall@3 de la pregunta del nombre (r05), modelo con-instruccion: 1.00
+  recall@3 de la pregunta del nombre (r05), léxica: 1.00
+  recall@3 de la pregunta del nombre (r05), azar (permutación con semilla): 0.50
+
+Comparaciones pareadas (b = acierta sólo A, c = acierta sólo B; binomial exacta bilateral):
+  hit@1 modelo sin-instruccion vs léxica: b = 3, c = 0, p = 0.250 → no se afirma diferencia
+  hit@1 modelo sin-instruccion vs azar (permutación con semilla): b = 10, c = 1, p = 0.012 → se afirma una diferencia
+  hit@1 modelo con-instruccion vs léxica: b = 3, c = 0, p = 0.250 → no se afirma diferencia
+  hit@1 modelo con-instruccion vs azar (permutación con semilla): b = 10, c = 1, p = 0.012 → se afirma una diferencia
+  hit@1 modelo con-instruccion vs modelo sin-instruccion: b = 0, c = 0, p = 1.000 → no se afirma diferencia
+  hit@3 modelo sin-instruccion vs léxica: b = 4, c = 0, p = 0.125 → no se afirma diferencia
+  hit@3 modelo sin-instruccion vs azar (permutación con semilla): b = 9, c = 0, p = 0.004 → se afirma una diferencia
+  hit@3 modelo con-instruccion vs léxica: b = 4, c = 0, p = 0.125 → no se afirma diferencia
+  hit@3 modelo con-instruccion vs azar (permutación con semilla): b = 9, c = 0, p = 0.004 → se afirma una diferencia
+  hit@3 modelo con-instruccion vs modelo sin-instruccion: b = 0, c = 0, p = 1.000 → no se afirma diferencia
+
+  sin-instruccion: mejor puntaje de una no respondible 0.611 · peor top-1 de una respondible 0.508 (observación para el «no sé» de 07, no un umbral)
+  con-instruccion: mejor puntaje de una no respondible 0.522 · peor top-1 de una respondible 0.530 (observación para el «no sé» de 07, no un umbral)
+
+46 llamadas de embedding · registro en 06-Embeddings-Y-Busqueda-Semantica.jsonl · oráculo recuperacion-top3
+invariantes de código: cumplidos

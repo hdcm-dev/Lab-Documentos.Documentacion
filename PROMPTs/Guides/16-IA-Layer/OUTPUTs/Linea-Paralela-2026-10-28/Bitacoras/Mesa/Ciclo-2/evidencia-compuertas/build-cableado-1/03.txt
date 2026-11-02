@@ -1,0 +1,24 @@
+  Determining projects to restore...
+  Restored /ex/src/MovilidadUrbana.SalidaEstructurada/MovilidadUrbana.SalidaEstructurada.csproj (in 2.33 sec).
+  MovilidadUrbana.SalidaEstructurada -> /ex/src/MovilidadUrbana.SalidaEstructurada/bin/Release/net10.0/MovilidadUrbana.SalidaEstructurada.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:06.30
+  Determining projects to restore...
+  Restored /ex/tests/MovilidadUrbana.SalidaEstructurada.Tests/MovilidadUrbana.SalidaEstructurada.Tests.csproj (in 386 ms).
+  1 of 2 projects are up-to-date for restore.
+  MovilidadUrbana.SalidaEstructurada -> /ex/src/MovilidadUrbana.SalidaEstructurada/bin/Release/net10.0/MovilidadUrbana.SalidaEstructurada.dll
+  MovilidadUrbana.SalidaEstructurada.Tests -> /ex/tests/MovilidadUrbana.SalidaEstructurada.Tests/bin/Release/net10.0/MovilidadUrbana.SalidaEstructurada.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.52
+Test run for /ex/tests/MovilidadUrbana.SalidaEstructurada.Tests/bin/Release/net10.0/MovilidadUrbana.SalidaEstructurada.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    15, Skipped:     0, Total:    15, Duration: 278 ms - MovilidadUrbana.SalidaEstructurada.Tests.dll (net10.0)

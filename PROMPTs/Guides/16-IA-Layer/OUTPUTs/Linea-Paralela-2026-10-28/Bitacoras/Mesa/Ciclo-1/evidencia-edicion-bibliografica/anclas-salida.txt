@@ -1,0 +1,15 @@
+N0b-Producto-Datos-Y-Perfil.md: enlaces internos=13 rotos=0 h2=13
+N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md: enlaces internos=9 rotos=0 h2=13
+N1-Capa-IA-En-El-Stack.md: enlaces internos=8 rotos=0 h2=12
+N2-Abstracciones-Y-Proveedores-NET.md: enlaces internos=11 rotos=0 h2=12
+N3b-CAG-Y-Estrategias-De-Conocimiento.md: enlaces internos=12 rotos=0 h2=14
+N3-RAG-En-NET.md: enlaces internos=10 rotos=0 h2=13
+N4-Agentes-Y-Orquestacion.md: enlaces internos=10 rotos=0 h2=12
+N5-Operacion-Calidad-Seguridad.md: enlaces internos=8 rotos=0 h2=12
+N6-Caso-Movilidad-Urbana.md: enlaces internos=10 rotos=0 h2=14
+00-Contrato-De-Entrada.md: enlaces internos=6 rotos=0 h2=7
+01-Descomposicion-Conceptual.md: enlaces internos=13 rotos=0 h2=7
+02-Cohesion-Global.md: enlaces internos=10 rotos=0 h2=11
+03-Marco-De-Referencia.md: enlaces internos=5 rotos=0 h2=7
+04-Integracion.md: enlaces internos=9 rotos=0 h2=10
+README.md: enlaces internos=0 rotos=0 h2=4

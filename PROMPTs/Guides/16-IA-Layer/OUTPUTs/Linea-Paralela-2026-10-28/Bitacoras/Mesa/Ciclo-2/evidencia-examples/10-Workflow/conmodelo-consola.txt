@@ -1,0 +1,60 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MovilidadUrbana.Ejemplos.Orquestacion -> /ex/src/MovilidadUrbana.Ejemplos.Orquestacion/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.dll
+  MovilidadUrbana.Ejemplos.Orquestacion.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 6.3.1.0: Test execution started
+Running selected tests in /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/bin/Debug/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll
+   NUnit3TestExecutor discovered 2 of 2 NUnit test cases using Current Discovery mode, Non-Explicit run
+# R-LLM — estimando: este pedido, 1 pedido × 10 semillas, semillas s = 1..10, qwen3.5:4b@d8b0f5e9760c, T 0.7, top_p 0.8, top_k 20, presence 1.5, think false, num_ctx 8192, ruta API /api/chat (OllamaSharp 5.5.0), Ollama 0.40.11, criterio previo: evidencia-examples/10-Workflow/00-criterio-previo.md, fecha 2026-10-28T19:19:07.3952822+00:00
+# rótulo: medido en la estación de laboratorio de 15 vCPU (CPU sin GPU; contenedor limitado a 14 CPU / 34 GiB; Ollama 0.40.11), 2026-10-28
+s=1 llamadas=extractor>redactor pared=8.1s extractor=«Goya; Corrientes; 3450; 89959» redactor=«Le estamos agregando la localidad de Goya, Corrientes (CP 3450), que cuenta con 89.959 habitantes, y le solicito confirmar si desea proceder con esta inclusión.»
+s=2 llamadas=extractor>redactor pared=4.4s extractor=«Goya; Corrientes; 3450; 89959» redactor=«Se agregará la localidad de Goya en Corrientes con código postal 3450 y 89.959 habitantes, ¿puede confirmarlo?»
+s=3 llamadas=extractor>redactor pared=4.7s extractor=«Goya; Corrientes; 3450; 89959» redactor=«Se va a agregar la localidad de Goya, Corrientes (CP 3450) con 89.959 habitantes, ¿me confirma que es correcto?»
+s=4 llamadas=extractor>redactor pared=5.0s extractor=«Goya; Corrientes; 3450; 89959» redactor=«Deseo agregar la localidad de Goya en la provincia de Corrientes con el código postal 3450 y una población de 89.959 habitantes, ¿puede confirmarlo?»
+s=5 llamadas=extractor>redactor pared=4.8s extractor=«Goya; Corrientes; 3450; 89959» redactor=«Se va a agregar la localidad de Goya, Corrientes con el código postal 3450 y una población de 89.959 habitantes; ¿me confirma?»
+s=6 llamadas=extractor>redactor pared=5.3s extractor=«Goya; Corrientes; 3450; 89959» redactor=«Le agregaremos la localidad de Goya en el departamento de Corrientes con código postal 3450 y una población de 89.959 habitantes, así que ¿puede confirmarlo?»
+s=7 llamadas=extractor>redactor pared=5.0s extractor=«Goya; Corrientes; 3450; 89959» redactor=«Se va a agregar la localidad de Goya en Corrientes con el código postal 3450 y una población de 89.959 habitantes, ¿confirmas?»
+s=8 llamadas=extractor>redactor pared=4.8s extractor=«Goya; Corrientes; 3450; 89959» redactor=«Se va a agregar la localidad de Goya, Corrientes con el código postal 3450 y 89.959 habitantes; ¿podría confirmarlo?»
+s=9 llamadas=extractor>redactor pared=5.1s extractor=«Goya; Corrientes; 3450; 89959» redactor=«¿Desea confirmar la agregación de la localidad Goya, en el departamento Corrientes con código postal 3450 y población de 89.959 habitantes?»
+s=10 llamadas=extractor>redactor pared=5.1s extractor=«Goya; Corrientes; 3450; 89959» redactor=«Se va a agregar la localidad de Goya en Corrientes con el código postal 3450 y 89.959 habitantes, ¿me confirma que es correcto?»
+# resultado (estimando: este pedido):
+#  la línea del extractor contiene 3450: 10/10; Wilson 95 % [0.72; 1.00]; el redactor nombra Goya y Corrientes: 10/10; Wilson 95 % [0.72; 1.00]; el redactor contiene 3450: 10/10; Wilson 95 % [0.72; 1.00]
+#  invariantes violadas: 0; pared por corrida (2 llamadas): mediana 5.0 s (mín 4.4, máx 8.1, N = 10)
+
+  Passed Secuencial_ConElModelo [53 s]
+# R-LLM — estimando: este pedido, 2 pedidos × 10 semillas, semillas s = 1..10, qwen3.5:4b@d8b0f5e9760c, T 0.7, top_p 0.8, top_k 20, presence 1.5, think false, num_ctx 8192, ruta API /api/chat (OllamaSharp 5.5.0), Ollama 0.40.11, criterio previo: evidencia-examples/10-Workflow/00-criterio-previo.md, fecha 2026-10-28T19:20:00.1805850+00:00
+# rótulo: medido en la estación de laboratorio de 15 vCPU (CPU sin GPU; contenedor limitado a 14 CPU / 34 GiB; Ollama 0.40.11), 2026-10-28
+# persona simulada: confirma sólo si la propuesta es exactamente Goya / Corrientes / 3450 / 89959
+s=1 pedido=«Agregá Goya, Corrientes, CP 34, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 34, Habitantes = 89959 } pasos=extraer>revisar>rechazo persona=- resultado=Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).] escrituras=0 pared=5.2s
+s=1 pedido=«Agregá Goya, Corrientes, CP 3450, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 } pasos=extraer>revisar>confirmar-alta>registrar persona=True resultado=Registrada: Se agregó la localidad Goya. escrituras=1 pared=5.3s
+s=2 pedido=«Agregá Goya, Corrientes, CP 34, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 34, Habitantes = 89959 } pasos=extraer>revisar>rechazo persona=- resultado=Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).] escrituras=0 pared=5.5s
+s=2 pedido=«Agregá Goya, Corrientes, CP 3450, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 } pasos=extraer>revisar>confirmar-alta>registrar persona=True resultado=Registrada: Se agregó la localidad Goya. escrituras=1 pared=5.4s
+s=3 pedido=«Agregá Goya, Corrientes, CP 34, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 34, Habitantes = 89959 } pasos=extraer>revisar>rechazo persona=- resultado=Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).] escrituras=0 pared=5.1s
+s=3 pedido=«Agregá Goya, Corrientes, CP 3450, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 } pasos=extraer>revisar>confirmar-alta>registrar persona=True resultado=Registrada: Se agregó la localidad Goya. escrituras=1 pared=5.2s
+s=4 pedido=«Agregá Goya, Corrientes, CP 34, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3489, Habitantes = 89959 } pasos=extraer>revisar>confirmar-alta>registrar persona=False resultado=Descartada: La persona no confirmó; no se guardó nada. escrituras=0 pared=5.2s
+s=4 pedido=«Agregá Goya, Corrientes, CP 3450, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 } pasos=extraer>revisar>confirmar-alta>registrar persona=True resultado=Registrada: Se agregó la localidad Goya. escrituras=1 pared=5.2s
+s=5 pedido=«Agregá Goya, Corrientes, CP 34, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 34, Habitantes = 89959 } pasos=extraer>revisar>rechazo persona=- resultado=Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).] escrituras=0 pared=5.1s
+s=5 pedido=«Agregá Goya, Corrientes, CP 3450, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 } pasos=extraer>revisar>confirmar-alta>registrar persona=True resultado=Registrada: Se agregó la localidad Goya. escrituras=1 pared=5.2s
+s=6 pedido=«Agregá Goya, Corrientes, CP 34, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 34, Habitantes = 89959 } pasos=extraer>revisar>rechazo persona=- resultado=Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).] escrituras=0 pared=4.9s
+s=6 pedido=«Agregá Goya, Corrientes, CP 3450, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 } pasos=extraer>revisar>confirmar-alta>registrar persona=True resultado=Registrada: Se agregó la localidad Goya. escrituras=1 pared=5.3s
+s=7 pedido=«Agregá Goya, Corrientes, CP 34, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 34, Habitantes = 89959 } pasos=extraer>revisar>rechazo persona=- resultado=Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).] escrituras=0 pared=5.2s
+s=7 pedido=«Agregá Goya, Corrientes, CP 3450, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 } pasos=extraer>revisar>confirmar-alta>registrar persona=True resultado=Registrada: Se agregó la localidad Goya. escrituras=1 pared=5.2s
+s=8 pedido=«Agregá Goya, Corrientes, CP 34, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 34, Habitantes = 89959 } pasos=extraer>revisar>rechazo persona=- resultado=Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).] escrituras=0 pared=5.2s
+s=8 pedido=«Agregá Goya, Corrientes, CP 3450, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 } pasos=extraer>revisar>confirmar-alta>registrar persona=True resultado=Registrada: Se agregó la localidad Goya. escrituras=1 pared=5.3s
+s=9 pedido=«Agregá Goya, Corrientes, CP 34, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 34899, Habitantes = 89959 } pasos=extraer>revisar>rechazo persona=- resultado=Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).] escrituras=0 pared=5.2s
+s=9 pedido=«Agregá Goya, Corrientes, CP 3450, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 } pasos=extraer>revisar>confirmar-alta>registrar persona=True resultado=Registrada: Se agregó la localidad Goya. escrituras=1 pared=5.2s
+s=10 pedido=«Agregá Goya, Corrientes, CP 34, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 34, Habitantes = 89959 } pasos=extraer>revisar>rechazo persona=- resultado=Rechazada: La propuesta no pasó la revisión; no se guardó nada. [codigoPostal: El código postal debe tener 4 dígitos (0-9).] escrituras=0 pared=5.2s
+s=10 pedido=«Agregá Goya, Corrientes, CP 3450, 89959 habitantes» propuesta=PropuestaDeAlta { Nombre = Goya, Provincia = Corrientes, CodigoPostal = 3450, Habitantes = 89959 } pasos=extraer>revisar>confirmar-alta>registrar persona=True resultado=Registrada: Se agregó la localidad Goya. escrituras=1 pared=5.2s
+# resultado (estimando: este pedido; cada fila por separado, no se comparan):
+#  P1 «CP 34» — propuesta con CP 34: 8/10; Wilson 95 % [0.49; 0.94]; rechazada por la revisión: 9/10; Wilson 95 % [0.60; 0.98]; llegó a la persona con un CP de 4 dígitos inventado: 1/10; Wilson 95 % [0.02; 0.40]
+#  P2 «CP 3450» — propuesta exacta: 10/10; Wilson 95 % [0.72; 1.00]; registrada: 10/10; Wilson 95 % [0.72; 1.00]
+#  invariantes violadas: 0; pared por corrida del workflow: mediana 5.2 s (mín 4.9, máx 5.5, N = 20)
+
+  Passed WorkflowDeAlta_ConElModelo [1 m 44 s]
+
+Test Run Successful.
+Total tests: 2
+     Passed: 2
+ Total time: 2.6938 Minutes

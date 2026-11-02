@@ -1,0 +1,18 @@
+# X1 — sonda C-operacion-demo (2026-10-28 ~09:00 -03), sin modelo (IChatClient guionado)
+# Comando (recurso build):
+#   $R/<envoltorio-de-turnos> build c-operacion-demo "sonda C: OTel sourceName y T1" 20 -- \
+#     docker run --rm -v <sonda>:/work -v <volumen-nuget>:/root/.nuget/packages -w /work mcr.microsoft.com/dotnet/sdk:10.0 sh -c 'dotnet --version && dotnet run'
+# Paquetes: Microsoft.Extensions.AI 10.11.0, Microsoft.Extensions.DependencyInjection 10.0.14, OpenTelemetry 1.20.1, OpenTelemetry.Exporter.InMemory 1.20.1
+# (El primer intento falló en restore por un archivo temporal de la caché compartida; el reintento, idéntico, corrió.)
+10.0.403
+[A] sourceName=(por defecto) -> ActivitySource=Experimental.Microsoft.Extensions.AI Meter=Experimental.Microsoft.Extensions.AI
+[A] sourceName=MovilidadUrbana.AI -> ActivitySource=MovilidadUrbana.AI Meter=Experimental.Microsoft.Extensions.AI,MovilidadUrbana.AI
+[A] SDK AddSource("Experimental.Microsoft.Extensions.AI") + cliente sourceName="MovilidadUrbana.AI" -> spans exportados: 0
+[A] SDK AddSource("MovilidadUrbana.AI") + cliente sourceName="MovilidadUrbana.AI" -> spans exportados: 1
+[B] AddChatClient Singleton, scope sesion-A -> herramienta vio: InvalidOperationException: Cannot resolve scoped service 'SessionContext' from root provider
+[B] AddChatClient Singleton, scope sesion-B -> herramienta vio: InvalidOperationException: Cannot resolve scoped service 'SessionContext' from root provider
+[B] AddChatClient Scoped, scope sesion-A -> herramienta vio: SessionId=sesion-A
+[B] AddChatClient Scoped, scope sesion-B -> herramienta vio: SessionId=sesion-B
+# Nota de lectura: en la 2.ª línea [A], «Experimental.Microsoft.Extensions.AI» en Meter viene del cliente de la 1.ª iteración,
+# todavía vivo (MeterListener.Start publica también los instrumentos ya creados); el medidor del cliente nuevo es «MovilidadUrbana.AI».
+# [B] usa ValidateScopes=true, que es lo que ASP.NET Core activa por defecto en Development.

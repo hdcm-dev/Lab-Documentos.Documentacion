@@ -1,0 +1,15 @@
+Evidencia cruda de Examples/02-Streaming (2026-10-28). Endpoint reemplazado por <OLLAMA_ENDPOINT>.
+Imagen: mcr.microsoft.com/dotnet/sdk@sha256:de4fe90a98845d75910b9769662465c84de1a934665c431279d1382b2bddc02b (SDK 10.0.403).
+Servidor: estación de laboratorio de 4 núcleos (CPU sin GPU; contenedor 4 CPU / 5 GB; Ollama 0.40.11), qwen3.5:4b@d8b0f5e9760c.
+build.sh.txt: script que copia el ejemplo fuera del workspace y corre el comando en el contenedor (por turnos build / <recurso-compartido>).
+
+cableado-y-paquetes-1.txt     build, Cableado 8/8 (versión previa), ConModelo sin endpoint = Skipped (Inconclusive), paquetes vulnerables/deprecados = 0.
+corrida-1-antes-del-arreglo/  primera corrida con modelo: ResponderAsync sólo atrapaba OperationCanceledException.
+                              2-cancelacion.jsonl: 10/10 «no cancelada» (OllamaSharp 5.5.0 terminó la enumeración sin lanzar);
+                              el programa cortado a los 20 s informó «completa» con motivo de fin vacío y guardó el parcial en el historial.
+                              (La salida de la primera ejecución del programa falló por ContentRoot: appsettings no encontrados con dotnet run --project.)
+corrida-2/                    código arreglado (mira el token después del await foreach): Cableado 9/9; programa completo y cortado;
+                              ConModelo 1-completa 10/10 y 2-cancelacion 10/10 invariantes. La métrica «servidor libre» (<15 s) dio 0/10
+                              aquí y 10/10 en la corrida 1: quedó descartada por confundida con el reuso de prefijo (ver README del ejemplo).
+corrida-3-final/              métrica descartada quitada del código; Cableado 9/9; 2-cancelacion 10/10 invariantes (código final).
+                              1-completa de la corrida 2 corresponde al código final (esa prueba no cambió).

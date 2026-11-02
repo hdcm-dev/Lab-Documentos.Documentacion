@@ -1,0 +1,30 @@
+[verificar] servidor compartido: versión y digests coinciden con los esperados
+[verificar] num_ctx = 8192 (arnes-ps-tras-carga, qwen3.5:4b)
+An issue was encountered verifying workloads. For more information, run "dotnet workload update".
+siembra rotulada «escrito para el ejemplo»: 20 respuestas; colectivo 20 %, auto 20 %, bicicleta 35 %, moto 15 %, caminata 15 %, tren 30 % (estímulo del mismo autor)
+e01.un-agente: «Escribí un resumen breve de la encuesta para el informe: qué porcentaje de las respuestas usa colectivo y qué porcentaje usa bicicleta.»
+  camino: Datos → Redactor → Verificador
+  redactor (modelo): El 20 % de las respuestas indica el uso del colectivo y el 35 % corresponde a la bicicleta.
+  verificador: coincide
+  oráculo porcentajes-del-servicio: pasa
+e01.dos-agentes: «Escribí un resumen breve de la encuesta para el informe: qué porcentaje de las respuestas usa colectivo y qué porcentaje usa bicicleta.»
+  camino: Datos → Redactor → Verificador
+  redactor (modelo): El 20 % de las respuestas indica el uso del colectivo y el 35 % corresponde a la bicicleta.
+  verificador: coincide
+  oráculo porcentajes-del-servicio: pasa
+e02.un-agente: «Resumí en una o dos oraciones qué porcentaje de las respuestas eligió el tren y qué porcentaje el auto particular.»
+  camino: Datos → Redactor → Verificador
+  redactor (modelo): El 30 % de las respuestas eligió el tren y el 20 % el auto particular.
+  verificador: coincide
+  oráculo porcentajes-del-servicio: pasa
+e02.dos-agentes: «Resumí en una o dos oraciones qué porcentaje de las respuestas eligió el tren y qué porcentaje el auto particular.»
+  camino: Datos → Redactor → Verificador
+  redactor (modelo): El 30 % de las respuestas eligió el tren y el 20 % el auto particular.
+  verificador: coincide
+  oráculo porcentajes-del-servicio: pasa
+costo por variante (los mismos pedidos; sin tasa: con 2 entradas ilustra el costo, no responde «¿uno o varios?»):
+  un-agente   llamadas al modelo 2 · tokens de entrada 575 · de salida 48 · vueltas 0 · oráculo 2 de 2
+  dos-agentes llamadas al modelo 2 · tokens de entrada 575 · de salida 48 · vueltas 0 · oráculo 2 de 2
+registro: 8 líneas en 12-Uno-O-Varios-Agentes.jsonl
+invariantes de código: se cumplen
+[verificar] descargado qwen3.5:4b (keep_alive 0)

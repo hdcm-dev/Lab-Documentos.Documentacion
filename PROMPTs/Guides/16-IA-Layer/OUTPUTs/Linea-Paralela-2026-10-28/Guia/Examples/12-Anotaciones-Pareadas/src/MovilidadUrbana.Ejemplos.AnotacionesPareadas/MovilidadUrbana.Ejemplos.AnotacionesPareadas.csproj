@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Ejemplo 12: la misma herramienta con [KernelFunction] y con [Description] + AIFunctionFactory. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MovilidadUrbana.Ejemplos.AnotacionesPareadas</RootNamespace>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Versiones consultadas en nuget.org el 2026-10-28; iguales a la tabla de paquetes de la guía. -->
+    <PackageReference Include="Microsoft.Extensions.AI" Version="10.11.0" />
+    <PackageReference Include="Microsoft.Agents.AI" Version="1.26.0" />
+    <PackageReference Include="Microsoft.SemanticKernel.Core" Version="1.81.0" />
+    <PackageReference Include="Microsoft.SemanticKernel.Agents.Core" Version="1.81.0" />
+  </ItemGroup>
+
+</Project>

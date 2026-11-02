@@ -1,0 +1,18 @@
+CONCEDIDO <recurso-compartido> a ej08-mcp hasta 2026-10-28T16:46:03-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> ej08-mcp)
+   ],
+   "errores": {}
+ }] «En la provincia de Corrientes hay cargada una sola localidad: la ciudad de Corrientes, con un código postal 3400 y aproximadamente 346.334 habitantes.»
+ # resultado (estimando: este pedido, cada fila por separado; no se comparan entre sí):
+ #  Chaco — pidió una herramienta con Chaco: 9/10; Wilson 95 % [0.60; 0.98]; nombra la cantidad 1: 9/10; Wilson 95 % [0.60; 0.98]
+ #  Corrientes — pidió listar_localidades con Corrientes: 10/10; Wilson 95 % [0.72; 1.00]; nombra Corrientes sin Resistencia: 10/10; Wilson 95 % [0.72; 1.00]
+ #  invariantes violadas: 1; escrituras en el servidor: 0; pared por pedido: mediana 95.5 s (mín 48.5, máx 300.3, N = 20)
+ #  violación: s=1 «¿Cuántas localidades hay cargadas en Chaco?»: excepción TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 300 seconds elapsing.
+
+
+
+Test Run Failed.
+Total tests: 1
+     Failed: 1
+ Total time: 38.0495 Minutes
+LIBERADO <recurso-compartido> por ej08-mcp
+rc=0

@@ -1,0 +1,24 @@
+2026-10-27T10:24:48-0300	build	constructor-07	pedido	compila y corre 07 --fake (ttl 20m)
+2026-10-27T10:24:48-0300	build	constructor-07	concedido	compila y corre 07 --fake (ttl 20m)
+2026-10-27T10:24:59-0300	build	constructor-07	liberado	-
+2026-10-27T10:25:40-0300	build	constructor-07	pedido	compila y prueba 07 sin servidor (ttl 20m)
+2026-10-27T10:25:40-0300	build	constructor-07	concedido	compila y prueba 07 sin servidor (ttl 20m)
+2026-10-27T10:25:48-0300	build	constructor-07	liberado	-
+2026-10-27T10:25:57-0300	build	constructor-07	pedido	compila y prueba 07 sin servidor (ttl 20m)
+2026-10-27T10:26:13-0300	build	constructor-07	concedido	compila y prueba 07 sin servidor (ttl 20m)
+2026-10-27T10:26:28-0300	build	constructor-07	liberado	-
+2026-10-27T10:27:07-0300	[recurso-modelo-propio]	constructor-07	pedido	fase 3a: embeddings de 07 (28 textos) (ttl 60m)
+2026-10-27T10:27:07-0300	[recurso-modelo-propio]	constructor-07	concedido	fase 3a: embeddings de 07 (28 textos) (ttl 60m)
+2026-10-27T10:27:15-0300	[recurso-modelo-propio]	constructor-07	liberado	-
+2026-10-27T10:27:28-0300	[recurso-modelo]	constructor-07	pedido	07 RAG con citas: 16 entradas TURNO-1 (ttl 45m)
+2026-10-27T10:27:28-0300	[recurso-modelo]	constructor-07	concedido	07 RAG con citas: 16 entradas TURNO-1 (ttl 45m)
+2026-10-27T10:32:38-0300	[recurso-modelo]	constructor-07	liberado	-
+2026-10-27T10:46:36-0300	build	constructor-07	pedido	compila, prueba y corre 07 --fake (reanudación) (ttl 20m)
+2026-10-27T10:46:36-0300	build	constructor-07	concedido	compila, prueba y corre 07 --fake (reanudación) (ttl 20m)
+2026-10-27T10:46:50-0300	build	constructor-07	liberado	-
+2026-10-27T10:47:14-0300	[recurso-modelo]	constructor-07	pedido	07 RAG con citas: 16 entradas TURNO-1 (reanudación tras corte) (ttl 45m)
+2026-10-27T10:47:15-0300	[recurso-modelo]	constructor-07	concedido	07 RAG con citas: 16 entradas TURNO-1 (reanudación tras corte) (ttl 45m)
+2026-10-27T11:00:15-0300	[recurso-modelo]	constructor-07	liberado	-
+2026-10-27T11:00:44-0300	[recurso-modelo]	constructor-07	pedido	07 estabilidad: 3 repeticiones de r03 (TURNO-1) (ttl 20m)
+2026-10-27T11:11:46-0300	[recurso-modelo]	constructor-07	concedido	07 estabilidad: 3 repeticiones de r03 (TURNO-1) (ttl 20m)
+2026-10-27T11:13:06-0300	[recurso-modelo]	constructor-07	liberado	-

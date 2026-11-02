@@ -1,0 +1,15 @@
+  Determining projects to restore...
+  Restored /ex/src/MovilidadUrbana.Ejemplos.Orquestacion/MovilidadUrbana.Ejemplos.Orquestacion.csproj (in 7.42 sec).
+  Restored /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests.csproj (in 7.43 sec).
+  MovilidadUrbana.Ejemplos.Orquestacion -> /ex/src/MovilidadUrbana.Ejemplos.Orquestacion/bin/Release/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.dll
+  MovilidadUrbana.Ejemplos.Orquestacion.Tests -> /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:14.73
+Test run for /ex/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/bin/Release/net10.0/MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    27, Skipped:     0, Total:    27, Duration: 831 ms - MovilidadUrbana.Ejemplos.Orquestacion.Tests.dll (net10.0)

@@ -1,0 +1,8 @@
+ip-privada: 0
+home: 0
+usuario-mascara: 0
+contenedor-ia: 0
+tailnet: 0
+host-lab: 0
+identificadores: 0
+R-PRIV: 0 hallazgo(s); clases privadas: patrones=3 lista=20 historicos=1

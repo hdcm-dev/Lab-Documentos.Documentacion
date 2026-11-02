@@ -1,0 +1,31 @@
+# Formulario de alta: campos sin marca de origen (ChatDelAsistente.razor l. 36-58)
+                else if (turno.Accion is { Tipo: TipoDeAccion.Alta } && turno.Formulario is { } f)
+                {
+                    <section class="accion" aria-label="Alta propuesta">
+                        <h2>Alta propuesta: revisá los datos</h2>
+                        <label>Nombre <input @bind="f.Nombre" disabled="@(turno.Resultado is not null)" /></label>
+                        <Error Errores="turno.Errores" Campo="nombre" />
+                        <label>Provincia
+                            <select @bind="f.Provincia" disabled="@(turno.Resultado is not null)">
+                                <option value="">(elegí una)</option>
+                                @foreach (var p in Catalogos.Provincias) { <option value="@p">@p</option> }
+                            </select>
+                        </label>
+                        <Error Errores="turno.Errores" Campo="provincia" />
+                        <label>Código postal <input @bind="f.CodigoPostal" disabled="@(turno.Resultado is not null)" /></label>
+                        <Error Errores="turno.Errores" Campo="codigoPostal" />
+                        <label>Habitantes <input type="number" @bind="f.Habitantes" disabled="@(turno.Resultado is not null)" /></label>
+                        <Error Errores="turno.Errores" Campo="habitantes" />
+                        @if (turno.Resultado is null)
+                        {
+                            <button type="button" @onclick="() => ConfirmarAltaAsync(turno)">Guardar</button>
+                            <button type="button" @onclick="() => Descartar(turno)">Descartar</button>
+                        }
+                    </section>
+
+# Afirmaciones de la guía sobre la confirmación
+272:Dos lecturas del árbol importan antes de entrar a las secciones. La primera salida es «código, sin modelo»: la IA no valida un código postal (§3.6, §4.10). Y toda rama que escribe termina en una confirmación de la persona: por propuesta tipada y operación normal en la demo (§9.5.3), o por `ApprovalRequiredAIFunction` con su contrato dentro de un agente (§7.5).
+409:- **La forma no es la verdad.** «Agregá Goya, Corrientes, CP 34, 89959 habitantes» con esquema: forma de `LocalidadPropuesta` en 10/10 ([0,72; 1,00]); código postal inventado («3400») en 8/10 ([0,49; 0,94]), con la instrucción «No inventes ni corrijas datos» en el pedido. «3400» pasa las reglas de `Localidad`: por eso el alta también se confirma (§5, §9). Semillas 1..10, `/api/ch
+878:Con medidas que se suman y ninguna la elimina [REF-043]: *grounding* (§6), salida estructurada validada (§5), el muestreo del fabricante (§5), herramientas que consultan datos reales (§7) y evaluación (§8). La validación tiene un límite: `LocalidadRules` exige un código postal de cuatro dígitos y acepta cualquier dígito Unicode, no sólo 0–9; no verifica que sea el verdadero. Un c
+3329:#### 9.5.1 D1 y D2: la forma no es validez, y el alta también se confirma
+3352:¿Por qué confirmar un alta que pasa las reglas? Porque inventar un dato **con forma válida** existe, y las reglas no lo ven. Con el texto de D1 se observó en tres composiciones distintas, que no se comparan entre sí: por `/v1` con herramientas disponibles, el 4b cambió el CP en 10/10 [0,72; 1], y uno de los inventados, «3400», pasaba la regla (estación de 4 núcleos); en `Examples/03

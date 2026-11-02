@@ -1,0 +1,12 @@
+pared_s por modelo (todas las llamadas intercaladas; ambos modelos cargados en /api/ps antes de cada llamada salvo la primera)
+qwen3.5:2b n 40 mediana 5.23 min 2.35 max 47.9 | sin seed 1: n 36 mediana 4.595000000000001
+   D1 mediana seeds 2..10 9.59
+   D3 mediana seeds 2..10 6.95
+   D3-T mediana seeds 2..10 3.97
+   D6 mediana seeds 2..10 3.52
+qwen3.5:4b n 40 mediana 7.135 min 5.12 max 60.88 | sin seed 1: n 36 mediana 6.925000000000001
+   D1 mediana seeds 2..10 15.45
+   D3 mediana seeds 2..10 7.52
+   D3-T mediana seeds 2..10 5.75
+   D6 mediana seeds 2..10 5.22
+llamadas con los dos modelos ya cargados antes: 79 de 80

@@ -1,0 +1,78 @@
+05-Contexto-Completo-Con-Prefijo/Application/CorridaDelPrefijo.cs:1:// Nuevo (plan §E.2, fila 05). Corre el plan de consultas contra un IChatClient (el real o el del
+05-Contexto-Completo-Con-Prefijo/Application/CorridaDelPrefijo.cs:4:using Microsoft.Extensions.AI;
+05-Contexto-Completo-Con-Prefijo/Application/CorridaDelPrefijo.cs:17:    IChatClient cliente,
+09-Caso-De-Uso-Como-Herramienta/Application/Aprobacion/ServidorDeAprobaciones.cs:6:using Microsoft.Extensions.AI;
+07-RAG-Con-Citas/Application/IndiceDeAyuda.cs:6:using Microsoft.Extensions.AI;
+07-RAG-Con-Citas/Application/IndiceDeAyuda.cs:16:    [VectorStoreKey] public string Fuente { get; set; } = "";
+07-RAG-Con-Citas/Application/IndiceDeAyuda.cs:17:    [VectorStoreData] public string Literal { get; set; } = "";
+07-RAG-Con-Citas/Application/IndiceDeAyuda.cs:18:    [VectorStoreData] public string Texto { get; set; } = "";
+07-RAG-Con-Citas/Application/IndiceDeAyuda.cs:19:    [VectorStoreVector(Dimensiones, DistanceFunction = DistanceFunction.CosineSimilarity)] public string Vectorizado { get; set; } = "";
+07-RAG-Con-Citas/Application/IndiceDeAyuda.cs:27:    private readonly VectorStoreCollection<string, FragmentoIndexado> _coleccion;
+07-RAG-Con-Citas/Application/IndiceDeAyuda.cs:29:    private IndiceDeAyuda(VectorStoreCollection<string, FragmentoIndexado> coleccion) => _coleccion = coleccion;
+07-RAG-Con-Citas/Application/IndiceDeAyuda.cs:39:        var store = new InMemoryVectorStore(new() { EmbeddingGenerator = embeddings });
+11-Agente-Con-Aprobacion/Application/Aprobacion/ServidorDeAprobaciones.cs:9:using Microsoft.Extensions.AI;
+07-RAG-Con-Citas/Application/CorridaDeAyuda.cs:4:using Microsoft.Extensions.AI;
+12-Uno-O-Varios-Agentes/Application/Workflows/ConductorDelCamino.cs:3:using Microsoft.Agents.AI.Workflows;
+15-Pruebas-Y-Evaluacion/Application/EquivalenciaConElOro.cs:15:using Microsoft.Extensions.AI;
+09-Caso-De-Uso-Como-Herramienta/Application/Herramientas/HerramientasDeLocalidades.cs:4:// ApprovalRequiredAIFunction: FunctionInvokingChatClient no las ejecuta sin una respuesta de aprobación.
+09-Caso-De-Uso-Como-Herramienta/Application/Herramientas/HerramientasDeLocalidades.cs:8:using Microsoft.Extensions.AI;
+09-Caso-De-Uso-Como-Herramienta/Application/Herramientas/HerramientasDeLocalidades.cs:35:    public IList<AITool> Crear() =>
+09-Caso-De-Uso-Como-Herramienta/Application/Herramientas/HerramientasDeLocalidades.cs:37:        new ApprovalRequiredAIFunction(AIFunctionFactory.Create(AgregarAsync, Agregar,
+09-Caso-De-Uso-Como-Herramienta/Application/Herramientas/HerramientasDeLocalidades.cs:39:        new ApprovalRequiredAIFunction(AIFunctionFactory.Create(EliminarAsync, Eliminar,
+09-Caso-De-Uso-Como-Herramienta/Application/Herramientas/HerramientasDeLocalidades.cs:44:        [Description("Nombre de la localidad")] string nombre,
+09-Caso-De-Uso-Como-Herramienta/Application/Herramientas/HerramientasDeLocalidades.cs:45:        [Description("Provincia, tal como la dijo la persona")] string provincia,
+09-Caso-De-Uso-Como-Herramienta/Application/Herramientas/HerramientasDeLocalidades.cs:46:        [Description("Código postal, tal como lo dijo la persona")] string codigoPostal,
+09-Caso-De-Uso-Como-Herramienta/Application/Herramientas/HerramientasDeLocalidades.cs:47:        [Description("Cantidad de habitantes")] int habitantes,
+09-Caso-De-Uso-Como-Herramienta/Application/Herramientas/HerramientasDeLocalidades.cs:60:        [Description("Nombre de la localidad")] string nombre,
+09-Caso-De-Uso-Como-Herramienta/Application/Herramientas/HerramientasDeLocalidades.cs:61:        [Description("Provincia de la localidad")] string provincia,
+10-Workflow-Y-Contraejemplo/Application/Workflows/ConductorDelWorkflow.cs:5:using Microsoft.Agents.AI.Workflows;
+11-Agente-Con-Aprobacion/Application/Herramientas/HerramientasDelAgente.cs:4:// envuelta en ApprovalRequiredAIFunction. El modelo nunca da un id.
+11-Agente-Con-Aprobacion/Application/Herramientas/HerramientasDelAgente.cs:11:using Microsoft.Extensions.AI;
+11-Agente-Con-Aprobacion/Application/Herramientas/HerramientasDelAgente.cs:57:    public IList<AITool> Crear() =>
+11-Agente-Con-Aprobacion/Application/Herramientas/HerramientasDelAgente.cs:59:        AIFunctionFactory.Create(ListarAsync, Listar,
+11-Agente-Con-Aprobacion/Application/Herramientas/HerramientasDelAgente.cs:61:        new ApprovalRequiredAIFunction(AIFunctionFactory.Create(EliminarAsync, Eliminar,
+11-Agente-Con-Aprobacion/Application/Herramientas/HerramientasDelAgente.cs:73:        [Description("Nombre de la localidad")] string nombre,
+11-Agente-Con-Aprobacion/Application/Herramientas/HerramientasDelAgente.cs:74:        [Description("Provincia de la localidad; vacía si la persona no la dijo")] string provincia = "",
+16-Inyeccion-Indirecta/Application/Herramientas/HerramientasDeLaInyeccion.cs:12:using Microsoft.Extensions.AI;
+16-Inyeccion-Indirecta/Application/Herramientas/HerramientasDeLaInyeccion.cs:78:    public IList<AITool> Crear()
+16-Inyeccion-Indirecta/Application/Herramientas/HerramientasDeLaInyeccion.cs:80:        var listar = AIFunctionFactory.Create(ListarAsync, Listar,
+16-Inyeccion-Indirecta/Application/Herramientas/HerramientasDeLaInyeccion.cs:85:        return [listar, new ApprovalRequiredAIFunction(Vigilada)];
+16-Inyeccion-Indirecta/Application/Herramientas/HerramientasDeLaInyeccion.cs:90:    /// ApprovalRequiredAIFunction. Con el pedido marcado, rechaza sin ejecutar.
+16-Inyeccion-Indirecta/Application/Herramientas/HerramientasDeLaInyeccion.cs:92:    public IList<AITool> CrearConEscrituraNoAprobable()
+16-Inyeccion-Indirecta/Application/Herramientas/HerramientasDeLaInyeccion.cs:95:        return [AIFunctionFactory.Create(ListarAsync, Listar, "Lista las localidades cargadas en la sesión de la persona."), Vigilada];
+16-Inyeccion-Indirecta/Application/Herramientas/HerramientasDeLaInyeccion.cs:98:    private AIFunction CrearEliminar() => AIFunctionFactory.Create(EliminarAsync, Eliminar,
+16-Inyeccion-Indirecta/Application/Herramientas/HerramientasDeLaInyeccion.cs:112:        [Description("Nombre de la localidad")] string nombre,
+16-Inyeccion-Indirecta/Application/Herramientas/HerramientasDeLaInyeccion.cs:113:        [Description("Provincia de la localidad")] string provincia = "",
+15-Pruebas-Y-Evaluacion/Application/EvaluadoresDeterministas.cs:7:using Microsoft.Extensions.AI;
+12-Uno-O-Varios-Agentes/Application/Workflows/CaminoDelResumen.cs:2:// (Microsoft.Agents.AI.Workflows 1.26.0) cuyo CAMINO lo fija el código, con una sola variable —cuántos
+12-Uno-O-Varios-Agentes/Application/Workflows/CaminoDelResumen.cs:8:// El Redactor es un executor que llama al IChatClient (no es un AIAgent). El Corrector es un segundo
+12-Uno-O-Varios-Agentes/Application/Workflows/CaminoDelResumen.cs:13:using Microsoft.Agents.AI.Workflows;
+12-Uno-O-Varios-Agentes/Application/Workflows/CaminoDelResumen.cs:14:using Microsoft.Extensions.AI;
+12-Uno-O-Varios-Agentes/Application/Workflows/CaminoDelResumen.cs:39:        Variante variante, FuenteDeResultados fuente, IChatClient clienteDelRedactor, IChatClient? clienteDelCorrector = null)
+12-Uno-O-Varios-Agentes/Application/Workflows/CaminoDelResumen.cs:46:        var builder = new WorkflowBuilder(datos)
+12-Uno-O-Varios-Agentes/Application/Workflows/CaminoDelResumen.cs:68:public sealed partial class DatosExecutor(FuenteDeResultados fuente) : Executor(CaminoDelResumen.DatosId)
+12-Uno-O-Varios-Agentes/Application/Workflows/CaminoDelResumen.cs:80:public sealed partial class RedactorExecutor(IChatClient cliente) : Executor(CaminoDelResumen.RedactorId)
+12-Uno-O-Varios-Agentes/Application/Workflows/CaminoDelResumen.cs:102:public sealed partial class CorrectorExecutor(AIAgent agente) : Executor(CaminoDelResumen.CorrectorId)
+12-Uno-O-Varios-Agentes/Application/Workflows/CaminoDelResumen.cs:118:public sealed partial class VerificadorExecutor(FuenteDeResultados fuente, string destinoDeLaVuelta) : Executor(CaminoDelResumen.VerificadorId)
+15-Pruebas-Y-Evaluacion/Application/CorridaDeEvaluacion.cs:6:using Microsoft.Extensions.AI;
+16-Inyeccion-Indirecta/Application/Aprobacion/ServidorDeAprobaciones.cs:6:using Microsoft.Extensions.AI;
+01-Chat-Y-Streaming/Application/AsistenteDeAyuda.cs:1:// Nuevo (ejemplo 01, plan §E.2; guía §5.1–§5.2). La aplicación sólo conoce IChatClient: no sabe
+01-Chat-Y-Streaming/Application/AsistenteDeAyuda.cs:5:using Microsoft.Extensions.AI;
+01-Chat-Y-Streaming/Application/AsistenteDeAyuda.cs:23:public sealed class AsistenteDeAyuda(IChatClient cliente)
+07-RAG-Con-Citas/Application/AsistenteDeAyuda.cs:5:using Microsoft.Extensions.AI;
+07-RAG-Con-Citas/Application/AsistenteDeAyuda.cs:17:public sealed class AsistenteDeAyuda(IChatClient cliente, IndiceDeAyuda indice, int top = AsistenteDeAyuda.TopPorDefecto)
+06-Embeddings-Y-Busqueda-Semantica/Application/CorridaDeBusqueda.cs:7:using Microsoft.Extensions.AI;
+06-Embeddings-Y-Busqueda-Semantica/Application/Busqueda.cs:2:// VectorStore por dentro: comparar el vector de la pregunta con el de cada fragmento y ordenar.
+06-Embeddings-Y-Busqueda-Semantica/Application/Busqueda.cs:3:// El almacén (InMemoryVectorStore) entra recién en 07.
+10-Workflow-Y-Contraejemplo/Application/Workflows/EncuestaComoWorkflow.cs:2:// (Microsoft.Agents.AI.Workflows 1.26.0). Compila, corre, deja un checkpoint por superstep y se
+10-Workflow-Y-Contraejemplo/Application/Workflows/EncuestaComoWorkflow.cs:8://     Microsoft.Agents.AI.Workflows.Generators: sin él, CS0534 (no implementa ConfigureProtocol);
+10-Workflow-Y-Contraejemplo/Application/Workflows/EncuestaComoWorkflow.cs:13:using Microsoft.Agents.AI.Workflows;
+10-Workflow-Y-Contraejemplo/Application/Workflows/EncuestaComoWorkflow.cs:48:public sealed partial class EncuestaExecutor(EncuestaService servicio) : Executor(EncuestaComoWorkflow.EncuestaId)
+10-Workflow-Y-Contraejemplo/Application/Workflows/EncuestaComoWorkflow.cs:116:        return new WorkflowBuilder(encuesta)
+17-Observabilidad-Y-Pipeline/Application/AsistenteDeAyuda.cs:1:// Nuevo (ejemplo 17, plan §E.2; guía §12.1–§12.3). La aplicación sólo conoce IChatClient: no sabe
+17-Observabilidad-Y-Pipeline/Application/AsistenteDeAyuda.cs:4:using Microsoft.Extensions.AI;
+17-Observabilidad-Y-Pipeline/Application/AsistenteDeAyuda.cs:38:public sealed class AsistenteDeAyuda(IChatClient cliente)
+16-Inyeccion-Indirecta/Application/Origen/PoliticaDeOrigen.cs:9:using Microsoft.Extensions.AI;
+16-Inyeccion-Indirecta/Application/Origen/PoliticaDeOrigen.cs:48:/// dentro de <see cref="ApprovalRequiredAIFunction" />, FunctionInvokingChatClient no la invoca sin
+16-Inyeccion-Indirecta/Application/Origen/PoliticaDeOrigen.cs:51:public sealed class EscrituraVigilada(AIFunction interna, EstadoDelPedido estado, IAprobaciones aprobaciones) : DelegatingAIFunction(interna)
+16-Inyeccion-Indirecta/Application/Origen/PoliticaDeOrigen.cs:59:    protected override ValueTask<object?> InvokeCoreAsync(AIFunctionArguments arguments, CancellationToken cancellationToken)

@@ -1,0 +1,5 @@
+$ grep -rn 'using Microsoft.Extensions.AI' CasoBase/Domain CasoBase/Application Agregado/Application Mutaciones/R4/PropuestaConMensaje.cs
+coincidencias: 0
+$ grep -n 'ChatMessage' Mutaciones/R4/PropuestaConMensaje.cs
+7:    public ChatMessage? UltimoMensaje { get; set; }
+9:    public Microsoft.Extensions.AI.ChatMessage? MensajeOriginal { get; set; }

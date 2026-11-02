@@ -1,0 +1,5 @@
+# docker image inspect ollama/ollama:0.40.11 (2026-10-28)
+Id=sha256:dea72d1e22270fe095b68fdf756d2b489d615643c5a2eaebbc5f569181e322d8
+RepoDigests=["ollama/ollama@sha256:dea72d1e22270fe095b68fdf756d2b489d615643c5a2eaebbc5f569181e322d8"]
+Env=["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64","NVIDIA_DRIVER_CAPABILITIES=compute,utility","NVIDIA_VISIBLE_DEVICES=all","OLLAMA_HOST=<comodín IPv4>:11434"]
+ExposedPorts={"11434/tcp":{}}

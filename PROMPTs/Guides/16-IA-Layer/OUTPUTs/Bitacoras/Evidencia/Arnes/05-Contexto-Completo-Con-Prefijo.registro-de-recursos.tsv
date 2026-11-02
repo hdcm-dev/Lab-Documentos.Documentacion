@@ -1,0 +1,45 @@
+2026-10-27T10:17:18-0300	build	constructor-05	pedido	compila 05 y genera el padrón v1 (ttl 20m)
+2026-10-27T10:17:18-0300	build	constructor-05	concedido	compila 05 y genera el padrón v1 (ttl 20m)
+2026-10-27T10:17:38-0300	build	constructor-05	liberado	-
+2026-10-27T10:17:44-0300	build	constructor-05	pedido	compila 05 y genera el padrón v1 (ttl 20m)
+2026-10-27T10:17:44-0300	build	constructor-05	concedido	compila 05 y genera el padrón v1 (ttl 20m)
+2026-10-27T10:17:56-0300	build	constructor-05	liberado	-
+2026-10-27T10:18:04-0300	build	constructor-05	pedido	05 --fake --verificar (ttl 20m)
+2026-10-27T10:18:04-0300	build	constructor-05	concedido	05 --fake --verificar (ttl 20m)
+2026-10-27T10:18:15-0300	build	constructor-05	liberado	-
+2026-10-27T10:18:24-0300	build	constructor-05	pedido	pruebas de 05 sin servidor (ttl 20m)
+2026-10-27T10:18:24-0300	build	constructor-05	concedido	pruebas de 05 sin servidor (ttl 20m)
+2026-10-27T10:18:29-0300	build	constructor-05	liberado	-
+2026-10-27T10:18:34-0300	build	constructor-05	pedido	pruebas de 05 sin servidor (ttl 20m)
+2026-10-27T10:18:34-0300	build	constructor-05	concedido	pruebas de 05 sin servidor (ttl 20m)
+2026-10-27T10:18:39-0300	build	constructor-05	liberado	-
+2026-10-27T10:18:53-0300	build	constructor-05	pedido	pruebas de 05 sin servidor (ttl 20m)
+2026-10-27T10:18:53-0300	build	constructor-05	concedido	pruebas de 05 sin servidor (ttl 20m)
+2026-10-27T10:19:15-0300	build	constructor-05	liberado	-
+2026-10-27T10:19:31-0300	[recurso-modelo-propio]	constructor-05	pedido	05 contexto completo con prefijo: mide tiempos (alternado, plan) (ttl 60m)
+2026-10-27T10:19:31-0300	[recurso-modelo-propio]	constructor-05	concedido	05 contexto completo con prefijo: mide tiempos (alternado, plan) (ttl 60m)
+2026-10-27T10:21:40-0300	[recurso-modelo-propio]	constructor-05	liberado	-
+2026-10-27T10:22:37-0300	build	constructor-05	pedido	pruebas de 05 sin servidor (ttl 20m)
+2026-10-27T10:22:37-0300	build	constructor-05	concedido	pruebas de 05 sin servidor (ttl 20m)
+2026-10-27T10:22:49-0300	build	constructor-05	liberado	-
+2026-10-27T10:23:04-0300	[recurso-modelo-propio]	constructor-05	pedido	05 desvío: alternado con calentamiento, mide tiempos (ttl 60m)
+2026-10-27T10:23:04-0300	[recurso-modelo-propio]	constructor-05	concedido	05 desvío: alternado con calentamiento, mide tiempos (ttl 60m)
+2026-10-27T10:24:43-0300	[recurso-modelo-propio]	constructor-05	liberado	-
+2026-10-27T10:25:57-0300	build	constructor-05	pedido	05 --fake --verificar (ttl 20m)
+2026-10-27T10:25:57-0300	build	constructor-05	concedido	05 --fake --verificar (ttl 20m)
+2026-10-27T10:26:09-0300	build	constructor-05	liberado	-
+2026-10-27T10:43:28-0300	build	c05-constructor	pedido	compila y corre 05 en --fake (ttl 20m)
+2026-10-27T10:43:39-0300	build	c05-constructor	concedido	compila y corre 05 en --fake (ttl 20m)
+2026-10-27T10:43:45-0300	build	c05-constructor	liberado	-
+2026-10-27T10:43:52-0300	build	c05-constructor	pedido	pruebas sin servidor de 05 (ttl 20m)
+2026-10-27T10:44:02-0300	build	c05-constructor	concedido	pruebas sin servidor de 05 (ttl 20m)
+2026-10-27T10:44:18-0300	build	c05-constructor	liberado	-
+2026-10-27T10:45:01-0300	[recurso-modelo-propio]	c05-constructor	pedido	05 corrida 3 del desvío: mide tiempos con el modelo descargado (no cargar el propio mientras tanto) (ttl 45m)
+2026-10-27T10:45:01-0300	[recurso-modelo-propio]	c05-constructor	concedido	05 corrida 3 del desvío: mide tiempos con el modelo descargado (no cargar el propio mientras tanto) (ttl 45m)
+2026-10-27T10:45:39-0300	build	c05-constructor	pedido	05 en --fake para la evidencia (ttl 20m)
+2026-10-27T10:45:49-0300	build	c05-constructor	concedido	05 en --fake para la evidencia (ttl 20m)
+2026-10-27T10:45:58-0300	build	c05-constructor	liberado	-
+2026-10-27T10:45:58-0300	build	c05-constructor	pedido	pruebas sin servidor de 05 (evidencia) (ttl 20m)
+2026-10-27T10:46:03-0300	build	c05-constructor	concedido	pruebas sin servidor de 05 (evidencia) (ttl 20m)
+2026-10-27T10:46:14-0300	build	c05-constructor	liberado	-
+2026-10-27T10:56:14-0300	[recurso-modelo-propio]	c05-constructor	liberado	-

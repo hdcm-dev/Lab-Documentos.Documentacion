@@ -1,0 +1,46 @@
+# G1: '[C:' por archivo (2026-10-28)
+03-Marco-De-Referencia.md:1
+02-Cohesion-Global.md:0
+00-Contrato-De-Entrada.md:4
+Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:0
+Nucleos/N1-Capa-IA-En-El-Stack.md:0
+Nucleos/N3-RAG-En-NET.md:0
+Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:0
+Nucleos/N6-Caso-Movilidad-Urbana.md:0
+04-Integracion.md:0
+01-Descomposicion-Conceptual.md:7
+Nucleos/N2-Abstracciones-Y-Proveedores-NET.md:0
+Nucleos/N0b-Producto-Datos-Y-Perfil.md:0
+Nucleos/N4-Agentes-Y-Orquestacion.md:0
+Nucleos/N5-Operacion-Calidad-Seguridad.md:0
+
+# total
+13
+# [C] sin dos puntos
+00-Contrato-De-Entrada.md:0
+Nucleos/N1b-Por-Que-Ahora-Evolucion-De-Los-LLM.md:0
+04-Integracion.md:0
+02-Cohesion-Global.md:0
+01-Descomposicion-Conceptual.md:0
+Nucleos/N1-Capa-IA-En-El-Stack.md:0
+Nucleos/N6-Caso-Movilidad-Urbana.md:0
+Nucleos/N4-Agentes-Y-Orquestacion.md:0
+03-Marco-De-Referencia.md:0
+Nucleos/N0b-Producto-Datos-Y-Perfil.md:0
+Nucleos/N2-Abstracciones-Y-Proveedores-NET.md:0
+Nucleos/N3b-CAG-Y-Estrategias-De-Conocimiento.md:0
+Nucleos/N5-Operacion-Calidad-Seguridad.md:0
+Nucleos/N3-RAG-En-NET.md:0
+03-Marco-De-Referencia.md:48:[C: verificar soporte de herramientas de Qwen en Ollama en N2]
+01-Descomposicion-Conceptual.md:18:[C: a verificar]
+01-Descomposicion-Conceptual.md:104:[C: contrastar con la guía de arquitectura de aplicaciones de IA de Microsoft (learn.microsoft.com) y con una fuente de patrones de agentes]
+01-Descomposicion-Conceptual.md:115:[C: verificar el orden y semántica del pipeline en learn.microsoft.com]
+01-Descomposicion-Conceptual.md:117:[C: verificar posicionamiento oficial vigente]
+01-Descomposicion-Conceptual.md:123:[C: verificar conectores vigentes y su estado GA/preview]
+01-Descomposicion-Conceptual.md:136:[C: verificar en la documentación oficial de LangChain/LangGraph y de Agent Framework]
+01-Descomposicion-Conceptual.md:149:[C: verificar estado de las convenciones en opentelemetry.io]
+01-Descomposicion-Conceptual.md:149:[C: verificar edición vigente del OWASP Top 10 for LLM Applications]
+00-Contrato-De-Entrada.md:102:[C: a verificar en N…]
+00-Contrato-De-Entrada.md:138:[C: verificar en N4 contra la documentación oficial de LangChain]
+00-Contrato-De-Entrada.md:142:[C: verificar estado de soporte LTS en N2]
+00-Contrato-De-Entrada.md:169:[C: verificar propietarios en nuget.org en N4]

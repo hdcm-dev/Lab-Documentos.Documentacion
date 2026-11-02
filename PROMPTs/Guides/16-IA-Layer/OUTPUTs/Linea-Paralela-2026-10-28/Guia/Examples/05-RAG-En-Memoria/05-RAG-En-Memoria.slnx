@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/MovilidadUrbana.RagEnMemoria/MovilidadUrbana.RagEnMemoria.csproj" />
+  <Project Path="tests/MovilidadUrbana.RagEnMemoria.Tests/MovilidadUrbana.RagEnMemoria.Tests.csproj" />
+</Solution>

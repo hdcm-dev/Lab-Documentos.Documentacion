@@ -1,0 +1,7 @@
+CONCEDIDO <recurso-compartido> a cat-op hasta 2026-10-28T10:54:21-0300 (renová con: <gestor-de-turnos> renovar <recurso-compartido> cat-op)
+{"paso": "inicio", "fecha": "2026-10-28T10:09:21-0300", "caracteres_sistema": 6899}
+{"paso": "ayuda-1 (frío)", "prompt_eval_count": 1541, "prompt_eval_s": 70.44, "pared_s": 71.74}
+{"paso": "ayuda-2 (mismo prefijo, otra pregunta)", "prompt_eval_count": 1538, "prompt_eval_s": 24.84, "pared_s": 25.99}
+{"paso": "pedido intercalado distinto", "prompt_eval_count": 53, "prompt_eval_s": 2.54, "pared_s": 3.9}
+{"paso": "ayuda-3 (después del intercalado)", "prompt_eval_count": 1540, "prompt_eval_s": 26.14, "pared_s": 27.61}
+{"paso": "fin", "fecha": "2026-10-28T10:11:30-0300"}

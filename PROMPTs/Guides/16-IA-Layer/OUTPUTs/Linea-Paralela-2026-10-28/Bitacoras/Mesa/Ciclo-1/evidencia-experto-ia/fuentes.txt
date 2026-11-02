@@ -1,0 +1,17 @@
+# Fuentes consultadas por el experto en IA — 2026-10-28 (UTC 12:40–13:10)
+https://huggingface.co/Qwen/Qwen3.5-4B/raw/main/config.json            layer_types: 24 linear_attention + 8 full_attention (full_attention_interval 4); max_position_embeddings 262144; vocab_size 248320
+https://huggingface.co/Qwen/Qwen3.5-4B/raw/main/README.md              «Qwen3.5 models operate in thinking mode by default»; «we advise maintaining a context length of at least 128K tokens to preserve thinking capabilities»; muestreo recomendado: thinking general temperature=1.0, top_p=0.95, top_k=20, presence_penalty=1.5; instruct (non-thinking) general temperature=0.7, top_p=0.8, top_k=20, presence_penalty=1.5
+https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/raw/main/config.json vocab_size 151936; max_position_embeddings 32768
+https://huggingface.co/Qwen/Qwen3-Embedding-0.6B/raw/main/README.md    «Embedding Dimension: Up to 1024, supports user-defined output dimensions ranging from 32 to 1024»; Instruction Aware: Yes; «using instructions (instruct) typically yields an improvement of 1% to 5%»; «write their instructions in English»; formato 'Instruct: {task_description}\nQuery:{query}'; «No need to add instruction for retrieval documents»
+https://huggingface.co/api/models/Qwen/Qwen3.5-4B                      license apache-2.0 (lastModified 2026-03-02)
+https://huggingface.co/api/models/Qwen/Qwen2.5-0.5B-Instruct           license apache-2.0
+https://huggingface.co/api/models/Qwen/Qwen3-Embedding-0.6B            license apache-2.0 (lastModified 2026-04-20)
+https://registry.ollama.ai/v2/library/qwen3.5/manifests/4b             sha256(manifest) = d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04 (= digest de /api/tags en estación 1); capa license = Apache License 2.0
+https://registry.ollama.ai/v2/library/qwen3-embedding/manifests/0.6b   sha256(manifest) = ac6da0dfba84a81fdbfbaf330198c33cd77c4cdfc53e8bc50eb581914a15621d (= estación 1); SIN capa de licencia en el tag de Ollama
+https://registry.ollama.ai/v2/library/qwen2.5/manifests/0.5b           sha256(manifest) = a8b0c51577010a279d933d14c2a8ab4b268079d44c5c8830c0a93900f1827c67 (= estación 1); capa license = Apache License 2.0
+https://ollama.com/library/qwen2.5                                     «... license, while the 3B and 72B models are under the Qwen license.»
+https://pypi.org/pypi/langgraph/json                                   langgraph 1.2.18, subido 2026-10-26T20:04:29Z
+https://registry.npmjs.org/@langchain/langgraph                        1.5.3, 2026-10-26T19:41:49Z
+https://azuresearch-usnc.nuget.org/query?q=owner:langchain             totalHits 0
+https://docs.langchain.com/oss/python/langgraph/graph-api              State: «A shared data structure that represents the current snapshot of your application»; «Each key in the State has its own independent reducer function»; Send: «takes two arguments: first is the name of the node, and second is the state to pass to that node» (fan-out dinámico desde aristas condicionales); «Command is a versatile primitive for controlling graph execution»; super-steps al estilo Pregel
+https://learn.microsoft.com/en-us/agent-framework/concepts/workflows/  (ms.date 2026-07-30) «The .NET SDK uses the graph-based WorkflowBuilder API. It connects typed executors through edges and conditions, supports fan-out and fan-in execution, ... checkpoints progress at superstep boundaries»; «Edges route values between executors»; «State management controls durable and run-scoped workflow state»

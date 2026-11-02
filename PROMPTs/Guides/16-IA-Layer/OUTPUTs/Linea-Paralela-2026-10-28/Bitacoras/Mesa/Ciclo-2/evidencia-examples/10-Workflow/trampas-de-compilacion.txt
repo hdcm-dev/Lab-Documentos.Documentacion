@@ -1,0 +1,5 @@
+EN COLA build (posición 2); esperando hasta 90 min...
+### sin-generador
+Program.cs(3,31): error CS0534: 'ValidarPaso' does not implement inherited abstract member 'Executor.ConfigureProtocol(ProtocolBuilder)' [/ex/T.csproj]
+### bindexecutor
+Program.cs(3,30): error CS0411: The type arguments for method 'ExecutorBindingExtensions.BindExecutor<TExecutor>(Func<string, string, ValueTask<TExecutor>>, string)' cannot be inferred from the usage. Try specifying the type arguments explicitly. [/ex/T.csproj]

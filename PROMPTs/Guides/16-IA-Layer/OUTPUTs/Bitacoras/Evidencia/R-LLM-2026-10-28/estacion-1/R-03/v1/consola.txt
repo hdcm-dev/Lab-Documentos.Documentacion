@@ -1,0 +1,24 @@
+[e01] Dar de alta Goya, Corrientes, código postal 3450, con 90000 habitantes.
+  modelo devolvió: {
+  "nombre": "Goya",
+  "provincia": "Corrientes",
+  "codigoPostal": "3450",
+  "habitantes": 90000
+}
+  TryGetResult: true
+  decisión de las reglas: lista
+  oráculo: pasa
+[e02] En Bella Vista, Corrientes, CP 3432, no sé cuántos viven
+  modelo devolvió: {
+  "nombre": "Bella Vista",
+  "provincia": "Corrientes",
+  "codigoPostal": "3432",
+  "habitantes": null
+}
+  TryGetResult: true
+  decisión de las reglas: faltan:habitantes → Ingrese una cantidad de habitantes mayor a cero.
+  oráculo: pasa
+altas guardadas: 1
+conducta del modelo (descriptiva, sin umbral): JSON válido 2/2; propuso habitantes sin el dato 0/1; código postal que no está en el texto 0/2
+registro: 4 líneas en 03-Salida-Estructurada.jsonl
+invariantes de código: se cumplen

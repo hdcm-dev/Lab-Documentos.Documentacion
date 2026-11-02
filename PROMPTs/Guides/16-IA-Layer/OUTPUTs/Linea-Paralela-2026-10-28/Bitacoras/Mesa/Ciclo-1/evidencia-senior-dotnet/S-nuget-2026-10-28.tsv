@@ -1,0 +1,32 @@
+# NuGet flatcontainer (https://api.nuget.org/v3-flatcontainer/<id>/index.json), consulta: 2026-10-28T09:45:14-03:00
+# paquete	última estable	última publicada
+Microsoft.Extensions.AI	10.11.0	10.11.0
+Microsoft.Extensions.AI.Abstractions	10.11.0	10.11.0
+Microsoft.Extensions.AI.OpenAI	10.11.0	10.11.0
+OpenAI	2.14.0	2.14.0
+OllamaSharp	5.5.0	5.5.0
+Microsoft.Extensions.VectorData.Abstractions	10.11.0	10.11.0
+CommunityToolkit.VectorData.InMemory	1.0.1	1.0.1
+CommunityToolkit.VectorData.SqliteVec	—	1.0.3-preview
+Microsoft.Agents.AI	1.26.0	1.26.0
+Microsoft.Agents.AI.Workflows	1.26.0	1.26.0
+Microsoft.Agents.AI.Hosting	—	1.26.0-preview.261023.1
+ModelContextProtocol.AspNetCore	2.3.0	2.3.0
+Microsoft.Extensions.AI.Evaluation.Quality	10.11.0	10.11.0
+Microsoft.EntityFrameworkCore.Sqlite	10.0.14	11.0.0-rc.3.26522.148
+Microsoft.Extensions.DependencyInjection	10.0.14	11.0.0-rc.3.26522.148
+Microsoft.Extensions.Http.Resilience	10.11.0	10.11.0
+Microsoft.Extensions.Http	10.0.14	11.0.0-rc.3.26522.148
+OpenTelemetry.Extensions.Hosting	1.20.1	1.20.1
+OpenTelemetry.Instrumentation.AspNetCore	1.20.1	1.20.1
+OpenTelemetry.Instrumentation.Http	1.20.1	1.20.1
+OpenTelemetry.Exporter.OpenTelemetryProtocol	1.20.1	1.20.1
+NUnit	5.0.0	5.0.0
+NUnit3TestAdapter	6.3.1	6.3.1
+Microsoft.NET.Test.Sdk	18.11.0	18.11.0
+Microsoft.AspNetCore.Mvc.Testing	10.0.14	11.0.0-rc.3.26522.148
+CommunityToolkit.Aspire.OllamaSharp	13.6.1	13.6.2-beta.959
+Microsoft.Extensions.Caching.Hybrid	10.11.0	10.11.0
+
+# Fechas de publicación (registration5-gz-semver2), NUnit:
+NUnit 4.6.1 2026-05-19; NUnit 5.0.0-beta.1 2026-07-04; NUnit 5.0.0 2026-09-27; NUnit3TestAdapter 6.3.1 2026-10-09

@@ -1,0 +1,9 @@
+(Salida de las dos sondas de reflexión, 2026-10-28, mcr.microsoft.com/dotnet/sdk:10.0, SDK 10.0.403; la primera sonda se reescribió como Program-sonda2.cs.)
+Microsoft.Agents.AI.AIContextProvider (abstract) — Microsoft.Agents.AI.Abstractions 1.26.0.0
+  ctor(Func provideInputMessageFilter, Func storeInputRequestMessageFilter, Func storeInputResponseMessageFilter)
+  virtual ProvideAIContextAsync(InvokingContext context, CancellationToken) · virtual StoreAIContextAsync(InvokedContext, CancellationToken)
+  InvokingContext(AIAgent agent, AgentSession session, AIContext aiContext)
+Microsoft.Agents.AI.AIContext: Instructions (string), Messages (IEnumerable), Tools (IEnumerable)
+ChatClientAgentOptions: AIContextProviders : IEnumerable<AIContextProvider>; ChatHistoryProvider
+ChatOptions.Reasoning : ReasoningOptions { Effort, Output }; ReasoningEffort = None,Low,Medium,High,ExtraHigh
+OllamaSharp.Models.Chat.ChatRequest.Think : ThinkValue? (op_Implicit desde Boolean, String)

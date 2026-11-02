@@ -1,0 +1,512 @@
+# Especificación de la capa de IA — Servicio de sugerencias de compra, Red de Bibliotecas del Valle
+
+| Campo | Valor |
+|---|---|
+| Documento | Especificación de la capa de IA (arc42 reducido) |
+| Servicio | Servicio ASP.NET Core de la Red de Bibliotecas del Valle (ficticio) |
+| Conocimiento aplicado | AI-Layer-Integration-Designing-Specification v1.0 (procedimiento §11, pasos 0 a 10) |
+| Versión | 0.1 (borrador) |
+| Fecha | 2026-11-01 |
+| Estado | Borrador. Todas las decisiones están **pendientes de firma**. |
+| Ubicación propuesta | a definir por la norma del repositorio (ver Dudas) |
+
+---
+
+## Paso 0 · Normas del repositorio anfitrión
+
+| Norma | Qué se sabe | Cómo se aplica |
+|---|---|---|
+| Registro de ADR | `docs/adr/` contiene ADR-001 a ADR-014 | las ADR de esta especificación toman los números **ADR-015 a ADR-020** |
+| Glosario | `docs/Glosario.md` pide agregar los términos nuevos antes de usarlos | antes de fusionar, se proponen los términos de la tabla siguiente |
+| Decisiones vigentes (ADR-001 a 014) | no se leyeron | **pendiente**: no se puede comprobar que ninguna choque con esta especificación |
+| Documentos que no se editan | se desconocen | pendiente |
+| Dónde vive la especificación | se desconoce | pendiente |
+
+**Términos nuevos que se proponen a `docs/Glosario.md`:**
+
+| Término | Definición propuesta |
+|---|---|
+| Capa de IA | parte del servicio que habla con un modelo de lenguaje: adaptador, cadena de opciones y herramientas. Vive en `AI/` |
+| Propuesta de clasificación | categoría y posible duplicado que sugiere el sistema para una sugerencia de compra. No tiene efecto hasta que un bibliotecario la confirma |
+| Posible duplicado | título del catálogo que el código encontró como coincidencia de una sugerencia. Lo propone el sistema y lo confirma un bibliotecario |
+| Resultado *ok* / *degradado* / *rechazado* | los tres resultados de una llamada a la capa de IA (§5 del conocimiento) |
+| Parámetro de apagado | opción de configuración que apaga una capacidad de IA. Con la capacidad apagada, el servicio se comporta como antes |
+| Inquilino | en este servicio, la **sede** |
+| Anclaje | comprobación del código de que cada valor que afirma una respuesta aparece en un resultado de herramienta |
+| Nivel de agencia | A0, A1 lectura, A1 escritura, A2 o A3 (§3 del conocimiento) |
+
+---
+
+## 1. Introducción y metas (arc42 §1)
+
+### 1.1 Inventario de capacidades
+
+| # | Capacidad | ESC | Nivel | Estado |
+|---|---|---|---|---|
+| 1 | Proponer la categoría temática (una de 40) y el posible duplicado de cada sugerencia de compra | ESC-03 | A0 con persona que firma | **especificada** |
+| 2 | Consulta en lenguaje natural del bibliotecario sobre las sugerencias de su sede | ESC-01 (sobre datos propios, con carril aparte para el dato exacto) | A1 lectura | **sólo diseño**: no tiene métrica, umbral ni error caro (árbol, pregunta 4 = «no») |
+| 3 | Aviso por correo a todos los lectores cuyos pedidos llegaron | ESC-04 | — (cae en R-07) | **sólo diseño**: es una acción irreversible y masiva. Queda en borrador con confirmación humana y está fuera de esta versión |
+
+### 1.2 Las cuatro preguntas
+
+| Pregunta | Capacidad 1 | Capacidad 2 | Capacidad 3 |
+|---|---|---|---|
+| 1. ¿Qué hace hoy la persona y por qué un modelo lo mejoraría? | El bibliotecario lee cada sugerencia, le asigna una de 40 categorías y busca si el título ya está en el catálogo. El modelo interpreta texto libre («la última novela de tal autora, en papel»), algo que una regla no resuelve. | El bibliotecario usa `SugerenciasService.Listar(sede, estado, desde, hasta)` mediante la interfaz existente. El modelo traduciría la pregunta a parámetros. | El bibliotecario avisa a los lectores (el caso no dice cómo). |
+| 2. ¿Alcanza una regla? | **En parte.** Una regla no clasifica texto libre. El duplicado sí es, en parte, una búsqueda exacta en el catálogo. | **En parte**: una pantalla de filtros resolvería la pregunta. Ver Dudas. | Sí para el envío, que es una regla: a quién avisar es un dato exacto. |
+| 3. ¿Qué cuesta un error y quién lo absorbe? | Una categoría equivocada esconde la sugerencia a quien la busca. Un falso duplicado la descarta. Lo absorben el lector, cuya sugerencia se pierde, y la biblioteca, que pierde la compra. | **No declarado.** | Correos equivocados a muchos lectores, sin vuelta atrás. |
+| 4. ¿Con qué métrica y qué umbral se decide seguir, y quién fija el umbral? | Métricas: (a) proporción de categorías propuestas que coinciden con la del bibliotecario; (b) tasa de falsos duplicados, que es la métrica crítica; (c) tasa de duplicados no detectados. Umbrales **U-CAT**, **U-FDUP** y **U-NODUP**: los fija el jefe de bibliotecas (ACT-ARQ en esta decisión). **Valor pendiente de firma.** | **No declarada** → «primero definir éxito». | No aplica en esta versión. |
+
+### 1.3 Resultado del árbol
+
+| Capacidad | Recorrido | Resultado |
+|---|---|---|
+| 1 | Q0 una tarea → Q1 «en parte» → respaldo → Q2: la categoría no es un dato exacto; el duplicado sí lo es en su parte exacta y va por un caso de uso del catálogo (carril aparte, [P-4]) → Q3 sí, con el valor del umbral pendiente → Q4 «propone» | **A0**, con persona que firma: el bibliotecario confirma. **Respaldo nombrado:** la clasificación manual del bibliotecario, que es el comportamiento actual. **Línea base:** el bibliotecario medido sobre el mismo conjunto ([Caso G], [Prueba]). |
+| 2 | Q0 → Q1 «en parte» (respaldo: filtros/`Listar`) → Q2: el conteo es un dato exacto y va por carril aparte; el modelo sólo interpreta la pregunta → Q3 **no** | **Primero definir éxito**: no se especifica para construir. Se deja el diseño como A1 lectura. |
+| 3 | Acción irreversible y masiva | R-07: nunca la dispara el modelo. Queda **sólo diseño**. |
+
+No se emite ADR-SIN-IA porque ninguna capacidad sale por la rama «no».
+
+### 1.4 Escenarios, contextos y actores
+
+**Contextos de uso** (de la capacidad, no del servicio):
+
+| Par | Valor | Motivo |
+|---|---|---|
+| LOCAL / NUBE | **CTX-LOCAL** | el modelo corre en un servidor Ollama de la red, sin nube. Si ese servidor lo comparten otras aplicaciones, los datos llegan a un servidor que opera otro (ver Dudas). |
+| PROTO / PROD | **CTX-PROTO** | es un piloto sobre un servicio en producción. Por eso rige R-08. |
+| PUB / SENS | **CTX-SENS** | la sugerencia se guarda con nombre y correo del lector, y el texto libre puede traer datos personales (R-02). |
+| EXISTENTE / NUEVA | **CTX-EXISTENTE** | el servicio lleva tres años en producción. |
+
+**Actores** (son roles, no puestos):
+
+| Rol | Quién | Estado |
+|---|---|---|
+| ACT-ARQ (decisión de umbrales) | jefe de bibliotecas | nombrado |
+| ACT-ARQ (arquitectura) | — | **sin designar** |
+| ACT-DEV | equipo del servicio | asumido |
+| ACT-OPS | quien opera el servidor Ollama y el despliegue | **sin designar** |
+| ACT-SEC | — | **sin designar**. Decide qué datos salen, el enmascarado y la retención. |
+| ACT-USR | bibliotecario de sede; administrador, que ve todas las sedes | nombrado |
+
+El lector escribe la sugerencia, pero no usa la capa de IA. Para la capa, su texto es **entrada no confiable**.
+
+---
+
+## 2. Contexto y alcance (arc42 §3)
+
+### 2.1 C4 · Contexto
+
+```mermaid
+flowchart LR
+  B["Bibliotecario / Administrador<br/>ACT-USR"]
+  L["Lector<br/>escribe sugerencias"]
+  S["Servicio ASP.NET Core<br/>Red de Bibliotecas del Valle<br/>con capa de IA"]
+  O["Servidor Ollama de la red<br/>CTX-LOCAL"]
+  P["PostgreSQL<br/>sugerencias, catálogo, lectores"]
+  L -->|"sugerencia en texto libre"| S
+  B -->|"confirma propuesta / pregunta"| S
+  S -->|"contexto mínimo R-02"| O
+  S -->|"EF Core"| P
+```
+
+Figura 2.1. C4 de contexto. No hay MCP ni cliente externo de herramientas. La capacidad 3, con su servidor de correo, queda fuera del diagrama porque es sólo diseño.
+
+### 2.2 Datos mínimos que salen hacia qué servidor (R-02)
+
+Destino de todos los datos: el servidor Ollama de la red. Todo lo de esta tabla está **pendiente de firma de ACT-SEC**.
+
+| Capacidad | Viaja al modelo | No viaja nunca |
+|---|---|---|
+| 1 | el texto de la sugerencia, enmascarado si ACT-SEC lo decide; la lista de 40 categorías (código y nombre) | nombre, correo e id del lector; sede; fechas; títulos del catálogo (el duplicado lo resuelve el código) |
+| 2 (sólo diseño) | la pregunta del bibliotecario; la fecha actual; los resultados de la herramienta (conteos por categoría y rango usado) | texto de las sugerencias, nombres, correos, ids de lector, id de sede |
+
+**Opción para que decida ACT-SEC:** enmascarar correos y teléfonos del texto de la sugerencia por patrón antes de que viaje. Ese filtro mide sólo esos patrones y no ve nombres propios (R-04). Lo que se escapa va a revisión en la medición.
+
+### 2.3 MCP y clientes
+
+- **MCP: no.** Ningún cliente externo consume herramientas del servicio, y el servicio no consume herramientas de otro proceso.
+- **Clientes (§6): sin determinar.** No se sabe si `Controllers/` sirve vistas renderizadas en el servidor (caso en que §6 no aplica) o una API para un cliente aparte (ver Dudas). En cualquier caso, ningún cliente llama al modelo.
+
+---
+
+## 3. Vista de bloques (arc42 §5)
+
+### 3.1 Correspondencia de capas (CTX-EXISTENTE)
+
+| Capa de referencia | Carpeta o proyecto real | Cómo se comprueba la regla |
+|---|---|---|
+| Presentation | `Controllers/` | prueba de arquitectura: no referencia `AI/` ni el SDK de IA |
+| Application (casos de uso y puertos) | `Services/`; los puertos nuevos van en `Services/IA/` | prueba de arquitectura: no referencia el SDK de IA ni `AI/` |
+| Domain | entidades del servicio; **ubicación a confirmar** (probablemente en `Data/`) | `Domain_SinDependenciasDeIa`, que nombra el SDK |
+| Infrastructure/Persistence | `Data/` (EF Core sobre PostgreSQL) | existente, no se modifica |
+| Infrastructure/AI | carpeta nueva `AI/`; el nombre se propone a la norma del repo | único lugar con el SDK, además de `Program.cs` |
+| Host | `Program.cs` | registra el adaptador, el proveedor y los parámetros de apagado |
+
+Es un único proyecto, así que las capas son carpetas: el compilador no impone la regla y lo hace una prueba de arquitectura (ADR-017).
+
+**Deuda preexistente:** `Services/` probablemente depende de `Data/` en forma directa, sin repositorios invertidos. Queda fuera del alcance de esta especificación. La prueba de arquitectura no la exige y no se corrige acá.
+
+### 3.2 C4 · Contenedores
+
+```mermaid
+flowchart LR
+  subgraph APP["Servicio ASP.NET Core (un proyecto)"]
+    direction TB
+    CO["Controllers/<br/>Presentation"]
+    SE["Services/<br/>casos de uso y puertos Services/IA/"]
+    EN["Entidades<br/>Domain, ubicación a confirmar"]
+    DA["Data/<br/>EF Core, Persistence"]
+    AI["AI/<br/>adaptador, prompt, cadena, herramientas"]
+    PG["Program.cs<br/>raíz de composición"]
+    CO --> SE
+    SE --> EN
+    SE -->|"usa DbContext (existente)"| DA
+    AI -->|"implementa el puerto"| SE
+    AI -->|"herramienta llama a SugerenciasService"| SE
+    PG -.->|"elige el proveedor y lee el parámetro de apagado"| AI
+  end
+  OL["Servidor Ollama"]
+  DB["PostgreSQL"]
+  AI -->|"contexto mínimo"| OL
+  DA --> DB
+```
+
+Figura 3.1. C4 de contenedores. No hay flecha de `AI/` hacia las entidades, ni hacia `Data/`, ni hacia PostgreSQL. La herramienta de la capacidad 2 es sólo diseño.
+
+### 3.3 Escalones por capacidad
+
+| Capacidad | Conocimiento | Agencia | Patrón de salida |
+|---|---|---|---|
+| 1 | **K0**: las 40 categorías van en el pedido. El duplicado va por **carril aparte**: el código consulta el caso de uso de búsqueda del catálogo, nunca RAG. | A0 con persona que firma | estructurada → REQ-IA-03 |
+| 2 (sólo diseño) | **carril aparte**: herramienta sobre `SugerenciasService.Listar` | A1 lectura | texto libre que afirma datos → anclaje (R-03, REQ-IA-14) |
+| 3 (sólo diseño) | — | — (R-07) | borrador |
+
+### 3.4 Ficha del puerto · Capacidad 1
+
+| Campo | Contenido |
+|---|---|
+| Capacidad | Proponer, para una sugerencia de compra, una categoría del catálogo de 40 y los datos bibliográficos que el texto menciona. El posible duplicado lo calcula el código con esos datos. Nivel: K0 + carril aparte, A0 con persona que firma. |
+| Contrato | `Services/IA/IClasificadorDeSugerencias`, con `Task<Resultado<PropuestaDeClasificacion>> ProponerAsync(string textoSugerencia, IReadOnlyList<CategoriaResumen> categorias, CancellationToken cancellationToken = default)`. *ok*: hubo propuesta válida. *degradado*: sin modelo, sin respuesta o fuera de tiempo. *rechazado*: formato inválido o categoría fuera de la lista. |
+| Firma | **Entrada:** texto de la sugerencia, con el enmascarado que decida ACT-SEC, y `CategoriaResumen(Codigo, Nombre)`. **Salida:** `PropuestaDeClasificacion(CodigoCategoria, Titulo?, Autor?, Formato?)`. |
+| Adaptador | `AI/Clasificacion/ClasificadorDeSugerenciasConModelo`, sobre `IChatClient`. El prompt vive en `AI/Clasificacion/` y pide salida estructurada. |
+| Caso de uso | `Services/ClasificacionDeSugerenciasService` hace lo siguiente: (1) obtiene el texto y la lista de categorías; (2) llama al puerto; (3) valida que la categoría esté en la lista; (4) con título y autor, consulta el caso de uso de búsqueda del catálogo, **cuya existencia hay que confirmar**; (5) guarda la propuesta como **propuesta**, sin tocar la categoría ni el estado de la sugerencia. **Según el resultado:** *ok* → propuesta visible para el bibliotecario. *degradado* → no hay propuesta y el bibliotecario clasifica a mano como hoy. *rechazado* → no se guarda nada, se registra la regla violada y se cuenta aparte. |
+| Registro | `Program.cs`: registra el adaptador según el parámetro `IA:ClasificacionDeSugerencias:Habilitada` (por defecto `false`). Apagada, se registra un clasificador que siempre devuelve *degradado*. |
+| Regla de ubicación | prueba de arquitectura de ADR-017 (REQ-IA-01, REQ-IA-02) |
+| Doble | `ClasificadorDeSugerenciasFalso` y un `IChatClient` falso con guion. Variantes: válido, no JSON, categoría inexistente, sin respuesta. Registra el pedido para REQ-IA-15. |
+
+### 3.5 Ficha del puerto · Capacidad 2 (sólo diseño)
+
+| Campo | Contenido |
+|---|---|
+| Capacidad | Responder en lenguaje natural preguntas de conteo sobre las sugerencias de la sede del usuario. Nivel: carril aparte, A1 lectura. |
+| Contrato | Sesión de chat sobre `IChatClient` (ADR-015). El caso de uso `Services/ConsultaDeSugerenciasService.ResponderAsync(string pregunta, CancellationToken)` devuelve `Resultado<RespuestaAnclada>`. *ok*: la respuesta pasó el anclaje. *degradado*: no hay modelo, se agotó el tiempo o se llegó al tope del bucle. *rechazado*: hay un valor no anclado. |
+| Firma | **Entrada:** la pregunta y la fecha actual. La sede **no** está en la firma: la pone el código desde la identidad o, para el administrador, desde una sede elegida y validada (R-01). **Salida:** texto anclado y los conteos que lo respaldan. |
+| Adaptador | La herramienta es `AI/Consulta/HerramientaContarSugerencias.Contar(estado, desde, hasta)`. Envuelve `SugerenciasService.Listar(sedeDelContexto, estado, desde, hasta)` y **agrega** el resultado acotado en `ConteoPorCategoria(Categoria, Cantidad)`. **Validaciones del código:** el estado tiene que pertenecer al enumerado y el rango tiene un tope que fija ACT-ARQ. **Nunca devuelve:** el texto de la sugerencia, nombres ni correos (R-05, REQ-IA-10). El validador de anclaje vive en `AI/Consulta/`. |
+| Caso de uso | *ok* → muestra la respuesta. *degradado* → el usuario vuelve al camino sin IA, que es la consulta existente o la pantalla de filtros (ver Dudas). *rechazado* → cae al respaldo: una tabla con los conteos de la herramienta, sin texto del modelo. Se cuenta aparte. |
+| Registro | `Program.cs`, con el parámetro `IA:ConsultaDeSugerencias:Habilitada` (por defecto `false`) |
+| Regla de ubicación | ADR-017; REQ-IA-04 |
+| Doble | `IChatClient` falso con guion: pide la herramienta, inventa una cifra, repite la llamada sin fin |
+
+**Brecha (R-06):** `Listar` no filtra por categoría. Se registra como **deuda del producto**, y la capa no crea una consulta nueva. La herramienta sólo agrega el resultado ya acotado por sede, estado y rango.
+
+---
+
+## 4. Conceptos transversales (arc42 §8)
+
+| Concepto | Decisión |
+|---|---|
+| Cadena de opciones (P-9) | Un solo lugar, `AI/ConfiguracionDeIa`. **Orden declarado:** (1) límite de concurrencia, (2) tiempo máximo, (3) telemetría, (4) registro, (5) cliente del proveedor. **Sin reintentos.** Vale igual para las capacidades 1 y 2. |
+| Telemetría por ambiente | Spans de cada llamada. El contenido de los mensajes sale sólo en desarrollo (REQ-IA-09). Los registros fuera de desarrollo no llevan el texto de la sugerencia. |
+| Aprobación | No hay herramientas de escritura. En la capacidad 1, la confirmación del bibliotecario es una decisión del caso de uso, no la aprobación de una herramienta. La propuesta no tiene efecto hasta que se confirma (REQ-IA-21). |
+| Inquilino (R-01) | La sede la resuelve el código desde la identidad. El administrador, que tiene rol global, elige la sede en un contexto validado. Ninguna firma de herramienta ni de puerto recibe la sede. Si se pide una sede ajena, la respuesta es «no encontrado». |
+| Procedencia | **No confiable:** el texto del lector. **Confiable:** la lista de categorías, que sale del catálogo, y los resultados de herramienta, que son agregados armados por el código. |
+| Secretos e infraestructura | La URL del servidor Ollama, el nombre y versión del modelo y cualquier credencial van en la configuración por ambiente o en los secretos del despliegue. Ningún valor queda en el repositorio. |
+| Parámetro de apagado (R-08) | Uno por capacidad: `IA:ClasificacionDeSugerencias:Habilitada` e `IA:ConsultaDeSugerencias:Habilitada`, ambos `false` por defecto. Apagados, el comportamiento previo no cambia (REQ-IA-17). |
+| Límites de consumo | Largo máximo del texto de la sugerencia y de la pregunta; concurrencia limitada hacia Ollama; tope del bucle en la capacidad 2 (REQ-IA-08, REQ-IA-22). |
+
+---
+
+## 5. Decisiones (arc42 §9)
+
+### ADR-015 · ADR-LLAMADA: dónde vive la llamada al modelo
+
+| Campo | Contenido |
+|---|---|
+| Estado | Propuesta |
+| ASR que lo origina | REQ-IA-01, REQ-IA-16, REQ-IA-17 |
+| Contexto | El servicio ya está en producción. La capacidad 1 tiene un prompt que es detalle de la capacidad. La capacidad 2 es una conversación. |
+| Alternativas | Llamar a `IChatClient` desde `Services/` en la capacidad 1: se descarta porque mezcla el prompt con el caso de uso [Guía §13.2]. Llamar al modelo desde `Controllers/`: se descarta por P-1. |
+| Criterio | [Guía §13.2]: puerto propio cuando el prompt es detalle de la capacidad; sesión de chat cuando la capacidad es la conversación. |
+| Decisión | La capacidad 1 usa el puerto propio `IClasificadorDeSugerencias` en `Services/IA/` con adaptador en `AI/`. La capacidad 2 usa una sesión de chat sobre `IChatClient` con herramientas sobre casos de uso. |
+| Consecuencias | **Se gana:** el caso de uso se prueba sin modelo y se puede cambiar el prompt sin tocarlo. **Se pierde:** una interfaz más y un tipo `Resultado<T>` nuevo en el servicio. |
+| Confianza | Alta (fuente y prueba sin servidor). |
+| Deja de valer si | la capacidad 1 pasa a ser conversacional o la 2 necesita escribir. |
+| En el código | `Services/IA/IClasificadorDeSugerencias.cs`, `AI/Clasificacion/`, `Services/ConsultaDeSugerenciasService.cs` |
+| Firma | pendiente de firma |
+
+### ADR-016 · ADR-PROVEEDOR: contrato de acceso y dónde corre el modelo
+
+| Campo | Contenido |
+|---|---|
+| Estado | Propuesta |
+| ASR que lo origina | REQ-IA-02, REQ-IA-15; restricción del caso: «sin nube» |
+| Contexto | Es un piloto, los datos son de personas (CTX-SENS) y ya hay un servidor Ollama en la red. |
+| Alternativas | Modelo en la nube: se descarta por la restricción del caso y por P-3, ya que salen datos [Guía §13.4]. SDK del proveedor usado directamente desde los servicios: se descarta por P-2 [Guía §13.3]. |
+| Criterio | P-2 y P-3: los datos que salen, el costo y la capacidad. |
+| Decisión | El acceso es por `IChatClient` (Microsoft.Extensions.AI). El adaptador del servidor Ollama de la red se elige sólo en `Program.cs`. |
+| Consecuencias | **Se gana:** no hay costo por token y los datos no salen de la organización. **Se pierde:** la calidad y la capacidad dependen del modelo local. Si el servidor es compartido, los datos llegan a un servidor que opera otro. |
+| Confianza | Media: todavía no se observó la conducta del modelo local en esta tarea. |
+| Deja de valer si | el servidor pasa a ser compartido sin acuerdo de ACT-SEC; se cambia a nube; el modelo local no alcanza U-CAT. |
+| En el código | `Program.cs`; configuración por ambiente |
+| Firma | pendiente de firma (ACT-ARQ, ACT-OPS, ACT-SEC) |
+
+### ADR-017 · ADR-CAPAS: capas como carpetas y cómo se comprueba la regla
+
+| Campo | Contenido |
+|---|---|
+| Estado | Propuesta |
+| ASR que lo origina | REQ-IA-01, REQ-IA-02 |
+| Contexto | Hay un único proyecto con `Controllers/`, `Services/` y `Data/`. El compilador no impide las dependencias. |
+| Alternativas | Separar en proyectos: se descarta en el piloto por el costo de reorganizar un servicio en producción [Guía §13.12]. Reutilizar una prueba genérica de «sin terceros»: se descarta porque deja pasar `Microsoft.*` [Caso G]. |
+| Criterio | [Guía §13.12]: con carpetas, una prueba de arquitectura. |
+| Decisión | La capa de IA va en la carpeta `AI/`. Una prueba de arquitectura **nombra explícitamente** `Microsoft.Extensions.AI` y el espacio de nombres del adaptador de Ollama. Esos espacios de nombres sólo pueden aparecer en `AI/` y en `Program.cs`. |
+| Consecuencias | **Se gana:** se aplica la regla sin reorganizar el servicio. **Se pierde:** la regla depende de que la prueba corra en cada build. |
+| Confianza | Alta |
+| Deja de valer si | el servicio se separa en proyectos. |
+| En el código | `Domain_SinDependenciasDeIa`, `SdkDelProveedor_SoloEnInfrastructureAIyRaiz` |
+| Firma | pendiente de firma |
+
+### ADR-018 · Conocimiento y duplicado de la capacidad 1
+
+| Campo | Contenido |
+|---|---|
+| Estado | Propuesta |
+| ASR que lo origina | REQ-IA-23; error caro: el falso duplicado |
+| Contexto | Hay 40 categorías y un catálogo grande. «Ya está en el catálogo» es un dato exacto una vez que se conocen título y autor. |
+| Alternativas | Detectar el duplicado por parecido, con embeddings del catálogo (K2): se descarta por P-4 («trae lo parecido, no lo exacto»), por P-7, y porque suma LLM08 y un almacén [Guía §6.1]. Que el modelo decida el duplicado: se descarta por P-8. |
+| Criterio | P-4 y P-7: el escalón más bajo que alcance. |
+| Decisión | Las categorías van en K0. El modelo sólo extrae título, autor y formato. El duplicado lo propone **el código** con el caso de uso de búsqueda del catálogo, y sólo cuando hay coincidencia de título. Una coincidencia de autor sola no alcanza. |
+| Consecuencias | **Se gana:** un falso duplicado siempre apunta a un título real del catálogo. **Se pierde:** casos como «la última novela de tal autora» quedan sin duplicado propuesto y los resuelve el bibliotecario. Esa pérdida se mide como duplicados no detectados. |
+| Confianza | Media: falta confirmar que exista el caso de uso de búsqueda del catálogo. |
+| Deja de valer si | no hay caso de uso de búsqueda (en ese caso, brecha a deuda y la capacidad se limita a la categoría); la tasa de duplicados no detectados supera U-NODUP. |
+| En el código | `Services/ClasificacionDeSugerenciasService.cs`; `Duplicado_SoloConIdDelCatalogo` |
+| Firma | pendiente de firma (jefe de bibliotecas como ACT-ARQ) |
+
+### ADR-019 · ADR-HERRAMIENTAS (capacidad 2, sólo diseño)
+
+| Campo | Contenido |
+|---|---|
+| Estado | Propuesta, sólo diseño |
+| ASR que lo origina | REQ-IA-04, 06, 10, 18, 19 |
+| Contexto | `SugerenciasService.Listar(sede, estado, desde, hasta)` existe y no filtra por categoría. Hay cinco sedes y el administrador tiene rol global. |
+| Alternativas | Herramienta sobre `DbContext`: se descarta por P-6 y REQ-IA-04 [Guía §13.7]. Consulta nueva con filtro por categoría creada desde `AI/`: se descarta por R-06. Sede como argumento de la herramienta: se descarta por R-01. |
+| Criterio | P-6, R-01, R-05, R-06 |
+| Decisión | Una sola herramienta de lectura, `Contar(estado, desde, hasta)`, sobre `Listar`. La sede la pone el código. El resultado acotado se agrega por categoría. La herramienta no proyecta texto de terceros ni datos personales. La falta del filtro por categoría se registra como deuda. |
+| Consecuencias | **Se gana:** se reutiliza el caso de uso existente, sin escrituras. **Se pierde:** el agregado se calcula en memoria sobre el resultado de un rango, que tiene tope. |
+| Confianza | Media: no ensayado. |
+| Deja de valer si | `Listar` incorpora el filtro por categoría; se pide una herramienta de escritura. |
+| En el código | `AI/Consulta/HerramientaContarSugerencias.cs` |
+| Firma | pendiente de firma |
+
+### ADR-020 · ADR-AGENCIA: escalón de agencia y criterio de salto
+
+| Campo | Contenido |
+|---|---|
+| Estado | Propuesta |
+| ASR que lo origina | REQ-IA-20, REQ-IA-21 |
+| Contexto | Hay tres capacidades: una propone, otra consulta y otra actuaría de forma masiva. |
+| Alternativas | La capacidad 1 en A1, con el modelo buscando en el catálogo: se descarta por P-7, porque A0 más el código alcanza. La capacidad 3 en A1 escritura: se descarta por R-07 [Guía §13.8]. |
+| Criterio | P-7: subir de escalón sólo si el de abajo no alcanza. |
+| Decisión | Capacidad 1: A0 con persona que firma. Capacidad 2: A1 lectura, sólo diseño. Capacidad 3: no se le asigna agencia; cuando se especifique, el envío queda en borrador con confirmación humana. |
+| Consecuencias | Hay menos llamadas y menos riesgo. La capacidad 2 queda frenada hasta tener una métrica. |
+| Confianza | Alta |
+| Deja de valer si | la capacidad 2 obtiene métrica y umbral (en ese caso, nueva versión de la especificación); se especifica la capacidad 3. |
+| En el código | parámetros de apagado; ausencia de herramientas de escritura |
+| Firma | pendiente de firma |
+
+**ADR-APROBACION: no aplica**, porque no hay aprobación en dos peticiones.
+
+---
+
+## 6. Requisitos de calidad (arc42 §10)
+
+Las columnas siguen el orden de §9 del conocimiento. «C1» y «C2» indican la capacidad. Las filas C2 corresponden a una capacidad que es sólo diseño. Todas las pruebas están en estado *especificada*.
+
+| Id | Requisito | PROTO | PROD | Criterio de aceptación | Prueba | Tipo | Estado de la prueba |
+|---|---|---|---|---|---|---|---|
+| REQ-IA-01 | Las entidades (Domain) no referencian el SDK de IA | DEBE | DEBE | la prueba de arquitectura nombra `Microsoft.Extensions.AI` y el adaptador de Ollama, y falla si una entidad los usa | `Domain_SinDependenciasDeIa` | garantía | especificada |
+| REQ-IA-02 | El SDK del proveedor sólo aparece en `AI/` y en `Program.cs` | DEBE | DEBE | una mutación que lo usa desde `Services/` o `Controllers/` da rojo | `SdkDelProveedor_SoloEnInfrastructureAIyRaiz` | garantía | especificada |
+| REQ-IA-03 | (C1) La salida estructurada se consume sin excepción ante un formato inválido, y la categoría tiene que pertenecer a la lista de 40 antes de guardar la propuesta | DEBE | DEBE | un texto no JSON o una categoría inexistente no producen propuesta ni escritura | `TextoNoJson_SinPropuesta_YNoSeEscribe` | garantía | especificada |
+| REQ-IA-04 | (C2) Toda herramienta envuelve un caso de uso, nunca un repositorio | DEBE | DEBE | falla si una herramienta depende de `DbContext` o de `Data/` | `Herramientas_SinRepositorios` | garantía | especificada |
+| REQ-IA-05 | Toda escritura del modelo es aprobable | DEBE | DEBE | cada herramienta de escritura está envuelta en aprobación | NO APLICA: ninguna capacidad especificada monta herramientas de escritura; la C3 es sólo diseño | garantía | especificada |
+| REQ-IA-06 | (C2) La sesión la pone el código; ninguna firma recibe un id de sesión | DEBE | DEBE | dos sesiones en paralelo no se ven | `DosSesionesEnParalelo_NoSeVen` | garantía | especificada |
+| REQ-IA-07 | Con texto no confiable al armar el pedido no se montan escrituras | DEBE | DEBE | con contexto no confiable, la lista de herramientas no tiene escrituras | NO APLICA: no hay herramientas de escritura; la C1 no monta herramientas | garantía | especificada |
+| REQ-IA-08 | (C2) El bucle de herramientas tiene un tope de iteraciones | DEBE | DEBE | un guion repetido se corta en el tope y devuelve *degradado* | `GuionRepetido_ElBucleSeCortaEnElTope` | garantía | especificada |
+| REQ-IA-09 | (C1, C2) El contenido sensible sale en la telemetría sólo en desarrollo | DEBE (endurecido por CTX-SENS) | DEBE | fuera de desarrollo, los spans no traen mensajes | `ContenidoApagado_LosSpansNoTraenMensajes` | garantía | especificada |
+| REQ-IA-10 | (C2) Sobre datos de personas, las herramientas devuelven agregados sin datos personales | DEBE | DEBE | ningún tipo alcanzable desde `ConteoPorCategoria` tiene nombre, correo, id de lector ni texto | `Herramientas_SinDatosPersonales` | garantía | especificada |
+| REQ-IA-11 | (C1) Cada corrida contra el modelo deja un registro cuyo oráculo se recalcula sin volver a llamar | DEBERÍA | DEBE | el recálculo de los aciertos de categoría y de duplicado, contra el conjunto etiquetado, sale con 0 | `RecalcularOraculos` | garantía | especificada |
+| REQ-IA-12 | (C1) Las métricas de categoría, falso duplicado y duplicado no detectado se informan como k de M con rótulo, junto a la línea base del bibliotecario | DEBERÍA | DEBE | el informe trae k, M, modelo, servidor y fecha | corrida rotulada `Clasificacion_Piloto` | conducta | especificada |
+| REQ-IA-13 | El filtro posterior rechaza la salida con lo prohibido y el caso de uso cae a la plantilla | DEBE | DEBE | con el doble que devuelve el valor prohibido, se muestra la plantilla | NO APLICA: ninguna capacidad produce texto libre que deba ocultar un valor; en la C2 las herramientas no devuelven datos personales (REQ-IA-10) | garantía | especificada |
+| REQ-IA-14 | (C2) Todo valor afirmado en el texto libre aparece en un resultado de herramienta de la conversación (R-03) | DEBE | DEBE | con el doble que inventa una cifra, el resultado es *rechazado* y se muestra la tabla de conteos | `ValorNoAnclado_Rechazado` | garantía | especificada |
+| REQ-IA-15 | (C1, C2) Al modelo viaja sólo la entrada mínima declarada en la ficha | DEBE | DEBE | el doble registra el pedido, que no contiene nombre, correo, id de lector, sede ni campos fuera de la lista | `Pedido_SoloCamposDeclarados` | garantía | especificada |
+| REQ-IA-16 | (C1, C2) Sin modelo o fuera de tiempo, el caso de uso devuelve *degradado* y sigue | DEBE | DEBE | con el doble que no responde, la sugerencia se guarda sin propuesta (C1) y la consulta remite al camino sin IA (C2) | `SinModelo_Degradado_CaminoSinIa` | garantía | especificada |
+| REQ-IA-17 | (C1, C2) La capacidad nace apagada por parámetro (R-08) | DEBE (endurecido: servicio en producción) | DEBE | apagada, las pruebas previas del servicio siguen en verde sin cambios | `Apagada_ComportamientoPrevio` | garantía | especificada |
+| REQ-IA-18 | (C2) El inquilino (sede) lo resuelve el código; ninguna firma lo recibe (R-01) | DEBE | DEBE | una consulta sobre otra sede, también desde el administrador sin sede validada, responde «no encontrado» | `RecursoDeOtroInquilino_NoEncontrado` | garantía | especificada |
+| REQ-IA-19 | (C2) La proyección de cada herramienta excluye o marca el texto libre de terceros (R-05) | DEBE | DEBE | ningún campo con el texto de la sugerencia sale sin marca; en este diseño, ninguno sale | `Proyeccion_SinTextoDeTercerosSinMarca` | garantía | especificada |
+| REQ-IA-20 | Ninguna herramienta ejecuta una acción irreversible y masiva (R-07) | DEBE | DEBE | la acción masiva sólo produce un borrador pendiente de confirmación | NO APLICA: la C3 (aviso masivo) es sólo diseño y no se monta ninguna herramienta que envíe correo; el criterio rige cuando se especifique | garantía | especificada |
+| REQ-IA-21 | (C1, ASI09) La propuesta la arma y la muestra el código, rotulada como propuesta del modelo. No cambia la categoría ni el estado, ni descarta la sugerencia, hasta que el bibliotecario confirma | DEBE | DEBE | una propuesta sin confirmar deja la categoría y el estado como estaban, y la sugerencia sigue visible en las búsquedas | `PropuestaSinConfirmar_NoCambiaCategoriaNiEstado` | garantía | especificada |
+| REQ-IA-22 | (C1, C2, LLM10) Hay un largo máximo de entrada y concurrencia limitada hacia el modelo, sin reintentos | DEBE | DEBE | un texto sobre el máximo no viaja y devuelve *degradado*; el doble cuenta una sola llamada por pedido | `EntradaLarga_NoViaja_SinReintentos` | garantía | especificada |
+| REQ-IA-23 | (C1, LLM09) Un posible duplicado se propone sólo con un id devuelto por la búsqueda del catálogo, y sólo con coincidencia de título | DEBE | DEBE | con un doble que extrae un título inexistente o sólo el autor, no se propone duplicado | `Duplicado_SoloConIdDelCatalogo` | garantía | especificada |
+
+Fuente de los criterios de REQ-IA-01 a 12: [Guía B.1]–[Guía B.5]. REQ-IA-13 a 20 vienen del conocimiento. REQ-IA-21 a 23 son propios de esta especificación (ASI09 en A0, LLM10 en A0, LLM09).
+
+---
+
+## 7. Riesgos y deuda técnica (arc42 §11)
+
+### 7.1 Matriz OWASP filtrada por nivel de agencia
+
+| Riesgo | C1 (A0 con persona que firma, CTX-SENS) | C2 (A1 lectura, sólo diseño) | Control mínimo en código | Requisito |
+|---|---|---|---|---|
+| LLM01:2025 Prompt Injection | activa: el texto del lector es no confiable | activa: la pregunta es del usuario; las herramientas no traen texto de terceros | sin escrituras; la categoría se valida contra la lista; el duplicado sale del catálogo; el texto de terceros no se proyecta | REQ-IA-03, REQ-IA-19, REQ-IA-23 (REQ-IA-07: NO APLICA) |
+| LLM02:2025 Sensitive Information Disclosure | activa | activa | entrada mínima; agregados; contenido fuera de las trazas | REQ-IA-09, 10, 15 |
+| LLM05:2025 Improper Output Handling | activa | activa | consumo seguro (C1); anclaje antes de mostrar (C2) | REQ-IA-03, REQ-IA-14 |
+| LLM06:2025 Excessive Agency | no activa (A0) | activa | sólo casos de uso; ninguna escritura; nada masivo | REQ-IA-04, REQ-IA-20 |
+| LLM08:2025 Vector and Embedding Weaknesses | no activa: no hay K2 ni K3 (ADR-018) | no activa | — | — |
+| LLM09:2025 Misinformation | activa: la C1 afirma que un título es duplicado | activa: la C2 afirma cifras | duplicado sólo con id del catálogo; anclaje; persona en el circuito; métrica | REQ-IA-21, 23, 12 (C1); REQ-IA-14 (C2) |
+| LLM10:2025 Unbounded Consumption | activa | activa | largo máximo, concurrencia, sin reintentos, tope del bucle | REQ-IA-22, REQ-IA-08 |
+| ASI02 Tool Misuse and Exploitation | no activa | activa | lista permitida de una herramienta; argumentos validados en código | REQ-IA-04 |
+| ASI03 Identity and Privilege Abuse | no activa | activa | sesión y sede las pone el código | REQ-IA-06, REQ-IA-18 |
+| ASI09 Human-Agent Trust Exploitation | activa: A0 con persona que firma | no activa: A1 lectura no tiene aprobación | la propuesta la arma el código y se muestra rotulada | REQ-IA-21 |
+
+**Riesgos excluidos, con motivo:**
+
+- **LLM03:** la guía no lo asigna. El origen y la integridad del modelo descargado en Ollama los decide ACT-OPS con ACT-SEC, y quedan anotados en Dudas.
+- **LLM04:** no hay entrenamiento, ajuste fino ni almacén de vectores.
+- **LLM07:** el prompt no contiene secretos ni datos de personas. Las 40 categorías no son reservadas.
+- **Resto de la lista agéntica 2026** (fuera de ASI02, ASI03 y ASI09): la guía no los asigna y ninguna capacidad pasa de A1 lectura. Si ACT-SEC los considera, se agregan con su ficha.
+
+**Reglas que siguen rigiendo:**
+
+- Las instrucciones del prompt no son un control.
+- La confirmación del bibliotecario no es autorización. En CTX-PROD hacen falta identidad autenticada y permiso por operación antes del caso de uso; el servicio ya autentica por sede, pero hay que confirmarlo.
+
+### 7.2 Ficha de riesgo · Capacidad 1
+
+| Campo | Contenido |
+|---|---|
+| Escenario y capacidad | ESC-03; sin herramientas montadas |
+| Riesgo OWASP | LLM01, LLM02, LLM05, LLM09, LLM10, ASI09 |
+| Entrada no confiable | El texto libre del lector, que llega al armar el pedido |
+| Efecto | El modelo propone una categoría que esconde la sugerencia o induce un falso duplicado, y el bibliotecario confía en la propuesta. Un texto largo puede degradar el servidor. |
+| Control en código | La categoría tiene que pertenecer a la lista. El duplicado sólo existe si el catálogo devuelve un id con coincidencia de título. La propuesta no tiene efecto sin confirmación. Hay largo máximo y concurrencia limitada. El control lee la salida del modelo sólo para validarla, nunca para decidir con ella. |
+| Prueba sin modelo | REQ-IA-03, 15, 16, 21, 22, 23 |
+| Medición | Textos de ataque: M a fijar por ACT-SEC, con autoría declarada. Se informa como k de M con rótulo (REQ-IA-12). |
+| Lo que no cubre | Una categoría válida pero equivocada; el texto con nombres propios que el enmascarado no ve (R-04); el sesgo del bibliotecario que ve la propuesta antes de clasificar. Todo esto va a la métrica. |
+| Quién decide | ACT-SEC decide (rol sin designar); ACT-DEV implementa |
+
+### 7.3 Ficha de riesgo · Capacidad 2 (sólo diseño)
+
+| Campo | Contenido |
+|---|---|
+| Escenario y capacidad | ESC-01 con la herramienta `Contar(estado, desde, hasta)` |
+| Riesgo OWASP | LLM01, LLM02, LLM05, LLM06, LLM09, LLM10, ASI02, ASI03 |
+| Entrada no confiable | Sólo la pregunta del usuario. Los resultados de la herramienta no traen texto de terceros (R-05). |
+| Efecto | Una cifra inventada; datos de otra sede; un bucle sin fin. |
+| Control en código | Anclaje; sede resuelta por el código; tope del bucle; estado y rango validados; proyección sólo con agregados. |
+| Prueba sin modelo | REQ-IA-04, 06, 08, 10, 14, 18, 19 |
+| Medición | Pendiente: no hay métrica de la capacidad. |
+| Lo que no cubre | Una cifra anclada pero que responde a otra pregunta (por ejemplo, otra categoría o un rango mal interpretado). Va a la métrica. |
+| Quién decide | ACT-SEC decide; ACT-DEV implementa |
+
+### 7.4 Filtros: qué miden y qué no ven (R-04)
+
+| Filtro | Mide | No ve |
+|---|---|---|
+| Categoría ∈ lista (C1) | que el código sea uno de los 40 | si es la categoría correcta |
+| Duplicado por catálogo (C1) | coincidencia de título contra un id real del catálogo | sugerencias sin título explícito («la última novela de…»); diferencias de edición o de formato |
+| Enmascarado (C1, si ACT-SEC lo decide) | correos y teléfonos por patrón | nombres propios y datos dichos en palabras |
+| Anclaje (C2) | que cada cifra afirmada esté en un resultado de herramienta | si la cifra corresponde a lo que se preguntó |
+
+### 7.5 Deuda y brechas
+
+- **R-06:** `SugerenciasService.Listar` no tiene filtro por categoría. Es deuda del producto.
+- **Posible brecha:** un caso de uso de búsqueda en el catálogo por título y autor. Si no existe, el duplicado de la C1 queda fuera del alcance y se registra como deuda.
+- **Preexistente:** `Services/` depende de `Data/` en forma directa. Queda fuera del alcance.
+- **Esquema:** guardar la propuesta como tal requiere campos o una tabla nueva, es decir, una migración en producción. Depende de la sincronía, que no está decidida.
+
+### 7.6 Cuándo dejan de valer las ADR
+
+| ADR | Deja de valer si |
+|---|---|
+| ADR-015 | la C1 se vuelve conversacional o la C2 necesita escribir |
+| ADR-016 | el servidor pasa a ser compartido sin acuerdo de ACT-SEC, se pasa a nube o el modelo no alcanza U-CAT |
+| ADR-017 | el servicio se separa en proyectos |
+| ADR-018 | no existe la búsqueda del catálogo, o la tasa de duplicados no detectados supera U-NODUP |
+| ADR-019 | `Listar` incorpora el filtro por categoría, o aparece una escritura |
+| ADR-020 | la C2 obtiene métrica, o se especifica la C3 |
+
+---
+
+## 8. Checklist de completitud (§12), aplicado por el agente
+
+Contexto de la capacidad: **CTX-PROTO**. Todas las decisiones están **pendientes de firma**, lo que en PROTO está permitido.
+
+| # | Ítem | Nivel PROTO | Resultado | Fuente | Firma |
+|---|---|---|---|---|---|
+| C-00 | Normas del repo anfitrión leídas; términos nuevos propuestos | DEBE | **NO (parcial):** se aplicaron las dos normas que trae el caso (numeración de ADR y glosario); no se leyeron ADR-001 a 014 ni el resto | Paso 0 | — |
+| C-01 | Las cuatro preguntas tienen respuesta escrita | DEBE | SÍ, con «no declarado» para la C2 | §1.2 | pendiente |
+| C-02 | Resultado del árbol registrado; respaldo nombrado | DEBE | SÍ | §1.3 | pendiente |
+| C-03 | ESC-, CTX-, ACT- e inventario con estado | DEBE | SÍ (ACT-SEC, ACT-OPS y ACT-ARQ de arquitectura sin designar) | §1.1, §1.4 | pendiente |
+| C-04 | Escalón, nivel y patrón por capacidad | DEBE | SÍ | §3.3 | pendiente |
+| C-05 | C4 en mermaid validados; correspondencia de capas | DEBERÍA | **Parcial:** diagramas y correspondencia SÍ; **no se validaron** con la herramienta de mermaid del proyecto, que no estaba disponible (motivo escrito) | §2.1, §3.1, §3.2 | — |
+| C-06 | Ninguna flecha del modelo al dominio ni a los datos | DEBE | SÍ | §3.2 | — |
+| C-07 | Ficha del puerto por capacidad, con tres resultados | DEBE | SÍ | §3.4, §3.5 | — |
+| C-08 | ADR-LLAMADA, PROVEEDOR y CAPAS con ASR y número | DEBE | SÍ (ADR-015, 016, 017) | §5 | pendiente |
+| C-09 | ADR-HERRAMIENTAS y ADR-AGENCIA si hay A1 | DEBE | SÍ (ADR-019, 020) | §5 | pendiente |
+| C-10 | Todo REQ con criterio y prueba (verificador con salida 0) | DEBE | SÍ por revisión manual; **el verificador automático no se corrió** | §6 | — |
+| C-11 | Tipo y estado de la prueba en cada requisito | DEBERÍA | SÍ | §6 | — |
+| C-12 | Matriz con filas activadas, excluidos con motivo y fichas | DEBERÍA | SÍ | §7.1–7.3 | — |
+| C-13 | Datos mínimos por servidor, decididos por ACT-SEC | DEBE | SÍ como propuesta; pendiente de firma, con ACT-SEC sin designar | §2.2 | pendiente |
+| C-14 | Ningún valor de infraestructura ni secreto en el repo | DEBE | SÍ | §4 | — |
+| C-15 | Si hay MCP, quién consume, en qué dirección y con qué control | DEBE | NO APLICA: no hay MCP | §2.3 | — |
+| C-16 | Si hay clientes, la frontera de §6 | PUEDE | **Sin determinar:** no se sabe si hay cliente aparte | §2.3 | — |
+| C-17 | Métrica, umbral y error caro, con quien fija el umbral | DEBE | SÍ para la C1, **con los valores numéricos de U-CAT, U-FDUP y U-NODUP en blanco**; la C2 no tiene métrica y por eso es sólo diseño | §1.2 | pendiente |
+| C-18 | Varios inquilinos: R-01 con requisito | DEBE | SÍ (REQ-IA-18) | §4, §6 | — |
+| C-19 | Cada filtro declara qué mide y qué no ve | DEBE | SÍ | §7.4 | — |
+
+**Resultado:** la especificación **no está al 100 %**. Faltan:
+
+- C-00: leer las normas restantes del repositorio.
+- C-10: correr el verificador automático.
+- Validar los C4 con la herramienta del proyecto (C-05, que es DEBERÍA).
+- Escribir los valores de umbral para que la firma de C-17 tenga contenido.
+
+Falta además la segunda pasada del checklist, a cargo de una persona de la mesa.
+
+---
+
+## Dudas que no pude resolver con el conocimiento
+
+- **Normas del repo.** No se leyeron ADR-001 a ADR-014: alguna podría chocar con estas decisiones. Tampoco se conocen los documentos que no se editan, dónde vive la especificación ni el formato exacto que pide `docs/Glosario.md`.
+- **Capacidad 2 y la pregunta 3 del árbol.** El conteo es un dato exacto, y el árbol dibujado lleva a «caso de uso sin modelo, escalón −1». El conocimiento admite A1 lectura para consultas en lenguaje natural ([Caso N]), pero no dice cuándo la interpretación de la pregunta justifica el modelo frente a una pantalla de filtros.
+- **Capacidad 2: métrica y éxito.** No hay métrica, umbral ni error caro declarados, así que queda sólo diseño hasta que el jefe de bibliotecas los fije.
+- **R-06 y la capacidad 2.** No está claro dónde termina «agregar el resultado acotado» y empieza «traer todo para filtrar». Este diseño cuenta por categoría sobre `Listar` acotado por sede, estado y rango.
+- **Capacidad 2: «pendientes» y la categoría.** No se sabe si las sugerencias pendientes ya tienen categoría asignada. Si la categoría se asigna al tramitarlas, la pregunta no tiene respuesta, y tampoco está definido si contaría la propuesta del modelo.
+- **Capacidad 2: el respaldo.** No se sabe si hay una pantalla de filtros existente que sirva de camino sin IA.
+- **Administrador y la sede.** El administrador ve todas las sedes: falta definir cómo elige la sede «validada» en la interfaz (R-01 lo exige, pero no lo diseña).
+- **Búsqueda del catálogo.** No se sabe si existe un caso de uso de búsqueda por título y autor. Si no existe, R-06 habla de herramientas, y no queda claro si rige por analogía para una llamada del código en A0.
+- **Alcance del duplicado.** No se sabe si el catálogo es de toda la red o por sede (afecta el duplicado y R-01 en la C1). Tampoco si un título en otro formato («en papel» frente a ebook) cuenta como duplicado.
+- **Ubicación de las entidades** (Domain): sin ese dato, REQ-IA-01 no se puede apuntar a una carpeta concreta.
+- **Servidor Ollama.** No se sabe si lo comparten otras aplicaciones ni quién lo opera. Tampoco el modelo concreto y su versión, que afectan la confianza de ADR-016. El origen e integridad del modelo (LLM03) también queda abierto.
+- **Paquete del adaptador de Ollama.** El conocimiento no lo nombra. Lo decide ACT-DEV dentro de ADR-016, y la prueba de arquitectura tiene que nombrar su espacio de nombres.
+- **Actores sin designar.** No se sabe quién es ACT-SEC, ni ACT-ARQ para la arquitectura, ni ACT-OPS.
+- **Valores numéricos de los umbrales.** U-CAT, U-FDUP y U-NODUP están en blanco. El conocimiento no dice si C-17 puede marcarse SÍ, pendiente de firma, con el valor vacío.
+- **Medición y línea base.** No hay forma resuelta de medir la línea base del bibliotecario sin sesgo cuando ve la propuesta (§14). Tampoco de construir el oráculo si se usan las categorías históricas, que asignó el mismo rol que se quiere medir.
+- **Datos históricos.** Si se pueden usar las sugerencias históricas, que tienen datos personales, como conjunto de evaluación es una decisión de ACT-SEC. Lo mismo vale para el consentimiento y la retención (§14).
+- **Sincronía de la capacidad 1.** No está decidido si la propuesta se calcula al enviar o en segundo plano: el conocimiento no lo cubre (§14). De eso depende dónde y cuándo se guarda la propuesta y la migración de esquema.
+- **Tipo de cliente.** No se sabe si `Controllers/` sirve vistas en el servidor o una API para un cliente aparte (§6, C-16).
+- **Capacidad 3.** Falta su nivel exacto: A0 con persona que firma, para redactar el aviso, o A1 escritura. Faltan también el servicio de correo y el consentimiento de los lectores para recibir avisos.
+- **Códigos más cercanos.** Se usó «A0 con persona que firma» aunque la persona confirma una clasificación y no envía un borrador. Se usó ESC-01 para la C2 en lugar de ESC-04. El conocimiento pide usar el código más cercano y anotarlo.
+- **Requisitos propios.** REQ-IA-22 cubre LLM10 en A0, donde REQ-IA-08, el único asignado, no aplica porque no hay bucle. REQ-IA-23 cubre LLM09 en una salida estructurada. Falta que la mesa los confirme.
+- **Herramientas no disponibles.** No se validaron los diagramas mermaid ni se corrió el verificador de requisitos.

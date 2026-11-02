@@ -1,0 +1,5 @@
+flowchart TD
+  Q1{"¿El resultado lo consume código?"} -->|"sí"| T["GetResponseAsync con tipo, TryGetResult y revisión"]
+  Q1 -->|"no"| Q2{"¿Una persona mira el texto mientras llega?"}
+  Q2 -->|"sí"| S["GetStreamingResponseAsync con etapa y cancelación"]
+  Q2 -->|"no"| R["GetResponseAsync"]

@@ -1,0 +1,52 @@
+CONCEDIDO <recurso-propio> a ej08-mcp hasta 2026-10-28T16:41:17-0300 (renová con: <gestor-de-turnos> renovar <recurso-propio> ej08-mcp)
+    }
+  ],
+  "errores": {}
+}] «En la provincia de Corrientes está cargada únicamente una localidad: la ciudad de Corrientes, con un código postal de 3400 y aproximadamente 346.334 habitantes.»
+# resultado (estimando: este pedido, cada fila por separado; no se comparan entre sí):
+#  Chaco — pidió una herramienta con Chaco: 10/10; Wilson 95 % [0.72; 1.00]; nombra la cantidad 1: 10/10; Wilson 95 % [0.72; 1.00]
+#  Corrientes — pidió listar_localidades con Corrientes: 10/10; Wilson 95 % [0.72; 1.00]; nombra Corrientes sin Resistencia: 10/10; Wilson 95 % [0.72; 1.00]
+#  invariantes violadas: 0; escrituras en el servidor: 0; pared por pedido: mediana 9.3 s (mín 8.4, máx 11.3, N = 20)
+
+  Passed AgenteConMcpClientTool_ContraElModelo [3 m 16 s]
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 3.3370 Minutes
+=== consola con modelo
+Servidor MCP: movilidad-urbana 1.0.0, protocolo 2026-07-28
+Herramientas aceptadas: contar_localidades_por_provincia, listar_localidades
+Descartadas por la lista blanca: ninguna
+Modelo: qwen3.5:4b
+
+> ¿Cuántas localidades hay cargadas en Chaco?
+  [mcp] contar_localidades_por_provincia({"provincia":"Chaco"}) → {
+  "ok": true,
+  "datos": {
+    "provincia": "Chaco",
+    "cantidad": 1
+  },
+  "errores": {}
+}
+  En la provincia de Chaco hay cargada una localidad en el catálogo.
+
+> ¿Qué localidades hay cargadas en Corrientes?
+  [mcp] listar_localidades({"provincia":"Corrientes"}) → {
+  "ok": true,
+  "datos": [
+    {
+      "nombre": "Corrientes",
+      "provincia": "Corrientes",
+      "codigoPostal": "3400",
+      "habitantes": 346334
+    }
+  ],
+  "errores": {}
+}
+  En la provincia de Corrientes solo está cargada una localidad: la ciudad de Corrientes.
+
+Escrituras en el servidor: 0
+rc consola=0
+LIBERADO <recurso-propio> por ej08-mcp
+rc=0

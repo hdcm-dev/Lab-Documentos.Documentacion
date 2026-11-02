@@ -1,0 +1,3 @@
+# Ollama, OpenAI compatibility — https://docs.ollama.com/api/openai-compatibility — consultado 2026-10-28T09:49-03:00 (curl + extracción de texto)
+## Sección «Setting the local context size» (literal):
+The OpenAI API does not have a way of setting the context size for a model. If you need to change the context size, create a Modelfile which looks like: FROM <some model> PARAMETER num_ctx <context size> Use the ollama create mymodel command to create a new model with the updated context size. Call the API with the updated model name

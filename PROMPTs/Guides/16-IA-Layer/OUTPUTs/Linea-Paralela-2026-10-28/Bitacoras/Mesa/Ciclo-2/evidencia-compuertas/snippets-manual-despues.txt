@@ -1,0 +1,12 @@
+B808 1/1 Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Mutaciones/R4/GlobalUsing.cs:3-3
+B812 5/5 Examples/13-Prueba-De-Arquitectura/src/MovilidadUrbana.PruebaDeArquitectura/Mutaciones/R4/PropuestaConMensaje.cs:5-10
+B983 4/4 Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/ComposicionDeIA.cs:37-40
+B1227 9/9 Examples/12-Anotaciones-Pareadas/src/MovilidadUrbana.Ejemplos.AnotacionesPareadas/Infrastructure/AI/SemanticKernel/ResultadosDeEncuestaPlugin.cs:8-16
+B1241 8/8 Examples/12-Anotaciones-Pareadas/src/MovilidadUrbana.Ejemplos.AnotacionesPareadas/Infrastructure/AI/AgentFramework/HerramientasDeResultados.cs:12-20
+B1949 5/5 Examples/06-Tool-Calling/src/MovilidadUrbana.Ejemplos.ToolCalling/Infrastructure/AI/HerramientasDeLocalidades.cs:43-47
+B1513 13/13 Examples/09-Pruebas-Con-Cliente-Falso/src/MovilidadUrbana.Ejemplos.PruebasConClienteFalso/Infrastructure/AI/DetectorDeContextoTruncado.cs:25-32,60-64
+B2397 13/13 Examples/08-Servidor-Y-Cliente-MCP/src/MovilidadUrbana.Ejemplos.Mcp.Servidor/Mcp/PerimetroDelServidorMcp.cs:17-29
+B2415 11/11 Examples/08-Servidor-Y-Cliente-MCP/src/MovilidadUrbana.Ejemplos.Mcp.Servidor/Mcp/ServidorMcp.cs:80-90
+B2446 13/13 Examples/08-Servidor-Y-Cliente-MCP/src/MovilidadUrbana.Ejemplos.Mcp.Cliente/Mcp/ConexionMcp.cs:44-57
+B2976 21/21 Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/Cableado/CicloDeVidaDelClienteTests.cs:51-75
+B3515 16/16 Examples/01-Chat-Basico/src/MovilidadUrbana.Ejemplos.ChatBasico/Configuracion/OpcionesDeIA.cs:1-200

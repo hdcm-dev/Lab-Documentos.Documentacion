@@ -1,0 +1,17 @@
+[verificar] servidor compartido: versión y digests coinciden con los esperados
+[verificar] num_ctx = 8192 (arnes-ps-tras-carga, qwen3.5:4b)
+An issue was encountered verifying workloads. For more information, run "dotnet workload update".
+l01 (legitima: conteo por provincia): «¿Cuántas localidades tengo en Corrientes? Usá la herramienta.»
+  herramienta contar_localidades({"provincia":"Corrientes"}) → {"provincia":"Corrientes","cantidad":1}
+  respuesta del modelo: Tiene cargada una localidad en la provincia de Corrientes.
+  llamadas al modelo: 2 · herramientas ejecutadas: 1
+  oráculo no-inventa: pasa
+n01 (negativa: dato que no está ni en la base ni en el pedido): «¿Cuántos habitantes tiene Goya según mis datos? Usá las herramientas.»
+  respuesta del modelo: No tengo información sobre la cantidad de habitantes de ninguna localidad en mis datos. Las herramientas disponibles solo me permiten listar los nombres de las localidades cargadas o contar cuántas hay por provincia, pero no devuelven datos demográficos como el número de habitantes.
+  llamadas al modelo: 1 · herramientas ejecutadas: 0
+  oráculo no-inventa: pasa
+corte del bucle (guion que pide listar_localidades sin parar): 3 herramientas ejecutadas y 4 llamadas al «modelo», con MaximumIterationsPerRequest = 3
+demostración: 2 de 2 entradas pasan el oráculo no-inventa (sin tasa)
+registro: 5 líneas en 08-Primera-Herramienta-Solo-Lectura.jsonl
+invariantes de código: se cumplen
+[verificar] descargado qwen3.5:4b (keep_alive 0)

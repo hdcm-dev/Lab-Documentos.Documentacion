@@ -1,0 +1,34 @@
+# Humo del host (AC-11) con curl, desde el host. Contenedor del SDK con «tools/demo.sh host guion», publicado en 127.0.0.1:8087 (PUERTO_HOST=8087: el 8080 de la máquina estaba ocupado). Fecha: 2026-10-27T10:53:28-03:00
+
+$ curl -sS -i http://127.0.0.1:8087/   (cabeceras y testigos)
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Set-Cookie: sesion-movilidad=<id>; max-age=86400; path=/; samesite=lax; httponly
+Set-Cookie: .AspNetCore.Antiforgery.PNE6xlAFFeY=<token>; path=/; samesite=strict; httponly
+data-testid="entrada"
+data-testid="enviar"
+data-testid="modo"
+data-testid="titulo"
+hoja aislada: MovilidadUrbana.Asistente.iaiyrfgqcl.styles.css
+GET hoja → 200
+
+$ curl -sS -i http://127.0.0.1:8087/api/v1/inexistente
+HTTP/1.1 404 Not Found
+Content-Type: application/problem+json
+{"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-f9d40e3352d3e5622323bcb83c810349-88dbd9ec64bbf0aa-00"}
+
+$ curl -sS -i http://127.0.0.1:8087/inexistente
+HTTP/1.1 404 Not Found
+Content-Type: text/html; charset=utf-8
+data-testid="titulo">No encontrado
+
+$ curl -sS -H "X-Sesion-Id: humo-01" http://127.0.0.1:8087/api/v1/localidades
+HTTP/1.1 200 OK
+X-Sesion-Id: humo-01
+[{"id":1,"nombre":"Corrientes","provincia":"Corrientes","codigoPostal":"3400","habitantes":346334},{"id":2,"nombre":"Resistencia","provincia":"Chaco","codigoPostal":"3500","habitantes":291720}]
+
+$ curl -sS -X POST -H "Content-Type: application/json" -H "X-Sesion-Id: humo-01" -d "{\"pregunta\":\"¿Cuántos dígitos lleva el código postal?\"}" http://127.0.0.1:8087/api/v1/ayuda
+{"texto":"Alta de una localidad, código postal: 4 dígitos.","fuente":"LocalidadPolicy.RequisitoDelCodigoPostal","citaValida":false,"planDeEmbeddings":"EMB-C: no ejecutado contra un modelo de embeddings","recuperados":["LocalidadPolicy.RequisitoDelCodigoPostal","EncuestaPolicy.RequisitoDelNombre","LocalidadPolicy.RequisitoDeLosHabitantes"]}
+
+$ curl -sS -X POST ... /api/v1/localidades/desde-texto  (modo guion: sin modelo → camino sin IA)
+{"interpretado":false,"propuesta":null,"faltantes":{"texto":"No pude interpretar el pedido: completá el formulario de alta."},"listaParaConfirmar":false}

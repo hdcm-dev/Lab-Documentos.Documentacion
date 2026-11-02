@@ -1,0 +1,545 @@
+META [('ms.topic', 'reference'), ('ms.date', '2026-09-29T00:00:00Z'), ('updated_at', '2026-09-29T17:25:00Z')]
+ 
+ Tools Overview | Microsoft Learn 
+ Skip to main content
+ Skip to Ask Learn chat experience
+ This browser is no longer supported. 
+ Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+ Download Microsoft Edge
+ More info about Internet Explorer and Microsoft Edge
+ Table of contents 
+ Exit editor mode 
+ Ask Learn 
+ Ask Learn 
+ Reading mode 
+ Table of contents 
+ Read in English 
+ Add 
+ Add to Plans 
+ Edit 
+ Copy Markdown 
+ Print 
+ Note 
+ Access to this page requires authorization. You can try signing in or changing directories .
+ Access to this page requires authorization. You can try changing directories .
+ Tools Overview 
+ Feedback 
+ Summarize this article for me
+ In this article
+ Agent Framework supports many different types of tools that extend agent capabilities. Tools allow agents to interact with external systems, execute code, search data, and more. 
+ Tool Types 
+ Tool Type 
+ Description 
+ Function Tools 
+ Custom code that agents can call during conversations 
+ Code Interpreter 
+ Execute code in a sandboxed environment 
+ File Search 
+ Search through uploaded files 
+ Web Search 
+ Search the web for information 
+ Hosted MCP Tools 
+ MCP servers invoked by the provider runtime 
+ Local MCP Tools 
+ MCP servers running locally or on custom hosts 
+ Microsoft Foundry Toolbox 
+ Named, versioned bundles of hosted tool configurations managed in a Foundry project 
+ Shell tools 
+ Local and containerized shell execution with environment probing and policy controls 
+ Tool Type 
+ Description 
+ Function Tools 
+ Custom code that agents can call during conversations 
+ Code Interpreter 
+ Execute code in a sandboxed environment 
+ File Search 
+ Search through uploaded files 
+ Web Search 
+ Search the web for information 
+ Hosted MCP Tools 
+ MCP servers invoked by the provider runtime 
+ Local MCP Tools 
+ MCP servers running locally or on custom hosts 
+ Microsoft Foundry Toolbox 
+ Named, versioned bundles of hosted tool configurations managed in a Foundry project 
+ Shell tools 
+ Local and containerized shell execution with environment probing and policy controls 
+ Image Generation 
+ Hosted image generation on the Foundry / OpenAI Responses runtime 
+ Native computer use 
+ Execute provider-requested desktop or browser actions and return screenshots 
+ Shell 
+ Hosted shell execution on the OpenAI Responses runtime — distinct from the GitHub Copilot CLI's built-in shell/file/URL runtime tools 
+ Bing Grounding 
+ Web grounding via your own Grounding with Bing Search resource — experimental 
+ Bing Custom Search 
+ Bing grounding restricted to a curated domain list — preview 
+ Azure AI Search 
+ Query an Azure AI Search index through a Foundry connection — experimental 
+ SharePoint 
+ Ground answers in SharePoint content — preview 
+ Microsoft Fabric 
+ Query a Fabric data agent — preview 
+ Memory Search 
+ Search a Foundry-managed memory store — preview 
+ Computer Use preview 
+ Drive a desktop or browser environment through the separate Foundry preview API 
+ Browser Automation 
+ Drive a browser via Azure Playwright — preview 
+ Agent-to-Agent (A2A) tool 
+ Call a remote A2A agent as a tool from a Foundry agent — preview 
+ Note 
+ Tools marked experimental or preview are documented on the relevant provider page and emit an ExperimentalWarning the first time they are used in a process. 
+ Tool Type 
+ Package 
+ Description 
+ Function Tools 
+ tool/functool 
+ Typed Go functions with JSON schemas that the agent can call 
+ Agent as Function Tool 
+ tool/agenttool 
+ Wrap an agent as a tool.FuncTool so another agent can call it 
+ Local MCP Tools 
+ tool/mcptool 
+ Connect to MCP servers and expose their tools as tool.FuncTool values 
+ Web Search 
+ tool/hostedtool.WebSearch 
+ Declare provider-side web search when the backing service supports it 
+ File Search 
+ tool/hostedtool.FileSearch 
+ Declare provider-side file or vector-store search 
+ Code Interpreter 
+ tool/hostedtool.CodeInterpreter 
+ Declare provider-side code execution 
+ Hosted MCP Tools 
+ tool/hostedtool.MCPServer 
+ Declare an MCP server for the provider runtime to call 
+ Local shell tool 
+ tool/shelltool 
+ Run local shell commands through a function tool that requires approval by default 
+ All tools implement the tool.Tool interface: 
+ type Tool interface {
+ Name() string
+ Description() string
+}
+ Function tools additionally implement tool.FuncTool : 
+ import "context"
+type FuncTool interface {
+ Tool
+ Schema() any
+ ReturnSchema() any
+ Call(ctx context.Context, arguments string) (any, error)
+}
+ Most applications create function tools with functool.New or functool.MustNew rather than implementing FuncTool directly. The framework uses the Go function signature or struct tags to build the schema exposed to the model. 
+ Pass tools to the agent via agent.Config.Tools : 
+ a := foundryprovider.NewAgent(endpoint, token, foundryprovider.ModelDeployment(model), foundryprovider.AgentConfig{
+ Instructions: "You are a helpful assistant.",
+ Config: agent.Config{
+ Tools: []tool.Tool{weatherTool, calculatorTool},
+ },
+})
+ Or add tools per-run: 
+ resp, err := a.RunText(ctx, "What's the weather?", agent.WithTool(weatherTool)).Collect()
+ Tool Approval 
+ Tool Approval is a framework feature that lets you gate tool invocations through a human-in-the-loop decision before the model receives the result. It works with providers whose clients invoke tools locally; service-side hosted tools follow the provider's own approval behavior. See the Tool Approval page for the full pattern, including how approvals interact with sessions, streaming, and middleware. 
+ For Go, mark an invocable tool with tool.ApprovalRequiredFunc or use a tool that already implements tool.ApprovalRequiredTool , such as the local shell tool. Approval requests and responses flow through the tool auto-call middleware, so they work with providers that return local function calls. 
+ Provider Support Matrix 
+ The OpenAI and Azure OpenAI providers each offer two client types — Responses and Chat Completion — with different tool capabilities. Azure OpenAI clients mirror their OpenAI equivalents. Copilot Studio and A2A agents run on a remote service so their capabilities are configured on the remote agent rather than through the Agent Framework client — they are not listed in the matrix. 
+ Tool Type 
+ Responses 
+ Chat Completion 
+ Foundry 
+ Anthropic 
+ Ollama 
+ GitHub Copilot 
+ Function Tools 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ Code Interpreter 
+ ✅ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ File Search 
+ ✅ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Web Search 
+ ✅ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Hosted MCP Tools 
+ ✅ 
+ ❌ 
+ ✅ 
+ ✅ 
+ ❌ 
+ ✅ 
+ Local MCP Tools 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ Note 
+ The Responses and Chat Completion columns apply to both OpenAI and Azure OpenAI — the Azure variants mirror the same tool support as their OpenAI counterparts. The deprecated OpenAI Assistants API is no longer documented; for migration guidance see the Semantic Kernel migration guide . 
+ Provider Support Matrix 
+ The OpenAI and Azure OpenAI providers each offer multiple client types with different tool capabilities. Azure OpenAI clients mirror their OpenAI equivalents. The Foundry column applies to FoundryChatClient — for FoundryAgent , the tools are configured on the Foundry agent definition (see What works and what doesn't with FoundryAgent ). Copilot Studio and A2A agents run on a remote service so their capabilities are configured on the remote agent rather than through the Agent Framework client — they are not listed in the matrix. 
+ Tool Type 
+ Responses 
+ Chat Completion 
+ Foundry 
+ Anthropic 
+ Ollama 
+ Foundry Local 
+ GitHub Copilot 
+ Function Tools 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ ⚠️¹ 
+ ⚠️¹ 
+ ✅ 
+ Code Interpreter 
+ ✅ 
+ ❌ 
+ ✅ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ File Search 
+ ✅ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Web Search 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Image Generation 
+ ✅ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Native computer use 
+ ✅ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Hosted Shell ( get_shell_tool ) 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Built-in shell / file system / URL fetch 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ✅² 
+ Hosted MCP Tools 
+ ✅ 
+ ❌ 
+ ✅ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ✅ 
+ Local MCP Tools 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ Microsoft Foundry Toolbox 
+ ❌ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Bing Grounding (experimental) 
+ ❌ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Bing Custom Search (preview) 
+ ❌ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Azure AI Search (experimental) 
+ ❌ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ SharePoint (preview) 
+ ❌ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Microsoft Fabric (preview) 
+ ❌ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Memory Search (preview) 
+ ❌ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Computer Use preview 
+ ❌ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Browser Automation (preview) 
+ ❌ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Agent-to-Agent (A2A) tool (preview) 
+ ❌ 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ¹ Depends on the chosen local model supporting function calling.
+² Built into the GitHub Copilot CLI runtime, gated by a permission handler. Different surface from OpenAI's get_shell_tool . 
+ Note 
+ The Responses and Chat Completion columns apply to both OpenAI and Azure OpenAI — the Azure variants mirror the same tool support as their OpenAI counterparts. Local MCP Tools work with any provider that supports function tools. 
+ Provider Support Matrix 
+ The Go SDK exposes Microsoft Foundry through foundryprovider and OpenAI/Azure OpenAI through openaiprovider . Hosted tools in tool/hostedtool are declarations: the Go SDK sends them to the provider, and the provider decides whether that hosted capability is available. 
+ Tool Type 
+ Foundry 
+ Responses 
+ Chat Completions 
+ Anthropic 
+ Function Tools 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ Agent as Function Tool 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ Local MCP Tools 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ Web Search 
+ ✅ 
+ ✅ 
+ ✅ 
+ ❌ 
+ File Search 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ Code Interpreter 
+ ✅ 
+ ✅ 
+ ❌ 
+ ❌ 
+ Hosted MCP Tools 
+ ❌ 
+ ✅ 
+ ❌ 
+ ❌ 
+ Local shell tool 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ Note 
+ Local MCP tools and the local shell tool are function tools from the provider's point of view, so they follow function-tool support. Hosted tools such as hostedtool.FileSearch , hostedtool.CodeInterpreter , and hostedtool.MCPServer are executed by the AI service, not by the Go process. 
+ Using an Agent as a Function Tool 
+ You can use an agent as a function tool for another agent, enabling agent composition and more advanced workflows. The inner agent is converted to a function tool and provided to the outer agent, which can then call it as needed. 
+ Call .AsAIFunction() on an AIAgent to convert it to a function tool that can be provided to another agent: 
+ // Create the inner agent with its own tools
+AIAgent weatherAgent = new AIProjectClient(
+ new Uri("<your-foundry-project-endpoint>"),
+ new DefaultAzureCredential())
+ .AsAIAgent(
+ model: "gpt-4o-mini",
+ instructions: "You answer questions about the weather.",
+ name: "WeatherAgent",
+ description: "An agent that answers questions about the weather.",
+ tools: [AIFunctionFactory.Create(GetWeather)]);
+// Create the main agent and provide the inner agent as a function tool
+AIAgent agent = new AIProjectClient(
+ new Uri("<your-foundry-project-endpoint>"),
+ new DefaultAzureCredential())
+ .AsAIAgent(
+ model: "gpt-4o-mini",
+ instructions: "You are a helpful assistant.",
+ tools: [weatherAgent.AsAIFunction()]);
+// The main agent can now call the weather agent as a tool
+Console.WriteLine(await agent.RunAsync("What is the weather like in Amsterdam?"));
+ Warning 
+ DefaultAzureCredential is convenient for development but requires careful consideration in production. In production, consider using a specific credential (e.g., ManagedIdentityCredential ) to avoid latency issues, unintended credential probing, and potential security risks from fallback mechanisms. 
+ Call .as_tool() on an agent to convert it to a function tool that can be provided to another agent: 
+ import os
+from agent_framework.openai import OpenAIChatCompletionClient
+from azure.identity import AzureCliCredential
+# Create the inner agent with its own tools
+weather_agent = OpenAIChatCompletionClient(
+ model=os.environ["AZURE_OPENAI_CHAT_COMPLETION_MODEL"],
+ azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+ api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
+ credential=AzureCliCredential(),
+).as_agent(
+ name="WeatherAgent",
+ description="An agent that answers questions about the weather.",
+ instructions="You answer questions about the weather.",
+ tools=get_weather
+)
+# Create the main agent and provide the inner agent as a function tool
+main_agent = OpenAIChatCompletionClient(
+ model=os.environ["AZURE_OPENAI_CHAT_COMPLETION_MODEL"],
+ azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+ api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
+ credential=AzureCliCredential(),
+).as_agent(
+ instructions="You are a helpful assistant.",
+ tools=weather_agent.as_tool()
+)
+# The main agent can now call the weather agent as a tool
+result = await main_agent.run("What is the weather like in Amsterdam?")
+print(result.text)
+ You can also customize the tool name, description, and argument name: 
+ weather_tool = weather_agent.as_tool(
+ name="WeatherLookup",
+ description="Look up weather information for any location",
+ arg_name="query",
+ arg_description="The weather query or location"
+)
+ Wrap an agent with agenttool.New to make it available as a tool.FuncTool for another agent: 
+ import (
+ "github.com/microsoft/agent-framework-go/agent"
+ "github.com/microsoft/agent-framework-go/provider/foundryprovider"
+ "github.com/microsoft/agent-framework-go/tool"
+ "github.com/microsoft/agent-framework-go/tool/agenttool"
+)
+weatherAgent := foundryprovider.NewAgent(endpoint, token, foundryprovider.ModelDeployment(model), foundryprovider.AgentConfig{
+ Instructions: "You answer questions about the weather.",
+ Config: agent.Config{
+ Name: "WeatherAgent",
+ Description: "An agent that answers weather questions.",
+ Tools: []tool.Tool{weatherTool},
+ },
+})
+mainAgent := foundryprovider.NewAgent(endpoint, token, foundryprovider.ModelDeployment(model), foundryprovider.AgentConfig{
+ Instructions: "You are a helpful assistant.",
+ Config: agent.Config{
+ Tools: []tool.Tool{agenttool.New(weatherAgent, agenttool.Config{})},
+ },
+})
+resp, err := mainAgent.RunText(ctx, "Should I bring an umbrella to Amsterdam?").Collect()
+ You can also expose the same wrapped agent through MCP with mcptool.AddTool , because agenttool.New returns a function tool. 
+ Tip 
+ See the agent as function tool sample and the agent as MCP tool sample for complete runnable examples. 
+ Next steps 
+ Function Tools 
+ Feedback 
+ Was this page helpful?
+ Yes 
+ No 
+ No 
+ Need help with this topic?
+ Want to try using Ask Learn to clarify or guide you through this topic?
+ Ask Learn 
+ Ask Learn 
+ Suggest a fix? 
+ Additional resources
+ Last updated on 
+ 2026-09-29
+ In this article 
+ Was this page helpful?
+ Need help with this topic?
+ Want to try using Ask Learn to clarify or guide you through this topic?
+ Ask Learn 
+ Ask Learn 
+ Suggest a fix? 
+ en-us 
+ Your Privacy Choices 
+ Theme 
+ Light 
+ Dark 
+ High contrast 
+ AI Disclaimer 
+ Previous Versions 
+ Blog 
+ Contribute 
+ Privacy 
+ Consumer Health Privacy 
+ Terms of Use 
+ Trademarks 
+ © Microsoft 2026 
+ 

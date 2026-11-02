@@ -1,0 +1,46 @@
+# Cierre de compilación de la «copia literal» de ApiWeb (MI-05) — 2026-10-28T09:48:28-03:00
+# repo caso base: 59399ba 2026-10-27
+## using de Controllers/ y Sessions/ (lo que la copia declara copiar):
+Controllers/LocalidadesController.cs:2:using MovilidadUrbana.ApiWeb.Application.Abstractions;
+Controllers/LocalidadesController.cs:3:using MovilidadUrbana.ApiWeb.Application.Localidades;
+Controllers/LocalidadesController.cs:4:using MovilidadUrbana.ApiWeb.Contracts;
+Controllers/LocalidadesController.cs:5:using MovilidadUrbana.ApiWeb.Domain.Entities;
+Sessions/SessionHeaderMiddleware.cs:1:using MovilidadUrbana.ApiWeb.Infrastructure.Sessions;
+Controllers/EncuestasController.cs:2:using MovilidadUrbana.ApiWeb.Application.Encuestas;
+Controllers/EncuestasController.cs:3:using MovilidadUrbana.ApiWeb.Contracts;
+Controllers/EncuestasController.cs:4:using MovilidadUrbana.ApiWeb.Domain.Rules;
+## Paquetes de prueba y persistencia del caso base:
+      4     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.11" />
+      7     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.0" />
+      3     <PackageReference Include="Microsoft.Playwright.NUnit" Version="1.62.0" />
+      7     <PackageReference Include="NUnit" Version="4.3.2" />
+      7     <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
+      7     <PackageReference Include="NUnit.Analyzers" Version="4.7.0" />
+## Propagación de la sesión al circuito Blazor en MovilidadUrbana.Web (no existe en ApiWeb):
+Components/Routes.razor:1:@using MovilidadUrbana.Web.Infrastructure.Sessions
+Components/Routes.razor:17:    public string? SessionId { get; set; }
+Components/Routes.razor:20:    private SessionContext Contexto { get; set; } = default!;
+Components/Routes.razor:25:        if (SessionId is not null) Contexto.Set(SessionId);
+Components/App.razor:1:@inject MovilidadUrbana.Web.Infrastructure.Sessions.SessionContext Session
+Components/App.razor:23:    <Routes @rendermode="InteractiveServer" SessionId="@Session.Id" />
+/// <summary>
+/// Implementación con alcance de ámbito: una petición HTTP, o un circuito de Blazor.
+///
+/// El valor lo establece <see cref="SessionMiddleware"/> durante la petición y, ya en el
+/// circuito interactivo, el componente raíz `Routes`, que lo recibe como parámetro desde
+/// `App.razor`. El identificador provisorio del constructor evita que un ámbito sin cookie
+/// termine leyendo o escribiendo en un espacio de datos compartido.
+/// </summary>
+## ApiWeb: SessionContext «una petición HTTP»:
+/// <summary>
+/// Implementación con alcance de ámbito: una petición HTTP.
+///
+/// El valor lo establece el middleware de sesión por encabezado (`MiddlewareDeSesionPorEncabezado`) en cada petición. El identificador provisorio del constructor evita que un ámbito sin
+/// sesión termine leyendo o escribiendo en un espacio de datos compartido.
+/// </summary>
+20:        services.AddDbContextFactory<AppDbContext>(opciones => opciones.UseSqlite(connectionString));
+23:        services.AddScoped<SessionContext>();
+24:        services.AddScoped<ISessionContext>(sp => sp.GetRequiredService<SessionContext>());
+25:        services.AddScoped<SessionSeeder>();
+26:        services.AddScoped<ILocalidadRepository, LocalidadRepository>();
+27:        services.AddScoped<IEncuestaRepository, EncuestaRepository>();

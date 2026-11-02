@@ -1,0 +1,67 @@
+# Aserciones de las pruebas ConModelo/ (grep), 2026-10-28
+== Demos/MovilidadUrbana.Asistente/tests/MovilidadUrbana.Asistente.Tests/ConModelo/RecorridoConModeloTests.cs
+51:        Assert.That(comp.Contador.Escrituras - escriturasPrevias, Is.Zero, $"semilla {semilla}: hubo escrituras");
+125:            Assert.That(c.Contador.Bajas, Is.Zero, $"semilla {c.Semilla}: hubo una baja");
+133:        Assert.That(c.Contador.Bajas, Is.Zero, $"semilla {c.Semilla}: hubo una baja");
+172:                Assert.That(r.IsSuccess, Is.True);
+== Examples/01-Chat-Basico/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/ConModelo/ChatConModeloTests.cs
+67:        Assert.That(violaciones, Is.Empty);
+68:        Assert.That(k, Is.GreaterThanOrEqualTo(m - 2));
+== Examples/01-Chat-Basico/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/ConModelo/MaxOutputTokensConModeloTests.cs
+68:            Assert.That(nativaAcotada, Is.EqualTo(m), "la vía nativa no respetó MaxOutputTokens");
+69:            Assert.That(v1Excedida, Is.GreaterThanOrEqualTo(1), "por /v1 no se observó salida por encima de MaxOutputTokens");
+== Examples/01-Chat-Basico/tests/MovilidadUrbana.Ejemplos.ChatBasico.Tests/ConModelo/NumCtxConModeloTests.cs
+91:            Assert.That(okA, Is.EqualTo(m), "(a) con el grande no se superó el chico: num_ctx no llegó");
+92:            Assert.That(okB, Is.EqualTo(m), "(b) con el chico no se truncó");
+93:            Assert.That(okC, Is.EqualTo(m), "(c) con el grande se truncó");
+== Examples/02-Streaming/tests/MovilidadUrbana.Streaming.Tests/ConModelo/StreamingConModeloTests.cs
+41:            Assert.Inconclusive("Sin OLLAMA_ENDPOINT: no medido.");
+91:        Assert.That(violaciones, Is.Empty);
+132:        Assert.That(violaciones, Is.Empty);
+== Examples/03-Salida-Estructurada/tests/MovilidadUrbana.SalidaEstructurada.Tests/ConModelo/ExtraccionConModeloTests.cs
+56:            Assert.Inconclusive("Sin OLLAMA_ENDPOINT: no medido.");
+126:        Assert.That(violaciones, Is.Empty, string.Join("; ", violaciones));
+== Examples/04-Embeddings-Y-Busqueda/tests/MovilidadUrbana.Busqueda.Tests/ConModelo/BusquedaConModeloTests.cs
+34:            Assert.That(almacen.Dimension, Is.EqualTo(1024));
+41:            Assert.That((ex.Declarada, ex.Medida), Is.EqualTo((512, 1024)));
+109:            Assert.That(kr, Is.GreaterThanOrEqualTo(10));
+110:            Assert.That(kn, Is.GreaterThanOrEqualTo(10));
+111:            Assert.That(e1.Filas.All(f => f.Resultados.Count == ia.Busqueda.Top), Is.True);
+== Examples/05-RAG-En-Memoria/tests/MovilidadUrbana.RagEnMemoria.Tests/ConModelo/ContextoFijoFrenteARagConModeloTests.cs
+75:                    Assert.That(r.Texto, Is.Not.Empty, "invariante: respuesta no vacía");
+== Examples/05-RAG-En-Memoria/tests/MovilidadUrbana.RagEnMemoria.Tests/ConModelo/RecuperacionConModeloTests.cs
+54:                Assert.That(r, Has.Count.EqualTo(k), "invariante: k resultados");
+66:            Assert.That(b.Select(x => x.Puntaje), Is.EqualTo(a.Select(x => x.Puntaje)), "invariante: reproducción idéntica");
+== Examples/06-Tool-Calling/tests/MovilidadUrbana.Ejemplos.ToolCalling.Tests/ConModelo/HerramientasConModeloTests.cs
+112:        Assert.That(violaciones, Is.Empty);
+== Examples/07-Agente-Con-Aprobacion/tests/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests/ConModelo/BajaConAprobacionConModeloTests.cs
+95:            Assert.That(violaciones, Is.Empty);
+96:            Assert.That(pendientesResistencia, Is.GreaterThanOrEqualTo(1));
+== Examples/07-Agente-Con-Aprobacion/tests/MovilidadUrbana.Ejemplos.AgenteConAprobacion.Tests/ConModelo/DelChatAlAgenteConModeloTests.cs
+98:            Assert.That(violaciones, Is.Empty);
+99:            Assert.That(herr41, Is.GreaterThanOrEqualTo(1), "la llamada única nunca pidió la herramienta");
+100:            Assert.That(herrT1, Is.GreaterThanOrEqualTo(1), "el agente nunca pidió la herramienta");
+== Examples/08-Servidor-Y-Cliente-MCP/tests/MovilidadUrbana.Ejemplos.Mcp.Tests/ConModelo/AgentePorMcpConModeloTests.cs
+111:        Assert.That(violaciones, Is.Empty);
+== Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/ConModelo/ContextoTruncadoConModeloTests.cs
+80:        Assert.That(violaciones, Is.Empty);
+== Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/ConModelo/EvaluacionConJuezTests.cs
+28:            Assert.Inconclusive("Juez: no medido (corre sólo bajo demanda, con CONMODELO_JUEZ=1).");
+50:        Assert.That(resultado.Metrics, Has.Count.EqualTo(4));
+== Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/ConModelo/PipelineConModeloTests.cs
+85:        Assert.That(violaciones, Is.Empty);
+== Examples/09-Pruebas-Con-Cliente-Falso/tests/MovilidadUrbana.Ejemplos.PruebasConClienteFalso.Tests/ConModelo/SalidaEstructuradaConModeloTests.cs
+77:        Assert.That(violaciones, Is.Empty);
+== Examples/10-Workflow/tests/MovilidadUrbana.Ejemplos.Orquestacion.Tests/ConModelo/WorkflowConModeloTests.cs
+109:        Assert.That(violaciones, Is.Empty);
+162:        Assert.That(violaciones, Is.Empty);
+
+== Examples/01-Chat-Basico/.../ConModelo/ChatConModeloTests.cs, cabecera (l. 12-19)
+/// <summary>
+/// Chat básico por la vía nativa, con el modelo y el muestreo de appsettings.json.
+/// Criterio escrito antes de correr:
+///  - invariantes por corrida (fallan ante una sola violación): texto no vacío, FinishReason = stop,
+///    InputTokenCount &gt; 0;
+///  - tasa de este pedido, m semillas (1..m): la respuesta nombra 4 dígitos («4» o «cuatro»);
+///    la prueba falla si k &lt; m − 2 (umbral elegido, no medido).
+/// </summary>

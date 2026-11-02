@@ -1,0 +1,7 @@
+{
+  "modelo": "qwen3-embedding:0.6b",
+  "digest": "ac6da0dfba84",
+  "plantilla": "plantilla.v1",
+  "dimensiones": 1024,
+  "textos": 13
+}

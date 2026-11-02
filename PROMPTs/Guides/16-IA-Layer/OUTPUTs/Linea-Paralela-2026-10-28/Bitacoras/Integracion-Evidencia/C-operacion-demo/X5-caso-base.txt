@@ -1,0 +1,13 @@
+# X5 — caso base, 2026-10-28T09:15:56-03:00
+HEAD 59399ba 2026-10-27
+git diff --stat 8fb4c3a HEAD -- src/MovilidadUrbana.ApiWeb src/MovilidadUrbana.Web:
+(vacío = sin cambios)
+Marcos de prueba (grep -rho PackageReference --include=*.csproj | sort | uniq -c):
+      3 PackageReference Include="Microsoft.Playwright.NUnit"
+      7 PackageReference Include="NUnit"
+      7 PackageReference Include="NUnit3TestAdapter"
+      7 PackageReference Include="NUnit.Analyzers"
+Persistencia MAUI:
+20:        services.AddDbContextFactory<AppDbContext>(opciones => opciones.UseSqlite(connectionString));
+Referencias a ApiWeb/HttpClient en la MAUI:
+(fin)

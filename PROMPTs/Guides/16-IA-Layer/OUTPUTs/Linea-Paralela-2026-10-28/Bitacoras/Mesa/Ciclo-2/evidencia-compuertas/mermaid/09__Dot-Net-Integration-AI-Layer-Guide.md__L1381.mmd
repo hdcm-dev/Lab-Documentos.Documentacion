@@ -1,0 +1,12 @@
+flowchart TD
+  P["¿La respuesta es un dato exacto que una consulta calcula?"] -->|sí| H["Herramienta sobre el caso de uso (§7)"]
+  P -->|no| T["¿El corpus entra holgado en la ventana configurada y en la efectiva?"]
+  T -->|no| E2["Escalón 2: RAG"]
+  T -->|sí| C["¿Cambia entre consultas, tiene permisos por persona o hay que citar el fragmento?"]
+  C -->|sí| E2
+  C -->|no| E0["Escalón 0: contexto fijo"]
+  E0 --> R["¿Muchas consultas seguidas y prefijo mayor que el mínimo cacheable?"]
+  R -->|sí| E1["Escalón 1: prefijo estable y caché del servidor"]
+  E2 --> B["¿Conviven preguntas que no necesitan el corpus?"]
+  B -->|no| VA["Vía A: paso fijo, por defecto"]
+  B -->|sí| VB["Vía B: búsqueda como herramienta"]
