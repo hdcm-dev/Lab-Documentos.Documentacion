@@ -1,0 +1,13 @@
+Comando: env -u GIT_ASKPASS GIT_TERMINAL_PROMPT=0 git -c credential.helper= ls-remote <url-sin-credenciales> HEAD
+Fecha-hora: 2026-11-03 16:10:36 (UTC−03:00)
+Quién: presidencia de la mesa
+
+Observación (Expediente-Rules §4, S2): salida de cada sonda, por repositorio.
+
+| Repositorio | Código de salida | Visibilidad |
+| --- | --- | --- |
+| Lab-Documentos.Documentacion | 0 | pública |
+| Lab-Documentos | 0 | pública |
+| Lab-Geometria | 0 | pública |
+
+El servicio privado de las mesas no se sondea ni se nombra: va como {servicio-privado}.

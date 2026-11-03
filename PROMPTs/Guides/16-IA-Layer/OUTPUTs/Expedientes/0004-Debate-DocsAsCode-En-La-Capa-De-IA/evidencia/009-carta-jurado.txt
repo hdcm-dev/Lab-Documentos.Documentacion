@@ -1,0 +1,24 @@
+Medio: texto despachado al rol, extraído sin editar del registro de la sesión; sin el rótulo del arnés que lo envuelve; rutas del host redactadas por S2 (huella del registro crudo, con rótulo y rutas: ed3973c92d528843cc7b7e8548ecc91e67e0958eb92a7c6de27bb9fa3dee4ff8)
+Fecha-hora: 2026-11-03 (UTC−03:00), asentada después del despacho (folio 002 §8)
+Quién: presidencia de la mesa; destinatario: jurado de veredicto
+
+  Todo en español. El expediente va a un repo PÚBLICO, así que:
+  - El servicio privado se nombra siempre {servicio-privado}, igual que hace DocsAsCode.
+  - Nunca escribas máquinas, IPs, puertos, dominios privados, usuarios, rutas del host (/home/…, /vm/…) ni credenciales. Los nombres de modelos y las cifras de la evaluación pueden ir.
+  - Lab-Geometria es público y se nombra.
+  - No toques /IA/SDD/IA.SDD (sólo leerlo) ni ninguna carpeta PROMPTs/ fuera de OUTPUTs/.
+  - No instales nada.
+  - Citá fuentes externas reales (norma con su número, publicación con su autor y año). Si no estás seguro de un apartado, citá la norma sin apartado. No inventes cláusulas ni URLs.
+  
+  Pedido literal del PO, en dos mensajes del 2026-11-03:
+  (1) «estuviste hablando con los subagentes de la sesion DocsAsDoc, ellos estaban integrando la documentación, y acá mi duda, y como metodlogicamente en la industria este concepto de DocsAsDoc se integra dentro de IA Layer?»
+  (2) «podes armar un mesa citando los expertos de ambas sesiones, y generar un expediente de debate, y que expongan sus conocimientos»
+  («DocsAsDoc» es la sesión DocsAsCode.)
+  
+  Sos el jurado de veredicto, con tres votos independientes que razonás por separado: industria, gobernanza y aplicación. Leé <carpeta-de-trabajo>/exp0004/despacho/*.md, <carpeta-de-trabajo-de-DocsAsCode>/posicion-0004-debate-docsascode-capa-ia.md y <raíz-del-workspace>/IA/SDD/IA.SDD/Conocimiento/Knowledge-Mesa-De-Expertos-A-Pedido.md (§2, §3, §4, §7 y §8).
+  Dictaminá, sin «depende»:
+  - la respuesta de la mesa a la pregunta del PO (cómo se integra metodológicamente Docs as Code dentro de una capa de IA en la industria);
+  - la respuesta a cada pregunta abierta de las dos partes, con el resultado de la votación;
+  - qué propuestas se adoptan para Lab-Geometria y {servicio-privado}, con su orden;
+  - la deuda declarada.
+  Escribí el dictamen en <carpeta-de-trabajo>/exp0004/despacho/JURADO-VEREDICTO.md.

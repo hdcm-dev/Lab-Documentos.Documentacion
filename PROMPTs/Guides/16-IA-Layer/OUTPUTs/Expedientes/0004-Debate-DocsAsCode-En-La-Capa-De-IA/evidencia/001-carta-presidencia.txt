@@ -1,0 +1,32 @@
+Medio: texto despachado al rol, extraído sin editar del registro de la sesión; sin el rótulo del arnés que lo envuelve; rutas del host redactadas por S2 (huella del registro crudo, con rótulo y rutas: e8c6fd275d5f74ae4427d75259a3a1eaf77e28ee20ebf55296c170a0cc88f3bf)
+Fecha-hora: 2026-11-03 (UTC−03:00), asentada después del despacho (folio 002 §8)
+Quién: presidencia de la mesa; destinatario: presidencia de la mesa (escribano)
+
+  Todo en español. El expediente va a un repo PÚBLICO, así que:
+  - El servicio privado se nombra siempre {servicio-privado}, igual que hace DocsAsCode.
+  - Nunca escribas máquinas, IPs, puertos, dominios privados, usuarios, rutas del host (/home/…, /vm/…) ni credenciales. Los nombres de modelos y las cifras de la evaluación pueden ir.
+  - Lab-Geometria es público y se nombra.
+  - No toques /IA/SDD/IA.SDD (sólo leerlo) ni ninguna carpeta PROMPTs/ fuera de OUTPUTs/.
+  - No instales nada.
+  - Citá fuentes externas reales (norma con su número, publicación con su autor y año). Si no estás seguro de un apartado, citá la norma sin apartado. No inventes cláusulas ni URLs.
+  
+  Sos el presidente de la mesa y escribano del expediente 0004. Leé enteros <raíz-del-workspace>/IA/SDD/IA.SDD/SDD/Devs/Rules/Expediente-Rules.md y <raíz-del-workspace>/IA/SDD/IA.SDD/Conocimiento/Knowledge-Mesa-De-Expertos-A-Pedido.md §2.3 y §5.3, y mirá cómo están hechos los expedientes 0002 y 0003 de <raíz-del-workspace>/LAB/Lab-Documentos/Lab-Documentos.Documentacion (en PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Expedientes/) para seguir su forma.
+  Pasos:
+  1. Creá desde origin/main un worktree en <worktree-del-expediente>, con la rama exp-0004/debate-docsascode-capa-ia. El clon principal tiene cambios ajenos: NO lo toques.
+  2. Armá el expediente en PROMPTs/Guides/16-IA-Layer/OUTPUTs/Expedientes/0004-Debate-DocsAsCode-En-La-Capa-De-IA/, con README (carátula y estado) y actuaciones/ foliadas:
+     - presentacion: el pedido literal (Pedido literal del PO, en dos mensajes del 2026-11-03:
+  (1) «estuviste hablando con los subagentes de la sesion DocsAsDoc, ellos estaban integrando la documentación, y acá mi duda, y como metodlogicamente en la industria este concepto de DocsAsDoc se integra dentro de IA Layer?»
+  (2) «podes armar un mesa citando los expertos de ambas sesiones, y generar un expediente de debate, y que expongan sus conocimientos»
+  («DocsAsDoc» es la sesión DocsAsCode.)) con su testimonio;
+     - providencia: el contrato de entrada, el enunciado y el objetivo con origen, la clase de objeto y la composición del panel con sus descartes;
+     - informe: el folio de DocsAsCode TAL CUAL, desde <carpeta-de-trabajo-de-DocsAsCode>/posicion-0004-debate-docsascode-capa-ia.md; es pedido de su parte, no lo edites;
+     - informe: el folio de la Capa de IA;
+     - un informe por cada comisión, más el refutador y el jurado, VERBATIM desde <carpeta-de-trabajo>/exp0004/despacho/;
+     - resolucion: la respuesta de la mesa al PO, las respuestas por pregunta y el plan de adopción;
+     - y su cierre, con la cuenta de folios.
+     Las cartas van en evidencia/.
+  3. Hacé un barrido de privacidad sobre todo lo que agregás: IPs, /home, /vm, puertos, correos, dominios privados y nombres de repos privados ([nombres de repositorios privados, redactados S2]). Si el folio de DocsAsCode tuviera una fuga, NO lo edites: anotalo en el resultado.
+  4. Corré los criterios A1–A11 de <raíz-del-workspace>/IA/SDD/IA.SDD/SDD/Devs/Rules/Expediente-Rules.md §6 que apliquen, y docs-guard si el repo lo usa sobre esa ruta.
+  5. Commiteá con git -c user.email=noreply@anthropic.com -c user.name=Claude commit, con un mensaje que termine en «Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>», y hacé push -u.
+  NO abras el PR.
+  Devolvé: la rama, el SHA, la lista de folios, los resultados de los criterios y del barrido, y un resumen de la resolución en 15 líneas.

@@ -1,0 +1,31 @@
+Medio: texto despachado al rol, extraído sin editar del registro de la sesión; sin el rótulo del arnés que lo envuelve; rutas del host redactadas por S2 (huella del registro crudo, con rótulo y rutas: 87517c442aa88ecaa1b3246bc59cf70cd6c59fb6e03fd98c8d03e86a36c4f75f)
+Fecha-hora: 2026-11-03 (UTC−03:00), asentada después del despacho (folio 002 §8)
+Quién: presidencia de la mesa; destinatario: secretario de la sesión «Capa de IA»
+
+  Todo en español. El expediente va a un repo PÚBLICO, así que:
+  - El servicio privado se nombra siempre {servicio-privado}, igual que hace DocsAsCode.
+  - Nunca escribas máquinas, IPs, puertos, dominios privados, usuarios, rutas del host (/home/…, /vm/…) ni credenciales. Los nombres de modelos y las cifras de la evaluación pueden ir.
+  - Lab-Geometria es público y se nombra.
+  - No toques /IA/SDD/IA.SDD (sólo leerlo) ni ninguna carpeta PROMPTs/ fuera de OUTPUTs/.
+  - No instales nada.
+  - Citá fuentes externas reales (norma con su número, publicación con su autor y año). Si no estás seguro de un apartado, citá la norma sin apartado. No inventes cláusulas ni URLs.
+  
+  Sos el secretario de la sesión «Capa de IA» (la que abre el 0004). Armá su folio de posición, simétrico al de DocsAsCode (leelo: <carpeta-de-trabajo-de-DocsAsCode>/posicion-0004-debate-docsascode-capa-ia.md), en <carpeta-de-trabajo>/exp0004/despacho/posicion-sesion-capa-de-ia.md.
+  Fuentes de esta sesión, para leer:
+  - Journals de las mesas de hoy en <registro-de-la-sesión>/subagents/workflows/wf_94b203d2-797, <registro-de-la-sesión>/subagents/workflows/wf_eaa1a04f-05f y <registro-de-la-sesión>/subagents/workflows/wf_d9dcff16-4db (este puede estar en curso): archivos journal.jsonl con líneas type=result.
+  - La evaluación de modelos, en <carpeta-de-trabajo>/capa-ia/bench/informe.md. Ahí la dirección del servidor NO se copia.
+  - Los borradores DECISIONES.md, en <carpeta-de-trabajo>/capa-ia/geo/borrador/ y <carpeta-de-trabajo>/capa-ia/pd/borrador/.
+  - El ai-layer/ y el expediente 0002 de Lab-Geometria.
+  - La guía 16 (Dot-Net-Integration-AI-Layer-Guide) en Lab-Documentos, con su revisión D-23, y docs-guard (tools/docs-guard) en Lab-Documentos.
+  Elenco: mesa de especificación de la guía 16, revisión D-23, mesa de evaluación de modelos, mesas de Geometría y de {servicio-privado} con sus lentes (didáctica, seguridad, SRE, dominio) y los revisores independientes.
+  Por cada integrante: mandato, tesis y evidencia más fuerte, citada por documento.
+  Después, la posición inicial sobre Docs as Code dentro de una capa de IA:
+  - prompts como código;
+  - evaluaciones versionadas;
+  - model card y ADR;
+  - métricas M-1 y M-4;
+  - docs-guard AI-1 a AI-5;
+  - frontmatter de procedencia;
+  - la IA apagada por defecto porque main despliega.
+  Cerrá con tus preguntas abiertas, y respondé también las 7 preguntas de DocsAsCode desde tu experiencia. Lo que no sepas, decilo.
+  Devolvé la ruta.
