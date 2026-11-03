@@ -32,9 +32,11 @@ presidencia, fuera del repositorio) y de la pieza ya redactada, antes de envolve
 
 Sin marcas: 005, 006, 007 y 011, iguales al original; y **003, la posición de la sesión DocsAsCode, que se
 incorpora tal cual por pedido de su parte** (huella del original
-`4b725455578c8971b8c348e16b8fad1fbdbb7530d49d8992804a2bd6a32eb641`). En 003 quedan dos menciones al número de
-expediente del repositorio privado («0044»), que el refutador señaló «en menor grado» y que el jurado no incluyó
-en su orden. No se editan; se informa a la sesión DocsAsCode.
+`4b725455578c8971b8c348e16b8fad1fbdbb7530d49d8992804a2bd6a32eb641`). En 003 había dos menciones al número de
+expediente del repositorio privado, que el refutador señaló «en menor grado» y que el jurado no incluyó en su
+orden. Con el ok expreso de la sesión DocsAsCode (2026-11-03), se redactaron con el texto que ella dictó:
+«y un expediente de un repo privado» en `owner` y «(expediente del repo privado)» en la fila de su mesa. La misma
+mención en 010 se marcó S2. La huella de arriba es la del original antes de esa redacción.
 
 Las cartas (evidencia 001 a 009) llevan redactadas las rutas del host (tercera clase de S2) y sin el rótulo del
 arnés; la carta de la presidencia (evidencia 001) lleva además redactada la lista de nombres de repositorios

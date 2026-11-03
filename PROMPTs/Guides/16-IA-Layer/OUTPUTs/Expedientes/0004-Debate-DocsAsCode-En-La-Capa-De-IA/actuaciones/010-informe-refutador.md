@@ -116,7 +116,7 @@ cierre (§4 de la norma, «Quién aplica»).
 **R-9. Riesgo de publicación, que ninguna comisión levantó.** Las posiciones y C-DIDACTICA (escalón 7) describen
 con detalle una **vulnerabilidad abierta** de `{servicio-privado}`: [redactado S2: defecto de seguridad abierto del validador, informado al responsable], con la frase que la explota [redactada S2]. La lente de seguridad la marcó **bloqueante y sin corregir**.
 El alias no protege: el expediente va a un repo público, y describir un bypass no corregido con su entrada de
-ejemplo es divulgarlo. Lo mismo, en menor grado, para «[versión del contrato redactada S2]», «expediente 0044» y el ejemplo de
+ejemplo es divulgarlo. Lo mismo, en menor grado, para «[versión del contrato redactada S2]», «[número de expediente privado redactado S2]» y el ejemplo de
 atribución con su cifra. **Propuesta: que la presidencia saque la frase de explotación y la versión del
 contrato de todo folio que vaya al repo público hasta que el privado lo corrija**, y que C-DIDACTICA no
 proponga publicar ese caso como «folio genérico» mientras siga abierto. Es P0 de privacidad y seguridad del
