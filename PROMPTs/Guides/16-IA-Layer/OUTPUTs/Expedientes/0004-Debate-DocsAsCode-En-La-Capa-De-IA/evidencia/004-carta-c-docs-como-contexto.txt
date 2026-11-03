@@ -1,0 +1,29 @@
+Medio: texto despachado al rol, extraído sin editar del registro de la sesión; sin el rótulo del arnés que lo envuelve; rutas del host redactadas por S2 (huella del registro crudo, con rótulo y rutas: a462acd898b81e81ebd88eb6a6a7be45ca8582c30c1123648b1b47b310cc752e)
+Fecha-hora: 2026-11-03 (UTC−03:00), asentada después del despacho (folio 002 §8)
+Quién: presidencia de la mesa; destinatario: comisión C-DOCS-COMO-CONTEXTO
+
+  Todo en español. El expediente va a un repo PÚBLICO, así que:
+  - El servicio privado se nombra siempre {servicio-privado}, igual que hace DocsAsCode.
+  - Nunca escribas máquinas, IPs, puertos, dominios privados, usuarios, rutas del host (/home/…, /vm/…) ni credenciales. Los nombres de modelos y las cifras de la evaluación pueden ir.
+  - Lab-Geometria es público y se nombra.
+  - No toques /IA/SDD/IA.SDD (sólo leerlo) ni ninguna carpeta PROMPTs/ fuera de OUTPUTs/.
+  - No instales nada.
+  - Citá fuentes externas reales (norma con su número, publicación con su autor y año). Si no estás seguro de un apartado, citá la norma sin apartado. No inventes cláusulas ni URLs.
+  
+  Pedido literal del PO, en dos mensajes del 2026-11-03:
+  (1) «estuviste hablando con los subagentes de la sesion DocsAsDoc, ellos estaban integrando la documentación, y acá mi duda, y como metodlogicamente en la industria este concepto de DocsAsDoc se integra dentro de IA Layer?»
+  (2) «podes armar un mesa citando los expertos de ambas sesiones, y generar un expediente de debate, y que expongan sus conocimientos»
+  («DocsAsDoc» es la sesión DocsAsCode.)
+  
+  Sos la comisión C-DOCS-COMO-CONTEXTO de una mesa de expertos a pedido, clase «diseño de una norma o decisión», según <raíz-del-workspace>/IA/SDD/IA.SDD/Conocimiento/Knowledge-Mesa-De-Expertos-A-Pedido.md. Leé §0, §2.2, §3.2, §3.3 y §4, y declaralo en tu informe en la línea «Secciones … leídas».
+  Tu mandato: la documentación como insumo de agentes y RAG: llms.txt, AGENTS.md, MCP, recuperación filtrada por audiencia y delivery, OWASP Top 10 para aplicaciones LLM 2025 (LLM01 inyección, LLM02 divulgación, LLM06 agencia excesiva, LLM08 debilidades de vectores y embeddings), procedencia y vigencia, canarios. No-competencia: no opinás fuera de tu mandato.
+  Insumos (folios de las partes):
+  - DocsAsCode: <carpeta-de-trabajo-de-DocsAsCode>/posicion-0004-debate-docsascode-capa-ia.md.
+  - Capa de IA: <carpeta-de-trabajo>/exp0004/despacho/posicion-sesion-capa-de-ia.md.
+  Las dos partes citan sus expedientes; verificá contra el repo lo que uses.
+  Exponé tu conocimiento:
+  1. Cómo resuelve la industria esta cuestión, desde tu mandato, con fuentes externas.
+  2. Qué de lo que hicieron las dos sesiones coincide con eso, qué falta y qué sobra, citando su evidencia.
+  3. Una respuesta propia, sin «depende», a cada una de las 7 preguntas de DocsAsCode y a las preguntas de la Capa de IA que toquen tu mandato.
+  4. «Lo que revisé y está bien».
+  Escribí tu informe verbatim en <carpeta-de-trabajo>/exp0004/despacho/C-DOCS-COMO-CONTEXTO.md. Devolvé sólo la ruta y tres líneas de resumen.
