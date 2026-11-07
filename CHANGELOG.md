@@ -8,6 +8,21 @@ documental que se lee entero, no un artefacto que alguien instala en una versió
 versionado semántico que la guía enseña aplica al software que ese procedimiento libera, no a la
 guía misma.
 
+## [No publicado] - 2026-11-07
+
+### Añadido
+
+- **`PROMPTs/Guides/18-IA-Model/`** — prompt del PO (`01-Crear-Study.Guide.md`) y sus salidas: bitácoras 01–04 y el expediente 0001 (Guia-De-Estudio-IA-Model) de la mesa de expertos que elaboró la guía de estudio sobre modelos de IA (21 folios: contrato, ronda de estructura, elaboración con verificación contra banco Ollama, ronda 2 con 54 hallazgos procedentes parchados, resolución final con cierre «por decisión» y lote al PO). La guía resultante (15 piezas) vive en `hdcm-dev/Lab-Documentos` (`Guides/IA/IA-Model/`). Evidencia cruda en `evidencia/local/`, no versionada; rutas del equipo con marcadores (S2).
+- **`ia-db/` — alta incremental de la guía 18:** sección nueva en `indexes/09_IA-Agiles-UX-y-Otros.md` (inventario de las 15 piezas, primera familia de `Guides/IA/` con frontmatter propio) y fila de `IA/` + subsección §7.2 en `indexes/00_MASTER-INDEX.md`; fuera de la base declarada hasta la regeneración completa.
+
+### Delegación del merge (Conformacion-Pull-Request-Automatico 2.0, expediente 0001 de la guía 18)
+
+- **Fecha:** 2026-11-07. **Responsable:** el responsable del producto (PO), por su regla general literal («siempre para conformar los pr sigue `KB-privada/Knowledges/Knowledge-Conformacion-Pull-Request-Automatico.md`»; antes: «vos te encargas de todos los pr»), asentada en el CHANGELOG de `hdcm-dev/Lab-Documentos` el 2026-11-01. **Asiento del caso:** folio 021 §4 del expediente 0001 (`PROMPTs/Guides/18-IA-Model/OUTPUTs/Expedientes/0001-Guia-De-Estudio-IA-Model/`).
+- **Alcance:** los PR del expediente 0001 de la guía 18 en `hdcm-dev/Lab-Documentos` y `hdcm-dev/Lab-Documentos.Documentacion`, incluido este PR, que asienta la fila.
+- **Guarda:** G1–G4; techo de espera 120 minutos; intervalo de relectura 30 segundos; estado `clean` y controles de la cabeza en éxito (al menos uno).
+- **Método:** commit de merge atado al SHA de la cabeza, nunca `squash` (la rama lleva un expediente); la rama remota se borra tras leer que el merge dio. El merge se anuncia a las otras sesiones que comparten el repositorio.
+- **Excepción:** un cuestionamiento particular del PO sobre la unidad la vuelve manual; lo irreversible con consecuencia externa sale al PO.
+
 ## [No publicado] - 2026-10-28
 
 ### Añadido

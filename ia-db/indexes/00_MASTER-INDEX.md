@@ -57,7 +57,7 @@ de `git ls-files` + `wc -l` (líneas de `.md`):
 | `Metodologia-Entorno-Desarrollo/` | 343 | 14 | 4 663 | Guía única (3 637 l.) · `Examples/` (342 arch., 74 experimentos) | `GUIA-ENT-DEV` 1.1.0 · 2026-10-09 | [06](06_Metodologia-Entorno-Desarrollo.md) |
 | `Testing/` | 29 | 23 | 17 790 | `E2E-Guide/` (copia vieja, 2 docs) · `Lab-E2E.WebBlazor-Guides/` (27 arch.: E2E-Guide, Test-Guide, copias de ramas/Actions, `workflows/`) | `E2E-00`…`E2E-04` · 2026-08-23/09-09 | [07](07_Testing-E2E.md) |
 | `GitFlow/` | 9 | 6 | 4 618 | `Estandares-Modelo-Ramas-Guide/` (GF-GUIA + `Anexos/workflows/` con 3 `.yml`) · `Git-Flow-Guides/` (prácticas GitFlow y GitHub Flow) | `GF-GUIA` · 2026-08-23 · `GF-09` · `GHF-IDX` | [08](08_Ramas-CI-CD-y-DevOps.md) |
-| `IA/` | 23 | 23 | 4 859 | `SDD-Guide/` (4) · `references/` (18: AG-xx, refinamiento, notas) · `Claude-Guide.md/` (carpeta con 1 nota) | sin `doc_id` (importado) | [09](09_IA-Agiles-UX-y-Otros.md) |
+| `IA/` | 23 (+15) | 23 (+15) | 4 859 (+8 880) | `SDD-Guide/` (4) · `references/` (18: AG-xx, refinamiento, notas) · `Claude-Guide.md/` (carpeta con 1 nota) · **`IA-Model/`** (15 piezas, 8 880 l.: guía de modelos de IA, alta incremental 2026-11-07 en la rama `g18/ia-model-guide`, pendiente de fusión — fuera de la base y de los totales) | sin `doc_id` (importado) · `IAM-M0…M3`, `IAM-01…11` con frontmatter · 2026-11-07 (IA-Model) | [09](09_IA-Agiles-UX-y-Otros.md) |
 | `Metodologia-Agiles/` | 5 | 4 | 4 290 | `Scrum-Guide/` (Scrum + Jira, estudio, caso, PDF) | sin `doc_id` (importado) | [09](09_IA-Agiles-UX-y-Otros.md) |
 | `UX-UI-Design/` | 2 | 2 | 2 038 | `UX-UI-Guide/` (marco teórico + metodología de la sección UX) | sin `doc_id` (importado) | [09](09_IA-Agiles-UX-y-Otros.md) |
 | `Otros/` | 2 | 2 | 1 555 | `Seguridad-Red-Windows-Guide/` (guía + cuaderno) | `GUIA-PRINCIPAL`, `CUADERNO` · 2026-09-18 | [09](09_IA-Agiles-UX-y-Otros.md) |
@@ -241,6 +241,14 @@ Hallazgos de la v4.0 que ya no valen: H-A1 en `README.md` y `Guides/README.md`; 
 enlaces se corrigieron en E1-U1); H-C1 (`$P` de `Lanzar-Example.md` corregido); H-E3 (el apunte usa el
 vocabulario de la convención y no repite trazas). H-E6 se acota: el `CHANGELOG.md` ya llega al 2026-10-27,
 pero el hueco del 2026-09-22 al 2026-10-25 sigue.
+
+### 7.2 Alta incremental del 2026-11-07 (fuera de la base indexada)
+
+Altas: guía de estudio de modelos de IA `Guides/IA/IA-Model/` (15 piezas, 8 880 líneas,
+`IAM-M0…M3` + `IAM-01…11`), la primera familia de `Guides/IA/` con aparato propio de frontmatter
+YAML ([09](09_IA-Agiles-UX-y-Otros.md)). El contenido está en la rama `g18/ia-model-guide` de
+`Lab-Documentos`, **pendiente de fusión al momento del alta**: la base declarada de esta ia-db
+(`fe10086`) y los totales de §1–§2 no avanzan hasta que la base se regenere completa.
 
 ## 8. Hallazgos consolidados del corpus
 

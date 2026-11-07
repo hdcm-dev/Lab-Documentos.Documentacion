@@ -70,7 +70,7 @@ jobs:
         ruta:
           - .github
     # main de Lab-Documentos al 2026-10-29, tras la reescritura de la historia (antes b25b71b). Subir el pin es clase H.
-    uses: hdcm-dev/Lab-Documentos/.github/workflows/docs-guard.yml@bf866697b0688708eb28cdde2ffdb0a968e7a953
+    uses: hdcm-dev/Lab-Documentos/.github/workflows/docs-guard.yml@5e7e2efa3de2a43458be7557870059d98e6c1769
     with:
       ruta: ${{ matrix.ruta }}
       herramientas-ref: bf866697b0688708eb28cdde2ffdb0a968e7a953
