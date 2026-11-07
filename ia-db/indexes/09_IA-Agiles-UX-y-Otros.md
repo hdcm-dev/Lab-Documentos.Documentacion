@@ -14,6 +14,10 @@
 > `Lab-Documentos/`. Las cuatro carpetas entraron en su ubicación actual con el commit 9162e07
 > (2026-09-28, «reorganización de Guides/ por categoría»); en la v3.0 de esta ia-db vivían en
 > `Guides/SDD-Guide/`, `Guides/Scrum-Guide/`, `Guides/UX-UI-Guide/` y `Guides/references/`.
+> **Alta incremental 2026-11-07**: se suma `Guides/IA/IA-Model/` (15 piezas, 8 880 líneas), la
+> **primera familia de `Guides/IA/` con aparato propio de frontmatter YAML** — ver su sección más
+> abajo; está en la rama `g18/ia-model-guide` de `Lab-Documentos`, pendiente de fusión, y **no**
+> integra la base declarada de este índice.
 > Dos piezas son **posteriores a la v3.0** (2026-09-12): `Claude-Guide.md/Fast-Guide.md` (fab7258,
 > 2026-09-13, en `Guides/Claude-Guide.md/`) y la guía de seguridad + cuaderno (8218d3e 2026-09-17,
 > regenerada en ecbdb9d 2026-09-18, en `Guides/Seguridad-Red-Windows-Guide/`); 9162e07 sólo las movió.
@@ -58,6 +62,44 @@
 
 Ninguna de las cuatro carpetas tiene `README.md` en su raíz; el único README del dominio es el
 interno `Guides/IA/references/agentes-especialidades/README.md`. `Guides/README.md` está vacío (0 bytes).
+
+## Alta incremental 2026-11-07 · `Guides/IA/IA-Model/`
+
+Guía de estudio de **modelos de IA** generada el 2026-11-07: 15 piezas, 8 880 líneas (`wc -l`).
+Es la **primera familia de `Guides/IA/` con aparato propio de frontmatter YAML** (`doc_id`,
+`doc_type`, `title`, `status`, `origin: ia-generated`, `confidence`, `owner`, `last_review`,
+`audience`, `traces` y, en los 11 temas, `entorno_validado` con herramienta, versión, contexto y
+fecha de corrida), a diferencia de todo el material importado del resto de `Guides/IA/` (H-09.12).
+Prefijo `IAM-`: `IAM-M0…IAM-M3` para el marco e `IAM-01…IAM-11` para los temas; todas con
+`status: borrador` y `last_review: 2026-11-07`.
+
+**Origen y vigencia**: alta incremental del 2026-11-07; el contenido vive en la rama
+`g18/ia-model-guide` de `Lab-Documentos`, **pendiente de fusión al momento del alta**. La base
+declarada de este índice (`main` 5d5c2b4) no avanza hasta que la ia-db se regenere completa; los
+conteos del encabezado y del inventario importado no incluyen esta carpeta.
+
+| Ruta (`Guides/IA/IA-Model/`) | doc_id | doc_type · estado | Líneas | Qué es |
+|---|---|---|---:|---|
+| `IA-Model-Guide.md` | `IAM-M0` | indice · borrador | 165 | Portada e itinerarios de lectura; `traces` a las otras 14 piezas |
+| `Marco-De-Referencia.md` | `IAM-M1` | marco-de-referencia · borrador | 319 | Escenarios, contextos (CTX), actores (ACT) y glosario de la guía |
+| `Cohesion-Global.md` | `IAM-M2` | mapa · borrador | 287 | Grafo de dependencias, fronteras y lecturas declaradas |
+| `Convenciones.md` | `IAM-M3` | marco-de-referencia · borrador | 387 | Convenciones de la guía (IDs, frontmatter, estilo) |
+| `01-Representacion-Del-Lenguaje.md` | `IAM-01` | tema · borrador | 568 | Texto → tokens, vocabularios y embeddings (validado con tiktoken 0.9.0, CTX-01) |
+| `02-Arquitectura-Transformer.md` | `IAM-02` | tema · borrador | 643 | Arquitectura Transformer y variantes (labs con numpy y contra el banco ollama) |
+| `03-Del-Modelo-Base-Al-Asistente.md` | `IAM-03` | tema · borrador | 745 | Del modelo base al asistente (labs 03-A/B/C contra ollama, CTX-03) |
+| `04-Datos-Y-Corpus.md` | `IAM-04` | tema · borrador | 630 | Datos y corpus: formatos, limpieza y procedencia (labs locales sin modelo) |
+| `05-Preentrenamiento-Y-Leyes-De-Escala.md` | `IAM-05` | tema · borrador | 624 | Preentrenamiento y leyes de escala (Python puro, CTX-01) |
+| `06-Ajuste-Fino-Y-Alineacion.md` | `IAM-06` | tema · borrador | 780 | Ajuste fino y alineación (`confidence: media`; `entorno_validado` **parcial**: la corrida completa de entrenamiento y el servido en el banco quedan ilustrativos) |
+| `07-Evaluacion-Y-Metricas.md` | `IAM-07` | tema · borrador | 874 | Evaluación y métricas, con modelo juez (labs 07-A/07-B contra ollama) |
+| `08-Inferencia-Local.md` | `IAM-08` | tema · borrador | 759 | Inferencia local: motores y cuantización (verificador corrido contra el banco) |
+| `09-Bases-Vectoriales-Y-RAG.md` | `IAM-09` | tema · borrador | 874 | Bases vectoriales y RAG (sentence-transformers + faiss, generación contra el banco) |
+| `10-Multimodalidad-Y-Generacion-No-Textual.md` | `IAM-10` | tema · borrador | 607 | Multimodalidad y generación no textual (labs 10-A/10-B con qwen2.5vl) |
+| `11-Panorama-Y-Ecosistema-Abierto.md` | `IAM-11` | tema · borrador | 618 | Panorama y ecosistema abierto (`confidence: media`; inventario del banco relevado; fuentes primarias de §1.5 pendientes del mantenedor) |
+
+`owner`: ACT-06 en 13 piezas, ACT-05 (`IAM-04`) y ACT-04 (`IAM-07`) — actores definidos en
+`IAM-M1`, no remiten a los AG-xx/SA-xx del material importado. `audience: [humano, agente]` en
+todas. Los `entorno_validado` citan corridas del 2026-11-07 sobre CTX-01 (contenedores Python) y
+CTX-03 (banco ollama 0.32.0-rc0).
 
 ## 1. SDD y agentes (`Guides/IA/`)
 
