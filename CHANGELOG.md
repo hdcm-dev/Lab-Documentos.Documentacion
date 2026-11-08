@@ -12,8 +12,18 @@ guía misma.
 
 ### Añadido
 
+- **Expediente 0003 de DocsAsCode (`PROMPTs/DEVs/Enchacement/01-Replanteo-Y-Analisis/OUTPUTs/Expedientes/0003-Reedicion-DocsAsCode-Y-Especificacion/`)** — folio 400 (resolución 99 de la mesa de cierre del libro: partir por Parte dentro del PR 8, etiqueta `sdei-v2.0.0-borrador`, fusión por el ciclo automático) y folio 401 (cierre del expediente con los diferidos).
+
 - **`PROMPTs/Guides/18-IA-Model/`** — prompt del PO (`01-Crear-Study.Guide.md`) y sus salidas: bitácoras 01–04 y el expediente 0001 (Guia-De-Estudio-IA-Model) de la mesa de expertos que elaboró la guía de estudio sobre modelos de IA (21 folios: contrato, ronda de estructura, elaboración con verificación contra banco Ollama, ronda 2 con 54 hallazgos procedentes parchados, resolución final con cierre «por decisión» y lote al PO). La guía resultante (15 piezas) vive en `hdcm-dev/Lab-Documentos` (`Guides/IA/IA-Model/`). Evidencia cruda en `evidencia/local/`, no versionada; rutas del equipo con marcadores (S2).
 - **`ia-db/` — alta incremental de la guía 18:** sección nueva en `indexes/09_IA-Agiles-UX-y-Otros.md` (inventario de las 15 piezas, primera familia de `Guides/IA/` con frontmatter propio) y fila de `IA/` + subsección §7.2 en `indexes/00_MASTER-INDEX.md`; fuera de la base declarada hasta la regeneración completa.
+
+### Delegación del merge (Conformacion-Pull-Request-Automatico 2.0, expediente 0003 de DocsAsCode)
+
+- **Fecha:** 2026-11-07. **Responsable:** el responsable del producto (PO), por su orden literal del día («si fusionás todos los PR seguí el conocimiento Knowledge-Conformacion-Pull-Request-Automatico.md; que la mesa decida el mejor camino y lo ejecute») y por su regla general asentada en el CHANGELOG de `hdcm-dev/Lab-Documentos` el 2026-11-01. **Asiento del caso:** folio 400 del expediente 0003.
+- **Alcance:** los PR del expediente 0003 en `hdcm-dev/Lab-Documentos.Documentacion`, incluido este PR, que asienta la fila.
+- **Guarda:** G1–G4; techo de espera 120 minutos; intervalo de relectura 30 segundos; estado `clean` y controles de la cabeza en éxito (al menos uno).
+- **Método:** commit de merge atado al SHA de la cabeza, nunca `squash` (la rama lleva un expediente); la rama remota se borra tras leer que el merge dio. El merge se anuncia a las otras sesiones que comparten el repositorio.
+- **Excepción:** un cuestionamiento particular del PO sobre la unidad la vuelve manual; lo irreversible con consecuencia externa sale al PO.
 
 ### Delegación del merge (Conformacion-Pull-Request-Automatico 2.0, expediente 0001 de la guía 18)
 
