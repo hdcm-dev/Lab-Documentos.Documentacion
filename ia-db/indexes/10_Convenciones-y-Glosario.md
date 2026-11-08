@@ -19,7 +19,7 @@ Rutas relativas a `Lab-Documentos/`. Abreviaturas de guía usadas en las tablas:
 | Sigla | Guía | Índice |
 |---|---|---|
 | **DT** | `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/` (`GUIA-INDICE`) | [01](01_Documentacion-Tecnica.md) |
-| **SDT** | `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md` (`DOC-SDT-0001`, obsoleto) | [01](01_Documentacion-Tecnica.md) |
+| **SDT** | `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md` (`DOC-SDT-0001`, archivado en la etiqueta `sdei-v2.0.0-borrador`) | [01](01_Documentacion-Tecnica.md) |
 | **SDEI** | Cuerpo `SDEI` en la misma carpeta (`IDX-SDEI`, `corpus_id: SDEI`), con `AGENTS.md` y `tools/docs-guard/` | [11](11_Sistema-Documentador-SDEI.md) |
 | **FC** | `Concepts/Framework-Concept/` (`FC-GUIA-INDICE` en `Developer-Guide.md`, prefijo `FC-` desde `0989a15`) | [12](12_Framework-Concept.md) |
 | **IS** | `Guides/Despliegue/Documentacion-Informe-Despliegue/` (informe de solución) | [02](02_Informe-de-Solucion.md) |
