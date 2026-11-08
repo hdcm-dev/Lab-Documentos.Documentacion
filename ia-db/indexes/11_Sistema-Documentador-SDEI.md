@@ -6,7 +6,8 @@
 > **Fuentes primarias**: `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/README.md`
 > (`IDX-SDEI`), `AGENTS.md` (`IDX-LABDOC-AGENTS`), `tools/docs-guard/README.md` y `CHANGELOG.md` (entradas del
 > 2026-10-27).
-> **Vigencia**: verificado contra `Lab-Documentos` en `main` `fe10086` (merge de E1-U4f, 2026-10-27). Las rutas son
+> **Vigencia**: verificado contra `Lab-Documentos` en `main` `fe10086` (merge de E1-U4f, 2026-10-27); el inventario del
+> libro y del apunte archivado, contra `main` `0d8c1d6` (merge del PR 8 del expediente 0003, 2026-11-08). Las rutas son
 > relativas a `Lab-Documentos/` salvo las del expediente, que son de `Lab-Documentos.Documentacion/`.
 
 ## Índice
@@ -76,7 +77,17 @@ carpeta (40 de la prueba de ayuda por rol, 10 de la mini demo).
 | `99-Anexos/Lista-De-Verificacion.md` | `ANX-SDEI-VER` | anexo | borrador | 158 | Ítems `VER-*` de sí/no antes de pasar una guía a vigente, con regla de origen |
 | `99-Anexos/Como-Decidir.md` | `ANX-SDEI-DECIDIR` | anexo | borrador | 174 | Criterios con fuente, escala anclada 1–5, filtros, regla de firmeza, matriz trabajada, clase D/P/H |
 | `99-Anexos/Ejercicios.md` | `ANX-SDEI-EJERCICIOS` | anexo | borrador | 128 | `EJR-SDEI-nn` que comprueban los objetivos del README, con caso resuelto y claves |
-| `Sistema-Documentador-Tecnico-Guide.md` | `DOC-SDT-0001` | study-note | **obsoleto** | 841 | Apunte original con aviso de reemplazo y §Tabla de destinos; texto sin tocar |
+| `DocsAsCode-Developer-Guide.md` | `DOC-SDEI-LIBRO` | guía de estudio | borrador | 224 | Raíz del libro: índice general con enlaces `archivo#ancla` y glosario-índice (anexo A) |
+| `DocsAsCode-Developer-Guide-Parte-0.md` | `DOC-SDEI-LIBRO-P0` | guía de estudio | borrador | 248 | Preliminares (portada, colofón) y prólogo «cómo usar este libro» |
+| `DocsAsCode-Developer-Guide-Parte-I.md` | `DOC-SDEI-LIBRO-P1` | guía de estudio | borrador | 994 | Caps. 1–3: documentación como código, fundamentos didácticos y de evidencia, marco de referencia |
+| `DocsAsCode-Developer-Guide-Parte-II.md` | `DOC-SDEI-LIBRO-P2` | guía de estudio | borrador | 1035 | Caps. 4–6: sistema documentador, ciclo documental, topología y versionado |
+| `DocsAsCode-Developer-Guide-Parte-III.md` | `DOC-SDEI-LIBRO-P3` | guía de estudio | borrador | 520 | Caps. 7–8: audiencias, lectura por agentes, ayuda al usuario final |
+| `DocsAsCode-Developer-Guide-Parte-IV.md` | `DOC-SDEI-LIBRO-P4` | guía de estudio | borrador | 848 | Caps. 9–10: compuertas y CI, integración con un marco SDD |
+| `DocsAsCode-Developer-Guide-Parte-V-a.md` | `DOC-SDEI-LIBRO-P5A` | guía de estudio | borrador | 1020 | Caps. 11–14: qué aplico, cinco pasos, casos de estudio (mini demo, ayuda por rol) |
+| `DocsAsCode-Developer-Guide-Parte-V-b.md` | `DOC-SDEI-LIBRO-P5B` | guía de estudio | borrador | 475 | Caps. 15–17: decidir, ejercicios, mantener libro, cuerpo y conocimiento |
+| `DocsAsCode-Developer-Guide-Parte-VI.md` | `DOC-SDEI-LIBRO-P6` | guía de estudio | borrador | 447 | Cap. 18: el sistema documentador en la industria |
+| `DocsAsCode-Developer-Guide-Anexos.md` | `DOC-SDEI-LIBRO-ANX` | guía de estudio | borrador | 1248 | Anexos B–J: referencias, esquema, criterios, verificación, patrones, plantillas, claves, correspondencia, marcas |
+| `Sistema-Documentador-Tecnico-Guide.md` | `DOC-SDT-0001` | study-note | **archivado** | 841 | Fuera de `main` desde el PR 8 del expediente 0003; se lee en la etiqueta `sdei-v2.0.0-borrador` (sobre `31660d3`) |
 | `Examples/Como-Intervenir.md` | `GP-SDEI-INTERVENIR` | proceso | borrador | 175 | Plantilla de cinco pasos: ubicar, derivar, validar, proponer, mantener |
 | `Examples/Como-Intervenir-Lab-Documentos.md` | `GP-SDEI-INTERVENIR-LD` | proceso | borrador | 35 | Instancia de la plantilla para este repositorio: rutas, compuerta, quién decide |
 | `Examples/Lanzar-Example.md` | `GP-SDEI-LANZAR` | guía práctica | borrador | 141 | Tool-prompt que levanta la prueba de ayuda por rol y la expone por un túnel (frontmatter agregado en E1) |
@@ -218,6 +229,7 @@ reindexado.
 | Documentar una app desde otro repo, fijada por SHA | `Examples/MovilidadUrbana-Mini-Demo/README.md` §3–§6 |
 | Elegir entre dos diseños documentales | `99-Anexos/Como-Decidir.md` |
 | Cómo citar una fuente web | `99-Anexos/Referencias.md`; `00-Marco.md` §5 |
-| Adónde fue una sección del apunte viejo | `Sistema-Documentador-Tecnico-Guide.md` §Tabla de destinos |
+| Adónde fue una sección del apunte viejo | `Sistema-Documentador-Tecnico-Guide.md` §Tabla de destinos, en la etiqueta `sdei-v2.0.0-borrador` |
+| Leer el libro del cuerpo | `DocsAsCode-Developer-Guide.md` (índice general) y sus nueve piezas |
 | Qué puede cambiar un agente en el repo | `AGENTS.md` (raíz de `Lab-Documentos`) §5 |
 | Por qué se decidió algo del cuerpo | Expediente 0002 (§8): `099-resolucion.md`, `129-resolucion-ciclo-2.md`, `N10` |

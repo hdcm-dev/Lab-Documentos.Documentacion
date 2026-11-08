@@ -39,7 +39,7 @@
 |---|---|---|---|---|---:|
 | `Creacion-Guias-Tecnicas/README.md` | `GUIA-INDICE` | — (sin campo) | `vigente` | 2026-07-18 | 240 |
 | `Creacion-Guias-Tecnicas/**` (59 `.md` en total) | 59 `doc_id` únicos | — | todos `vigente` | todos 2026-07-18 | 20 700 |
-| `Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md` | `DOC-SDT-0001` | v1.0.0 según `CHANGELOG.md` (no en frontmatter) | `obsoleto` (lo reemplaza `IDX-SDEI`) | 2026-10-27 | 841 |
+| `Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md` | `DOC-SDT-0001` | v1.0.0 según `CHANGELOG.md` (no en frontmatter) | archivado: fuera de `main` desde `0d8c1d6`, en la etiqueta `sdei-v2.0.0-borrador` (lo reemplaza `IDX-SDEI`) | 2026-10-27 | 841 |
 | `Sistema-De-Documentacion-E-Integracion/Examples/Lanzar-Example.md` | `GP-SDEI-LANZAR` (frontmatter agregado en E1) | — | `borrador` | 2026-10-27 | 141 |
 | `Sistema-De-Documentacion-E-Integracion/` resto del cuerpo `SDEI` | 27 `doc_id` más (`IDX-SDEI`, `MARCO-SDEI`, `TEM-SDEI-01..07`, `ANX-SDEI-*`, `GP-SDEI-*`, `DEMO-MU-*`) | `2.0.0-borrador` (README) | `borrador` | 2026-10-27 | ver [11](11_Sistema-Documentador-SDEI.md) §3 |
 | `Sistema-De-Documentacion-E-Integracion/Examples/Prueba-Ayuda-Por-Rol/` | — | — | — | capturas del 2026-09-19 | 40 archivos |
