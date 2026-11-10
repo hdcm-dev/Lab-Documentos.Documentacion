@@ -8,6 +8,12 @@ documental que se lee entero, no un artefacto que alguien instala en una versió
 versionado semántico que la guía enseña aplica al software que ese procedimiento libera, no a la
 guía misma.
 
+## [No publicado] - 2026-11-10
+
+### Añadido
+
+- **Guía 18, folios 022–023 y bitácora 05** — cierre de las deudas PD-01 (tramo final del lab 6.B servido contra el banco, constancia `verif-06b`) y PD-02 (revisión del modelo de *embeddings* fijada, constancia `verif-09b`); el banco de ensayo se mudó de host (transparente para la guía: el texto la nombra `localhost`/`$OLLAMA_HOST`) y ahora ofrece modelo dedicado de *embeddings*, con lo que la fila 3 del lote quedó resuelta por el entorno. Los cambios de contenido van en el PR hermano de `hdcm-dev/Lab-Documentos`. La delegación del merge del 2026-11-07 cubre este PR.
+
 ## [No publicado] - 2026-11-07
 
 ### Añadido
