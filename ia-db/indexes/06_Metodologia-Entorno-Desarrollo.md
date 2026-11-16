@@ -1,8 +1,8 @@
 # 06 · Metodología del entorno de desarrollo
 
 > **Propósito**: cómo hace un equipo que edita en Windows con Visual Studio, en Linux y en devcontainers para obtener **el mismo resultado del mismo commit** y poder demostrar después con qué entorno se construyó cada artefacto. Cubre codificación y finales de línea, política de texto, toolchain, dependencias, contenedores/devcontainers, procedencia, compuertas y la solución políglota .NET + Node.js + Python, con un laboratorio de 74 experimentos ejecutables en Docker.
-> **Fuente primaria**: `Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md` (`GUIA-ENT-DEV`, v1.1.0, `vigente`, `last_review` 2026-10-09, 3 637 líneas) y su laboratorio `Guides/Metodologia-Entorno-Desarrollo/Examples/` (342 archivos versionados).
-> **Verificado contra**: `Lab-Documentos` en `main` 5d5c2b4 (2026-10-11), el 2026-10-18. Dominio nuevo respecto de la ia-db v3.0 (2026-09-12): allí no existía.
+> **Fuente primaria**: `Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md` (`GUIA-ENT-DEV`, v1.1.0, `vigente`, `last_review` 2026-10-09, 3 637 líneas) y su laboratorio `Guides/Metodologia-Entorno-Desarrollo/Examples/` (342 archivos versionados; 343 con la guía).
+> **Verificado contra**: `Lab-Documentos` en `main` 34929f2 (2026-11-15), el 2026-11-16. El dominio no cambió desde su último commit (68902e4, 2026-10-11): `git diff 68902e4 34929f2 -- Guides/Metodologia-Entorno-Desarrollo` vacío; todo lo de abajo se re-verificó igual contra la fuente actual.
 
 Convención de este índice: las rutas son relativas a `Lab-Documentos/`. Para abreviar, **`GUIA`** = `Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md` y **`EX/`** = `Guides/Metodologia-Entorno-Desarrollo/Examples/`. `§n` remite a secciones de `GUIA`; `E<n>-<m>` a experimentos de su Anexo E.
 
@@ -134,21 +134,21 @@ Regla de lectura (§3.2): la falla de una capa inferior no se arregla en una sup
 
 ## Hoja de ruta de adopción (§12)
 
-| Paso | Qué | Quién | Valida |
-|---|---|---|---|
-| 1 | Inventariar capa 1 (`iconv`, `head -c3`, `git ls-files --eol`) | ARQ | E1-09 |
-| 2 | Tabla por extensión → `.editorconfig` + `.gitattributes`; elegir variante A/B | ARQ | EA-1 paso 1 |
-| 3 | Migración mecánica + `.git-blame-ignore-revs` | ARQ, REV | E2-2 |
-| 4 | Activar compuerta en CI y hook versionado | OPS | E2-3 |
-| 5 | Fijar toolchain (`global.json` + ADR de `rollForward`, `devEngines`, `.python-version`) | ARQ, OPS | E3-1 |
-| 6 | Congelar grafo (locks, CPM, registros, restauración estricta) | ARQ, OPS | E4-1, E4-4, E4-5 |
-| 7 | Dónde corre la CI: imagen propia por digest o runner alojado con acciones por SHA; devcontainer alineado | ARQ, OPS | E7-4 |
-| 8a | `ContinuousIntegrationBuild`, `SOURCE_DATE_EPOCH`, registro del entorno, SBOM | OPS | EA-1 paso 9 |
-| 8b | Procedencia firmada si hay consumidor externo | OPS | **[no verificado]** (plataforma) |
-| 9 | Gobierno: `CODEOWNERS`, bots con *cooldown*, ADR, compuerta en publicación | ARQ, OPS | **[no verificado]** (plataforma) |
-| 10 | Revisión políglota | ARQ | E8-1…E8-6 |
+| Paso | Qué | Quién | Lo que queda verificable | Capítulo |
+|---|---|---|---|---|
+| 1 | Inventariar capa 1 (`iconv`, `head -c3`, `git ls-files --eol`) | ARQ | Una lista, no una impresión | §4.5 |
+| 2 | Tabla por extensión → `.editorconfig` + `.gitattributes`; convención .NET | ARQ | Commit 1 (política) | §5.2.3, A.1, A.2 |
+| 3 | Migración mecánica + `.git-blame-ignore-revs` | ARQ, REV | `0 con cambio de contenido` | §5.2.6 |
+| 4 | Activar compuerta en CI y hook versionado (A.11) | OPS | CI roja ante cp1252, BOM o CRLF indebidos | §5.2.5, §10.2.2 |
+| 5 | SDK con soporte; fijar toolchain (`global.json` + ADR de `rollForward`, `devEngines`, `.python-version`) | ARQ, OPS | `A compatible .NET SDK was not found` / `EBADDEVENGINES` | §6 |
+| 6 | Congelar grafo (locks, restauración estricta) | ARQ, OPS | `NU1004` / `EUSAGE` / «needs to be updated»; sin lock, `NU1603` como error | §6.4, §7 |
+| 7 | Dónde corre la CI: imagen propia por digest o runner alojado con acciones por SHA | ARQ, OPS | La compuerta pasa en la CI y falla si se desalinea | §8.2.2, A.12 |
+| 8a | `ContinuousIntegrationBuild`, `SOURCE_DATE_EPOCH`, registro del entorno, SBOM | OPS | Artefacto, registro y SBOM publicados juntos | §9 |
+| 8b | Procedencia firmada si hay consumidor externo | OPS | Procedencia verificable con su firmante/`builder.id` | §9.2.4 |
+| 9 | Gobierno: `CODEOWNERS`, bots con enfriamiento, ADR, compuerta en publicación | ARQ, OPS | Ningún cambio de versión sin PR | §10 |
+| 10 | Revisión políglota | ARQ | EA-1 y E8-1…E8-6 como referencia | §11 |
 
-Pasos 1–4 responden la pregunta 1 del caso (codificación), 5–7 la 2 (congelar), 8a la 3 (con qué se construyó).
+Pasos 1–4 responden la pregunta 1 del caso (codificación), 5–7 la 2 (congelar), 8a la 3 (con qué se construyó); 8b, la misma ante un tercero; 9 la sostiene en el tiempo; 10 amplía a la solución integrada (GUIA §12, tras la tabla).
 
 ## Plantillas (Anexo A ↔ `EX/A-plantillas/repo/`)
 
@@ -168,7 +168,7 @@ Verificación conjunta: **EA-1** = `EX/A-plantillas/verificar.sh` (pasos 1–10;
 
 ## Laboratorio (`EX/`)
 
-Todo corre en contenedores: sólo hace falta Docker (con buildx). No se instala .NET, Node ni Python en el host. Las salidas de referencia están versionadas en `salidas/` de cada carpeta (87 archivos `.txt`). `EX/.gitignore` excluye `bin/`, `obj/`, `node_modules/`, `.venv/`, `__pycache__/`. Hay además cinco `.gitignore` por carpeta: N1, N2 y N7 excluyen `work/`; N6 suma `out/`, `dist/`, `drop/`, `*.nupkg`, `*.snupkg`, `*.tgz`, `*.whl` y `cosign.key`; N8 suma `dist/` (ver H-10).
+Todo corre en contenedores: sólo hace falta Docker (con buildx). No se instala .NET, Node ni Python en el host. Las salidas de referencia están versionadas en `salidas/` de cada carpeta (87 archivos `.txt`). `EX/.gitignore` excluye `bin/`, `obj/`, `node_modules/`, `.venv/`, `__pycache__/`. Hay además seis `.gitignore` más: `A-plantillas/repo/.gitignore` (la plantilla A.18) y los de carpeta: N1, N2 y N7 excluyen `work/`; N6 suma `out/`, `dist/`, `drop/`, `*.nupkg`, `*.snupkg`, `*.tgz`, `*.whl` y `cosign.key`; N8 suma `dist/` (ver H-10).
 
 | Carpeta (`EX/…`) | Capítulo | IDs | Archivos | Qué demuestra (resumen) | Cómo se corre |
 |---|---|---|---|---|---|
@@ -215,7 +215,9 @@ Composición por tipo (342 archivos): 97 `.sh`, 87 `.txt` (salidas), 27 `.json`,
 | Arquitectura .NET | Declarada en `related` | `Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` |
 | Build compartido (`TEM-BUILD`) | Solapa con §6–§7 (`global.json`, `Directory.*.props`, CPM). **Criterio divergente**: ver hallazgo H-06 | `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Build-Compartido.md` |
 
-Ningún archivo versionado fuera de `Guides/Metodologia-Entorno-Desarrollo/` enlaza a esta guía (verificado con `grep` sobre los `.md` del repo): sólo se llega a ella por el árbol de carpetas.
+Punto de entrada: `Guides/README.md` (línea 28, fila «Metodologías») enlaza la carpeta `Metodologia-Entorno-Desarrollo/`. Ningún otro `.md` del repo (ni `README.md`, `CHANGELOG.md` o `AGENTS.md` de la raíz, ni `Concepts/`, ni las guías nuevas de `Guides/IA/`) enlaza la guía ni cita `GUIA-ENT-DEV` (verificado con `grep`).
+
+Solapes temáticos sin enlace (mencionan `global.json`/`.editorconfig`, no la guía): `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/60-Desarrollo/Developer-Guide.md` («Lo declarado», l. 81) y `Concepts/Framework-Concept/03-Integracion-Y-Versionado.md` (l. 225, `global.json` que dejó de fijar MAUI).
 
 ## Hallazgos del dominio
 
@@ -227,11 +229,12 @@ Ningún archivo versionado fuera de `Guides/Metodologia-Entorno-Desarrollo/` enl
 | H-04 | Nomenclatura irregular | `EX/N7-compuertas-y-gobierno/04-descongelamiento-controlado/correr.sh` | En N7 los demás experimentos usan `run.sh`; el 04 usa `correr.sh`. Entre carpetas conviven `run.sh` (N2, N4, N7), `correr.sh` (N3), `experimento.sh` (N0, N5, N6, N8) |
 | H-05 | Numeración dual | `EX/N1-…`, `EX/N2-…`, `EX/N3-…`, `EX/N7-…` | IDs de la guía distintos de los de scripts/carpetas (`E1-N1-01`, carpetas `e1-…` de N2 que no coinciden con E2-n, `01-…` de N3, `V7-01` = E7-5b). Está declarado en Anexo E y `EX/README.md`, pero obliga a usar esas tablas como traductor |
 | H-06 | Divergencia entre guías | `GUIA` §6.4 vs `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Build-Compartido.md` (`TEM-BUILD`, 2026-07-20) | `TEM-BUILD` presenta `rollForward: latestFeature` como «compromiso habitual» y afirma que con `global.json` «el build es reproducible»; `GUIA` (posterior) recomienda `disable` por defecto con lock, muestra que un `rollForward` permisivo sólo hace cumplir el piso (§3.3, E0-2) y que mezclado con lock rompe con `NU1004` (E3-6). No se contradicen en el hecho, pero sí en la recomendación por defecto y en el uso de «reproducible» |
-| H-07 | Sin punto de entrada | repo | Ningún `.md` fuera del dominio enlaza a la guía (ver Relaciones) |
+| H-07 | Entrada sólo por carpeta (corregido parcialmente) | `Guides/README.md` l. 28 | En la v1.x de esta ia-db no había ningún enlace; hoy `Guides/README.md` enlaza la carpeta, pero ningún documento enlaza la guía ni su `doc_id` |
 | H-08 | Evidencia sin script | `GUIA` Anexo F | Declarado por la propia guía: tres mediciones de N8 y los mensajes de deriva de Yarn/pnpm/uv/Poetry (§7.3) no tienen script versionado |
 | H-09 | Dato con vencimiento inminente | `GUIA` §10.2.6, §12 paso 5, Anexo F | El fin de soporte de .NET 8 y 9 (2026-11-10) y las versiones «vigentes» están fechados al 2026-10-09; la guía los marca como volátiles |
 | H-10 | Documentación incompleta | `EX/README.md` («Qué no se versiona») | Dice que sólo N1 y N2 suman exclusiones (`work/`), pero también hay `.gitignore` en N6 (`out/`, `dist/`, `drop/`, paquetes, `cosign.key`), N7 (`work/`) y N8 (`dist/`) |
 | H-11 | Cifra contradictoria | `GUIA` §0.2 y §0.4 vs `EX/N0-modelo-de-capas-y-reproducibilidad/README.md` | La guía da para N0 «alrededor de un minuto y medio» / «~1,5 minutos»; el README de N0 dice «≈ 1 minuto con las imágenes ya descargadas» |
+| H-12 | Dato vencido | `GUIA` §10.2.6, §12 paso 5, Anexo F, [B61] | A la fecha de este índice (2026-11-16) ya pasó el fin de soporte de .NET 8 y 9 (2026-11-10) que la guía anunciaba; el laboratorio sigue validado con SDK 8.0.425 y 10.0.400. La guía no tiene revisión posterior a 2026-10-09 |
 | — | Verificado sin hallazgo | `Guides/Metodologia-Entorno-Desarrollo/**` | 0 archivos vacíos; 0 nombres con espacios o caracteres no ASCII; 0 enlaces relativos rotos en los 14 `.md` (guía + 13 de `EX/`); 0 anclas internas rotas en `GUIA` (183 encabezados); 74 IDs de experimento = los 74 anunciados; 223 fuentes = B01–B223 |
 
 ## Para preguntas X → leé fuente Y
@@ -257,3 +260,12 @@ Ningún archivo versionado fuera de `Guides/Metodologia-Entorno-Desarrollo/` enl
 | En qué orden adoptar todo en un equipo | `GUIA` §12 |
 | Una plantilla lista para copiar | `GUIA` Anexo A; `EX/A-plantillas/repo/` |
 | Qué no está probado | `GUIA` Anexo F |
+
+## Fuentes
+
+- `Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md` (frontmatter l. 1–18, §0–§12, Anexos A–F, «Control de cambios»).
+- `Guides/Metodologia-Entorno-Desarrollo/Examples/README.md` y los `README.md` de `N0`…`N8` y `A-plantillas`; `.gitignore` del laboratorio.
+- `Guides/README.md`; `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/20-Organizacion-de-Soluciones/Build-Compartido.md` (l. 180–219).
+- Inventario: `git ls-files Guides/Metodologia-Entorno-Desarrollo` (343 archivos, 87 salidas `.txt`, 97 `.sh`, 0 binarios).
+
+Vigencia: 2026-11-16 · fuente `main` 34929f2.

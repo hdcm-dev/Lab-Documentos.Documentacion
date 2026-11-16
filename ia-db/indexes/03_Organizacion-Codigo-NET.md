@@ -7,9 +7,11 @@
 > **Fuente primaria**: `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/README.md` (`GUIA-INDICE`,
 > `last_review` 2026-07-20) y `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/01-Mapa-Conceptual/Mapa-Conceptual.md`
 > (`MAPA-CONCEPTUAL`).
-> **Estado del árbol**: `main` en `5d5c2b4`. El contenido entró el 2026-09-13 (commit `fab7258`) bajo
-> `Guides/Organizacion-Estilo-Patrones-Codigo/` y el 2026-09-28 (`9162e07`) se movió **sin cambios de
-> contenido** a `Guides/Arquitectura/…` (mismas 11 321 líneas que en la v3.0).
+> **Estado del árbol**: `origin/main` en `34929f2`. El contenido entró el 2026-09-13 (commit `f94a981`) bajo
+> `Guides/Organizacion-Estilo-Patrones-Codigo/` y el 2026-09-28 (`82b2fe1`) se movió **sin cambios
+> de contenido** a `Guides/Arquitectura/…`. Entre la ia-db anterior (`5d5c2b4`) y `34929f2` la carpeta no
+> tuvo cambios (`git diff 5d5c2b4 34929f2` vacío): este índice re-verifica lo previo y actualiza los
+> hallazgos del entorno (README raíz y `Guides/README.md` ya tienen contenido).
 
 En este índice, `OEP/` abrevia `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/` (ruta relativa a
 `Lab-Documentos/`). Los `doc_id` **sólo son únicos dentro de esta guía** (ver Hallazgos): citá siempre
@@ -66,7 +68,7 @@ Ninguna declara número de versión: la única marca temporal es `last_review`.
 | `40-Nomenclatura/README.md` | `FAM-NOM` | familia | 2026-07-19 | 87 |
 | `40-Nomenclatura/Capitalizacion.md` | `TEM-CAPS` | tema | 2026-07-20 | 488 |
 | `40-Nomenclatura/Nombrado-de-Tipos-y-Miembros.md` | `TEM-NOMB` | tema | 2026-07-20 | 499 |
-| `40-Nomenclatura/Antipatrones-de-Nombrado.md` | `TEM-ANTI` | tema (variante catálogo) | 2026-07-20 | 568 |
+| `40-Nomenclatura/Antipatrones-de-Nombrado.md` | `TEM-ANTI` | tema (variante catálogo, no es valor de frontmatter) | 2026-07-20 | 568 |
 | `50-Estilo-de-Codificacion/README.md` | `FAM-EST` | familia | 2026-07-19 | 80 |
 | `50-Estilo-de-Codificacion/Formato-y-Llaves.md` | `TEM-FORMATO` | tema | 2026-07-20 | 590 |
 | `50-Estilo-de-Codificacion/Convenciones-de-Lenguaje.md` | `TEM-LENG` | tema | 2026-07-20 | 585 |
@@ -297,7 +299,7 @@ así), embebido en los documentos. Lo más reutilizable:
 | Fragmento comentado de `.editorconfig` | `OEP/50-Estilo-de-Codificacion/Automatizacion-del-Estilo.md` §«Anexo» |
 
 Para material con código compilable sobre la misma problemática, ver `Guides/Dot-NET-Arquitectura-Guide/`
-(Examples e Interactive-Activities; otro índice).
+(`Examples/Dot-NET-Arquitectura-Lab/`; índice `05_Arquitectura-NET-y-Laboratorio.md`).
 
 ## Relaciones con otras guías del repo
 
@@ -313,15 +315,16 @@ La relación es **entrante**: esta guía no enlaza a ninguna otra salvo el READM
 
 | Tipo | Ruta | Detalle |
 |---|---|---|
-| Enlace roto | `OEP/README.md` §«Alcance y límites» (línea 149) | `../Documentacion-Tecnica/README.md` resuelve a `Guides/Arquitectura/Documentacion-Tecnica/README.md`, que no existe tras la reorganización `9162e07`; el destino probable es `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/README.md`. Es el único enlace relativo roto de los 38 archivos |
+| Enlace roto | `OEP/README.md` §«Alcance y límites» (línea 149) | `../Documentacion-Tecnica/README.md` resuelve a `Guides/Arquitectura/Documentacion-Tecnica/README.md`, que no existe tras la reorganización `82b2fe1`; el destino probable es `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/README.md`. Es el único enlace relativo roto de los 38 archivos |
 | `doc_id` duplicados entre guías | `OEP/README.md`, `00-Marco-de-Referencia/*`, `01-Mapa-Conceptual/*`, `99-Anexos/{Glosario,Listas-de-Verificacion,Referencias}.md` | `GUIA-INDICE`, `MARCO-*`, `MAPA-CONCEPTUAL`, `ANEXO-GLOSARIO`, `ANEXO-CHECK`, `ANEXO-REFERENCIAS` se repiten en `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/`, `Guides/Despliegue/Documentacion-Informe-Despliegue/` y/o `Guides/Arquitectura/Organizacion-Estilo-Rest-API/`. Los IDs son únicos por guía, no por repo; `MARCO-CONVENCIONES` dice «los archivos se mueven, los IDs no», pero sin ruta son ambiguos |
 | Documento fuera de la tabla | `OEP/61-Analisis-Integral/Analisis-Integral.md` | Ni el README ni el mapa conceptual lo enlazan; sólo se llega navegando la carpeta. Su `doc_type: analisis` no figura en los valores de frontmatter que fija `MARCO-CONVENCIONES` |
 | Dominio distinto | `OEP/61-Analisis-Integral/Analisis-Integral.md` | Usa turnos en lugar de reserva de salas (declarado y justificado en su resumen) |
 | Referencia externa | `OEP/00-Marco-de-Referencia/Convenciones.md` §«Estructura de un documento temático» | Cita el Profile `Study-Guide-Documentation`, que no está en este repo |
 | Sin versión | Los 38 archivos | El frontmatter no lleva campo de versión; sólo `last_review` (2026-07-19/20) |
 | Afirmaciones no verificadas declaradas | `OEP/99-Anexos/Referencias.md` §4; `TEM-SLN` §`.slnx` | «Monolith first», Strangler Fig y Ley de Conway se atribuyen «con reserva» sin fuente primaria verificada; soporte de `.slnx` en versiones de Visual Studio no verificado. Es transparencia de la guía, no defecto |
-| Sin punto de entrada en el repo | `README.md` (raíz) y `Guides/README.md` | Ambos tienen 0 líneas; fuera de esta guía, sólo `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` la enlaza. Se llega navegando el árbol |
-| Historial | commit `fab7258` | El contenido ingresó en un commit con mensaje «.» (2026-09-13); sin trazabilidad de autoría en el mensaje |
+| Punto de entrada indirecto | `Guides/README.md` (31 líneas) y `README.md` raíz (54 líneas) | Antes vacíos; ahora `Guides/README.md` fila «Arquitectura» enlaza la carpeta `Arquitectura/` (no esta guía por nombre) y el README raíz sólo la menciona como tema. Fuera de esta guía, el único enlace por nombre sigue viniendo de `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` (6 archivos) |
+| Nombre raro vecino | `Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquiectura-Interactive-Guide.md` | Errata «Arquiectura» en el nombre de archivo de la guía relacionada (fuera de este dominio) |
+| Historial | commit `f94a981` | El contenido ingresó en un commit con mensaje «.» (2026-09-13); sin trazabilidad de autoría en el mensaje |
 
 ## Para preguntas X → leé fuente Y
 
@@ -351,3 +354,12 @@ La relación es **entrante**: esta guía no enlaza a ninguna otra salvo el READM
 | Qué pasó con DAO/MVC/Repository/DTO «de antes» | `OEP/61-Analisis-Integral/Analisis-Integral.md` |
 | Checklist para arrancar, partir, normalizar, evaluar, publicar biblioteca | `OEP/99-Anexos/Listas-de-Verificacion.md` |
 | Qué respaldo tiene una afirmación (`N-`/`F-`/`O-`) | `OEP/99-Anexos/Referencias.md` |
+
+## Fuentes
+
+- `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/` (38 archivos, 11 321 líneas; frontmatter y encabezados de cada pieza).
+- `Guides/README.md`, `README.md` (raíz), `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` (enlaces entrantes).
+- `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/`, `Guides/Despliegue/Documentacion-Informe-Despliegue/` (colisiones de `doc_id`).
+- Historial git: `f94a981`, `82b2fe1`; ia-db v1.x (2026-10-29) como base re-verificada.
+
+Vigencia: 2026-11-16 · fuente `34929f2`.

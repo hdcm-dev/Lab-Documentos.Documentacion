@@ -9,11 +9,11 @@
 > (`GF-GUIA`), `Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Anexos/workflows/README.md` (`GF-AX-WF`),
 > `Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md` (`GHA-00`) y
 > `Guides/Despliegue/DevOps-Guide/marco-teorico.md` (sin `doc_id`).
-> **Vigencia**: relevado sobre `Lab-Documentos` `main` 5d5c2b4 (2026-10-18); sus fuentes no cambiaron hasta
-> `fe10086` salvo una redacción de dos líneas en `GHA-00` y en su copia `Guides/Testing/Lab-E2E.WebBlazor-Guides/GitHub-Action-Guide.md` (§7 y OBS-4/OBS-11: el pipeline de firma fuera de los
-> repos de referencia se nombra como «una app híbrida de referencia de la organización»). La sección
-> [Workflows propios de Lab-Documentos](#workflows-propios-de-lab-documentos) es de la v4.1 (2026-10-27). Todas las
-> rutas son relativas a `Lab-Documentos/`.
+> **Vigencia**: v2.0, re-verificado el 2026-11-16 sobre `Lab-Documentos` `main` `34929f2`. Desde la v1.x
+> (2026-10-29) las fuentes del dominio solo cambiaron por redacción: `publish-nuget.md` usa alias genéricos
+> (`nuget-push-miorg`, `MiOrg-GitHub`) y `GHA-00` OBS-3 (y su copia en `Guides/Testing/Lab-E2E.WebBlazor-Guides/`)
+> nombra los runners de prueba anclados por SHA como «repositorio privado de infraestructura (`INFRA-privada/`)».
+> Cambió la CI propia del repo (`.github/`). Todas las rutas son relativas a `Lab-Documentos/`.
 
 ## En una pantalla
 
@@ -288,10 +288,10 @@ Evidencia (Anexo F, rutas **externas** a `Lab-Documentos`, relativas al workspac
 | `W-DEV-QR`, `W-HIB-INT` | `APLICADA/Ejemplos_Maui_Devices/…`, `APLICADA/Ejemplo_Maui_Hibrida/…` | iOS de 33 pasos, versión desde `Info.plist`, limpieza de credenciales con `if: always()` |
 | `W-BOT-CI/DOCKER/PUB` | `DEV/Discord.Bot.Moderador.Core/.github/workflows/` | Cinco puertas trazadas a stages, SCA + SBOM, Buildx con caché, release con checksum |
 
-Rutas tal como las escribe el Anexo F (leídas el 2026-08-31). Al 2026-10-18 **tres no existen** en el
+Rutas tal como las escribe el Anexo F (leídas el 2026-08-31). Al 2026-10-18 **tres no existían** en el
 workspace: el bot vive hoy en `DEV/Discord.Bot-Moderador/Discord.Bot.Moderador.Core/` y los dos MAUI
 (con sus `.Documentacion`, de donde salen `IDX-DEV-09` e `IDX-HIB-08`) en `APLICADA/2026/EJEMPLOS/`
-(H-19). Las de `Lab-E2E.WebBlazor`, `PrintThermal_Motor_Maui` y `Lab-Geometria` siguen vigentes.
+(H-19; rutas fuera del repo, no re-verificadas el 2026-11-16: (sin verificar)). Las de `Lab-E2E.WebBlazor`, `PrintThermal_Motor_Maui` y `Lab-Geometria` siguen vigentes.
 
 Observaciones `OBS-1..11`: sin acciones propias; ninguna acción anclada a SHA en los doce workflows;
 **sin firma de artefactos ni atestaciones**; sin notificación fuera de GitHub; ningún repo de
@@ -312,20 +312,26 @@ origen (`/docs/09_devops/`, `/devs/devops/`) que **no existen acá** (H-11).
 ## Workflows propios de Lab-Documentos
 
 Hasta `5d5c2b4` el repositorio no tenía `.github/`: los workflows del corpus eran **material de estudio** (el anexo
-`GF-AX-WF`, los ejemplos de `GHA-00`). Desde `fe10086` tiene CI propia, que vigila la documentación y no el código:
+`GF-AX-WF`, los ejemplos de `GHA-00`). Hoy `.github/` tiene cinco workflows y una plantilla de PR, que vigilan la
+documentación y las demos, no el material de este dominio:
 
 | Workflow | Para qué | Índice |
 |---|---|---|
-| `.github/workflows/docs-guard.yml` | Compuerta documental en cada PR; reutilizable por `workflow_call` | [11](11_Sistema-Documentador-SDEI.md) §6 |
-| `.github/workflows/docs-enlaces-semanal.yml` | Carril programado de enlaces externos; informe en un issue | [11](11_Sistema-Documentador-SDEI.md) §6 |
-| `.github/workflows/mini-demo-movilidad.yml` | Verifica la mini demo contra el SHA fijado del código | [11](11_Sistema-Documentador-SDEI.md) §5 |
-| `.github/workflows/framework-concept-demo.yml` | Compuerta de la demo de Framework Concept (`fw-ok`) | [12](12_Framework-Concept.md) |
+| `.github/workflows/docs-guard.yml` | Compuerta documental en cada PR; reutilizable por `workflow_call` | [12](12_Sistema-Documentador-SDEI.md) §6 |
+| `.github/workflows/docs-enlaces-semanal.yml` | Carril programado de enlaces externos; informe en un issue | [12](12_Sistema-Documentador-SDEI.md) §6 |
+| `.github/workflows/mini-demo-movilidad.yml` | Verifica la mini demo contra el SHA fijado del código | [12](12_Sistema-Documentador-SDEI.md) §5 |
+| `.github/workflows/framework-concept-demo.yml` | Compuerta de la demo de Framework Concept (`fw-ok`, único check requerido) | [13](13_Framework-Concept.md) |
+| `.github/workflows/framework-concept-ios.yml` | **Nuevo**: entrega del cascarón MAUI en simulador iOS; `push` a `main` (rutas de la demo) y `workflow_dispatch`; **no** forma parte de la compuerta | [13](13_Framework-Concept.md) |
+| `.github/pull_request_template.md` | Plantilla de PR | [12](12_Sistema-Documentador-SDEI.md) |
 
-Comparten las reglas que el corpus enseña: runner propio `[self-hosted, i7infra-dev]` (sin `container:`),
-`permissions: contents: read`, sin `pull_request_target` y guarda contra PR desde forks (`GHA-00` §9.3). Los tres del
-expediente 0002 fijan `actions/checkout` por SHA; `framework-concept-demo.yml` lo usa por etiqueta (`@v4`, tres
-veces): ver [12](12_Framework-Concept.md) §6. El merge de los PR del expediente 0002 está delegado con guarda y commit de merge atado al SHA; la
-delegación vive en `CHANGELOG.md`.
+Reglas compartidas, comprobadas en los YAML: runner propio con la etiqueta genérica `[self-hosted, ci-hdcm]` (antes
+`i7infra-dev`; commit `9865b23`), guarda contra PR desde forks y `actions/checkout` **fijado por SHA** en todos
+(`@11bd7190… # v4.2.2`); el hallazgo previo de `framework-concept-demo.yml` usando `@v4` quedó resuelto.
+`framework-concept-ios.yml` es la excepción de diseño: un job `elegir` decide `runs-on` (runner efímero JIT propio por
+defecto en `workflow_dispatch`; `macos-15` de GitHub en `push` salvo que exista la variable `FC_IOS_RUNNER`), usa
+`actions/checkout@de0fac2e… # v6.0.2`, cadena de herramientas fija por `Concepts/Framework-Concept/Demo/ci/receta/ios/versiones.env`
+y prohíbe `pull_request` como disparador (cabecera del YAML). Aplica en la práctica lo que `GHA-00` §9.1–§9.3 enseña
+(runners propios, forks, secretos) y responde a OBS-3 (anclaje por SHA).
 
 ## Conceptos y decisiones clave (destilado)
 
@@ -372,7 +378,7 @@ delegación vive en `CHANGELOG.md`.
 | H-01 | enlaces rotos | `Guides/GitFlow/**`, `GitHub-Action-Guide.md` | **39 enlaces relativos rotos** por la reorganización `9162e07` (las prácticas pasaron a `Git-Flow-Guides/`, Actions a `Despliegue/`): `GF-GUIA` → `../GitFlow-Practice-Guide/` (11); `GF-AX-WF` → `../../../GitFlow-Practice-Guide/` (2); prácticas → `../Estandares-Modelo-Ramas-Guide/` (22: `Guia-Practica-GitFlow.md` 12, su README 1, `Guia-Practica-GitHubFlow.md` 7, su README 2); `GHA-00` → `../Estandares-Modelo-Ramas-Guide/` (4) |
 | H-02 | enlace a inexistente | `Guia-Practica-GitFlow.md:1178` | Remite a `Estandares-Modelo-Ramas-Guide/README.md`, que no existe en ninguna ruta |
 | H-03 | duplicados / doc_id repetido | `Guides/Testing/Lab-E2E.WebBlazor-Guides/{Estandares-Modelo-Ramas,GitHub-Action-Guide,Guia-Practica-GitFlow,Guia-Practica-GitHubFlow}.md` | Copias aplanadas con el mismo `doc_id` (`GF-GUIA`, `GHA-00`, `GF-09-ESCENARIOS`, `GHF-GUIA`) y `last_review`; difieren en un bloque «De qué va/Para quién/Qué deja» y en enlaces ajustados (31/14/41/27 líneas de diff). Ninguna declara cuál es canónica. También está copiada la carpeta del anexo: `Lab-E2E.WebBlazor-Guides/workflows/` (README con `doc_id` `GF-AX-WF` y 15 líneas de diff; `ci.yml`, `release.yml` y `auditoria-convergencia.yml` idénticos) |
-| H-04 | archivo vacío | `Guides/README.md` | 0 líneas; `GHA-00` lo enlaza como «convención del repositorio» |
+| H-04 | resuelto | `Guides/README.md` | Era un archivo vacío; hoy es el índice `GUIAS-INDICE` (31 líneas, `last_review` 2026-10-28) que `GHA-00` enlaza como «convención del repositorio» |
 | H-05 | contradicción interna | `GF-GUIA` §8.4 «Runner» | Dice que las pruebas corren **dentro del contenedor oficial de Playwright** [F: PW-1]; `GF-AX-WF` y `GHA-00` §9.1 dicen **sin `container:`** (el runner no tiene Docker), verificado [E 2026-08-25] |
 | H-06 | contradicción | `Guia-Practica-GitFlow.md` §2 paso 3 vs `GF-AX-WF`, `ci.yml` | El `ci.yml` de la app sembrada se dispara «sobre `main` y `develop`» según la práctica; «solo sobre `main`» según el anexo. No verificable desde este repo |
 | H-07 | rutas de origen | `Guia-Practica-GitFlow.md` §2 paso 3; `GF-AX-WF` | Copia desde `../Lab-GitFlow.Documentacion/Analisis/Estandares-Modelo-Ramas-Guide/…` y comprueba `../../../../Lab-E2E.WebBlazor/…`: rutas del repo de origen, no de `Lab-Documentos` |
@@ -420,4 +426,15 @@ delegación vive en `CHANGELOG.md`.
 | Conventional Commits y diccionario para .NET | `marco-teorico.md` §5; `guia-flujo-trabajo-versionado.md` §4–§5 |
 | Comparar GitHub Flow, GitFlow, TBD, Release Flow, OneFlow | `marco-teorico.md` §6.1–§6.5, árbol de decisión §6.6 (y §6.7 sobre la contradicción) |
 | Decisiones D1–D7 del caso Motor DSL | `plan-mejoras-devops_v1.0.md` §3; `marco-teorico.md` §12 |
-| Qué CI corre hoy sobre `Lab-Documentos` | [Workflows propios de Lab-Documentos](#workflows-propios-de-lab-documentos); [11](11_Sistema-Documentador-SDEI.md) §6 |
+| Qué CI corre hoy sobre `Lab-Documentos` | [Workflows propios de Lab-Documentos](#workflows-propios-de-lab-documentos); [12](12_Sistema-Documentador-SDEI.md) §6 |
+
+## Fuentes
+
+- `Guides/GitFlow/Estandares-Modelo-Ramas-Guide/` (guía y `Anexos/workflows/`).
+- `Guides/GitFlow/Git-Flow-Guides/{GitFlow-Practice-Guide,GitHubFlow-Practice-Guide}/`.
+- `Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md`; `Guides/Despliegue/DevOps-Guide/*.md`.
+- Copias: `Guides/Testing/Lab-E2E.WebBlazor-Guides/{*.md,workflows/}`; índice `Guides/README.md`.
+- CI propia: `.github/workflows/*.yml`, `.github/pull_request_template.md`.
+- Recuento de enlaces rotos (H-01: 39, H-02) y comparación de copias (H-03) re-ejecutados sobre `34929f2`.
+
+Vigencia: 2026-11-16 · fuente `Lab-Documentos` `main` `34929f2`.

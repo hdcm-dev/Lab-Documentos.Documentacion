@@ -8,6 +8,17 @@ documental que se lee entero, no un artefacto que alguien instala en una versió
 versionado semántico que la guía enseña aplica al software que ese procedimiento libera, no a la
 guía misma.
 
+## [No publicado] - 2026-11-16
+
+### Cambiado
+
+- **`ia-db/` — regeneración completa 2.0** (`PROMPTs/Indexado/Crear-Indexado.md` → `Iniciar-Indexado.md`) sobre `Lab-Documentos` `main` en `34929f2`: 15 índices temáticos y README con manifiesto nuevos, cada índice contrastado por un verificador adversarial contra la fuente. Renumeración: el viejo 09 se parte en `09_IA-Layer-DotNet`, `10_IA-Modelos-SDD-Agentes` y `11_Agiles-UX-y-Seguridad`; `11`→`12_Sistema-Documentador-SDEI`, `12`→`13_Framework-Concept`, `10`→`14_Convenciones-y-Glosario`.
+
+### Delegación del merge (Conformacion-Pull-Request-Automatico 2.0, regeneración de la ia-db)
+
+- **Fecha:** 2026-11-16. **Responsable:** el responsable del producto (PO), por la orden literal del prompt `PROMPTs/Indexado/Crear-Indexado.md` («actualizar, changelog, stage, commits y push siguiendo […] `Knowledge-Conformacion-Pull-Request-Automatico.md`») y su regla general asentada el 2026-11-01 en el CHANGELOG de `hdcm-dev/Lab-Documentos`.
+- **Alcance:** este PR. **Guarda:** G1–G4; techo 120 minutos; intervalo 30 segundos. **Método:** commit de merge atado al SHA, sin `squash`. **Excepción:** un cuestionamiento particular del PO la vuelve manual.
+
 ## [No publicado] - 2026-11-10
 
 ### Añadido

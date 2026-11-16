@@ -8,15 +8,17 @@
 > **Fuente primaria**: los `README.md` de cada familia (`FAM-xx`),
 > `00-Marco-de-Referencia/Convenciones.md` (`MARCO-CONVENCIONES`) y
 > `99-Anexos/Referencias.md` (`ANEXO-REFERENCIAS`). Todas las rutas de este índice son relativas a
-> `Lab-Documentos/`. Verificado contra `main` en `5d5c2b4` (2026-10-18).
+> `Lab-Documentos/`. Verificado contra `origin/main` en `34929f2` (2026-11-16).
 
 ## En una pantalla
 
-- **Qué cambió desde la v3.0**: la guía se movió de `Guides/Organizacion-Estilo-Rest-API/` a
-  `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` (commit `9162e07`, «reorganización de
-  Guides/ por categoría»). El contenido no cambió: mismos 56 archivos, mismas 21 327 líneas, todos
-  `last_review: 2026-07-20`. Lo que sí cambió es que los enlaces hacia la guía de documentación
-  técnica quedaron rotos por el movimiento (ver [Hallazgos](#hallazgos-del-dominio)).
+- **Qué cambió desde la ia-db anterior (2026-10-29)**: nada en la guía. `git diff 5d5c2b4 34929f2`
+  sobre la carpeta es vacío: mismos 56 archivos, mismas 21 327 líneas, 55 `last_review: 2026-07-20`.
+  El único commit que la toca en la historia actual es `82b2fe1` («reorganización de Guides/ por
+  categoría e ingreso del corpus E2E»; la ia-db anterior lo citaba como `9162e07`, hash previo a la
+  reescritura de historia). Las guías nuevas de `Guides/IA/` y `Concepts/` **no la enlazan**.
+- **Lo que envejeció sin cambio de texto**: las fechas de `.NET 8/9` (fin de soporte 2026-11-10)
+  y `.NET 11` (GA noviembre de 2026) ya están vencidas o en curso a la fecha de este índice (H-9).
 - **Vocabulario**: «REST» en su acepción corriente (API HTTP con recursos por URI y JSON); la
   acepción estricta de Fielding (`O-01`) se reserva para `TEM-REST`. Las guías corporativas
   verificadas prescriben APIs de **nivel 2** de Richardson (`O-03`), no 3; la hipermedia se cumple
@@ -297,14 +299,16 @@ Documentación técnica): se desambiguan por ruta. Los `TEM-` de esta guía no c
 |---|---|---|---|
 | H-1 | Archivo vacío | `Guides/Arquitectura/Organizacion-Estilo-Rest-API/README.md` | 0 bytes: la guía no tiene portada ni tabla de contenido; este índice la reconstruye |
 | H-2 | Referencias a documentos inexistentes | varios `traces:` y `Convenciones.md` | `MAPA-CONCEPTUAL` (8 menciones, sin carpeta `01-Mapa-Conceptual/`), `ANEXO-GLOSARIO` (`99-Anexos/Glosario.md`) y `ANEXO-CHECK` / `99-Anexos/Listas-de-Verificacion.md` no existen |
-| H-3 | Enlaces internos rotos (archivos renombrados) | 28 apariciones en 18 archivos (medido con un recorrido de los `](…)` relativos; sumando H-2 y H-8 dan los 33 enlaces internos que no resuelven) | Apuntan a nombres viejos: `Proteccion-y-Limites.md` (→ `Proteccion-de-la-Superficie.md`), `Resiliencia.md`, `Deprecacion.md`, `Serializacion-Con-System-Text-Json.md` / `Serializacion.md` (→ `Serializacion-y-Modelos.md`), `Clientes-y-Pruebas-de-Contrato.md`, `Consumo-de-APIs.md`, `Experiencia-del-Desarrollador.md`, `Comparativa.md`, `Especificacion-OpenAPI.md`, `Diseno-Primero.md`, `70-…/Errores-y-Problem-Details.md` (probablemente `40-…/Manejo-de-Errores.md`; sin verificar la intención) |
-| H-4 | Enlaces rotos por la reorganización | 21 apariciones en `Convenciones.md`, `95-Transversales/*` | `../../Documentacion-Tecnica/…` resuelve a `Guides/Arquitectura/Documentacion-Tecnica/`; hoy esa guía está en `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/` (haría falta `../../../Documentacion-Tecnica/Creacion-Guias-Tecnicas/…`) |
-| H-5 | Enlace entrante roto | `Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Contextos.md` | Apunta a `../../Organizacion-Estilo-Rest-API/…`, ruta anterior a la reorganización |
+| H-3 | Enlaces internos rotos (archivos renombrados) | 28 apariciones en 18 archivos (re-medido el 2026-11-16 con un recorrido de los `](…)` relativos; sumando H-2 y H-8 dan 33 enlaces que no resuelven; con los 21 de H-4, 54 en 26 archivos) | Apuntan a nombres viejos: `Proteccion-y-Limites.md` (→ `Proteccion-de-la-Superficie.md`), `Resiliencia.md`, `Deprecacion.md`, `Serializacion-Con-System-Text-Json.md` / `Serializacion.md` (→ `Serializacion-y-Modelos.md`), `Clientes-y-Pruebas-de-Contrato.md`, `Consumo-de-APIs.md`, `Experiencia-del-Desarrollador.md`, `Comparativa.md`, `Especificacion-OpenAPI.md`, `Diseno-Primero.md`, `70-…/Errores-y-Problem-Details.md` (probablemente `40-…/Manejo-de-Errores.md`; sin verificar la intención) |
+| H-4 | Enlaces rotos por la reorganización | 21 apariciones en `Convenciones.md` (1), `95-Transversales/README.md` (3), `Arquitectura-y-REST.md` (4), `Spec-Driven-Development.md` (5), `Experiencia-del-Consumidor.md` (8) | `../../Documentacion-Tecnica/…` resuelve a `Guides/Arquitectura/Documentacion-Tecnica/`; hoy esa guía está en `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/` (haría falta `../../../Documentacion-Tecnica/Creacion-Guias-Tecnicas/…`) |
+| H-5 | Enlaces entrantes/salientes rotos en la hermana | `Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Contextos.md` | Apunta a `../../Organizacion-Estilo-Rest-API/…` (falta `Arquitectura/`) y a `../../Documentacion-Tecnica/00-Marco-de-Referencia/Contextos.md` (falta `Creacion-Guias-Tecnicas/`) |
 | H-6 | Inconsistencia de formato | `50-Evolucion-y-Versionado/*.md`, `60-Especificacion-y-Documentacion/*.md` (6 docs) | Numeran las secciones (`## 1. Resumen ejecutivo`), el resto no; los tres de `50-…` cierran además con `## Fuentes citadas`, que los demás no tienen |
 | H-7 | Inconsistencia menor | `Convenciones.md` §Identificadores vs `Referencias.md` §Los cinco niveles | Convenciones enumera `N/F/O/P` para citar fuentes y omite `G-xx`, que el anexo sí define |
 | H-8 | Falso positivo descartado | `Modelado-de-Recursos.md`, `Nomenclatura-de-URIs.md`, `Google-AIP.md` | `[a-z0-9-]{0,61}[a-z0-9]` parece enlace pero es una expresión regular de AIP-122 |
-| H-9 | Vigencia con fecha | `80-Implementacion-en-NET/README.md` | Afirma que .NET 8 y 9 terminan soporte el 2026-11-10 y que .NET 11 GA es en noviembre de 2026: a 2026-10-18 esas afirmaciones están por vencer y la guía no se revisó desde 2026-07-20 |
+| H-9 | Vigencia con fecha | `99-Anexos/Referencias.md` §1.9; `80-Implementacion-en-NET/README.md` | El anexo afirma que .NET 8 y 9 terminan soporte el 2026-11-10 y el README de `FAM-NET` que .NET 11 GA es en noviembre de 2026: a 2026-11-16 el fin de soporte ya ocurrió y el GA está en curso; la guía no se revisó desde 2026-07-20 ("a cuatro meses de aquí" quedó desfasado) |
 | H-10 | Fuentes no verificadas | `Referencias.md` §8 | La guía aísla lo no confirmado (p. ej. definición de *breaking change* de GitHub → 404; adopción de `Deprecation` en formato RFC 9745; `Idempotency-Key` fuera de Stripe; plataformas grandes con `application/problem+json`) y prohíbe citarlo |
+| H-11 | Sin punto de entrada en el índice general | `Guides/README.md` | La tabla de categorías enlaza `Arquitectura/` como carpeta; con H-1 la guía no tiene portada propia ni entrada explícita |
+| H-12 | Plantillas con marcadores | 8 archivos (p. ej. `Convenciones.md`, `Estrategias-de-Versionado.md`, `Hipermedia.md`) | Bloques de plantilla con `last_review: AAAA-MM-DD` y `status: vigente \| borrador \| obsoleto`: no son frontmatter real; un recuento ingenuo de `^last_review` los cuenta |
 
 ## Para preguntas X → leé fuente Y
 
@@ -332,3 +336,11 @@ Documentación técnica): se desambiguan por ruta. Los `TEM-` de esta guía no c
 Ruta secuencial recomendada: el orden de carpetas (`00` → `99`). Dentro de cada familia, el
 `README.md` fija el orden de lectura (p. ej. en `FAM-REC`: modelar → nombrar → jerarquizar →
 acciones, con retorno al modelo).
+
+## Fuentes
+
+- `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` (los 56 archivos; en especial cada `README.md` de familia, `00-Marco-de-Referencia/Convenciones.md`, `80-Implementacion-en-NET/README.md` y `99-Anexos/Referencias.md`).
+- `Guides/Despliegue/Documentacion-Informe-Despliegue/00-Marco-de-Referencia/Contextos.md`, `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/`, `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/`, `Guides/README.md`.
+- Recuentos (líneas, `doc_id`, enlaces rotos) re-medidos sobre `git ls-files`; los recuentos de bloques Mermaid/`http`/`csharp` y el detalle de §-anclas se heredan de la ia-db anterior sobre contenido idéntico.
+
+Vigencia: 2026-11-16 · fuente `origin/main` `34929f2`.
