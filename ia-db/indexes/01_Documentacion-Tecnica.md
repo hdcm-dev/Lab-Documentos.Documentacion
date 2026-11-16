@@ -1,52 +1,39 @@
-# 01 · Documentación técnica
+# 01 · Documentación técnica (guía madre)
 
 > **Propósito**: qué tipos de documentación técnica existen (28 del catálogo, en siete familias), cuál
-> producir según escenario, contexto y actor, cómo evaluar una versión buena frente a una pobre, y cómo
-> montar un **sistema documentador** *docs as code* que publique esa documentación por audiencia y por rol.
-> Cubre `Guides/Documentacion-Tecnica/` (131 archivos versionados en `fe10086`). El **cuerpo nuevo** `SDEI` del
-> sistema documentador, que reemplaza al apunte, tiene su propio índice: [11](11_Sistema-Documentador-SDEI.md).
+> producir según escenario, contexto y actor, cómo evaluar una versión buena frente a una pobre, y dónde está
+> la plantilla de cada uno. Cubre `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/` (59 `.md`,
+> 20 700 líneas, 87 diagramas Mermaid). El sistema documentador hermano
+> (`Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/`, cuerpo `SDEI` y la serie
+> `DocsAsCode-Developer-Guide*`) tiene su propio índice: [12](12_Sistema-Documentador-SDEI.md).
 > **Fuentes primarias**: `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/README.md` (`GUIA-INDICE`),
 > `…/01-Mapa-Conceptual/Mapa-Conceptual.md` (`MAPA-CONCEPTUAL`) y
-> `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md` (`DOC-SDT-0001`).
-> **Vigencia**: verificado contra `Lab-Documentos` en `5d5c2b4` (2026-10-18); las filas del sistema documentador,
-> re-verificadas contra `fe10086` (2026-10-27, v4.1). Las rutas de este índice son relativas a `Lab-Documentos/`.
+> `…/00-Marco-de-Referencia/Convenciones.md` (`MARCO-CONVENCIONES`).
+> **Vigencia**: 2026-11-16, verificado contra `Lab-Documentos` en `34929f2`. Rutas relativas a `Lab-Documentos/`.
 
 ## En una pantalla
 
-- El dominio tiene **dos guías** bajo `Guides/Documentacion-Tecnica/`:
-  1. `Creacion-Guias-Tecnicas/` — la guía **madre** del corpus (59 `.md`, 20 700 líneas, 87 diagramas
-     Mermaid): marco → mapa → siete familias → series y transversales → anexos. Fija el frontmatter y los
-     prefijos de identificador que reutilizan las guías hermanas.
-  2. `Sistema-De-Documentacion-E-Integracion/` — desde `fe10086`, el **cuerpo `SDEI`** (README, Marco, Mapa, siete
-     temas, anexos, mini demo; ver [11](11_Sistema-Documentador-SDEI.md)). Conserva el **apunte** original
-     (`DOC-SDT-0001`, 841 líneas, hoy `status: obsoleto`, con tabla de destinos hacia el cuerpo)
-     sobre *docs as code*: de Markdown al portal publicado (caso OneSignal/Mintlify), audiencias y privilegios,
-     ayuda por rol en un panel .NET (caso Lab-Geometria) y ciclo de vida de la documentación; con una
-     **prueba de concepto** ejecutable en devcontainer (`Examples/Prueba-Ayuda-Por-Rol/`).
-- Dominio de ejemplo recurrente de la guía madre: **sistema de reserva de salas**. Tecnologías como
-  vocabulario (no se enseñan): .NET/C#, Blazor *interactive server*, ASP.NET MVC, .NET MAUI con MVVM
+- `Guides/Documentacion-Tecnica/` contiene dos guías; ésta es la **madre** del corpus: marco → mapa →
+  siete familias → series (métodos, modelos) y transversales → anexos. Fija el frontmatter y los prefijos de
+  identificador que reutilizan las guías hermanas (`tools/docs-guard/prefijos.txt` la nombra como «Aparato de
+  la guía»).
+- **Contenido congelado**: el último commit que toca la carpeta es `82b2fe1` (2026-09-28, reorganización de
+  `Guides/` por categoría, «sin cambios de contenido»). Los 59 documentos siguen `status: vigente` y
+  `last_review: 2026-07-18`; ninguno declara versión.
+- El **apunte original del documentador** (`Sistema-Documentador-Tecnico-Guide.md`, `DOC-SDT-0001`) **ya no está
+  en `main`**: no aparece en `git ls-files`. Su materia vive en el cuerpo `SDEI` (ver [12](12_Sistema-Documentador-SDEI.md)).
+  Este índice ya no lo cubre.
+- Dominio de ejemplo recurrente: **sistema de reserva de salas**. Tecnologías como vocabulario (no se
+  enseñan): .NET/C#, Blazor *interactive server*, ASP.NET MVC, .NET MAUI con MVVM
   (`…/00-Marco-de-Referencia/Convenciones.md` §Vocabulario y ejemplos).
 - Las normas ISO/IEC/IEEE se citan por designación, sección e idea, **nunca por texto** (licencia)
   (`Convenciones.md` §Trazabilidad y fuentes; `99-Anexos/Pendientes.md` `VER-02`).
-- La reorganización `9162e07` (2026-09-28) movió ambas guías a su ubicación actual «sin cambios de
-  contenido»: por eso **los enlaces relativos que cruzan guías quedaron rotos** (ver [Hallazgos](#hallazgos)).
+- Los enlaces **salientes** de la guía resuelven todos; los **entrantes** desde dos guías hermanas siguen
+  rotos desde la reorganización (76 enlaces, ver [Hallazgos](#hallazgos)).
 
 ## Inventario
 
-### Guías y documentos raíz
-
-| Ruta (bajo `Guides/Documentacion-Tecnica/`) | `doc_id` | Versión | Estado | `last_review` | Líneas |
-|---|---|---|---|---|---:|
-| `Creacion-Guias-Tecnicas/README.md` | `GUIA-INDICE` | — (sin campo) | `vigente` | 2026-07-18 | 240 |
-| `Creacion-Guias-Tecnicas/**` (59 `.md` en total) | 59 `doc_id` únicos | — | todos `vigente` | todos 2026-07-18 | 20 700 |
-| `Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md` | `DOC-SDT-0001` | v1.0.0 según `CHANGELOG.md` (no en frontmatter) | archivado: fuera de `main` desde `0d8c1d6`, en la etiqueta `sdei-v2.0.0-borrador` (lo reemplaza `IDX-SDEI`) | 2026-10-27 | 841 |
-| `Sistema-De-Documentacion-E-Integracion/Examples/Lanzar-Example.md` | `GP-SDEI-LANZAR` (frontmatter agregado en E1) | — | `borrador` | 2026-10-27 | 141 |
-| `Sistema-De-Documentacion-E-Integracion/` resto del cuerpo `SDEI` | 27 `doc_id` más (`IDX-SDEI`, `MARCO-SDEI`, `TEM-SDEI-01..07`, `ANX-SDEI-*`, `GP-SDEI-*`, `DEMO-MU-*`) | `2.0.0-borrador` (README) | `borrador` | 2026-10-27 | ver [11](11_Sistema-Documentador-SDEI.md) §3 |
-| `Sistema-De-Documentacion-E-Integracion/Examples/Prueba-Ayuda-Por-Rol/` | — | — | — | capturas del 2026-09-19 | 40 archivos |
-
-Ningún documento de la guía madre declara versión; el dato de vigencia es `status` + `last_review`
-(`Convenciones.md` §Frontmatter obligatorio). Historia git del dominio: `fab7258` (2026-09-13),
-`dade777` (2026-09-21, alta del apunte y su prueba) y `9162e07` (2026-09-28, reorganización).
+Todos los documentos: `status: vigente`, `last_review: 2026-07-18`, `doc_id` único en frontmatter.
 
 ### Guía madre por bloque (`Creacion-Guias-Tecnicas/`)
 
@@ -168,100 +155,57 @@ Cinco tramos: 1 marco y mapa (**único obligatorio**) → 2 familias 1–2 (fron
 3–4 (si el tiempo aprieta: SAD, ADR, LLD, modelo de datos, API) → 4 familias 5–7 (Runbook y Postmortem se
 leen bajo presión) ∥ 5 métodos, modelos y transversales. Rutas cortas por rol: Analista, Arquitecto,
 Desarrollador, QA (tramo 1 → SRS → Test Plan → Test Cases → Postmortem), DevOps, PO y Technical Writer.
-
-## Sistema documentador (`Sistema-De-Documentacion-E-Integracion/`)
-
-> **Desde `fe10086` este apunte está `obsoleto`.** Lo reemplaza el cuerpo `SDEI`
-> ([11](11_Sistema-Documentador-SDEI.md)); la §Tabla de destinos del apunte lleva cada una de sus 47 secciones
-> a un tema o anexo (38 completas, 9 parciales). Esta sección se conserva como antecedente y para leer el
-> apunte hasta que se archive.
-
-Apunte `DOC-SDT-0001` — pregunta de origen: ¿el portal de OneSignal nace de Markdown que un servicio
-renderiza? Respuesta verificada: **sí** (Mintlify sobre MDX + `openapi.json` 3.1). De ahí escala a cómo montar
-un documentador propio.
-
-| § | Tema | Qué responde / destila |
-|---|---|---|
-| 1 | El sitio consultado | Evidencia con `curl`: `<meta generator=Mintlify>`, `.md` crudo por página (MDX con componentes JSX), referencia de API derivada de OpenAPI 3.1, `llms.txt` con 170 páginas para agentes |
-| 2 | Modelo *docs as code* | Definición de Write the Docs (5 componentes: issue tracker, Git, texto plano, code review, pruebas); flujo autor → PR → validación → build → HTML / `.md`+`llms.txt` / playground; adopción (`github/docs`, `MicrosoftDocs/azure-docs`, `kubernetes/website`, `mintlify/docs`) |
-| 3 | Piezas de un documentador | Tabla pieza → función → alternativas: fuente de prosa, fuente de contrato, navegación, componentes, fragmentos, validación (`lychee`, `markdownlint`, `spectral`, Vale), build/hosting, salida para agentes; estructura Diátaxis |
-| 4 | Respuestas directas | Markdown sí; generación parcial (prosa a mano, referencia desde OpenAPI); publicación automática |
-| 5 | Audiencias y privilegios | Familia → lector → tipo Diátaxis → **portal interno/externo**; un vault, varias publicaciones; **rol del producto** (filtrado por metadatos) ≠ **confidencialidad** (se separa en el build, no en la vista); nombres de industria: *docs as code*, *internal developer portal* (Backstage/TechDocs), *single sourcing / conditional processing* (DITA 1.3) |
-| 6 | Caso Lab-Geometria (`4b114d7`) | Estado: SDD en el repo de código, API sirve su OpenAPI + Scalar (`ADR-08008`), **no hay manual de usuario**. Regla: «¿tiene que cambiar en el mismo PR que el código?» → mismo repo. Tres salidas: el panel renderiza la ayuda del usuario, la API sirve su contrato, lo interno se compila aparte (DocFX/MkDocs) |
-| 7 | Propuesta: ayuda por rol | `HelpCatalog` singleton sobre recursos `Ayuda/**.md` incrustados; `/ayuda/{slug}`, `.md` y `llms.txt` **filtrados por rol**; contrato de frontmatter (`title`, `description`, `roles`, `order`, `traces` con versión de CU, `topic`, `translation_of`); derivación CU → página (no generación); idiomas por árbol de `.md` + *culture fallback*; 8 validaciones de CI (3 probadas). Toda la sección es **propuesta**; no se construyó en Lab-Geometria |
-| 8 | Ciclo de vida de la documentación | Fases planificado → borrador → en revisión → vigente → desactualizado/obsoleto → archivado (diagrama de estados); anclajes PR / changelog `Unreleased` / tag; metadatos comparados (corpus, SDD Lab-Geometria, Microsoft Learn `ms.date`/`ms.author`/`ms.update-cycle`); **tres formas de envejecer** (cambio de fuente → CI; tiempo → tarea programada; traducción → CI); deprecar antes de remover; actores por fase |
-| 9 | 15 preguntas guía | Checklist para diseñar un documentador propio |
-| 10 | Observaciones | Hechos / interpretaciones / no verificado (p. ej. si OneSignal genera su OpenAPI desde código: **no verificado**) |
-| 11–12 | Glosario y registro de evidencias | 16 términos; 37 fuentes con método y fecha (2026-09-16 y 2026-09-19) |
-
-### Ejemplos y cómo se usan
-
-| Ruta (bajo `…/Sistema-De-Documentacion-E-Integracion/Examples/`) | Qué demuestra | Stack | Cómo se corre |
-|---|---|---|---|
-| `Prueba-Ayuda-Por-Rol/Consola/` (`Spike.csproj`, `Program.cs`, `Ayuda/{comun,alumno,administrador}/*.md`, `salida.txt`) | Motor aislado: catálogo, filtro por rol (404 si no alcanza), `llms.txt` por rol, escape de HTML (`DisableHtml()`), validador de enlaces y cruces de rol. **Termina en `exit=1` a propósito**: 3 fallas, 2 plantadas y 1 hallada por el validador (`comun/ingresar` → página sólo de alumno) | .NET 10, Markdig 0.45.0, YamlDotNet 16.3.0 | `docker run … mcr.microsoft.com/dotnet/sdk:10.0 dotnet run` (comando en `Prueba-Ayuda-Por-Rol/README.md` §La consola) |
-| `Prueba-Ayuda-Por-Rol/Web/` (`AyudaDemo.Web.csproj`, `HelpCatalog.cs`, `Program.cs`, `Textos.cs`, `Components/**.razor` —páginas `Ingresar`, `Inicio`, `Ayuda`, `NoEncontrada`—, `Ayuda/{es,en}/**.md`, `Resources/Textos.en.resx`, `wwwroot/app.css`) | Panel Blazor (render estático de servidor) con ingreso simulado por papel (`/entrar/{role}`), ayuda contextual (`AyudaContextual.razor`), 404 por rol, `.md` fuente, `llms.txt`, dos idiomas con respaldo al español y aviso. Al arrancar: «Catálogo de ayuda: 9 páginas, validador con 0 fallas» (7 en `es/` + 2 en `en/`) | .NET 10 Blazor, Markdig, YamlDotNet, `AddLocalization` + `.resx` sólo para cadenas de UI | Devcontainer (`.devcontainer/devcontainer.json`, imagen `mcr.microsoft.com/devcontainers/dotnet:1-10.0`, puerto 5190): *Reopen in Container* o `npx @devcontainers/cli up/exec … dotnet run --project Web/AyudaDemo.Web.csproj` |
-| `Prueba-Ayuda-Por-Rol/capturas/` | 7 PNG (2026-09-19): ingreso, panel alumno, enviar, 404, inglés sin traducir, panel admin, cuentas | — | Inventariadas, no leídas |
-| `Lanzar-Example.md` | **Tool-prompt** para levantar la demo en su devcontainer, exponerla por túnel rápido de Cloudflare (`demo-ayuda-por-rol-tunnel`, `*.trycloudflare.com`) y entregar la URL; variantes `--estado` y `--bajar` | Docker, devcontainers CLI, cloudflared | «Leer y ejecutar `/LAB/Lab-Documentos/Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/Lanzar-Example.md`». Reglas: sólo `Production` al exponer, no tocar túneles `jump-host-tunnel-*`, reintentos ante `000` los primeros minutos del nombre |
-
-El contenido de `Web/Ayuda/` deriva de `CU-00022`, `CU-00023`, `CU-00024`, `CU-00026`, `CU-00028` y
-`CU-00029` (v1.1) de Lab-Geometria y lo declara en `traces` (`Prueba-Ayuda-Por-Rol/README.md`). **No es
-código de Lab-Geometria.** Aprendizaje registrado (§7.8): en .NET 10, fijar `StatusCode = 404` desde un
-componente de render estático devuelve cuerpo vacío; lo que funciona es `NavigationManager.NotFound()` +
-`NotFoundPage` en el `Router`.
-
 ## Conceptos y decisiones clave
 
 | Concepto / decisión | Destilado | Fuente |
 |---|---|---|
 | Enlazar por ID, no por ruta | «Los archivos se mueven, los IDs no» | `Creacion-Guias-Tecnicas/00-Marco-de-Referencia/Convenciones.md` §Identificadores |
-| `origin` + `confidence` | Mecanismo para distinguir lo verificado de lo inferido; condición para que un agente participe sin degradar la confiabilidad | `Convenciones.md` §Frontmatter; `95-Transversales/Spec-Driven-Development.md` §La doble audiencia |
+| `origin` + `confidence` | Mecanismo para distinguir lo verificado de lo inferido; condición para que un agente participe sin degradar la confiabilidad | `Convenciones.md` §Frontmatter obligatorio; `95-Transversales/Spec-Driven-Development.md` §La doble audiencia |
 | Artefacto menor = sección | Casos de uso, CI/CD, DR, FAQ, etc. viven dentro del documento de su familia | `Creacion-Guias-Tecnicas/README.md` §Alcance y límites |
 | Familia según dueño natural | Test Plan/Cases, Release Notes y Change Log en `FAM-DEV`; RFC, Threat Model y seguridad en `FAM-ARQ` | `99-Anexos/Revision-de-Consistencia.md` §Decisiones de criterio propio |
 | Criterio de paridad de `ESC-2` | Se desarrolla completo en el Test Plan; BRD y SAD lo referencian | ídem |
-| Estados de pantalla 4 vs 6 | Cuatro es el piso para toda la guía (`Contextos.md`); seis cuando la pieza es la interfaz (`DOC-UX`) | ídem §Estados de pantalla |
-| Agente de IA sin autoridad | `ACT-10` «produce borradores, no decide»; el apunte lo reutiliza para la ayuda derivada | `00-Marco-de-Referencia/Actores.md`; `Sistema-Documentador-Tecnico-Guide.md` §7.4 |
-| Derivar ≠ generar | La ayuda se **deriva** del CU (reescrita, con traza versionada); la referencia de API se **genera** del contrato | `Sistema-Documentador-Tecnico-Guide.md` §4, §7.4 |
-| Rol ≠ confidencialidad | El rol se filtra en el servidor por metadatos; lo confidencial se separa en el build | ídem §5.3, §7.5 |
-| Mismo repo si cambia en el mismo PR | Regla de ubicación de un documento nuevo | ídem §6.2, §8.3 |
-| Versionar docs publicadas sólo si conviven versiones | Si no, publicar la desplegada y dejar los tags | ídem §6.3, pregunta 10 |
+| Estados de pantalla 4 vs 6 | Cuatro es el piso para toda la guía (`Contextos.md`); seis cuando la pieza es la interfaz (`DOC-UX`) | `99-Anexos/Revision-de-Consistencia.md` §Estados de pantalla: cuatro contra seis |
+| Agente de IA sin autoridad | `ACT-10` «Ninguna; produce borradores trazables» | `00-Marco-de-Referencia/Actores.md` (tabla de actores) |
+| Métodos y modelos modulan | No agregan artefactos: cambian cuáles se exigen y con qué profundidad | `01-Mapa-Conceptual/Mapa-Conceptual.md` §Estructura de la guía |
+| Marco regulatorio con veto | De las seis variables de elección de método, la regulatoria veta a las otras cinco | `80-Metodos-Agiles/Comparativa-y-Criterios.md` §Resumen |
+| Criterio propio declarado | Lo que no tiene fuente normativa se declara «criterio propio de la guía» (p. ej. las siete propiedades de `DOC-SDD`) | `95-Transversales/Spec-Driven-Development.md` §Resumen y §Qué hace que una especificación sea apta |
+| No duplicar | Cada concepto vive en un documento; los demás enlazan | `Convenciones.md` §No duplicar |
 
 ## Relaciones con otras guías del repo
 
 | Guía | Relación | Evidencia |
 |---|---|---|
-| `Guides/Despliegue/Documentacion-Informe-Despliegue/` | **Guía hermana**: compone SAD, SRS, Deployment Guide y ADR en un informe único; remite a la guía madre documento por documento | 54 enlaces hacia `Documentacion-Tecnica` (todos rotos, ver Hallazgos) |
-| `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` | Reutiliza dominio y convenciones; sus transversales remiten a `DOC-UX`, `DOC-SDD`, `DOC-API`, `DOC-INTEGRACION`, `DOC-CHANGELOG`, `ARQ-INDICE`, `ARQ-HEX` | 21 enlaces (rotos) |
-| `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/` | Mismo dominio de ejemplo (reserva de salas) y convenciones | 1 enlace (roto) en su `README.md` |
-| `Guides/IA/SDD-Guide/` | Mismo tema que `DOC-SDD` desde otro ángulo; no hay enlaces ni menciones de `doc_id` entre ambas | `git grep` sin coincidencias |
-| `Sistema-Documentador-Tecnico-Guide.md` ↔ guía madre | El apunte usa las familias, `doc_id` y actores de la guía madre y agrega la dimensión «hacia qué portal se compila cada familia»; su §8 (ciclo de vida) cubre materia del `HUE-02` (gobierno documental) — *interpretación de este índice; `Pendientes.md` no lo registra como resuelto* | §5.1, §8.4, §8.7 |
+| `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/` | Hermana: hereda familias, `doc_id`, actores y prefijos; agrega cómo se publica y mantiene la documentación (ver [12](12_Sistema-Documentador-SDEI.md)) | `…/DocsAsCode-Developer-Guide-Parte-I.md` l. 248–249 enlaza `../Creacion-Guias-Tecnicas/README.md` (resuelve) |
+| `Guides/Despliegue/Documentacion-Informe-Despliegue/` | Hermana: compone SAD, SRS, Deployment Guide y ADR en un informe único; remite a la guía madre documento por documento | 54 enlaces hacia la guía, todos rotos (Hallazgos) |
+| `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` | Reutiliza dominio y convenciones; sus transversales remiten a `DOC-UX`, `DOC-SDD`, `DOC-API`, `DOC-INTEGRACION`, `DOC-CHANGELOG`, `ARQ-INDICE`, `ARQ-HEX` | 21 enlaces, rotos |
+| `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/` | Mismo dominio de ejemplo (reserva de salas) y convenciones | 1 enlace roto en su `README.md` |
+| `Guides/IA/SDD-Guide/` | Mismo tema que `DOC-SDD` desde otro ángulo; no se enlazan ni se mencionan `doc_id` entre ambas | `git grep "DOC-SDD\|Spec-Driven-Development.md" -- Guides/IA Concepts` sin coincidencias |
+| `tools/docs-guard/` | Registra los prefijos de la guía (`ESC`, `CTX`, `ACT`, `DOC`, `FAM`, `MET`, `ARQ`, `MARCO`, `MAPA`, `VER`, `GUIA`, `FLU`) en `prefijos.txt`; la compuerta `.github/workflows/docs-guard.yml` corre por defecto sólo sobre `Sistema-De-Documentacion-E-Integracion`, no sobre esta guía | `tools/docs-guard/prefijos.txt` l. 7–17, 29, 32, 41; `docs-guard.yml` l. 38, 63 |
+| Portadas del repo | `README.md` (l. 28) y `Guides/README.md` (l. 23) enlazan `Creacion-Guias-Tecnicas/README.md` (resuelven) | — |
 
 ## Hallazgos
 
 | Tipo | Ruta | Detalle |
 |---|---|---|
-| Enlaces rotos (salientes) | `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md` | **Resuelto en `fe10086`** (E1-U1): los 8 enlaces a `../Documentacion-Tecnica/…` apuntan ahora a `../Creacion-Guias-Tecnicas/…`; la compuerta `docs-guard` verifica la carpeta con lychee sin red |
-| Enlaces rotos (entrantes) | `Guides/Despliegue/Documentacion-Informe-Despliegue/**`, `Guides/Arquitectura/Organizacion-Estilo-Rest-API/**`, `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/README.md` | 76 enlaces (54 + 21 + 1) apuntan a `../../Documentacion-Tecnica/…` o `../Documentacion-Tecnica/…`, que tras `9162e07` resuelven a carpetas inexistentes |
-| Ruta obsoleta | `…/Examples/Lanzar-Example.md` (tabla «Rutas y nombres fijos») | **Resuelto en `fe10086`**: `$P` y la invocación usan la ruta actual |
-| Afirmación desactualizada | `Creacion-Guias-Tecnicas/README.md` §Estado del cuerpo documental | Declara «ningún enlace roto» e «Índice 1 · 237 líneas»; el README tiene hoy 240 líneas y los anexos 319 (declara 323). El total 20 700 coincide con el real, pero la propia tabla suma 20 701 con sus filas (237 + 323). `Revision-de-Consistencia.md` dice «57 archivos»; hoy son 59 |
-| Referencia sin destino | `Creacion-Guias-Tecnicas/01-Mapa-Conceptual/Mapa-Conceptual.md` §Cómo entrar a la guía | Remite a «la ruta detallada, con tiempos estimados» del README; el README no trae tiempos |
-| Frontmatter fuera de convención | `Sistema-Documentador-Tecnico-Guide.md` | En `fe10086` usa el vocabulario de la convención (`obsoleto`, `ia-generated`, `alta`, `[humano, agente]`) y no repite trazas; siguen propios `doc_type: study-note` (admitido por el esquema del cuerpo `SDEI`) y el `doc_id` `DOC-SDT-0001` |
-| Estructura no uniforme | `Creacion-Guias-Tecnicas/{30,40,50}-*/*.md`, `80-*/`, `90-*/` | `Convenciones.md` dice que la estructura de 7 secciones «se respeta sin variaciones», pero hay documentos con secciones intermedias propias y numeración extendida (`50-Operativa/Deployment-Guide.md` 1–11, `40-Diseno/API-Specification.md` 1–9) y otros sin numerar (familias 1–2, series 80/90). El orden relativo de las 7 se conserva |
-| Norma externa al repo | `Creacion-Guias-Tecnicas/00-Marco-de-Referencia/Convenciones.md` §Estructura | Cita el Profile `Study-Guide-Documentation` como norma de la estructura; no está en `Lab-Documentos`: vive en el framework de prompts del workspace (`IA/PROMPTs/IA.Prompts/PromptFramework/Profiles/Study-Guide-Documentation.md`), sin enlace desde la guía |
-| Rango de CU inconsistente | `Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md` §7.8 vs §7.9 | §7.8 dice «nueve páginas derivadas de `CU-00022` a `CU-00029`»; §7.9 dice «derivadas de `CU-00021` a `CU-00029`». `Examples/Prueba-Ayuda-Por-Rol/README.md` enumera seis CU (`00022`, `00023`, `00024`, `00026`, `00028`, `00029`) |
-| Sin versión | `Creacion-Guias-Tecnicas/**` | Ningún documento declara versión; todos `last_review: 2026-07-18`. El apunte tampoco (v1.0.0 sólo en `CHANGELOG.md`) |
-| CHANGELOG con ruta vieja | `CHANGELOG.md` (entrada 2026-09-21) | Registra el apunte como `Guides/Sistema-Documentador-Tecnico-Guide/`; no hay entrada que documente la mudanza a `Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/` |
-| Enlaces rotos deliberados | `…/Prueba-Ayuda-Por-Rol/Consola/Ayuda/administrador/habilitar-cuentas.md`; `Web/Ayuda/en/{alumno,comun}/*.md` | `../comun/no-existe.md` es un defecto **plantado**; los de `en/` apuntan a páginas que sólo existen en `es/` y los resuelve el catálogo con respaldo de idioma. No son defectos; desde `fe10086` el README de la prueba lo dice y la compuerta los excluye con nombre y motivo |
-| Huecos declarados | `Creacion-Guias-Tecnicas/99-Anexos/Pendientes.md` | `HUE-01..07`, `VER-01..02`, `CNV-01..02` abiertos (ver tabla de Anexos) |
-| `doc_id` en plantillas | `Creacion-Guias-Tecnicas/40-Diseno/API-Specification.md:442`, `Integration-Guide.md:286`, `Modelo-de-Datos.md:304` | Los 60 `doc_id` de frontmatter son únicos, pero estas tres plantillas comentadas escriben literalmente `doc_id: DOC-API` / `DOC-INTEGRACION` / `DOC-DATOS` —el mismo ID del documento de la guía—, igual que el ejemplo de frontmatter de `00-Marco-de-Referencia/Convenciones.md:46` (`doc_id: DOC-SAD`), mientras las demás plantillas usan un marcador propio (`SAD-<sistema>`, `RB-<nnn>`, `DOC-PRD-<producto>`…). Un `grep '^doc_id:'` ve duplicados. El esquema de los marcadores tampoco es uniforme (con y sin `DOC-`) |
-| Archivos | todo el dominio | Sin archivos versionados vacíos; sin nombres con caracteres raros. Hay `bin/`/`obj/` locales en `Prueba-Ayuda-Por-Rol/Web/`, ignorados por su `.gitignore` |
+| Enlaces rotos (entrantes) | `Guides/Despliegue/Documentacion-Informe-Despliegue/**` (54), `Guides/Arquitectura/Organizacion-Estilo-Rest-API/**` (21), `Guides/Arquitectura/Organizacion-Estilo-Patrones-Codigo/README.md` (1) | 76 enlaces apuntan a `../../Documentacion-Tecnica/…` o `../Documentacion-Tecnica/…` (p. ej. `../../Documentacion-Tecnica/30-Arquitectura/HLD.md`), que tras `82b2fe1` resuelven a carpetas inexistentes; falta el tramo `Documentacion-Tecnica/Creacion-Guias-Tecnicas/`. Sigue abierto desde la ia-db anterior. El `CHANGELOG.md` (l. 398) registra sólo el arreglo de los 8 salientes del apunte del documentador |
+| Enlaces salientes | `Creacion-Guias-Tecnicas/**` | Ninguno roto (verificación de enlaces relativos de este índice) |
+| Afirmación desactualizada | `Creacion-Guias-Tecnicas/README.md` §Estado del cuerpo documental (l. 234–238) | Declara «Índice 1 · 237» y «Anexos 3 · 323»; reales 240 y 319. El total 20 700 coincide con el real, pero la tabla suma 20 701 con sus filas. Declara «ningún enlace roto» (cierto para los salientes) |
+| Recuento viejo | `99-Anexos/Revision-de-Consistencia.md` l. 28 | «los 57 archivos»; hoy son 59 |
+| Referencia sin destino | `01-Mapa-Conceptual/Mapa-Conceptual.md` l. 286 | «La ruta detallada, con tiempos estimados, está en el README»; el README no trae tiempos |
+| Norma externa al repo | `00-Marco-de-Referencia/Convenciones.md` l. 65 | «La fija el Profile `Study-Guide-Documentation`»: ese Profile no está en `Lab-Documentos` (vive en el framework de prompts del workspace), sin enlace |
+| Estructura no uniforme | `Creacion-Guias-Tecnicas/{30,40,50}-*/*.md`, `80-*/`, `90-*/` | `Convenciones.md` dice que la estructura de 7 secciones «se respeta sin variaciones», pero hay secciones intermedias propias y numeración extendida (`50-Operativa/Deployment-Guide.md` 1–11, `40-Diseno/API-Specification.md` 1–9) y documentos sin numerar (familias 1–2, series 80/90). El orden relativo de las 7 se conserva (re-verificación parcial: sin cambios de contenido desde la ia-db anterior) |
+| `doc_id` en plantillas | `40-Diseno/API-Specification.md:442`, `Integration-Guide.md:286`, `Modelo-de-Datos.md:304`; `00-Marco-de-Referencia/Convenciones.md:46` | Las plantillas comentadas escriben literalmente `doc_id: DOC-API` / `DOC-INTEGRACION` / `DOC-DATOS` (el mismo ID del documento) y el ejemplo de frontmatter usa `doc_id: DOC-SAD`; otras plantillas usan marcador (`DOC-LLD-<componente>`, `SAD-<sistema>`, `RB-<nnn>`…). Un `grep '^doc_id:'` ve duplicados; el esquema de marcadores no es uniforme |
+| Prefijos fuera del registro | `tools/docs-guard/prefijos.txt` vs `99-Anexos/*.md` | La guía usa `ANEXO-*` (doc_id de anexos), `HUE-` y `CNV-` (Pendientes), que no figuran en el registro cerrado (registra `ANX`, `IDX`, `VER`, `GUIA`); `GUIA-INDICE` cae bajo `GUIA`. Sin efecto hoy porque la compuerta no recorre esta guía |
+| Sin versión | `Creacion-Guias-Tecnicas/**` | Ningún documento declara versión; la vigencia se lee en `status` + `last_review` |
+| Archivos | todo el dominio | Sin archivos vacíos, sin binarios ni nombres raros; 59 `.md` y nada más |
 
 ## Para preguntas X → leé Y
 
-| Necesitás saber… | Leé (ruta bajo `Guides/Documentacion-Tecnica/`) |
+| Necesitás saber… | Leé (ruta bajo `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/`) |
 |---|---|
-| Qué documento producir en mi situación (nuevo, migración, auditoría) | `Creacion-Guias-Tecnicas/01-Mapa-Conceptual/Mapa-Conceptual.md` §Tabla de entrada 1 |
-| Qué es un SAD/HLD/LLD/ADR/RFC y en qué se diferencian | `Creacion-Guias-Tecnicas/30-Arquitectura/*.md` y `40-Diseno/LLD.md` §2 Definición |
-| Frontera PRD ↔ SRS; casos de uso y reglas de negocio | `10-Vision/PRD.md`, `20-Analisis/SRS.md` §Casos de uso, §Reglas de negocio |
+| Qué documento producir en mi situación (nuevo, migración, auditoría) | `01-Mapa-Conceptual/Mapa-Conceptual.md` §Tabla de entrada 1 |
+| Qué es un SAD/HLD/LLD/ADR/RFC y en qué se diferencian | `30-Arquitectura/*.md` y `40-Diseno/LLD.md` §2 Definición |
+| Frontera PRD ↔ SRS; casos de uso y reglas de negocio | `10-Vision/PRD.md`, `20-Analisis/SRS.md` |
 | Plantilla comentada de un artefacto | El anexo final del documento del artefacto (no hay carpeta de plantillas) |
 | Cómo evaluar documentación ajena | `Mapa-Conceptual.md` §Tabla de entrada 3 + §Criterios de calidad de cada documento |
 | Quién produce y aprueba cada familia | `00-Marco-de-Referencia/Actores.md` §Matriz de responsabilidad |
@@ -271,8 +215,13 @@ componente de render estático devuelve cuerpo vacío; lo que funciona es `Navig
 | Especificar para un agente de IA | `95-Transversales/Spec-Driven-Development.md` §Qué hace que una especificación sea apta |
 | Estados de pantalla y flujos | `95-Transversales/UX-UI-y-Flujo-de-Usuario.md` §Artefactos documentales |
 | Qué falta en la guía / antes de extenderla | `99-Anexos/Pendientes.md`, `99-Anexos/Revision-de-Consistencia.md` |
-| Cómo diseñar un sistema documentador, su ciclo, compuertas y doble audiencia (vigente) | Cuerpo `SDEI`: `Sistema-De-Documentacion-E-Integracion/README.md` → [11](11_Sistema-Documentador-SDEI.md) §10 |
-| Cómo publicar docs como código (Mintlify, MkDocs, DocFX, `llms.txt`) — antecedente | `Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md` §2–3 (obsoleto; su §Tabla de destinos dice adónde fue) |
-| Portal interno vs externo; documentación por rol | ídem §5, §7; vigente en `TEM-04` y `TEM-05` del cuerpo |
-| Ciclo de vida, frescura, deprecar/archivar documentación | ídem §8; vigente en `TEM-02` del cuerpo |
-| Levantar la demo de ayuda por rol | `Sistema-De-Documentacion-E-Integracion/Examples/Prueba-Ayuda-Por-Rol/README.md`; para exponerla, `Examples/Lanzar-Example.md` |
+| Cómo publicar, versionar y mantener viva la documentación | Fuera de esta guía: `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/README.md` → [12](12_Sistema-Documentador-SDEI.md) |
+
+## Fuentes
+
+- `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/**` (59 `.md`, frontmatter y encabezados de cada pieza).
+- `Guides/README.md`, `README.md`, `CHANGELOG.md`, `tools/docs-guard/prefijos.txt`, `.github/workflows/docs-guard.yml`.
+- Enlaces entrantes: `Guides/Despliegue/Documentacion-Informe-Despliegue/**`, `Guides/Arquitectura/Organizacion-Estilo-*/**`.
+- Reaprovechado y re-verificado de la ia-db v1.x (2026-10-29): inventario, ejes, familias, series, anexos.
+
+**Vigencia**: 2026-11-16 · fuente `Lab-Documentos` `34929f2` (`origin/main`).

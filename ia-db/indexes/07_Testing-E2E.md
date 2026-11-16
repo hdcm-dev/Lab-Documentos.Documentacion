@@ -9,9 +9,11 @@
 > (`E2E-03`, puerta de entrada del conjunto, `last_review` 2026-09-09) y
 > `Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/Beginner-Guide.md` (`E2E-00`).
 > **Laboratorio que respaldan**: `LAB/Lab-E2E.WebBlazor` (repo hermano, **fuera** de `Lab-Documentos`;
-> último commit observado `8fb4c3a`, 2026-09-18).
-> **Base**: `Lab-Documentos` en `main` `5d5c2b4`; el corpus entró con el commit `9162e07`
-> (2026-09-28, «reorganización de Guides/ por categoría e ingreso del corpus E2E»).
+> estado no re-verificado en esta regeneración (sin verificar)).
+> **Base**: `Lab-Documentos` en `main` `34929f2` (2026-11-16); el corpus entró con el commit `82b2fe1`
+> (2026-09-28, «reorganización de Guides/ por categoría e ingreso del corpus E2E»). Cambios posteriores en
+> `Guides/Testing/`: sólo `b6bf31a` (2026-10-27) y `257d4aa` (2026-10-28), que redactan en
+> `LE2E/GitHub-Action-Guide.md` el nombre de una app privada y de un repo de infraestructura (5 líneas).
 
 ## En una pantalla
 
@@ -84,7 +86,7 @@ Rutas relativas a `Lab-Documentos/Guides/Testing/`. `LE2E/` = `Lab-E2E.WebBlazor
 
 | Ruta | doc_id | owner | Estado / confidence | last_review | Líneas | Original en el repo |
 |---|---|---|---|---|---|---|
-| `LE2E/GitHub-Action-Guide.md` | GHA-00 | Lab-GitFlow | vigente · alta | 2026-08-31 | 2978 | `Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md` (2974) |
+| `LE2E/GitHub-Action-Guide.md` | GHA-00 | Lab-GitFlow | vigente · alta | 2026-08-31 | 2978 | `Guides/Despliegue/GitHub-Action-Guide/GitHub-Action-Guide.md` (2974; la redacción de oct-2026 se aplicó en ambos) |
 | `LE2E/Estandares-Modelo-Ramas.md` | GF-GUIA | Lab-GitFlow | vigente · alta | 2026-08-23 | 2034 | `Guides/GitFlow/Estandares-Modelo-Ramas-Guide/Estandares-Modelo-Ramas.md` (2029) |
 | `LE2E/Guia-Practica-GitFlow.md` | GF-09-ESCENARIOS | Lab-GitFlow | vigente · alta | 2026-08-23 | 1183 | `Guides/GitFlow/Git-Flow-Guides/GitFlow-Practice-Guide/…` (1178) |
 | `LE2E/Guia-Practica-GitHubFlow.md` | GHF-GUIA | Lab-GitFlow | vigente · media | 2026-09-01 | 1072 | `Guides/GitFlow/Git-Flow-Guides/GitHubFlow-Practice-Guide/…` (1067) |
@@ -94,7 +96,8 @@ Rutas relativas a `Lab-Documentos/Guides/Testing/`. `LE2E/` = `Lab-E2E.WebBlazor
 
 Las copias de la raíz de `LE2E/` difieren de sus originales sólo en el bloque «De qué va / Para quién /
 Qué deja» agregado al inicio y en enlaces reescritos para la carpeta plana (verificado con `diff`:
-14–41 líneas distintas por archivo).
+14–41 líneas distintas por archivo; GHA-00 re-verificado en `34929f2`: 14 líneas).
+Los tres `.yml` siguen idénticos byte a byte (`cmp`) a sus originales.
 
 ---
 
@@ -136,7 +139,7 @@ flowchart LR
 | `Caso-Encuesta-Page.md` | ¿Y cuando el acto se recorre en tramos? | §1.2 acto divisible · §3 ¿tres pasos son tres superficies? · §4.2 promesa sobre la memoria · §5 nueve casos · §6 **dos promesas sin caso** |
 | `Marco-La-Superficie-Verificable.md` | ¿De dónde sale este vocabulario y adónde se puede ir? | §2 tres tradiciones · §3 especificación formal (promesa negativa = hiperpropiedad) · §4 usage-centered design / UI Stack · §5 especificación por ejemplo, AAA, IdlingResource · §6 aportes propios · §7 tabla de procedencia · §8 bibliografía con grado de verificación |
 | `Template-SDD-Aplicado.md` | ¿Cómo se construye la superficie del lado de la vista? | §1 tokens, tema, componentes por patrón, shells · §2 decisiones declaradas · §3 criterios verificados · §4 reproducción |
-| `Notas.GitHub.md` | ¿Cómo evito que un PR desde un fork corra en el runner propio? | *Settings → Actions → General → Fork pull request workflows* → «Require approval» |
+| `Notas.GitHub.md` | ¿Cómo evito que un PR desde un fork corra en el runner propio? | *Settings → Actions → General → Fork pull request workflows from outside collaborators* → «Require approval…» (o poner el repo en privado) |
 
 ### `Beginner-Guide.md` (E2E-00) por capítulo
 
@@ -160,7 +163,7 @@ flowchart LR
 | `README.md` | Orden de lectura y mapa S1–S6 → suite | Diagrama escenario → suite real · «Lo que no hay acá» (carga, contrato entre servicios, mutación, seguridad, cobertura, iOS, Windows, emuladores en CI) |
 | `Panorama-De-Pruebas-Automatizadas.md` | ¿Qué tipos de prueba hay y cuál va dónde? **Define el marco** S/C/actores | §1 dobles (stub, fake, mock, spy) · §2 marco · §3 pirámide vs trofeo · §4 **capa de Clean Architecture → tipo de prueba** · §5 base real o doble · §6 web/API/móvil · §7 criterios (Moq mock vs stub §7.4) · §8 mapa «estoy acá → aplico esto» |
 | `Pruebas-Unitarias-Y-Arquitectura.md` | ¿Qué es una unidad según dónde vive el código? | §2 cinco propiedades · §3 dominio · §4 aplicación (doble o real) · §5 dobles · §6 ViewModel MVVM · §7 MAUI sin workload (`net10.0-android`) · §8 criterios de calidad |
-| `Pruebas-De-Interfaz-Por-Pantalla.md` | ¿Cómo pruebo una app sin DOM? | §3 tres niveles de localización (accesibilidad, texto, coordenadas) · §4 Appium/UIAutomator/Espresso/`adb` · §5 **lo hecho en el moto e6 play** (27 capturas, suite Appium de 5 casos) · §6 qué se traslada de la web · §7 criterios |
+| `Pruebas-De-Interfaz-Por-Pantalla.md` | ¿Cómo pruebo una app sin DOM? | §3 tres niveles de localización (accesibilidad, texto, coordenadas) · §4 Appium/UIAutomator/Espresso/`adb` · §5 **lo hecho en el moto e6 play** (seis correcciones de vista/plataforma halladas con capturas, suite Appium de 5 casos) · §6 qué se traslada de la web · §7 criterios |
 
 ### `LE2E/` raíz — material de CI y ramas (sólo para qué lo trae el corpus E2E)
 
@@ -309,8 +312,8 @@ Convenciones y glosario transversales → `10_Convenciones-y-Glosario.md`.
 | # | Tipo | Ruta | Detalle |
 |---|---|---|---|
 | H-01 | duplicado / desactualizado | `Guides/Testing/E2E-Guide/` vs `Guides/Testing/Lab-E2E.WebBlazor-Guides/E2E-Guide/` | Dos copias de `Beginner-Guide.md` y `Quick-Guide-ABM.md` con **el mismo `doc_id`** (E2E-00, E2E-01) y el mismo `last_review`, pero contenido divergente (194 líneas de diff en Beginner): la vieja cita `Infraestructura/ServidorDeLaAplicacion.cs`, `PruebaE2E.cs`, `ReglasDeLocalidad`, que ya no existen en el laboratorio tras el renombrado del 2026-09-18 |
-| H-02 | enlaces rotos | `LE2E/E2E-Guide/*.md` y `E2E-Guide/*.md` | Los enlaces al laboratorio usan `../../../Lab-E2E.WebBlazor/…` (o `../../` en la copia vieja), que resuelve a `Lab-Documentos/Guides/Lab-E2E.WebBlazor` (inexistente). Los destinos sí existen en `LAB/Lab-E2E.WebBlazor/`: la profundidad correcta sería `../../../../../`. ~50 enlaces (Caso-HolaMundo 19, Caso-Encuesta 22, Login 3, Marco 2, Beginner 3, Quick-ABM 1) |
-| H-03 | enlaces rotos | `LE2E/Estandares-Modelo-Ramas.md`, `GitHub-Action-Guide.md`, `Guia-Practica-GitFlow.md`, `Guia-Practica-GitHubFlow.md` | Apuntan a `Anexos/workflows/…`, que en la copia aplanada es `workflows/…` (16 enlaces: Estandares 10, GitFlow 3, GitHubFlow 2, GitHub-Action-Guide 1) |
+| H-02 | enlaces rotos | `LE2E/E2E-Guide/*.md` y `E2E-Guide/*.md` | Los enlaces al laboratorio usan `../../../Lab-E2E.WebBlazor/…` (o `../../` en la copia vieja), que resuelve a `Lab-Documentos/Guides/Lab-E2E.WebBlazor` (inexistente). Los destinos sí existen en `LAB/Lab-E2E.WebBlazor/`: la profundidad correcta sería `../../../../../`. En `34929f2`, líneas con `../../../Lab-E2E.WebBlazor` por archivo: Caso-Encuesta 21, Caso-HolaMundo 17, Beginner 14, Del-Requerimiento 13, Login 3, Marco 2, Mapa 1, Quick-ABM 1 (≈72 líneas) |
+| H-03 | enlaces rotos | `LE2E/Estandares-Modelo-Ramas.md`, `GitHub-Action-Guide.md`, `Guia-Practica-GitFlow.md`, `Guia-Practica-GitHubFlow.md` | Apuntan a `Anexos/workflows/…`, que en la copia aplanada es `workflows/…` (líneas con `Anexos/workflows` en `34929f2`: Estandares 10, GitFlow 4, GitHubFlow 2, GitHub-Action-Guide 1) |
 | H-04 | enlaces rotos | `LE2E/GitHub-Action-Guide.md` | `[README](../README.md)` → `Guides/Testing/README.md`, que no existe |
 | H-05 | enlaces rotos | `LE2E/workflows/README.md` | `../../Guia-Practica-GitFlow.md` (2×) resuelve a `Guides/Testing/Guia-Practica-GitFlow.md`; el archivo está en `LE2E/`. Su comando `grep … ../../../../Lab-E2E.WebBlazor/.github/workflows/e2e.yml` también quedó con profundidad de la ubicación original |
 | H-06 | referencia rota | `LE2E/Nomenclatura-Convensiones-Arquitecture-Dot-Net.md` §6 | Cita `LAB/Lab-Documentos/Guides/Arquitectura/Dot-NET-Arquitectura-Guide.md`; la guía está en `Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` |
@@ -326,8 +329,9 @@ Convenciones y glosario transversales → `10_Convenciones-y-Glosario.md`.
 | H-16 | hallazgo de producto (declarado) | `LE2E/E2E-Guide/Caso-Login-Page.md` §6 | `<NotAuthorized>` de `Routes.razor` es camino muerto (el middleware de cookies redirige con `returnurl`); `SesionRequerida` nunca se muestra |
 | H-17 | dependencia externa no versionada | `LE2E/E2E-Guide/Template-SDD-Aplicado.md` | Cita `Knowledge-Template-HTML-SDD-Default.md`, `Knowledge-Template-Blazor-Interactive-Server-SDD-Default.md`, `Design-Rules-Web-Generico.md` sin ruta; no están en `Lab-Documentos` (no verificado dónde viven) |
 | H-18 | dato de infraestructura en guía | `LE2E/E2E-Guide/Notas.GitHub.md`, `LE2E/workflows/*` | Nombran el runner autoalojado `i7infra-dev` y un repo público; la nota es texto informal en segunda persona («tu máquina»), dice «desde la configuración de la organización» pero da la ruta de *Settings* del repo, y las casillas que transcribe son las del bloque «…in private and internal repositories» aunque el repo es público |
-| H-19 | deriva doc ↔ laboratorio (fuera de `Lab-Documentos`) | `LE2E/E2E-Guide/Beginner-Guide.md` §8.6 vs `LAB/Lab-E2E.WebBlazor/.github/workflows/e2e.yml` l. 89 (commit `8fb4c3a`) | La guía dice que «los jobs corren en los runners alojados por GitHub» con `i7infra-dev` comentado; en el laboratorio el primer job de `e2e.yml` tiene `runs-on: [self-hosted, i7infra-dev]` **activo** y `ubuntu-latest` comentado, aunque su propio comentario dice «se deja comentado». El resto de los jobs sí usa `ubuntu-latest` |
-| H-20 | README vacío (vecino) | `Guides/README.md` | 0 líneas: no hay índice de `Guides/` que apunte a `Testing/`; la entrada al corpus es sólo `Mapa-Del-Conjunto.md` |
+| H-19 | deriva doc ↔ laboratorio (fuera de `Lab-Documentos`; hallazgo de la v1, no re-verificado: (sin verificar)) | `LE2E/E2E-Guide/Beginner-Guide.md` §8.6 vs `LAB/Lab-E2E.WebBlazor/.github/workflows/e2e.yml` l. 89 (commit `8fb4c3a`) | La guía dice que «los jobs corren en los runners alojados por GitHub» con `i7infra-dev` comentado; en el laboratorio el primer job de `e2e.yml` tiene `runs-on: [self-hosted, i7infra-dev]` **activo** y `ubuntu-latest` comentado, aunque su propio comentario dice «se deja comentado». El resto de los jobs sí usa `ubuntu-latest` |
+| H-20 | resuelto (vecino) | `Guides/README.md` | En la v1 estaba vacío; en `34929f2` tiene 31 líneas y apunta a `Testing/` (l. 29). No existe `Guides/Testing/README.md` propio: la entrada al corpus sigue siendo `Mapa-Del-Conjunto.md` |
+| H-21 | ruta interna desactualizada (re-verificado) | `LE2E/Test-Guide/{Panorama…,Pruebas-Unitarias…,Pruebas-De-Interfaz…}.md` | Una línea en cada uno dice `Guides/Test-Guide/` (confirma H-08 en `34929f2`) |
 
 ---
 
@@ -356,3 +360,18 @@ Convenciones y glosario transversales → `10_Convenciones-y-Glosario.md`.
 | Cómo probar la app Android en un teléfono | `Pruebas-De-Interfaz-Por-Pantalla.md` §3–§5 |
 | Cómo nombrar clases/carpetas (inglés vs español) | `LE2E/Nomenclatura-Convensiones-Arquitecture-Dot-Net.md` §2 |
 | Qué está verificado y qué no | `Beginner-Guide.md` §9 · `Del-Requerimiento-Al-Caso.md` §10 · `workflows/README.md` «Estado de verificación» |
+
+---
+
+## Fuentes
+
+- Inventario: `git ls-files Guides/Testing` en `34929f2` (29 archivos: 23 `.md`, 3 `.yml`, 3 `.png`).
+- Frontmatter y encabezados de cada `.md` de `Guides/Testing/**` (leídos en esta regeneración).
+- Comparaciones: `Guides/Testing/E2E-Guide/` vs `LE2E/E2E-Guide/`; `LE2E/` raíz y `workflows/` vs
+  `Guides/GitFlow/Estandares-Modelo-Ramas-Guide/`, `Guides/GitFlow/Git-Flow-Guides/`,
+  `Guides/Despliegue/GitHub-Action-Guide/`.
+- `git log -- Guides/Testing` (commits `82b2fe1`, `b6bf31a`, `257d4aa`).
+- Datos del laboratorio hermano `LAB/Lab-E2E.WebBlazor` (cantidades de casos, workflows, evidencia):
+  tomados de lo que afirman las guías; el repo del laboratorio no se re-inspeccionó (sin verificar).
+
+**Vigencia**: 2026-11-16 · fuente `Lab-Documentos` `main` `34929f2` · ia-db v2.0.

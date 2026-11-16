@@ -6,8 +6,11 @@
 > de microservicios y de manejo de archivos/multimedia, y la carpeta de práctica del usuario.
 > **Fuente primaria**: `Guides/Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` (doc_id
 > `GUIA-NET-ARQ`, v2.5.0): Índice, §0.3–§0.6, §8.3, §9.1–§9.3, Anexos A–E.
-> **Corte**: `Lab-Documentos` en `main` 5d5c2b4 (2026-10-11), relevado el 2026-10-18. Rutas relativas
+> **Corte**: `Lab-Documentos` en `main` 34929f2, relevado el 2026-11-16 (índice v2.0). Rutas relativas
 > a `Lab-Documentos/`; abreviatura `ARQ/` = `Guides/Dot-NET-Arquitectura-Guide/`.
+> **Vigencia del dominio**: el último commit que toca `ARQ/` es 68902e4 (2026-10-11); entre el corte
+> anterior (5d5c2b4) y 34929f2 `git diff --stat` sobre `ARQ/` es vacío. Lo nuevo está **afuera**:
+> la guía de IA Layer que declara `related` a esta guía (§7).
 
 ---
 
@@ -44,7 +47,7 @@
 | `Examples/Dot-NET-Arquitectura-Lab/lab.sh` | 1 | Guion de 842 líneas que corre los 25 pasos y escribe `aserciones.log` |
 | `Interactive-Activities/LaEstancia/` | 19 | Solución `LaEstancia.slnx` (un proyecto WebAPI con carpeta `Domain/` en esqueleto) |
 
-`aserciones.log` existe en disco pero **no está versionado** (lo excluye `*.log` en `.gitignore`, l. 121).
+`aserciones.log` existe en disco pero **no está versionado** (lo excluye `*.log` en `.gitignore`, l. 123; `git check-ignore -v` lo confirma).
 No hay PNG/PDF en el dominio.
 
 ---
@@ -66,7 +69,7 @@ más **E-E** (§9.1). Dos lecturas (§0.3): **Recorrido** §1→§9 con laborato
 | | 6 | Clientes: servicio en vez de `HttpClient` en la página, nacimiento de `Contracts`, Blazor Server sin API (E-A) | L22 |
 | III Criterio | 7 | Cada objeto responde una pregunta (tabla §7.1), vocabulario plano → vocabulario de la guía (§7.4), clase única y término medio | — |
 | | 8 | Árbol físico (§8.1), carpetas ≠ regla (§8.2), **referencias permitidas (§8.3, fuente única)**, nombres (§8.4), `Contracts` (§8.5) | L23 |
-| | 9 | Mapa de entrada (§9.1), escalera (§9.2), sobreingeniería (§9.3), evaluar versión/paquete (§9.4), escalera en código (§9.6), ejercicios (§9.7), criterio en una línea (§9.8) | L24 |
+| | 9 | Mapa de entrada (§9.1), escalera (§9.2), sobreingeniería (§9.3), evaluar versión/paquete (§9.4), problema conductor resuelto (§9.5), escalera en código (§9.6), ejercicios (§9.7), criterio en una línea (§9.8) | L24 |
 | Anexos | A | Hoja de ruta L00–L24 y V01–V09 (paso, §, comando, qué confirma, captura) | todos |
 | | B | 12 preguntas de verificación para diseñar una solución nueva | — |
 | | C | Versiones, soporte y licencias (consultado 2026-09-18) | — |
@@ -184,7 +187,7 @@ justifica, y el compilador —no la convención— hace cumplir las que se agreg
 | .NET 10 | LTS hasta 2028-11-14 (versión del laboratorio) |
 | .NET 8 / .NET 9 | soporte hasta 2026-11-10 |
 | MediatR | 12.5.0 Apache-2.0; desde 13.0.0 RPL-1.5 o comercial |
-| AutoMapper | 14.0.0 última MIT; GHSA-rvv3-g6hj-g44x afecta < 15.1.1 y 16.0.0–16.1.0 |
+| AutoMapper | 14.0.0 última MIT (desde 15.0.0 RPL-1.5 o comercial); GHSA-rvv3-g6hj-g44x afecta < 15.1.1 y 16.0.0–16.1.0 |
 | Dapper | 2.1.86 Apache-2.0 (único paquete de terceros del lab, V09) |
 | Refit | < 7.2.22 con GHSA-3hxg-fxwm-8gf7 |
 
@@ -355,6 +358,8 @@ tablas para agentes IA.
 | `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` | Diseño REST (`80-Implementacion-en-NET`) complementa §5 (códigos HTTP, ProblemDetails, OpenAPI) |
 | `Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md` | Declara `related: ../Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` |
 | `Guides/Testing/Lab-E2E.WebBlazor-Guides/Nomenclatura-Convensiones-Arquitecture-Dot-Net.md` | Remite a esta guía como «criterio general» (con ruta vieja, H-07) |
+| `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Dot-Net-Integration-AI-Layer-Guide.md` | Nueva desde el corte anterior: declara `related: ../../Dot-NET-Arquitectura-Guide/Dot-NET-Arquitectura-Guide.md` (la capa de IA se monta sobre esta arquitectura en capas) |
+| `Guides/README.md` l. 24 | Fila «Arquitectura» lista `Arquitectura/` y `Dot-NET-Arquitectura-Guide/` como carpetas hermanas |
 | `CHANGELOG.md` | Historia v2.0.1–v2.4.0 de la guía y del laboratorio |
 | `Lab-Documentos.Documentacion/PROMPTs/Guides/06-Crear-Dot-NET-Arquitectura-Guide/` | Prompt generador, mesas y conocimiento del taller (fuera del repo indexado) |
 
@@ -385,7 +390,11 @@ tabla de la Actividad 3) remite a §3.1, §3.3, §3.6, §3.7, §3.9, §4.10, §7
 | H-13 | contexto desactualizado | `ARQ/Interactive-Activities/Contextos/{Contexto,ParaRetomar}.md` | Corte 2026-09-26; la Actividad 1 ya registra la mesa de cierre del 2026-10-03 (acta 07). `Contexto.md` §3 y §8 dan la interactiva con 815 líneas (hoy 814) y la mesa 06 «corriendo» |
 | H-14 | artefacto no versionado | `ARQ/Examples/Dot-NET-Arquitectura-Lab/aserciones.log` | Anexo A lo presenta como evidencia, pero `*.log` lo excluye del repo |
 | H-15 | carpetas del usuario | `ARQ/Exercices/`, `ARQ/Interactive-Activities/Mis-Apuntes-Borradores/`, cuaderno de Actividad 1 | Del usuario: no escribir (en Actividad 1 sólo los bloques ⟨M⟩ son de la mesa). `Exercices/Exercice1` es un `Rectangulo` vacío |
-| H-16 | comentario desfasado | `ARQ/Interactive-Activities/LaEstancia/src/LaEstancia.WebAPI/Program.cs` | Dice que las capas irán «bajo src/Backend/», carpeta que la solución no tiene |
+| H-16 | comentario desfasado | `ARQ/Interactive-Activities/LaEstancia/src/LaEstancia.WebAPI/Program.cs` l. 6 | Dice que las capas irán «bajo src/Backend/», carpeta que la solución no tiene |
+| H-17 | dominio quieto | `ARQ/` | Sin commits desde 68902e4 (2026-10-11): H-01…H-16 siguen abiertos tal cual en 34929f2 (re-verificados H-03, H-04, H-05, H-07, H-08, H-14, H-16); el taller sigue cortado en la Actividad 1 |
+
+Re-verificación 2026-11-16: H-07 sigue (l. 205 con prefijo `LAB/Lab-Documentos/Guides/Arquitectura/…`);
+H-08 sigue (la entrada más nueva de la guía en `CHANGELOG.md` es v2.4.0, l. 471).
 
 ---
 
@@ -411,3 +420,18 @@ tabla de la Actividad 3) remite a §3.1, §3.3, §3.6, §3.7, §3.9, §4.10, §7
 | Método para deducir reglas de un enunciado | `Interactive-Activities/README.md` §3–§4 y `Actividades/Actividad-1-…md` |
 | Microservicios, gateway, auth multi-tenant, frontends | `ARQ/Microservicios-Guide.md` §2–§6, §10 |
 | Storage, imágenes, video, firma digital | `ARQ/Manejo-Archivos-Guide.md` §1–§5, tablas G3–G5 |
+
+---
+
+## Fuentes
+
+- `Guides/Dot-NET-Arquitectura-Guide/` completo (164 archivos versionados; `git ls-files`), en especial
+  `Dot-NET-Arquitectura-Guide.md` (frontmatter, Índice, §0, §8.3, §9, Anexos A–E),
+  `Dot-NET-Arquiectura-Interactive-Guide.md`, `Microservicios-Guide.md`, `Manejo-Archivos-Guide.md`,
+  `Interactive-Activities/**`, `Examples/Dot-NET-Arquitectura-Lab/**`, `Exercices/README.md`.
+- Externas: `CHANGELOG.md`, `.gitignore`, `Guides/README.md`,
+  `Guides/Metodologia-Entorno-Desarrollo/Metodologia-Entorno-Desarrollo-Guide.md`,
+  `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Dot-Net-Integration-AI-Layer-Guide.md`,
+  `Guides/Testing/Lab-E2E.WebBlazor-Guides/Nomenclatura-Convensiones-Arquitecture-Dot-Net.md`.
+
+*Vigente al 2026-11-16 (fuente `main` 34929f2).*

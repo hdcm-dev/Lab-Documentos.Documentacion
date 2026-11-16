@@ -9,7 +9,8 @@
 > **Alcance**: `Guides/Despliegue/Documentacion-Informe-Despliegue/**` — 30 archivos Markdown,
 > 5 348 líneas, 23 bloques Mermaid (22 en el cuerpo + 1 en el README). Sin código, sin
 > binarios, sin imágenes.
-> **Vigencia**: verificado contra `main` 5d5c2b4 el 2026-10-18 (ia-db v4.0).
+> **Vigencia**: re-verificado contra `main` 34929f2 el 2026-11-16 (ia-db v2.0). Sin cambios de
+> contenido desde 5d5c2b4: el último commit que toca la carpeta es 82b2fe1 (reorganización de `Guides/`).
 
 Convención de rutas de este índice: `IDS/` abrevia
 `Guides/Despliegue/Documentacion-Informe-Despliegue/` (relativo a `Lab-Documentos/`). Toda otra
@@ -40,7 +41,7 @@ ruta se da completa desde `Lab-Documentos/`.
   *Portability*→*Flexibility*, nueva *Safety*); **arc42 y C4 son marcos con licencia CC, no
   normas**; la única definición citada de «arquitectura de solución» es la de **TOGAF** (`G-03`).
 - **Estado**: los 30 documentos `status: vigente`, `origin: ia-assisted`, `confidence: alta`,
-  `last_review: 2026-07-21`. El contenido no cambió desde la v3.0 de la ia-db: sólo se **movió**
+  `last_review: 2026-07-21`. El contenido no cambió desde la ia-db anterior: sólo se **movió**
   de `Guides/Documentacion-Informe-Despliegue/` a `Guides/Despliegue/…` (commit 9162e07,
   2026-09-28, renombre puro) — y ese movimiento rompió los enlaces a guías hermanas (ver
   [Hallazgos](#hallazgos-del-dominio)).
@@ -355,9 +356,9 @@ YAML (un campo obligatorio ausente para el escenario/contexto «es un hallazgo»
 |---|---|---|
 | Documentación técnica (guía hermana) | `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/` | Trata por separado SAD, HLD, ADR, SRS, Deployment/Installation/Operations Guide, Runbook, Arquitectura de Seguridad, Modelo de Datos, API Specification. Esta guía **no los reescribe**: los sintetiza y enlaza (`MARCO-CONVENCIONES` §No duplicar). Sus `CTX-` son por tipo de trabajo y **no coinciden** con los de esta guía |
 | Organización y estilo de REST API | `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` | Sólo se cita su `Contextos.md` (contextos por relación con el consumidor); mismo prefijo `CTX-` con otro significado — desambiguar por ruta |
-| Normas del framework (fuera del repo) | `IA/PROMPTs/IA.Prompts/PromptFramework/` (workspace) | `Rule-Narrative-Voice` (voz), `Rule-Dual-Audience` (citado en `TEM-VISTAS`) y el Profile `Study-Guide-Documentation` (estructura temática) |
+| Normas del framework (fuera del repo) | `IA.Prompts/PromptFramework/` (repositorio externo, sin verificar desde este repo) | `Rule-Narrative-Voice` (voz), `Rule-Dual-Audience` (citado en `TEM-VISTAS`) y el Profile `Study-Guide-Documentation` (estructura temática) |
 
-Ninguna otra guía del repo enlaza a esta (búsqueda `git grep` de «Documentacion-Informe-Despliegue»
+Ninguna otra guía del repo enlaza a esta; sólo `Guides/README.md` lista la categoría `Despliegue/` (búsqueda `git grep` de «Documentacion-Informe-Despliegue»
 e «informe de solución» fuera de `IDS/`: sin resultados). Las hermanas de categoría
 `Guides/Despliegue/DevOps-Guide/` y `Guides/Despliegue/GitHub-Action-Guide/` no tienen vínculo
 declarado con esta.
@@ -371,7 +372,7 @@ declarado con esta.
 | H1 | Enlaces rotos (masivo) | De 283 enlaces relativos (fuera de bloques de código), **57 están rotos**: 54 a la guía hermana de documentación técnica, 2 a reglas del framework (H4) y 1 a la guía de REST API (H5). Causa de los 54: el renombre de 9162e07 bajó la guía un nivel (`Guides/Despliegue/…`) y la hermana pasó a `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/`. Afecta todos los `../../Documentacion-Tecnica/...` (desde subcarpetas) y `../Documentacion-Tecnica/README.md` (desde `IDS/README.md`); el destino correcto sería `../../../Documentacion-Tecnica/Creacion-Guias-Tecnicas/...` (desde subcarpetas). Archivos afectados: Actores, Contextos, Convenciones, Escenarios, Mapa-Conceptual, Audiencia, Que-es, FAM-NAT README, Decisiones (×6), FAM-ARQ README, Vista-de-Componentes, Vistas-y-Diagramas, Distribucion, Operacion, FAM-DESP README, FAM-REQ README, Errores, Pendientes, Plantilla, README |
 | H2 | Contradicción interna | `ANEXO-PLANTILLA` propone **13 secciones** con RF/RNF en 9–10 (después de la arquitectura) y remite a `TEM-ESTRUCTURA` como fundamento «de este orden»; `TEM-ESTRUCTURA` §El modelo propuesto define **10 secciones** con «Requisitos que gobiernan» en la 3, antes de la arquitectura, y lo justifica explícitamente. `ANEXO-CHECK` §Revisión por sección sigue las 13 de la plantilla. `ANEXO-PENDIENTES` registra la numeración como convención sin fijar, pero no la discrepancia de orden |
 | H3 | Afirmación desactualizada | `IDS/README.md` §Estado y verificación afirma «ningún enlace interno roto»; vale para los enlaces internos a la guía, pero ya no para los que salen a guías hermanas (H1) |
-| H4 | Enlace fuera del repo | `Convenciones.md` y `Vistas-y-Diagramas.md` enlazan `../../../../IA.Prompts/PromptFramework/Rules/Rule-*.md`, que no existe dentro de `Lab-Documentos`; las reglas viven en el workspace (`IA/PROMPTs/IA.Prompts/PromptFramework/Rules/`). Ruta no portable |
+| H4 | Enlace fuera del repo | `Convenciones.md` y `Vistas-y-Diagramas.md` enlazan `../../../../IA.Prompts/PromptFramework/Rules/Rule-*.md`, que no existe dentro de `Lab-Documentos`; las reglas viven en un repositorio externo (`IA.Prompts/PromptFramework/Rules/`). Ruta no portable |
 | H5 | Enlace a guía movida | `Contextos.md` §Relación con los contextos enlaza `../../Organizacion-Estilo-Rest-API/...`; la guía está ahora en `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` |
 | H6 | Matiz de mapeo | `RNF-01` se clasifica como *Reliability — fault tolerance* en `ANEXO-PLANTILLA` §10 y como *Reliability · availability* en la tabla de `TEM-RNF`; el texto de `TEM-RNF` §Los tres requisitos declara ambas. No es error, pero conviene leer `TEM-RNF` como autoridad |
 | H7 | Sin versión | Ningún documento tiene campo `version` (el frontmatter de `MARCO-CONVENCIONES` no lo prevé); la vigencia sólo se infiere por `last_review` 2026-07-21, anterior al movimiento de carpeta |
@@ -402,3 +403,16 @@ usuario (tipo `Exercices/`) en este dominio.
 | Cómo evaluar un informe ajeno (incluido bloque YAML para agentes) | `IDS/99-Anexos/Lista-de-Verificacion.md` |
 | Fuentes verificadas, su nivel y lo que no se verificó | `IDS/99-Anexos/Referencias.md` §1–§7; `IDS/99-Anexos/Pendientes.md` |
 | Definición y fuente de un término (container, viewpoint, SCD, tus…) | `IDS/99-Anexos/Glosario.md` |
+
+---
+
+## Fuentes
+
+- `Guides/Despliegue/Documentacion-Informe-Despliegue/**` (30 archivos, 5 348 líneas, 23 bloques
+  Mermaid): frontmatter, encabezados y cuerpo de cada pieza.
+- `Guides/README.md` (índice de categorías); `Guides/Documentacion-Tecnica/Creacion-Guias-Tecnicas/`
+  y `Guides/Arquitectura/Organizacion-Estilo-Rest-API/` (destinos reales de los enlaces rotos).
+- Recuento de enlaces: 283 relativos fuera de bloques de código, 57 rotos (54 · 2 · 1), recalculado
+  sobre 34929f2.
+
+**Vigencia**: 2026-11-16 · fuente `main` 34929f2.
