@@ -8,6 +8,27 @@ documental que se lee entero, no un artefacto que alguien instala en una versió
 versionado semántico que la guía enseña aplica al software que ese procedimiento libera, no a la
 guía misma.
 
+## [No publicado] - 2026-11-18
+
+### Añadido
+
+- **`PROMPTs/` — prompts e INPUTs del PO que estaban sin commitear**, por su orden del 2026-11-18 («comitealos»,
+  «sumalos a tu pr»): `Guides/17-IA-Estudio/`, `DEVs/Features/Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe.md`,
+  `Concepts/01-Framework-Concept/02` a `05-*.md` y `Guides/14-…/02-Ajuste-Coherencia-Reedicion-Documentacion.md`.
+
+### Cambiado
+
+- **`PROMPTs/` — numeración de los prompts del PO**: `Concepts/01-Framework-Concept/Crear-Framework-Concept.md` pasa a
+  `01-Crear-Framework-Concept.md` y `Guides/14-…/Crear-Analizar-…-Guide.md` a `01-Crear-Analizar-…-Guide.md`, sin
+  cambios de texto. `Indexado/{Crear,Actualizar}-Indexado.md`: rutas completas e invocación del PO.
+
+### Seguridad
+
+- **Ofuscación de lo que entra** con los marcadores de los repos públicos: equipos (`<equipo-2>`, `<equipo-mac>`),
+  etiqueta de runner de ejemplo (`{etiqueta-runner}`), repositorio privado (`<repo>`), app (`<app>`) y servicio privado
+  (`<servicio-privado>`). La captura `Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe/Historial-Chat.png` no entra: muestra
+  datos de una cuenta privada.
+
 ## [No publicado] - 2026-11-16
 
 ### Cambiado
