@@ -19,8 +19,9 @@ guía misma.
 ### Cambiado
 
 - **`PROMPTs/` — numeración de los prompts del PO**: `Concepts/01-Framework-Concept/Crear-Framework-Concept.md` pasa a
-  `01-Crear-Framework-Concept.md` y `Guides/14-…/Crear-Analizar-…-Guide.md` a `01-Crear-Analizar-…-Guide.md`, sin
-  cambios de texto. `Indexado/{Crear,Actualizar}-Indexado.md`: rutas completas e invocación del PO.
+  `01-Crear-Framework-Concept.md`, con un único cambio de texto (la etiqueta de runner ofuscada, ver Seguridad), y
+  `Guides/14-…/Crear-Analizar-…-Guide.md` pasa a `01-Crear-Analizar-…-Guide.md` sin cambios de texto.
+  `Indexado/{Crear,Actualizar}-Indexado.md`: rutas completas e invocación del PO.
 
 ### Seguridad
 
