@@ -9,7 +9,7 @@
 | D-03 | Qué es (tabla de términos) | «`docs-guard`, grupos PR-1 a PR-7» | ¿Qué son los grupos PR-1 a PR-7? ¿Qué controla cada uno? | media | Sí |
 | D-04 | Qué es (tabla de términos) | «Clase de pieza… fija… quién interviene» | Si la clase CL-nn ya fija D/P/H, ¿por qué la plantilla tiene una columna «Intervención» aparte? ¿Dos piezas de la misma clase pueden tener distinta intervención? | baja | Sí |
 | D-05 | Qué es (tabla de términos) | «si la pieza y la fuente discrepan, manda la fuente» | Si siempre manda la fuente, ¿qué decide el actor de «Decide si discrepa» y de la pregunta guía 4? Parece que hay dos reglas distintas. | media | No |
-| D-06 | Caso OneSignal | Columna «Clase» con valores «P» y «D» | En la plantilla «Clase» es CL-nn; acá la misma columna lleva D/P/H. ¿Es la intervención con otro nombre? ¿Qué CL-nn corresponde a cada fila? | media | No |
+| D-06 | Caso `<servicio-privado>` | Columna «Clase» con valores «P» y «D» | En la plantilla «Clase» es CL-nn; acá la misma columna lleva D/P/H. ¿Es la intervención con otro nombre? ¿Qué CL-nn corresponde a cada fila? | media | No |
 | D-07 | Arquitectura de referencia | «Conocimiento compartido CL-11 → copia con huella» | ¿Qué es el «conocimiento compartido»? ¿Qué es la «huella» (¿un hash?), cómo se calcula y quién la verifica? | media | Sí |
 | D-08 | Arquitectura de referencia | «Índice para agentes, expedientes y bitácoras» | No se definen «expediente» ni «bitácora». Las bitácoras no tienen clase asignada. | media | Sí |
 | D-09 | Arquitectura de referencia | «AGENTS.md CL-03» / «Índice para agentes CL-08» / `llms.txt` | ¿En qué se diferencian estas tres piezas orientadas a agentes? | baja | Sí |

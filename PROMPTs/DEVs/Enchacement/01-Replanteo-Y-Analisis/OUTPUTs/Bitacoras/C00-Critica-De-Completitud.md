@@ -191,7 +191,7 @@ Barrido de §3, sin coincidencias en R/I/N salvo donde se indica:
 
 - **H1 (corregido).** `R01:172` citaba `TP:30` con el nombre literal del servicio privado. Ahora dice `<SDD-B>` (nombre ofuscado), como la matriz de N00.
 - **H2 (corregido).** `R07:367` listaba el prefijo de ruta del repo privado. Ahora dice `<privado>/…`.
-- **Revisado sin acción:** `i7infra-dev` (literal de `TP:34`); dominios `aplicada.stream` y organización del runner (`R06:14`, `R06:143`, `R06:161-179`), que son de Lab-Geometria, público (`git remote` del repo); menciones a OneSignal (producto público citado por la guía, sin vínculo escrito con SDD-B); `R04` usa alias sistemáticos (`R04 §1`).
+- **Revisado sin acción:** `i7infra-dev` (literal de `TP:34`); dominios `aplicada.stream` y organización del runner (`R06:14`, `R06:143`, `R06:161-179`), que son de Lab-Geometria, público (`git remote` del repo); menciones a `<servicio-privado>` (producto público citado por la guía, sin vínculo escrito con SDD-B); `R04` usa alias sistemáticos (`R04 §1`).
 - **Riesgo vigente, ya registrado:** la ruta del host (`/home/<usuario>/…`) aparece en casi todas las bitácoras. Lo manda la carta, pero choca con S2 (X10, P4 de B00). Hay que barrer antes de versionar.
 
 ## 7. Correcciones aplicadas
@@ -227,4 +227,4 @@ Los anclajes internos (`](#…)`) de las 22 bitácoras se comprobaron con un scr
 
 - El resto de las líneas de R01–R07 e I01–I05 que no entraron en el muestreo (§5). El muestreo cubre 37 citas.
 - Que no exista ninguna fuente de §6.4 bajo otro nombre o en otro idioma: el barrido es léxico.
-- Las cifras de OneSignal, GitHub y Kubernetes de la guía (`R02:191`): no se reverificaron.
+- Las cifras de `<servicio-privado>`, GitHub y Kubernetes de la guía (`R02:191`): no se reverificaron.

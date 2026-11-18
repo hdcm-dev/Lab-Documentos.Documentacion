@@ -55,11 +55,11 @@
 
 ## 2. Mapa de la guía
 
-La guía tiene 12 secciones numeradas (la 12 es el registro de evidencias, `GUIA:717`) más un resumen ejecutivo, sin índice inicial (`GUIA:14-24` pasa del título al resumen y a la sección 1). Responde a una pregunta disparadora —¿el portal de OneSignal nace de Markdown?— y luego crece hacia el caso propio.
+La guía tiene 12 secciones numeradas (la 12 es el registro de evidencias, `GUIA:717`) más un resumen ejecutivo, sin índice inicial (`GUIA:14-24` pasa del título al resumen y a la sección 1). Responde a una pregunta disparadora —¿el portal de `<servicio-privado>` nace de Markdown?— y luego crece hacia el caso propio.
 
 ```mermaid
 flowchart TB
-    R["Resumen<br/>OneSignal = Mintlify + MDX + OpenAPI"] --> S1["§1 Evidencia del sitio"]
+    R["Resumen<br/>servicio-privado = Mintlify + MDX + OpenAPI"] --> S1["§1 Evidencia del sitio"]
     S1 --> S2["§2 Docs as code"]
     S2 --> S3["§3 Piezas de un documentador"]
     S3 --> S4["§4 Respuestas"]
@@ -73,7 +73,7 @@ flowchart TB
 
 | § | Líneas | Tesis | Evidencia que cita |
 |---|--------|-------|--------------------|
-| Resumen | `GUIA:16-20` | El portal de OneSignal lo genera Mintlify desde MDX + OpenAPI; *docs as code* es el estándar | Remite a §1 |
+| Resumen | `GUIA:16-20` | El portal de `<servicio-privado>` lo genera Mintlify desde MDX + OpenAPI; *docs as code* es el estándar | Remite a §1 |
 | 1 | `GUIA:24-94` | El generador es Mintlify; el fuente es MDX servido en `.md`; la referencia sale de OpenAPI 3.1.0; hay `llms.txt` para agentes | `curl` al sitio (meta generator, `.md` de 920 líneas, `openapi.json` v11.6, `llms.txt` con 170 entradas), doc de Mintlify del 2026-09-16 (`GUIA:84-90`, `GUIA:723-730`) |
 | 2 | `GUIA:98-144` | *Docs as code*: texto plano, Git, revisión, pruebas, despliegue continuo | Write the Docs (`GUIA:102-106`); API de GitHub sobre `github/docs`, `azure-docs`, `kubernetes/website`, `mintlify/docs` (`GUIA:127-136`); quickstart de Mintlify (`GUIA:140-144`) |
 | 3 | `GUIA:148-165` | Ocho piezas estables (prosa, contrato, navegación, componentes, fragmentos, validación, build, salida para agentes); Diátaxis para organizar | Tabla `GUIA:152-161`; `diataxis.fr` (`GUIA:165`) |
@@ -188,7 +188,7 @@ flowchart LR
 | Integración con Lab-Geometria | Propuesto | `GUIA:329`, `GUIA:522`, `GUIA:685`. `Lab-Geometria` sigue en `4b114d7` local y remoto (`git ls-remote`: `refs/heads/main` = `4b114d74…`) y no tiene `Markdig` ni `AddLocalization` en `src/` (`grep` sin resultados) |
 | Tres salidas (panel, API, sitio interno) | Una de tres probada. La referencia de API existía en Lab-Geometria; el sitio interno no se construyó | `GUIA:315-321` |
 | Ciclo de vida documental (§8) | Propuesto; la secuencia es criterio declarado | `GUIA:572`, `GUIA:684` |
-| Cifras de OneSignal, GitHub, Kubernetes | Verificado el 2026-09-16/19; **no se reverificó** en esta corrida | `GUIA:719-759` |
+| Cifras de `<servicio-privado>`, GitHub, Kubernetes | Verificado el 2026-09-16/19; **no se reverificó** en esta corrida | `GUIA:719-759` |
 
 ---
 
@@ -260,7 +260,7 @@ La especificación pide una H1 obligatoria, una cita en bloque opcional y listas
 
 ### 7.1 El prompt que la generó
 
-P14 pregunta sólo por OneSignal: si sus documentos son Markdown que se genera y se renderiza, y si así trabaja la industria (`P14:13-19`). Pide un apunte en `/LAB/Lab-Documentos/Guides/Sistema-Documentador-Tecnico/Sistema-Documentador-Tecnico.md` (`P14:21`) y aplica el mismo perfil `Study-Guide-Documentation` (`P14:38-41`). Sus reglas no exigen índice ni documentos autocontenidos (`P14:26-32`); el prompt actual sí (`PROMPT:42`).
+P14 pregunta sólo por `<servicio-privado>`: si sus documentos son Markdown que se genera y se renderiza, y si así trabaja la industria (`P14:13-19`). Pide un apunte en `/LAB/Lab-Documentos/Guides/Sistema-Documentador-Tecnico/Sistema-Documentador-Tecnico.md` (`P14:21`) y aplica el mismo perfil `Study-Guide-Documentation` (`P14:38-41`). Sus reglas no exigen índice ni documentos autocontenidos (`P14:26-32`); el prompt actual sí (`PROMPT:42`).
 
 Las secciones 5 a 8 de la guía exceden la pregunta de P14. La guía explica que nacieron «a medida que vayamos discutiendo» (`P14:21`) y las fecha el 2026-09-19 (`GUIA:719`). Lo que el usuario preguntó en ese intercambio no quedó registrado: `OUTPUTs/` de P14 está vacía.
 

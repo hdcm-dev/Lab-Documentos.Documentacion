@@ -25,6 +25,12 @@ guía misma.
 
 ### Seguridad
 
+- **Ofuscación del proveedor de referencia en todo el repo** (aprobación del PO del 2026-11-18, «si, aprobado»): las dos menciones
+  que ya estaban en `main` (`Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe.md:19` y la URL con parámetros de rastreo de
+  `Guides/14-…/01-Crear-Analizar-…-Guide.md:13`, que queda como «la documentación de `<servicio-privado>`») y, con la
+  misma regla, las demás de LDD: 106 archivos, 212 líneas, entre bitácoras, actuaciones y evidencia de los
+  expedientes 0002 y 0003. Anclas `ref-<proveedor>-*` → `ref-servicio-privado-*`. La evidencia se redactó, no se regeneró.
+
 - **Ofuscación de lo que entra** con los marcadores de los repos públicos: equipos (`<equipo-2>`, `<equipo-mac>`),
   etiqueta de runner de ejemplo (`{etiqueta-runner}`), repositorio privado (`<repo>`), app (`<app>`) y servicio privado
   (`<servicio-privado>`). La captura `Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe/Historial-Chat.png` no entra: muestra
@@ -35,6 +41,15 @@ guía misma.
 - **Fecha:** 2026-11-18. **Responsable:** el responsable del producto (PO), por sus órdenes literales del día sobre los
   archivos sin commitear («comitealos») y sobre los prompts renombrados («sumalos a tu pr»), y por su regla general
   asentada en el CHANGELOG de `hdcm-dev/Lab-Documentos` el 2026-11-01 («siempre para conformar los pr sigue
+  `Knowledge-Conformacion-Pull-Request-Automatico.md`»).
+- **Alcance:** este PR. **Guarda:** G1–G4; techo 120 minutos; intervalo 30 segundos. **Método:** commit de merge atado
+  al SHA, sin `squash`. **Excepción:** un cuestionamiento particular del PO la vuelve manual.
+
+### Delegación del merge (Conformacion-Pull-Request-Automatico 2.1, ofuscación del proveedor de referencia)
+
+- **Fecha:** 2026-11-18. **Responsable:** el responsable del producto (PO), por su aprobación literal del día sobre la
+  propuesta de ofuscar el proveedor («si, aprobado») y por su regla general asentada en el CHANGELOG de
+  `hdcm-dev/Lab-Documentos` el 2026-11-01 («siempre para conformar los pr sigue
   `Knowledge-Conformacion-Pull-Request-Automatico.md`»).
 - **Alcance:** este PR. **Guarda:** G1–G4; techo 120 minutos; intervalo 30 segundos. **Método:** commit de merge atado
   al SHA, sin `squash`. **Excepción:** un cuestionamiento particular del PO la vuelve manual.

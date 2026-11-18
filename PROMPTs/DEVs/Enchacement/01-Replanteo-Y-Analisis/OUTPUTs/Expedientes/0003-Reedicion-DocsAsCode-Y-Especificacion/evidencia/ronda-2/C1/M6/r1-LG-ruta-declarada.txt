@@ -158,9 +158,9 @@ docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/rojo/Referencias.md:1
 docs/_gobierno/compuerta/tools/docs-guard/fixtures/ai/verde/a.md:3: aviso url-sin-fecha: https://docs.github.com/actions
 docs/_gobierno/compuerta/tools/docs-guard/fixtures/reflint/rojo/Referencias.md:5: ERROR url-sin-fecha: https://github.com/ejemplo
 docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/obsoleto/a.md:16: aviso dominio-sin-referencia: mintlify.com/docs/quickstart
-docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/obsoleto/a.md:17: aviso url-sin-fecha: https://documentation.onesignal.com/reference/create-user
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/obsoleto/a.md:17: aviso url-sin-fecha: https://<servicio-privado>/reference/create-user
 docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/rojo/a.md:3: ERROR dominio-sin-referencia: mintlify.com/docs/quickstart
-docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/rojo/a.md:5: ERROR url-sin-fecha: https://documentation.onesignal.com/reference/create-user
+docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/rojo/a.md:5: ERROR url-sin-fecha: https://<servicio-privado>/reference/create-user
 docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/rojo/a.md:9: ERROR dominio-sin-referencia: diataxis.fr
 docs/_gobierno/compuerta/tools/docs-guard/fixtures/url-fecha/rojo/a.md:10: ERROR dominio-sin-referencia: writethedocs.org/guide/docs-as-code/
 == PR-7 url-fecha: ROJO (errores=5 avisos=3) documentos-que-bloquean=15

@@ -61,7 +61,7 @@ Todas en el equipo de pruebas, el 2026-11-01, sobre `{dir-de-trabajo}/wt/dac-LD`
 | ¿Sigue citada? | Sí: siete enlaces vivos desde el cuerpo, cuatro de ellos como **única** fuente de un dato | `TEM-01:170`, `TEM-03:245`, `TEM-04:106`, `TEM-05:184`, `README.md:99,124`, `01-Mapa.md:130`, `Prueba-Ayuda-Por-Rol/README.md:3`, `Lanzar-Example.md:27` |
 | ¿Cuesta algo mantenerla? | Sus 33 avisos de `url-fecha` salen en cada corrida (pendiente PE-6 del 290, abierto) | paso `fijadas` del §2 |
 | ¿Su tabla de destinos es exacta? | No del todo: la fila 8.7 dice actores `ACT-SDEI-1` a `ACT-SDEI-5` y el Marco tiene seis (`00-Marco.md:149`); la fila 10 dice que «cada tema cierra con sus hechos, interpretaciones y criterio propio», y sólo TEM-01…03 tienen esa sección | líneas 79 y 82 |
-| Datos propios que el cuerpo no absorbió | El caso de un portal público de notificaciones (Mintlify, MDX, `llms.txt` de 170 páginas) sólo vive acá: `Referencias.md` no tiene ninguna entrada de ese proveedor (`grep -c OneSignal` = 0) | tabla de destinos, filas 1–1.4 «Parcial» |
+| Datos propios que el cuerpo no absorbió | El caso de un portal público de notificaciones (Mintlify, MDX, `llms.txt` de 170 páginas) sólo vive acá: `Referencias.md` no tiene ninguna entrada de ese proveedor (`grep -c <servicio-privado>` = 0) | tabla de destinos, filas 1–1.4 «Parcial» |
 
 Conclusión: está **obsoleta en el estado, viva en el uso**. Antes de archivarla, el libro unificado (P1) tiene que absorber
 el caso del portal con su referencia APA y retirar las siete remisiones.

@@ -198,7 +198,7 @@ eso no aparecieron al segmentar por afinidad.
 
 | Falta | Quién la pidió | Estado |
 | --- | --- | --- |
-| Reverificación del portal de notificaciones (Mintlify, 170 páginas) | N2 §9.3 | N6 no la hizo: `grep -n -i 'portal\|onesignal' Nucleo-N6.md` sólo da una mención en la l. 275. `Referencias.md:152` cita el repositorio de Mintlify, no el portal |
+| Reverificación del portal de notificaciones (Mintlify, 170 páginas) | N2 §9.3 | N6 no la hizo: `grep -n -i 'portal\|<servicio-privado>' Nucleo-N6.md` sólo da una mención en la l. 275. `Referencias.md:152` cita el repositorio de Mintlify, no el portal |
 | Fuente de *single sourcing* e *internal developer portal* | N2 §9.3 | Sin respuesta: `grep -c -i 'single sourc\|internal developer' Nucleo-N6.md` = 0 |
 | ISO/IEC/IEEE 15289:2019 | N2 §9.3 | Sin respuesta: `grep -c 15289 Nucleo-N6.md` = 0 |
 | Barrido del índice de conocimientos (`Index-Knowledge.md`) | Mesa-De-Expertos-A-Pedido §3.4 | Ningún núcleo lo hizo; lo hace la propuesta de panel (§5 de `02-Propuesta-De-Panel.md`) |
@@ -253,7 +253,7 @@ Todas del 2026-11-01, en el equipo de pruebas.
 | M2 | `grep -n 'trazas)\|TRAZAS_EXTRA\|DOCS_GUARD_TRAZAS_EXTRA' {dir-de-trabajo}/wt/dac-LD/scripts/ci-local.sh` | l. 15-16: «sobre RUTA y los punteros de la raíz (DOCS_GUARD_TRAZAS_EXTRA; por defecto AGENTS.md, README.md y …»; l. 57: `for t in ${DOCS_GUARD_TRAZAS_EXTRA-AGENTS.md README.md Guides/README.md}` |
 | M3 | `sed -n 48p SDEI/TEM-05-Ayuda-Al-Usuario-Final.md` | «… Toda página de usuario traza a un `RD-`» |
 | M4 | `sed -n 88p SDEI/TEM-05-Ayuda-Al-Usuario-Final.md` | Fila `ESC-SDEI-3`: «La fila `RD-` y el caso de uso de la unidad de la pantalla, en el registro del SDD» |
-| M5 | `grep -n -i 'mintlify\|onesignal' SDEI/99-Anexos/Referencias.md` | Sólo l. 152, `ref-mintlify-docs-2026` (repositorio `mintlify/docs`, archivo `.vale.ini`) |
+| M5 | `grep -n -i 'mintlify\|<servicio-privado>' SDEI/99-Anexos/Referencias.md` | Sólo l. 152, `ref-mintlify-docs-2026` (repositorio `mintlify/docs`, archivo `.vale.ini`) |
 | M6 | `curl -s https://api.github.com/repos/hdcm-dev/{Lab-Documentos,Lab-Documentos.Documentacion}/pulls?state=open` (18:11 UTC) | Ninguno abierto en los dos |
 | M7 | `ls -R …/Expedientes/0003-Reedicion-DocsAsCode-Y-Especificacion/` (worktree LDD, `8b96bc6`) | `README.md`; `actuaciones/002-constancia-coordinacion-con-framework-maui.md`; `evidencia/` vacía |
 | M8 | `grep -n 'Escenario\|ESC-SDEI' SDEI/00-Marco.md` y `sed -n 100,109p` | Tabla «Qué cambia entre escenarios»: `ESC-SDEI-4` activa `CL-01 a CL-05, CL-07, CL-08, CL-11 a CL-13` (sin CL-06 ni CL-09); `ESC-SDEI-3` fuente generada «OpenAPI y comentarios XML» |

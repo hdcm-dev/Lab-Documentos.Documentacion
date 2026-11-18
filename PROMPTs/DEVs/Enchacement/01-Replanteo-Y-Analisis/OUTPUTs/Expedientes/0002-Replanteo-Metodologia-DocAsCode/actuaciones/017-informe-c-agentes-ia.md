@@ -122,7 +122,7 @@ corrieron dos repeticiones por condición.
 
 | # | Pregunta | Respuesta canónica |
 | --- | --- | --- |
-| 1 | Código, tipo y entradas del `llms.txt` de OneSignal | `200 text/plain`, 170 entradas (`GUIA:94`, `GUIA:726`) |
+| 1 | Código, tipo y entradas del `llms.txt` de `<servicio-privado>` | `200 text/plain`, 170 entradas (`GUIA:94`, `GUIA:726`) |
 | 2 | Traza de `alumno/enviar-un-trabajo.md` y por qué falla el CI | `CU-00026@1.1` frente a un CU que ya está en 1.2: falla por frescura (`GUIA:650`) |
 | 3 | Qué comparten la navegación, el `.md` y el `llms.txt`, y qué se filtra si no lo comparten | El mismo filtro de rol; si no, se filtran títulos y descripciones de páginas que el rol no ve (`GUIA:439`) |
 

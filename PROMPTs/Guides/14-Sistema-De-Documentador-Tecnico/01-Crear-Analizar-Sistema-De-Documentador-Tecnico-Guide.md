@@ -10,7 +10,7 @@
 
 ## Contexto
 
-  Te consulto sobre `https://documentation.onesignal.com/reference/create-user?_gl=1*1ef8hh7*_gcl_aw*R0NMLjE3ODk2MTAyODEuQ2p3S0NBaUE4WXl1QmhCU0Vpd0E1UjMtRV9qaVFXalFqSHg0TzRXZE8xZDZHNkdfWlV4dTFRUDhGSmxXT0hKV1c0ZDRCaDZxcWxPUUV4b0MyUkVRQXZEX0J3RQ..*_gcl_au*NDQ0NDcxMzQ5LjE3ODQ5MDQ3MzQuNjAyNjYyOTcwLjE3ODkzODU1MjMuMTc4OTM4NTYyMS40MjA3Mjg0MjUuMTc4OTM4NTUyMy4xNzg5Mzg1NjIx*_ga*NDM1MDk1NTM3LjE3ODQ5MDQ3MzQ.*_ga_Z6LSTXWLPN*czE3ODk2MTAyNzgkbzYxJGcxJHQxNzg5NjEwNTIxJGozJGwwJGgxNzc3OTM5MjIw`
+  Te consulto sobre la documentación de `<servicio-privado>`
 
   Es documentación de un producto que ofrece un servicio , tiene su api, y su panel de control, etc, 
 

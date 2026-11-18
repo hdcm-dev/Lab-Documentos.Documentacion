@@ -4,7 +4,7 @@ set -u
 B=<ensayo>
 C=$1; M=$2; N=$3
 P='Respondé en español, breve, usando SOLO los archivos de este directorio (no uses conocimiento previo). Para cada respuesta citá el archivo del que sale. Si no lo encontrás, decí "no encontrado".
-1) ¿Qué código HTTP y tipo de contenido devolvió el llms.txt de OneSignal, y cuántas entradas tenía?
+1) ¿Qué código HTTP y tipo de contenido devolvió el llms.txt de <servicio-privado>, y cuántas entradas tenía?
 2) En el recorrido de punta a punta de una página de ayuda, ¿qué traza declara la página alumno/enviar-un-trabajo.md y por qué falla el validador de CI?
 3) En la propuesta de ayuda por rol, ¿qué deben compartir la navegación, el .md crudo y el llms.txt, y qué se filtraría si no lo comparten?'
 cd $B/runs/e1/$C

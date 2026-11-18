@@ -235,7 +235,7 @@ La unidad toca sólo lo que **sobrevive** a la reestructura de Q42: destinos de 
 - un documento por tema, con la estructura fija del Profile;
 - anexos: plantillas, listas de verificación, glosario y referencias.
 
-La guía actual no se descarta. Su contenido se redistribuye, y el caso OneSignal y el caso Geometría pasan a ser **ejemplos** dentro de los temas.
+La guía actual no se descarta. Su contenido se redistribuye, y el caso `<servicio-privado>` y el caso Geometría pasan a ser **ejemplos** dentro de los temas.
 
 | Alternativa | Qué pierde |
 | --- | --- |
@@ -280,7 +280,7 @@ flowchart TB
   M --> T1
   MAPA --> T6 & T4 & P
   T1 & T2 & T3 & T4 & T5 & T6 --> ANX["Anexos: plantillas por tipo de sistema · VER/CQ · glosario con prefijos · referencias"]
-  EX["Ejemplos: OneSignal · PoC ayuda por rol · mini demo MAUI · piloto Geometría"] -.-> T4 & T6
+  EX["Ejemplos: servicio-privado · PoC ayuda por rol · mini demo MAUI · piloto Geometría"] -.-> T4 & T6
 ```
 
 *Diagrama: criterio propio, sobre la estructura del Profile (`PERFIL:41-50`) y los núcleos (`N08` §6).*

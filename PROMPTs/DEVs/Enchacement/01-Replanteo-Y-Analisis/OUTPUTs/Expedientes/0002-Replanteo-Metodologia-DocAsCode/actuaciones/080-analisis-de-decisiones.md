@@ -1139,7 +1139,7 @@ SDD-B): ese expediente se cita calificado desde 0002 (F011 §3.13).
 
 | Orden | `doc_id` | Tema | Núcleo | Hereda de `GUIA` |
 | --- | --- | --- | --- | --- |
-| 1 | `TEM-01` | Qué es un sistema documentador: piezas y caso de industria | N05 (conceptual) | §1–§4 (OneSignal como ejemplo trabajado) |
+| 1 | `TEM-01` | Qué es un sistema documentador: piezas y caso de industria | N05 (conceptual) | §1–§4 (`<servicio-privado>` como ejemplo trabajado) |
 | 2 | `TEM-02` | El ciclo documental: de la captura de requerimientos a la integración (D14) | N04 | §8 |
 | 3 | `TEM-03` | Topología de repositorios y versionado | N02 | §6.2–§6.3 |
 | 4 | `TEM-04` | Doble audiencia: personas y agentes | N03 | §1.4, §5.3, parte de §7 |
@@ -1168,7 +1168,7 @@ flowchart TB
   M --> T1
   MAPA --> CI & T5 & T6
   T1 & T2 & T3 & T4 & T5 & T6 & T7 --> ANX["Anexos de referencia"]
-  EX["Examples: mini demo MAUI · PoC ayuda por rol · OneSignal · piloto Geometría"] -.ejemplos.-> T5 & T6 & T3
+  EX["Examples: mini demo MAUI · PoC ayuda por rol · servicio-privado · piloto Geometría"] -.ejemplos.-> T5 & T6 & T3
 ```
 
 **Segunda alternativa.** B queda excluida por F8: el Profile exige un documento por tema y `R02:319` marca «No cumple».

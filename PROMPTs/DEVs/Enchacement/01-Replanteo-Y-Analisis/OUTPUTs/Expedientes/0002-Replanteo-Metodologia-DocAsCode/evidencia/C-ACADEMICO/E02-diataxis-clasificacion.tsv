@@ -23,7 +23,7 @@ linea	seccion	tipo	motivo (brujula: accion/cognicion x adquisicion/aplicacion)
 286	6.3 Coherencia de ramas y versiones	E	razonamiento
 294	6.4 Renderiza el panel o un servicio aparte	E	razonamiento por lector
 325	7. Propuesta (intro)	E	encuadre de la propuesta
-331	7.1 Que se toma de OneSignal	R	tabla de correspondencia
+331	7.1 Que se toma de <servicio-privado>	R	tabla de correspondencia
 345	7.2 Arquitectura	E+R	diagrama razonado + tabla de piezas de consulta
 377	7.3 Estructura y contrato del frontmatter	R	contrato de campos
 413	7.4 Derivacion desde la especificacion	E+G	razon de derivar + receta seccion CU -> seccion de ayuda
