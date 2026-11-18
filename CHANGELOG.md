@@ -8,6 +8,37 @@ documental que se lee entero, no un artefacto que alguien instala en una versió
 versionado semántico que la guía enseña aplica al software que ese procedimiento libera, no a la
 guía misma.
 
+## [No publicado] - 2026-11-18
+
+### Añadido
+
+- **`PROMPTs/` — prompts e INPUTs del PO que estaban sin commitear**, por su orden del 2026-11-18 («comitealos»,
+  «sumalos a tu pr»): `Guides/17-IA-Estudio/`, `DEVs/Features/Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe.md`,
+  `Concepts/01-Framework-Concept/02` a `05-*.md` y `Guides/14-…/02-Ajuste-Coherencia-Reedicion-Documentacion.md`.
+
+### Cambiado
+
+- **`PROMPTs/` — numeración de los prompts del PO**: `Concepts/01-Framework-Concept/Crear-Framework-Concept.md` pasa a
+  `01-Crear-Framework-Concept.md`, con un único cambio de texto (la etiqueta de runner ofuscada, ver Seguridad), y
+  `Guides/14-…/Crear-Analizar-…-Guide.md` pasa a `01-Crear-Analizar-…-Guide.md` sin cambios de texto.
+  `Indexado/{Crear,Actualizar}-Indexado.md`: rutas completas e invocación del PO.
+
+### Seguridad
+
+- **Ofuscación de lo que entra** con los marcadores de los repos públicos: equipos (`<equipo-2>`, `<equipo-mac>`),
+  etiqueta de runner de ejemplo (`{etiqueta-runner}`), repositorio privado (`<repo>`), app (`<app>`) y servicio privado
+  (`<servicio-privado>`). La captura `Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe/Historial-Chat.png` no entra: muestra
+  datos de una cuenta privada.
+
+### Delegación del merge (Conformacion-Pull-Request-Automatico 2.1, prompts e INPUTs sin commitear)
+
+- **Fecha:** 2026-11-18. **Responsable:** el responsable del producto (PO), por sus órdenes literales del día sobre los
+  archivos sin commitear («comitealos») y sobre los prompts renombrados («sumalos a tu pr»), y por su regla general
+  asentada en el CHANGELOG de `hdcm-dev/Lab-Documentos` el 2026-11-01 («siempre para conformar los pr sigue
+  `Knowledge-Conformacion-Pull-Request-Automatico.md`»).
+- **Alcance:** este PR. **Guarda:** G1–G4; techo 120 minutos; intervalo 30 segundos. **Método:** commit de merge atado
+  al SHA, sin `squash`. **Excepción:** un cuestionamiento particular del PO la vuelve manual.
+
 ## [No publicado] - 2026-11-16
 
 ### Cambiado

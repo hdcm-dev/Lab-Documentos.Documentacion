@@ -9,19 +9,17 @@
 
 ## Contexto
 
-  Leer `/LAB/Lab-Documentos/Lab-Documentos/Concepts/Framework-Concept/Framework-APP.md`, trata sobre una idea de aplicación movil en .net construida con paginas .net  blazor hibridas  en .NET MAUI.
+  En  `/LAB/Lab-Documentos/Lab-Documentos.Documentacion/PROMPTs/Concepts/01-Framework-Concept/OUTPUTs`, la mesa estuvo trabajando en una nueva apicación.
 
-  Actualmente el equipo tiene problemas al introducir un PR sobre una rama estable , al no dispararse pruebas automatizadas puede romper funcionaldiades que ya funcionaban correctamente. La necesidad pasa por tener prodicimientos claros en los PR y en los conceptos de integración  y versionado del producto
+  De este `/LAB/Lab-Documentos/Lab-Documentos/Concepts/Framework-Concept/Demo` es La versión demo de la `Aplicación PoC` que ejemplifica el concepto tratado como modelo de aplicación en `/LAB/Lab-Documentos/Lab-Documentos/Concepts/Framework-Concept/Developer-Guide.md`
 
-  Leer `/LAB/Lab-E2E.WebBlazor/Lab-E2E.WebBlazor.Documentacion/ia-db/README.md` son ejemplos, referido al proyecto `MovilidadUrbana.MAUI`
-
-  Se hace necesario contar con un modelo de aplicación que permita aplicar actualizaciones desde el servidor sin pasar por el ciclo de actualización rigido que imponen los store o distribuidores de aplicaciones como play store de google o app connect de apple. Sería muy intersante poder aplicar actualizaciones dinamicas de tal forma que cuando el usuario abre la aplicación esta aplicación solicita bajar las actualizaciones de forma automatica
+  Se hace necesario crear una compilación compilación.
 
 ---
 
 ## Objetivos
 
-   Se busca establecer un framwork para construir aplicacionet .net en maui conforme al contexto planteado
+   Generar una aplicación
 
 ---
 
@@ -29,7 +27,7 @@
 
   - Desarrollar una guía instructiva academica enfocada a un desarrollador sin experiencia que describa la tecnica en `/LAB/Lab-Documentos/Lab-Documentos/Concepts/Framework-Concept/Developer-Guide.md`  y en base a esto construir Construir ejemplo de demostración en `/LAB/Lab-Documentos/Lab-Documentos/Concepts/Framework-Concept/Demo` que a su vez sirva esta demo para ilustrar con ejemplo a dicha guía. Tomar base para la construcción de la demo al proyecto `MovilidadUrbana.MAUI`.
  
-  - Configura el wofklow con este runner de github :  `runs-on: [self-hosted, i7infra-dev]`
+  - Configura el wofklow con este runner de github :  `runs-on: [self-hosted, {etiqueta-runner}]`
 
   - Toda la documentación generarla en `/LAB/Lab-Documentos/Lab-Documentos/Concepts/Framework-Concept`
 
