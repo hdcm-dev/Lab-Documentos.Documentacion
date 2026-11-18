@@ -30,6 +30,15 @@ guía misma.
   (`<servicio-privado>`). La captura `Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe/Historial-Chat.png` no entra: muestra
   datos de una cuenta privada.
 
+### Delegación del merge (Conformacion-Pull-Request-Automatico 2.1, prompts e INPUTs sin commitear)
+
+- **Fecha:** 2026-11-18. **Responsable:** el responsable del producto (PO), por sus órdenes literales del día sobre los
+  archivos sin commitear («comitealos») y sobre los prompts renombrados («sumalos a tu pr»), y por su regla general
+  asentada en el CHANGELOG de `hdcm-dev/Lab-Documentos` el 2026-11-01 («siempre para conformar los pr sigue
+  `Knowledge-Conformacion-Pull-Request-Automatico.md`»).
+- **Alcance:** este PR. **Guarda:** G1–G4; techo 120 minutos; intervalo 30 segundos. **Método:** commit de merge atado
+  al SHA, sin `squash`. **Excepción:** un cuestionamiento particular del PO la vuelve manual.
+
 ## [No publicado] - 2026-11-16
 
 ### Cambiado
