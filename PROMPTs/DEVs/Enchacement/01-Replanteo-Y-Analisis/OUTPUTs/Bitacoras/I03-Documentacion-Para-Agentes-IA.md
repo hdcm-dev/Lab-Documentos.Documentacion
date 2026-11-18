@@ -133,7 +133,7 @@ Lectura (criterio propio): las dos fuentes no se contradicen. La del ETH mide re
 
 ### 5.2 Markdown por página y negociación de contenido
 
-- GitBook: cualquier página tiene versión Markdown agregando `.md` a la URL [F10]. Mintlify y Claude Code docs anteponen a cada página un aviso «Fetch the complete documentation index at: …/llms.txt» [F03][F09]; la guía del corpus ya registró ese patrón en OneSignal (`Sistema-Documentador-Tecnico-Guide.md:94`).
+- GitBook: cualquier página tiene versión Markdown agregando `.md` a la URL [F10]. Mintlify y Claude Code docs anteponen a cada página un aviso «Fetch the complete documentation index at: …/llms.txt» [F03][F09]; la guía del corpus ya registró ese patrón en `<servicio-privado>` (`Sistema-Documentador-Tecnico-Guide.md:94`).
 - Cloudflare, «Introducing Markdown for Agents», 2026-02-12: con `Accept: text/markdown` convierte el HTML a Markdown en el borde; agrega `x-markdown-tokens` (tokens estimados) y `Content-Signal: ai-train=yes, search=yes, ai-input=yes`; ejemplo propio de 16 180 → 3 150 tokens («a 80% reduction») [F25]. **Madurez: V (beta)**, pero apoyado en HTTP estándar (negociación de contenido).
 - Observación propia: servir Markdown **desde la fuente** (DocAsCode ya lo tiene) es superior a convertir HTML: no hay pérdida ni ruido de navegación, y el `.md` servido es auditable contra el repo.
 
@@ -338,7 +338,7 @@ Guía: `/LAB/Lab-Documentos/Lab-Documentos/Guides/Documentacion-Tecnica/Sistema-
 | Tema | Qué dice hoy la guía | Qué aporta esta investigación |
 |---|---|---|
 | llms.txt | Lo presenta como «Convención `llms.txt` (adoptada por varios generadores)» (`:161`) y lo implementa por rol (`:339`, `:439`, `:504`) | Precisar madurez **P**: propuesta [F01]; Lighthouse lo audita [F23]; Google lo compara con meta keywords [F24]; consumo medido bajo [secundaria]. Mantenerlo, pero no venderlo como estándar. |
-| `.md` por página | Registrado (OneSignal, `:94`; propuesta `:339`) | Coincide con GitBook, Mintlify y Cloudflare [F10][F09][F25]; sumar `rel="alternate"` [F01]. |
+| `.md` por página | Registrado (`<servicio-privado>`, `:94`; propuesta `:339`) | Coincide con GitBook, Mintlify y Cloudflare [F10][F09][F25]; sumar `rel="alternate"` [F01]. |
 | Procedencia de agentes | `origin` y `confidence` (`:565`, `:603`) | Agregar trailer de commit y regla de responsabilidad humana [F19]; aprobador ≠ solicitante [F06]. |
 | AGENTS.md / CLAUDE.md / copilot-instructions | **No aparece** (búsqueda sin coincidencias de `agents.md`, `claude.md`, `copilot`) | Canal 1 completo (§4), con evidencia empírica de qué contenido sirve [F15][F16]. |
 | MCP de documentación | **No aparece** (`mcp` sin coincidencias) | Canal 3 (§6). |

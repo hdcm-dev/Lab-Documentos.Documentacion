@@ -14,4 +14,4 @@ traces: []
 # Documento obsoleto
 
 La guía de inicio dice que un push publica (`mintlify.com/docs/quickstart`), y el portal está en
-https://documentation.onesignal.com/reference/create-user.
+`https://<servicio-privado>/reference/create-user`.

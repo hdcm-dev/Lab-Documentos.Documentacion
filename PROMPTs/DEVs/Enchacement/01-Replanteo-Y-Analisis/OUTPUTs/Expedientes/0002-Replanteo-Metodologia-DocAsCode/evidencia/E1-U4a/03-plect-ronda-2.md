@@ -24,7 +24,7 @@ Recorrí la ruta «aprender» en el orden README → 00 Marco → 01 Mapa. Ahí 
 | 15 | README §4 | Los ejemplos «ayuda por rol» y «lanzar la prueba de concepto», ¿forman parte de la ruta aprender? | no | baja |
 | 16 | README §4 | No se explica qué es «APA 7» | no | baja |
 | 17 | README §4 | `DOC-SDT-0001` y `GP-SDEI-LANZAR` usan prefijos (`DOC-`, `GP-`) y tipos («nota de estudio», «guía práctica») que no se explican. ¿`SDT` es otro cuerpo? | no | baja |
-| 18 | README §4 / Marco §2 | El caso de industria de la guía es un proveedor de notificaciones push (OneSignal) y `ESC-SDEI-4` es «un servicio de notificaciones push» privado (SDD-B). ¿Son el mismo sistema? | no | baja |
+| 18 | README §4 / Marco §2 | El caso de industria de la guía es un proveedor de notificaciones push (`<servicio-privado>`) y `ESC-SDEI-4` es «un servicio de notificaciones push» privado (SDD-B). ¿Son el mismo sistema? | no | baja |
 | 19 | README §5 | El árbol de carpetas no muestra `Sistema-Documentador-Tecnico-Guide.md`, que sí se enlaza en la raíz del cuerpo | no | baja |
 | 20 | README §5 | Si en un cuerpo nuevo «un archivo sin frontmatter lo pone en rojo», ¿cómo sabe la compuerta que los `README.md` de ejemplos están exceptuados? | no | baja |
 | 21 | README §5 | ¿Qué es una «referencia mal formada»? | no | baja |

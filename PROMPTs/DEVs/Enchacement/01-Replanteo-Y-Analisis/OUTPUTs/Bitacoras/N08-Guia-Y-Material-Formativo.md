@@ -178,6 +178,6 @@ N08 es el **punto de integración** (ver N00 §9): la fase de integración que p
 ## 12. No verificado
 
 - La autoría de las secciones 5 a 8 de la guía: la discusión que las originó no quedó registrada (`R02:265`).
-- Cifras de OneSignal, GitHub y Kubernetes de la guía: verificadas el 2026-09-16/19, no reverificadas (`R02:191`).
+- Cifras de `<servicio-privado>`, GitHub y Kubernetes de la guía: verificadas el 2026-09-16/19, no reverificadas (`R02:191`).
 - Texto completo de Aghajani 2019, Atkinson 2000 e ISO 690:2021 (`I05:364`).
 - `RuleSet-Default.md` no se leyó; su composición se infiere (`R07:378`).

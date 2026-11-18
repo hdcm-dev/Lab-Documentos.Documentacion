@@ -3,8 +3,8 @@
 La guía de inicio de un generador de sitios dice que un push publica (`mintlify.com/docs/quickstart`,
 consultado el 2026-10-27).
 
-El portal responde con Markdown ([OneSignal, 2026](#ref-onesignal-2026)): https://documentation.onesignal.com/reference/create-user
-y `documentation.onesignal.com`.
+El portal responde con Markdown ([`<servicio-privado>`, 2026](#ref-servicio-privado-2026)): `https://<servicio-privado>/reference/create-user`
+y `<servicio-privado>`.
 
 Un nombre nuevo de `{tunel}.com` tarda en propagarse (medido el 2026-09-20).
 
@@ -15,4 +15,4 @@ No son citas: `http://localhost:5190`, `https://example.com/a`, `mcr.microsoft.c
 curl https://api.github.com/repos/kubernetes/website/branches
 ```
 
-<a id="ref-onesignal-2026"></a>OneSignal. (2026). *Create user*. https://documentation.onesignal.com/reference/create-user (consultado el 2026-10-27)
+<a id="ref-servicio-privado-2026"></a>`<servicio-privado>`. (2026). *Create user*. `https://<servicio-privado>/reference/create-user` (consultado el 2026-10-27)

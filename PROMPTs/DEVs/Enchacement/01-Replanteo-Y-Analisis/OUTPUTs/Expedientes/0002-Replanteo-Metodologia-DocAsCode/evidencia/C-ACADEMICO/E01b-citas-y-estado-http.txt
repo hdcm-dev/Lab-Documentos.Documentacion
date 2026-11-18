@@ -31,8 +31,8 @@ R20	SI	A fast, powerful, CommonMark compliant, extensible Markdown processor for
 TOTAL 26/29
 
 # status.txt (curl -L, 2026-10-26T18:37 -03:00)
-R01 200 https://documentation.onesignal.com/reference/create-user
-R02 200 https://documentation.onesignal.com/llms.txt
+R01 200 https://<servicio-privado>/reference/create-user
+R02 200 https://<servicio-privado>/llms.txt
 R03 200 https://mintlify.com/docs/quickstart
 R04 200 https://mintlify.com/docs/api-playground/openapi-setup
 R05 200 https://www.writethedocs.org/guide/docs-as-code/

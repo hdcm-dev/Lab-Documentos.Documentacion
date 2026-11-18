@@ -68,20 +68,20 @@ Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Examples/Mov
 no aplica: la ruta no tiene piezas fijadas (BASE-FIJADA.md)
 == PR-7 fijadas: verde (errores=0 avisos=0) piezas=0
 == PR-7 reflint: verde (errores=0 avisos=0) referencias=51
-Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:93: aviso dominio-sin-referencia: documentation.onesignal.com
-Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:103: aviso url-sin-fecha: https://documentation.onesignal.com/reference/create-user
-Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:112: aviso dominio-sin-referencia: onesignal.mintlify.app
-Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:113: aviso url-sin-fecha: https://onesignal.mintlify.app/docs/en/home
-Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:157: aviso url-sin-fecha: https://documentation.onesignal.com/openapi.json
-Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:157: aviso dominio-sin-referencia: api.onesignal.com
-Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:169: aviso url-sin-fecha: https://documentation.onesignal.com/llms.txt
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:93: aviso dominio-sin-referencia: <servicio-privado>
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:103: aviso url-sin-fecha: https://<servicio-privado>/reference/create-user
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:112: aviso dominio-sin-referencia: <servicio-privado>.mintlify.app
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:113: aviso url-sin-fecha: https://<servicio-privado>.mintlify.app/docs/en/home
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:157: aviso url-sin-fecha: https://<servicio-privado>/openapi.json
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:157: aviso dominio-sin-referencia: api.<servicio-privado>
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:169: aviso url-sin-fecha: https://<servicio-privado>/llms.txt
 Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:215: aviso dominio-sin-referencia: mintlify.com/docs/quickstart
 Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:236: aviso dominio-sin-referencia: llmstxt.org
 Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:329: aviso url-sin-fecha: https://github.com/hdcm-dev/Lab-Geometria
 Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:709: aviso dominio-sin-referencia: docusaurus.io
-Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:770: aviso dominio-sin-referencia: github.com/OneSignal/onesignal-go-api
-Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:805: aviso dominio-sin-referencia: documentation.onesignal.com/reference/create-user
-Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:805: aviso dominio-sin-referencia: onesignal.mintlify.app
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:770: aviso dominio-sin-referencia: github.com/<servicio-privado>/<servicio-privado>-go-api
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:805: aviso dominio-sin-referencia: <servicio-privado>/reference/create-user
+Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:805: aviso dominio-sin-referencia: <servicio-privado>.mintlify.app
 Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:811: aviso dominio-sin-referencia: mintlify.com/docs/quickstart
 Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:812: aviso dominio-sin-referencia: mintlify.com/docs/api-playground/openapi-setup
 Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/Sistema-Documentador-Tecnico-Guide.md:813: aviso dominio-sin-referencia: writethedocs.org/guide/docs-as-code/

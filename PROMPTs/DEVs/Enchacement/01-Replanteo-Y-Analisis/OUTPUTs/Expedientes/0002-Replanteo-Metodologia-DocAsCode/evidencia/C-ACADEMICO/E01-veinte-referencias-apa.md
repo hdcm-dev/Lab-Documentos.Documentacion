@@ -33,8 +33,8 @@ Columnas: **A** autor, **F** fecha de publicación, **T** título, **U** URL, **
 
 | Id | Fuente | Líneas de la guía | A | F | T | U | C | Falta |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| R01 | OneSignal, *Create user* | 28, 723 | sí | no | no | sí | sí* | F, T |
-| R02 | OneSignal, `llms.txt` | 94, 726 | sí | no | sí | sí | sí* | F |
+| R01 | `<servicio-privado>`, *Create user* | 28, 723 | sí | no | no | sí | sí* | F, T |
+| R02 | `<servicio-privado>`, `llms.txt` | 94, 726 | sí | no | sí | sí | sí* | F |
 | R03 | Mintlify, *Quickstart* | 140, 729 | sí | no | no | sí | sí* | F, T |
 | R04 | Mintlify, *OpenAPI setup* | 84, 730 | sí | no | no | sí | sí | F, T |
 | R05 | Write the Docs, *Docs as code* | 102, 731 | sí (org.; la persona no) | no | no | sí | sí | F, T |
@@ -60,8 +60,8 @@ Columnas: **A** autor, **F** fecha de publicación, **T** título, **U** URL, **
 
 Todas consultadas el 2026-10-26. Ancla propuesta entre corchetes.
 
-1. `[ref-onesignal-sf-create-user]` OneSignal. (s. f.). *Create user*. https://documentation.onesignal.com/reference/create-user (consultado el 2026-10-26). Nota: metadato `dateModified` 2026-07-09.
-2. `[ref-onesignal-sf-llms]` OneSignal. (s. f.). *llms.txt* [Índice de la documentación para modelos de lenguaje]. https://documentation.onesignal.com/llms.txt (consultado el 2026-10-26).
+1. `[ref-servicio-privado-sf-create-user]` `<servicio-privado>`. (s. f.). *Create user*. `https://<servicio-privado>/reference/create-user` (consultado el 2026-10-26). Nota: metadato `dateModified` 2026-07-09.
+2. `[ref-servicio-privado-sf-llms]` `<servicio-privado>`. (s. f.). *llms.txt* [Índice de la documentación para modelos de lenguaje]. `https://<servicio-privado>/llms.txt` (consultado el 2026-10-26).
 3. `[ref-mintlify-sf-quickstart]` Mintlify. (s. f.). *Quickstart*. https://mintlify.com/docs/quickstart (consultado el 2026-10-26). Nota: `dateModified` 2026-10-24, posterior a la consulta de la guía (2026-09-16).
 4. `[ref-mintlify-sf-openapi]` Mintlify. (s. f.). *OpenAPI setup*. https://mintlify.com/docs/api-playground/openapi-setup (consultado el 2026-10-26). Nota: `dateModified` 2026-10-13.
 5. `[ref-holscher-sf]` Holscher, E., y comunidad Write the Docs. (s. f.). *Docs as code*. Write the Docs. https://www.writethedocs.org/guide/docs-as-code/ (consultado el 2026-10-26). La página declara «author: Eric Holscher & the Write the Docs community».

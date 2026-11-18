@@ -41,7 +41,7 @@ Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/99-Anexos/Gl
 ```text
 -- fixtures/url-fecha/rojo
 a.md:3: ERROR dominio-sin-referencia: mintlify.com/docs/quickstart
-a.md:5: ERROR url-sin-fecha: https://documentation.onesignal.com/reference/create-user
+a.md:5: ERROR url-sin-fecha: https://<servicio-privado>/reference/create-user
 a.md:9: ERROR dominio-sin-referencia: diataxis.fr
 a.md:10: ERROR dominio-sin-referencia: writethedocs.org/guide/docs-as-code/
 == PR-7 url-fecha: ROJO (errores=4 avisos=0) documentos-que-bloquean=2
@@ -51,7 +51,7 @@ rc=1
 rc=0
 -- fixtures/url-fecha/obsoleto
 a.md:16: aviso dominio-sin-referencia: mintlify.com/docs/quickstart
-a.md:17: aviso url-sin-fecha: https://documentation.onesignal.com/reference/create-user
+a.md:17: aviso url-sin-fecha: https://<servicio-privado>/reference/create-user
 == PR-7 url-fecha: verde (errores=0 avisos=2) documentos-que-bloquean=1
 rc=0
 ```

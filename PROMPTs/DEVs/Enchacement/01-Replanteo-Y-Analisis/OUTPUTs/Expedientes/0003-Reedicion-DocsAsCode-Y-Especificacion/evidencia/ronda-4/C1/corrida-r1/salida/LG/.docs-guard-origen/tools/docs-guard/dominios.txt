@@ -10,8 +10,8 @@ localhost                        # ejemplos que corren en la máquina de quien l
 github.com                       # repositorios públicos citados por permalink
 docs.github.com                  # documentación de GitHub Actions
 learn.microsoft.com              # documentación de .NET y ASP.NET Core
-documentation.onesignal.com      # proveedor de notificaciones citado en la guía del sistema documentador
-onesignal.mintlify.app           # mismo proveedor, sitio de la documentación servida por Mintlify
+<servicio-privado>      # proveedor de notificaciones citado en la guía del sistema documentador
+<servicio-privado>.mintlify.app           # mismo proveedor, sitio de la documentación servida por Mintlify
 mintlify.com                     # generador de documentación comparado en la guía
 docusaurus.io                    # generador de documentación comparado en la guía
 llmstxt.org                      # propuesta llms.txt (canal para agentes, D07)

@@ -16,7 +16,7 @@ ok
 ```
 1. **Historial de conversaciones, pensado para el usuario.** Es lo que hacen ChatGPT o Intercom: cada conversación se guarda con sus mensajes y el usuario la retoma después. Es una función de producto, con tiempo de retención y opción de borrar.
 ```
-Esto lo vi en onesignal, `/LAB/Lab-Documentos/Lab-Documentos.Documentacion/PROMPTs/DEVs/Features/Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe/Historial-Chat.png` , lo tenemos que incorporar en la planificación
+Esto lo vi en `<servicio-privado>`, `/LAB/Lab-Documentos/Lab-Documentos.Documentacion/PROMPTs/DEVs/Features/Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe/Historial-Chat.png` , lo tenemos que incorporar en la planificación
 
 - Sobre esto:
 ```

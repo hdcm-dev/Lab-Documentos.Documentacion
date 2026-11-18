@@ -30,7 +30,7 @@ La ruta sigue README → Marco → Mapa y ahí se corta. El pie del Mapa manda a
 | 19 | README §3, ruta intervenir | «plantilla del anexo»: ¿qué anexo? Ninguno de la tabla de §4 es una plantilla. | no | baja |
 | 20 | README §4 y Mapa §2 | ¿Cuáles son «los diez campos más `description`»? Mapa §2 habla de «frontmatter de diez campos», sin `description`: ¿son 10 u 11? | no (se infiere contando el frontmatter de 00-Marco: 10 + `description`) | baja |
 | 21 | README §4, guía de un solo archivo | Su `doc_id` es `DOC-SDT-0001`, con otro prefijo y otra sigla (SDT y no SDEI). ¿Es parte del cuerpo? ¿Pasa la compuerta? ¿`DOC-` está en el registro cerrado de prefijos? | no | media |
-| 22 | README §4 | «el caso OneSignal» frente al servicio push privado que el Marco llama **SDD-B**: ¿son el mismo caso? Si lo son, ¿nombrarlo rompe la convención de repositorios privados? | no | baja |
+| 22 | README §4 | «el caso `<servicio-privado>`» frente al servicio push privado que el Marco llama **SDD-B**: ¿son el mismo caso? Si lo son, ¿nombrarlo rompe la convención de repositorios privados? | no | baja |
 | 23 | README §4 y §5 | El «Ejemplo: ayuda por rol» tiene `doc_id` y estado «—», pero §5 dice que un archivo sin frontmatter pone la carpeta en rojo. ¿Está exento? ¿Por qué? | no | media |
 | 24 | README §4, Lanzar | «devcontainer» no se explica. «publicarlo»: ¿dónde? | no | baja |
 | 25 | README §5, árbol | El árbol no muestra `Sistema-Documentador-Tecnico-Guide.md`, `AGENTS.md` ni `scripts/`. ¿Dónde está la raíz del repositorio respecto de esta carpeta? | no | baja |

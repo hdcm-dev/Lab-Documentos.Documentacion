@@ -25,7 +25,7 @@ AGENT_PHRASES = re.compile(
 HIDDEN_HTML = re.compile(r"<[^>]+(hidden|display\s*:\s*none|visibility\s*:\s*hidden)[^>]*>", re.I)
 LINK = re.compile(r"\]\((https?://[^)\s]+)\)")
 ALLOW = ("llmstxt.org", "agents.md", "genai.owasp.org", "modelcontextprotocol.io", "diataxis.fr",
-         "documentation.onesignal.com", "learn.microsoft.com", "github.com", "docs.github.com",
+         "<servicio-privado>", "learn.microsoft.com", "github.com", "docs.github.com",
          "arc42.org", "cognitect.com", "mintlify.com", "keepachangelog.com", "semver.org",
          "www.mintlify.com", "localhost", "docusaurus.io", "code.claude.com")
 

@@ -197,7 +197,7 @@ primera vez. La reverificación es barata y ya la corrí (§7, fuentes 2 a 4):
 
 **Dos agregados desde la silla.** Primero, el caso es la documentación de **quien integra** (referencia de una API y
 SDK), no ayuda al usuario final: en el libro va como ejemplo del patrón de entrega (`.md` y `llms.txt`), no como modelo
-de página de ayuda. Segundo, el caso no tiene entrada en las referencias: `grep -ni onesignal SDEI/99-Anexos/Referencias.md`
+de página de ayuda. Segundo, el caso no tiene entrada en las referencias: `grep -ni <servicio-privado> SDEI/99-Anexos/Referencias.md`
 → nada, aunque `TEM-01:171` y `TEM-04:105` lo citan; `00-Marco.md:165` pide APA con fecha de consulta **siempre**. Al
 nombrarlo, conviene decir que es un proveedor público y externo, para que el lector no lo confunda con el servicio
 privado de notificaciones de `ESC-SDEI-4`, que el cuerpo nombra sólo por alias.
@@ -285,8 +285,8 @@ copias descartables en un directorio de ensayos de `{dir-de-trabajo}`; el SDD de
 | # | Fuente | URL | Consulta | Uso |
 | --- | --- | --- | --- | --- |
 | 1 | Procida, D. (s. f.). *Diátaxis*, página «How-to guides»: «How-to guides are directions that guide the reader through a problem or towards a result. How-to guides are goal-oriented» | https://diataxis.fr/how-to-guides/ (y https://diataxis.fr/) | 2026-11-01, `curl` 200 | P-03, P-15 |
-| 2 | OneSignal, página de referencia «Create user» (HTML y `.md`) | https://documentation.onesignal.com/reference/create-user y `…/create-user.md` | 2026-11-01 18:28 UTC: HTML 200; `.md` 200 `text/markdown; charset=utf-8`, 834 líneas; `generator" content="Mintlify"`; 206 ocurrencias de `mintlify`; `openapi: 3.1.0` y `version: '11.6'` en las líneas 60-63 | P-07 |
-| 3 | OneSignal, índice para agentes | https://documentation.onesignal.com/llms.txt | 2026-11-01: 200 `text/plain`; 179 entradas `- [`; 71 con `reference/`, 86 con `/docs/`; descripción «via a single API, Journey Builder, and a dashboard» | P-07, P-16 |
+| 2 | `<servicio-privado>`, página de referencia «Create user» (HTML y `.md`) | `https://<servicio-privado>/reference/create-user` y `…/create-user.md` | 2026-11-01 18:28 UTC: HTML 200; `.md` 200 `text/markdown; charset=utf-8`, 834 líneas; `generator" content="Mintlify"`; 206 ocurrencias de `mintlify`; `openapi: 3.1.0` y `version: '11.6'` en las líneas 60-63 | P-07 |
+| 3 | `<servicio-privado>`, índice para agentes | `https://<servicio-privado>/llms.txt` | 2026-11-01: 200 `text/plain`; 179 entradas `- [`; 71 con `reference/`, 86 con `/docs/`; descripción «via a single API, Journey Builder, and a dashboard» | P-07, P-16 |
 | 4 | Guía obsoleta del cuerpo, §1.1-§1.4, como punto de comparación | `SDEI/Sistema-Documentador-Tecnico-Guide.md:99-172` | Lectura del repositorio | P-07 |
 | 5 | W3C. (2024). *Web Content Accessibility Guidelines (WCAG) 2.2*, W3C Recommendation, 12 de diciembre de 2024; SC 3.1.1 «Language of Page» (A) y SC 3.1.2 «Language of Parts» (AA): «The human language of each passage or phrase in the content can be programmatically determined…» | https://www.w3.org/TR/WCAG22/ | 2026-11-01, `curl` 200 | H07 |
 | 6 | Microsoft. *Spanish (Neutral) Style Guide*, PDF de 56 páginas, creado el 2021-04-29; §2.1 «Recommended reference material» (DPD, DLE, *Nueva gramática*, *Ortografía de la lengua española* 2010); §3.3 «Tú/usted usage» | https://aka.ms/spanish-neutral-styleguide → `download.microsoft.com/…/spa-neu-StyleGuide.pdf`, listado en https://learn.microsoft.com/en-us/globalization/reference/microsoft-style-guides | 2026-11-01, `curl` 200, `pdftotext` | P-05 |

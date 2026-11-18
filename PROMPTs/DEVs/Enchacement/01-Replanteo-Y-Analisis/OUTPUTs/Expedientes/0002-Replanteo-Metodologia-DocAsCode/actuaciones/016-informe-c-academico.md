@@ -387,7 +387,7 @@ general a lo particular, `PERFIL:35`) *[el orden es criterio propio]*:
 
 | Orden | `doc_id` | Tema | Núcleo | Qué hereda de `GUIA` |
 | --- | --- | --- | --- | --- |
-| 1 | `TEM-01` | Qué es un sistema documentador: piezas y caso de industria | N05 (conceptual) | §1-§4 (OneSignal como ejemplo trabajado) |
+| 1 | `TEM-01` | Qué es un sistema documentador: piezas y caso de industria | N05 (conceptual) | §1-§4 (`<servicio-privado>` como ejemplo trabajado) |
 | 2 | `TEM-02` | El ciclo documental: de los requisitos a la integración y el mantenimiento | N04 | §8 |
 | 3 | `TEM-03` | Topología de repositorios y versionado | N02 | §6.2-§6.3 |
 | 4 | `TEM-04` | Doble audiencia: personas y agentes | N03 | §1.4, §5.3, parte de §7 |

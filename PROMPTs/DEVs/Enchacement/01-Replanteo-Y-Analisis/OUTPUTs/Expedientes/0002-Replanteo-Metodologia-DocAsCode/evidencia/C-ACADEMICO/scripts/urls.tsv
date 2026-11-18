@@ -1,5 +1,5 @@
-R01	https://documentation.onesignal.com/reference/create-user
-R02	https://documentation.onesignal.com/llms.txt
+R01	https://<servicio-privado>/reference/create-user
+R02	https://<servicio-privado>/llms.txt
 R03	https://mintlify.com/docs/quickstart
 R04	https://mintlify.com/docs/api-playground/openapi-setup
 R05	https://www.writethedocs.org/guide/docs-as-code/
