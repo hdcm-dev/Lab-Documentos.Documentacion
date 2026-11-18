@@ -15,6 +15,10 @@ guía misma.
 - **`PROMPTs/` — prompts e INPUTs del PO que estaban sin commitear**, por su orden del 2026-11-18 («comitealos»,
   «sumalos a tu pr»): `Guides/17-IA-Estudio/`, `DEVs/Features/Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe.md`,
   `Concepts/01-Framework-Concept/02` a `05-*.md` y `Guides/14-…/02-Ajuste-Coherencia-Reedicion-Documentacion.md`.
+- **`PROMPTs/DEVs/Features/Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe/Historial-Chat.png` — captura del INPUT del
+  PO, original y sin redactar**, por su decisión del 2026-11-18 («incluila en el commit, no tiene nada secreto ni
+  privado, versionala»). Es la imagen que cita `001-Respuesta-Informe.md:19` por su ruta desde la raíz del espacio de
+  trabajo, que ahora resuelve. sha256 `ba8ab8a3fbe526e5011b5e6dff756d8d24b49430f081ad6c7441532ddff4c2e4`.
 
 ### Cambiado
 
@@ -33,8 +37,8 @@ guía misma.
 
 - **Ofuscación de lo que entra** con los marcadores de los repos públicos: equipos (`<equipo-2>`, `<equipo-mac>`),
   etiqueta de runner de ejemplo (`{etiqueta-runner}`), repositorio privado (`<repo>`), app (`<app>`) y servicio privado
-  (`<servicio-privado>`). La captura `Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe/Historial-Chat.png` no entra: muestra
-  datos de una cuenta privada.
+  (`<servicio-privado>`). La captura `Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe/Historial-Chat.png` no entró en ese PR
+  (se la tomó por datos de una cuenta privada); el PO decidió después versionarla tal cual (ver Añadido).
 
 ### Delegación del merge (Conformacion-Pull-Request-Automatico 2.1, prompts e INPUTs sin commitear)
 
@@ -50,6 +54,15 @@ guía misma.
 - **Fecha:** 2026-11-18. **Responsable:** el responsable del producto (PO), por su aprobación literal del día sobre la
   propuesta de ofuscar el proveedor («si, aprobado») y por su regla general asentada en el CHANGELOG de
   `hdcm-dev/Lab-Documentos` el 2026-11-01 («siempre para conformar los pr sigue
+  `Knowledge-Conformacion-Pull-Request-Automatico.md`»).
+- **Alcance:** este PR. **Guarda:** G1–G4; techo 120 minutos; intervalo 30 segundos. **Método:** commit de merge atado
+  al SHA, sin `squash`. **Excepción:** un cuestionamiento particular del PO la vuelve manual.
+
+### Delegación del merge (Conformacion-Pull-Request-Automatico 2.1, captura del INPUT 001-Respuesta-Informe)
+
+- **Fecha:** 2026-11-18. **Responsable:** el responsable del producto (PO), por su orden literal del día sobre la
+  captura («incluila en el commit, no tiene nada secreto ni privado, versionala») y por su regla general asentada en
+  el CHANGELOG de `hdcm-dev/Lab-Documentos` el 2026-11-01 («siempre para conformar los pr sigue
   `Knowledge-Conformacion-Pull-Request-Automatico.md`»).
 - **Alcance:** este PR. **Guarda:** G1–G4; techo 120 minutos; intervalo 30 segundos. **Método:** commit de merge atado
   al SHA, sin `squash`. **Excepción:** un cuestionamiento particular del PO la vuelve manual.
