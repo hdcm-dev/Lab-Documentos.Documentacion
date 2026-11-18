@@ -16,7 +16,7 @@ ok
 ```
 1. **Historial de conversaciones, pensado para el usuario.** Es lo que hacen ChatGPT o Intercom: cada conversación se guarda con sus mensajes y el usuario la retoma después. Es una función de producto, con tiempo de retención y opción de borrar.
 ```
-Esto lo vi en `<servicio-privado>`, `/LAB/Lab-Documentos/Lab-Documentos.Documentacion/PROMPTs/DEVs/Features/Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe/Historial-Chat.png` , lo tenemos que incorporar en la planificación
+Esto lo vi en onesignal, `/LAB/Lab-Documentos/Lab-Documentos.Documentacion/PROMPTs/DEVs/Features/Ciclo-De-Mejoras/INPUTs/001-Respuesta-Informe/Historial-Chat.png` , lo tenemos que incorporar en la planificación
 
 - Sobre esto:
 ```
@@ -37,8 +37,8 @@ ok
 
 Sobre esto:
 ```
-**Qué propongo para <servicio-privado>:**
-- **Para la escena, ya:** activar la captura del contenido de las trazas sólo en <equipo-2>, con una tabla de conversaciones y mensajes que incluya lo técnico (intención, fuentes, plantilla o IA) y se purgue a los 30 días. Así puedo seguir en vivo lo que preguntás y ver por qué la consola respondió lo que respondió.
+**Qué propongo para PushDispatch:**
+- **Para la escena, ya:** activar la captura del contenido de las trazas sólo en hpdev, con una tabla de conversaciones y mensajes que incluya lo técnico (intención, fuentes, plantilla o IA) y se purgue a los 30 días. Así puedo seguir en vivo lo que preguntás y ver por qué la consola respondió lo que respondió.
 - **Para producción, después:** la observabilidad queda sin contenido, sólo métricas. Si se quiere historial para el usuario, se decide como función aparte, con aviso y opción de borrar.
 
 Esto encaja en la mesa 141, en la parte de métricas y monitoreo (rebanadas M1–M4).

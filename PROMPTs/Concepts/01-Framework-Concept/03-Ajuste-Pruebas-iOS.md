@@ -3,7 +3,7 @@ No es descarga, es arranque. Hay margen para bajarlo: compilar el contenido con 
 ```
 
 1. 
-ojo aquí!, porque ios tiene restricciones - y este frameworks tiene que funcionar tanto en android - sería bueno que montaras un emulador en ios - podes incluir en tu plan emular con ios siguiendo este conocimiento `/<repo>/Knowledges/Knowledge-SCENE-<equipo-mac>-Crear-Emulador-iOS.md`
+ojo aquí!, porque ios tiene restricciones - y este frameworks tiene que funcionar tanto en android - sería bueno que montaras un emulador en ios - podes incluir en tu plan emular con ios siguiendo este conocimiento `/Ng/Ng-IA/Ng.IA-Context.Scene/Knowledges/Knowledge-SCENE-m4dev-Crear-Emulador-iOS.md`
 
 acá mi me pregunta antes que inicies un nuevo plan : ¿es tipo de aplicación, OTA,  ? y que es lo que descarga? - el binario listo para el IL (Interpreter lenguage)
 
@@ -19,4 +19,4 @@ pero aquí dependemos de que el usuario cierre su sessión, lo que no se que se 
 
 bueno - ahi te contesto .
 
-sobre las pruebas sobre ios - vas a tener que planificarte para que cuando terminen los subagentes de las secciones `<app> ` y `<equipo-mac> - Runner Arc` , en estas sesiones ambas estan trabajando con emuladores ios virutalizados, habla con los agentes de estas secciones y pediles cuando terminen que te avisen para pdoer aplicar tu plan de ajustes sobre ios - ahora, si ellos acceden pueden ir trabajando de tal forma que cuando ellos no trabajen sobre `<equipo-mac>` te ceden el control, revisen como doordinarse y aprovechar los recursos lo mejor que puedan - los agentes de ambas sessiones ya estan trabajando y coordinados , pediles que te sumen
+sobre las pruebas sobre ios - vas a tener que planificarte para que cuando terminen los subagentes de las secciones `GDA.Core.APP ` y `m4dev - Runner Arc` , en estas sesiones ambas estan trabajando con emuladores ios virutalizados, habla con los agentes de estas secciones y pediles cuando terminen que te avisen para pdoer aplicar tu plan de ajustes sobre ios - ahora, si ellos acceden pueden ir trabajando de tal forma que cuando ellos no trabajen sobre m4dev te ceden el control, revisen como doordinarse y aprovechar los recursos lo mejor que puedan - los agentes de ambas sessiones ya estan trabajando y coordinados , pediles que te sumen

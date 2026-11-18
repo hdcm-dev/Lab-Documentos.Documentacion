@@ -11,15 +11,15 @@
 
   Leer `/PROG2/Geometria/Lab-Geometria.Documentacion/ia-db/README.md`, es `Geometria`
 
-  Leer `<servicio-privado>.Documentacion/ia-db/README.md`, es `<servicio-privado>` - cuyo escena se define bajo el conocimiento: `/<repo>/Knowledges/Knowledge-SCENE-<equipo-2>-com.<servicio-privado>.coredev.administrador.md`
+  Leer `Ng/Ng-Core/NG/Ng-PushDispatch/Ng-PushDispatch.Documentacion/ia-db/README.md`, es `PushDispatch` - cuyo escena se define bajo el conocimiento: `/Ng/Ng-IA/Ng.IA-Context.Scene/Knowledges/Knowledge-SCENE-hpdev-com.pushdispatch.coredev.administrador.md`
 
   En resumen, tenemos hasta ahora un marco conceptual y bibliografico con ejemplos, demostraciones, y proyectos aplicados.
 
-  De esto, el plan comprende tambien en diseñar un conocimiento de **especificificación** `/LAB/Lab-Documentos/Lab-Documentos.Documentacion/PROMPTs/Guides/14-Sistema-De-Documentador-Tecnico/ARTIFACTs/knowledge-DocsAsCode-Designing-Specification.md`, tal que los agentes de IA o humanos en otro contexto diferente pudieran aplicarlos en nuevos o ya existentes proyectos tales como Geometria o `<servicio-privado>`
+  De esto, el plan comprende tambien en diseñar un conocimiento de **especificificación** `/LAB/Lab-Documentos/Lab-Documentos.Documentacion/PROMPTs/Guides/14-Sistema-De-Documentador-Tecnico/ARTIFACTs/knowledge-DocsAsCode-Designing-Specification.md`, tal que los agentes de IA o humanos en otro contexto diferente pudieran aplicarlos en nuevos o ya existentes proyectos tales como Geometria o pushdispatch
 
-  El objetivo se extiende en aplicar el conocimiento de especificación en los diseños de los servicios: `Geometria` y `<servicio-privado>` a fin de probar la efectividad del conocimiento generado y realizar las correcciones que sean necesarias.
+  El objetivo se extiende en aplicar el conocimiento de especificación en los diseños de los servicios: `Geometria` y `PushDistpatch` a fin de probar la efectividad del conocimiento generado y realizar las correcciones que sean necesarias.
   
-  Relativa a esta experiencia de aplicar el conocimiento de especificación en estos dos proyectos seria interesante enriquecer ejemplos y guia relativo a lo que desarrolle en `Geometría`. `<servicio-privado>` es un proyecto privado y las guias y ejemplso son parte de un repositorio público.
+  Relativa a esta experiencia de aplicar el conocimiento de especificación en estos dos proyectos seria interesante enriquecer ejemplos y guia relativo a lo que desarrolle en `Geometría`. `PushDistpatch` es un proyecto privado y las guias y ejemplso son parte de un repositorio público.
 
 ---
 

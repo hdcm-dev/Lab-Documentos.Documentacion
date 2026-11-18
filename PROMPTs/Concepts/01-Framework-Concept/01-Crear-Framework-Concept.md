@@ -29,7 +29,7 @@
 
   - Desarrollar una guía instructiva academica enfocada a un desarrollador sin experiencia que describa la tecnica en `/LAB/Lab-Documentos/Lab-Documentos/Concepts/Framework-Concept/Developer-Guide.md`  y en base a esto construir Construir ejemplo de demostración en `/LAB/Lab-Documentos/Lab-Documentos/Concepts/Framework-Concept/Demo` que a su vez sirva esta demo para ilustrar con ejemplo a dicha guía. Tomar base para la construcción de la demo al proyecto `MovilidadUrbana.MAUI`.
  
-  - Configura el wofklow con este runner de github :  `runs-on: [self-hosted, {etiqueta-runner}]`
+  - Configura el wofklow con este runner de github :  `runs-on: [self-hosted, i7infra-dev]`
 
   - Toda la documentación generarla en `/LAB/Lab-Documentos/Lab-Documentos/Concepts/Framework-Concept`
 
