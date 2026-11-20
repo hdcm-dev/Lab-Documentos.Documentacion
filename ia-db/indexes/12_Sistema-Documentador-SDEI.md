@@ -2,7 +2,7 @@
 
 > **Propósito**: dónde está y qué dice cada pieza del **cuerpo nuevo** del sistema documentador (`corpus_id: SDEI`,
 > versión `2.0.0-borrador.2`): temas, anexos, el libro *DocsAsCode Developer Guide* partido por Parte, el conocimiento
-> de especificación (`Conocimientos/`), los ejemplos (mini demo MovilidadUrbana y prueba de ayuda por rol), la
+> de especificación (mudado a la base de conocimientos; en `Conocimientos/` queda el puntero), los ejemplos (mini demo MovilidadUrbana y prueba de ayuda por rol), la
 > compuerta que lo vigila (`docs-guard`, `scripts/`, workflows) y la puerta para agentes (`AGENTS.md`).
 > **Fuentes primarias**: `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/README.md`
 > (`IDX-SDEI`), `AGENTS.md` (`IDX-LABDOC-AGENTS`), `tools/docs-guard/README.md`.
@@ -16,7 +16,7 @@
 3. [Inventario del cuerpo](#3-inventario-del-cuerpo)
 4. [Cómo está armado y rutas de lectura](#4-cómo-está-armado-y-rutas-de-lectura)
 5. [Conceptos y decisiones clave](#5-conceptos-y-decisiones-clave)
-6. [Conocimiento de especificación (`Conocimientos/`)](#6-conocimiento-de-especificación-conocimientos)
+6. [Conocimiento de especificación (mudado a la base)](#6-conocimiento-de-especificación-mudado-a-la-base)
 7. [Ejemplos (`Examples/`)](#7-ejemplos-examples)
 8. [Compuerta `docs-guard`, `scripts/` y workflows](#8-compuerta-docs-guard-scripts-y-workflows)
 9. [`AGENTS.md` y plantilla de PR](#9-agentsmd-y-plantilla-de-pr)
@@ -34,7 +34,7 @@
 | Clase D / P / H | Quién cierra un cambio: D un generador determinista, P un agente o persona que propone y entra por la compuerta, H sólo una persona | `…/00-Marco.md` §1; `…/99-Anexos/Como-Decidir.md` §6 |
 | Escenario `ESC-SDEI-n` | Tipo de sistema: 1 corpus de guías, 2 app cliente sin roles, 3 panel con roles, 4 servicio con paquetes | `…/00-Marco.md` §2 |
 | Contexto `CTX-SDEI-n` | Variante que cambia una respuesta: 1 con/sin sitio, 2 con/sin SDD, 3 mismo repo/hermano/dedicado, 4 dentro/fuera de la organización del runner | `…/00-Marco.md` §3 |
-| Clase de pieza `CL-nn` | Catálogo cerrado de 14 clases de pieza documental (especificación, RRD, `AGENTS.md`, contrato, ayuda, técnica, índice para agentes…) | `…/01-Mapa.md` §4; `…/Conocimientos/knowledge-DocsAsCode-Designing-Specification.md` §2.1 |
+| Clase de pieza `CL-nn` | Catálogo cerrado de 14 clases de pieza documental (especificación, RRD, `AGENTS.md`, contrato, ayuda, técnica, índice para agentes…) | `…/01-Mapa.md` §4; `DocsAsCode-Designing-Specification` §2.1 (en la base de conocimientos) |
 | RRD | Registro de requerimientos documentales (`_requisitos.md` o `doc_type: rrd`): filas `RD-nn` con audiencia, tarea, pieza, criterio Dado/Cuando/Entonces y decisión | `…/TEM-02-Ciclo-Documental.md`; `tools/docs-guard/README.md` §4 |
 | Traza | `traces: [ID]` o `[ID@MAYOR.MENOR]`; nivel 1 página → ficha, nivel 2 ficha → código por ancla `ruta#Símbolo@SHA` | `…/99-Anexos/Esquema-Frontmatter-Y-Prefijos.md` §4 |
 | `source.lock` | Archivo que fija repo y SHA del código que documenta una carpeta | `…/Examples/MovilidadUrbana-Mini-Demo/source.lock` |
@@ -50,7 +50,7 @@
 - **La guía de un solo archivo (`DOC-SDT-0001`) ya no está en `main`**: quedó archivada en la etiqueta
   `sdei-v2.0.0-borrador`, donde vive su «tabla de destinos» sección → `doc_id` (`CHANGELOG.md` l. 57; `…/README.md` §3).
 - **Novedades respecto de 2026-10-29**: libro *DocsAsCode Developer Guide* partido por Parte (resolución 99 del
-  expediente 0003); `Conocimientos/` con el conocimiento 1.4 «borrador ensayado, no probado»; `TEM-04` renombrado
+  expediente 0003); `Conocimientos/` con el conocimiento 1.4 «borrador ensayado, no probado» (mudado el 2026-11-19 a la base, §6); `TEM-04` renombrado
   «Lectura por agentes» (antes «Doble audiencia»); `TEM-05` con regla de entrega y ayuda en el punto de uso;
   vocabulario `delivery`/`AUD-`; prueba extendida `Examples/Prueba-Ayuda-Por-Rol/Audiencias/`; control
   `mermaid-arroba`; runner con etiqueta genérica `ci-hdcm`.
@@ -107,12 +107,11 @@ navegación «anterior · índice · siguiente».
 | `DocsAsCode-Developer-Guide-Parte-VI.md` | `DOC-SDEI-LIBRO-P6` | 447 | Parte VI. Industria |
 | `DocsAsCode-Developer-Guide-Anexos.md` | `DOC-SDEI-LIBRO-ANX` | 1248 | Anexos B a J |
 
-### 3.3 Conocimientos y ejemplos
+### 3.3 Puntero del conocimiento y ejemplos
 
 | Ruta | `doc_id` | Tipo | Líneas | Qué contiene |
 | --- | --- | --- | ---: | --- |
-| `Conocimientos/knowledge-DocsAsCode-Designing-Specification.md` | `ANX-SDEI-ESPECIFICACION` | anexo (`version: 1.4`) | 864 | Conocimiento para diseñar el sistema documentador de un proyecto (§6) |
-| `Conocimientos/A-01-ficha-vacia.md` | `ANX-SDEI-FICHA-VACIA` | anexo | 156 | Plantilla vacía de la ficha de diseño documental A-01 |
+| `Conocimientos/README.md` | — (retirados `ANX-SDEI-ESPECIFICACION` y `ANX-SDEI-FICHA-VACIA`) | puntero, sin frontmatter | — | Aviso de la mudanza del conocimiento 1.4 y de la ficha A-01 a la base (§6) |
 | `Examples/Como-Intervenir.md` | `GP-SDEI-INTERVENIR` | proceso | 176 | Plantilla de cinco pasos: ubicar, derivar, validar, proponer, mantener |
 | `Examples/Como-Intervenir-Lab-Documentos.md` | `GP-SDEI-INTERVENIR-LD` | proceso | 47 | Instancia para este repositorio |
 | `Examples/Lanzar-Example.md` | `GP-SDEI-LANZAR` | guía práctica | 168 | Levantar la prueba de ayuda por rol en su devcontainer y exponerla por túnel |
@@ -141,7 +140,7 @@ flowchart LR
   T --> ANX["99-Anexos"]
   CI --> ANX
   R --> LIB["Libro DOC-SDEI-LIBRO"]
-  R --> K["Conocimientos/ ANX-SDEI-ESPECIFICACION"]
+  R --> K["Conocimientos/ puntero a la base"]
 ```
 
 *Diagrama: dependencias de lectura; la flecha va del documento que remite al que se lee después.*
@@ -170,10 +169,15 @@ Fuente: `…/README.md` §3. Alternativa de lectura lineal: el libro, desde `Doc
 | Citación | APA 7 con ancla `ref-…` y fecha de consulta; control `url-fecha` | `…/00-Marco.md` §5; `…/99-Anexos/Referencias.md` |
 | Repos privados | Se nombran sólo por alias; nada de rutas de máquina, IP, hosts ni usuarios en lo versionado | `AGENTS.md` §5 |
 
-## 6. Conocimiento de especificación (`Conocimientos/`)
+## 6. Conocimiento de especificación (mudado a la base)
 
-`knowledge-DocsAsCode-Designing-Specification.md` (alias homónimo, **Versión 1.4**, 2026-11-02, `Compatible-con:
-Rule-Forma-De-Conocimiento.md 1.3`) dice qué decidir para diseñar la documentación como código de un proyecto nuevo o
+**Mudado el 2026-11-19** a la base de conocimientos (privado): `Knowledges/Knowledge-DocsAsCode-Designing-Specification.md`, alias
+`DocsAsCode-Designing-Specification`, **Versión 1.5**, Vigente con el rótulo «borrador ensayado, no probado» en §0 y en
+`Tema`. La 1.5 **no renumera**: los `§N` de una cita a la 1.4 valen igual. La ficha A-01 quedó dentro de su §5.1, en
+bloque cercado; los `doc_id` `ANX-SDEI-ESPECIFICACION` y `ANX-SDEI-FICHA-VACIA` quedaron retirados. En
+`…/Conocimientos/` queda el `README.md` puntero. La 1.4 (2026-11-02) se lee en `Lab-Documentos` `8791fb1`.
+
+El conocimiento (`Compatible-con: Rule-Forma-De-Conocimiento.md 1.3`) dice qué decidir para diseñar la documentación como código de un proyecto nuevo o
 existente, qué artefactos deja (A-01 a A-13) y cómo se comprueba.
 
 | Sección | Contenido |
@@ -184,11 +188,12 @@ existente, qué artefactos deja (A-01 a A-13) y cómo se comprueba.
 | §3 | Procedimiento en ocho pasos, decisiones del aplicador `D-nn` (D-18 «Audiencias y entrega» en §3.2.1), cómo decidir, nuevo vs existente, regla de falla, público/privado, dónde corre el cómputo (§3.7) |
 | §4 | Decisiones ya tomadas (no se reabren al aplicar) |
 | §5 | Esqueletos: ficha A-01, frontmatter mínimo, fila del RRD, instancia de Cómo intervenir, `AGENTS.md`, prefijos, workflow |
-| §6–§10 | Criterios `DE-nn`, anti-patrones, conformidad, trazabilidad, control de cambios 1.0→1.4 |
+| §6–§10 | Criterios `DE-nn`, anti-patrones, conformidad, trazabilidad, control de cambios 1.0→1.5 |
 
 Rasgos: marcas de procedencia `(DK-nn)` ronda 1, `(R2-x)` ronda 2, `(R3: id)` ronda 3, citas `F399:n` y `F206:n` a
 folios del expediente y `@3b10b0f`/`00171bd` a commits del cuerpo. El control de cambios admite que supera la meta de
-≤ 500 líneas (en unas 230 con la 1.3). `A-01-ficha-vacia.md` es el esqueleto vacío de §5.1.
+≤ 500 líneas (en unas 230 con la 1.3). La ficha A-01, que en la 1.4 era un archivo propio de `Conocimientos/`, es el esqueleto
+vacío de §5.1.
 
 ## 7. Ejemplos (`Examples/`)
 
@@ -304,7 +309,7 @@ documentación técnica y apunte original → [01](01_Documentacion-Tecnica.md);
 | Nombre de archivo que no sigue al título | `…/TEM-04-Doble-Audiencia.md` | El título es «Lectura por agentes»; el archivo conserva «Doble-Audiencia» (lo reconoce `…/01-Mapa.md` l. 49 y `…/README.md` §4) |
 | Inconsistencia de clase | `AGENTS.md` §5 vs `tools/docs-guard/README.md` §7 y `dominios.txt` l. 2 | `AGENTS.md` pone «agregar un dominio» en clase H; la herramienta dice «clase P con aprobación explícita» |
 | Controles anunciados no implementados | `…/99-Anexos/Esquema-Frontmatter-Y-Prefijos.md` l. 64-66, 75 | `audiencia-vocabulario`, `delivery-clave-cercana` y `contexto-resuelve` «todavía no están implementados»; esquema sólo comprueba la forma de `delivery` |
-| Tamaño fuera de meta | `…/Conocimientos/knowledge-DocsAsCode-Designing-Specification.md` | 864 líneas; su control de cambios lo admite (meta ≤ 500) |
+| Tamaño fuera de meta | `…/Conocimientos/` (conocimiento 1.4, en `8791fb1`) | **Cerrado (2026-11-19): mudado** a la base de conocimientos, cuya forma no fija techo de tamaño |
 | Ejemplo de huella ficticio | `tools/docs-guard/README.md` §7 | Muestra `3f5a…c2 AGENTS.md AI-3`; la huella real en `excepciones.txt` empieza con `26d0e20c` (es un ejemplo, no un defecto) |
 | Plantilla de PR ajena al dominio | `.github/pull_request_template.md` | Sus preguntas de tienda son de Framework Concept; obligan a «no aplica» en cada PR documental |
 | Enlaces rotos deliberados | `Examples/Prueba-Ayuda-Por-Rol/` | `Consola/Ayuda/administrador/habilitar-cuentas.md` → `comun/no-existe.md` (plantado) y dos de `Web/Ayuda/en/` a páginas sin traducción; la compuerta los excluye con motivo. No son defectos |
@@ -325,7 +330,7 @@ documentación técnica y apunte original → [01](01_Documentacion-Tecnica.md);
 | Qué bloquea y qué avisa la CI | `TEM-06-Compuertas-Y-CI.md`; `tools/docs-guard/README.md` §5 |
 | Por qué dio rojo un control | `tools/docs-guard/README.md` §4–§6; `scripts/ci-local.sh <grupo> <ruta>` |
 | Encaje con un SDD | `TEM-07-Marco-SDD.md` |
-| Diseñar el sistema documentador de otro proyecto | `Conocimientos/knowledge-DocsAsCode-Designing-Specification.md` (mapa de carga §0) y `Conocimientos/A-01-ficha-vacia.md` |
+| Diseñar el sistema documentador de otro proyecto | `DocsAsCode-Designing-Specification` en la base de conocimientos (mapa de carga §0; ficha A-01 en §5.1); acceso según `Conocimientos/README.md` |
 | Cambiar la documentación de un proyecto | `Examples/Como-Intervenir.md`; `99-Anexos/Lista-De-Verificacion.md` |
 | Documentar una app desde otro repo, por SHA | `Examples/MovilidadUrbana-Mini-Demo/README.md` §3–§7 |
 | Elegir entre dos diseños documentales | `99-Anexos/Como-Decidir.md` |
@@ -338,7 +343,7 @@ documentación técnica y apunte original → [01](01_Documentacion-Tecnica.md);
 ## 13. Fuentes
 
 - `Guides/Documentacion-Tecnica/Sistema-De-Documentacion-E-Integracion/` (README, Marco, Mapa, `TEM-01`…`TEM-07`,
-  `99-Anexos/`, libro, `Conocimientos/`, `Examples/`).
+  `99-Anexos/`, libro, `Conocimientos/` (en `8791fb1`; hoy puntero), `Examples/`).
 - `AGENTS.md`; `CHANGELOG.md` (l. 57, 264); `README.md` y `Guides/README.md` (enlaces al cuerpo).
 - `tools/docs-guard/` (`README.md`, `dg.py`, `esquemas/`, `fixtures/`, `mermaid/`, `dominios.txt`, `prefijos.txt`,
   `excepciones.txt`, `arbol.tsv`, `semanal.sh`); `scripts/ci-local.sh`, `scripts/docs-guard.*`.

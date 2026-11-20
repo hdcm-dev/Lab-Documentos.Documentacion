@@ -1,11 +1,12 @@
 # 09 · Capa de IA en .NET y diseño conversacional
 
 > **Propósito**: inventario y destilado de la familia `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/`:
-> dos libros (integración de una capa de IA en .NET y diseño conversacional), ocho Conocimientos para
-> agentes (K1–K8), una lámina de arquitectura, el arnés de verificación (`tools/`, `Compuertas/`),
-> diecisiete ejemplos compilables y una demo. 487 archivos versionados (`git ls-files`).
-> **Fuente primaria**: frontmatter YAML de los dos libros, cabeceras en negrita de los Conocimientos,
-> `Conocimientos/README.md`, `Examples/README.md`, `Demos/MovilidadUrbana.Asistente/README.md`,
+> dos libros (integración de una capa de IA en .NET y diseño conversacional), el puntero a los ocho
+> Conocimientos para agentes (K1–K8, mudados el 2026-11-19 a la base de conocimientos, privado), una lámina de arquitectura,
+> el arnés de verificación (`tools/`, `Compuertas/`), diecisiete ejemplos compilables y una demo. 479 archivos
+> versionados (`git ls-files` en la base del índice, descontados los ocho Conocimientos mudados).
+> **Fuente primaria**: frontmatter YAML de los dos libros, cabeceras en negrita de los Conocimientos
+> (en `8791fb1`; hoy en la base de conocimientos), `Conocimientos/README.md` (hoy, puntero de la mudanza), `Examples/README.md`, `Demos/MovilidadUrbana.Asistente/README.md`,
 > `Laminas/LEEME.md` y `Compuertas/README.md`.
 > **Base**: `Lab-Documentos` en `origin/main` 34929f2. Todas las rutas son relativas a
 > `Lab-Documentos/`; dentro de las tablas, `<G>/` abrevia `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/`.
@@ -14,17 +15,23 @@
 
 ## Advertencias de lectura
 
+- **Los Conocimientos K1–K8 se mudaron** el 2026-11-19 a la base de conocimientos (privado), carpeta `Knowledges/`, archivos
+  `Knowledge-AI-Layer-*.md`, en versión 2.0 y con las secciones renumeradas a la forma de la base. En
+  `<G>/Conocimientos/` queda sólo el `README.md` puntero, con la correspondencia de secciones. Hoy se citan por alias
+  y sección (`` `<Alias>` §N ``); una cita `K<n> §x`, `K<n> Rx.y` o por alias y versión 1.x se lee contra
+  `Lab-Documentos` `8791fb1`. Los identificadores de regla (`R2.6b`, `CD-8`, `K5-AP-8`, `E1`…`E9`) no cambiaron.
 - **Dos aparatos de metadatos conviven**: los libros llevan frontmatter YAML con `doc_id`
-  (`GUIA-NET-IA`, `GUIA-DISENO-CONVERSACIONAL`); los Conocimientos **no** tienen `doc_id` ni YAML:
-  usan cabecera en negrita (`**Alias:**`, `**Versión:**`, `**Estado:**`, `**Fecha:**`…) y se citan por
-  Id K1–K8 o por alias.
+  (`GUIA-NET-IA`, `GUIA-DISENO-CONVERSACIONAL`); los Conocimientos (hoy en la base) **no** tienen `doc_id` ni
+  YAML: usan cabecera en negrita (`**Alias:**`, `**Versión:**`, `**Estado:**`, `**Fecha:**`…) y se citan por
+  alias; el Id K1–K8 queda como nombre histórico.
 - **Los Id se repiten entre libros con distinto significado**: `P-1…P-10` del libro .NET (principios
   de arquitectura) ≠ `P-1…P-9` del libro conversacional (principios de proceso). Citar siempre con el
   libro: «Guía .NET P-6» frente a «Diseño conversacional P-3».
 - Los encabezados de nivel 1 dividen Partes **a propósito**; por eso la carpeta trae su propio
   `.markdownlint.jsonc` que desactiva MD025 respecto de `scripts/docs-guard.markdownlint-cli2.jsonc`.
 - Anclas estables: `cN`/`cN-k` (capítulo/sección) y, en el libro .NET, también `sM`/`sM-k` con
-  M = N − 1 por compatibilidad (`<G>/Dot-Net-Integration-AI-Layer-Guide.md` §0.7). Conocimientos: `kN-…`.
+  M = N − 1 por compatibilidad (`<G>/Dot-Net-Integration-AI-Layer-Guide.md` §0.7). Los Conocimientos usaban
+  `kN-…` hasta `8791fb1`; en la base no llevan anclas propias.
 - Rótulos de evidencia obligatorios en ambos libros: `[REF-nn]`, «criterio de la guía»,
   «experiencia propia medida» (sólo el conversacional), **NO VERIFICADO**, **NO EJECUTADO**.
 
@@ -35,8 +42,8 @@
 | Libro .NET | `<G>/Dot-Net-Integration-AI-Layer-Guide.md` | 4 909 | 1.2.0 · vigente · 2026-11-11 | Sumar una capa de IA a una app .NET existente (Movilidad Urbana) |
 | Referencias (sidecar) | `<G>/Dot-Net-Integration-AI-Layer-Guide.md.refs` | 187 | — | Lista corta `[REF-nn] Autor` (ver hallazgos) |
 | Libro conversacional | `<G>/Conversational-Design-Framework-Guide.md` | 4 249 | 1.6.0 · vigente · 2026-11-15 | Diseñar la conversación de un asistente de producto por anillos de competencia |
-| Índice de Conocimientos | `<G>/Conocimientos/README.md` | 68 | — | Tabla K1–K8, orden de lectura, encadenamiento, retroalimentaciones |
-| K1–K8 | `<G>/Conocimientos/knowledge-AI-Layer-*.md` | 427–883 c/u | ver tabla K | Destilado imperativo de los libros para agentes |
+| Puntero de Conocimientos | `<G>/Conocimientos/README.md` | — | — | Aviso de la mudanza: alias de K1–K8 en la base, cómo leer las citas anteriores (contra `8791fb1`) y correspondencia de secciones |
+| K1–K8 | Base de conocimientos (privado), `Knowledges/Knowledge-AI-Layer-*.md` | — | 2.0 · Vigente · 2026-11-19 (ver tabla K) | Destilado imperativo de los libros para agentes |
 | Lámina LD-01 | `<G>/Laminas/LD-01-arquitectura-conversacional.{def.json,svg,jpg}` + `LEEME.md` | 54 (LEEME) | — | Arquitectura de referencia de una app conversacional en A3 |
 | Generadores | `<G>/Laminas/Generadores/ld01.py`, `verificar_ld01.py` | — | — | Componen el SVG desde el `.def.json` y lo verifican |
 | Compuertas | `<G>/Compuertas/README.md`, `ac6.excepciones` | 28 | — | Formato de las listas privadas de AC-7/AC-8/R-PRIV (viven fuera del repo) |
@@ -48,14 +55,17 @@
 ## Orden de lectura
 
 ```text
-Para personas                                 Para agentes (Conocimientos/README.md)
+Para personas                                 Para agentes (base: K4 §0, «Orden de carga»)
 ──────────────                                 ──────────────────────────────────────
-Libro .NET cap. 0 (rutas por actor §0.2)       K4 §0 y §1.1 → K1 → K5 → K2 → K8 → K6 → K3 → K7
-  └─ tronco común caps. 0–4, §5.2–5.3 …        K4 gobierna; K5 §M es la norma del turno
+Libro .NET cap. 0 (rutas por actor §0.2)       K4 §0 y §3.1.1 → K1 → K5 → K2 → K8 → K6 → K3 → K7
+  └─ tronco común caps. 0–4, §5.2–5.3 …        K4 gobierna; K5 §2.1 es la norma del turno
 Libro conversacional cap. 0 → Base B → …       K6 detalla K2 · K7 detalla K3 · K8 dibuja K2+K5
   └─ cap. 17 lo ata al libro .NET              si hijo y padre chocan, rige el padre
-Lámina LD-01 como panorama de una hoja         si un K choca con un libro, rige el libro
+Lámina LD-01 como panorama de una hoja         el libro es fuente del K (§8 y §9 de cada K)
 ```
+
+Las secciones de la columna de agentes son las de la versión 2.0 en la base; el alias de cada Id está en la tabla
+de Conocimientos.
 
 ## Libro .NET — `GUIA-NET-IA`
 
@@ -163,30 +173,33 @@ declara a los dos primeros como laboratorios públicos y al tercero como experie
 | Principios del turno T-1…T-8 | Responder lo preguntado; preguntar sólo lo que cambia la respuesta; el código decide lo verificable; nunca un callejón; llevar a la acción; la forma la decide el dato; honestidad sobre límites; la mejora se juzga donde la ve el usuario | Cap. B, ancla `t-n` |
 | Principios de proceso P-1…P-9 | Tres familias: qué abarca (P-1, P-2, P-6), cómo responde (P-3, P-4, P-5), cómo se acepta (P-7, P-8, P-9) | §2, Tabla 2.1 |
 | Aceptación | Por tasa, no por conducta (P-7), en el sitio real (P-8), midiendo sin guardar el texto (P-9) | §2 |
-| Rúbrica de juicio | Criterios R1–R14 con vetos (las rondas de PushDispatch citan vetos R12 y R3) | Anexo I; `<G>/Conocimientos/README.md` |
+| Rúbrica de juicio | Criterios R1–R14 con vetos (las rondas de PushDispatch citan vetos R12 y R3) | Anexo I; `AI-Layer-Conversational-Design` §2.1.6 (en la base) |
 
-## Conocimientos K1–K8 (`<G>/Conocimientos/`)
+## Conocimientos K1–K8 (mudados a la base de conocimientos)
 
-Destilan los libros en imperativos «con su porqué y su prueba»; remiten como `[Guía §x]` con ancla
-`cN-k`; antipatrones prefijados `K2-AP-n`, `K3-AP-n`, `K5-AP-n`…`K8-AP-n` o `E1–E9` (K4 §8).
-Todos declaran `Compatible-con` libro .NET 1.2.0 y/o conversacional 1.6.0; todos fechados 2026-11-15.
+Destilan los libros en imperativos «con su porqué y su prueba». Desde el 2026-11-19 viven en la base de conocimientos (privado),
+`Knowledges/Knowledge-<Alias>.md`, en versión 2.0, con la forma de esa base (`Compatible-con:
+Rule-Forma-De-Conocimiento.md 1.3`); los libros .NET 1.2.0 y conversacional 1.6.0 pasaron a «Fuentes» de su §9 y
+se citan como `[Guía §x]` y `[GDC §x]`, sin enlace. Antipatrones prefijados `K2-AP-n`, `K3-AP-n`, `K5-AP-n`…`K8-AP-n`
+o `E1–E9` (K4 §7 en la base; §8 en `8791fb1`). En `<G>/Conocimientos/` queda el puntero.
 
-| Id | Archivo (`knowledge-AI-Layer-…`) | Ver. · estado | Líneas | Para qué |
-|---|---|---|---|---|
-| K1 | `Integration-Designing-Specification.md` | 1.6 Vigente | 811 | Decidir si hace falta IA y especificarla: anillos, ARQ-1…ARQ-6, `REQ-IA-nn` con prueba, matriz OWASP por agencia, plantilla arc42 reducida |
-| K2 | `Console-Assistant-Building.md` | 1.7 Borrador | 550 | Construir la consola en un panel Blazor: pipeline del turno, corpus, destinos, votos, despliegue con un modelo cargado |
-| K3 | `Verification-And-Acceptance.md` | 1.9 Vigente | 642 | Aceptar con evidencia: batería ×3 ≥ 90 %, crítico ≥ 8, capturas 1280/390, sitio real por rol, cifras contra SQL; plantilla MEDIDO/INFORME |
-| K4 | `Integration-Working-Method.md` | 1.5 Vigente | 495 | Forma de trabajo: fases K1→K2→K3 con K5 transversal, mesa con refutador, brecha sin marca, PRs por choque, antipatrones E1–E9 |
-| K5 | `Conversational-Design.md` | 1.2 Vigente | 427 | §M marco normativo del turno (T-1…T-8, prueba de anillo, árbol, aclaración, rúbrica R1–R14) y formas de respuesta F1–F8 |
-| K6 | `Retrieval-Corpus-Functions-And-Deeplinks.md` | 1.9 Borrador | 883 | Detalle de K2 en tres partes: A corpus (frontmatter `preguntas:`/`destinos:`, recall@3), B funciones con `AIFunctionFactory` y validador de cifras, C catálogo de destinos y deeplinks |
-| K7 | `Testing-Strategy.md` | 1.7 Vigente | 762 | Detalle de K3: pirámide, unitarias sin modelo, bUnit, adversas, mutación, E2E Playwright, batería ×3, compuertas de CI |
-| K8 | `Chat-Console-Interface.md` | 1.0 Borrador | 762 | La consola como interfaz: anatomía, estados, teléfono, accesibilidad, historial, cambios sin guardar, voto, persistencia; §13 variante multi-participante (propuesta rotulada) |
+| Id | Alias en la base (`Knowledge-<Alias>.md`) | Ver. · estado (en `8791fb1`) | Para qué |
+|---|---|---|---|
+| K1 | `AI-Layer-Integration-Designing-Specification` | 2.0 Vigente (1.6 Vigente) | Decidir si hace falta IA y especificarla: anillos, ARQ-1…ARQ-6, `REQ-IA-nn` con prueba, matriz OWASP por agencia, plantilla arc42 reducida |
+| K2 | `AI-Layer-Console-Assistant-Building` | 2.0 Vigente, aviso de borrador en §0 (1.7 Borrador) | Construir la consola en un panel Blazor: pipeline del turno, corpus, destinos, votos, despliegue con un modelo cargado |
+| K3 | `AI-Layer-Verification-And-Acceptance` | 2.0 Vigente (1.9 Vigente) | Aceptar con evidencia: batería ×3 ≥ 90 %, crítico ≥ 8, capturas 1280/390, sitio real por rol, cifras contra SQL; plantilla MEDIDO/INFORME |
+| K4 | `AI-Layer-Integration-Working-Method` | 2.0 Vigente (1.5 Vigente) | Forma de trabajo: fases K1→K2→K3 con K5 transversal, mesa con refutador, brecha sin marca, PRs por choque, antipatrones E1–E9 |
+| K5 | `AI-Layer-Conversational-Design` | 2.0 Vigente (1.2 Vigente) | §2.1 (antes §M) marco normativo del turno (T-1…T-8, prueba de anillo, árbol, aclaración, rúbrica R1–R14) y formas de respuesta F1–F8 |
+| K6 | `AI-Layer-Retrieval-Corpus-Functions-And-Deeplinks` | 2.0 Vigente, aviso de borrador en §0 (1.9 Borrador) | Detalle de K2 en tres partes: A corpus (frontmatter `preguntas:`/`destinos:`, recall@3), B funciones con `AIFunctionFactory` y validador de cifras, C catálogo de destinos y deeplinks |
+| K7 | `AI-Layer-Testing-Strategy` | 2.0 Vigente (1.7 Vigente) | Detalle de K3: pirámide, unitarias sin modelo, bUnit, adversas, mutación, E2E Playwright, batería ×3, compuertas de CI |
+| K8 | `AI-Layer-Chat-Console-Interface` | 2.0 Vigente, aviso de borrador en §0 (1.0 Borrador) | La consola como interfaz: anatomía, estados, teléfono, accesibilidad, historial, cambios sin guardar, voto, persistencia; §3.10 (antes §13) variante multi-participante (propuesta rotulada) |
 
-Condición para pasar de Borrador a Vigente (K2, K6, K8): ser aceptado por K3/K7 aplicado sobre un
-**segundo sistema** (cabeceras `**Estado:**`). El README registra cuatro retroalimentaciones
+Condición que traían K2, K6 y K8 para pasar de Borrador a Vigente: ser aceptados por K3/K7 aplicados sobre un
+**segundo sistema**. La base no admite el estado Borrador: salen como Vigente con ese aviso en §0 y en `Tema`.
+El README de `8791fb1` (hoy puntero) registraba cuatro retroalimentaciones, que siguen en el control de cambios de cada K
 (2026-11-12 ×3 y 2026-11-15): banco de diálogo sobre Lab-Geometria, marco del turno, proveedores/consumo/MCP,
 interfaz de la consola y rondas del juicio de PushDispatch (3/28 → 10/28 → 11/28).
-Regla de repo público del README: no se nombran producto de referencia, clientes, servidores,
+Regla de repo público del README de `8791fb1`: no se nombran producto de referencia, clientes, servidores,
 direcciones, usuarios, claves ni el modelo de IA.
 
 ## Lámina LD-01 (`<G>/Laminas/`)
@@ -286,14 +299,15 @@ Components, Concurrencia `LimitadorDelModelo`, Sessions) — 76 archivos; `tests
 | H4 | Fechas desfasadas: el libro .NET sigue en 1.2.0 / `last_review` 2026-11-11 mientras los K y el conversacional se revisaron el 2026-11-15; la medición de palabras es del 2026-11-01 | frontmatter; Anexo E (l. 4744) |
 | H5 | Colisión de Id de principios entre los dos libros (P-1…P-10 vs P-1…P-9) | §1.2 libro .NET; §2 conversacional |
 | H6 | Variable con nombre histórico: `OLLAMA_PROPIO_*` designa el «segundo servidor», no necesariamente propio | `<G>/Examples/README.md` §Variables |
-| H7 | Conocimientos sin `doc_id`/YAML, a diferencia de los libros: no los toma un validador de frontmatter (sin verificar si docs-guard los excluye) | cabeceras de `<G>/Conocimientos/*.md` |
+| H7 | Conocimientos sin `doc_id`/YAML, a diferencia de los libros. **Cerrado (2026-11-19): mudados** a la base de conocimientos, que valida su cabecera con su propia compuerta; en LD queda el puntero | cabeceras de `<G>/Conocimientos/*.md` en `8791fb1` |
 | H8 | Enlaces relativos de los `.md` de la familia: 0 rotos (comprobación con script sobre `](ruta)` locales) | 34929f2 |
 
 ## Fuentes
 
 - `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Dot-Net-Integration-AI-Layer-Guide.md` (frontmatter, §0–§1, §14, Anexos D, E, H) y `.md.refs`
 - `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Conversational-Design-Framework-Guide.md` (frontmatter, §0, B, §2, §3, Anexo H)
-- `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Conocimientos/README.md` y cabeceras/índices de K1–K8
+- `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Conocimientos/README.md` y cabeceras/índices de K1–K8 en `8791fb1`;
+  cabeceras de `Knowledges/Knowledge-AI-Layer-*.md` 2.0 en la base de conocimientos (sin medidas: repositorio privado)
 - `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Examples/README.md` y primera línea de cada `Examples/NN-*/README.md`
 - `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Demos/MovilidadUrbana.Asistente/README.md`
 - `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Laminas/LEEME.md`, `Compuertas/README.md`, `.markdownlint.jsonc`

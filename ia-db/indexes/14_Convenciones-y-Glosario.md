@@ -72,7 +72,7 @@ traces: [IDs de documentos relacionados]
 | FC | El bloque normado más `description`, con `origin: ia-generated` y `status: borrador`; el Conocimiento lleva un encabezado propio, sin `doc_id` | [13](13_Framework-Concept.md) |
 | SEG, `Guides/README.md` | El bloque normado; `doc_id` genéricos (`GUIA-PRINCIPAL`, `CUADERNO`, `GUIAS-INDICE`) | [11](11_Agiles-UX-y-Seguridad.md) |
 | IMP | Sin frontmatter. Usa una cabecera en negrita «Documento / Versión / Fecha / Estado», una tabla «Control de cambios» y el cierre «Fin del documento» | p. ej. `Guides/Metodologia-Agiles/*/Estudio-Guide.md` |
-| Conocimientos (IA-NET `K1–K8`, FC) | Una cabecera en negrita (Alias, Versión, Estado, Fecha…), sin `doc_id` | `Conocimientos/README.md` |
+| Conocimientos (IA-NET `K1–K8`, FC) | Una cabecera en negrita (Alias, Versión, Estado, Fecha…), sin `doc_id` | FC `Conocimientos/README.md`; los de IA-NET y SDEI se mudaron a la base de conocimientos (`Rule-Forma-De-Conocimiento.md`) y en LD queda un puntero |
 
 Además quedan sin frontmatter: `Microservicios-Guide.md` y `Manejo-Archivos-Guide.md` de NET,
 11 documentos de `Lab-E2E.WebBlazor-Guides/` (usan el bloque «De qué va / Para quién / Qué deja»),
@@ -260,7 +260,7 @@ tabla de correspondencia con los ejes de DT.
 | `ESC-01` | Pantalla nueva (E2E) · Windows+VS (ENT) · primer escenario de IAM | §5 |
 | `P-n` / `P-xx` | Principios de arquitectura `P-1…P-10` (IA-NET §1.2) · principios de proceso `P-1…P-9` (CONV cap. 2) · evidencia de plataforma `P-xx` (IS/REST) · decisiones FC `P1…P11` · `PD-1…6` demo IA-NET / `PD-01/02` deudas IAM | índices 09, 10, 13 |
 | `F-…` | Fuente de facto `F-xx` (IS/OEP/REST) · hallazgo `F-A…F-J` (NET-INT §5) · forma de respuesta `F1–F8` (K5) | — |
-| `E…` | Escenario `E-01` (GF/GHA) · experimento `E<n>-<m>` (ENT) · etapa `E0–E7` (CONV) · antipatrón `E1–E9` (K4 §8) · `E-A…E-E` (NET) | — |
+| `E…` | Escenario `E-01` (GF/GHA) · experimento `E<n>-<m>` (ENT) · etapa `E0–E7` (CONV) · antipatrón `E1–E9` (K4 §7 en la base; §8 en `8791fb1`) · `E-A…E-E` (NET) | — |
 | `R…` | Rúbrica `R1–R14` (CONV Anexo I) · registro `R-LLM` · `[Rn]` en FC | índices 09, 13 |
 | `A…` | Actor `A-xx` (GF/GHA) · hito `A0–A9` (NET-INT) · artefacto `A-01..A-13` (SDEI) | — |
 | `T…` | Topología `T1–T5` (OEP) · principio del turno `T-1…T-8` (CONV cap. B) | — |
@@ -274,7 +274,7 @@ tabla de correspondencia con los ejes de DT.
 | `L00–L24` / `V01–V09` | Pasos de `lab.sh` / variantes de `variantes.sh` | NET Anexo A |
 | `RN-xx` | Reglas de negocio de La Estancia | NET-INT |
 | `E<n>-<m>`, `EA-1` | Experimentos del Anexo E | ENT |
-| `K1–K8` | Conocimientos para agentes (si un Conocimiento choca con el libro, rige el libro) | IA-NET `Conocimientos/README.md` |
+| `K1–K8` | Id históricos de los Conocimientos de la capa de IA, mudados el 2026-11-19 a la base de conocimientos y citados hoy por alias (`AI-Layer-*`); el libro es su fuente, no rige sobre ellos | IA-NET `Conocimientos/README.md` (puntero, con la correspondencia de secciones) |
 | `ADR-01…13` / `ADR-IA-01…06` | Decisiones de la capa / del caso Geometría | IA-NET caps. 14 y 16 |
 | `AC-6/7/8`, `R-PRIV` | Compuertas | IA-NET `Compuertas/README.md` |
 | `HUE-` / `VER-` / `CNV-` | Huecos, verificaciones y convenciones pendientes | DT `99-Anexos/Pendientes.md` |
@@ -332,7 +332,7 @@ tabla de correspondencia con los ejes de DT.
 | Cliente guionado / `--fake` | `IChatClient` sin servidor; prueba la conducta del código, no la del modelo | IA-NET §0.4 |
 | Conducta del modelo vs garantía del código | La garantía se prueba en cada build; la conducta se informa como k de M (P-10) | IA-NET §1.2 |
 | Banco | Servidor Ollama en red donde corren los labs; se verifica en el Paso 0 | IAM `IA-Model-Guide.md` §1; `08-Inferencia-Local.md` |
-| Conocimiento | Documento destilado para que lo cargue un agente, con cabecera propia y sin `doc_id` | IA-NET `Conocimientos/README.md`; FC `Conocimientos/` |
+| Conocimiento | Documento destilado para que lo cargue un agente, con cabecera propia y sin `doc_id` | La base de conocimientos (los de IA-NET y SDEI, desde el 2026-11-19); FC `Conocimientos/` |
 | Nivel 2 de Richardson | Recursos con URI y verbos HTTP según su semántica, sin hipermedia | REST `Modelo-de-Madurez.md` |
 | Informe de solución | Documento transversal, sintético y orientado a una decisión | IS `Que-es-y-que-no-es.md` |
 | Contenedor nativo | La app MAUI que se publica en tienda; reemplaza a «cascarón» | FC `ADR-0001` §2 |
