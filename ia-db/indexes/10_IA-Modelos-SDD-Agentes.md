@@ -297,7 +297,7 @@ ejemplos no tienen subagente propio).
 |---|---|---|
 | `IAM-M0` §4, `IAM-M1` ESC-07 | `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Dot-Net-Integration-AI-Layer-Guide.md` | Integración en aplicación: se referencia, no se duplica (enlace verificado, existe) |
 | 10 piezas de `IA-Model/` (11 menciones) | «guía 16 del repositorio» | Mención por número a la integración .NET, sin enlace |
-| Diseño conversacional | `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Conversational-Design-Framework-Guide.md` y `…/Conocimientos/knowledge-AI-Layer-Conversational-Design.md` | `git ls-files \| grep -i convers` no encuentra **ninguna** guía conversacional fuera de esa carpeta: queda en el índice de la capa de IA |
+| Diseño conversacional | `Guides/IA/Dot-Net-Integration-AI-Layer-Guide/Conversational-Design-Framework-Guide.md` y `AI-Layer-Conversational-Design` en la base de conocimientos | `git ls-files \| grep -i convers` no encuentra **ninguna** guía conversacional fuera de esa carpeta: queda en el índice de la capa de IA |
 | SDD / AG-xx | `Guides/Metodologia-Agiles/` (Scrum, Jira) y `Guides/UX-UI-Design/` | Mismo proyecto de origen (Motor DSL); las secciones `06_`/`07_` y `03_` del template se trabajan allí |
 | `Guides/Despliegue/DevOps-Guide/plan-mejoras-devops_v1.0.md` | `Guides/IA/…` | Única guía de fuera de `Guides/IA/` que menciona estas rutas (grep) |
 | `CHANGELOG.md` | `Guides/IA/IA-Model/` | Entradas 2026-11-07 (alta) y 2026-11-10 (PD-01/PD-02) |

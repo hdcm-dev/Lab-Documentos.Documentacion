@@ -45,23 +45,26 @@ de documentación propia** (`docs-guard`) más workflows de demo.
 
 ### 2.1 `Guides/` — once carpetas de categoría
 
-Conteos: `git ls-files` por carpeta; líneas y Mermaid sólo de `.md`.
+Conteos: `git ls-files` por carpeta; líneas y Mermaid sólo de `.md`. Las filas `Documentacion-Tecnica/`, `IA/` y el
+total descuentan los conocimientos mudados el 2026-11-19 a la base de conocimientos (once archivos de las dos carpetas
+`Conocimientos/`, 6 420 líneas, 4 Mermaid) y cuentan como archivo los dos `README.md` punteros que quedan, sin sus
+líneas.
 
 | Carpeta | Arch. | `.md` | Líneas `.md` | Mermaid | Guías o piezas | Índice |
 |---|---:|---:|---:|---:|---|---|
-| `Documentacion-Tecnica/` | 158 | 120 | 34 906 | 139 | `Creacion-Guias-Tecnicas/` (59 arch., 20 700 l., guía madre) · `Sistema-De-Documentacion-E-Integracion/` (99 arch., 61 `.md`, 14 206 l., cuerpo `SDEI` + libro DocsAsCode + ejemplos) | [01](01_Documentacion-Tecnica.md), [12](12_Sistema-Documentador-SDEI.md) |
+| `Documentacion-Tecnica/` | 157 | 119 | 33 886 | 138 | `Creacion-Guias-Tecnicas/` (59 arch., 20 700 l., guía madre) · `Sistema-De-Documentacion-E-Integracion/` (98 arch., 60 `.md`, 13 186 l., cuerpo `SDEI` + libro DocsAsCode + ejemplos) | [01](01_Documentacion-Tecnica.md), [12](12_Sistema-Documentador-SDEI.md) |
 | `Despliegue/` | 35 | 35 | 11 175 | 29 | `Documentacion-Informe-Despliegue/` (30) · `GitHub-Action-Guide/` (1, GHA-00) · `DevOps-Guide/` (4, importado) | [02](02_Informe-de-Solucion.md), [08](08_Ramas-CI-CD-y-DevOps.md) |
 | `Arquitectura/` | 94 | 94 | 32 648 | 86 | `Organizacion-Estilo-Patrones-Codigo/` (38) · `Organizacion-Estilo-Rest-API/` (56) | [03](03_Organizacion-Codigo-NET.md), [04](04_Diseno-REST-API.md) |
 | `Dot-NET-Arquitectura-Guide/` | 164 | 15 | 8 877 | 15 | `GUIA-NET-ARQ` 2.5.0 · interactiva `GUIA-NET-ARQ-INT` 0.4.0 · Microservicios · Manejo de archivos · `Interactive-Activities/` · `Examples/` (laboratorio L00–L24/V01–V09) · `Exercices/` | [05](05_Arquitectura-NET-y-Laboratorio.md) |
 | `Metodologia-Entorno-Desarrollo/` | 343 | 14 | 4 663 | 11 | `GUIA-ENT-DEV` 1.1.0 · `Examples/` (342 arch., laboratorio N0–N8) | [06](06_Metodologia-Entorno-Desarrollo.md) |
 | `Testing/` | 29 | 23 | 17 790 | 32 | `E2E-Guide/` (copia vieja) · `Lab-E2E.WebBlazor-Guides/` (E2E-Guide, Test-Guide, copias de CI/ramas, `workflows/`) | [07](07_Testing-E2E.md) |
 | `GitFlow/` | 9 | 6 | 4 618 | 9 | `Estandares-Modelo-Ramas-Guide/` (GF-GUIA + anexo de workflows) · `Git-Flow-Guides/` (GitFlow y GitHub Flow) | [08](08_Ramas-CI-CD-y-DevOps.md) |
-| `IA/` | 525 | 70 | 31 309 | 71 | `Dot-Net-Integration-AI-Layer-Guide/` (487 arch., 32 `.md`, 17 526 l.: GUIA-NET-IA, guía conversacional, K1–K8, ejemplos, demo) · `IA-Model/` (15) · `SDD-Guide/` (4) · `references/` (18) · `Claude-Guide.md/` (carpeta, 1 nota) | [09](09_IA-Layer-DotNet.md), [10](10_IA-Modelos-SDD-Agentes.md) |
+| `IA/` | 517 | 62 | 25 909 | 68 | `Dot-Net-Integration-AI-Layer-Guide/` (479 arch., 24 `.md`, 12 126 l.: GUIA-NET-IA, guía conversacional, puntero de K1–K8, ejemplos, demo) · `IA-Model/` (15) · `SDD-Guide/` (4) · `references/` (18) · `Claude-Guide.md/` (carpeta, 1 nota) | [09](09_IA-Layer-DotNet.md), [10](10_IA-Modelos-SDD-Agentes.md) |
 | `Metodologia-Agiles/` | 5 | 4 | 4 290 | 0 | `Scrum-Guide/` (Scrum + Jira + PDF Scrum Guide 2020) | [11](11_Agiles-UX-y-Seguridad.md) |
 | `UX-UI-Design/` | 2 | 2 | 2 038 | 0 | `UX-UI-Guide/` (marco UX/UI/DX + documentación UX) | [11](11_Agiles-UX-y-Seguridad.md) |
 | `Otros/` | 2 | 2 | 1 555 | 6 | `Seguridad-Red-Windows-Guide/` (guía + cuaderno) | [11](11_Agiles-UX-y-Seguridad.md) |
 | `Guides/README.md` | 1 | 1 | 31 | 0 | `GUIAS-INDICE` (last_review 2026-10-28), tabla de 9 categorías | [11](11_Agiles-UX-y-Seguridad.md) |
-| **Total `Guides/`** | **1 367** | **386** | **153 900** | **398** | | |
+| **Total `Guides/`** | **1 358** | **377** | **147 480** | **394** | | |
 
 ### 2.2 `Concepts/`
 
@@ -217,7 +220,7 @@ flowchart LR
 | Reproducibilidad del entorno (BOM, SDK, locks, devcontainer, SBOM) | [06](06_Metodologia-Entorno-Desarrollo.md) |
 | Pruebas E2E con Playwright, unitarias, MAUI con Appium | [07](07_Testing-E2E.md) |
 | Modelo de ramas, workflows, GitHub Actions, DORA, SemVer, NuGet | [08](08_Ramas-CI-CD-y-DevOps.md) |
-| Capa de IA en .NET, diseño conversacional, Conocimientos K1–K8 | [09](09_IA-Layer-DotNet.md) |
+| Capa de IA en .NET, diseño conversacional, Conocimientos K1–K8 (mudados a la base de conocimientos) | [09](09_IA-Layer-DotNet.md) |
 | Modelos de IA (IAM-xx), SDD con IA, perfiles AG-xx | [10](10_IA-Modelos-SDD-Agentes.md) |
 | Scrum/Jira, UX/UI/DX, auditoría de seguridad Windows | [11](11_Agiles-UX-y-Seguridad.md) |
 | Sistema documentador SDEI, docs-guard, AGENTS.md | [12](12_Sistema-Documentador-SDEI.md) |
